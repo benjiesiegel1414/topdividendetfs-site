@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 100 Dividend ETFs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        header {
+            background-color: #1A3C34;
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/noise.png'); /* Subtle noise texture */
+            background-blend-mode: overlay; /* Blends texture with background color */
+            background-size: cover; /* Ensures texture covers the area */
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        h1 {
+            text-align: center;
+            color: #1A3C34;
+            margin: 15px 0 10px 0;
+            font-weight: 900;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .intro-text {
+            font-size: 1em;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            line-height: 1.5;
+            color: #444;
+        }
+        .banner {
+            width: 90%;
+            max-width: 900px;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(to bottom, #1a3224, #14291c);
+            text-align: center;
+        }
+        .banner a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.7em;
+            text-shadow: 1px 1px 3px #000000;
+        }
+        .banner a span.click-here {
+            color: #ffff00; /* Yellow for CLICK HERE */
+            font-weight: bold;
+        }
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #etfTableWrapper {
+            width: 100%;
+        }
+        #etfTable {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border: 3px solid #2E5D54;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        th, td {
+            padding: 14px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 1em;
+        }
+        td:nth-child(1) {
+            font-weight: 900;
+            font-size: 1.2em;
+            color: #1A3C34;
+        }
+        td:nth-child(6) {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        th {
+            background-color: #2E5C54; /* Adjusted to match theme */
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            display: none;
+        }
+        tr {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #dff5eb; /* Green highlight across entire row */
+        }
+        tr:hover td:nth-child(1) {
+            background-color: #dff5eb; /* Match row highlight */
+            color: #0f2d26;
+            transform: none;
+            transition: none;
+            border-radius: 0;
+        }
+        td {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+        td:before {
+            content: attr(data-label);
+            font-weight: bold;
+            margin-right: 10px;
+            color: #1A3C34;
+            min-width: 100px;
+            text-align: left;
+        }
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 0.9em;
+            color: #666;
+            margin: 20px auto;
+            max-width: 900px;
+            line-height: 1.4;
+            text-align: center;
+        }
+        @media (min-width: 769px) {
+            #etfTable { display: table; }
+            th { display: table-cell; text-align: center; }
+            tr { display: table-row; }
+            td { display: table-cell; padding: 14px; text-align: center; }
+            td:before { content: none; }
+            #etfTableWrapper { overflow-x: auto; }
+        }
+        @media (max-width: 768px) {
+            .logo { font-size: 20px; }
+            h1 { font-size: 1.2em; margin: 10px 0; }
+            .intro-text { font-size: 0.9em; padding: 0 10px; }
+            .banner { padding: 10px; }
+            #etfTable { font-size: 14px; }
+            td { font-size: 14px; padding: 6px 0; text-align: center; }
+        }
+        .sort-asc::after { content: ' ▲'; }
+        .sort-desc::after { content: ' ▼'; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="logo">TopDividendETFs.com</div>
+        </header>
+        <h1>Top 100 Dividend ETFs</h1>
+        <p class="intro-text">
+            This curated list features 100 of the top dividend ETFs, hand-picked for their strong potential in dividend investing. Updated daily and completely FREE, it lets you track the latest trends in dividend investing. Dividend yields are sourced from public data and are as accurate as possible, though all market data can change dynamically.
+        </p>
+        <div class="banner">
+            <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank">📈 <span class="click-here">CLICK HERE</span> To Start Dividend Investing Today</a>
+        </div>
+        <div id="etfTableWrapper">
+            <table id="etfTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Symbol</th>
+                        <th onclick="sortTable(1)">Name</th>
+                        <th onclick="sortTable(2)">Dividend Yield</th>
+                        <th onclick="sortTable(3)">AUM 💰</th>
+                        <th onclick="sortTable(4)">Price Decay 🩸</th>
+                        <th onclick="sortTable(5)">Grade ⭐</th>
+                    </tr>
+                </thead>
+                <tbody id="etfBody"></tbody>
+            </table>
+        </div>
+        <div class="banner">
+            <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank">📈 <span class="click-here">CLICK HERE</span> To Start Dividend Investing Today</a>
+        </div>
+        <p class="disclaimer">
+            Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+        </p>
+    </div>
+
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv';
+
+        fetch(csvUrl)
+            .then(response => response.text())
+            .then(csvText => {
+                const rows = csvText.split('\n').map(row => row.split(','));
+                const tbody = document.getElementById('etfBody');
+                tbody.innerHTML = '';
+
+                for (let i = 1; i < rows.length; i++) {
+                    if (rows[i].length < 6) continue;
+                    const tr = document.createElement('tr');
+                    for (let j = 0; j < 6; j++) {
+                        const td = document.createElement('td');
+                        td.textContent = rows[i][j].trim();
+                        if (j === 0) { // Symbol
+                            td.style.fontWeight = '900';
+                            td.style.fontSize = '1.2em';
+                            td.style.color = '#1A3C34';
+                        }
+                        if (j === 5) { // Grade
+                            td.style.fontWeight = 'bold';
+                            td.style.fontSize = '1.1em';
+                        }
+                        td.setAttribute('data-label', ['Symbol', 'Name', 'Dividend Yield', 'AUM', 'Price Decay', 'Grade'][j]);
+                        tr.appendChild(td);
+                    }
+                    tbody.appendChild(tr);
+                }
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('etfBody').innerHTML = '<tr><td colspan="6">Error loading data from Google Sheet. Check the URL.</td></tr>';
+            });
+
+        let sortDirection = {};
+        function sortTable(colIndex) {
+            const table = document.getElementById('etfTable');
+            const tbody = document.getElementById('etfBody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            const isNumericCol = [2, 3].includes(colIndex);
+            const dir = sortDirection[colIndex] === 'asc' ? 'desc' : 'asc';
+            sortDirection[colIndex] = dir;
+
+            const headers = table.querySelectorAll('th');
+            headers.forEach((th, idx) => {
+                th.classList.remove('sort-asc', 'sort-desc');
+                if (idx === colIndex) {
+                    th.classList.add(`sort-${dir}`);
+                }
+            });
+
+            rows.sort((a, b) => {
+                let aVal = a.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, ''); // Remove emojis for sorting
+                let bVal = b.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, ''); // Remove emojis for sorting
+
+                if (isNumericCol) {
+                    aVal = parseFloat(aVal.replace(/[%$,B]/g, '')) || 0;
+                    bVal = parseFloat(bVal.replace(/[%$,B]/g, '')) || 0;
+                    return dir === 'asc' ? aVal - bVal : bVal - aVal;
+                } else {
+                    return dir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+                }
+            });
+
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
+</body>
+</html>
