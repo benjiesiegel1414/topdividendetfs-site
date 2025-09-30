@@ -44,7 +44,7 @@
       gtag('config', 'G-B8TGV115DP');
     </script>
 
-    <!-- Inline CSS (preserved from your original code) -->
+    <!-- Inline CSS (unchanged, supports both tooltips) -->
     <style>
         body {
             font-family: 'Lato', Arial, sans-serif;
@@ -126,7 +126,7 @@
             border: 3px solid #2E5D54;
             border-radius: 8px;
             padding: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         th, td {
             padding: 14px;
@@ -211,6 +211,50 @@
         }
         .sort-asc::after { content: ' ▲'; }
         .sort-desc::after { content: ' ▼'; }
+
+        /* Tooltip styling for Grade and Price Decay headers */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltiptext {
+            visibility: hidden;
+            width: auto;
+            max-width: 200px; /* Tight fit with cap */
+            background-color: white;
+            color: #333;
+            text-align: center; /* Centered text */
+            padding: 4px 6px; /* Tighter padding */
+            border-radius: 6px;
+            border: 2px solid #2E5C54; /* Matches table border */
+            position: absolute;
+            z-index: 10;
+            top: 100%; /* Drops down below header */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-family: 'Lato', Arial, sans-serif;
+            font-size: 0.7em;
+            line-height: 1.2; /* Tight vertical spacing */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            white-space: nowrap; /* Prevents text wrapping */
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .tooltiptext {
+                max-width: 160px; /* Tighter for mobile */
+                font-size: 0.6em;
+                padding: 3px 5px; /* Even tighter padding */
+                line-height: 1.2;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -233,8 +277,8 @@
                         <th onclick="sortTable(1)">Name</th>
                         <th onclick="sortTable(2)" class="sort-desc">Dividend Yield</th>
                         <th onclick="sortTable(3)">AUM 💰</th>
-                        <th onclick="sortTable(4)">Price Decay 🩸</th>
-                        <th onclick="sortTable(5)">Grade ⭐</th>
+                        <th onclick="sortTable(4)"><span class="tooltip">Price Decay 🩸<span class="tooltiptext">ETF has <strong>decayed</strong><br>in price since<br>inception</span></span></th>
+                        <th onclick="sortTable(5)"><span class="tooltip">Grade ⭐<span class="tooltiptext"><strong>Grades</strong> based on<br>on total return<br>Yield &amp; Stability</span></span></th>
                     </tr>
                 </thead>
                 <tbody id="etfBody"></tbody>
@@ -309,7 +353,27 @@
             rows.forEach(row => tbody.appendChild(row));
         }
 
-        window.onload = function() {};
+        // Add click support for multiple tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltips = document.querySelectorAll('.tooltip');
+            tooltips.forEach(tooltip => {
+                const tooltipText = tooltip.querySelector('.tooltiptext');
+                tooltip.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Toggle visibility for clicked tooltip only
+                    tooltipText.style.visibility = tooltipText.style.visibility === 'visible' ? 'hidden' : 'visible';
+                    tooltipText.style.opacity = tooltipText.style.opacity === '1' ? '0' : '1';
+                    // Hide other tooltips
+                    tooltips.forEach(otherTooltip => {
+                        if (otherTooltip !== tooltip) {
+                            const otherTooltipText = otherTooltip.querySelector('.tooltiptext');
+                            otherTooltipText.style.visibility = 'hidden';
+                            otherTooltipText.style.opacity = '0';
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>
