@@ -39,14 +39,14 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             width: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/noise.png'); /* Subtle noise texture */
-            background-blend-mode: overlay; /* Blends texture with background color */
-            background-size: cover; /* Ensures texture covers the area */
+            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+            background-blend-mode: overlay;
+            background-size: cover;
         }
         .logo {
-            font-size: 36px; /* Increased from 24px */
+            font-size: 36px;
             font-weight: 700;
-            letter-spacing: 0.5px; /* Adjusted for readability */
+            letter-spacing: 0.5px;
         }
         h1 {
             text-align: center;
@@ -81,7 +81,7 @@
             text-shadow: 1px 1px 3px #000000;
         }
         .banner a span.click-here {
-            color: #ffff00; /* Yellow for CLICK HERE */
+            color: #ffff00;
             font-weight: bold;
         }
         .content {
@@ -119,7 +119,7 @@
             font-size: 1.1em;
         }
         th {
-            background-color: #2E5C54; /* Adjusted to match theme */
+            background-color: #2E5C54;
             color: white;
             cursor: pointer;
             user-select: none;
@@ -137,10 +137,10 @@
             background-color: #f9f9f9;
         }
         tr:hover {
-            background-color: #dff5eb; /* Green highlight across entire row */
+            background-color: #dff5eb;
         }
         tr:hover td:nth-child(1) {
-            background-color: #dff5eb; /* Match row highlight */
+            background-color: #dff5eb;
             color: #0f2d26;
             transform: none;
             transition: none;
@@ -160,7 +160,6 @@
             min-width: 100px;
             text-align: left;
         }
-        /* Disclaimer */
         .disclaimer {
             font-size: 0.9em;
             color: #666;
@@ -178,7 +177,7 @@
             #etfTableWrapper { overflow-x: auto; }
         }
         @media (max-width: 768px) {
-            .logo { font-size: 28px; } /* Adjusted for smaller screens */
+            .logo { font-size: 28px; }
             h1 { font-size: 1.2em; margin: 10px 0; }
             .intro-text { font-size: 0.9em; padding: 0 10px; }
             .banner { padding: 10px; }
@@ -281,8 +280,8 @@
             });
 
             rows.sort((a, b) => {
-                let aVal = a.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, ''); // Remove emojis for sorting
-                let bVal = b.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, ''); // Remove emojis for sorting
+                let aVal = a.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, '');
+                let bVal = b.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, '');
 
                 if (isNumericCol) {
                     aVal = parseFloat(aVal.replace(/[%$,B]/g, '')) || 0;
@@ -296,13 +295,10 @@
             rows.forEach(row => tbody.appendChild(row));
         }
 
-        // Auto-sort on page load
         window.onload = function() {
             // Ensure table is loaded before sorting (already handled in fetch)
         };
     </script>
 </body>
 <!-- Final favicon retry -->
-
 </html>
-
