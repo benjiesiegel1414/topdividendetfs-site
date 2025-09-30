@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 100 Dividend ETFs</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
     <script>
@@ -37,9 +41,9 @@
             background-size: cover; /* Ensures texture covers the area */
         }
         .logo {
-            font-size: 24px;
+            font-size: 36px; /* Increased from 24px */
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px; /* Adjusted for readability */
         }
         h1 {
             text-align: center;
@@ -171,7 +175,7 @@
             #etfTableWrapper { overflow-x: auto; }
         }
         @media (max-width: 768px) {
-            .logo { font-size: 20px; }
+            .logo { font-size: 28px; } /* Adjusted for smaller screens */
             h1 { font-size: 1.2em; margin: 10px 0; }
             .intro-text { font-size: 0.9em; padding: 0 10px; }
             .banner { padding: 10px; }
@@ -200,7 +204,7 @@
                     <tr>
                         <th onclick="sortTable(0)">Symbol</th>
                         <th onclick="sortTable(1)">Name</th>
-                        <th onclick="sortTable(2)">Dividend Yield</th>
+                        <th onclick="sortTable(2)" class="sort-desc">Dividend Yield</th>
                         <th onclick="sortTable(3)">AUM 💰</th>
                         <th onclick="sortTable(4)">Price Decay 🩸</th>
                         <th onclick="sortTable(5)">Grade ⭐</th>
@@ -247,20 +251,22 @@
                     }
                     tbody.appendChild(tr);
                 }
+                // Sort table by Dividend Yield (descending) after loading
+                sortTable(2, 'desc');
             })
             .catch(error => {
                 console.error('Error loading data:', error);
                 document.getElementById('etfBody').innerHTML = '<tr><td colspan="6">Error loading data from Google Sheet. Check the URL.</td></tr>';
             });
 
-        let sortDirection = {};
-        function sortTable(colIndex) {
+        let sortDirection = { 2: 'desc' }; // Default sort direction for Dividend Yield
+        function sortTable(colIndex, defaultDir = null) {
             const table = document.getElementById('etfTable');
             const tbody = document.getElementById('etfBody');
             const rows = Array.from(tbody.querySelectorAll('tr'));
 
             const isNumericCol = [2, 3].includes(colIndex);
-            const dir = sortDirection[colIndex] === 'asc' ? 'desc' : 'asc';
+            const dir = defaultDir || (sortDirection[colIndex] === 'asc' ? 'desc' : 'asc');
             sortDirection[colIndex] = dir;
 
             const headers = table.querySelectorAll('th');
@@ -286,9 +292,11 @@
 
             rows.forEach(row => tbody.appendChild(row));
         }
+
+        // Auto-sort on page load
+        window.onload = function() {
+            // Ensure table is loaded before sorting (already handled in fetch)
+        };
     </script>
 </body>
 </html>
-git add index.html
-git commit -m "Retry deployment for GA"
-git push origin main
