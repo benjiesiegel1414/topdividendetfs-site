@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 100 Dividend ETFs</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+    <!-- Favicon / Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
     <script>
@@ -20,6 +23,7 @@
       gtag('js', new Date());
       gtag('config', 'G-B8TGV115DP');
     </script>
+
     <style>
         body {
             font-family: 'Lato', Arial, sans-serif;
@@ -239,21 +243,13 @@
                     for (let j = 0; j < 6; j++) {
                         const td = document.createElement('td');
                         td.textContent = rows[i][j].trim();
-                        if (j === 0) { // Symbol
-                            td.style.fontWeight = '900';
-                            td.style.fontSize = '1.2em';
-                            td.style.color = '#1A3C34';
-                        }
-                        if (j === 5) { // Grade
-                            td.style.fontWeight = 'bold';
-                            td.style.fontSize = '1.1em';
-                        }
+                        if (j === 0) { td.style.fontWeight = '900'; td.style.fontSize = '1.2em'; td.style.color = '#1A3C34'; }
+                        if (j === 5) { td.style.fontWeight = 'bold'; td.style.fontSize = '1.1em'; }
                         td.setAttribute('data-label', ['Symbol', 'Name', 'Dividend Yield', 'AUM', 'Price Decay', 'Grade'][j]);
                         tr.appendChild(td);
                     }
                     tbody.appendChild(tr);
                 }
-                // Sort table by Dividend Yield (descending) after loading
                 sortTable(2, 'desc');
             })
             .catch(error => {
@@ -261,7 +257,7 @@
                 document.getElementById('etfBody').innerHTML = '<tr><td colspan="6">Error loading data from Google Sheet. Check the URL.</td></tr>';
             });
 
-        let sortDirection = { 2: 'desc' }; // Default sort direction for Dividend Yield
+        let sortDirection = { 2: 'desc' };
         function sortTable(colIndex, defaultDir = null) {
             const table = document.getElementById('etfTable');
             const tbody = document.getElementById('etfBody');
@@ -274,15 +270,12 @@
             const headers = table.querySelectorAll('th');
             headers.forEach((th, idx) => {
                 th.classList.remove('sort-asc', 'sort-desc');
-                if (idx === colIndex) {
-                    th.classList.add(`sort-${dir}`);
-                }
+                if (idx === colIndex) { th.classList.add(`sort-${dir}`); }
             });
 
             rows.sort((a, b) => {
                 let aVal = a.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, '');
                 let bVal = b.cells[colIndex].textContent.trim().replace(/[\s💰⭐]/g, '');
-
                 if (isNumericCol) {
                     aVal = parseFloat(aVal.replace(/[%$,B]/g, '')) || 0;
                     bVal = parseFloat(bVal.replace(/[%$,B]/g, '')) || 0;
@@ -295,10 +288,7 @@
             rows.forEach(row => tbody.appendChild(row));
         }
 
-        window.onload = function() {
-            // Ensure table is loaded before sorting (already handled in fetch)
-        };
+        window.onload = function() {};
     </script>
 </body>
-<!-- Final favicon retry -->
 </html>
