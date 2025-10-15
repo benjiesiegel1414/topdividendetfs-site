@@ -290,6 +290,35 @@
     .footer a:hover {
         text-decoration: underline;
     }
+    /* New styles for filters */
+    #filters {
+        width: 90%;
+        max-width: 900px;
+        margin: 10px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        text-align: left;
+    }
+    #filters label {
+        font-weight: bold;
+        color: #1A3C34;
+        margin-right: 5px;
+    }
+    #filters select,
+    #filters input {
+        padding: 5px;
+        border: 1px solid #2E5D54;
+        border-radius: 4px;
+        background: white;
+    }
+    @media (max-width: 768px) {
+        #filters {
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
 </style></head>
 <body>
     <div class="content">
@@ -308,6 +337,25 @@
         </p>
         <div class="banner">
             <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank"> <span class="click-here">CLICK HERE</span> To Start Dividend Investing Today</a>
+        </div>
+        <div id="filters">
+            <div>
+                <label for="yieldRangeFilter">Yield:</label>
+                <select id="yieldRangeFilter">
+                    <option value="">All</option>
+                    <option value="1-5">1-5%</option>
+                    <option value="5-10">5-10%</option>
+                    <option value="10-15">10-15%</option>
+                    <option value="15+">15+%</option>
+                </select>
+            </div>
+            <div>
+                <label for="decayFilter">Price Decay:</label>
+                <select id="decayFilter">
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
+                </select>
+            </div>
         </div>
         <div id="etfTableWrapper">
             <table id="etfTable">
@@ -383,6 +431,8 @@
 <script>
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv';
 
+    let allRows = []; // To store all rows for filtering
+
     fetch(csvUrl)
         .then(response => response.text())
         .then(csvText => {
@@ -402,8 +452,10 @@
                     tr.appendChild(td);
                 }
                 tbody.appendChild(tr);
+                allRows.push(tr); // Store the row
             }
             sortTable(2, 'desc');
+            applyFilters(); // Initial filter application
         })
         .catch(error => {
             console.error('Error loading data:', error);
@@ -439,7 +491,44 @@
         });
 
         rows.forEach(row => tbody.appendChild(row));
+        applyFilters(); // Re-apply filters after sorting
     }
+
+    // Filter function
+    function applyFilters() {
+        const yieldRange = document.getElementById('yieldRangeFilter').value;
+        const decayFilter = document.getElementById('decayFilter').value;
+
+        allRows.forEach(row => {
+            const yieldVal = parseFloat(row.cells[2].textContent.replace('%', '')) || 0;
+            const decayVal = row.cells[4].textContent.trim().toUpperCase();
+
+            let matchesYield = true;
+            if (yieldRange) {
+                if (yieldRange === '1-5') {
+                    matchesYield = yieldVal >= 1 && yieldVal <= 5;
+                } else if (yieldRange === '5-10') {
+                    matchesYield = yieldVal > 5 && yieldVal <= 10;
+                } else if (yieldRange === '10-15') {
+                    matchesYield = yieldVal > 10 && yieldVal <= 15;
+                } else if (yieldRange === '15+') {
+                    matchesYield = yieldVal > 15;
+                }
+            }
+
+            const matchesDecay = decayVal === decayFilter;
+
+            if (matchesYield && matchesDecay) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    // Event listeners for filters
+    document.getElementById('yieldRangeFilter').addEventListener('change', applyFilters);
+    document.getElementById('decayFilter').addEventListener('change', applyFilters);
 
     // Add click support for multiple tooltips
     document.addEventListener('DOMContentLoaded', function() {
