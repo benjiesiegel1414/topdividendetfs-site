@@ -47,7 +47,7 @@
       gtag('config', 'G-B8TGV115DP');
     </script>
 
-    <!-- Inline CSS (includes centered placeholder text) -->
+    <!-- Inline CSS (includes centered placeholder text and new glow animation) -->
     <style>
         body {
             font-family: 'Lato', Arial, sans-serif;
@@ -334,14 +334,38 @@
             font-style: italic;
             text-align: center; /* Center placeholder text */
         }
+        /* Reset button styles */
+        #resetFilters {
+            padding: 5px 10px;
+            border: 1px solid #2E5D54;
+            border-radius: 4px;
+            background: #2E5D54;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #resetFilters:hover {
+            background: #1A3C34;
+        }
         @media (max-width: 768px) {
             #filters {
                 flex-direction: column;
                 gap: 5px;
+                align-items: center;
             }
             #searchFilter {
                 width: 100%; /* Full width on mobile */
             }
+            #resetFilters {
+                width: 100%;
+                padding: 8px;
+            }
+        }
+        /* Glow animation for Best Dividend Tracker */
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(46, 93, 84, 0.3); }
+            50% { box-shadow: 0 0 8px rgba(46, 93, 84, 0.6); }
         }
     </style>
 </head>
@@ -364,6 +388,9 @@
             <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank"> <span class="click-here">CLICK HERE</span> To Start Dividend Investing Today</a>
         </div>
         <div id="filters">
+            <div style="order: 0;">
+                <button id="resetFilters">Reset Filters</button>
+            </div>
             <div style="order: 1;">
                 <input type="text" id="searchFilter" placeholder="ETF Name or Ticker">
             </div>
@@ -457,6 +484,9 @@
                 <a href="terms-of-use.html">Terms of Use</a> | 
                 <a href="privacy-policy.html">Privacy Policy</a> | 
                 Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
+            </p>
+            <p style="text-align: center;">
+                <strong><a href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank" style="color: #1A3C34; font-weight: bold; text-decoration: none; border: 2px solid #2E5D54; padding: 4px 8px; border-radius: 4px; animation: glow 2s ease-in-out infinite;" class="tracker-link">Best Dividend Tracker</a></strong>
             </p>
         </footer>
     </div>
@@ -574,6 +604,16 @@
         document.getElementById('yieldRangeFilter').addEventListener('change', applyFilters);
         document.getElementById('decayFilter').addEventListener('change', applyFilters);
         document.getElementById('searchFilter').addEventListener('input', applyFilters);
+
+        // Reset button event listener
+        document.getElementById('resetFilters').addEventListener('click', () => {
+            // Reset filter inputs
+            document.getElementById('searchFilter').value = '';
+            document.getElementById('yieldRangeFilter').value = '';
+            document.getElementById('decayFilter').value = '';
+            // Refresh the page
+            window.location.reload();
+        });
 
         // Add click support for multiple tooltips
         document.addEventListener('DOMContentLoaded', function() {
