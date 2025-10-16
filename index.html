@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <!-- Basic Page Metadata -->
     <meta charset="UTF-8">
@@ -15,16 +13,19 @@
     <!-- Open Graph Tags (for social media sharing, e.g., Facebook, LinkedIn) -->
     <meta property="og:title" content="Top Dividend ETFs 2025 | TopDividendETFs.com">
     <meta property="og:description" content="Discover the best dividend ETFs updated daily for free. Ideal for dividend, high-yield, and growth investors at TopDividendETFs.com!">
-    <meta property="og:image" content="https://topdividendetfs.com/images/dividend-etf-preview.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/your-username/topdividendetfs-site/main/social-preview.png"> <!-- Update with your GitHub username -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
     <meta property="og:url" content="https://topdividendetfs.com">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card Tags (optimized for X with list preview) -->
+    <!-- Twitter Card Tags (optimized for X with new image) -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@YourXHandle"> <!-- Replace with your X handle, e.g., @TopDividendETFs -->
     <meta name="twitter:title" content="Top 100 Dividend ETFs: Daily Updated List">
     <meta name="twitter:description" content="See the best dividend ETFs for 2025, updated daily for free! Perfect for high-yield & growth investors. Check the full list now!">
-    <meta name="twitter:image" content="https://iili.io/KMnCBVt.md.png">
-    <meta name="twitter:image:alt" content="Table of top dividend ETFs for 2025, showcasing symbols, yields, and grades">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/your-username/topdividendetfs-site/main/social-preview.png"> <!-- Update with your GitHub username -->
+    <meta name="twitter:image:alt" content="Preview of top dividend ETFs for 2025 from TopDividendETFs.com">
 
     <!-- Favicon / Icons (preserved from your original code) -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -42,12 +43,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gquelesstag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-B8TGV115DP');
     </script>
 
-    <!-- Inline CSS (includes centered placeholder text and new glow animation) -->
+    <!-- Inline CSS (preserved from your original code) -->
     <style>
         body {
             font-family: 'Lato', Arial, sans-serif;
@@ -369,273 +370,3 @@
         }
     </style>
 </head>
-<body>
-    <div class="content">
-        <header>
-            <div class="logo">TopDividendETFs.com</div>
-        </header>
-        <h1>Top 100 Dividend ETFs</h1>
-        <p class="intro-text">
-            This curated list features <strong>100 of the top dividend ETFs</strong>, hand-picked for their strong potential in dividend investing.<br>
-            <span style="font-weight: 900; font-size: 1.1em; display: block; margin-top: 6px;">
-                The ONLY ACCURATE list updated DAILY! 100% FREE!
-            </span>
-            <span style="font-style: italic; font-weight: 300; color: #555; display: block; margin-top: 6px;">
-                Dividend yields are sourced from public data and are as accurate as possible, though all market data can change dynamically. Grades are based on things like: Yield, Stability, historical performance etc. <strong>Not a signal to buy or sell</strong> This site/tool is for entertainment purposes ONLY!
-            </span>
-        </p>
-        <div class="banner">
-            <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank"> <span class="click-here">CLICK HERE</span> To Start Dividend Investing Today</a>
-        </div>
-        <div id="filters">
-            <div style="order: 0;">
-                <button id="resetFilters">Reset Filters</button>
-            </div>
-            <div style="order: 1;">
-                <input type="text" id="searchFilter" placeholder="ETF Name or Ticker">
-            </div>
-            <div style="order: 2;">
-                <label for="yieldRangeFilter">Yield:</label>
-                <select id="yieldRangeFilter">
-                    <option value="">All</option>
-                    <option value="1-5">1-5%</option>
-                    <option value="5-10">5-10%</option>
-                    <option value="10-15">10-15%</option>
-                    <option value="15+">15+%</option>
-                </select>
-            </div>
-            <div style="order: 3;">
-                <label for="decayFilter">Price Decay:</label>
-                <select id="decayFilter">
-                    <option value="" selected>Show All</option>
-                    <option value="YES">Yes</option>
-                    <option value="NO">No</option>
-                </select>
-            </div>
-        </div>
-        <div id="etfTableWrapper">
-            <table id="etfTable">
-                <thead>
-                    <tr>
-                        <th onclick="sortTable(0)">Symbol</th>
-                        <th onclick="sortTable(1)">Name</th>
-                        <th onclick="sortTable(2)" class="sort-desc">Dividend Yield</th>
-                        <th onclick="sortTable(3)">AUM </th>
-                        <th onclick="sortTable(4)"><span class="tooltip">Price Decay <span class="tooltiptext">ETF has <strong>decayed</strong><br>in price since<br>inception</span></span></th>
-                        <th onclick="sortTable(5)"><span class="tooltip">Grade <span class="tooltiptext"><strong>Grades</strong> based on<br>on total return<br>Yield & Stability</span></span></th>
-                    </tr>
-                </thead>
-                <tbody id="etfBody">
-                    <tr>
-                        <td data-label="Symbol" style="font-weight: 900; font-size: 1.2em; color: #1A3C34;">SCHD</td>
-                        <td data-label="Name">Schwab U.S. Dividend Equity ETF</td>
-                        <td data-label="Dividend Yield">3.80%</td>
-                        <td data-label="AUM">70630M</td>
-                        <td data-label="Price Decay">NO</td>
-                        <td data-label="Grade" style="font-weight: bold; font-size: 1.1em;">A+</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Symbol" style="font-weight: 900; font-size: 1.2em; color: #1A3C34;">VIG</td>
-                        <td data-label="Name">Vanguard Dividend Appreciation ETF</td>
-                        <td data-label="Dividend Yield">1.65%</td>
-                        <td data-label="AUM">97160M</td>
-                        <td data-label="Price Decay">NO</td>
-                        <td data-label="Grade" style="font-weight: bold; font-size: 1.1em;">A+</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Symbol" style="font-weight: 900; font-size: 1.2em; color: #1A3C34;">JEPI</td>
-                        <td data-label="Name">JPMorgan Equity Premium Income ETF</td>
-                        <td data-label="Dividend Yield">8.39%</td>
-                        <td data-label="AUM">41040M</td>
-                        <td data-label="Price Decay">NO</td>
-                        <td data-label="Grade" style="font-weight: bold; font-size: 1.1em;">A</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Symbol" style="font-weight: 900; font-size: 1.2em; color: #1A3C34;">DIVO</td>
-                        <td data-label="Name">Amplify CWP Enhanced Dividend Income ETF</td>
-                        <td data-label="Dividend Yield">4.51%</td>
-                        <td data-label="AUM">5210M</td>
-                        <td data-label="Price Decay">NO</td>
-                        <td data-label="Grade" style="font-weight: bold; font-size: 1.1em;">A</td>
-                    </tr>
-                </tbody>
-            </table>
-            <noscript>
-                <div class="noscript-message">
-                    <p>JavaScript is disabled. Below is a sample of top dividend ETFs for 2025:</p>
-                    <ul>
-                        <li><strong>SCHD</strong>: Schwab U.S. Dividend Equity ETF, Yield: 3.80%, AUM: $70.63B, Grade: A+</li>
-                        <li><strong>VIG</strong>: Vanguard Dividend Appreciation ETF, Yield: 1.65%, AUM: $97.16B, Grade: A+</li>
-                        <li><strong>JEPI</strong>: JPMorgan Equity Premium Income ETF, Yield: 8.39%, AUM: $41.04B, Grade: A</li>
-                        <li><strong>DIVO</strong>: Amplify CWP Enhanced Dividend Income ETF, Yield: 4.51%, AUM: $5.21B, Grade: A</li>
-                    </ul>
-                    <p>Enable JavaScript to view the full interactive list of 100 ETFs updated daily.</p>
-                </div>
-            </noscript>
-        </div>
-        <div class="banner">
-            <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank"> <span class="click-here">CLICK HERE</span> To Start Dividend Investing Today</a>
-        </div>
-        <p class="disclaimer">
-            Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
-        </p>
-        <footer class="footer">
-            <p>
-                <a href="terms-of-use.html">Terms of Use</a> | 
-                <a href="privacy-policy.html">Privacy Policy</a> | 
-                Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
-            </p>
-            <p style="text-align: center;">
-                <strong><a href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank" style="color: #1A3C34; font-weight: bold; text-decoration: none; border: 2px solid #2E5D54; padding: 4px 8px; border-radius: 4px; animation: glow 2s ease-in-out infinite;" class="tracker-link">Best Dividend Tracker</a></strong>
-            </p>
-        </footer>
-    </div>
-
-    <script>
-        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv';
-
-        let allRows = []; // To store all rows for filtering
-
-        fetch(csvUrl)
-            .then(response => response.text())
-            .then(csvText => {
-                const rows = csvText.split('\n').map(row => row.split(','));
-                const tbody = document.getElementById('etfBody');
-                tbody.innerHTML = '';
-
-                for (let i = 1; i < rows.length; i++) {
-                    if (rows[i].length < 6) continue;
-                    const tr = document.createElement('tr');
-                    for (let j = 0; j < 6; j++) {
-                        const td = document.createElement('td');
-                        td.textContent = rows[i][j].trim();
-                        if (j === 0) { td.style.fontWeight = '900'; td.style.fontSize = '1.2em'; td.style.color = '#1A3C34'; }
-                        if (j === 5) { td.style.fontWeight = 'bold'; td.style.fontSize = '1.1em'; }
-                        td.setAttribute('data-label', ['Symbol', 'Name', 'Dividend Yield', 'AUM', 'Price Decay', 'Grade'][j]);
-                        tr.appendChild(td);
-                    }
-                    tbody.appendChild(tr);
-                    allRows.push(tr); // Store the row
-                }
-                sortTable(2, 'desc');
-                applyFilters(); // Initial filter application
-            })
-            .catch(error => {
-                console.error('Error loading data:', error);
-                document.getElementById('etfBody').innerHTML = '<tr><td colspan="6">Error loading data from Google Sheet. Check the URL.</td></tr>';
-            });
-
-        let sortDirection = { 2: 'desc' };
-        function sortTable(colIndex, defaultDir = null) {
-            const table = document.getElementById('etfTable');
-            const tbody = document.getElementById('etfBody');
-            const rows = Array.from(tbody.querySelectorAll('tr'));
-
-            const isNumericCol = [2, 3].includes(colIndex);
-            const dir = defaultDir || (sortDirection[colIndex] === 'asc' ? 'desc' : 'asc');
-            sortDirection[colIndex] = dir;
-
-            const headers = table.querySelectorAll('th');
-            headers.forEach((th, idx) => {
-                th.classList.remove('sort-asc', 'sort-desc');
-                if (idx === colIndex) { th.classList.add(`sort-${dir}`); }
-            });
-
-            rows.sort((a, b) => {
-                let aVal = a.cells[colIndex].textContent.trim().replace(/[\s]/g, '');
-                let bVal = b.cells[colIndex].textContent.trim().replace(/[\s]/g, '');
-                if (isNumericCol) {
-                    aVal = parseFloat(aVal.replace(/[%$,B]/g, '')) || 0;
-                    bVal = parseFloat(bVal.replace(/[%$,B]/g, '')) || 0;
-                    return dir === 'asc' ? aVal - bVal : bVal - aVal;
-                } else {
-                    return dir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-                }
-            });
-
-            rows.forEach(row => tbody.appendChild(row));
-            applyFilters(); // Re-apply filters after sorting
-        }
-
-        // Filter function
-        function applyFilters() {
-            const yieldRange = document.getElementById('yieldRangeFilter').value;
-            const decayFilter = document.getElementById('decayFilter').value;
-            const searchTerm = document.getElementById('searchFilter').value.trim().toLowerCase();
-
-            allRows.forEach(row => {
-                const yieldVal = parseFloat(row.cells[2].textContent.replace('%', '')) || 0;
-                const decayVal = row.cells[4].textContent.trim().toUpperCase();
-                const symbol = row.cells[0].textContent.trim().toLowerCase();
-                const name = row.cells[1].textContent.trim().toLowerCase();
-
-                // Yield filter
-                let matchesYield = true;
-                if (yieldRange) {
-                    if (yieldRange === '1-5') {
-                        matchesYield = yieldVal >= 1 && yieldVal <= 5;
-                    } else if (yieldRange === '5-10') {
-                        matchesYield = yieldVal > 5 && yieldVal <= 10;
-                    } else if (yieldRange === '10-15') {
-                        matchesYield = yieldVal > 10 && yieldVal <= 15;
-                    } else if (yieldRange === '15+') {
-                        matchesYield = yieldVal > 15;
-                    }
-                }
-
-                // Price Decay filter
-                const matchesDecay = decayFilter === '' || decayVal === decayFilter;
-
-                // Search filter
-                const matchesSearch = searchTerm === '' || 
-                                     symbol.includes(searchTerm) || 
-                                     name.includes(searchTerm);
-
-                // Show row only if it matches all filters
-                if (matchesYield && matchesDecay && matchesSearch) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        }
-
-        // Event listeners for filters
-        document.getElementById('yieldRangeFilter').addEventListener('change', applyFilters);
-        document.getElementById('decayFilter').addEventListener('change', applyFilters);
-        document.getElementById('searchFilter').addEventListener('input', applyFilters);
-
-        // Reset button event listener
-        document.getElementById('resetFilters').addEventListener('click', () => {
-            // Reset filter inputs
-            document.getElementById('searchFilter').value = '';
-            document.getElementById('yieldRangeFilter').value = '';
-            document.getElementById('decayFilter').value = '';
-            // Refresh the page
-            window.location.reload();
-        });
-
-        // Add click support for multiple tooltips
-        document.addEventListener('DOMContentLoaded', function() {
-            const tooltips = document.querySelectorAll('.tooltip');
-            tooltips.forEach(tooltip => {
-                const tooltipText = tooltip.querySelector('.tooltiptext');
-                tooltip.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    // Toggle visibility for clicked tooltip only
-                    tooltipText.style.visibility = tooltipText.style.visibility === 'visible' ? 'hidden' : 'visible';
-                    tooltipText.style.opacity = tooltipText.style.opacity === '1' ? '0' : '1';
-                    // Hide other tooltips
-                    tooltips.forEach(otherTooltip => {
-                        if (otherTooltip !== tooltip) {
-                            const otherTooltipText = otherTooltip.querySelector('.tooltiptext');
-                            otherTooltipText.style.visibility = 'hidden';
-                            otherTooltipText.style.opacity = '0';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>
