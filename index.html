@@ -9,7 +9,7 @@
     <title>Top Dividend ETFs 2025 | TopDividendETFs.com</title>
     <meta name="description" content="Free daily-updated list of the best dividend ETFs for 2025. Perfect for dividend, high-yield, and growth investors. Explore now!">
     <meta name="keywords" content="dividend ETFs, high yield ETFs, dividend stocks, dividend investing, best ETFs 2025">
-    <meta name="google-site-verification" content="B3Y64nGCTrh2g_qRz1Dx4j3R-mpRJ-xW65aAV_4OXBk" />
+    <meta name="google-site-verification" content="B3Y64nGCTrh2g_qRz1Dx4j3R-m-mpRJ-xW65aAV_4OXBk" />
     <meta name="msvalidate.01" content="C66A48BDFAA2F813D992F39A8BBB3EF1" />
 
     <!-- Open Graph Tags (for social media sharing, e.g., Facebook, LinkedIn) -->
@@ -270,7 +270,7 @@
                 max-width: 160px;
                 font-size: 0.6em;
                 padding: 3px 5px;
-                line-height: 1.2;
+                line-height: 1.2);
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -554,6 +554,7 @@
             applyFilters(); // Re-apply filters after sorting
         }
 
+        // Filter function
         function applyFilters() {
             const yieldRange = document.getElementById('yieldRangeFilter').value;
             const decayFilter = document.getElementById('decayFilter').value;
@@ -565,6 +566,7 @@
                 const symbol = row.cells[0].textContent.trim().toLowerCase();
                 const name = row.cells[1].textContent.trim().toLowerCase();
 
+                // Yield filter
                 let matchesYield = true;
                 if (yieldRange) {
                     if (yieldRange === '1-5') {
@@ -578,11 +580,15 @@
                     }
                 }
 
+                // Price Decay filter
                 const matchesDecay = decayFilter === '' || decayVal === decayFilter;
+
+                // Search filter
                 const matchesSearch = searchTerm === '' || 
                                      symbol.includes(searchTerm) || 
                                      name.includes(searchTerm);
 
+                // Show row only if it matches all filters
                 if (matchesYield && matchesDecay && matchesSearch) {
                     row.style.display = '';
                 } else {
@@ -591,25 +597,32 @@
             });
         }
 
+        // Event listeners for filters
         document.getElementById('yieldRangeFilter').addEventListener('change', applyFilters);
         document.getElementById('decayFilter').addEventListener('change', applyFilters);
         document.getElementById('searchFilter').addEventListener('input', applyFilters);
 
+        // Reset button event listener
         document.getElementById('resetFilters').addEventListener('click', () => {
+            // Reset filter inputs
             document.getElementById('searchFilter').value = '';
             document.getElementById('yieldRangeFilter').value = '';
             document.getElementById('decayFilter').value = '';
+            // Refresh the page
             window.location.reload();
         });
 
+        // Add click support for multiple tooltips
         document.addEventListener('DOMContentLoaded', function() {
             const tooltips = document.querySelectorAll('.tooltip');
             tooltips.forEach(tooltip => {
                 const tooltipText = tooltip.querySelector('.tooltiptext');
                 tooltip.addEventListener('click', function(e) {
                     e.preventDefault();
+                    // Toggle visibility for clicked tooltip only
                     tooltipText.style.visibility = tooltipText.style.visibility === 'visible' ? 'hidden' : 'visible';
                     tooltipText.style.opacity = tooltipText.style.opacity === '1' ? '0' : '1';
+                    // Hide other tooltips
                     tooltips.forEach(otherTooltip => {
                         if (otherTooltip !== tooltip) {
                             const otherTooltipText = otherTooltip.querySelector('.tooltiptext');
