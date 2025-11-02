@@ -84,6 +84,31 @@
         .noscript-msg{background:#fff;padding:20px;border-radius:8px;margin:20px;text-align:center;color:var(--red);font-weight:bold}
         .weekly{font-size:0.9em;color:var(--green);font-weight:900;margin-top:8px;display:block}
         .weekly a{color:#1DA1F2;text-decoration:underline;font-weight:900}
+
+        /* ==== ONLY ADDED: TINY SHARE BUTTONS ==== */
+        .share-buttons {
+            margin: 18px auto 8px;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 11px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.82em;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(0,0,0,.2);
+            transition: all .2s;
+        }
+        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.3); }
+        .fb { background: #1877F2; }
+        .x { background: #000; }
+        .share-btn svg { width: 15px; height: 15px; fill: currentColor; }
     </style>
 </head>
 <body>
@@ -167,6 +192,18 @@
     <p class="disclaimer">
         Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
     </p>
+
+    <!-- ==== ONLY ADDED: TWO TINY SHARE BUTTONS ==== -->
+    <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftopdividendetfs.com" target="_blank" class="share-btn fb" onclick="window.open(this.href,'','width=570,height=350');return false;">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Share
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftopdividendetfs.com&text=Top%20100%20Dividend%20ETFs%20Updated%20DAILY!%20Vote%20now%20%40TopDividendETFs" target="_blank" class="share-btn x" onclick="window.open(this.href,'','width=570,height=350');return false;">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Post
+        </a>
+    </div>
 
     <footer class="footer">
         <p>
