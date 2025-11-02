@@ -41,7 +41,11 @@
         :root{--green:#2E5D54;--red:#e74c3c}
         body{font-family:'Lato',Arial,sans-serif;margin:0;background:#f4f4f4;color:#333;display:flex;flex-direction:column;align-items:center;min-height:100vh}
         header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay}
-        .logo{font-size:36px;font-weight:900}
+.logo{
+  font-size: clamp(22px, 6vw, 36px);
+  font-weight: 900;
+}
+
         h1{color:#1A3C34;margin:15px 0 10px;font-weight:900;font-size:1.5em}
         .intro-text{max-width:900px;margin:0 auto 10px;line-height:1.6;text-align:center;color:#444}
         .banner{width:90%;max-width:900px;margin:5px auto 10px;padding:15px;border-radius:8px;background:linear-gradient(#1a3224,#14291c);text-align:center}
