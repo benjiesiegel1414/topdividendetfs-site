@@ -40,7 +40,7 @@
     <style>
         :root{--green:#2E5D54;--red:#e74c3c}
         body{font-family:'Lato',Arial,sans-serif;margin:0;background:#f4f4f4;color:#333;display:flex;flex-direction:column;align-items:center;min-height:100vh}
-        header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay}
+        header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer}
 .logo{
   font-size: clamp(22px, 6vw, 36px);
   font-weight: 900;
@@ -109,11 +109,31 @@
         .fb { background: #1877F2; }
         .x { background: #000; }
         .share-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+        /* NEW: BACK TO TOP = RESET FILTERS */
+        .back-to-top {
+            display: block;
+            margin: 12px auto 0;
+            padding: 7px 14px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.82em;
+            border-radius: 6px;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(0,0,0,.2);
+            transition: all .2s;
+            cursor: pointer;
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,.3);
+        }
     </style>
 </head>
 <body>
 <div class="content">
-    <header><div class="logo">TopDividendETFs.com</div></header>
+    <header onclick="location.reload()"><div class="logo">TopDividendETFs.com</div></header>
 
     <h1>Top 100 Dividend ETFs</h1>
     <p class="intro-text">
@@ -204,6 +224,9 @@
             Post
         </a>
     </div>
+
+    <!-- NEW: BACK TO TOP BUTTON (RESETS FILTERS) -->
+    <button class="back-to-top" onclick="location.reload()">Back To Top</button>
 
     <footer class="footer">
         <p>
