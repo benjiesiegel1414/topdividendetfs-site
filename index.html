@@ -184,13 +184,6 @@
   border-radius:50%;font-size:1.15em;cursor:pointer;z-index:10;transition:.3s;}
 .close-x:hover{background:rgba(231,76,60,.8);transform:rotate(90deg);}
 
-.save-btn{position:absolute;bottom:18px;right:16px;background:rgba(255,255,255,.16);
-  color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:8px;
-  padding:6px 10px;font-size:.72em;font-weight:700;cursor:pointer;z-index:10;
-  transition:all .3s;backdrop-filter:blur(5px);}
-.save-btn:hover{background:rgba(255,255,255,.28);transform:scale(1.05);
-  box-shadow:0 0 15px rgba(255,255,255,.3);}
-
 .etf-name-link{cursor:pointer;color:#1A3C34;text-decoration:none !important;
   display:block;width:100%;}
 .etf-name-link:hover{color:#1A3C34 !important;text-decoration:none !important;}
@@ -373,7 +366,6 @@
       <div class="photon-footer"><strong>TopDividendETFs.com</strong></div>
     </div>
 
-    <button class="save-btn" onclick="saveCardAsImage()">Save Image</button>
   </div>
 </div>
 <script>
@@ -593,33 +585,9 @@ document.getElementById('scorecardModal').addEventListener('click', e => {
 });
 
 /* ───── SAVE AS 500×500 PNG (requires html2canvas) ───── */
-function saveCardAsImage() {
-  const card = document.querySelector('.photon-card');
-  const btn  = document.querySelector('.save-btn');
-  btn.textContent = 'Saving...';
-  html2canvas(card, {
-    scale:1, width:500, height:500, backgroundColor:null,
-    logging:false, useCORS:true, allowTaint:true
-  }).then(canvas => {
-    const a = document.createElement('a');
-    a.download = `${document.getElementById('modalSymbol').textContent.trim()}_Scorecard_500x500.png`;
-    a.href = canvas.toDataURL('image/png');
-    a.click();
-    btn.textContent = 'Save Image';
-  }).catch(() => {
-    alert('Save failed – try again.');
-    btn.textContent = 'Save Image';
-  });
-}
 
-/* ───── LOAD html2canvas (once) ───── */
-if (!window.html2canvas) {
-  const s = document.createElement('script');
-  s.src = 'https://html2canvas.hertzen.com/dist/html2canvas.min.js';
-  s.onload = () => console.log('html2canvas loaded');
-  document.head.appendChild(s);
-}
 /* ────────────────────────────────────── END CARD LOGIC ────────────────────────────────────── */
 </script>
 </body>
 </html>
+
