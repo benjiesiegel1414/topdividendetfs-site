@@ -219,41 +219,40 @@
     </p>
 
 <style>
+/* Center the banner and keep it clickable */
 .banner {
-    width: 90%;
-    max-width: 1000px;
-    margin: 15px auto;
-    padding: 8px 0; /* ← Adds tiny top/bottom padding to shift content down */
-    border-radius: 12px;
-    overflow: hidden;
-    background: linear-gradient(#1a3224, #14291c);
-    box-shadow: 0 6px 20px rgba(0,0,0,.15);
-    transition: transform .3s ease;
+    width: 90%;               /* keep the responsive wrapper */
+    max-width: 1000px;        /* optional max-width */
+    margin: 15px auto;        /* vertical spacing + horizontal centering */
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
     display: flex;
     justify-content: center;
 }
-.banner:hover {
-    transform: translateY(-3px);
-}
+
+/* Image shows at its **true** pixel dimensions */
 .banner img {
-    width: 100%;
-    max-width: 980px;     /* Slightly smaller than container for breathing room */
-    height: 125px;
-    object-fit: contain;
-    object-position: center;
     display: block;
-    border-radius: 10px;
-    background: #14291c;
+    width: auto;              /* let the browser use the intrinsic width */
+    height: auto;             /* let the browser use the intrinsic height */
+    max-width: 100%;          /* never overflow the container on small screens */
+    object-fit: contain;      /* preserve aspect ratio */
+    background: transparent;
     transition: transform .3s ease;
 }
+
+/* Optional hover zoom – still works at true size */
 .banner:hover img {
     transform: scale(1.02);
 }
 </style>
 
 <div class="banner">
-    <a href="https://dividendempire2000.gumroad.com/l/fnmhe" target="_blank">
-        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/Daily Dividend Club (4).png"
+    <a href="https://www.rexshares.com/ulti/?utm_source=display&utm_medium=topdivetfs&utm_campaign=ulti"
+       target="_blank">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/ULTI%20YT%20Banner.png"
              alt="80% Off Dividend Investing Bundle">
     </a>
 </div>
@@ -304,12 +303,11 @@
     </noscript>
 
 <div class="banner">
-    <a href="https://dividendempire2000.gumroad.com/l/DividendInvestingg" target="_blank">
-        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/80%25%20off.png" 
-             alt="80% Off Dividend Investing Bundle" 
-             style="width:100%; max-width:728px; height:auto; border-radius:8px; display:block; margin:0 auto;">
-        </a>
-    </div>
+    <a href="https://www.rexshares.com/ulti/?utm_source=display&utm_medium=topdivetfs&utm_campaign=ulti" target="_blank">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/ULTI%20YT%20Banner.png"
+             alt="80% Off Dividend Investing Bundle">
+    </a>
+</div>
 
     <p class="disclaimer">
         Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
@@ -590,7 +588,5 @@ document.getElementById('scorecardModal').addEventListener('click', e => {
 </script>
 </body>
 </html>
-
-
 
 
