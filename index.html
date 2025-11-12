@@ -221,15 +221,17 @@
 <style>
 /* Center the banner and keep it clickable */
 .banner {
-    width: 90%;               /* keep the responsive wrapper */
-    max-width: 1000px;        /* optional max-width */
-    margin: 15px auto;        /* vertical spacing + horizontal centering */
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
     padding: 0;
     background: none;
     border-radius: 0;
     box-shadow: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;     /* ← Stack image + label */
+    align-items: center;        /* ← Center everything */
+    gap: 6px;                   /* ← Space between image and text */
 }
 
 /* Image shows at its **true** pixel dimensions */
@@ -250,11 +252,10 @@
 </style>
 
 <div class="banner">
-    <a href="https://www.rexshares.com/ulti/?utm_source=display&utm_medium=topdivetfs&utm_campaign=ulti"
-       target="_blank">
-        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/ULTI%20YT%20Banner.png"
-             alt="80% Off Dividend Investing Bundle">
+    <a href="https://www.rexshares.com/ulti/?utm_source=display&utm_medium=topdivetfs&utm_campaign=ulti" target="_blank">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/ULTI%20YT%20Banner.png" alt="80% Off Dividend Investing Bundle">
     </a>
+    <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
 </div>
         </a>
     </div>
@@ -304,9 +305,9 @@
 
 <div class="banner">
     <a href="https://www.rexshares.com/ulti/?utm_source=display&utm_medium=topdivetfs&utm_campaign=ulti" target="_blank">
-        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/ULTI%20YT%20Banner.png"
-             alt="80% Off Dividend Investing Bundle">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/ULTI%20YT%20Banner.png" alt="80% Off Dividend Investing Bundle">
     </a>
+    <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
 </div>
 
     <p class="disclaimer">
