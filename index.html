@@ -222,7 +222,39 @@
             <strong>Grades:</strong> Grades are based on things like: Yield, fund provider, price decay, and other metrics. Grades are NOT buy or sell signals and are opinion based!<br>
             <strong>Price Decay:</strong> Price decay is based on if the ETF has decreased in price or not since inception. Price decay references share price only & is NOT a buy or sell signal.<br>
 <strong>Voting:</strong> Voting allows the community to pick the <strong>BEST</strong> dividend ETF each week. <strong>NOT</strong> a buy or sell signal.<br>
-<strong>*This site/tool is for entertainment purposes ONLY!</strong>
+<style>
+.tracker-link-tight {
+    display: inline-block;
+    border: 2px solid #2E5D54;
+    padding: 1px 6px !important;        /* super tight horizontal + minimal vertical */
+    border-radius: 4px;
+    animation: glow 2s infinite;
+    font-weight: 900;
+    font-size: 0.92em;                  /* slightly smaller text = tighter feel */
+    text-decoration: none;
+    color: #1A3C34;
+    line-height: 1.1;
+    margin: 0 3px;
+    transition: all 0.2s ease;
+}
+.tracker-link-tight:hover {
+    box-shadow: 0 0 12px rgba(46,93,84,0.6);
+    transform: translateY(-1px);
+}
+@keyframes glow {
+    0%,100%{box-shadow:0 0 5px rgba(46,93,84,.3)}
+    50%{box-shadow:0 0 8px rgba(46,93,84,.6)}
+}
+</style>
+
+<strong>Top Weekly ETFs:</strong> See Top Weekly Dividend ETFs here: 
+<a href="https://weeklyetfs.com/" target="_blank" class="tracker-link-tight">
+    WeeklyETFs.com
+</a>  
+<br>
+
+
+            <strong>*This site/tool is for entertainment purposes ONLY!</strong>
         </span>
         <span class="weekly">
             Votes collected until <strong>4 PM EST every Friday</strong> — 
@@ -601,6 +633,7 @@ document.getElementById('scorecardModal').addEventListener('click', e => {
 </script>
 </body>
 </html>
+
 
 
 
