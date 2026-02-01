@@ -358,7 +358,45 @@
     <p class="disclaimer">
         Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
     </p>
+    <!-- Top Dividend Tools button - pure HTML with much softer yellow glow (60% less intense) -->
+    <div style="text-align:center; margin: 28px auto 24px;">
+        <a href="https://topdividendtools.com/" 
+           target="_blank" 
+           style="display: inline-block; 
+                  padding: 12px 28px; 
+                  background: #2E5D54; 
+                  color: white; 
+                  font-weight: bold; 
+                  font-size: 1.12em; 
+                  border-radius: 8px; 
+                  text-decoration: none; 
+                  border: 2px solid #ffcc00; 
+                  box-shadow: 
+                    0 0 4px rgba(255,204,0,0.25), 
+                    0 0 8px rgba(255,204,0,0.25), 
+                    inset 0 0 6px rgba(255,204,0,0.15); 
+                  animation: soft-glow 4s infinite ease-in-out;">
+           Top Dividend Tools 🛠️
+        </a>
+    </div>
 
+    <!-- Inline animation - reduced intensity by ~60% -->
+    <style>
+    @keyframes soft-glow {
+        0%, 100% { 
+            box-shadow: 
+                0 0 4px rgba(255,204,0,0.25), 
+                0 0 8px rgba(255,204,0,0.25), 
+                inset 0 0 6px rgba(255,204,0,0.15); 
+        }
+        50%      { 
+            box-shadow: 
+                0 0 7px rgba(255,204,0,0.45), 
+                0 0 14px rgba(255,204,0,0.45), 
+                inset 0 0 9px rgba(255,204,0,0.25); 
+        }
+    }
+    </style>
     <!-- ==== ONLY ADDED: TWO TINY SHARE BUTTONS ==== -->
     <div class="share-buttons">
         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftopdividendetfs.com" target="_blank" class="share-btn fb" onclick="window.open(this.href,'','width=570,height=350');return false;">
@@ -634,3 +672,4 @@ document.getElementById('scorecardModal').addEventListener('click', e => {
 </script>
 </body>
 </html>
+
