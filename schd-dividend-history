@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHD Dividend History | TopDividendETFs.com</title>
+    <meta name="description" content="Full historical quarterly dividend payouts for SCHD (Schwab U.S. Dividend Equity ETF) since inception, with adjusted amounts, growth rates, and interactive chart.">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #009fe0;
+            --primary-dark: #007bb8;
+            --light-blue: #e6f7ff;
+            --text-dark: #1a3c34;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: clamp(40px, 12vw, 70px) 16px clamp(30px, 10vw, 50px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .hero h1 { margin: 0 0 12px; font-size: clamp(1.9em, 8vw, 3.2em); font-weight: 900; letter-spacing: -0.5px; }
+        .hero p.subtitle { margin: 0 0 24px; font-size: clamp(1.1em, 5vw, 1.45em); font-weight: 700; opacity: 0.96; }
+        .back-home-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: white;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: clamp(1em, 4.5vw, 1.18em);
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.25s ease;
+            min-width: 240px;
+            text-align: center;
+        }
+        .back-home-btn:hover, .back-home-btn:active {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .summary {
+            background: white;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            font-size: clamp(0.95em, 3.8vw, 1.05em);
+        }
+        .summary p { margin: 8px 0; }
+        .summary strong { color: var(--primary); }
+        #chartContainer, #projectionContainer {
+            background: white;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin: 24px auto;
+            max-width: 100%;
+        }
+        canvas { height: clamp(280px, 60vw, 480px) !important; width: 100% !important; margin: 0 auto; }
+        h2 { color: var(--primary); text-align: center; margin: 32px 0 16px; font-size: clamp(1.5em, 6vw, 2.2em); font-weight: 900; }
+        .table-wrapper { overflow-x: auto; margin: 16px 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        table { width: 100%; min-width: 480px; border-collapse: collapse; background: white; }
+        th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #eee; font-size: clamp(0.85em, 3.5vw, 0.98em); }
+        th { background: var(--primary); color: white; font-weight: 700; position: sticky; top: 0; z-index: 1; }
+        tr:nth-child(even) { background: var(--light-blue); }
+        .download-btn, .chart-back-btn {
+            display: block;
+            margin: 24px auto;
+            padding: 14px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(1em, 4.5vw, 1.15em);
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            min-width: 240px;
+            box-shadow: 0 4px 12px rgba(0,159,224,0.3);
+            transition: all 0.25s ease;
+        }
+        .download-btn:hover, .chart-back-btn:hover, .download-btn:active, .chart-back-btn:active {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,159,224,0.4);
+        }
+        .projections {
+            background: #f0f9ff;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 24px 0;
+            font-size: clamp(0.92em, 3.6vw, 1em);
+            border-left: 4px solid var(--primary);
+        }
+        .projections strong { color: var(--primary); }
+        footer {
+            text-align: center;
+            padding: 40px 16px 24px;
+            color: #666;
+            font-size: 0.92em;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+        footer a { color: var(--primary); font-weight: bold; text-decoration: none; }
+        @media (max-width: 480px) {
+            .container { padding: 12px; }
+            .hero { padding: 40px 12px 30px; }
+            th, td { padding: 10px 6px; }
+            .back-home-btn, .download-btn, .chart-back-btn { padding: 12px 24px; font-size: 1em; min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>SCHD Dividend History</h1>
+    <p class="subtitle">Schwab U.S. Dividend Equity ETF — Quarterly Adjusted Dividends Since Inception (2011)</p>
+    <a href="https://topdividendetfs.com" class="back-home-btn">← Back to TopDividendETFs.com</a>
+</section>
+
+<div class="container">
+
+    <div class="summary">
+        <p><strong>Latest Quarterly (Q4 2025):</strong> $0.2782</p>
+        <p><strong>Trailing 12-Month Dividend (approx. 2025):</strong> $1.05</p>
+        <p><strong>Dividend Growth (CAGR since 2012):</strong> ~11.0%</p>
+        <p><strong>5-Year Dividend Growth Rate (approx.):</strong> ~9.2%</p>
+        <p><strong>10-Year Dividend Growth Rate (approx.):</strong> ~10.7%</p>
+        <p><strong>Total Dividends Paid (cumulative):</strong> ~$11–12 per share</p>
+        <p><em>Data source: Public records / Schwab / StockAnalysis. Not investment advice.</em></p>
+    </div>
+
+    <div id="chartContainer">
+        <canvas id="dividendChart"></canvas>
+    </div>
+
+    <!-- Future Projections Section + Second Chart -->
+    <div class="projections">
+        <h2>Future Outlook & Dividend Projections (Estimate Only)</h2>
+        <p>Dividend growth is never guaranteed — it depends on company earnings, economic conditions, interest rates, index rebalancing, and more. SCHD has historically delivered strong growth thanks to its focus on quality dividend payers, but recent years show variability (e.g., slower 3-year rate ~7%).</p>
+        <p>Here are three plausible scenarios for the next 10 years (2026–2035), based on historical patterns and analyst views:</p>
+        <ul>
+            <li><strong>Conservative (~7% annual growth)</strong>: Matches recent 3-year average — cautious outlook</li>
+            <li><strong>Moderate (~9–10% annual growth)</strong>: Aligns with 5–10 year historical averages — most common expectation</li>
+            <li><strong>Optimistic (~11% annual growth)</strong>: Matches long-term (since 2012) CAGR — assumes continued strong performance</li>
+        </ul>
+        <p>Starting from ~$1.0476 annualized in 2025, these project future quarterly dividends. <strong>These are illustrative only — not predictions or advice.</strong></p>
+    </div>
+
+    <div id="projectionContainer">
+        <canvas id="projectionChart"></canvas>
+    </div>
+
+    <a href="https://topdividendetfs.com" class="chart-back-btn">← Back to Home</a>
+
+    <h2>All Historical Quarterly Dividends (Adjusted Amounts)</h2>
+
+    <div class="table-wrapper">
+        <table id="dividendTable">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Quarter</th>
+                    <th>Adjusted Dividend ($)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <button class="download-btn" onclick="downloadCSV()">Download Historical Data as CSV</button>
+
+</div>
+
+<footer>
+    <p>© TopDividendETFs.com | Educational use only. Do your own research.</p>
+    <p><a href="https://topdividendetfs.com">← Return to Top 100 Dividend ETFs</a></p>
+</footer>
+
+<script>
+// Historical Data
+const dividends = [
+    { year: 2011, quarter: 'Q4', amount: 0.0406 },
+    { year: 2012, quarter: 'Q1', amount: 0.0460 }, { year: 2012, quarter: 'Q2', amount: 0.0687 }, { year: 2012, quarter: 'Q3', amount: 0.0693 }, { year: 2012, quarter: 'Q4', amount: 0.0860 },
+    { year: 2013, quarter: 'Q1', amount: 0.0664 }, { year: 2013, quarter: 'Q2', amount: 0.0750 }, { year: 2013, quarter: 'Q3', amount: 0.0769 }, { year: 2013, quarter: 'Q4', amount: 0.0830 },
+    { year: 2014, quarter: 'Q1', amount: 0.0826 }, { year: 2014, quarter: 'Q2', amount: 0.0898 }, { year: 2014, quarter: 'Q3', amount: 0.0848 }, { year: 2014, quarter: 'Q4', amount: 0.0918 },
+    { year: 2015, quarter: 'Q1', amount: 0.0900 }, { year: 2015, quarter: 'Q2', amount: 0.1021 }, { year: 2015, quarter: 'Q3', amount: 0.0996 }, { year: 2015, quarter: 'Q4', amount: 0.0905 },
+    { year: 2016, quarter: 'Q1', amount: 0.0994 }, { year: 2016, quarter: 'Q2', amount: 0.1058 }, { year: 2016, quarter: 'Q3', amount: 0.0813 }, { year: 2016, quarter: 'Q4', amount: 0.1329 },
+    { year: 2017, quarter: 'Q1', amount: 0.1086 }, { year: 2017, quarter: 'Q2', amount: 0.1104 }, { year: 2017, quarter: 'Q3', amount: 0.1146 }, { year: 2017, quarter: 'Q4', amount: 0.1149 },
+    { year: 2018, quarter: 'Q1', amount: 0.0872 }, { year: 2018, quarter: 'Q2', amount: 0.1352 }, { year: 2018, quarter: 'Q3', amount: 0.1223 }, { year: 2018, quarter: 'Q4', amount: 0.1351 },
+    { year: 2019, quarter: 'Q1', amount: 0.1173 }, { year: 2019, quarter: 'Q2', amount: 0.1403 }, { year: 2019, quarter: 'Q3', amount: 0.1618 }, { year: 2019, quarter: 'Q4', amount: 0.1553 },
+    { year: 2020, quarter: 'Q1', amount: 0.1473 }, { year: 2020, quarter: 'Q2', amount: 0.1473 }, { year: 2020, quarter: 'Q3', amount: 0.1810 }, { year: 2020, quarter: 'Q4', amount: 0.2005 },
+    { year: 2021, quarter: 'Q1', amount: 0.1675 }, { year: 2021, quarter: 'Q2', amount: 0.1799 }, { year: 2021, quarter: 'Q3', amount: 0.1957 }, { year: 2021, quarter: 'Q4', amount: 0.2066 },
+    { year: 2022, quarter: 'Q1', amount: 0.1725 }, { year: 2022, quarter: 'Q2', amount: 0.2346 }, { year: 2022, quarter: 'Q3', amount: 0.2122 }, { year: 2022, quarter: 'Q4', amount: 0.2345 },
+    { year: 2023, quarter: 'Q1', amount: 0.1988 }, { year: 2023, quarter: 'Q2', amount: 0.2216 }, { year: 2023, quarter: 'Q3', amount: 0.2182 }, { year: 2023, quarter: 'Q4', amount: 0.2474 },
+    { year: 2024, quarter: 'Q1', amount: 0.2037 }, { year: 2024, quarter: 'Q2', amount: 0.2747 }, { year: 2024, quarter: 'Q3', amount: 0.2515 }, { year: 2024, quarter: 'Q4', amount: 0.2645 },
+    { year: 2025, quarter: 'Q1', amount: 0.2488 }, { year: 2025, quarter: 'Q2', amount: 0.2602 }, { year: 2025, quarter: 'Q3', amount: 0.2604 }, { year: 2025, quarter: 'Q4', amount: 0.2782 }
+];
+
+// Populate Historical Table
+const tbody = document.querySelector('#dividendTable tbody');
+dividends.forEach(d => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${d.year}</td><td>${d.quarter}</td><td>$${d.amount.toFixed(4)}</td>`;
+    tbody.appendChild(row);
+});
+
+// Historical Chart
+const ctxHist = document.getElementById('dividendChart').getContext('2d');
+const labelsHist = dividends.map(d => `${d.year} ${d.quarter}`);
+const amountsHist = dividends.map(d => d.amount);
+
+new Chart(ctxHist, {
+    type: 'line',
+    data: { labels: labelsHist, datasets: [{ label: 'Adjusted Quarterly Dividend ($)', data: amountsHist, borderColor: 'var(--primary)', backgroundColor: 'rgba(0, 159, 224, 0.18)', fill: true, tension: 0.3, pointBackgroundColor: 'var(--primary)', pointRadius: 4 }] },
+    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: 'Dividend ($)', font: { size: 13 } } }, x: { title: { display: true, text: 'Quarter', font: { size: 13 } }, ticks: { maxRotation: 90, minRotation: 45, autoSkip: true, maxTicksLimit: 12 } } }, plugins: { legend: { position: 'top', labels: { font: { size: 13 } } }, title: { display: true, text: 'SCHD Quarterly Dividend Growth Since Inception', font: { size: 16 } } } }
+});
+
+// Projection Logic
+const lastAnnual = 1.0476; // 2025 approx TTM
+const yearsToProject = 10;
+const scenarios = {
+    conservative: 0.07,
+    moderate: 0.095,
+    optimistic: 0.11
+};
+
+const projectionData = {};
+Object.keys(scenarios).forEach(scenario => {
+    const rate = scenarios[scenario];
+    const quarterlyRate = Math.pow(1 + rate, 1/4) - 1;
+    let current = lastAnnual / 4;
+    const projected = [];
+    for (let y = 2026; y <= 2035; y++) {
+        for (let q = 1; q <= 4; q++) {
+            current *= (1 + quarterlyRate);
+            projected.push({ year: y, quarter: `Q${q}`, amount: current });
+        }
+    }
+    projectionData[scenario] = projected;
+});
+
+// Projection Chart
+const ctxProj = document.getElementById('projectionChart').getContext('2d');
+const years = Array.from({length: yearsToProject * 4}, (_, i) => {
+    const y = 2026 + Math.floor(i / 4);
+    const q = (i % 4) + 1;
+    return `${y} Q${q}`;
+});
+
+new Chart(ctxProj, {
+    type: 'line',
+    data: {
+        labels: years,
+        datasets: [
+            { label: 'Conservative (~7% CAGR)', data: projectionData.conservative.map(p => p.amount), borderColor: '#ff9800', fill: false, tension: 0.2 },
+            { label: 'Moderate (~9.5% CAGR)', data: projectionData.moderate.map(p => p.amount), borderColor: 'var(--primary)', fill: false, tension: 0.2 },
+            { label: 'Optimistic (~11% CAGR)', data: projectionData.optimistic.map(p => p.amount), borderColor: '#4caf50', fill: false, tension: 0.2 }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { y: { beginAtZero: true, title: { display: true, text: 'Projected Quarterly Dividend ($)' } }, x: { ticks: { maxRotation: 90, minRotation: 45, autoSkip: true, maxTicksLimit: 10 } } },
+        plugins: { legend: { position: 'top' }, title: { display: true, text: 'SCHD Dividend Projection — Next 10 Years (2026–2035)', font: { size: 16 } } }
+    }
+});
+
+// Download CSV (historical only)
+function downloadCSV() {
+    let csv = 'Year,Quarter,Adjusted Dividend\n';
+    dividends.forEach(d => { csv += `${d.year},${d.quarter},${d.amount.toFixed(4)}\n`; });
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'SCHD_Dividend_History.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
