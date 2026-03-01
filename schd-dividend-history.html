@@ -28,6 +28,7 @@
             --primary-dark: #007bb8;
             --light-blue: #e6f7ff;
             --text-dark: #1a3c34;
+            --gray: #666;
         }
         * { box-sizing: border-box; }
         body {
@@ -151,7 +152,7 @@
             text-align: center;
             padding: 0 16px;
         }
-        /* Popup */
+        /* Popup Styles */
         #popupOverlay {
             display: none;
             position: fixed;
@@ -173,33 +174,48 @@
             animation: popIn 0.4s ease-out;
         }
         #popupContent h3 {
-            margin: 0 0 16px;
+            margin: 0 0 20px;
             font-size: 1.6em;
             color: var(--primary);
             font-weight: 900;
         }
-        #popupContent p {
-            margin: 0 0 24px;
-            font-size: 1.15em;
-            color: #444;
+        .popup-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
         }
-        #yesBtn {
-            display: inline-block;
+        .popup-btn {
+            display: block;
             padding: 16px 40px;
-            background: var(--primary);
-            color: white;
             font-size: 1.25em;
             font-weight: bold;
-            border: none;
             border-radius: 50px;
             text-decoration: none;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(0,159,224,0.4);
             transition: all 0.25s ease;
+            border: none;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        #yesBtn {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 6px 20px rgba(0,159,224,0.4);
         }
         #yesBtn:hover, #yesBtn:active {
             transform: scale(1.08);
             box-shadow: 0 10px 30px rgba(0,159,224,0.5);
+        }
+        #noBtn {
+            background: #f0f0f0;
+            color: #444;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        #noBtn:hover, #noBtn:active {
+            background: #e0e0e0;
+            transform: scale(1.05);
         }
         @keyframes popIn {
             from { transform: scale(0.7); opacity: 0; }
@@ -211,7 +227,7 @@
             th, td { padding: 10px 6px; }
             .back-home-btn, .download-btn, .chart-back-btn { padding: 12px 24px; font-size: 1em; min-width: 100%; }
             #popupContent { padding: 24px; }
-            #yesBtn { padding: 14px 36px; font-size: 1.1em; }
+            .popup-btn { padding: 14px 32px; font-size: 1.1em; }
         }
     </style>
 </head>
@@ -224,7 +240,7 @@
 </section>
 
 <div class="container">
-
+    <!-- Your content remains unchanged -->
     <div class="summary">
         <p><strong>Latest Quarterly (Q4 2025):</strong> $0.2782</p>
         <p><strong>Trailing 12-Month Dividend (approx. 2025):</strong> $1.05</p>
@@ -255,7 +271,7 @@
         <canvas id="projectionChart"></canvas>
     </div>
 
-    <a href="https://topdividendetfs.com" class="chart-back-btn">← Click To See 100 Top Dividend ETFs 💵📈</a>
+    <a href="https://topdividendetfs.com" class="chart-back-btn">← Back to Home</a>
 
     <h2>All Historical Quarterly Dividends (Adjusted Amounts)</h2>
 
@@ -271,7 +287,7 @@
             <tbody></tbody>
         </table>
     </div>
-    <a href="https://topdividendetfs.com" class="chart-back-btn">← Click To See 100 Top Dividend ETFs 💵📈</a>
+
     <button class="download-btn" onclick="downloadCSV()">Download Historical Data as CSV</button>
 
 </div>
@@ -300,11 +316,14 @@
     Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
 </p>
 
-<!-- Popup -->
+<!-- Popup with YES + NO THANKS -->
 <div id="popupOverlay">
     <div id="popupContent">
         <h3>Want to see the top 100 dividend ETFs sorted by yield & NO price decay?</h3>
-        <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
+        <div class="popup-buttons">
+            <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
+            <button id="noBtn">No Thanks</button>
+        </div>
     </div>
 </div>
 
@@ -336,7 +355,7 @@ dividends.forEach(d => {
     tbody.appendChild(row);
 });
 
-// Historical Chart - RESTORED
+// Historical Chart
 const ctxHist = document.getElementById('dividendChart').getContext('2d');
 const labelsHist = dividends.map(d => `${d.year} ${d.quarter}`);
 const amountsHist = dividends.map(d => d.amount);
@@ -390,7 +409,7 @@ Object.keys(scenarios).forEach(scenario => {
     projectionData[scenario] = projected;
 });
 
-// Projection Chart - RESTORED
+// Projection Chart
 const ctxProj = document.getElementById('projectionChart').getContext('2d');
 const projectionLabels = Array.from({length: yearsToProject * 4}, (_, i) => {
     const y = 2026 + Math.floor(i / 4);
@@ -429,7 +448,7 @@ function downloadCSV() {
     URL.revokeObjectURL(url);
 }
 
-// Popup (17 seconds)
+// Popup Logic (17 seconds, one-time per session)
 window.addEventListener('load', () => {
     if (!sessionStorage.getItem('popupShown')) {
         setTimeout(() => {
@@ -438,13 +457,21 @@ window.addEventListener('load', () => {
         }, 17000);
     }
 });
+
+// Close popup on "No Thanks"
+document.getElementById('noBtn').addEventListener('click', () => {
+    document.getElementById('popupOverlay').style.display = 'none';
+});
 </script>
 
 <!-- Popup HTML -->
 <div id="popupOverlay">
     <div id="popupContent">
         <h3>Want to see the top 100 dividend ETFs sorted by yield & NO price decay?</h3>
-        <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
+        <div class="popup-buttons">
+            <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
+            <button id="noBtn">No Thanks</button>
+        </div>
     </div>
 </div>
 
