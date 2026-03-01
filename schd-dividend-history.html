@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ===== SOCIAL MEDIA CARDS (Open Graph + Twitter/X) ===== -->
+    <!-- SOCIAL MEDIA CARDS -->
     <meta property="og:title" content="SCHD Dividend History & Projections | TopDividendETFs.com">
     <meta property="og:description" content="Full historical quarterly dividends for SCHD since 2011 (adjusted amounts) + interactive charts and 10-year growth projections (2026–2035). Educational tool only.">
     <meta property="og:image" content="https://topdividendetfs.com/schd11.png">
@@ -122,7 +122,6 @@
             border-left: 4px solid var(--primary);
         }
         .projections strong { color: var(--primary); }
-        /* Exact footer styles from main page */
         .footer {
             font-size: .9em;
             color: #666;
@@ -132,10 +131,7 @@
             max-width: 900px;
             text-align: center;
         }
-        .footer a {
-            color: #1A3C34;
-            text-decoration: none;
-        }
+        .footer a { color: #1A3C34; text-decoration: none; }
         .tracker-link {
             border: 2px solid #2E5D54;
             padding: 4px 8px;
@@ -146,7 +142,6 @@
             0%,100% { box-shadow: 0 0 5px rgba(46,93,84,.3) }
             50% { box-shadow: 0 0 8px rgba(46,93,84,.6) }
         }
-        /* Disclaimer style (matches main page) */
         .disclaimer {
             font-size: .9em;
             color: #666;
@@ -156,11 +151,67 @@
             text-align: center;
             padding: 0 16px;
         }
+        /* Popup */
+        #popupOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+        #popupContent {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 90%;
+            width: 480px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            animation: popIn 0.4s ease-out;
+        }
+        #popupContent h3 {
+            margin: 0 0 16px;
+            font-size: 1.6em;
+            color: var(--primary);
+            font-weight: 900;
+        }
+        #popupContent p {
+            margin: 0 0 24px;
+            font-size: 1.15em;
+            color: #444;
+        }
+        #yesBtn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--primary);
+            color: white;
+            font-size: 1.25em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0,159,224,0.4);
+            transition: all 0.25s ease;
+        }
+        #yesBtn:hover, #yesBtn:active {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0,159,224,0.5);
+        }
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to   { transform: scale(1);   opacity: 1; }
+        }
         @media (max-width: 480px) {
             .container { padding: 12px; }
             .hero { padding: 40px 12px 30px; }
             th, td { padding: 10px 6px; }
             .back-home-btn, .download-btn, .chart-back-btn { padding: 12px 24px; font-size: 1em; min-width: 100%; }
+            #popupContent { padding: 24px; }
+            #yesBtn { padding: 14px 36px; font-size: 1.1em; }
         }
     </style>
 </head>
@@ -204,7 +255,7 @@
         <canvas id="projectionChart"></canvas>
     </div>
 
-    <a href="https://topdividendetfs.com" class="chart-back-btn">← Back to Home</a>
+    <a href="https://topdividendetfs.com" class="chart-back-btn">← Click To See 100 Top Dividend ETFs 💵📈</a>
 
     <h2>All Historical Quarterly Dividends (Adjusted Amounts)</h2>
 
@@ -220,12 +271,11 @@
             <tbody></tbody>
         </table>
     </div>
-
+    <a href="https://topdividendetfs.com" class="chart-back-btn">← Click To See 100 Top Dividend ETFs 💵📈</a>
     <button class="download-btn" onclick="downloadCSV()">Download Historical Data as CSV</button>
 
 </div>
 
-<!-- Exact same footer as main homepage -->
 <footer class="footer">
     <p>
         <a href="terms-of-use.html">Terms of Use</a> | 
@@ -246,10 +296,17 @@
     </p>
 </footer>
 
-<!-- Exact disclaimer from main page -->
 <p class="disclaimer">
     Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
 </p>
+
+<!-- Popup -->
+<div id="popupOverlay">
+    <div id="popupContent">
+        <h3>Want to see the top 100 dividend ETFs sorted by yield & NO price decay?</h3>
+        <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
+    </div>
+</div>
 
 <script>
 // Historical Data
@@ -279,25 +336,44 @@ dividends.forEach(d => {
     tbody.appendChild(row);
 });
 
-// Historical Chart
+// Historical Chart - RESTORED
 const ctxHist = document.getElementById('dividendChart').getContext('2d');
 const labelsHist = dividends.map(d => `${d.year} ${d.quarter}`);
 const amountsHist = dividends.map(d => d.amount);
 
 new Chart(ctxHist, {
     type: 'line',
-    data: { labels: labelsHist, datasets: [{ label: 'Adjusted Quarterly Dividend ($)', data: amountsHist, borderColor: 'var(--primary)', backgroundColor: 'rgba(0, 159, 224, 0.18)', fill: true, tension: 0.3, pointBackgroundColor: 'var(--primary)', pointRadius: 4 }] },
-    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: 'Dividend ($)', font: { size: 13 } } }, x: { title: { display: true, text: 'Quarter', font: { size: 13 } }, ticks: { maxRotation: 90, minRotation: 45, autoSkip: true, maxTicksLimit: 12 } } }, plugins: { legend: { position: 'top', labels: { font: { size: 13 } } }, title: { display: true, text: 'SCHD Quarterly Dividend Growth Since Inception', font: { size: 16 } } } }
+    data: {
+        labels: labelsHist,
+        datasets: [{
+            label: 'Adjusted Quarterly Dividend ($)',
+            data: amountsHist,
+            borderColor: 'var(--primary)',
+            backgroundColor: 'rgba(0, 159, 224, 0.18)',
+            fill: true,
+            tension: 0.3,
+            pointBackgroundColor: 'var(--primary)',
+            pointRadius: 4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'Dividend ($)', font: { size: 13 } } },
+            x: { title: { display: true, text: 'Quarter', font: { size: 13 } }, ticks: { maxRotation: 90, minRotation: 45, autoSkip: true, maxTicksLimit: 12 } }
+        },
+        plugins: {
+            legend: { position: 'top', labels: { font: { size: 13 } } },
+            title: { display: true, text: 'SCHD Quarterly Dividend Growth Since Inception', font: { size: 16 } }
+        }
+    }
 });
 
 // Projection Logic
-const lastAnnual = 1.0476; // 2025 approx TTM
+const lastAnnual = 1.0476;
 const yearsToProject = 10;
-const scenarios = {
-    conservative: 0.07,
-    moderate: 0.095,
-    optimistic: 0.11
-};
+const scenarios = { conservative: 0.07, moderate: 0.095, optimistic: 0.11 };
 
 const projectionData = {};
 Object.keys(scenarios).forEach(scenario => {
@@ -308,15 +384,15 @@ Object.keys(scenarios).forEach(scenario => {
     for (let y = 2026; y <= 2035; y++) {
         for (let q = 1; q <= 4; q++) {
             current *= (1 + quarterlyRate);
-            projected.push({ year: y, quarter: `Q${q}`, amount: current });
+            projected.push(current);
         }
     }
     projectionData[scenario] = projected;
 });
 
-// Projection Chart
+// Projection Chart - RESTORED
 const ctxProj = document.getElementById('projectionChart').getContext('2d');
-const years = Array.from({length: yearsToProject * 4}, (_, i) => {
+const projectionLabels = Array.from({length: yearsToProject * 4}, (_, i) => {
     const y = 2026 + Math.floor(i / 4);
     const q = (i % 4) + 1;
     return `${y} Q${q}`;
@@ -325,11 +401,11 @@ const years = Array.from({length: yearsToProject * 4}, (_, i) => {
 new Chart(ctxProj, {
     type: 'line',
     data: {
-        labels: years,
+        labels: projectionLabels,
         datasets: [
-            { label: 'Conservative (~7% CAGR)', data: projectionData.conservative.map(p => p.amount), borderColor: '#ff9800', fill: false, tension: 0.2 },
-            { label: 'Moderate (~9.5% CAGR)', data: projectionData.moderate.map(p => p.amount), borderColor: 'var(--primary)', fill: false, tension: 0.2 },
-            { label: 'Optimistic (~11% CAGR)', data: projectionData.optimistic.map(p => p.amount), borderColor: '#4caf50', fill: false, tension: 0.2 }
+            { label: 'Conservative (~7% CAGR)', data: projectionData.conservative, borderColor: '#ff9800', fill: false, tension: 0.2 },
+            { label: 'Moderate (~9.5% CAGR)', data: projectionData.moderate, borderColor: 'var(--primary)', fill: false, tension: 0.2 },
+            { label: 'Optimistic (~11% CAGR)', data: projectionData.optimistic, borderColor: '#4caf50', fill: false, tension: 0.2 }
         ]
     },
     options: {
@@ -340,7 +416,7 @@ new Chart(ctxProj, {
     }
 });
 
-// Download CSV (historical only)
+// Download CSV
 function downloadCSV() {
     let csv = 'Year,Quarter,Adjusted Dividend\n';
     dividends.forEach(d => { csv += `${d.year},${d.quarter},${d.amount.toFixed(4)}\n`; });
@@ -352,7 +428,25 @@ function downloadCSV() {
     a.click();
     URL.revokeObjectURL(url);
 }
+
+// Popup (17 seconds)
+window.addEventListener('load', () => {
+    if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(() => {
+            document.getElementById('popupOverlay').style.display = 'flex';
+            sessionStorage.setItem('popupShown', 'true');
+        }, 17000);
+    }
+});
 </script>
+
+<!-- Popup HTML -->
+<div id="popupOverlay">
+    <div id="popupContent">
+        <h3>Want to see the top 100 dividend ETFs sorted by yield & NO price decay?</h3>
+        <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
+    </div>
+</div>
 
 </body>
 </html>
