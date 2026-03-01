@@ -107,15 +107,40 @@
             border-left: 4px solid var(--primary);
         }
         .projections strong { color: var(--primary); }
-        footer {
-            text-align: center;
-            padding: 40px 16px 24px;
+        /* Exact footer styles from main page */
+        .footer {
+            font-size: .9em;
             color: #666;
-            font-size: 0.92em;
-            border-top: 1px solid #eee;
-            margin-top: 40px;
+            margin: 20px auto 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            max-width: 900px;
+            text-align: center;
         }
-        footer a { color: var(--primary); font-weight: bold; text-decoration: none; }
+        .footer a {
+            color: #1A3C34;
+            text-decoration: none;
+        }
+        .tracker-link {
+            border: 2px solid #2E5D54;
+            padding: 4px 8px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+        }
+        @keyframes glow {
+            0%,100% { box-shadow: 0 0 5px rgba(46,93,84,.3) }
+            50% { box-shadow: 0 0 8px rgba(46,93,84,.6) }
+        }
+        /* Disclaimer style (matches main page) */
+        .disclaimer {
+            font-size: .9em;
+            color: #666;
+            margin: 20px auto;
+            max-width: 900px;
+            line-height: 1.4;
+            text-align: center;
+            padding: 0 16px;
+        }
         @media (max-width: 480px) {
             .container { padding: 12px; }
             .hero { padding: 40px 12px 30px; }
@@ -148,7 +173,6 @@
         <canvas id="dividendChart"></canvas>
     </div>
 
-    <!-- Future Projections Section + Second Chart -->
     <div class="projections">
         <h2>Future Outlook & Dividend Projections (Estimate Only)</h2>
         <p>Dividend growth is never guaranteed — it depends on company earnings, economic conditions, interest rates, index rebalancing, and more. SCHD has historically delivered strong growth thanks to its focus on quality dividend payers, but recent years show variability (e.g., slower 3-year rate ~7%).</p>
@@ -186,10 +210,31 @@
 
 </div>
 
-<footer>
-    <p>© TopDividendETFs.com | Educational use only. Do your own research.</p>
-    <p><a href="https://topdividendetfs.com">← Return to Top 100 Dividend ETFs</a></p>
+<!-- Exact same footer as main homepage -->
+<footer class="footer">
+    <p>
+        <a href="terms-of-use.html">Terms of Use</a> | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="FAQ.html">FAQ</a> | 
+        <a href="schd-dividend-calculator.html">SCHD Calculator</a> | 
+        Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
+    </p>
+    <p style="margin-top: 12px; text-align: center;">
+        <strong>
+            <a href="https://weeklyetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none; margin-right: 20px;">
+                Top 100 Weekly Dividend ETFs!
+            </a>
+            <a href="https://growthetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none;">
+                Top Growth ETFs!
+            </a>
+        </strong>
+    </p>
 </footer>
+
+<!-- Exact disclaimer from main page, placed at the very bottom -->
+<p class="disclaimer">
+    Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+</p>
 
 <script>
 // Historical Data
