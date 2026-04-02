@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TopDividendETFs.com">
+    <title>JEPQ Dividend History 2026 | Every Monthly Dividend Since Inception - TopDividendETFs.com</title>
+    <meta name="description" content="Complete JEPQ Dividend History since May 2022. View every monthly dividend for JPMorgan Nasdaq Equity Premium Income ETF with totals, averages, and full table on TopDividendETFs.com.">
+    <meta name="keywords" content="JEPQ dividend history, JEPQ ETF dividends, JEPQ monthly dividend, JPMorgan Nasdaq Equity Premium Income ETF, JEPQ yield, JEPQ vs JEPI, high yield monthly ETF, covered call ETF">
+
+    <!-- Open Graph / Social Media Card -->
+    <meta property="og:title" content="JEPQ Dividend History | Every Payment Since 2022 - TopDividendETFs.com">
+    <meta property="og:description" content="Full JEPQ ETF dividend history with monthly payments, totals, averages, and summaries.">
+    <meta property="og:url" content="https://topdividendetfs.com/jepq-dividend-history">
+    <meta property="og:image" content="https://i.postimg.cc/GpC1GbQT/Screenshot-2026-04-02-01-08-46.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        :root {
+            --green: #2E5D54;
+            --red: #e74c3c;
+        }
+        header {
+            background: #1A3C34;
+            padding: 30px 20px 25px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,.2);
+            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+            background-blend-mode: overlay;
+            cursor: pointer;
+        }
+        h1 {
+            color: white;
+            font-size: 2.15em;
+            margin: 0 0 10px 0;
+            font-weight: 900;
+        }
+        .subtitle {
+            color: #ddd;
+            font-size: 1.12em;
+            margin: 0;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content {
+            width: 94%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 12px 26px;
+            margin: 10px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 3px 8px rgba(0,0,0,.2);
+            transition: all .2s;
+        }
+        .cta-button:hover {
+            background: #14291c;
+            transform: translateY(-2px);
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin: 30px 0;
+        }
+        .summary-box {
+            background: #fff;
+            border: 3px solid var(--green);
+            border-radius: 8px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,.15);
+        }
+        .summary-box h3 {
+            color: var(--red);
+            font-size: 1.05em;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .summary-box .value {
+            font-size: 2.1em;
+            font-weight: 900;
+            color: #1A3C34;
+            margin: 8px 0;
+        }
+        .filters {
+            max-width: 1100px;
+            margin: 15px auto 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+        button, input, select {
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 0.98em;
+        }
+        #resetBtn, #exportBtn {
+            background: var(--green);
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #resetBtn:hover, #exportBtn:hover {
+            background: #14291c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border: 3px solid var(--green);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,.2);
+            margin-bottom: 40px;
+        }
+        th {
+            background: var(--green);
+            color: #fff;
+            padding: 14px 8px;
+            font-size: 1.02em;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        td {
+            padding: 12px 8px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        tr:nth-child(even) { background: #f9f9f9; }
+        tr:hover { background: #dff5eb; }
+        .amount { font-weight: bold; color: #1A3C34; font-size: 1.05em; }
+
+        .faq-section {
+            background: #fff;
+            border: 3px solid var(--green);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,.15);
+        }
+        .faq-item {
+            margin-bottom: 25px;
+        }
+        .faq-item h3 {
+            color: #1A3C34;
+            margin-bottom: 8px;
+        }
+
+        .disclaimer {
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.5;
+        }
+        .highlight {
+            background: #fff8e1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 900;
+            color: var(--red);
+        }
+        footer {
+            font-size: 0.9em;
+            color: #666;
+            margin: 40px auto 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            max-width: 900px;
+            text-align: center;
+        }
+        .footer a {
+            color: #1A3C34;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.7em; }
+            th, td { padding: 10px 6px; font-size: 0.94em; }
+        }
+    </style>
+</head>
+<body>
+
+<header onclick="window.location.href='https://topdividendetfs.com/'">
+    <h1>JEPQ Dividend History</h1>
+    <p class="subtitle">JPMorgan Nasdaq Equity Premium Income ETF. Every Monthly Dividend Since Inception May 2022</p>
+</header>
+
+<div class="content">
+
+    <div style="text-align:center; margin:25px 0 30px;">
+        <a href="https://topdividendetfs.com/" class="cta-button">Back to TopDividendETFs.com Homepage</a>
+        <a href="https://topdividendetfs.com/" class="cta-button">Browse All High Yield ETFs</a>
+    </div>
+
+    <h2 style="text-align:center; color:#1A3C34;">JEPQ ETF Overview and Key Facts</h2>
+    <p style="text-align:center; max-width:850px; margin:0 auto 30px; font-size:1.05em;">
+        JEPQ is the JPMorgan Nasdaq Equity Premium Income ETF. It is a popular covered call ETF that holds Nasdaq 100 stocks and sells call options to generate high monthly income. 
+        Launched in May 2022, it is known for delivering attractive yields typically in the 9 to 12 percent range while offering exposure to technology and growth stocks.
+    </p>
+
+    <div class="summary">
+        <div class="summary-box">
+            <h3>Total Dividends Paid</h3>
+            <div class="value" id="totalAmount">$23.85</div>
+            <small>per share since May 2022</small>
+        </div>
+        <div class="summary-box">
+            <h3>Number of Monthly Payments</h3>
+            <div class="value" id="totalDividends">48</div>
+        </div>
+        <div class="summary-box">
+            <h3>Average Monthly Dividend</h3>
+            <div class="value" id="avgMonthly">$0.497</div>
+        </div>
+        <div class="summary-box">
+            <h3>Latest Dividend April 2026</h3>
+            <div class="value" id="latestDiv">$0.5586</div>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin:25px 0 35px;">
+        <a href="https://topdividendetfs.com/" class="cta-button">Explore Weekly Dividend ETFs on TopDividendETFs.com</a>
+    </div>
+
+    <div class="filters">
+        <button id="resetBtn">Reset Filters</button>
+        <input type="text" id="searchInput" placeholder="Search by date or notes...">
+        <select id="yearFilter">
+            <option value="">All Years</option>
+        </select>
+        <button id="exportBtn">Export to CSV</button>
+    </div>
+
+    <table id="dividendTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Ex Div Date</th>
+                <th onclick="sortTable(1)">Record Date</th>
+                <th onclick="sortTable(2)">Pay Date</th>
+                <th onclick="sortTable(3)">Dividend Amount</th>
+                <th onclick="sortTable(4)">Notes</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <div style="text-align:center; margin:30px 0;">
+        <a href="https://topdividendetfs.com/" class="cta-button">Return to TopDividendETFs.com</a>
+    </div>
+
+    <div class="faq-section">
+        <h2 style="text-align:center; color:#1A3C34;">JEPQ Dividend History FAQ</h2>
+        
+        <div class="faq-item">
+            <h3>What is the JEPQ ETF?</h3>
+            <p>JEPQ JPMorgan Nasdaq Equity Premium Income ETF is an actively managed covered call ETF that seeks high monthly income by holding Nasdaq 100 stocks and selling call options on the index.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>How often does JEPQ pay dividends?</h3>
+            <p>JEPQ pays dividends monthly making it popular for investors seeking consistent passive income.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>What is the current JEPQ dividend yield?</h3>
+            <p>JEPQ currently offers a high trailing twelve month yield of approximately 11 percent. The exact yield fluctuates monthly based on options premiums and market volatility.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>When was JEPQ launched?</h3>
+            <p>JEPQ inception date is May 3 2022.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>What is the difference between JEPQ and JEPI?</h3>
+            <p>JEPI tracks the S and P 500 more defensive while JEPQ focuses on the Nasdaq 100 tech heavy and higher growth potential. JEPQ generally provides a higher yield but with greater volatility.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Is JEPQ a good high yield monthly dividend ETF?</h3>
+            <p>Yes many income investors use JEPQ for its attractive monthly payouts. However like other covered call strategies it may experience some NAV erosion in strong bull markets due to the call options sold.</p>
+        </div>
+    </div>
+
+    <p class="disclaimer">
+        Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors and this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+    </p>
+
+    <div style="text-align:center; margin:30px 0;">
+        <a href="https://topdividendetfs.com/" class="cta-button">Back to TopDividendETFs.com Homepage</a>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>
+        <a href="terms-of-use.html">Terms of Use</a> | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="FAQ.html">FAQ</a> | 
+        <a href="schd-dividend-calculator.html">SCHD Calculator</a> | 
+        Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
+    </p>
+    <p style="margin-top: 12px; text-align: center;">
+        <strong>
+            <a href="https://weeklyetfs.com/" target="_blank" style="color:#1A3C34;font-weight:bold;text-decoration:none; margin-right: 20px;">
+                Top 100 Weekly Dividend ETFs!
+            </a>
+            <a href="https://growthetfs.com/" target="_blank" style="color:#1A3C34;font-weight:bold;text-decoration:none;">
+                Top Growth ETFs!
+            </a>
+        </strong>
+    </p>
+</footer>
+
+<script>
+// Dividend data (newest first)
+const dividends = [
+    { ex: "2026-04-01", record: "2026-04-01", pay: "2026-04-06", amount: 0.5586, notes: "Dividend income or Cash Dividend" },
+    { ex: "2026-03-02", record: "2026-03-02", pay: "2026-03-04", amount: 0.5090, notes: "Dividend income or Cash Dividend" },
+    { ex: "2026-02-02", record: "2026-02-02", pay: "2026-02-04", amount: 0.4657, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-12-31", record: "2025-12-31", pay: "2026-01-05", amount: 0.5761, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-12-01", record: "2025-12-01", pay: "2025-12-03", amount: 0.5532, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-11-03", record: "2025-11-03", pay: "2025-11-05", amount: 0.4755, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-10-01", record: "2025-10-01", pay: "2025-10-03", amount: 0.4461, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-09-02", record: "2025-09-02", pay: "2025-09-04", amount: 0.4420, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-08-01", record: "2025-08-01", pay: "2025-08-05", amount: 0.4438, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-07-01", record: "2025-07-01", pay: "2025-07-03", amount: 0.4942, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-06-02", record: "2025-06-02", pay: "2025-06-04", amount: 0.6207, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-05-01", record: "2025-05-01", pay: "2025-05-05", amount: 0.5979, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-04-01", record: "2025-04-01", pay: "2025-04-03", amount: 0.5407, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-03-03", record: "2025-03-03", pay: "2025-03-05", amount: 0.4824, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-02-03", record: "2025-02-03", pay: "2025-02-05", amount: 0.4502, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-12-31", record: "2024-12-31", pay: "2025-01-03", amount: 0.4558, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-12-02", record: "2024-12-02", pay: "2024-12-04", amount: 0.5083, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-11-01", record: "2024-11-01", pay: "2024-11-05", amount: 0.4936, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-10-01", record: "2024-10-01", pay: "2024-10-03", amount: 0.5506, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-09-03", record: "2024-09-03", pay: "2024-09-05", amount: 0.5569, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-08-01", record: "2024-08-01", pay: "2024-08-05", amount: 0.4268, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-07-01", record: "2024-07-01", pay: "2024-07-03", amount: 0.4212, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-06-03", record: "2024-06-03", pay: "2024-06-05", amount: 0.4497, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-05-01", record: "2024-05-02", pay: "2024-05-06", amount: 0.4311, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-04-01", record: "2024-04-02", pay: "2024-04-04", amount: 0.4273, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-03-01", record: "2024-03-04", pay: "2024-03-06", amount: 0.3804, notes: "Dividend income or Cash Dividend" },
+    { ex: "2024-02-01", record: "2024-02-02", pay: "2024-02-06", amount: 0.3417, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-12-01", record: "2023-12-04", pay: "2023-12-06", amount: 0.4221, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-11-01", record: "2023-11-02", pay: "2023-11-06", amount: 0.4177, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-10-02", record: "2023-10-03", pay: "2023-10-05", amount: 0.4172, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-09-01", record: "2023-09-05", pay: "2023-09-07", amount: 0.4506, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-08-01", record: "2023-08-02", pay: "2023-08-04", amount: 0.3659, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-07-03", record: "2023-07-05", pay: "2023-07-07", amount: 0.3668, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-06-01", record: "2023-06-02", pay: "2023-06-06", amount: 0.3628, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-05-01", record: "2023-05-02", pay: "2023-05-04", amount: 0.4841, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-04-03", record: "2023-04-04", pay: "2023-04-06", amount: 0.4539, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-03-01", record: "2023-03-02", pay: "2023-03-06", amount: 0.4330, notes: "Dividend income or Cash Dividend" },
+    { ex: "2023-02-01", record: "2023-02-02", pay: "2023-02-06", amount: 0.4407, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-12-29", record: "2022-12-30", pay: "2023-01-04", amount: 0.5755, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-12-01", record: "2022-12-02", pay: "2022-12-06", amount: 0.5463, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-11-01", record: "2022-11-02", pay: "2022-11-04", amount: 0.6813, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-10-03", record: "2022-10-04", pay: "2022-10-06", amount: 0.3795, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-09-01", record: "2022-09-02", pay: "2022-09-07", amount: 0.5463, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-08-01", record: "2022-08-02", pay: "2022-08-04", amount: 0.4071, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-07-01", record: "2022-07-05", pay: "2022-07-07", amount: 0.3398, notes: "Dividend income or Cash Dividend" },
+    { ex: "2022-06-01", record: "2022-06-02", pay: "2022-06-06", amount: 0.3764, notes: "Dividend income or Cash Dividend" }
+];
+
+function calculateSummary() {
+    const totalDivs = dividends.length;
+    const totalAmount = dividends.reduce((sum, d) => sum + d.amount, 0);
+    const avg = (totalAmount / totalDivs).toFixed(3);
+
+    document.getElementById('totalDividends').textContent = totalDivs;
+    document.getElementById('totalAmount').textContent = '$' + totalAmount.toFixed(2);
+    document.getElementById('avgMonthly').textContent = '$' + avg;
+    document.getElementById('latestDiv').textContent = '$' + dividends[0].amount.toFixed(4);
+}
+
+function renderTable(data) {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    data.forEach(div => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${div.ex}</td>
+            <td>${div.record}</td>
+            <td>${div.pay}</td>
+            <td class="amount">$${div.amount.toFixed(4)}</td>
+            <td>${div.notes}</td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+let currentSortCol = 0;
+let currentSortDir = 'desc';
+
+function sortTable(col) {
+    if (currentSortCol === col) {
+        currentSortDir = currentSortDir === 'asc' ? 'desc' : 'asc';
+    } else {
+        currentSortCol = col;
+        currentSortDir = (col === 3) ? 'desc' : 'asc';
+    }
+
+    const sortedData = [...dividends].sort((a, b) => {
+        let valA, valB;
+        switch(col) {
+            case 0: valA = a.ex; valB = b.ex; break;
+            case 1: valA = a.record; valB = b.record; break;
+            case 2: valA = a.pay; valB = b.pay; break;
+            case 3: valA = a.amount; valB = b.amount; break;
+            case 4: valA = a.notes; valB = b.notes; break;
+        }
+        if (col === 3) {
+            return currentSortDir === 'asc' ? valA - valB : valB - valA;
+        }
+        return currentSortDir === 'asc' 
+            ? String(valA).localeCompare(String(valB))
+            : String(valB).localeCompare(String(valA));
+    });
+
+    renderTable(sortedData);
+}
+
+function applyFilters() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+    const selectedYear = document.getElementById('yearFilter').value;
+
+    const filtered = dividends.filter(div => {
+        const matchesSearch = !searchTerm || 
+            div.ex.includes(searchTerm) || 
+            div.notes.toLowerCase().includes(searchTerm);
+        const matchesYear = !selectedYear || div.ex.startsWith(selectedYear);
+        return matchesSearch && matchesYear;
+    });
+
+    renderTable(filtered);
+}
+
+function populateYearFilter() {
+    const years = new Set(dividends.map(d => d.ex.substring(0,4)));
+    const select = document.getElementById('yearFilter');
+    Array.from(years).sort().reverse().forEach(year => {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        select.appendChild(option);
+    });
+}
+
+function exportToCSV() {
+    let csvContent = "Ex Div Date,Record Date,Pay Date,Amount,Notes\n";
+    dividends.forEach(d => {
+        csvContent += `"${d.ex}","${d.record}","${d.pay}",${d.amount},"${d.notes}"\n`;
+    });
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'JEPQ_Dividend_History.csv';
+    link.click();
+}
+
+// Event listeners
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+document.getElementById('yearFilter').addEventListener('change', applyFilters);
+document.getElementById('resetBtn').addEventListener('click', () => {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('yearFilter').value = '';
+    renderTable(dividends);
+});
+document.getElementById('exportBtn').addEventListener('click', exportToCSV);
+
+// Initialize
+calculateSummary();
+populateYearFilter();
+renderTable(dividends);
+</script>
+
+</body>
+</html>
