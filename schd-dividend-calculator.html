@@ -302,8 +302,8 @@
 
                 <div class="input-group">
                     <label for="annualDiv">Annual Dividend per Share (TTM 2026)</label>
-                    <input type="number" id="annualDiv" value="1.05" step="0.01" min="0">
-                    <small style="color:var(--gray);">Current TTM ≈ $1.05 (update if newer data available)</small>
+                    <input type="number" id="annualDiv" value="1.06" step="0.01" min="0">
+                    <small style="color:var(--gray);">Current TTM ≈ $1.06 (update if newer data available)</small>
                 </div>
 
                 <div class="input-group">
@@ -386,12 +386,12 @@
             
             <details>
                 <summary>Where does the current dividend data come from?</summary>
-                <p>The default $1.05 annual dividend is based on SCHD's trailing twelve months (TTM) as of early 2026. You can manually update it if newer distribution data is available.</p>
+                <p>The default $1.06 annual dividend is based on SCHD's trailing twelve months (TTM) as of early 2026. You can manually update it if newer distribution data is available.</p>
             </details>
         </div>
 
         <p class="disclaimer">
-            All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.05 per share as of early 2026 (yield ~3.3-3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
+            All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.06 per share as of early 2026 (yield ~3.3-3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
         </p>
 
         <a href="https://topdividendetfs.com" class="back-btn">← Back to Top 100 Dividend ETFs</a>
@@ -401,7 +401,7 @@
         </div>
 
         <p class="update-note">
-            Last updated: February 9, 2026 • TTM dividend data: ~$1.05/share • For educational use only.
+            Last updated: February 9, 2026 • TTM dividend data: ~$1.06/share • For educational use only.
         </p>
 
     </div>
@@ -411,7 +411,7 @@
 
         function updateCalculations() {
             const shares = parseFloat(document.getElementById('shares').value) || 0;
-            const annualDiv = parseFloat(document.getElementById('annualDiv').value) || 1.05;
+            const annualDiv = parseFloat(document.getElementById('annualDiv').value) || 1.06;
             const dgr = parseFloat(document.getElementById('dgr').value) / 100 || 0.11;
             const years = parseInt(document.getElementById('years').value) || 10;
 
