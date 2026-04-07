@@ -38,7 +38,7 @@
       "description": "Free online SCHD dividend calculator. Input shares owned and see current quarterly income + long-term projections with 7–11% growth rates up to 30 years.",
       "url": "https://topdividendetfs.com/schd-dividend-calculator.html",
       "datePublished": "2026-02-01",
-      "dateModified": "2026-02-09",
+      "dateModified": "2026-04-07",
       "author": {
         "@type": "Organization",
         "name": "TopDividendETFs.com",
@@ -303,7 +303,7 @@
                 <div class="input-group">
                     <label for="annualDiv">Annual Dividend per Share (TTM 2026)</label>
                     <input type="number" id="annualDiv" value="1.06" step="0.01" min="0">
-                    <small style="color:var(--gray);">Current TTM ≈ $1.06 (update if newer data available)</small>
+                    <small style="color:var(--gray);">Current TTM ≈ $1.06 (as of April 2026; update if newer data available)</small>
                 </div>
 
                 <div class="input-group">
@@ -334,11 +334,11 @@
             <div id="currentResults" class="results">
                 <div class="result-box">
                     <h3>Current Annual Dividend Income</h3>
-                    <div id="annualIncome" class="big-number">$1,050.00</div>
+                    <div id="annualIncome" class="big-number">$1,060.00</div>
                 </div>
                 <div class="result-box">
                     <h3>Current Quarterly Passive Income</h3>
-                    <div id="quarterlyIncome" class="big-number">$262.50</div>
+                    <div id="quarterlyIncome" class="big-number">$265.00</div>
                 </div>
             </div>
 
@@ -371,7 +371,7 @@
             
             <details>
                 <summary>How accurate is the SCHD dividend growth projection?</summary>
-                <p>The calculator uses your selected growth rate (7–11%). Historical SCHD dividend growth has averaged ~9–11% annually over the past decade, but future growth is not guaranteed and depends on company payouts, market conditions, and economic factors.</p>
+                <p>The calculator uses your selected growth rate (7–11%). Historical SCHD dividend growth has averaged ~9–11% annually over the past decade, but future growth is not guaranteed and depends on underlying holdings, market conditions, and economic factors.</p>
             </details>
             
             <details>
@@ -386,12 +386,12 @@
             
             <details>
                 <summary>Where does the current dividend data come from?</summary>
-                <p>The default $1.06 annual dividend is based on SCHD's trailing twelve months (TTM) as of early 2026. You can manually update it if newer distribution data is available.</p>
+                <p>The default $1.06 annual dividend (TTM) is based on the most recent trailing twelve months as of April 2026. The latest quarterly dividend (Q1 2026) was $0.2569. You can manually update the annual figure if newer data becomes available.</p>
             </details>
         </div>
 
         <p class="disclaimer">
-            All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.06 per share as of early 2026 (yield ~3.3-3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
+            All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.06 per share as of April 2026 (yield ~3.4-3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
         </p>
 
         <a href="https://topdividendetfs.com" class="back-btn">← Back to Top 100 Dividend ETFs</a>
@@ -401,7 +401,7 @@
         </div>
 
         <p class="update-note">
-            Last updated: February 9, 2026 • TTM dividend data: ~$1.06/share • For educational use only.
+            Last updated: April 7, 2026 • TTM dividend data: ~$1.06/share • Latest quarterly: $0.2569 (Q1 2026) • For educational use only.
         </p>
 
     </div>
@@ -446,7 +446,9 @@
 
             const tbody = document.getElementById('projectionBody');
             tbody.innerHTML = '';
+            let currentRunningDiv = annualDiv;
             for (let y = 1; y <= years; y++) {
+                currentRunningDiv *= (1 + dgr);
                 const projAnnual = annualProjections[y];
                 const projQuarterly = quarterlyProjections[y];
                 const increase = ((projAnnual - currentAnnual) / currentAnnual) * 100;
@@ -454,7 +456,7 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${labels[y]}</td>
-                    <td>$${runningDiv.toFixed(2)}</td>
+                    <td>$${currentRunningDiv.toFixed(4)}</td>
                     <td>$${projAnnual.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
                     <td>$${projQuarterly.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
                     <td>${increase.toFixed(0)}% ↑</td>
