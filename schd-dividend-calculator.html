@@ -9,10 +9,8 @@
     <meta name="description" content="Free SCHD dividend calculator for 2026 and beyond. Enter your shares to see current quarterly income and project future dividends with 7–11% growth rates up to 30 years. Instant updates. From TopDividendETFs.com.">
     <meta name="keywords" content="SCHD dividend calculator, SCHD passive income calculator, Schwab dividend ETF projection, SCHD dividend growth calculator, SCHD yield 2026, long term SCHD income">
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://topdividendetfs.com/schd-dividend-calculator.html">
 
-    <!-- Open Graph / Twitter -->
     <meta property="og:title" content="SCHD Dividend Calculator 2026 – Project Passive Income up to 30 Years">
     <meta property="og:description" content="Calculate your SCHD quarterly dividends today and see long-term projections (up to 30 years) with customizable growth rates. Free tool by TopDividendETFs.com.">
     <meta property="og:image" content="https://topdividendetfs.com/schd-calculator-card.jpg">
@@ -29,7 +27,6 @@
     <meta name="twitter:title" content="SCHD Dividend Calculator 2026 – Project Passive Income up to 30 Years">
     <meta name="twitter:description" content="Calculate your SCHD quarterly dividends today and see long-term projections (up to 30 years) with customizable growth rates. Free tool by TopDividendETFs.com.">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,16 +63,10 @@
     }
     </script>
 
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -88,10 +79,13 @@
         :root {
             --primary: #009EDC;
             --primary-dark: #007bb3;
-            --light-bg: #f8fcff;
+            --primary-darker: #005f8a;
+            --light-bg: #f4f8fb;
             --text: #111;
             --gray: #555;
+            --card-shadow: 0 4px 24px rgba(0,120,180,.10);
         }
+        * { box-sizing: border-box; }
         body {
             font-family: 'Lato', Arial, sans-serif;
             margin: 0;
@@ -103,53 +97,210 @@
             min-height: 100vh;
             line-height: 1.6;
         }
+
+        /* ── Header ── */
         header {
-            background: var(--primary);
-            padding: 15px 20px;
-            color: #fff;
-            text-align: center;
+            background: var(--primary-darker);
             width: 100%;
-            box-shadow: 0 2px 5px rgba(0,0,0,.2);
-            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,.25);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
         }
         .logo {
-            font-size: clamp(22px, 6vw, 36px);
+            font-size: clamp(18px, 4vw, 26px);
             font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
+        .header-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .header-links a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* ── Hero ── */
         .hero {
-            background: linear-gradient(to bottom right, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
             color: #fff;
             width: 100%;
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 64px 20px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -40px;
+            width: 220px; height: 220px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
         }
         .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
-            margin: 0 0 16px;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            margin: 0 0 14px;
             font-weight: 900;
+            position: relative;
+            z-index: 1;
         }
         .hero p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto 24px;
-            opacity: 0.95;
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin: 0 auto 28px;
+            opacity: 0.93;
+            position: relative;
+            z-index: 1;
         }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.18);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Site network banner ── */
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e8f4fb;
+            padding: 0;
+        }
+        .network-bar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            overflow-x: auto;
+            gap: 0;
+        }
+        .network-bar-label {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.78rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 14px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        .network-bar-links {
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            border-right: 1px solid #e0eff8;
+            transition: background 0.18s;
+            white-space: nowrap;
+        }
+        .network-bar-links a:hover {
+            background: #eaf6fd;
+            color: var(--primary-darker);
+        }
+        .network-bar-links a .nb-icon {
+            font-size: 16px;
+        }
+
+        /* ── Quick action button (history) ── */
+        .history-btn-wrap {
+            text-align: center;
+            padding: 32px 20px 8px;
+        }
+        .history-btn {
+            display: inline-block;
+            padding: 16px 36px;
+            background: var(--primary);
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 900;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,158,220,0.28);
+            transition: background 0.18s, transform 0.15s;
+            letter-spacing: 0.2px;
+        }
+        .history-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* ── Container ── */
         .container {
             width: 94%;
             max-width: 1100px;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 20px 0 40px;
         }
+
+        /* ── Cards ── */
         .card {
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,.15);
-            padding: 28px;
-            margin-bottom: 30px;
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 28px;
+            border: 1px solid #e4f0f8;
         }
+        .card-title {
+            text-align: center;
+            margin: 0 0 28px;
+            color: var(--primary);
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+
+        /* ── Inputs ── */
         .inputs {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 24px;
             margin-bottom: 32px;
         }
@@ -160,145 +311,394 @@
         .input-group label {
             font-weight: 700;
             margin-bottom: 8px;
-            color: var(--primary);
+            color: var(--primary-darker);
+            font-size: 0.95rem;
         }
-        input, select {
+        input[type="number"], select {
             padding: 12px 16px;
-            border: 2px solid #ddd;
+            border: 2px solid #d4e9f5;
             border-radius: 8px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            font-family: 'Lato', Arial, sans-serif;
+            background: #f8fcff;
+            color: var(--text);
+            transition: border-color 0.15s, box-shadow 0.15s;
         }
-        input:focus, select:focus {
+        input[type="number"]:focus, select:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0,158,220,0.2);
+            box-shadow: 0 0 0 3px rgba(0,158,220,0.18);
+            background: #fff;
         }
+
+        /* ── Result boxes ── */
         .results {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
         .result-box {
-            background: #f0f9ff;
-            border: 1px solid var(--primary);
-            border-radius: 10px;
-            padding: 20px;
+            background: linear-gradient(135deg, #eaf6fd 0%, #ddf0fb 100%);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px 20px;
             text-align: center;
         }
         .result-box h3 {
-            margin: 0 0 12px;
-            font-size: 1.4rem;
-            color: var(--primary);
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+            color: var(--primary-darker);
+            font-weight: 700;
         }
         .big-number {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             font-weight: 900;
-            color: var(--primary);
-            margin: 8px 0;
+            color: var(--primary-dark);
+            margin: 6px 0 2px;
+            letter-spacing: -1px;
         }
+
+        /* ── Chart ── */
         #incomeChartContainer {
             position: relative;
-            height: 450px;
+            height: 420px;
             width: 100%;
-            margin: 30px 0;
+            margin: 28px 0;
         }
+
+        /* ── Table ── */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            font-size: 0.95rem;
         }
         th, td {
-            padding: 14px;
+            padding: 13px 14px;
             text-align: center;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e4f0f8;
         }
         th {
             background: var(--primary);
             color: #fff;
             font-weight: 700;
+            font-size: 0.9rem;
         }
-        tr:nth-child(even) {
-            background: #f0f9ff;
+        tr:nth-child(even) { background: #f3fafd; }
+        tr:hover { background: #e6f5fc; }
+
+        /* ── Site network cards (mid-page) ── */
+        .network-section {
+            margin: 10px 0 28px;
         }
+        .network-section h2 {
+            text-align: center;
+            color: var(--primary-darker);
+            font-size: 1.35rem;
+            margin-bottom: 6px;
+        }
+        .network-section p {
+            text-align: center;
+            color: var(--gray);
+            margin: 0 0 20px;
+            font-size: 0.95rem;
+        }
+        .site-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .site-card {
+            background: #fff;
+            border: 2px solid #d4e9f5;
+            border-radius: 12px;
+            padding: 22px 18px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+            cursor: pointer;
+        }
+        .site-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 6px 24px rgba(0,158,220,0.18);
+            transform: translateY(-3px);
+        }
+        .site-card .sc-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        .site-card .sc-name {
+            font-weight: 900;
+            font-size: 1.05rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .site-card .sc-desc {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+        .site-card .sc-btn {
+            margin-top: 14px;
+            display: inline-block;
+            padding: 7px 20px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            transition: background 0.18s;
+        }
+        .site-card:hover .sc-btn {
+            background: var(--primary-darker);
+        }
+
+        /* ── Bottom CTA strip ── */
+        .cta-strip {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
+            border-radius: 14px;
+            padding: 36px 32px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 28px;
+        }
+        .cta-strip h2 {
+            margin: 0 0 8px;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+        .cta-strip p {
+            margin: 0 0 22px;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        .cta-strip-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: background 0.18s, border-color 0.18s;
+            white-space: nowrap;
+        }
+        .cta-btn:hover {
+            background: rgba(255,255,255,0.28);
+            border-color: rgba(255,255,255,0.8);
+        }
+        .cta-btn.cta-primary {
+            background: #fff;
+            color: var(--primary-darker);
+            border-color: #fff;
+        }
+        .cta-btn.cta-primary:hover {
+            background: #e8f6fd;
+        }
+
+        /* ── FAQ ── */
         .faq-section {
             max-width: 900px;
-            margin: 40px auto;
-            padding: 0 15px;
+            margin: 10px auto 28px;
+            padding: 0 4px;
         }
         .faq-section h2 {
             color: var(--primary);
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
         }
         details {
-            margin: 15px 0;
-            padding: 12px;
-            background: #f0f9ff;
-            border: 1px solid var(--primary);
-            border-radius: 8px;
+            margin: 12px 0;
+            padding: 14px 18px;
+            background: #f3fafd;
+            border: 1px solid #c5e0f0;
+            border-radius: 10px;
         }
         summary {
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
             outline: none;
+            color: var(--primary-darker);
+            font-size: 0.98rem;
         }
+        details p {
+            margin: 10px 0 2px;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* ── Footer ── */
         .disclaimer, .footer-disclaimer, .update-note {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--gray);
             text-align: center;
-            margin: 20px auto;
+            margin: 16px auto;
             max-width: 900px;
         }
         .update-note {
-            font-size: 0.85rem;
-            color: #777;
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 16px;
+        }
+        .footer-links-bar {
+            background: var(--primary-darker);
+            width: 100%;
+            padding: 28px 20px;
+            text-align: center;
             margin-top: 30px;
         }
+        .footer-links-bar p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.85rem;
+            margin: 0 0 14px;
+        }
+        .footer-links-bar .fl-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .footer-links-bar .fl-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 7px 18px;
+            border: 1.5px solid rgba(255,255,255,0.4);
+            border-radius: 20px;
+            transition: background 0.18s;
+        }
+        .footer-links-bar .fl-links a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .footer-links-bar .footer-copy {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.8rem;
+            margin-top: 18px;
+        }
+
         .back-btn {
             display: inline-block;
-            margin: 20px 0;
+            margin: 12px 0;
             padding: 12px 28px;
             background: var(--primary);
             color: #fff;
             font-weight: bold;
             border-radius: 8px;
             text-decoration: none;
+            transition: background 0.18s;
         }
-        .back-btn:hover { opacity: 0.9; }
+        .back-btn:hover { background: var(--primary-dark); }
+
         .footer-disclaimer {
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-            margin-top: 40px;
+            border-top: 1px solid #dde;
+            padding-top: 18px;
+            margin-top: 28px;
         }
-        @media (max-width:768px) {
+
+        /* ── Section divider ── */
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 32px 0 16px;
+        }
+        .section-label span {
+            font-weight: 900;
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+        .section-label::before, .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #d0e8f5;
+        }
+
+        @media (max-width: 768px) {
             .hero { padding: 40px 15px 30px; }
             .inputs { grid-template-columns: 1fr; }
-            #incomeChartContainer { height: 350px; }
+            #incomeChartContainer { height: 300px; }
+            .card { padding: 20px 16px; }
+            .cta-strip { padding: 24px 16px; }
+            .header-inner { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 <body>
 
-    <header onclick="location.href='https://topdividendetfs.com'">
-        <div class="logo">TopDividendETFs.com</div>
+    <!-- ── Header ── -->
+    <header>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com" class="logo">TopDividendETFs.com</a>
+            <div class="header-links">
+                <a href="https://topdividendetfs.com">📊 ETF Rankings</a>
+                <a href="https://weeklyetfs.com" target="_blank">📅 WeeklyETFs</a>
+                <a href="https://monthlydividendetfs.com" target="_blank">📆 MonthlyETFs</a>
+                <a href="https://topdividendtools.com" target="_blank">🛠️ Dividend Tools</a>
+            </div>
+        </div>
     </header>
 
+    <!-- ── Network bar ── -->
+    <div class="network-bar">
+        <div class="network-bar-inner">
+            <div class="network-bar-label">Our Sites</div>
+            <div class="network-bar-links">
+                <a href="https://topdividendetfs.com" title="Top 100 Dividend ETFs ranked">
+                    <span class="nb-icon">📊</span> TopDividendETFs.com
+                </a>
+                <a href="https://weeklyetfs.com" target="_blank" title="Best weekly dividend ETFs">
+                    <span class="nb-icon">📅</span> WeeklyETFs.com
+                </a>
+                <a href="https://monthlydividendetfs.com" target="_blank" title="Best monthly dividend ETFs">
+                    <span class="nb-icon">📆</span> MonthlyETFs.com
+                </a>
+                <a href="https://topdividendtools.com" target="_blank" title="Free dividend calculators and tools">
+                    <span class="nb-icon">🛠️</span> TopDividendTools.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Hero ── -->
     <section class="hero">
+        <div class="hero-badge">✦ Free Tool — No Sign-Up Required ✦</div>
         <h1>SCHD Dividend Calculator 2026</h1>
-        <p>See exactly how much passive income SCHD (Schwab U.S. Dividend Equity ETF) could generate for you — today and projected up to 30 years into the future. Change any input for instant updates!</p>
+        <p>Seehow much passive income SCHD (Schwab U.S. Dividend Equity ETF) could generate for you today and projected up to 30 years into the future. Change any input for instant updates! Numbers are estimations & to be used for fun: NOT FINANCIAL ADVICE!</p>
     </section>
-<div style="text-align:center; margin: 30px 0;">
-    <a href="https://topdividendetfs.com/schd-dividend-history" 
-       style="display: inline-block; padding: 16px 32px; background: #009EDC; color: white; font-size: 1.25rem; font-weight: bold; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,158,220,0.3);">
-        📜 See EVERY SCHD Dividend EVER Paid
-    </a>
-</div>
+
+    <!-- ── History Button ── -->
+    <div class="history-btn-wrap">
+        <a href="https://topdividendetfs.com/schd-dividend-history" class="history-btn">
+            📜 See Every SCHD Dividend Ever Paid →
+        </a>
+    </div>
+
     <div class="container">
 
+        <!-- ── Calculator Card ── -->
         <div class="card">
-            <h2 style="text-align:center;margin-bottom:28px;color:var(--primary);">Your SCHD Income Calculator</h2>
-            
+            <h2 class="card-title">Your SCHD Income Calculator</h2>
+
             <div class="inputs">
                 <div class="input-group">
                     <label for="shares">Number of SCHD Shares You Own (or Want)</label>
@@ -308,7 +708,7 @@
                 <div class="input-group">
                     <label for="annualDiv">Annual Dividend per Share (TTM 2026)</label>
                     <input type="number" id="annualDiv" value="1.06" step="0.01" min="0">
-                    <small style="color:var(--gray);">Current TTM ≈ $1.06 (as of April 2026; update if newer data available)</small>
+                    <small style="color:var(--gray);margin-top:5px;font-size:0.83rem;">Current TTM ≈ $1.06 (as of April 2026; update if newer data available)</small>
                 </div>
 
                 <div class="input-group">
@@ -320,7 +720,7 @@
                         <option value="10">10%</option>
                         <option value="11" selected>11%</option>
                     </select>
-                    <small style="color:var(--gray);">Historical avg ~9-11%; select your assumed rate</small>
+                    <small style="color:var(--gray);margin-top:5px;font-size:0.83rem;">Historical avg ~9–11%; select your assumed rate</small>
                 </div>
 
                 <div class="input-group">
@@ -340,27 +740,30 @@
                 <div class="result-box">
                     <h3>Current Annual Dividend Income</h3>
                     <div id="annualIncome" class="big-number">$1,060.00</div>
+                    <div style="font-size:0.83rem;color:var(--gray);margin-top:4px;">Based on TTM $1.06/share</div>
                 </div>
                 <div class="result-box">
                     <h3>Current Quarterly Passive Income</h3>
                     <div id="quarterlyIncome" class="big-number">$265.00</div>
+                    <div style="font-size:0.83rem;color:var(--gray);margin-top:4px;">Paid March, June, Sept, Dec</div>
                 </div>
             </div>
 
             <div id="chartWrapper">
-                <h3 style="text-align:center; color:var(--primary);">Projected Income Growth Over Time</h3>
+                <h3 style="text-align:center;color:var(--primary);margin-bottom:4px;">Projected Income Growth Over Time</h3>
+                <p style="text-align:center;color:var(--gray);font-size:0.88rem;margin:0 0 10px;">Annual and quarterly income based on your selected growth rate</p>
                 <div id="incomeChartContainer">
                     <canvas id="incomeChart"></canvas>
                 </div>
             </div>
 
             <div id="projectionTableWrapper">
-                <h3 style="text-align:center;color:var(--primary);">Projected Dividend Income (Growing at Your DGR)</h3>
+                <h3 style="text-align:center;color:var(--primary);">Year-by-Year Projected Dividend Income</h3>
                 <table id="projectionTable">
                     <thead>
                         <tr>
                             <th>Year</th>
-                            <th>Dividend per Share</th>
+                            <th>Dividend / Share</th>
                             <th>Annual Income</th>
                             <th>Quarterly Income</th>
                             <th>Increase vs Today</th>
@@ -371,45 +774,111 @@
             </div>
         </div>
 
+        <!-- ── Mid-page network section ── -->
+        <div class="section-label"><span>Explore Our Dividend Network</span></div>
+
+        <div class="network-section">
+            <h2>More Free Dividend Resources</h2>
+            <p>Built by the same team — all free, no sign-up required.</p>
+            <div class="site-cards">
+                <a href="https://topdividendetfs.com" class="site-card">
+                    <div class="sc-icon">📊</div>
+                    <div class="sc-name">TopDividendETFs.com</div>
+                    <div class="sc-desc">Rankings of the top 100 dividend ETFs by yield, growth, and reliability. Find your best fit.</div>
+                    <div class="sc-btn">Browse Rankings →</div>
+                </a>
+                <a href="https://weeklyetfs.com" target="_blank" class="site-card">
+                    <div class="sc-icon">📅</div>
+                    <div class="sc-name">WeeklyETFs.com</div>
+                    <div class="sc-desc">Prefer weekly income? Discover the best ETFs that pay dividends every single week.</div>
+                    <div class="sc-btn">See Weekly ETFs →</div>
+                </a>
+                <a href="https://monthlydividendetfs.com" target="_blank" class="site-card">
+                    <div class="sc-icon">📆</div>
+                    <div class="sc-name">MonthlyETFs.com</div>
+                    <div class="sc-desc">The ultimate guide to monthly dividend ETFs — match your income to your monthly bills.</div>
+                    <div class="sc-btn">See Monthly ETFs →</div>
+                </a>
+                <a href="https://topdividendtools.com" target="_blank" class="site-card">
+                    <div class="sc-icon">🛠️</div>
+                    <div class="sc-name">TopDividendTools.com</div>
+                    <div class="sc-desc">Free calculators, screeners, and planning tools for dividend investors of every level.</div>
+                    <div class="sc-btn">Try Free Tools →</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ── FAQ ── -->
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
-            
+
             <details>
                 <summary>How accurate is the SCHD dividend growth projection?</summary>
                 <p>The calculator uses your selected growth rate (7–11%). Historical SCHD dividend growth has averaged ~9–11% annually over the past decade, but future growth is not guaranteed and depends on underlying holdings, market conditions, and economic factors.</p>
             </details>
-            
+
             <details>
                 <summary>Why show quarterly instead of monthly income?</summary>
-                <p>SCHD pays dividends quarterly (typically March, June, September, December), so quarterly figures better reflect actual cash flow timing.</p>
+                <p>SCHD pays dividends quarterly (typically March, June, September, December), so quarterly figures better reflect actual cash flow timing. If you prefer monthly income, check out our <a href="https://monthlydividendetfs.com" target="_blank" style="color:var(--primary);font-weight:700;">MonthlyETFs.com</a> guide.</p>
             </details>
-            
+
             <details>
                 <summary>Are 30-year projections realistic?</summary>
                 <p>Long-term projections are illustrative only. Dividend cuts, recessions, changes in fund composition, or inflation can significantly alter outcomes. Use this tool for education and planning — not as investment advice.</p>
             </details>
-            
+
             <details>
                 <summary>Where does the current dividend data come from?</summary>
                 <p>The default $1.06 annual dividend (TTM) is based on the most recent trailing twelve months as of April 2026. The latest quarterly dividend (Q1 2026) was $0.2569. You can manually update the annual figure if newer data becomes available.</p>
             </details>
+
+            <details>
+                <summary>What other dividend ETFs should I consider alongside SCHD?</summary>
+                <p>Great question! Our full rankings at <a href="https://topdividendetfs.com" style="color:var(--primary);font-weight:700;">TopDividendETFs.com</a> compare SCHD against 100+ ETFs including JEPI, VYM, DGRO, and more — with yield, growth rate, and expense ratio side by side.</p>
+            </details>
+        </div>
+
+        <!-- ── Bottom CTA strip ── -->
+        <div class="cta-strip">
+            <h2>Not Just SCHD — Explore the Full Dividend Universe</h2>
+            <p>We built free tools and rankings for every type of dividend investor. Pick your style below.</p>
+            <div class="cta-strip-buttons">
+                <a href="https://topdividendetfs.com" class="cta-btn cta-primary">📊 Top 100 Dividend ETFs</a>
+                <a href="https://weeklyetfs.com" target="_blank" class="cta-btn">📅 Weekly Dividend ETFs</a>
+                <a href="https://monthlydividendetfs.com" target="_blank" class="cta-btn">📆 Monthly Dividend ETFs</a>
+                <a href="https://topdividendtools.com" target="_blank" class="cta-btn">🛠️ More Dividend Tools</a>
+            </div>
         </div>
 
         <p class="disclaimer">
-            All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.06 per share as of April 2026 (yield ~3.4-3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
+            All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.06 per share as of April 2026 (yield ~3.4–3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
         </p>
 
-        <a href="https://topdividendetfs.com" class="back-btn">← Back to Top 100 Dividend ETFs</a>
+        <div style="text-align:center;">
+            <a href="https://topdividendetfs.com" class="back-btn">← Back to Top 100 Dividend ETFs</a>
+        </div>
 
         <div class="footer-disclaimer">
             <strong>Important Disclaimer:</strong> This is NOT financial advice. All projections and numbers shown are estimates only and should not be relied upon for investment decisions. This calculator/tool is independently created by TopDividendETFs.com and is not affiliated with, endorsed by, or associated with Charles Schwab, Schwab Asset Management, or the SCHD ETF. Investing involves risk, including possible loss of principal. Always consult a licensed financial advisor before making any investment choices.
         </div>
 
         <p class="update-note">
-            Last updated: April 7, 2026 • TTM dividend data: ~$1.06/share • Latest quarterly: $0.2569 (Q1 2026) • For educational use only.
+            Last updated: April 7, 2026 &bull; TTM dividend data: ~$1.06/share &bull; Latest quarterly: $0.2569 (Q1 2026) &bull; For educational use only.
         </p>
 
     </div>
+
+    <!-- ── Footer ── -->
+    <footer class="footer-links-bar">
+        <p>Built by dividend investors For Dividend Investors!</p>
+        <div class="fl-links">
+            <a href="https://topdividendetfs.com">TopDividendETFs.com</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+            <a href="https://monthlydividendetfs.com" target="_blank">MonthlyETFs.com</a>
+            <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
+    </footer>
 
     <script>
         let chartInstance = null;
@@ -464,7 +933,7 @@
                     <td>$${currentRunningDiv.toFixed(4)}</td>
                     <td>$${projAnnual.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
                     <td>$${projQuarterly.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
-                    <td>${increase.toFixed(0)}% ↑</td>
+                    <td style="color:var(--primary-dark);font-weight:700;">${increase.toFixed(0)}% ↑</td>
                 `;
                 tbody.appendChild(row);
             }
@@ -481,17 +950,23 @@
                             label: 'Annual Income',
                             data: annualProjections,
                             borderColor: '#009EDC',
-                            backgroundColor: 'rgba(0,158,220,0.1)',
+                            backgroundColor: 'rgba(0,158,220,0.12)',
                             fill: true,
-                            tension: 0.3
+                            tension: 0.35,
+                            pointBackgroundColor: '#009EDC',
+                            pointRadius: 4,
+                            borderWidth: 2.5
                         },
                         {
                             label: 'Quarterly Income',
                             data: quarterlyProjections,
                             borderColor: '#4fc3f7',
-                            borderDash: [5, 5],
+                            borderDash: [6, 4],
                             fill: false,
-                            tension: 0.3
+                            tension: 0.35,
+                            pointBackgroundColor: '#4fc3f7',
+                            pointRadius: 3,
+                            borderWidth: 2
                         }
                     ]
                 },
@@ -501,14 +976,21 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            title: { display: true, text: 'Income ($)' }
+                            grid: { color: 'rgba(0,0,0,0.05)' },
+                            ticks: {
+                                callback: function(val) {
+                                    return '$' + val.toLocaleString(undefined, {maximumFractionDigits:0});
+                                }
+                            },
+                            title: { display: true, text: 'Income ($)', color: '#555', font: { size: 13 } }
                         },
                         x: {
-                            title: { display: true, text: 'Year' }
+                            grid: { display: false },
+                            title: { display: true, text: 'Year', color: '#555', font: { size: 13 } }
                         }
                     },
                     plugins: {
-                        legend: { position: 'top' },
+                        legend: { position: 'top', labels: { usePointStyle: true, padding: 20 } },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
@@ -521,13 +1003,11 @@
             });
         }
 
-        // Auto-update listeners
         ['shares', 'annualDiv', 'dgr', 'years'].forEach(id => {
             document.getElementById(id).addEventListener('input', updateCalculations);
             document.getElementById(id).addEventListener('change', updateCalculations);
         });
 
-        // Initial calculation
         window.onload = updateCalculations;
     </script>
 
