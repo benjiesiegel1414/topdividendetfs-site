@@ -1,0 +1,282 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- BASIC METADATA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TopDividendETFs.com">
+    <title>Blog | Dividend ETF Insights & Tools | TopDividendETFs.com</title>
+    <meta name="description" content="Read our latest articles on dividend ETFs including SCHD tools, dividend history, ex-dividend dates, holdings, and 2026 updates.">
+    <meta name="keywords" content="dividend etf blog, SCHD, DGRO, JEPQ, dividend investing">
+
+    <!-- OPEN GRAPH / TWITTER -->
+    <meta property="og:title" content="Blog - Dividend ETF Insights | TopDividendETFs.com">
+    <meta property="og:description" content="Latest articles and tools for dividend ETF investors.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/social-preview.png">
+    <meta property="og:url" content="https://topdividendetfs.com/blog">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TopDividendETFs">
+    <meta name="twitter:title" content="Dividend ETF Blog">
+    <meta name="twitter:description" content="Insights on SCHD, DGRO, JEPQ and more.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/social-preview.png">
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B8TGV115DP');
+    </script>
+
+    <style>
+        /* Same base styles as your main site */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden !important;
+            width: 100%;
+            position: relative;
+        }
+
+        :root{--green:#2E5D54;--red:#e74c3c}
+        body{font-family:'Lato',Arial,sans-serif;margin:0;background:#f4f4f4;color:#333;display:flex;flex-direction:column;align-items:center;min-height:100vh}
+        header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer}
+        .logo{font-size: clamp(22px, 6vw, 36px);font-weight: 900;}
+
+        h1{color:#1A3C34;margin:25px 0 15px;font-weight:900;font-size:2.1em;text-align:center}
+        .intro-text{max-width:900px;margin:0 auto 25px;line-height:1.6;text-align:center;color:#444;font-size:1.08em}
+
+        .content{width:94%;max-width:1100px;display:flex;flex-direction:column;align-items:center}
+
+        /* Blog Posts - Clean Card Style */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+            width: 100%;
+            margin: 20px 0 40px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,.12);
+            transition: all .3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0,0,0,.18);
+        }
+
+        .blog-card h3 {
+            margin: 22px 22px 12px;
+            font-size: 1.32em;
+            line-height: 1.35;
+            color: #1A3C34;
+            font-weight: 700;
+        }
+
+        .blog-card .date {
+            color: var(--green);
+            font-weight: 700;
+            margin: 0 22px 10px;
+            font-size: 0.95em;
+        }
+
+        .blog-card p {
+            margin: 0 22px 22px;
+            color: #555;
+            line-height: 1.55;
+            flex-grow: 1;
+        }
+
+        .blog-card .read-more {
+            display: inline-block;
+            margin: 0 22px 22px;
+            padding: 10px 22px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 700;
+            border-radius: 6px;
+            text-decoration: none;
+            align-self: flex-start;
+            transition: all .2s;
+        }
+
+        .blog-card .read-more:hover {
+            background: #234b43;
+            transform: translateY(-2px);
+        }
+
+        .disclaimer{font-size:.9em;color:#666;margin:30px auto;max-width:900px;line-height:1.4;text-align:center}
+        
+        .footer{font-size:.9em;color:#666;margin:20px auto 10px;padding-top:10px;border-top:1px solid #ddd;max-width:900px;text-align:center}
+        .footer a{color:#1A3C34;text-decoration:none}
+
+        .share-buttons {
+            margin: 30px auto 15px;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 11px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.82em;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(0,0,0,.2);
+            transition: all .2s;
+        }
+        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.3); }
+        .fb { background: #1877F2; }
+        .x { background: #000; }
+        .share-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+        .back-to-top {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 24px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95em;
+            border-radius: 6px;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(0,0,0,.2);
+            transition: all .2s;
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,.3);
+        }
+
+        .tracker-link {
+            border: 2px solid var(--green);
+            padding: 4px 10px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+            font-weight: 900;
+            text-decoration: none;
+            color: #1A3C34;
+        }
+        @keyframes glow{0%,100%{box-shadow:0 0 5px rgba(46,93,84,.3)}50%{box-shadow:0 0 8px rgba(46,93,84,.6)}}
+
+        @media(max-width:768px){
+            .blog-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <header onclick="location.href='https://topdividendetfs.com'">
+        <div class="logo">TopDividendETFs.com</div>
+    </header>
+
+    <h1>Dividend ETF Blog</h1>
+    
+
+    <!-- Blog Grid -->
+    <div class="blog-grid">
+        <div class="blog-card">
+            <h3>SCHD Dividend Calculator</h3>
+            <div class="date">April 2026</div>
+            <p>Calculate your potential dividend income from SCHD with our easy-to-use interactive calculator. Enter your investment amount and see projected yearly payouts.</p>
+            <a href="https://topdividendetfs.com/schd-dividend-calculator" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>SCHD Dividend History</h3>
+            <div class="date">April 2026</div>
+            <p>Complete historical dividend payments for the Schwab U.S. Dividend Equity ETF (SCHD). Track payout growth and consistency over the years.</p>
+            <a href="https://topdividendetfs.com/schd-dividend-history" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>DGRO ETF Ex-Dividend Dates 2026</h3>
+            <div class="date">April 2026</div>
+            <p>Full list of expected ex-dividend dates for DGRO in 2026. Plan your dividend calendar with reliable dates and important notes.</p>
+            <a href="https://topdividendetfs.com/dgro-etf-ex-dividend-dates-2026" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>JEPQ ETF Dividend History</h3>
+            <div class="date">April 2026</div>
+            <p>Detailed dividend payment history for the JPMorgan Nasdaq Equity Premium Income ETF (JEPQ). High-yield covered call strategy breakdown.</p>
+            <a href="https://topdividendetfs.com/jepq-etf-dividend-history" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>SCHD ETF 2026 Reconstitution</h3>
+            <div class="date">April 2026</div>
+            <p>What investors need to know about the SCHD ETF reconstitution in 2026 — expected changes, new holdings, and potential impact on yield and performance.</p>
+            <a href="https://topdividendetfs.com/schd-etf-2026-reconstitution" class="read-more">Read Article →</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>SCHD ETF Holdings 2026</h3>
+            <div class="date">April 2026</div>
+            <p>Current top holdings in the SCHD ETF for 2026. Understand exactly where your dividend investment is allocated.</p>
+            <a href="https://topdividendetfs.com/schd-etf-holdings-2026" class="read-more">Read Article →</a>
+        </div>
+    </div>
+
+    <p class="disclaimer">
+        Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+    </p>
+
+    <!-- Share buttons -->
+    <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftopdividendetfs.com%2Fblog" target="_blank" class="share-btn fb" onclick="window.open(this.href,'','width=570,height=350');return false;">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Share
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftopdividendetfs.com%2Fblog&text=Dividend+ETF+Blog+with+great+tools+and+insights+%40TopDividendETFs" target="_blank" class="share-btn x" onclick="window.open(this.href,'','width=570,height=350');return false;">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Post
+        </a>
+    </div>
+
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back To Top</button>
+
+    <footer class="footer">
+        <p>
+            <a href="terms-of-use.html">Terms of Use</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="FAQ.html">FAQ</a> | 
+            <a href="schd-dividend-calculator.html">SCHD Calculator</a> | 
+            Sponsorship Inquiries - Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
+        </p>
+        <p style="margin-top: 12px; text-align: center;">
+            <strong>
+                <a href="https://weeklyetfs.com/" target="_blank" class="tracker-link" style="margin-right: 20px;">
+                    Top 100 Weekly Dividend ETFs!
+                </a>
+                <a href="https://growthetfs.com/" target="_blank" class="tracker-link">
+                    Top Growth ETFs!
+                </a>
+            </strong>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
