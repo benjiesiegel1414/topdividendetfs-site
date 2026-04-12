@@ -49,10 +49,67 @@
 
         :root{--green:#2E5D54;--red:#e74c3c}
         body{font-family:'Lato',Arial,sans-serif;margin:0;background:#f4f4f4;color:#333;display:flex;flex-direction:column;align-items:center;min-height:100vh}
-        header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer}
+        header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer;position:relative;display:flex;justify-content:center;align-items:center}
         .logo{
           font-size: clamp(22px, 6vw, 36px);
           font-weight: 900;
+        }
+
+        /* PRO BUTTON IN HEADER */
+        .header-pro-btn {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 8px 16px;
+          background: linear-gradient(135deg, #FFD700, #FFA500);
+          color: #1A3C34;
+          font-weight: 900;
+          font-size: 0.85em;
+          border: 2px solid #FF8C00;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+          letter-spacing: 0.5px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .header-pro-btn:hover {
+          transform: translateY(-50%) scale(1.08);
+          box-shadow: 0 6px 18px rgba(255, 215, 0, 0.6);
+          background: linear-gradient(135deg, #FFA500, #FFD700);
+        }
+
+        .header-pro-btn:active {
+          transform: translateY(-50%) scale(0.98);
+        }
+
+        @media(max-width:768px) {
+          .header-pro-btn {
+            position: static;
+            transform: none;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            padding: 6px 12px;
+            font-size: 0.75em;
+          }
+
+          .header-pro-btn:hover {
+            transform: scale(1.08);
+          }
+
+          .header-pro-btn:active {
+            transform: scale(0.98);
+          }
+
+          header {
+            flex-wrap: wrap;
+            padding: 12px 15px;
+          }
         }
 
         h1{color:#1A3C34;margin:15px 0 10px;font-weight:900;font-size:1.5em}
@@ -209,7 +266,10 @@
 </head>
 <body>
 <div class="content">
-    <header onclick="location.reload()"><div class="logo">TopDividendETFs.com</div></header>
+    <header onclick="location.reload()">
+      <div class="logo">TopDividendETFs.com</div>
+      <a href="https://topdividendetfspro.com/" class="header-pro-btn" onclick="event.stopPropagation()">Go PRO! 🏆</a>
+    </header>
 
     <h1>Top 100 Dividend ETFs</h1>
     <p class="intro-text">
@@ -357,8 +417,40 @@
     <p class="disclaimer">
         Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
     </p>
+    <!-- Go PRO button - gold style -->
+    <div style="text-align:center; margin: 20px auto 8px;">
+        <a href="https://topdividendetfspro.com/" 
+           target="_blank" 
+           style="display: inline-block; 
+                  padding: 10px 24px; 
+                  background: linear-gradient(135deg, #FFD700, #FFA500); 
+                  color: #1A3C34; 
+                  font-weight: 900; 
+                  font-size: 1em; 
+                  border-radius: 8px; 
+                  text-decoration: none; 
+                  border: 2px solid #FF8C00; 
+                  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4); 
+                  transition: all 0.3s ease;
+                  letter-spacing: 0.5px;">
+           Go PRO! 🏆
+        </a>
+    </div>
+
+    <style>
+    a[href="https://topdividendetfspro.com/"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(255, 215, 0, 0.6) !important;
+        background: linear-gradient(135deg, #FFA500, #FFD700) !important;
+    }
+
+    a[href="https://topdivendtetfspro.com"]:active {
+        transform: translateY(0);
+    }
+    </style>
+
     <!-- Top Dividend Tools button - pure HTML with much softer yellow glow (60% less intense) -->
-    <div style="text-align:center; margin: 28px auto 24px;">
+    <div style="text-align:center; margin: 12px auto 24px;">
         <a href="https://topdividendtools.com/" 
            target="_blank" 
            style="display: inline-block; 
