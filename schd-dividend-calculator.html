@@ -840,6 +840,300 @@
             background: #d0e8f5;
         }
 
+        /* ════════════════════════════════════════════════════════════════ */
+        /* MODERN POPUP (21st.dev inspired) */
+        /* ════════════════════════════════════════════════════════════════ */
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 520px;
+            padding: 0;
+            transform: scale(0.92) translateY(10px);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Close button */
+        .modal-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 36px;
+            height: 36px;
+            background: #f0f5f9;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #888;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: #e0e8f0;
+            color: #333;
+            transform: rotate(90deg);
+        }
+
+        /* Modal Header with gradient accent */
+        .modal-header {
+            background: linear-gradient(135deg, rgba(0, 158, 220, 0.08) 0%, rgba(245, 166, 35, 0.08) 100%);
+            padding: 36px 32px 24px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 158, 220, 0.1);
+        }
+
+        .modal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--gold) 100%);
+        }
+
+        .modal-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .modal-h2 {
+            font-size: 1.65rem;
+            font-weight: 900;
+            color: var(--text);
+            margin: 0 0 8px;
+            line-height: 1.25;
+        }
+
+        .modal-subtext {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Modal Body */
+        .modal-body {
+            padding: 28px 32px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h4 {
+            font-size: 0.92rem;
+            font-weight: 900;
+            color: var(--primary-darker);
+            margin: 0 0 2px;
+        }
+
+        .feature-text p {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Highlight box */
+        .modal-highlight {
+            background: linear-gradient(135deg, var(--gold-light) 0%, #fff9ee 100%);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .modal-highlight strong {
+            display: block;
+            color: var(--gold-dark);
+            font-size: 0.85rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .modal-highlight p {
+            font-size: 0.92rem;
+            color: #5a4a15;
+            margin: 0;
+        }
+
+        /* Modal Footer / CTA */
+        .modal-footer {
+            padding: 20px 32px 28px;
+            background: #fafbfd;
+            border-top: 1px solid #e8f0f8;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .modal-footer-btn {
+            padding: 14px 22px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 900;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.2s ease;
+            letter-spacing: 0.3px;
+            font-family: 'Lato', Arial, sans-serif;
+        }
+
+        .modal-footer-btn.secondary {
+            background: #f0f5f9;
+            color: var(--primary);
+            border: 1px solid #d4e9f5;
+        }
+
+        .modal-footer-btn.secondary:hover {
+            background: #e4eff7;
+            color: var(--primary-darker);
+        }
+
+        .modal-footer-btn.primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0, 158, 220, 0.28);
+        }
+
+        .modal-footer-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 22px rgba(0, 158, 220, 0.36);
+        }
+
+        .modal-footer-btn.primary:active {
+            transform: translateY(0);
+        }
+
+        /* Trust signals */
+        .modal-trust {
+            padding: 12px 32px;
+            background: transparent;
+            text-align: center;
+            font-size: 0.78rem;
+            color: #888;
+        }
+
+        .modal-trust span {
+            display: inline-block;
+            margin: 0 6px;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 92%;
+                max-width: 100%;
+            }
+
+            .modal-header {
+                padding: 28px 24px 20px;
+            }
+
+            .modal-h2 {
+                font-size: 1.45rem;
+            }
+
+            .modal-body {
+                padding: 20px 24px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .modal-footer {
+                grid-template-columns: 1fr;
+                padding: 16px 24px 20px;
+            }
+
+            .modal-close {
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-h2 {
+                font-size: 1.25rem;
+            }
+
+            .feature-item {
+                gap: 10px;
+            }
+
+            .feature-icon {
+                font-size: 20px;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero { padding: 40px 15px 30px; }
             .inputs { grid-template-columns: 1fr; }
@@ -852,6 +1146,73 @@
     </style>
 </head>
 <body>
+
+    <!-- ── Popup Modal ── -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Close popup">✕</button>
+
+            <div class="modal-header">
+                <div class="modal-badge">🎯 Discover More</div>
+                <h2 class="modal-h2">Compare 100+ Dividend ETFs</h2>
+                <p class="modal-subtext">Beyond just SCHD — find your perfect dividend ETF match with advanced filters & real data</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-text">
+                            <h4>100+ Ranked ETFs</h4>
+                            <p>Complete rankings by yield, growth, and NAV decay</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-text">
+                            <h4>Smart Filters</h4>
+                            <p>Find ETFs matching your exact income goals</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">💡</div>
+                        <div class="feature-text">
+                            <h4>Real Data Daily</h4>
+                            <p>Updated every day — never miss a shift</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🏆</div>
+                        <div class="feature-text">
+                            <h4>Expert Insights</h4>
+                            <p>Why each ETF matters for your portfolio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-highlight">
+                    <strong>📊 100% Free !
+                    <p>Use all tools & rankings at zero cost!</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-footer-btn secondary" id="skipModal">Skip for Now</button>
+                <a href="https://topdividendetfs.com" class="modal-footer-btn primary">Explore Rankings →</a>
+            </div>
+
+            <div class="modal-trust">
+                <span>✓ 100% Free</span>
+                <span>•</span>
+                <span>✓ No Sign-Up</span>
+                <span>•</span>
+                <span>✓ Instant Access</span>
+            </div>
+        </div>
+    </div>
 
     <!-- ── Header ── -->
     <header>
@@ -1245,6 +1606,43 @@
         });
 
         window.onload = updateCalculations;
+
+        /* ════════════════════════════════════════════════════════════════ */
+        /* MODERN POPUP LOGIC (21st.dev inspired) */
+        /* ════════════════════════════════════════════════════════════════ */
+
+        const modal = document.getElementById('popupModal');
+        const closeBtn = document.getElementById('closeModal');
+        const skipBtn = document.getElementById('skipModal');
+
+        // Show popup after 10 seconds (or you can adjust timing)
+        function showPopup() {
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 15000);
+        }
+
+        // Hide popup
+        function hidePopup() {
+            modal.classList.remove('active');
+            localStorage.setItem('popupDismissed', 'true');
+        }
+
+        // Event listeners
+        closeBtn.addEventListener('click', hidePopup);
+        skipBtn.addEventListener('click', hidePopup);
+
+        // Click outside the modal to close (optional)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hidePopup();
+            }
+        });
+
+        // Show popup on page load (unless dismissed)
+        if (!localStorage.getItem('popupDismissed')) {
+            showPopup();
+        }
     </script>
 
 </body>
