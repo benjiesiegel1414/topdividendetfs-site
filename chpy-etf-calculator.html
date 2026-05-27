@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TopDividendETFs.com">
+    <title>CHPY ETF (Semiconductor Portfolio Option Income) – Weekly Dividends & Yield | TopDividendETFs.com</title>
+    <meta name="description" content="Complete CHPY ETF analysis: weekly dividend-paying semiconductor ETF with 45.76% distribution rate. View performance, dividend history, and interactive calculator. Actively managed income strategy.">
+    <meta name="keywords" content="CHPY ETF, CHPY dividend, semiconductor ETF, weekly dividend ETF, option income ETF, YieldMax CHPY, semiconductor stocks, income investing">
+
+    <link rel="canonical" href="https://topdividendetfs.com/chpy-etf.html">
+
+    <meta property="og:title" content="CHPY ETF – Weekly Semiconductor Income">
+    <meta property="og:description" content="CHPY: 45.76% distribution rate, weekly payouts, semiconductor portfolio. Interactive yield calculator included.">
+    <meta property="og:url" content="https://topdividendetfs.com/chpy-etf.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.postimg.cc/RZGp7ZjQ/100-Dividend-ETFs-(3).png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --primary: #009EDC;
+            --primary-dark: #007bb3;
+            --primary-darker: #005f8a;
+            --light-bg: #f4f8fb;
+            --text: #111;
+            --gray: #555;
+            --card-shadow: 0 4px 24px rgba(0,120,180,.10);
+            --gold: #f5a623;
+            --gold-dark: #d4891a;
+            --gold-light: #fef3dc;
+            --club-dark: #1a1200;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            margin: 0;
+            background: var(--light-bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── Header ── */
+        header {
+            background: var(--primary-darker);
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,.25);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            width: 100%;
+        }
+        .logo {
+            font-size: clamp(16px, 5vw, 26px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            min-width: 0;
+        }
+        .header-links {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+            display: none;
+        }
+        .header-links a.club-link {
+            display: inline-block;
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+            font-size: 0.7rem;
+            padding: 5px 8px;
+        }
+        .header-links a.club-link:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: #fff;
+        }
+
+        @media (min-width: 640px) {
+            .header-links a {
+                display: inline-block;
+                font-size: 0.82rem;
+                padding: 5px 12px;
+            }
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 40px 16px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -40px;
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .hero h1 {
+            font-size: clamp(1.6rem, 5vw, 3.4rem);
+            margin: 0 0 12px;
+            font-weight: 900;
+            position: relative;
+            z-index: 1;
+        }
+        .hero p {
+            font-size: clamp(0.9rem, 3vw, 1.15rem);
+            max-width: 720px;
+            margin: 0 auto 20px;
+            opacity: 0.93;
+            position: relative;
+            z-index: 1;
+            line-height: 1.5;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.18);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Network bar ── */
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e8f4fb;
+            padding: 0;
+            overflow-x: auto;
+        }
+        .network-bar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+        }
+        .network-bar-label {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.7rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 12px 12px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        .network-bar-links {
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-links a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.78rem;
+            color: var(--primary-dark);
+            border-right: 1px solid #e0eff8;
+            transition: background 0.18s;
+            white-space: nowrap;
+        }
+        .network-bar-links a:hover {
+            background: #eaf6fd;
+            color: var(--primary-darker);
+        }
+        .network-bar-links a.nb-club {
+            background: var(--gold-light);
+            color: var(--gold-dark);
+            font-weight: 900;
+            border-left: 3px solid var(--gold);
+        }
+        .network-bar-links a.nb-club:hover {
+            background: #fde8b0;
+        }
+        .network-bar-links a .nb-icon {
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .network-bar-label {
+                font-size: 0.65rem;
+                padding: 10px 8px;
+            }
+            .network-bar-links a {
+                font-size: 0.7rem;
+                padding: 8px 10px;
+                gap: 3px;
+            }
+            .network-bar-links a .nb-icon {
+                font-size: 12px;
+            }
+        }
+
+        /* ── Container ── */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 12px 32px;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 20px 16px 40px;
+            }
+        }
+
+        /* ── Cards ── */
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 16px;
+            margin-bottom: 24px;
+            border: 1px solid #e4f0f8;
+        }
+
+        @media (min-width: 640px) {
+            .card {
+                padding: 28px 24px;
+                margin-bottom: 28px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card {
+                padding: 32px;
+            }
+        }
+
+        .card-title {
+            text-align: center;
+            margin: 0 0 20px;
+            color: var(--primary);
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
+            font-weight: 900;
+        }
+
+        /* ── CLUB CARD (inline) ── */
+        .club-inline-card {
+            background: linear-gradient(135deg, var(--gold-light) 0%, #fff8e8 100%);
+            border: 2px solid var(--gold);
+            border-radius: 14px;
+            padding: 16px 14px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 640px) {
+            .club-inline-card {
+                padding: 20px 18px;
+                gap: 16px;
+                margin: 24px 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .club-inline-card {
+                padding: 24px 28px;
+                gap: 20px;
+            }
+        }
+
+        .club-inline-icon {
+            font-size: 36px;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        @media (min-width: 640px) {
+            .club-inline-icon {
+                font-size: 40px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .club-inline-icon {
+                font-size: 48px;
+            }
+        }
+
+        .club-inline-content {
+            flex: 1;
+            min-width: 200px;
+        }
+        .club-inline-content h4 {
+            margin: 0 0 4px;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            font-weight: 900;
+            color: #3d2a00;
+        }
+        .club-inline-content p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #7a5a10;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 640px) {
+            .club-inline-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .club-inline-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--gold);
+            color: #1a1200;
+            font-weight: 900;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.18s, transform 0.15s;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 640px) {
+            .club-inline-btn {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+        }
+
+        .club-inline-btn:hover {
+            background: var(--gold-dark);
+            color: #fff;
+            transform: scale(1.03);
+        }
+
+        /* ── Metrics cards ── */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .metrics-grid {
+                gap: 16px;
+            }
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #eaf6fd 0%, #ddf0fb 100%);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 16px 14px;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .metric-card {
+                padding: 20px 16px;
+            }
+        }
+
+        .metric-card h3 {
+            margin: 0 0 8px;
+            font-size: 0.85rem;
+            color: var(--primary-darker);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (min-width: 640px) {
+            .metric-card h3 {
+                font-size: 0.9rem;
+            }
+        }
+
+        .big-number {
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin: 4px 0 2px;
+        }
+
+        .metric-detail {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+
+        /* ── Calculator Section ── */
+        .calculator-card {
+            background: linear-gradient(135deg, #f0faff 0%, #e8f8ff 100%);
+            border: 2px solid var(--primary);
+            border-radius: 14px;
+            padding: 20px 16px;
+            margin: 24px 0;
+        }
+
+        @media (min-width: 640px) {
+            .calculator-card {
+                padding: 28px 24px;
+                margin: 28px 0;
+            }
+        }
+
+        .calculator-card h3 {
+            text-align: center;
+            color: var(--primary-darker);
+            margin: 0 0 16px;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            font-weight: 900;
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .calculator-inputs {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 700;
+            color: var(--primary-darker);
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        .input-group input {
+            padding: 10px 12px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Lato', sans-serif;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(0, 158, 220, 0.1);
+        }
+
+        .calculator-results {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 14px;
+            border: 2px solid var(--primary);
+        }
+
+        @media (min-width: 640px) {
+            .calculator-results {
+                padding: 20px 18px;
+            }
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e4f0f8;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .result-value {
+            font-weight: 900;
+            color: var(--primary);
+            font-size: clamp(1rem, 2vw, 1.3rem);
+        }
+
+        .result-value.yearly {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            color: var(--accent-green);
+        }
+
+        /* ── Chart ── */
+        #chartWrapper {
+            margin: 24px 0;
+        }
+
+        #chartWrapper h3 {
+            text-align: center;
+            color: var(--primary);
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            margin-bottom: 4px;
+        }
+
+        #chartWrapper > p {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin: 0 0 10px;
+        }
+
+        /* ── Table ── */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 640px) {
+            .table-wrapper {
+                margin: 24px 0;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            font-size: 0.85rem;
+        }
+
+        @media (min-width: 640px) {
+            table {
+                font-size: 0.9rem;
+            }
+        }
+
+        th, td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #e4f0f8;
+        }
+
+        @media (min-width: 640px) {
+            th, td {
+                padding: 12px 12px;
+            }
+        }
+
+        th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        @media (min-width: 640px) {
+            th {
+                font-size: 0.88rem;
+            }
+        }
+
+        tr:nth-child(even) { background: #f3fafd; }
+        tr:hover { background: #e6f5fc; }
+
+        .amount {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* ── Site cards ── */
+        .site-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 640px) {
+            .site-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+                margin: 24px 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .site-cards {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 16px;
+            }
+        }
+
+        .site-card {
+            background: #fff;
+            border: 2px solid #d4e9f5;
+            border-radius: 12px;
+            padding: 18px 14px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        @media (min-width: 640px) {
+            .site-card {
+                padding: 20px 16px;
+            }
+        }
+
+        .site-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 6px 24px rgba(0,158,220,0.18);
+            transform: translateY(-3px);
+        }
+
+        .site-card.club-card {
+            background: linear-gradient(135deg, var(--gold-light) 0%, #fff9ee 100%);
+            border: 2px solid var(--gold);
+        }
+        .site-card.club-card:hover {
+            border-color: var(--gold-dark);
+            box-shadow: 0 6px 24px rgba(245,166,35,0.28);
+        }
+        .site-card.club-card .sc-name { color: var(--gold-dark); }
+        .site-card.club-card .sc-btn { background: var(--gold); color: #1a1200; }
+        .site-card.club-card:hover .sc-btn { background: var(--gold-dark); color: #fff; }
+
+        .site-card .sc-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        @media (min-width: 640px) {
+            .site-card .sc-icon {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .site-card .sc-name {
+            font-weight: 900;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .site-card .sc-desc {
+            font-size: 0.8rem;
+            color: var(--gray);
+            line-height: 1.4;
+        }
+
+        @media (min-width: 640px) {
+            .site-card .sc-desc {
+                font-size: 0.85rem;
+            }
+        }
+
+        .site-card .sc-btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: background 0.18s;
+        }
+
+        @media (min-width: 640px) {
+            .site-card .sc-btn {
+                margin-top: 12px;
+                padding: 7px 18px;
+                font-size: 0.8rem;
+            }
+        }
+
+        .site-card:hover .sc-btn {
+            background: var(--primary-darker);
+        }
+
+        /* ── Club Hero Block ── */
+        .club-hero-block {
+            background: linear-gradient(135deg, #1c1400 0%, #3a2600 50%, #1c1400 100%);
+            border-radius: 16px;
+            padding: 32px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(245,166,35,0.25);
+        }
+
+        @media (min-width: 640px) {
+            .club-hero-block {
+                padding: 44px 32px;
+                margin-bottom: 28px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .club-hero-block {
+                padding: 56px 40px;
+            }
+        }
+
+        .club-hero-block::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 0%, rgba(245,166,35,0.12) 0%, transparent 65%),
+                        radial-gradient(ellipse at 20% 100%, rgba(245,166,35,0.07) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .club-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .club-hero-crown {
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 18px rgba(245,166,35,0.4));
+        }
+
+        @media (min-width: 640px) {
+            .club-hero-crown {
+                font-size: 2.4rem;
+                margin-bottom: 14px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .club-hero-crown {
+                font-size: 3rem;
+                margin-bottom: 16px;
+            }
+        }
+
+        .club-hero-badge {
+            display: inline-block;
+            background: rgba(245,166,35,0.15);
+            border: 1px solid rgba(245,166,35,0.4);
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 14px;
+        }
+
+        .club-hero-block h2 {
+            color: #fff;
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            font-weight: 900;
+            margin: 0 0 12px;
+            letter-spacing: -0.5px;
+        }
+
+        @media (min-width: 640px) {
+            .club-hero-block h2 {
+                margin: 0 0 14px;
+            }
+        }
+
+        .club-hero-block p {
+            color: rgba(255,255,255,0.72);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        @media (min-width: 640px) {
+            .club-hero-block p {
+                font-size: 1rem;
+                margin: 0 0 24px;
+                line-height: 1.65;
+            }
+        }
+
+        .club-hero-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--gold);
+            color: #1a1200;
+            font-weight: 900;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 24px rgba(245,166,35,0.35);
+            transition: all 0.18s;
+        }
+
+        @media (min-width: 640px) {
+            .club-hero-btn {
+                padding: 14px 36px;
+                font-size: 1rem;
+            }
+        }
+
+        .club-hero-btn:hover {
+            background: var(--gold-dark);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(245,166,35,0.45);
+        }
+
+        /* ── Bottom CTA strip ── */
+        .cta-strip {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
+            border-radius: 14px;
+            padding: 24px 16px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .cta-strip {
+                padding: 28px 24px;
+                margin-bottom: 28px;
+            }
+        }
+
+        .cta-strip h2 {
+            margin: 0 0 8px;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 900;
+        }
+        .cta-strip p {
+            margin: 0 0 16px;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 640px) {
+            .cta-strip p {
+                margin: 0 0 20px;
+                font-size: 1rem;
+            }
+        }
+
+        .cta-strip-buttons {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-strip-buttons {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 12px;
+            }
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 11px 16px;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.18s;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .cta-btn:hover {
+            background: rgba(255,255,255,0.28);
+            border-color: rgba(255,255,255,0.8);
+        }
+        .cta-btn.cta-primary {
+            background: #fff;
+            color: var(--primary-darker);
+            border-color: #fff;
+        }
+        .cta-btn.cta-primary:hover {
+            background: #e8f6fd;
+        }
+        .cta-btn.cta-club {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .cta-btn.cta-club:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: #fff;
+        }
+
+        /* ── Disclaimer & Footer ── */
+        .disclaimer, .footer-disclaimer, .update-note {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-align: center;
+            margin: 12px auto;
+            max-width: 900px;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 640px) {
+            .disclaimer, .footer-disclaimer, .update-note {
+                font-size: 0.88rem;
+                margin: 16px auto;
+                padding: 0;
+            }
+        }
+
+        .update-note {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 12px;
+        }
+
+        @media (min-width: 640px) {
+            .update-note {
+                font-size: 0.82rem;
+                margin-top: 16px;
+            }
+        }
+
+        .footer-links-bar {
+            background: var(--primary-darker);
+            width: 100%;
+            padding: 20px 16px;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .footer-links-bar {
+                padding: 28px 20px;
+                margin-top: 30px;
+            }
+        }
+
+        .footer-links-bar p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.8rem;
+            margin: 0 0 12px;
+        }
+
+        @media (min-width: 640px) {
+            .footer-links-bar p {
+                font-size: 0.85rem;
+                margin: 0 0 14px;
+            }
+        }
+
+        .footer-links-bar .fl-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        @media (min-width: 640px) {
+            .footer-links-bar .fl-links {
+                gap: 10px;
+            }
+        }
+
+        .footer-links-bar .fl-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 6px 14px;
+            border: 1.5px solid rgba(255,255,255,0.4);
+            border-radius: 20px;
+            transition: background 0.18s;
+        }
+
+        @media (min-width: 640px) {
+            .footer-links-bar .fl-links a {
+                font-size: 0.88rem;
+                padding: 7px 18px;
+            }
+        }
+
+        .footer-links-bar .fl-links a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .footer-links-bar .fl-links a.fl-club {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .footer-links-bar .fl-links a.fl-club:hover {
+            background: var(--gold-dark);
+            color: #fff;
+        }
+        .footer-links-bar .footer-copy {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.72rem;
+            margin-top: 12px;
+        }
+
+        @media (min-width: 640px) {
+            .footer-links-bar .footer-copy {
+                font-size: 0.8rem;
+                margin-top: 18px;
+            }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.18s;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 640px) {
+            .back-btn {
+                margin: 12px 0;
+                padding: 12px 28px;
+                font-size: 0.95rem;
+            }
+        }
+
+        .back-btn:hover { background: var(--primary-dark); }
+
+        .footer-disclaimer {
+            border-top: 1px solid #dde;
+            padding-top: 14px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .footer-disclaimer {
+                padding-top: 18px;
+                margin-top: 28px;
+            }
+        }
+
+        /* Section label */
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 24px 0 12px;
+        }
+
+        @media (min-width: 640px) {
+            .section-label {
+                margin: 28px 0 16px;
+            }
+        }
+
+        .section-label span {
+            font-weight: 900;
+            font-size: 0.72rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .section-label::before, .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #d0e8f5;
+        }
+
+        .section-h2 {
+            text-align: center;
+            color: var(--primary-darker);
+            font-size: clamp(1.15rem, 3vw, 1.35rem);
+            margin-bottom: 6px;
+        }
+
+        .section-p {
+            text-align: center;
+            color: var(--gray);
+            margin: 0 0 16px;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 640px) {
+            .section-p {
+                margin: 0 0 20px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ── Info Box ── */
+        .info-box {
+            background: #f0f8fc;
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 640px) {
+            .info-box {
+                padding: 20px;
+                margin: 24px 0;
+            }
+        }
+
+        .info-box h4 {
+            color: var(--primary-darker);
+            margin-top: 0;
+        }
+
+        .info-box p {
+            margin: 8px 0;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* PRO PROMO BOXES */
+        .pro-promo {
+            background: linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(245,166,35,0.04) 100%);
+            border: 2px dashed var(--gold);
+            border-radius: 12px;
+            padding: 16px 14px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .pro-promo {
+                padding: 20px 18px;
+                margin: 20px 0;
+            }
+        }
+
+        .pro-promo p {
+            margin: 0 0 12px;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .pro-promo a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--gold);
+            color: #1a1200;
+            font-weight: 900;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.18s;
+            font-size: 0.85rem;
+        }
+
+        .pro-promo a:hover {
+            background: var(--gold-dark);
+            color: #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ── -->
+    <header>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com" class="logo">TopDividendETFs</a>
+            <div class="header-links">
+                <a href="https://topdividendetfs.com">📊 ETF Rankings</a>
+                <a href="https://weeklyetfs.com" target="_blank">📅 WeeklyETFs</a>
+                <a href="https://monthlyetfs.com" target="_blank">📆 MonthlyETFs</a>
+                <a href="https://topdividendtools.com" target="_blank">🛠️ Tools</a>
+                <a href="https://topdividendetfspro.com" target="_blank" class="club-link">Pro 📊</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Network bar ── -->
+    <div class="network-bar">
+        <div class="network-bar-inner">
+            <div class="network-bar-label">Our Sites</div>
+            <div class="network-bar-links">
+                <a href="https://topdividendetfs.com" title="Top 100 Dividend ETFs ranked">
+                    <span class="nb-icon">📊</span> TopDividendETFs
+                </a>
+                <a href="https://weeklyetfs.com" target="_blank" title="Best weekly dividend ETFs">
+                    <span class="nb-icon">📅</span> WeeklyETFs
+                </a>
+                <a href="https://monthlyetfs.com" target="_blank" title="Best monthly dividend ETFs">
+                    <span class="nb-icon">📆</span> MonthlyETFs
+                </a>
+                <a href="https://topdividendtools.com" target="_blank" title="Free dividend calculators and tools">
+                    <span class="nb-icon">🛠️</span> Tools
+                </a>
+                <a href="https://topdividendetfspro.com" target="_blank" class="nb-club" title="Advanced dividend ETF platform">
+                    <span class="nb-icon">⭐</span> TopDividendETFsPro
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="hero-badge">✦ Weekly Income ETF ✦</div>
+        <h1>CHPY ETF Analysis</h1>
+        <p>Complete analysis of CHPY (YieldMax® Semiconductor Portfolio Option Income ETF). Discover weekly dividend potential, 45.76% distribution rate, and semiconductor strategy insights. Educational content only — not investment advice.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- ── Main Content Card ── -->
+        <div class="card">
+            <h2 class="card-title">CHPY Dividend Overview</h2>
+
+            <!-- Key Stats Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Distribution Rate</h3>
+                    <div class="big-number">45.76%</div>
+                    <div class="metric-detail">Annual distribution rate</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Payment Frequency</h3>
+                    <div class="big-number">Weekly</div>
+                    <div class="metric-detail">Every 7 days</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Fund Type</h3>
+                    <div class="big-number">Actively<br>Managed</div>
+                    <div class="metric-detail">YieldMax</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Portfolio Holdings</h3>
+                    <div class="big-number">15–30</div>
+                    <div class="metric-detail">Semiconductor stocks</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Inception Date</h3>
+                    <div class="big-number">04/02/2025</div>
+                    <div class="metric-detail">Recent launch</div>
+                </div>
+
+            </div>
+
+            <!-- CALCULATOR -->
+            <div class="calculator-card">
+                <h3>💰 CHPY Weekly Income Calculator</h3>
+                <p style="text-align: center; color: var(--primary-darker); margin: 0 0 16px; font-size: 0.9rem;">
+                    Based on 45% annual distribution rate. Enter your investment to see potential weekly, monthly, and annual income.
+                </p>
+                
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="investmentAmount">Investment Amount ($)</label>
+                        <input type="number" id="investmentAmount" placeholder="10,000" value="10000" min="0" step="100">
+                    </div>
+                </div>
+
+                <div class="calculator-results">
+                    <div class="result-row">
+                        <span class="result-label">📅 Weekly Distribution</span>
+                        <span class="result-value" id="weeklyIncome">$39.65</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">📆 Monthly Earnings*</span>
+                        <span class="result-value" id="monthlyIncome">$172.02</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">🎯 Annual Potential</span>
+                        <span class="result-value yearly" id="yearlyIncome">$2,064.24</span>
+                    </div>
+                </div>
+
+                <p style="text-align: center; color: var(--gray); font-size: 0.75rem; margin: 12px 0 0; padding-top: 12px; border-top: 1px solid #d0e8f5;">
+                    *Monthly = Weekly × 4.33 | Annual = Investment × 45% | Assumes distributions remain constant. Past performance ≠ future results.
+                </p>
+            </div>
+
+            <!-- PRO PROMOTION 1 -->
+            <div class="pro-promo">
+                <p><strong>Want advanced analysis?</strong> Get detailed CHPY comparisons, performance metrics, tax treatment grades, and more at TopDividendETFsPro.com</p>
+                <a href="https://topdividendetfspro.com" target="_blank">Explore Pro Platform ⭐</a>
+            </div>
+
+
+
+
+
+            <!-- PRO PROMOTION 2 -->
+            <div class="club-inline-card">
+                <div class="club-inline-icon">⚙️</div>
+                <div class="club-inline-content">
+                    <h4>Compare CHPY Against 100+ ETFs</h4>
+                    <p>Want to see how CHPY stacks up against other semiconductor, option income, and weekly dividend ETFs? Get advanced filtering, tax grades, NAV decay metrics, and live data at TopDividendETFsPro.com</p>
+                </div>
+                <a href="https://topdividendetfspro.com" target="_blank" class="club-inline-btn">Go to Pro →</a>
+            </div>
+
+            <!-- Key Metrics Section -->
+            <h3 style="text-align: center; color: var(--primary); margin: 24px 0 12px; font-size: clamp(1rem, 2vw, 1.1rem);">Why Choose CHPY?</h3>
+
+            <div class="info-box">
+                <h4>✅ Weekly Income Potential</h4>
+                <p>CHPY distributes income on a weekly basis, providing consistent cash flow every single week instead of monthly or quarterly.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>✅ Diversified Semiconductor Exposure</h4>
+                <p>Gain exposure to 15–30 publicly traded semiconductor companies, providing diversification while maintaining focus on a high-growth sector.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>✅ Capital Appreciation Potential</h4>
+                <p>While harvesting option income, CHPY maintains direct equity exposure, allowing investors to benefit from semiconductor stock price appreciation.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>⚠️ Important Risk Disclosure</h4>
+                <p><strong>Capped Upside:</strong> If semiconductor stocks rally significantly, your upside is limited because the fund has sold call options.</p>
+                <p><strong>Uncapped Downside:</strong> If semiconductor stocks decline, you experience the full downside loss — not offset by income unless held.</p>
+                <p><strong>Return of Capital:</strong> Distributions may include return of investor capital, which can decrease NAV over time and impact long-term returns.</p>
+                <p><strong>No Guarantee:</strong> There is no guarantee the fund will achieve its objectives or maintain distribution levels.</p>
+            </div>
+
+            <!-- PRO PROMOTION 3 -->
+            <div class="pro-promo">
+                <p><strong>Want detailed risk analysis?</strong> TopDividendETFsPro breaks down risk metrics, drawdowns, volatility comparisons, and more for CHPY and 100+ other ETFs.</p>
+                <a href="https://topdividendetfspro.com" target="_blank">See Pro Risk Analysis ⭐</a>
+            </div>
+
+        </div>
+
+        <!-- Network Section -->
+        <div class="section-label"><span>Explore More Dividend Resources</span></div>
+
+        <h2 class="section-h2">Free Tools & Rankings</h2>
+        <p class="section-p">All completely free — no sign-up required. Discover your next investment.</p>
+
+        <div class="site-cards">
+            <a href="https://topdividendetfs.com" class="site-card">
+                <div class="sc-icon">📊</div>
+                <div class="sc-name">TopDividendETFs.com</div>
+                <div class="sc-desc">Ranked 100+ dividend ETFs by yield, growth, and reliability. Find your next investment.</div>
+                <div class="sc-btn">View Rankings →</div>
+            </a>
+            <a href="https://weeklyetfs.com" target="_blank" class="site-card">
+                <div class="sc-icon">📅</div>
+                <div class="sc-name">WeeklyETFs.com</div>
+                <div class="sc-desc">Prefer weekly income? Discover ETFs that pay dividends every week like clockwork.</div>
+                <div class="sc-btn">See Weekly ETFs →</div>
+            </a>
+            <a href="https://monthlyetfs.com" target="_blank" class="site-card">
+                <div class="sc-icon">📆</div>
+                <div class="sc-name">MonthlyETFs.com</div>
+                <div class="sc-desc">Monthly dividend ETFs aligned with your regular bills and monthly income needs.</div>
+                <div class="sc-btn">See Monthly ETFs →</div>
+            </a>
+            <a href="https://topdividendtools.com" target="_blank" class="site-card">
+                <div class="sc-icon">🛠️</div>
+                <div class="sc-name">TopDividendTools.com</div>
+                <div class="sc-desc">Free dividend calculators, screeners, and planning tools for all investor levels.</div>
+                <div class="sc-btn">Try Tools →</div>
+            </a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="site-card club-card">
+                <div class="sc-icon">⭐</div>
+                <div class="sc-name">TopDividendETFsPro.com</div>
+                <div class="sc-desc">Advanced dividend ETF platform with deeper data, tax grades, and pro insights for serious investors.</div>
+                <div class="sc-btn">Go to Pro →</div>
+            </a>
+        </div>
+
+        <!-- Club Hero Block -->
+        <div class="club-hero-block">
+            <div class="club-hero-inner">
+                <div class="club-hero-crown">⭐</div>
+                <div class="club-hero-badge">Pro Platform</div>
+                <h2>TopDividendETFsPro.com</h2>
+                <p>Ready for advanced analysis? Our pro platform offers 100+ ranked ETFs, smart filters, tax treatment analysis, NAV decay metrics, weekly income comparisons, and daily-updated performance data for serious dividend investors.</p>
+                <a href="https://topdividendetfspro.com" target="_blank" class="club-hero-btn">Unlock Pro Analytics →</a>
+            </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="cta-strip">
+            <h2>Find Your Weekly Income Strategy</h2>
+            <p>CHPY not your only option — explore 100+ ranked dividend ETFs and find your perfect match.</p>
+            <div class="cta-strip-buttons">
+                <a href="https://topdividendetfs.com" class="cta-btn cta-primary">📊 Browse All ETFs</a>
+                <a href="https://weeklyetfs.com" target="_blank" class="cta-btn">📅 Weekly ETFs</a>
+                <a href="https://monthlyetfs.com" target="_blank" class="cta-btn">📆 Monthly ETFs</a>
+                <a href="https://topdividendtools.com" target="_blank" class="cta-btn">🛠️ Free Tools</a>
+                <a href="https://topdividendetfspro.com" target="_blank" class="cta-btn cta-club">⭐ Go Pro</a>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <p class="disclaimer">
+            <strong>Disclosure:</strong> TopDividendETFs.com is NOT affiliated with YieldMax®, Tidal Investments LLC, or any fund manager. We independently share public dividend and performance information for educational purposes only. This is NOT investment advice. Always conduct your own research and consult a licensed financial advisor before investing.
+        </p>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="https://topdividendetfs.com" class="back-btn">← Back to Top 100 Dividend ETFs</a>
+        </div>
+
+        <div class="footer-disclaimer">
+            <strong>Important Disclaimer:</strong> All information on this page is provided for educational and informational purposes only and should not be construed as investment advice, a recommendation, or an offer to buy or sell any security. Past performance does not guarantee future results. Distribution amounts and payment frequency are subject to change at the fund's discretion. Distributions may include return of capital, which can decrease NAV and have tax implications. CHPY's strategy caps upside potential while maintaining full downside risk. Before investing in any ETF, please review the official prospectus and consult with a qualified financial advisor. TopDividendETFs.com makes no warranties or representations regarding the accuracy or completeness of this information.
+        </div>
+
+        <p class="update-note">
+            Last updated: April 2026 • Data source: Public fund records & YieldMax • For educational use only
+        </p>
+
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer class="footer-links-bar">
+        <p>Built by dividend investors For Dividend Investors!</p>
+        <div class="fl-links">
+            <a href="https://topdividendetfs.com">TopDividendETFs.com</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+            <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+            <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="fl-club">⭐ Pro Platform</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 TopDividendETFs.com • For educational use only • Not financial advice</div>
+    </footer>
+
+    <script>
+        // DIVIDEND CALCULATOR
+        const investmentInput = document.getElementById('investmentAmount');
+        const weeklyIncomeEl = document.getElementById('weeklyIncome');
+        const monthlyIncomeEl = document.getElementById('monthlyIncome');
+        const yearlyIncomeEl = document.getElementById('yearlyIncome');
+
+        const ANNUAL_DISTRIBUTION_RATE = 0.45; // 45%
+
+        function updateCalculator() {
+            const investment = parseFloat(investmentInput.value) || 0;
+
+            // Annual income
+            const annualIncome = investment * ANNUAL_DISTRIBUTION_RATE;
+
+            // Weekly income (52 weeks per year)
+            const weeklyIncome = annualIncome / 52;
+
+            // Monthly income (4.33 weeks per month)
+            const monthlyIncome = weeklyIncome * 4.33;
+
+            // Update display
+            weeklyIncomeEl.textContent = '$' + weeklyIncome.toFixed(2);
+            monthlyIncomeEl.textContent = '$' + monthlyIncome.toFixed(2);
+            yearlyIncomeEl.textContent = '$' + annualIncome.toFixed(2);
+        }
+
+        // Add event listeners
+        investmentInput.addEventListener('input', updateCalculator);
+
+        // Initial calculation
+        updateCalculator();
+    </script>
+</body>
+</html>
