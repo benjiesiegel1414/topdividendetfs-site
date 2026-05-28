@@ -731,8 +731,8 @@ function sortTable(col, forceDir) {
       // ── GRADE column: sort by quality rank, not alphabetically ──
       A = gradeRank(a.cells[col].textContent);
       B = gradeRank(b.cells[col].textContent);
-      // 'desc' = best grades first (lowest rank number first)
-      return dir === 'desc' ? A - B : B - A;
+      // 'asc' arrow = best grades first (A+ on top)
+      return dir === 'asc' ? A - B : B - A;
     }
 
     A = a.cells[col].textContent.trim().replace(/[%$,B]/g,'');
