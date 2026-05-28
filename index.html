@@ -685,8 +685,9 @@ document.getElementById('etfTable').addEventListener('click', async e => {
   const span = btn.nextElementSibling;
 
   btn.classList.add('voted');
-  span.textContent = (parseInt(span.textContent) || 0) + 1;
-  span.dataset.global = span.textContent;
+  const newCount = (parseInt(span.textContent) || 0) + 1;
+  span.textContent = newCount;
+  span.dataset.global = newCount;
   addVote();
   startCountdown();
 
@@ -698,7 +699,7 @@ document.getElementById('etfTable').addEventListener('click', async e => {
   });
 });
 
-// ==================== SORTING & FILTERS (100% YOUR CODE) ====================
+// ==================== SORTING & FILTERS ====================
 let sortDir = {2:'desc'};
 function sortTable(col, forceDir) {
   const tbody = document.getElementById('etfBody');
@@ -709,12 +710,37 @@ function sortTable(col, forceDir) {
 
   document.querySelectorAll('th').forEach((th,i) => th.className = i===col ? `sort-${dir}` : '');
 
+  // Grade order: A+ is best (rank 0), F is worst
+  const GRADE_RANK = {'A+':0,'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7,'C-':8,'D+':9,'D':10,'D-':11,'F':12};
+  function gradeRank(g) {
+    const v = GRADE_RANK[g.trim()];
+    return v !== undefined ? v : 99;
+  }
+
   rows.sort((a,b) => {
-    let A = a.cells[col].textContent.trim().replace(/[%$,B]/g,'');
-    let B = b.cells[col].textContent.trim().replace(/[%$,B]/g,'');
+    let A, B;
+
+    if (col === 6) {
+      // ── VOTES column: always read the .vote-count span text directly ──
+      A = parseInt(a.cells[col].querySelector('.vote-count')?.textContent || '0') || 0;
+      B = parseInt(b.cells[col].querySelector('.vote-count')?.textContent || '0') || 0;
+      return dir === 'asc' ? A - B : B - A;
+    }
+
+    if (col === 5) {
+      // ── GRADE column: sort by quality rank, not alphabetically ──
+      A = gradeRank(a.cells[col].textContent);
+      B = gradeRank(b.cells[col].textContent);
+      // 'desc' = best grades first (lowest rank number first)
+      return dir === 'desc' ? A - B : B - A;
+    }
+
+    A = a.cells[col].textContent.trim().replace(/[%$,B]/g,'');
+    B = b.cells[col].textContent.trim().replace(/[%$,B]/g,'');
+
     if (isNum) {
-      A = parseFloat(a.cells[col].querySelector('.vote-count')?.dataset.global || A) || 0;
-      B = parseFloat(b.cells[col].querySelector('.vote-count')?.dataset.global || B) || 0;
+      A = parseFloat(A) || 0;
+      B = parseFloat(B) || 0;
       return dir==='asc' ? A-B : B-A;
     }
     return dir==='asc' ? A.localeCompare(B) : B.localeCompare(A);
@@ -730,7 +756,7 @@ function applyFilters() {
   const s = document.getElementById('searchFilter').value.trim().toLowerCase();
 
   allRows.forEach(tr => {
-    const yield = parseFloat(tr.cells[2].textContent) || 0;
+    const yieldVal = parseFloat(tr.cells[2].textContent) || 0;
     const decay = tr.cells[4].textContent.trim().toUpperCase();
     const sym = tr.cells[0].textContent.toLowerCase();
     const name = tr.cells[1].textContent.toLowerCase();
@@ -738,7 +764,7 @@ function applyFilters() {
     let show = true;
     if (y) {
       const [min,max] = y==='15+' ? [15,999] : y.split('-').map(Number);
-      if (yield < min || yield > max) show = false;
+      if (yieldVal < min || yieldVal > max) show = false;
     }
     if (d && decay !== d) show = false;
     if (s && !sym.includes(s) && !name.includes(s)) show = false;
@@ -765,8 +791,6 @@ function closeScorecard() {
 document.getElementById('scorecardModal').addEventListener('click', e => {
   if (e.target === document.getElementById('scorecardModal')) closeScorecard();
 });
-
-/* ───── SAVE AS 500×500 PNG (requires html2canvas) ───── */
 
 /* ────────────────────────────────────── END CARD LOGIC ────────────────────────────────────── */
 </script>
