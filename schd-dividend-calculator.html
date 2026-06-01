@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929351005136304"
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -84,7 +86,6 @@
             --text: #111;
             --gray: #555;
             --card-shadow: 0 4px 24px rgba(0,120,180,.10);
-            /* Club accent colors */
             --gold: #f5a623;
             --gold-dark: #d4891a;
             --gold-light: #fef3dc;
@@ -104,7 +105,6 @@
             overflow-x: hidden;
         }
 
-        /* ── Header ── */
         header {
             background: var(--primary-darker);
             width: 100%;
@@ -170,7 +170,6 @@
             }
         }
 
-        /* ── Hero ── */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
             color: #fff;
@@ -226,7 +225,6 @@
             z-index: 1;
         }
 
-        /* ── Network bar ── */
         .network-bar {
             width: 100%;
             background: #fff;
@@ -302,7 +300,33 @@
             }
         }
 
-        /* ── Quick action button ── */
+        /* ── Sponsored banner (matching main site style) ── */
+        .sponsor-banner {
+            width: 90%;
+            max-width: 1000px;
+            margin: 15px auto;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .sponsor-banner img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            background: transparent;
+            transition: transform .3s ease;
+        }
+        .sponsor-banner:hover img {
+            transform: scale(1.02);
+        }
+
         .history-btn-wrap {
             text-align: center;
             padding: 20px 16px 8px;
@@ -325,7 +349,6 @@
             transform: translateY(-1px);
         }
 
-        /* ── Container ── */
         .container {
             width: 100%;
             max-width: 1100px;
@@ -339,7 +362,6 @@
             }
         }
 
-        /* ── Cards ── */
         .card {
             background: #fff;
             border-radius: 14px;
@@ -370,7 +392,6 @@
             font-weight: 900;
         }
 
-        /* ── CLUB CARD (inline, inside calculator section) ── */
         .club-inline-card {
             background: linear-gradient(135deg, var(--gold-light) 0%, #fff8e8 100%);
             border: 2px solid var(--gold);
@@ -466,7 +487,6 @@
             transform: scale(1.03);
         }
 
-        /* ── Inputs ── */
         .inputs {
             display: grid;
             grid-template-columns: 1fr;
@@ -531,7 +551,6 @@
             background: #fff;
         }
 
-        /* ── Result boxes ── */
         .results {
             display: grid;
             grid-template-columns: 1fr;
@@ -597,7 +616,6 @@
             letter-spacing: -1px;
         }
 
-        /* ── Chart ── */
         #incomeChartContainer {
             position: relative;
             height: 280px;
@@ -619,7 +637,6 @@
             }
         }
 
-        /* ── Table ── */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -680,7 +697,6 @@
         tr:nth-child(even) { background: #f3fafd; }
         tr:hover { background: #e6f5fc; }
 
-        /* ── Site network cards ── */
         .network-section {
             margin: 8px 0 20px;
         }
@@ -763,7 +779,6 @@
             box-shadow: 0 6px 24px rgba(0,158,220,0.18);
             transform: translateY(-3px);
         }
-        /* Gold site card for club */
         .site-card.club-card {
             background: linear-gradient(135deg, var(--gold-light) 0%, #fff9ee 100%);
             border: 2px solid var(--gold);
@@ -867,7 +882,6 @@
             background: var(--primary-darker);
         }
 
-        /* ── Club Hero Block ── */
         .club-hero-block {
             background: linear-gradient(135deg, #1c1400 0%, #3a2600 50%, #1c1400 100%);
             border-radius: 16px;
@@ -1024,7 +1038,6 @@
             box-shadow: 0 8px 32px rgba(245,166,35,0.45);
         }
 
-        /* ── Bottom CTA strip ── */
         .cta-strip {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
             border-radius: 14px;
@@ -1134,7 +1147,6 @@
         .cta-btn.cta-primary:hover {
             background: #e8f6fd;
         }
-        /* Gold club CTA button in strips */
         .cta-btn.cta-club {
             background: var(--gold);
             color: #1a1200;
@@ -1147,7 +1159,6 @@
             color: #fff;
         }
 
-        /* ── FAQ ── */
         .faq-section {
             max-width: 900px;
             margin: 8px auto 24px;
@@ -1215,7 +1226,6 @@
             }
         }
 
-        /* ── Footer ── */
         .disclaimer, .footer-disclaimer, .update-note {
             font-size: 0.8rem;
             color: var(--gray);
@@ -1367,7 +1377,6 @@
             }
         }
 
-        /* ── Section divider ── */
         .section-label {
             display: flex;
             align-items: center;
@@ -1403,10 +1412,6 @@
             height: 1px;
             background: #d0e8f5;
         }
-
-        /* ════════════════════════════════════════════════════════════════ */
-        /* MODERN POPUP (21st.dev inspired) */
-        /* ════════════════════════════════════════════════════════════════ */
 
         .modal-overlay {
             position: fixed;
@@ -1445,7 +1450,6 @@
             transform: scale(1) translateY(0);
         }
 
-        /* Close button */
         .modal-close {
             position: absolute;
             top: 14px;
@@ -1481,7 +1485,6 @@
             transform: rotate(90deg);
         }
 
-        /* Modal Header with gradient accent */
         .modal-header {
             background: linear-gradient(135deg, rgba(0, 158, 220, 0.08) 0%, rgba(245, 166, 35, 0.08) 100%);
             padding: 24px 20px 16px;
@@ -1560,7 +1563,6 @@
             }
         }
 
-        /* Modal Body */
         .modal-body {
             padding: 20px 18px;
         }
@@ -1666,7 +1668,6 @@
             }
         }
 
-        /* Highlight box */
         .modal-highlight {
             background: linear-gradient(135deg, var(--gold-light) 0%, #fff9ee 100%);
             border: 2px solid var(--gold);
@@ -1724,7 +1725,6 @@
             }
         }
 
-        /* Modal Footer / CTA */
         .modal-footer {
             padding: 14px 16px 18px;
             background: #fafbfd;
@@ -1804,7 +1804,6 @@
             transform: translateY(0);
         }
 
-        /* Trust signals */
         .modal-trust {
             padding: 10px 18px;
             background: transparent;
@@ -1957,6 +1956,12 @@
         </a>
     </div>
 
+    <!-- ── Sponsored Ad (above calculator) ── -->
+    <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer" class="sponsor-banner">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/Approved OVL Top Dividend Tools ad.png" alt="Sponsored">
+        <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored</small>
+    </a>
+
     <div class="container">
 
         <!-- ── Calculator Card ── -->
@@ -2047,6 +2052,12 @@
                 </table>
             </div>
         </div>
+
+        <!-- ── Sponsored Ad (below projection table) ── -->
+        <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer" class="sponsor-banner">
+            <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/Approved OVL Top Dividend Tools ad.png" alt="Sponsored">
+            <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored</small>
+        </a>
 
         <!-- ── Mid-page network section ── -->
         <div class="section-label"><span>Explore Our Dividend Network</span></div>
@@ -2307,39 +2318,30 @@
 
         window.onload = updateCalculations;
 
-        /* ════════════════════════════════════════════════════════════════ */
-        /* MODERN POPUP LOGIC (21st.dev inspired) */
-        /* ════════════════════════════════════════════════════════════════ */
-
         const modal = document.getElementById('popupModal');
         const closeBtn = document.getElementById('closeModal');
         const skipBtn = document.getElementById('skipModal');
 
-        // Show popup after 15 seconds
         function showPopup() {
             setTimeout(() => {
                 modal.classList.add('active');
             }, 15000);
         }
 
-        // Hide popup
         function hidePopup() {
             modal.classList.remove('active');
             localStorage.setItem('popupDismissed', 'true');
         }
 
-        // Event listeners
         closeBtn.addEventListener('click', hidePopup);
         skipBtn.addEventListener('click', hidePopup);
 
-        // Click outside the modal to close (optional)
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 hidePopup();
             }
         });
 
-        // Show popup on page load (unless dismissed)
         if (!localStorage.getItem('popupDismissed')) {
             showPopup();
         }
