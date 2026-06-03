@@ -38,7 +38,7 @@ body {
 .top-bar p { font-size:15.5px; opacity:0.9; }
 
 .swipe-container {
-  max-width:520px; margin:16px auto 10px; position:relative; min-height:520px;
+  max-width:520px; margin:16px auto 4px; position:relative; min-height:510px;
 }
 .etf-card {
   position:absolute; inset:0; background:white; border-radius:28px; overflow:hidden;
@@ -75,7 +75,7 @@ body {
 .stat-lbl { font-size:9px; font-weight:600; color:var(--slate-500); text-transform:uppercase; letter-spacing:0.5px; }
 
 .expanded-info {
-  flex:1; overflow:auto; padding:16px 20px 10px; background:var(--slate-50); font-size:14.2px;
+  flex:1; overflow:auto; padding:16px 20px 8px; background:var(--slate-50); font-size:14.2px;
 }
 .info-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .info-row {
@@ -86,7 +86,7 @@ body {
 .info-value { font-weight:600; font-family:var(--mono); }
 
 .actions {
-  display:flex; justify-content:center; gap:36px; padding:22px 20px;
+  display:flex; justify-content:center; gap:36px; padding:8px 20px 24px; /* Reduced top padding */
 }
 .action-btn {
   width:72px; height:72px; border-radius:50%; display:flex;
@@ -97,7 +97,7 @@ body {
 #yesBtn { background:var(--green-500); color:white; }
 
 .progress-bar {
-  height:6px; background:var(--teal-100); margin:0 40px 10px; border-radius:999px; overflow:hidden;
+  height:6px; background:var(--teal-100); margin:0 40px 8px; border-radius:999px; overflow:hidden;
 }
 .progress-fill {
   height:100%; background:linear-gradient(90deg,var(--teal-500),var(--cyan-500));
@@ -106,14 +106,14 @@ body {
 
 /* Mobile Optimizations */
 @media (max-width: 640px) {
-  .swipe-container { min-height:480px; margin-top:8px; }
+  .swipe-container { min-height:465px; margin-top:8px; }
   .card-header { height:148px; }
   .ticker-big { font-size: clamp(42px, 9.5vw, 56px); }
   .main-focus { padding:14px; gap:8px; }
   .focus-val { font-size:24px; }
   .stats-bar { padding:10px 16px; }
-  .expanded-info { padding:14px 18px 8px; }
-  .actions { gap:30px; padding:18px 20px; }
+  .expanded-info { padding:14px 18px 6px; }
+  .actions { gap:30px; padding:6px 20px 20px; }
   .action-btn { width:66px; height:66px; font-size:30px; }
 }
 </style>
@@ -234,7 +234,7 @@ function shuffleDeck() {
   renderCurrentCard();
 }
 
-// ==================== RENDER CARD (Tighter) ====================
+// Render Card
 function renderCurrentCard() {
   const container = document.getElementById('swipeContainer');
   container.innerHTML = '';
@@ -299,7 +299,7 @@ function updateProgress() {
   document.getElementById('progressFill').style.width = pct + '%';
 }
 
-// Virtual Pageview for Google Analytics
+// Virtual Pageview
 function trackPageView() {
   if (typeof gtag !== 'undefined') {
     gtag('event', 'page_view', {
@@ -341,7 +341,7 @@ function swipeRight() {
 
 function newCard() { location.reload(); }
 
-// Saved Panel
+// Saved & Modal (unchanged from previous)
 function showSaved() {
   const panel = document.getElementById('savedPanel');
   const list = document.getElementById('savedList');
@@ -373,9 +373,7 @@ function showSaved() {
   panel.style.display = 'block';
 }
 
-function hideSaved() {
-  document.getElementById('savedPanel').style.display = 'none';
-}
+function hideSaved() { document.getElementById('savedPanel').style.display = 'none'; }
 
 function removeSaved(idx) {
   savedETFs.splice(idx, 1);
@@ -383,7 +381,6 @@ function removeSaved(idx) {
   showSaved();
 }
 
-// Detail Modal
 function showDetail(symbol) {
   const etf = allETFs.find(e => e.symbol === symbol);
   if (!etf) return;
