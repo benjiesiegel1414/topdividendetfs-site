@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swipe ETFs • Top Dividend ETFs PRO</title>
+<meta name="description" content="Tinder-style swiping for Dividend ETFs. Discover, compare, and save your favorite high-yield income investments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root {
+  --teal-900:#0D3D38; --teal-800:#134E4A; --teal-700:#0F766E;
+  --teal-500:#14B8A6; --teal-400:#2DD4BF; --teal-100:#CCFBF1; --teal-50:#F0FDFA;
+  --cyan-500:#06B6D4; --orange-500:#F97316;
+  --green-500:#10B981; --red-500:#EF4444;
+  --slate-900:#0F172A; --slate-800:#1E293B; --slate-700:#334155;
+  --slate-600:#475569; --slate-500:#64748B; --slate-400:#94A3B8;
+  --slate-300:#CBD5E1; --slate-200:#E2E8F0; --slate-100:#F1F5F9; --slate-50:#F8FAFC;
+  --white:#FFFFFF;
+  --font:'DM Sans',system-ui,sans-serif;
+  --mono:'DM Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--slate-50);color:var(--slate-800);line-height:1.6;overflow-x:hidden}
+
+.site-header{position:sticky;top:0;z-index:200;background:rgba(13,61,56,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.12)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{font-size:19px;font-weight:700;color:var(--white);letter-spacing:-.4px;text-decoration:none}
+.header-logo span{color:var(--teal-400)}
+
+.hero{background:linear-gradient(160deg,var(--teal-900) 0%,var(--slate-900) 55%,#1a1040 100%);padding:68px 20px 52px;text-align:center;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(34px,6.5vw,54px);font-weight:700;color:white;letter-spacing:-2.2px;margin-bottom:10px}
+.hero p{max-width:580px;margin:0 auto;color:rgba(255,255,255,.78);font-size:17.5px}
+
+.swipe-container{max-width:520px;margin:30px auto 20px;position:relative;min-height:680px}
+.etf-card{
+  position:absolute;inset:0;background:white;border-radius:28px;overflow:hidden;
+  box-shadow:0 25px 70px -10px rgba(15,23,42,.18),0 10px 15px -3px rgba(0,0,0,.1);
+  display:flex;flex-direction:column;transition:all .45s cubic-bezier(0.34,1.56,0.64,1);
+  border:1px solid var(--slate-100);
+}
+.etf-card.swipe-left{transform:translateX(-460px) rotate(-28deg)!important;opacity:0}
+.etf-card.swipe-right{transform:translateX(460px) rotate(28deg)!important;opacity:0}
+
+.card-header{height:210px;background:linear-gradient(135deg,#0F766E,#14B8A6);color:white;position:relative;display:flex;align-items:flex-end;padding:0 32px 28px}
+.ticker-big{font-size:78px;font-weight:700;font-family:var(--mono);letter-spacing:-5px;line-height:1;opacity:0.95}
+.etf-name{font-size:21px;font-weight:700;margin-top:4px;opacity:0.95}
+
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:22px 24px;background:var(--white);border-bottom:1px solid var(--slate-100)}
+.stat-box{text-align:center}
+.stat-val{font-size:21px;font-weight:700;font-family:var(--mono);color:var(--teal-700)}
+.stat-lbl{font-size:10px;font-weight:600;letter-spacing:0.6px;color:var(--slate-500);text-transform:uppercase;margin-top:2px}
+
+.expanded-info{flex:1;overflow:auto;padding:26px 28px;background:var(--slate-50);font-size:14.5px;line-height:1.65}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--slate-100)}
+.info-label{color:var(--slate-600);font-weight:500}
+.info-value{font-weight:600;font-family:var(--mono)}
+
+.actions{display:flex;justify-content:center;gap:48px;padding:32px 20px}
+.action-btn{
+  width:78px;height:78px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:38px;box-shadow:0 10px 30px rgba(0,0,0,.15);transition:all .2s;border:5px solid white;
+}
+#noBtn{background:#fff;color:var(--red-500)}
+#yesBtn{background:var(--green-500);color:white}
+#noBtn:active{transform:scale(0.88) rotate(-18deg)}
+#yesBtn:active{transform:scale(0.88) rotate(18deg)}
+
+.progress-bar{height:6px;background:var(--teal-100);margin:0 40px 20px;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--teal-500),var(--cyan-500));width:0%;transition:width .5s ease}
+
+.saved-panel{position:fixed;bottom:24px;right:24px;background:white;border-radius:20px;box-shadow:0 20px 60px -10px rgba(0,0,0,.2);width:340px;max-height:560px;overflow:hidden;z-index:500;display:none}
+.saved-header{padding:18px 22px;background:var(--teal-700);color:white;display:flex;justify-content:space-between;align-items:center}
+.saved-list{max-height:440px;overflow:auto}
+.saved-item{padding:14px 20px;border-bottom:1px solid var(--slate-100);cursor:pointer}
+.saved-item:hover{background:var(--teal-50)}
+
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.8);display:none;align-items:center;justify-content:center;z-index:600}
+.modal-content{background:white;width:94%;max-width:520px;border-radius:24px;max-height:92vh;overflow:auto}
+.modal-header{padding:24px 28px;background:var(--teal-700);color:white;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">Top Dividend ETFs <span>PRO</span> ❤️</a>
+    <div>
+      <button onclick="showSaved()" style="background:rgba(255,255,255,0.2);color:white;border:none;padding:9px 20px;border-radius:999px;font-weight:600">❤️ Saved (<span id="savedCount">0</span>)</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Swipe <span>Dividend ETFs</span></h1>
+  <p>Like Tinder — but for serious income investors.<br>Discover your next portfolio winner.</p>
+</section>
+
+<div style="max-width:1280px;margin:0 auto;padding:0 20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin:10px 0 8px">
+    <div>Remaining: <strong id="remaining">42</strong></div>
+    <div>
+      <button onclick="newCard()" style="padding:8px 22px;background:white;border:2px solid var(--teal-400);color:var(--teal-700);border-radius:999px;font-weight:600">New Card</button>
+      <button onclick="shuffleDeck()" style="padding:8px 22px;background:white;border:2px solid var(--teal-400);color:var(--teal-700);border-radius:999px;font-weight:600">🔀 Shuffle</button>
+    </div>
+  </div>
+
+  <div class="swipe-container" id="swipeContainer"></div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+  <div class="actions">
+    <button id="noBtn" class="action-btn" onclick="swipeLeft()">✕</button>
+    <button id="yesBtn" class="action-btn" onclick="swipeRight()">❤️</button>
+  </div>
+</div>
+
+<!-- Saved Panel -->
+<div class="saved-panel" id="savedPanel">
+  <div class="saved-header">
+    <span>❤️ My Watchlist</span>
+    <span onclick="hideSaved()" style="cursor:pointer;font-size:22px">✕</span>
+  </div>
+  <div class="saved-list" id="savedList"></div>
+</div>
+
+<!-- Detail Modal -->
+<div class="modal" id="detailModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div id="modalTickerBig" style="font-size:32px;font-family:var(--mono);font-weight:700"></div>
+      <span onclick="closeModal()" style="font-size:32px;cursor:pointer">✕</span>
+    </div>
+    <div id="modalBody" style="padding:28px"></div>
+  </div>
+</div>
+
+<footer style="text-align:center;padding:80px 20px 40px;color:#64748B;font-size:13.5px">
+  TopDividendETFs.com • Data refreshed daily • Not financial advice
+</footer>
+
+<script>
+// ==================== CONFIG ====================
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxCiod-Cwry7E6k9Un9dgrM_ANymC36_IO_wLyNj-YDo2KI7mp_1ZzyNBnBGZOxT48QPM8TCwtsmA4/pub?gid=0&single=true&output=csv";
+
+let allETFs = [];
+let deck = [];
+let currentIndex = 0;
+let savedETFs = [];
+
+// ==================== LOAD DATA ====================
+async function loadETFs() {
+  try {
+    const res = await fetch(CSV_URL + '&t=' + Date.now());
+    const text = await res.text();
+    const lines = text.trim().split('\n');
+    allETFs = [];
+
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',').map(c => c.trim().replace(/^"|"$/g, ''));
+      if (cols.length < 12 || !cols[0]) continue;
+
+      allETFs.push({
+        symbol: cols[0].toUpperCase(),
+        name: cols[1],
+        provider: cols[2],
+        yield: cols[3],
+        taxGrade: cols[4],
+        expRatio: cols[5],
+        aum: cols[6],
+        totalReturn: cols[7],
+        priceDecay: cols[8],
+        inception: cols[9],
+        frequency: cols[10],
+        rating: cols[11]
+      });
+    }
+    resetDeck();
+  } catch(e) {
+    console.error(e);
+    document.getElementById('swipeContainer').innerHTML = `<div style="padding:60px;text-align:center;font-size:18px;color:#ef4444">Failed to load data. Please refresh the page.</div>`;
+  }
+}
+
+function resetDeck() {
+  deck = [...allETFs].sort(() => Math.random() - 0.5);
+  currentIndex = 0;
+  renderCurrentCard();
+}
+
+function shuffleDeck() {
+  deck = [...allETFs].sort(() => Math.random() - 0.5);
+  currentIndex = 0;
+  renderCurrentCard();
+}
+
+// ==================== RENDER CARD ====================
+function renderCurrentCard() {
+  const container = document.getElementById('swipeContainer');
+  container.innerHTML = '';
+
+  if (currentIndex >= deck.length) {
+    container.innerHTML = `
+      <div style="height:680px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:white;border-radius:28px;box-shadow:0 25px 70px -10px rgba(0,0,0,.15);text-align:center;padding:40px">
+        <h2 style="font-size:38px;margin-bottom:16px">🎉 You've reviewed them all!</h2>
+        <p style="max-width:300px;color:#64748B">Refresh to get a fresh deck and keep discovering.</p>
+        <button onclick="location.reload()" style="margin-top:30px;padding:16px 48px;background:#0F766E;color:white;border:none;border-radius:999px;font-size:18px;font-weight:700">🔄 New Fresh Deck</button>
+      </div>`;
+    return;
+  }
+
+  const etf = deck[currentIndex];
+
+  const html = `
+    <div class="etf-card" id="mainCard" ondblclick="showDetail('${etf.symbol}')">
+      <div class="card-header">
+        <div>
+          <div class="ticker-big">${etf.symbol}</div>
+          <div class="etf-name">${etf.name}</div>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-box">
+          <div class="stat-val">${etf.yield}%</div>
+          <div class="stat-lbl">Yield</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">${etf.taxGrade}</div>
+          <div class="stat-lbl">Tax</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">${etf.expRatio}%</div>
+          <div class="stat-lbl">Expense</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">${etf.totalReturn}</div>
+          <div class="stat-lbl">1Y Return</div>
+        </div>
+      </div>
+
+      <div class="expanded-info">
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">Provider</span><span class="info-value">${etf.provider}</span></div>
+          <div class="info-row"><span class="info-label">AUM</span><span class="info-value">${etf.aum}</span></div>
+          <div class="info-row"><span class="info-label">Frequency</span><span class="info-value">${etf.frequency}</span></div>
+          <div class="info-row"><span class="info-label">Inception</span><span class="info-value">${etf.inception}</span></div>
+          <div class="info-row"><span class="info-label">Price Decay</span><span class="info-value">${etf.priceDecay}</span></div>
+          <div class="info-row"><span class="info-label">Rating</span><span class="info-value" style="color:${etf.rating==='A'?'#10B981':(etf.rating==='B'?'#06B6D4':'#F97316')}">${etf.rating} ★</span></div>
+        </div>
+        
+        <div style="margin-top:28px;background:white;padding:18px;border-radius:16px;font-size:13.5px;line-height:1.7;color:#475569">
+          <strong>Quick Take:</strong> ${etf.yield}% yield with ${etf.taxGrade} tax treatment. 
+          ${etf.priceDecay === 'YES' ? 'Watch for price decay.' : 'Strong total return profile.'}
+        </div>
+      </div>
+    </div>
+  `;
+
+  container.innerHTML = html;
+  document.getElementById('remaining').textContent = deck.length - currentIndex;
+  updateProgress();
+}
+
+function updateProgress() {
+  const pct = deck.length ? Math.round(((currentIndex) / deck.length) * 100) : 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+
+// ==================== SWIPE ACTIONS ====================
+function swipeLeft() {
+  const card = document.getElementById('mainCard');
+  if (!card) return;
+  card.classList.add('swipe-left');
+  
+  setTimeout(() => {
+    currentIndex++;
+    renderCurrentCard();
+    // Force a tiny reload feel
+    setTimeout(() => location.href = location.href + '#swiped', 10);
+  }, 420);
+}
+
+function swipeRight() {
+  const card = document.getElementById('mainCard');
+  if (!card) return;
+  
+  const etf = deck[currentIndex];
+  if (!savedETFs.some(e => e.symbol === etf.symbol)) {
+    savedETFs.push(etf);
+    document.getElementById('savedCount').textContent = savedETFs.length;
+  }
+
+  card.classList.add('swipe-right');
+  
+  setTimeout(() => {
+    currentIndex++;
+    renderCurrentCard();
+    setTimeout(() => location.href = location.href + '#liked', 10);
+  }, 420);
+}
+
+// Force "refresh" on swipe for page view count
+function newCard() {
+  location.reload();
+}
+
+// ==================== SAVED & MODAL ====================
+function showSaved() {
+  const panel = document.getElementById('savedPanel');
+  const list = document.getElementById('savedList');
+  list.innerHTML = '';
+
+  if (savedETFs.length === 0) {
+    list.innerHTML = `<div style="padding:60px 20px;text-align:center;color:#64748B">No saved ETFs yet.<br>Swipe right on the ones you like!</div>`;
+  } else {
+    savedETFs.forEach((etf, idx) => {
+      const div = document.createElement('div');
+      div.className = 'saved-item';
+      div.innerHTML = `
+        <div onclick="showDetail('${etf.symbol}')">
+          <strong>${etf.symbol}</strong> — ${etf.yield}% yield
+          <div style="font-size:12.5px;color:#64748B">${etf.name}</div>
+        </div>
+        <div onclick="event.stopImmediatePropagation();removeSaved(${idx})" style="color:#ef4444;font-size:20px">✕</div>
+      `;
+      list.appendChild(div);
+    });
+  }
+  panel.style.display = 'block';
+}
+
+function hideSaved() { document.getElementById('savedPanel').style.display = 'none'; }
+
+function removeSaved(idx) {
+  savedETFs.splice(idx, 1);
+  document.getElementById('savedCount').textContent = savedETFs.length;
+  showSaved();
+}
+
+function showDetail(symbol) {
+  const etf = allETFs.find(e => e.symbol === symbol);
+  if (!etf) return;
+
+  document.getElementById('modalTickerBig').innerHTML = `${etf.symbol} <span style="font-size:18px;font-weight:400">(${etf.yield}%)</span>`;
+
+  const bodyHTML = `
+    <h2 style="margin:0 0 20px 0;font-size:23px">${etf.name}</h2>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:32px">
+      <div style="background:#F0FDFA;padding:20px;border-radius:16px;text-align:center">
+        <div style="font-size:42px;font-weight:700;color:#0F766E">${etf.yield}%</div>
+        <div style="font-size:13px;color:#475569">DIVIDEND YIELD</div>
+      </div>
+      <div style="background:#F0FDFA;padding:20px;border-radius:16px;text-align:center">
+        <div style="font-size:42px;font-weight:700;color:#10B981">${etf.taxGrade}</div>
+        <div style="font-size:13px;color:#475569">TAX GRADE</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
+      <div class="info-row"><span class="info-label">Fund Provider</span><span class="info-value">${etf.provider}</span></div>
+      <div class="info-row"><span class="info-label">Expense Ratio</span><span class="info-value">${etf.expRatio}%</span></div>
+      <div class="info-row"><span class="info-label">Assets Under Management</span><span class="info-value">${etf.aum}</span></div>
+      <div class="info-row"><span class="info-label">1-Year Total Return</span><span class="info-value">${etf.totalReturn}</span></div>
+      <div class="info-row"><span class="info-label">Payout Frequency</span><span class="info-value">${etf.frequency}</span></div>
+      <div class="info-row"><span class="info-label">Inception Date</span><span class="info-value">${etf.inception}</span></div>
+      <div class="info-row"><span class="info-label">Price Decay</span><span class="info-value">${etf.priceDecay}</span></div>
+      <div class="info-row"><span class="info-label">Our Rating</span><span class="info-value">${etf.rating}</span></div>
+    </div>
+
+    <div style="margin-top:32px;display:flex;gap:12px">
+      <button onclick="saveFromModal('${etf.symbol}');closeModal()" style="flex:1;padding:18px;background:#10B981;color:white;border:none;border-radius:16px;font-weight:700;font-size:17px">❤️ Save to Watchlist</button>
+      <button onclick="closeModal()" style="flex:1;padding:18px;background:#E2E8F0;color:#334155;border:none;border-radius:16px;font-weight:700;font-size:17px">Close</button>
+    </div>
+  `;
+
+  document.getElementById('modalBody').innerHTML = bodyHTML;
+  document.getElementById('detailModal').style.display = 'flex';
+}
+
+function saveFromModal(symbol) {
+  const etf = allETFs.find(e => e.symbol === symbol);
+  if (etf && !savedETFs.some(e => e.symbol === symbol)) {
+    savedETFs.push(etf);
+    document.getElementById('savedCount').textContent = savedETFs.length;
+  }
+}
+
+function closeModal() {
+  document.getElementById('detailModal').style.display = 'none';
+}
+
+// ==================== KEYBOARD & TOUCH ====================
+document.addEventListener('keydown', e => {
+  if (e.key === "ArrowLeft") swipeLeft();
+  if (e.key === "ArrowRight") swipeRight();
+});
+
+let touchStartX = 0;
+document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+document.addEventListener('touchend', e => {
+  const diff = e.changedTouches[0].screenX - touchStartX;
+  if (diff < -90) swipeLeft();
+  if (diff > 90) swipeRight();
+});
+
+// Init
+window.onload = loadETFs;
+</script>
+</body>
+</html>
