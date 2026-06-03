@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swipe ETFs • Top Dividend ETFs PRO</title>
-<meta name="description" content="Tinder-style swiping for Dividend ETFs. Swipe Yes or No and discover your next high-yield investment.">
+<title>Swipe ETFs • TopDividendETFs.com</title>
+<meta name="description" content="Dating-style swiping for Dividend ETFs. Swipe Yes or No and discover your next high-yield investment.">
+
+<!-- Social Media Card / Open Graph -->
+<meta property="og:title" content="Swipe Dividend ETFs • TopDividendETFs.com">
+<meta property="og:description" content="Swipe for Dividend ETFs. Swipe Yes or No on the best high-yield income ETFs.">
+<meta property="og:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/efts-dividend.png">
+<meta property="og:url" content="https://topdividendetfs.com/dating">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TopDividendETFs.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Swipe Dividend ETFs • TopDividendETFs.com">
+<meta name="twitter:description" content="Tinder for Dividend ETFs. Swipe Yes or No on the best high-yield income ETFs.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/efts-dividend.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
@@ -16,128 +29,65 @@
   --font:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family:var(--font); background:var(--slate-50); color:var(--slate-800);
-  line-height:1.6; overflow-x:hidden;
-}
+body { font-family:var(--font); background:var(--slate-50); color:var(--slate-800); line-height:1.6; overflow-x:hidden; }
 
-.site-header {
-  position:sticky; top:0; z-index:200; background:rgba(13,61,56,.96);
-  backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,.12);
-}
-.header-inner {
-  max-width:1280px; margin:0 auto; padding:0 20px; height:64px;
-  display:flex; align-items:center; justify-content:space-between;
-}
+.site-header { position:sticky; top:0; z-index:200; background:rgba(13,61,56,.96); backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,.12); }
+.header-inner { max-width:1280px; margin:0 auto; padding:0 20px; height:64px; display:flex; align-items:center; justify-content:space-between; }
 .header-logo { font-size:18px; font-weight:700; color:white; letter-spacing:-0.4px; }
 
-.top-bar {
-  background:linear-gradient(160deg,var(--teal-900) 0%,var(--slate-900) 100%);
-  padding:16px 20px; text-align:center; color:white;
-}
+.top-bar { background:linear-gradient(160deg,var(--teal-900) 0%,var(--slate-900) 100%); padding:16px 20px; text-align:center; color:white; }
 .top-bar p { font-size:15.5px; opacity:0.9; }
 
-.swipe-container {
-  max-width:520px; margin:16px auto 4px; position:relative; min-height:510px;
-}
-.etf-card {
-  position:absolute; inset:0; background:white; border-radius:28px; overflow:hidden;
-  box-shadow:0 25px 70px -10px rgba(15,23,42,.22);
-  display:flex; flex-direction:column; transition:all .45s cubic-bezier(0.34,1.56,0.64,1);
-}
+.swipe-container { max-width:520px; margin:16px auto 4px; position:relative; min-height:510px; }
+.etf-card { position:absolute; inset:0; background:white; border-radius:28px; overflow:hidden; box-shadow:0 25px 70px -10px rgba(15,23,42,.22); display:flex; flex-direction:column; transition:all .45s cubic-bezier(0.34,1.56,0.64,1); }
 .etf-card.swipe-left { transform:translateX(-440px) rotate(-26deg) !important; opacity:0; }
 .etf-card.swipe-right { transform:translateX(440px) rotate(26deg) !important; opacity:0; }
 
-.card-header {
-  height:172px; background:linear-gradient(135deg,#0F766E,#14B8A6);
-  color:white; padding:0 28px 20px; display:flex; align-items:flex-end;
-}
+.card-header { height:172px; background:linear-gradient(135deg,#0F766E,#14B8A6); color:white; padding:0 28px 20px; display:flex; align-items:flex-end; }
 .ticker-big { font-size: clamp(46px, 10vw, 66px); font-weight:700; font-family:var(--mono); letter-spacing:-4px; line-height:1; }
 .etf-name { font-size:18.5px; font-weight:600; margin-top:4px; opacity:0.95; }
 
-.main-focus {
-  display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:16px; background:white;
-}
-.focus-box {
-  background:#F0FDFA; border-radius:16px; padding:14px 10px; text-align:center;
-  border:2px solid #14B8A6;
-}
+.main-focus { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:16px; background:white; }
+.focus-box { background:#F0FDFA; border-radius:16px; padding:14px 10px; text-align:center; border:2px solid #14B8A6; }
 .focus-box.yield { border-color:#10B981; }
 .focus-val { font-size:27px; font-weight:700; font-family:var(--mono); line-height:1; }
 .focus-label { font-size:11px; font-weight:700; color:#0F766E; text-transform:uppercase; letter-spacing:0.7px; margin-top:4px; }
 
-.stats-bar {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:4px;
-  padding:12px 20px; background:white; border-bottom:1px solid #E2E8F0;
-}
+.stats-bar { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; padding:12px 20px; background:white; border-bottom:1px solid #E2E8F0; }
 .stat-box { text-align:center; }
 .stat-val { font-size:16px; font-weight:700; font-family:var(--mono); color:var(--teal-700); }
 .stat-lbl { font-size:9px; font-weight:600; color:var(--slate-500); text-transform:uppercase; letter-spacing:0.5px; }
 
-.expanded-info {
-  flex:1; overflow:auto; padding:16px 20px 8px; background:var(--slate-50); font-size:14.2px;
-}
+.expanded-info { flex:1; overflow:auto; padding:16px 20px 8px; background:var(--slate-50); font-size:14.2px; }
 .info-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.info-row {
-  display:flex; justify-content:space-between; padding:7px 0;
-  border-bottom:1px solid #E2E8F0;
-}
+.info-row { display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid #E2E8F0; }
 .info-label { color:var(--slate-600); font-size:13.5px; }
 .info-value { font-weight:600; font-family:var(--mono); }
 
-.actions {
-  display:flex; justify-content:center; gap:36px; padding:8px 20px 24px;
-}
-.action-btn {
-  width:72px; height:72px; border-radius:50%; display:flex;
-  align-items:center; justify-content:center; font-size:34px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15); transition:all .2s; border:5px solid white;
-}
+.actions { display:flex; justify-content:center; gap:36px; padding:8px 20px 24px; }
+.action-btn { width:72px; height:72px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:34px; box-shadow:0 10px 30px rgba(0,0,0,.15); transition:all .2s; border:5px solid white; }
 #noBtn { background:white; color:var(--red-500); }
 #yesBtn { background:var(--green-500); color:white; }
 
-.progress-bar {
-  height:6px; background:var(--teal-100); margin:0 40px 8px; border-radius:999px; overflow:hidden;
-}
-.progress-fill {
-  height:100%; background:linear-gradient(90deg,var(--teal-500),var(--cyan-500));
-  width:0%; transition:width .5s ease;
-}
+.progress-bar { height:6px; background:var(--teal-100); margin:0 40px 8px; border-radius:999px; overflow:hidden; }
+.progress-fill { height:100%; background:linear-gradient(90deg,var(--teal-500),var(--cyan-500)); width:0%; transition:width .5s ease; }
 
-#toast {
-  position:fixed; bottom:100px; left:50%; transform:translateX(-50%);
-  background:#0F766E; color:white; padding:12px 24px; border-radius:999px;
-  font-weight:600; box-shadow:0 10px 30px rgba(0,0,0,.3);
-  opacity:0; transition:all .3s; z-index:1000; white-space:nowrap;
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  .swipe-container { min-height:465px; }
-  .card-header { height:148px; }
-  .ticker-big { font-size: clamp(42px, 9.5vw, 56px); }
-  .main-focus { padding:14px; gap:8px; }
-  .focus-val { font-size:24px; }
-  .stats-bar { padding:10px 16px; }
-  .expanded-info { padding:14px 18px 6px; }
-  .actions { gap:30px; padding:6px 20px 20px; }
-  .action-btn { width:66px; height:66px; font-size:30px; }
-}
+/* Offer Modal */
+#offerModal { position:fixed; inset:0; background:rgba(15,23,42,.85); display:none; align-items:center; justify-content:center; z-index:700; }
+#offerContent { background:white; max-width:420px; width:92%; border-radius:24px; padding:32px 28px; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,.3); }
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="header-logo">Top Dividend ETFs <span>PRO</span></a>
-    <button onclick="showSaved()" style="background:rgba(255,255,255,0.2);color:white;border:none;padding:8px 18px;border-radius:999px;font-weight:600">
-      ❤️ Saved (<span id="savedCount">0</span>)
-    </button>
+    <a href="/" class="header-logo">TopDividendETFs.com <span></span></a>
+    <button onclick="showSaved()" style="background:rgba(255,255,255,0.2);color:white;border:none;padding:8px 18px;border-radius:999px;font-weight:600">❤️ Saved (<span id="savedCount">0</span>)</button>
   </div>
 </header>
 
 <div class="top-bar">
-  <p>Swipe to discover your next high-yield ETF</p>
+  <p>Swipe to discover your next high yield ETF!</p>
 </div>
 
 <div style="max-width:1280px;margin:0 auto;padding:0 20px">
@@ -158,7 +108,17 @@ body {
   </div>
 </div>
 
-<div id="toast"></div>
+<!-- Offer Modal -->
+<div id="offerModal">
+  <div id="offerContent">
+    <h2 id="offerTitle" style="font-size:22px;margin-bottom:16px"></h2>
+    <p id="offerText" style="margin-bottom:28px;line-height:1.5;color:#334155"></p>
+    <div style="display:flex;gap:12px">
+      <button onclick="goToMainSite()" style="flex:1;padding:16px;background:#10B981;color:white;border:none;border-radius:16px;font-weight:700;font-size:17px">Take Me There →</button>
+      <button onclick="closeOfferModal()" style="flex:1;padding:16px;background:#E2E8F0;color:#334155;border:none;border-radius:16px;font-weight:700">No Thanks</button>
+    </div>
+  </div>
+</div>
 
 <!-- Saved Panel -->
 <div id="savedPanel" style="position:fixed;bottom:20px;right:20px;background:white;border-radius:20px;box-shadow:0 20px 60px -10px rgba(0,0,0,.25);width:340px;max-height:560px;overflow:hidden;z-index:500;display:none">
@@ -181,7 +141,7 @@ body {
 </div>
 
 <footer style="text-align:center;padding:50px 20px;color:#64748B;font-size:13px">
-  TopDividendETFs.com • Data updated daily • Not financial advice
+  TopDividendETFs.com • Data updated daily • Not financial advice • NOT A BUY OR SELL SIGNAL!
 </footer>
 
 <script>
@@ -192,6 +152,7 @@ let allETFs = [];
 let deck = [];
 let currentIndex = 0;
 let savedETFs = [];
+let totalSwipes = 0;
 
 function cleanPct(val) {
   if (!val) return '—';
@@ -225,9 +186,7 @@ async function loadETFs() {
       });
     }
     resetDeck();
-  } catch(e) {
-    document.getElementById('swipeContainer').innerHTML = `<div style="padding:80px 20px;text-align:center;color:red">Failed to load data. Please refresh.</div>`;
-  }
+  } catch(e) { console.error(e); }
 }
 
 function resetDeck() {
@@ -242,7 +201,7 @@ function shuffleDeck() {
   renderCurrentCard();
 }
 
-// ==================== RENDER ====================
+// ==================== RENDER CARD ====================
 function renderCurrentCard() {
   const container = document.getElementById('swipeContainer');
   container.innerHTML = '';
@@ -307,39 +266,52 @@ function updateProgress() {
   document.getElementById('progressFill').style.width = pct + '%';
 }
 
-// ==================== TRACKING ====================
-function showToast(msg) {
-  const toast = document.getElementById('toast');
-  toast.textContent = msg;
-  toast.style.opacity = '1';
-  setTimeout(() => toast.style.opacity = '0', 1600);
+// ==================== OFFER LOGIC ====================
+function showOffer() {
+  const offers = [
+    { title: "Want Even More High-Income ETFs?", text: "Discover 100+ top dividend ETFs with strong yields and NO price decay on our main rankings page." },
+    { title: "Looking for Better Dividend Options?", text: "Check out our full list of 100+ premium dividend ETFs — many with zero price decay and high monthly payouts." }
+  ];
+
+  const offer = offers[totalSwipes % 2];
+  document.getElementById('offerTitle').textContent = offer.title;
+  document.getElementById('offerText').textContent = offer.text;
+  document.getElementById('offerModal').style.display = 'flex';
 }
 
+function closeOfferModal() {
+  document.getElementById('offerModal').style.display = 'none';
+}
+
+function goToMainSite() {
+  window.open('https://TopDividendETFs.com', '_blank');
+  closeOfferModal();
+}
+
+// ==================== TRACKING (Silent) ====================
 function trackPageView() {
   const symbol = deck[currentIndex] ? deck[currentIndex].symbol : 'Done';
   const ts = Date.now();
-  const pageLocation = window.location.origin + window.location.pathname + '#swipe-' + ts;
+  const newUrl = window.location.origin + window.location.pathname + '?etf=' + symbol + '&t=' + ts;
+
+  history.pushState({symbol}, '', newUrl);
 
   console.log(`[GA Track] Swipe → ${symbol}`);
 
-  // Primary: dataLayer (GTM)
   if (typeof dataLayer !== 'undefined') {
     dataLayer.push({
       event: 'page_view',
-      page_location: pageLocation,
+      page_location: newUrl,
       page_title: 'Swipe ETFs • ' + symbol
     });
   }
 
-  // Fallback: gtag
   if (typeof gtag !== 'undefined') {
     gtag('event', 'page_view', {
-      page_location: pageLocation,
+      page_location: newUrl,
       page_title: 'Swipe ETFs • ' + symbol
     });
   }
-
-  showToast('✓ Page View Tracked');
 }
 
 // ==================== SWIPES ====================
@@ -349,8 +321,10 @@ function swipeLeft() {
   card.classList.add('swipe-left');
   setTimeout(() => {
     currentIndex++;
+    totalSwipes++;
     renderCurrentCard();
     trackPageView();
+    checkForOffer();
   }, 420);
 }
 
@@ -367,14 +341,22 @@ function swipeRight() {
   card.classList.add('swipe-right');
   setTimeout(() => {
     currentIndex++;
+    totalSwipes++;
     renderCurrentCard();
     trackPageView();
+    checkForOffer();
   }, 420);
+}
+
+function checkForOffer() {
+  if (totalSwipes % 5 === 0 && totalSwipes > 0) {
+    setTimeout(showOffer, 800);
+  }
 }
 
 function newCard() { location.reload(); }
 
-// Saved + Modal functions
+// Saved Panel
 function showSaved() {
   const panel = document.getElementById('savedPanel');
   const list = document.getElementById('savedList');
@@ -389,7 +371,7 @@ function showSaved() {
       div.style.borderBottom = '1px solid #E2E8F0';
       div.style.cursor = 'pointer';
       div.innerHTML = `<strong>${etf.symbol}</strong> — ${etf.yield}% <div style="font-size:13px;color:#64748B">${etf.name}</div>`;
-      div.onclick = (e) => { if (!e.target.closest('span')) showDetail(etf.symbol); };
+      div.onclick = () => showDetail(etf.symbol);
       const rm = document.createElement('span');
       rm.style.cssText = 'float:right;color:#ef4444;font-size:20px;cursor:pointer;';
       rm.textContent = '✕';
@@ -411,12 +393,39 @@ function removeSaved(idx) {
 function showDetail(symbol) {
   const etf = allETFs.find(e => e.symbol === symbol);
   if (!etf) return;
+
   document.getElementById('modalTickerBig').innerHTML = `${etf.symbol} <span style="font-size:18px">(${etf.yield}%)</span>`;
-  // ... (modal content same as before)
+
+  const body = document.getElementById('modalBody');
+  body.innerHTML = `
+    <h2 style="margin-bottom:20px;font-size:23px">${etf.name}</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
+      <div style="background:#F0FDFA;padding:20px;border-radius:16px;text-align:center">
+        <div style="font-size:42px;font-weight:700;color:#10B981">${etf.yield}%</div>
+        <div style="font-size:13px;color:#0F766E">YIELD</div>
+      </div>
+      <div style="background:#F0FDFA;padding:20px;border-radius:16px;text-align:center">
+        <div style="font-size:42px;font-weight:700;color:#0F766E">${etf.totalReturn}</div>
+        <div style="font-size:13px;color:#0F766E">TOTAL RETURN</div>
+      </div>
+    </div>
+    <div style="background:white;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
+      <div class="info-row"><span class="info-label">Provider</span><span class="info-value">${etf.provider}</span></div>
+      <div class="info-row"><span class="info-label">Expense Ratio</span><span class="info-value">${etf.expRatio}%</span></div>
+      <div class="info-row"><span class="info-label">AUM</span><span class="info-value">${etf.aum}</span></div>
+      <div class="info-row"><span class="info-label">Frequency</span><span class="info-value">${etf.frequency}</span></div>
+      <div class="info-row"><span class="info-label">Inception</span><span class="info-value">${etf.inception}</span></div>
+      <div class="info-row"><span class="info-label">Tax Grade</span><span class="info-value">${etf.taxGrade}</span></div>
+      <div class="info-row"><span class="info-label">Price Decay</span><span class="info-value">${etf.priceDecay}</span></div>
+      <div class="info-row"><span class="info-label">Rating</span><span class="info-value">${etf.rating}</span></div>
+    </div>
+    <div style="margin-top:32px;display:flex;gap:12px">
+      <button onclick="saveFromModal('${etf.symbol}');closeModal()" style="flex:1;padding:18px;background:#10B981;color:white;border:none;border-radius:16px;font-weight:700">❤️ Save to Watchlist</button>
+      <button onclick="closeModal()" style="flex:1;padding:18px;background:#E2E8F0;color:#334155;border:none;border-radius:16px;font-weight:700">Close</button>
+    </div>
+  `;
   document.getElementById('detailModal').style.display = 'flex';
 }
-
-function closeModal() { document.getElementById('detailModal').style.display = 'none'; }
 
 function saveFromModal(symbol) {
   const etf = allETFs.find(e => e.symbol === symbol);
@@ -424,6 +433,10 @@ function saveFromModal(symbol) {
     savedETFs.push(etf);
     document.getElementById('savedCount').textContent = savedETFs.length;
   }
+}
+
+function closeModal() {
+  document.getElementById('detailModal').style.display = 'none';
 }
 
 // Keyboard + Touch
