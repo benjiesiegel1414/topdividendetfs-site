@@ -757,7 +757,6 @@
     .date-col { padding: 12px 14px; min-width: 110px; }
   }
 
-  /* ── UTIL ── */
   .loading-spinner {
     display: inline-block;
     width: 16px; height: 16px;
@@ -1012,23 +1011,15 @@
 </footer>
 
 <script>
-// ══════════════════════════════════════════════════════
-//  CONFIGURATION - UPDATED WITH YOUR NEWEST URL
-// ══════════════════════════════════════════════════════
+// CONFIGURATION
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxOmMNB-qrQAKiD5TS3EWPeYQ3DXXw1K1qYyXlX2_nnHKn8lh738CTDfH_jvZHpuQ95/exec';
-
-// Once Q2 payout is announced, set this to the actual number
 const ACTUAL_Q2_PAYOUT = null;
 
-// ══════════════════════════════════════════════════════
-//  STATE
-// ══════════════════════════════════════════════════════
+// STATE
 let predictions = [];
 let submitting = false;
 
-// ══════════════════════════════════════════════════════
-//  COUNTDOWN
-// ══════════════════════════════════════════════════════
+// COUNTDOWN
 function updateCountdown() {
   const target = new Date('2026-06-24T09:30:00-04:00').getTime();
   const now = Date.now();
@@ -1043,12 +1034,8 @@ function updateCountdown() {
   document.getElementById('cdMins').textContent  = pad(Math.floor((diff % 3600000) / 60000));
   document.getElementById('cdSecs').textContent  = pad(Math.floor((diff % 60000) / 1000));
 }
-setInterval(updateCountdown, 1000);
-updateCountdown();
 
-// ══════════════════════════════════════════════════════
-//  TICKER
-// ══════════════════════════════════════════════════════
+// TICKER
 function buildTicker() {
   const track = document.getElementById('tickerTrack');
   if (!predictions.length) {
@@ -1061,9 +1048,7 @@ function buildTicker() {
   ).join('');
 }
 
-// ══════════════════════════════════════════════════════
-//  LEADERBOARD RENDER
-// ══════════════════════════════════════════════════════
+// LEADERBOARD
 function renderLeaderboard() {
   const sorted = [...predictions].sort((a, b) => {
     if (ACTUAL_Q2_PAYOUT !== null) {
@@ -1080,18 +1065,14 @@ function renderLeaderboard() {
     body.innerHTML = sorted.map((p, i) => {
       const rank = i + 1;
       let rankHtml, rowClass = '';
-      if      (rank === 1) { rankHtml = `<span class="lb-rank rank-1">🥇</span>`; rowClass = 'top-1'; }
+      if (rank === 1) { rankHtml = `<span class="lb-rank rank-1">🥇</span>`; rowClass = 'top-1'; }
       else if (rank === 2) { rankHtml = `<span class="lb-rank rank-2">🥈</span>`; rowClass = 'top-2'; }
       else if (rank === 3) { rankHtml = `<span class="lb-rank rank-3">🥉</span>`; rowClass = 'top-3'; }
-      else                 { rankHtml = `<span class="lb-rank rank-other">${rank}</span>`; }
+      else { rankHtml = `<span class="lb-rank rank-other">${rank}</span>`; }
 
-      let diffHtml;
-      if (ACTUAL_Q2_PAYOUT !== null) {
-        const abs = Math.abs(Number(p.guess) - ACTUAL_Q2_PAYOUT);
-        diffHtml = `<span class="lb-diff diff-pos">±$${abs.toFixed(4)}</span>`;
-      } else {
-        diffHtml = `<span class="lb-diff diff-pending">Pending</span>`;
-      }
+      let diffHtml = ACTUAL_Q2_PAYOUT !== null 
+        ? `<span class="lb-diff diff-pos">±$${(Math.abs(Number(p.guess) - ACTUAL_Q2_PAYOUT)).toFixed(4)}</span>`
+        : `<span class="lb-diff diff-pending">Pending</span>`;
 
       return `<div class="lb-row ${rowClass}">
         ${rankHtml}
@@ -1108,47 +1089,42 @@ function renderLeaderboard() {
   const total = predictions.length;
   const guesses = predictions.map(p => Number(p.guess)).filter(n => !isNaN(n));
   const avg = guesses.length ? guesses.reduce((s,n) => s+n, 0) / guesses.length : 0;
-  const lo  = guesses.length ? Math.min(...guesses) : 0;
-  const hi  = guesses.length ? Math.max(...guesses) : 0;
+  const lo = guesses.length ? Math.min(...guesses) : 0;
+  const hi = guesses.length ? Math.max(...guesses) : 0;
 
-  document.getElementById('statTotal').textContent    = total || '—';
-  document.getElementById('statAvg').textContent      = guesses.length ? `$${avg.toFixed(4)}` : '—';
-  document.getElementById('statRange').textContent    = guesses.length > 1 ? `$${(hi-lo).toFixed(4)}` : '—';
+  document.getElementById('statTotal').textContent = total || '—';
+  document.getElementById('statAvg').textContent = guesses.length ? `$${avg.toFixed(4)}` : '—';
+  document.getElementById('statRange').textContent = guesses.length > 1 ? `$${(hi-lo).toFixed(4)}` : '—';
   document.getElementById('lbCountLabel').textContent = `${total} prediction${total!==1?'s':''}`;
 
   renderHistogram(guesses);
   buildTicker();
 }
 
-// ══════════════════════════════════════════════════════
-//  HISTOGRAM
-// ══════════════════════════════════════════════════════
+// HISTOGRAM
 function renderHistogram(guesses) {
   const section = document.getElementById('histogramSection');
   if (guesses.length < 3) { section.style.display = 'none'; return; }
   section.style.display = 'block';
 
   const buckets = [
-    { label: '< $0.245',         min: 0,     max: 0.245 },
-    { label: '$0.245–$0.255',    min: 0.245, max: 0.255 },
-    { label: '$0.255–$0.265',    min: 0.255, max: 0.265 },
-    { label: '$0.265–$0.275',    min: 0.265, max: 0.275 },
-    { label: '$0.275–$0.285',    min: 0.275, max: 0.285 },
-    { label: '> $0.285',         min: 0.285, max: 99    },
+    { label: '< $0.245', min: 0, max: 0.245 },
+    { label: '$0.245–$0.255', min: 0.245, max: 0.255 },
+    { label: '$0.255–$0.265', min: 0.255, max: 0.265 },
+    { label: '$0.265–$0.275', min: 0.265, max: 0.275 },
+    { label: '$0.275–$0.285', min: 0.275, max: 0.285 },
+    { label: '> $0.285', min: 0.285, max: 99 }
   ];
 
   const counts = buckets.map(b => guesses.filter(g => g >= b.min && g < b.max).length);
   const maxCount = Math.max(...counts, 1);
-  const activeIdx = ACTUAL_Q2_PAYOUT !== null
-    ? buckets.findIndex(b => ACTUAL_Q2_PAYOUT >= b.min && ACTUAL_Q2_PAYOUT < b.max)
-    : -1;
+  const activeIdx = ACTUAL_Q2_PAYOUT !== null ? buckets.findIndex(b => ACTUAL_Q2_PAYOUT >= b.min && ACTUAL_Q2_PAYOUT < b.max) : -1;
 
   document.getElementById('histogramBars').innerHTML = buckets.map((b, i) =>
     `<div class="hist-bar-row">
       <div class="hist-label">${b.label}</div>
       <div class="hist-track">
-        <div class="hist-fill ${i === activeIdx ? 'active-bucket' : ''}"
-             style="width:${Math.max(3, (counts[i]/maxCount)*100)}%">
+        <div class="hist-fill ${i === activeIdx ? 'active-bucket' : ''}" style="width:${Math.max(3, (counts[i]/maxCount)*100)}%">
           ${counts[i] > 0 ? `<span class="hist-count">${counts[i]}</span>` : ''}
         </div>
       </div>
@@ -1156,22 +1132,19 @@ function renderHistogram(guesses) {
   ).join('');
 }
 
-// ══════════════════════════════════════════════════════
-//  SUBMIT
-// ══════════════════════════════════════════════════════
+// SUBMIT
 function submitGuess() {
   if (submitting) return;
-
-  const name   = document.getElementById('inputName').value.trim();
+  const name = document.getElementById('inputName').value.trim();
   const handle = document.getElementById('inputHandle').value.trim();
-  const guess  = parseFloat(document.getElementById('inputGuess').value);
-  const errEl  = document.getElementById('errorMsg');
-  const sucEl  = document.getElementById('successMsg');
+  const guess = parseFloat(document.getElementById('inputGuess').value);
+  const errEl = document.getElementById('errorMsg');
+  const sucEl = document.getElementById('successMsg');
 
   errEl.style.display = 'none';
   sucEl.style.display = 'none';
 
-  if (!name)   { showError('Please enter your name.'); return; }
+  if (!name) { showError('Please enter your name.'); return; }
   if (!handle) { showError('Please enter your X handle.'); return; }
   if (isNaN(guess) || guess < 0.01 || guess > 2.00) {
     showError('Please enter a valid prediction between $0.01 and $2.00'); return;
@@ -1183,6 +1156,7 @@ function submitGuess() {
   btn.disabled = true;
   btn.innerHTML = '<span class="loading-spinner"></span> Submitting...';
 
+  // ... (your existing iframe submit code remains unchanged)
   const iframeName = 'submit_frame_' + Date.now();
   const iframe = document.createElement('iframe');
   iframe.name = iframeName;
@@ -1195,8 +1169,8 @@ function submitGuess() {
   form.target = iframeName;
   form.style.display = 'none';
 
-  [['name', name], ['handle', formattedHandle], ['guess', String(guess)]].forEach(function(pair) {
-    var input = document.createElement('input');
+  [['name', name], ['handle', formattedHandle], ['guess', String(guess)]].forEach(pair => {
+    const input = document.createElement('input');
     input.type = 'hidden';
     input.name = pair[0];
     input.value = pair[1];
@@ -1207,15 +1181,13 @@ function submitGuess() {
 
   iframe.onload = function() {
     onSuccess({ name: name, handle: formattedHandle, guess: guess }, btn);
-    setTimeout(function() {
-      try { document.body.removeChild(iframe); document.body.removeChild(form); } catch(e) {}
-    }, 1000);
+    setTimeout(() => { try { document.body.removeChild(iframe); document.body.removeChild(form); } catch(e){} }, 1000);
   };
 
   form.submit();
 
-  setTimeout(function() {
-    if (submitting) { onSuccess({ name: name, handle: formattedHandle, guess: guess }, btn); }
+  setTimeout(() => {
+    if (submitting) onSuccess({ name: name, handle: formattedHandle, guess: guess }, btn);
   }, 5000);
 }
 
@@ -1223,66 +1195,72 @@ function onSuccess(entry, btn) {
   if (!submitting) return;
   predictions.unshift(entry);
   renderLeaderboard();
-  document.getElementById('inputName').value   = '';
+  document.getElementById('inputName').value = '';
   document.getElementById('inputHandle').value = '';
-  document.getElementById('inputGuess').value  = '';
+  document.getElementById('inputGuess').value = '';
   document.getElementById('successMsg').style.display = 'block';
   submitting = false;
   btn.disabled = false;
   btn.innerHTML = 'SUBMIT MY PREDICTION →';
-  setTimeout(function() {
-    document.querySelector('.leaderboard-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 400);
 }
 
 function showError(msg) {
-  var el = document.getElementById('errorMsg');
+  const el = document.getElementById('errorMsg');
   el.textContent = 'Warning: ' + msg;
   el.style.display = 'block';
 }
 
-// ══════════════════════════════════════════════════════
-//  LOAD FROM GOOGLE SHEETS
-// ══════════════════════════════════════════════════════
+// IMPROVED SAFARI-FRIENDLY JSONP LOADER
 function loadPredictions() {
-  var cbName = 'jsonp_cb_' + Date.now();
-  var script = document.createElement('script');
-
+  const cbName = 'gaspCallback';
+  
+  if (window[cbName]) delete window[cbName];
+  
   window[cbName] = function(data) {
-    delete window[cbName];
-    try { document.body.removeChild(script); } catch(e) {}
+    console.log('✅ Predictions loaded successfully:', data);
     if (data && Array.isArray(data.predictions)) {
-      predictions = data.predictions.filter(function(p) {
-        return p.name && p.handle && !isNaN(Number(p.guess));
-      });
+      predictions = data.predictions.filter(p => p.name && p.handle && !isNaN(Number(p.guess)));
     }
     renderLeaderboard();
+    cleanup();
   };
 
+  const script = document.createElement('script');
+  script.src = SCRIPT_URL + '?callback=' + cbName;
+  script.async = true;
+  
   script.onerror = function() {
-    delete window[cbName];
+    console.error('❌ JSONP script failed to load (Safari block likely)');
+    cleanup();
     renderLeaderboard();
   };
+  
+  document.head.appendChild(script);
 
-  script.src = SCRIPT_URL + '?callback=' + cbName;
-  document.body.appendChild(script);
+  setTimeout(() => {
+    if (window[cbName]) {
+      console.warn('⚠️ JSONP timeout — Safari probably blocked it');
+      cleanup();
+      renderLeaderboard();
+    }
+  }, 10000);
 
-  setTimeout(function() {
-    if (window[cbName]) { delete window[cbName]; renderLeaderboard(); }
-  }, 6000);
+  function cleanup() {
+    try { delete window[cbName]; } catch(e) {}
+  }
 }
 
-// ══════════════════════════════════════════════════════
-//  UTILS
-// ══════════════════════════════════════════════════════
+// UTILS
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// ══════════════════════════════════════════════════════
-//  INIT
-// ══════════════════════════════════════════════════════
-loadPredictions();
+// INIT
+window.addEventListener('load', () => {
+  loadPredictions();
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});
 </script>
 </body>
 </html>
