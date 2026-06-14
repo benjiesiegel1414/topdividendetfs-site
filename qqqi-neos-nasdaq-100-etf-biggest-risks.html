@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TopDividendETFs.com">
+    <title>QQQI ETF — Possible Risks to Know Before You Invest | TopDividendETFs.com</title>
+    <meta name="description" content="QQQI is one of the most popular monthly income ETFs with a ~14% yield. Like any investment, it comes with possible risks worth understanding. We break them down clearly so you can invest with confidence.">
+    <meta name="keywords" content="QQQI ETF risks, QQQI ETF review, NEOS Nasdaq 100 High Income ETF, QQQI possible risks, QQQI covered call, QQQI monthly income, QQQI yield, QQQI return of capital, QQQI NAV, QQQI 2026">
+
+    <link rel="canonical" href="https://topdividendetfs.com/qqqi-etf-biggest-risks.html">
+
+    <meta property="og:title" content="QQQI ETF — Possible Risks Every Income Investor Should Know">
+    <meta property="og:description" content="QQQI pays ~14% monthly income and is one of the best-designed covered-call ETFs available. Here are the possible risks to understand before investing.">
+    <meta property="og:url" content="https://topdividendetfs.com/qqqi-etf-biggest-risks.html">
+    <meta property="og:type" content="article">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TopDividendETFs">
+    <meta name="twitter:title" content="QQQI ETF — Possible Risks to Know (Full Breakdown)">
+    <meta name="twitter:description" content="QQQI: ~14% monthly yield, Section 1256 tax efficiency, actively managed. Here are the possible risks informed investors should understand.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "QQQI ETF — Possible Risks Every Income Investor Should Know",
+      "description": "A balanced look at the possible risks of the QQQI ETF (NEOS Nasdaq-100 High Income ETF) for income investors seeking monthly distributions.",
+      "author": {"@type": "Organization", "name": "TopDividendETFs.com"},
+      "publisher": {"@type": "Organization", "name": "TopDividendETFs.com"},
+      "dateModified": "2026-06-14",
+      "mainEntityOfPage": "https://topdividendetfs.com/qqqi-etf-biggest-risks.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the possible risks of the QQQI ETF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "QQQI's possible risks include: capped upside in strong bull markets (by design), full equity downside exposure, potential NAV erosion in flat markets, variable monthly distributions, return-of-capital tax treatment to understand, technology sector concentration, and a 0.68% expense ratio. These are trade-offs that come with the fund's high-income strategy — not unique flaws."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is QQQI a good ETF for income investors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "QQQI is one of the most thoughtfully designed monthly income ETFs available. It uses active management, Section 1256 tax-efficient NDX options, and a flexible covered-call strategy to deliver ~14% annual yield. Like all investments, it has trade-offs, but for income-focused investors who understand the mechanics, it is a compelling option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is QQQI's 14% yield sustainable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "QQQI's distribution yield is variable and depends on option premium income and market volatility. It has paid consistent monthly distributions since its January 2024 inception with a trailing yield of approximately 13.5–14%. While not guaranteed, the fund's active management approach has maintained a strong income track record."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --primary: #009EDC;
+            --primary-dark: #007bb3;
+            --primary-darker: #005f8a;
+            --light-bg: #f4f8fb;
+            --text: #111;
+            --gray: #555;
+            --card-shadow: 0 4px 24px rgba(0,120,180,.10);
+            --gold: #f5a623;
+            --gold-dark: #d4891a;
+            --gold-light: #fef3dc;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-orange: #f97316;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            margin: 0;
+            background: var(--light-bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── Header ── */
+        header { background: var(--primary-darker); width: 100%; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; width: 100%; }
+        .logo { font-size: clamp(16px, 5vw, 26px); font-weight: 900; color: #fff; text-decoration: none; letter-spacing: -0.5px; min-width: 0; }
+        .header-links { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+        .header-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.75rem; font-weight: 700; padding: 5px 10px; border-radius: 20px; border: 1.5px solid rgba(255,255,255,0.35); transition: background 0.2s, color 0.2s; white-space: nowrap; display: none; }
+        .header-links a.club-link { display: inline-block; background: var(--gold); color: #1a1200; border-color: var(--gold); font-weight: 900; font-size: 0.7rem; padding: 5px 8px; }
+        .header-links a.club-link:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
+        @media (min-width: 640px) { .header-links a { display: inline-block; font-size: 0.82rem; padding: 5px 12px; } }
+
+        /* ── Network bar ── */
+        .network-bar { width: 100%; background: #fff; border-bottom: 2px solid #e8f4fb; padding: 0; overflow-x: auto; }
+        .network-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: stretch; gap: 0; }
+        .network-bar-label { background: var(--primary); color: #fff; font-weight: 900; font-size: 0.7rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 12px 12px; white-space: nowrap; display: flex; align-items: center; }
+        .network-bar-links { display: flex; align-items: stretch; }
+        .network-bar-links a { display: flex; align-items: center; gap: 4px; padding: 10px 12px; text-decoration: none; font-weight: 700; font-size: 0.78rem; color: var(--primary-dark); border-right: 1px solid #e0eff8; transition: background 0.18s; white-space: nowrap; }
+        .network-bar-links a:hover { background: #eaf6fd; color: var(--primary-darker); }
+        .network-bar-links a.nb-club { background: var(--gold-light); color: var(--gold-dark); font-weight: 900; border-left: 3px solid var(--gold); }
+        .network-bar-links a.nb-club:hover { background: #fde8b0; }
+        .network-bar-links a .nb-icon { font-size: 14px; }
+        @media (max-width: 480px) {
+            .network-bar-label { font-size: 0.65rem; padding: 10px 8px; }
+            .network-bar-links a { font-size: 0.7rem; padding: 8px 10px; }
+        }
+
+        /* ── Hero — QQQI brand blue with energy ── */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 44px 16px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+        .hero::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+        .hero h1 { font-size: clamp(1.6rem, 5vw, 3.2rem); margin: 0 0 12px; font-weight: 900; position: relative; z-index: 1; line-height: 1.15; }
+        .hero p { font-size: clamp(0.9rem, 3vw, 1.15rem); max-width: 760px; margin: 0 auto 20px; opacity: 0.93; position: relative; z-index: 1; line-height: 1.55; }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.18); border: 1.5px solid rgba(255,255,255,0.35); border-radius: 30px; padding: 6px 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 16px; position: relative; z-index: 1; }
+        .hero-stats { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; position: relative; z-index: 1; }
+        .hero-stat { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 10px 16px; text-align: center; }
+        .hero-stat-num { font-size: 1.35rem; font-weight: 900; line-height: 1; }
+        .hero-stat-label { font-size: 0.72rem; opacity: 0.82; margin-top: 3px; }
+
+        /* ── Container ── */
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 16px 12px 32px; }
+        @media (min-width: 640px) { .container { padding: 20px 16px 40px; } }
+
+        /* ── Cards ── */
+        .card { background: #fff; border-radius: 14px; box-shadow: var(--card-shadow); padding: 20px 16px; margin-bottom: 24px; border: 1px solid #e4f0f8; }
+        @media (min-width: 640px) { .card { padding: 28px 24px; margin-bottom: 28px; } }
+        @media (min-width: 1024px) { .card { padding: 32px; } }
+        .card-title { text-align: center; margin: 0 0 20px; color: var(--primary); font-size: clamp(1.3rem, 3vw, 1.6rem); font-weight: 900; }
+
+        /* ── Metrics ── */
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 24px; }
+        .metric-card { background: linear-gradient(135deg, #eaf6fd 0%, #ddf0fb 100%); border: 2px solid var(--primary); border-radius: 12px; padding: 16px 14px; text-align: center; }
+        .metric-card.green { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-color: var(--accent-green); }
+        .metric-card.green h3 { color: #065f46; }
+        .metric-card.green .big-number { color: #059669; }
+        .metric-card h3 { margin: 0 0 8px; font-size: 0.85rem; color: var(--primary-darker); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .big-number { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: var(--primary-dark); margin: 4px 0 2px; }
+        .metric-detail { font-size: 0.75rem; color: var(--gray); margin-top: 4px; }
+
+        /* ── Risk cards — warm amber tone, not alarming ── */
+        .risk-card {
+            border-radius: 14px;
+            border: 2px solid #e0eff8;
+            background: #fff;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+        .risk-card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        @media (min-width: 640px) { .risk-card-header { padding: 20px 28px; } }
+        .risk-number {
+            background: rgba(255,255,255,0.18);
+            border: 2px solid rgba(255,255,255,0.35);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .risk-card-header-text h3 { margin: 0 0 3px; color: #fff; font-size: clamp(1rem, 2.5vw, 1.2rem); font-weight: 900; }
+        .risk-card-header-text .risk-tagline { color: rgba(255,255,255,0.78); font-size: 0.82rem; font-weight: 700; margin: 0; }
+        .risk-card-body { padding: 20px 20px 24px; }
+        @media (min-width: 640px) { .risk-card-body { padding: 24px 28px 28px; } }
+        .risk-card-body p { margin: 0 0 14px; font-size: 0.95rem; line-height: 1.7; color: #222; }
+        .risk-card-body p:last-child { margin-bottom: 0; }
+
+        /* ── Context chip — replaces scary severity bar ── */
+        .context-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eaf6fd;
+            border: 1.5px solid var(--primary);
+            border-radius: 99px;
+            padding: 4px 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary-darker);
+            margin: 0 0 16px;
+        }
+        .context-chip.amber { background: #fffbeb; border-color: var(--gold); color: #92400e; }
+        .context-chip.green { background: #ecfdf5; border-color: var(--accent-green); color: #065f46; }
+
+        /* ── Takeaway — positive framing ── */
+        .risk-takeaway {
+            background: #eaf6fd;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: var(--primary-darker);
+        }
+        .risk-takeaway span { font-weight: 900; }
+
+        /* ── Info Boxes ── */
+        .info-box { background: #f0f8fc; border-left: 4px solid var(--primary); padding: 16px; border-radius: 8px; margin: 20px 0; font-size: 0.9rem; }
+        @media (min-width: 640px) { .info-box { padding: 20px; } }
+        .info-box.warning { background: #fffbeb; border-left-color: var(--gold); }
+        .info-box.success { background: #f0fdf4; border-left-color: var(--accent-green); }
+        .info-box.note { background: #f8faff; border-left-color: #93c5fd; }
+        .info-box h4 { color: var(--primary-darker); margin-top: 0; margin-bottom: 8px; font-size: 1rem; }
+        .info-box.warning h4 { color: #92400e; }
+        .info-box.success h4 { color: #065f46; }
+        .info-box.note h4 { color: #1e40af; }
+        .info-box p { margin: 8px 0; }
+        .info-box p:last-child { margin-bottom: 0; }
+        .info-box ul { margin: 8px 0; padding-left: 20px; }
+        .info-box ul li { margin-bottom: 6px; }
+
+        /* ── Risk overview grid ── */
+        .risk-overview-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+        @media (min-width: 640px) { .risk-overview-grid { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 900px) { .risk-overview-grid { grid-template-columns: repeat(3, 1fr); } }
+        .risk-overview-item { background: #f4f8fb; border: 1.5px solid #d0e8f5; border-radius: 10px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 10px; }
+        .risk-overview-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.2; }
+        .risk-overview-text strong { display: block; font-size: 0.88rem; color: var(--primary-darker); margin-bottom: 2px; }
+        .risk-overview-text span { font-size: 0.78rem; color: var(--gray); line-height: 1.4; }
+
+        /* ── Table ── */
+        .table-wrapper { overflow-x: auto; border-radius: 12px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; background: white; font-size: 0.85rem; }
+        @media (min-width: 640px) { table { font-size: 0.9rem; } }
+        th, td { padding: 10px 8px; text-align: center; border-bottom: 1px solid #e4f0f8; }
+        @media (min-width: 640px) { th, td { padding: 12px; } }
+        th { background: var(--primary); color: #fff; font-weight: 700; font-size: 0.8rem; }
+        tr:nth-child(even) { background: #f3fafd; }
+        tr:hover { background: #e6f5fc; }
+        td.good { color: var(--accent-green); font-weight: 900; }
+        td.neutral { color: var(--accent-orange); font-weight: 700; }
+        td.note { color: var(--primary-dark); font-weight: 700; }
+        .highlight-row td { background: #eaf6fd !important; }
+        .compare-table td:first-child { font-weight: 700; text-align: left; color: var(--primary-darker); }
+
+        /* ── Chart ── */
+        .chart-wrapper { margin: 24px 0; }
+        .chart-wrapper h3 { text-align: center; color: var(--primary); font-size: clamp(1rem, 2vw, 1.1rem); margin-bottom: 4px; }
+        .chart-wrapper > p { text-align: center; color: var(--gray); font-size: 0.8rem; margin: 0 0 10px; }
+
+        /* ── Pro Promos ── */
+        .pro-promo { background: linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(245,166,35,0.04) 100%); border: 2px dashed var(--gold); border-radius: 12px; padding: 16px 14px; margin: 16px 0; text-align: center; }
+        @media (min-width: 640px) { .pro-promo { padding: 20px 18px; margin: 20px 0; } }
+        .pro-promo p { margin: 0 0 12px; color: var(--text); font-size: 0.9rem; }
+        .pro-promo a { display: inline-block; padding: 10px 20px; background: var(--gold); color: #1a1200; font-weight: 900; border-radius: 8px; text-decoration: none; transition: all 0.18s; font-size: 0.85rem; }
+        .pro-promo a:hover { background: var(--gold-dark); color: #fff; transform: scale(1.05); }
+
+        .club-inline-card { background: linear-gradient(135deg, var(--gold-light) 0%, #fff8e8 100%); border: 2px solid var(--gold); border-radius: 14px; padding: 16px 14px; margin: 20px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        @media (min-width: 640px) { .club-inline-card { padding: 20px 18px; gap: 16px; } }
+        .club-inline-icon { font-size: 36px; flex-shrink: 0; line-height: 1; }
+        .club-inline-content { flex: 1; min-width: 200px; }
+        .club-inline-content h4 { margin: 0 0 4px; font-size: clamp(0.95rem, 2vw, 1.1rem); font-weight: 900; color: #3d2a00; }
+        .club-inline-content p { margin: 0; font-size: 0.85rem; color: #7a5a10; line-height: 1.4; }
+        .club-inline-btn { display: inline-block; padding: 10px 18px; background: var(--gold); color: #1a1200; font-weight: 900; font-size: 0.85rem; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: background 0.18s, transform 0.15s; flex-shrink: 0; }
+        @media (min-width: 640px) { .club-inline-btn { padding: 12px 24px; font-size: 0.95rem; } }
+        .club-inline-btn:hover { background: var(--gold-dark); color: #fff; transform: scale(1.03); }
+
+        /* ── FAQ ── */
+        .faq-item { border: 1px solid #d4e9f5; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+        .faq-question { background: #f0f8fc; padding: 14px 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--primary-darker); font-size: 0.95rem; user-select: none; }
+        .faq-question:hover { background: #e4f4fb; }
+        .faq-answer { padding: 14px 16px; font-size: 0.9rem; color: #333; line-height: 1.6; display: none; border-top: 1px solid #d4e9f5; }
+        .faq-answer.open { display: block; }
+        .faq-toggle { font-size: 1.2rem; color: var(--primary); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-toggle.rotated { transform: rotate(45deg); }
+
+        /* ── CTA strip ── */
+        .cta-strip { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%); border-radius: 14px; padding: 24px 16px; text-align: center; color: #fff; margin-bottom: 24px; }
+        @media (min-width: 640px) { .cta-strip { padding: 32px 24px; } }
+        .cta-strip h2 { margin: 0 0 8px; font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 900; }
+        .cta-strip p { margin: 0 0 16px; opacity: 0.9; font-size: 0.95rem; }
+        .cta-strip-buttons { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        @media (min-width: 640px) { .cta-strip-buttons { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; } }
+        .cta-btn { display: inline-block; padding: 11px 16px; background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.5); border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: all 0.18s; white-space: nowrap; text-align: center; }
+        .cta-btn:hover { background: rgba(255,255,255,0.28); border-color: rgba(255,255,255,0.8); }
+        .cta-btn.cta-primary { background: #fff; color: var(--primary-darker); border-color: #fff; }
+        .cta-btn.cta-primary:hover { background: #e8f6fd; }
+        .cta-btn.cta-club { background: var(--gold); color: #1a1200; border-color: var(--gold); font-weight: 900; }
+        .cta-btn.cta-club:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
+
+        /* ── Site cards ── */
+        .site-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+        @media (min-width: 640px) { .site-cards { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+        @media (min-width: 1024px) { .site-cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; } }
+        .site-card { background: #fff; border: 2px solid #d4e9f5; border-radius: 12px; padding: 18px 14px; text-decoration: none; color: var(--text); display: flex; flex-direction: column; align-items: center; text-align: center; transition: all 0.2s ease; }
+        .site-card:hover { border-color: var(--primary); box-shadow: 0 6px 24px rgba(0,158,220,0.18); transform: translateY(-3px); }
+        .site-card.club-card { background: linear-gradient(135deg, var(--gold-light) 0%, #fff9ee 100%); border: 2px solid var(--gold); }
+        .site-card.club-card:hover { border-color: var(--gold-dark); box-shadow: 0 6px 24px rgba(245,166,35,0.28); }
+        .site-card.club-card .sc-name { color: var(--gold-dark); }
+        .site-card.club-card .sc-btn { background: var(--gold); color: #1a1200; }
+        .site-card.club-card:hover .sc-btn { background: var(--gold-dark); color: #fff; }
+        .site-card .sc-icon { font-size: 24px; margin-bottom: 8px; line-height: 1; }
+        .site-card .sc-name { font-weight: 900; font-size: clamp(0.95rem, 2vw, 1.05rem); color: var(--primary); margin-bottom: 4px; }
+        .site-card .sc-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
+        .site-card .sc-btn { margin-top: 10px; display: inline-block; padding: 6px 16px; background: var(--primary); color: #fff; border-radius: 20px; font-size: 0.75rem; font-weight: 700; transition: background 0.18s; }
+        .site-card:hover .sc-btn { background: var(--primary-darker); }
+
+        /* ── Section labels ── */
+        .section-label { display: flex; align-items: center; gap: 12px; margin: 24px 0 12px; }
+        .section-label span { font-weight: 900; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); white-space: nowrap; }
+        .section-label::before, .section-label::after { content: ''; flex: 1; height: 1px; background: #d0e8f5; }
+        .section-h2 { text-align: center; color: var(--primary-darker); font-size: clamp(1.15rem, 3vw, 1.35rem); margin-bottom: 6px; }
+        .section-p { text-align: center; color: var(--gray); margin: 0 0 16px; font-size: 0.9rem; }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb { font-size: 0.8rem; color: var(--gray); padding: 10px 0 4px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        /* ── Verdict / summary ── */
+        .verdict-card { background: linear-gradient(135deg, #eaf6fd 0%, #f0faff 100%); border: 2px solid var(--primary); border-radius: 14px; padding: 24px 20px; margin: 24px 0; }
+        @media (min-width: 640px) { .verdict-card { padding: 32px 28px; } }
+        .verdict-card h3 { margin: 0 0 14px; color: var(--primary-darker); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 900; }
+        .verdict-card p { font-size: 0.95rem; color: #222; line-height: 1.7; margin: 0 0 12px; }
+        .verdict-card p:last-child { margin-bottom: 0; }
+
+        /* ── Footer ── */
+        .disclaimer, .footer-disclaimer, .update-note { font-size: 0.8rem; color: var(--gray); text-align: center; margin: 12px auto; max-width: 900px; padding: 0 10px; }
+        @media (min-width: 640px) { .disclaimer, .footer-disclaimer, .update-note { font-size: 0.88rem; margin: 16px auto; padding: 0; } }
+        .update-note { font-size: 0.75rem; color: #888; margin-top: 12px; }
+        .footer-links-bar { background: var(--primary-darker); width: 100%; padding: 20px 16px; text-align: center; margin-top: 24px; }
+        @media (min-width: 640px) { .footer-links-bar { padding: 28px 20px; } }
+        .footer-links-bar p { color: rgba(255,255,255,0.75); font-size: 0.8rem; margin: 0 0 12px; }
+        .footer-links-bar .fl-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .footer-links-bar .fl-links a { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.75rem; padding: 6px 14px; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 20px; transition: background 0.18s; }
+        .footer-links-bar .fl-links a:hover { background: rgba(255,255,255,0.15); }
+        .footer-links-bar .fl-links a.fl-club { background: var(--gold); color: #1a1200; border-color: var(--gold); font-weight: 900; }
+        .footer-links-bar .fl-links a.fl-club:hover { background: var(--gold-dark); color: #fff; }
+        .footer-links-bar .footer-copy { color: rgba(255,255,255,0.45); font-size: 0.72rem; margin-top: 12px; }
+        .back-btn { display: inline-block; margin: 10px 0; padding: 10px 20px; background: var(--primary); color: #fff; font-weight: bold; border-radius: 8px; text-decoration: none; transition: background 0.18s; font-size: 0.9rem; }
+        .back-btn:hover { background: var(--primary-dark); }
+        .footer-disclaimer { border-top: 1px solid #dde; padding-top: 14px; margin-top: 20px; }
+
+        /* ── Blog prose ── */
+        .blog-intro { font-size: 1.05rem; color: #222; line-height: 1.75; margin-bottom: 0; }
+        .blog-intro strong { color: var(--primary-darker); }
+
+        /* ── Two-col ── */
+        .two-col { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 16px 0; }
+        @media (min-width: 700px) { .two-col { grid-template-columns: 1fr 1fr; } }
+
+        /* ── Club hero block ── */
+        .club-hero-block { background: linear-gradient(135deg, #1c1400 0%, #3a2600 50%, #1c1400 100%); border-radius: 16px; padding: 32px 20px; text-align: center; margin-bottom: 24px; position: relative; overflow: hidden; border: 1px solid rgba(245,166,35,0.25); }
+        @media (min-width: 640px) { .club-hero-block { padding: 44px 32px; } }
+        .club-hero-block::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 0%, rgba(245,166,35,0.12) 0%, transparent 65%); pointer-events: none; }
+        .club-hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+        .club-hero-crown { font-size: 2.2rem; line-height: 1; margin-bottom: 12px; }
+        .club-hero-badge { display: inline-block; background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.4); color: var(--gold); font-size: 0.7rem; font-weight: 900; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 14px; border-radius: 30px; margin-bottom: 14px; }
+        .club-hero-block h2 { color: #fff; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 900; margin: 0 0 12px; }
+        .club-hero-block p { color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.6; margin: 0 0 20px; }
+        .club-hero-btn { display: inline-block; padding: 12px 28px; background: var(--gold); color: #1a1200; font-weight: 900; font-size: 0.95rem; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 24px rgba(245,166,35,0.35); transition: all 0.18s; }
+        .club-hero-btn:hover { background: var(--gold-dark); color: #fff; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+    <div class="header-inner">
+        <a href="https://topdividendetfs.com" class="logo">TopDividendETFs</a>
+        <div class="header-links">
+            <a href="https://topdividendetfs.com">📊 ETF Rankings</a>
+            <a href="https://weeklyetfs.com" target="_blank">📅 WeeklyETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank">📆 MonthlyETFs</a>
+            <a href="https://topdividendtools.com" target="_blank">🛠️ Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="club-link">Pro 📊</a>
+        </div>
+    </div>
+</header>
+
+<!-- ── Network bar ── -->
+<div class="network-bar">
+    <div class="network-bar-inner">
+        <div class="network-bar-label">Our Sites</div>
+        <div class="network-bar-links">
+            <a href="https://topdividendetfs.com"><span class="nb-icon">📊</span> TopDividendETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank"><span class="nb-icon">📅</span> WeeklyETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank"><span class="nb-icon">📆</span> MonthlyETFs</a>
+            <a href="https://topdividendtools.com" target="_blank"><span class="nb-icon">🛠️</span> Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="nb-club"><span class="nb-icon">⭐</span> TopDividendETFsPro</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero">
+    <div class="hero-badge">✦ QQQI Deep Dive — Educational Only ✦</div>
+    <h1>QQQI ETF — Possible Risks Every Smart Investor Should Know</h1>
+    <p>QQQI is one of our favorite monthly income ETFs — ~14% yield, Section 1256 tax efficiency, and actively managed by NEOS. Like every investment though, it comes with trade-offs worth understanding before you buy in.</p>
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <div class="hero-stat-num">~14%</div>
+            <div class="hero-stat-label">Trailing Yield</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-num">Monthly</div>
+            <div class="hero-stat-label">Distributions</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-num">Jan 2024</div>
+            <div class="hero-stat-label">Inception</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-num">60/40</div>
+            <div class="hero-stat-label">Section 1256 Tax</div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="https://topdividendetfs.com">TopDividendETFs</a> › <a href="https://monthlyetfs.com">Monthly ETFs</a> › <a href="https://topdividendetfs.com/qqqi-etf-dividend-dates-2026.html">QQQI ETF</a> › QQQI Possible Risks
+    </div>
+
+    <!-- ── Intro Card ── -->
+    <div class="card">
+        <h2 class="card-title">QQQI: A Genuinely Strong Income ETF — With Trade-offs to Understand</h2>
+        <p class="blog-intro">
+            We'll be honest: we think QQQI is one of the <strong>most well-designed monthly income ETFs on the market today</strong>. NEOS built something genuinely thoughtful here — an actively managed covered-call strategy on the Nasdaq-100 that generates ~14% annual yield, uses tax-efficient Section 1256 NDX options, and has paid consistent monthly distributions since its January 2024 launch.
+        </p>
+        <p class="blog-intro" style="margin-top: 14px;">
+            That said, <strong>every investment strategy has trade-offs</strong> — and QQQI is no different. Being a well-informed investor means understanding not just the upside, but also the possible risks that come with the strategy. None of what follows is a reason to avoid QQQI. It's context that helps you invest confidently and set the right expectations.
+        </p>
+
+        <div class="info-box success" style="margin-top: 20px;">
+            <h4>✅ Why We Cover Risks on a Fund We Like</h4>
+            <p>The best investors aren't the ones who only read the good news — they're the ones who go in with eyes wide open. Knowing the trade-offs of QQQI upfront means you won't be caught off guard, and you'll be able to hold through volatility with confidence rather than panic.</p>
+        </div>
+
+        <h3 style="color: var(--primary); font-size: 1rem; margin: 24px 0 14px; text-align: center; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">7 Possible Risks at a Glance</h3>
+        <div class="risk-overview-grid">
+            <div class="risk-overview-item">
+                <div class="risk-overview-icon">📈</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #1 — Capped Upside</strong>
+                    <span>The covered-call structure limits gains in strong rallies.</span>
+                </div>
+            </div>
+            <div class="risk-overview-item">
+                <div class="risk-overview-icon">📉</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #2 — Equity Downside</strong>
+                    <span>As an equity fund, it falls with the Nasdaq-100.</span>
+                </div>
+            </div>
+            <div class="risk-overview-item">
+                <div class="risk-overview-icon">🔄</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #3 — Potential NAV Drift</strong>
+                    <span>In flat markets, NAV may drift lower over time.</span>
+                </div>
+            </div>
+            <div class="risk-overview-item">
+                <div class="risk-overview-icon">🎚️</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #4 — Variable Distributions</strong>
+                    <span>Monthly amounts fluctuate with market volatility.</span>
+                </div>
+            </div>
+            <div class="risk-overview-item">
+                <div class="risk-overview-icon">🧾</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #5 — Tax Nuances</strong>
+                    <span>Return-of-capital treatment requires some understanding.</span>
+                </div>
+            </div>
+            <div class="risk-overview-item">
+                <div class="risk-overview-icon">💻</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #6 — Tech Concentration</strong>
+                    <span>100% Nasdaq-100 means sector-specific exposure.</span>
+                </div>
+            </div>
+            <div class="risk-overview-item" style="grid-column: 1 / -1;">
+                <div class="risk-overview-icon">💰</div>
+                <div class="risk-overview-text">
+                    <strong>Risk #7 — Expense Ratio</strong>
+                    <span>0.68% annual fee — reasonable for active management, worth knowing.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box note" style="margin-top: 20px;">
+            <h4>📌 Quick Note</h4>
+            <p>This article is <strong>educational only</strong> — not investment advice. All investors have different goals and circumstances. Consult a licensed financial advisor and tax professional before making any investment decisions.</p>
+        </div>
+    </div>
+
+    <!-- ── RISK 1 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">1</div>
+            <div class="risk-card-header-text">
+                <h3>📈 Possible Capped Upside in Strong Bull Markets</h3>
+                <p class="risk-tagline">A structural trade-off, not a flaw — and NEOS actively manages it</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip">💡 This is by design — it's the source of the income</div>
+            <p>QQQI generates its monthly income by selling call options on the NDX index. This is the core of the strategy — and it's what produces that ~14% yield. The natural trade-off is that in months when the Nasdaq-100 surges significantly above the option strike prices, QQQI won't capture the full gain.</p>
+            <p>Here's the good news: <strong>NEOS actively manages around this limitation.</strong> Unlike passive covered-call ETFs that rigidly sell at-the-money calls every month, NEOS can construct "call spreads" — buying additional out-of-the-money calls on top of the ones they sell — allowing the fund to participate in some of the Nasdaq-100's upside beyond the strike. This active flexibility is a genuine differentiator for QQQI.</p>
+            <p>The honest reality is that in a year like 2023 (Nasdaq +54%), a covered-call fund will lag a pure index fund. That's simply the nature of the income trade-off. But for investors who value <em>consistent monthly cash flow</em> over maximizing theoretical paper gains, this trade-off is entirely worthwhile. You're choosing income today over potential price appreciation tomorrow — and QQQI is designed specifically for people who make that choice deliberately.</p>
+            <div class="risk-takeaway"><span>The good news:</span> NEOS's active call-spread strategy captures more upside than passive covered-call peers like QYLD. You're not fully giving up bull-market participation — just accepting that income comes first.</div>
+        </div>
+    </div>
+
+    <!-- ── RISK 2 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">2</div>
+            <div class="risk-card-header-text">
+                <h3>📉 Equity Downside Exposure in Bear Markets</h3>
+                <p class="risk-tagline">QQQI holds real Nasdaq-100 stocks — it moves with the market</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip">💡 Same risk as owning QQQ — with monthly income on top</div>
+            <p>QQQI holds the actual stocks of the Nasdaq-100 Index — the same companies in QQQ. That means in a broad market downturn, QQQI will decline alongside those holdings. The monthly option premium income provides some cushion, but it doesn't fully offset a significant equity drawdown.</p>
+            <p>This is important context to set going in: <strong>QQQI is an equity income fund, not a bond or a money market account.</strong> It carries equity-level risk with an income overlay on top. If you're expecting the distributions to protect your principal in a crash, that's not how it works.</p>
+            <p>The silver lining — and it's a real one — is that <strong>sharp market drops typically spike volatility, which boosts option premium income.</strong> QQQI has historically paid its largest distributions during volatile, falling-market periods, providing at least some offset to NAV declines. This volatility-income relationship is one of the more interesting features of covered-call strategies.</p>
+            <p>The key is entering QQQI as a long-term income investor who can ride out market cycles, not as someone looking for capital preservation in the short term.</p>
+            <div class="risk-takeaway"><span>The good news:</span> Higher volatility in down markets often generates higher option premium — meaning QQQI may pay some of its biggest distributions precisely when the market is stressed, partially cushioning the ride.</div>
+        </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="card">
+        <h2 class="card-title" style="font-size: 1.1rem;">📊 Illustrative: How QQQI Behaves in Different Market Conditions</h2>
+        <p style="text-align:center; color: var(--gray); font-size: 0.82rem; margin: 0 0 12px;">Hypothetical scenarios for a $50/share starting price. For educational illustration only — not actual historical data.</p>
+        <div class="chart-wrapper">
+            <canvas id="scenarioChart" style="max-height: 300px;"></canvas>
+        </div>
+        <p style="text-align:center; color: var(--gray); font-size: 0.78rem; margin: 8px 0 0;">In bull markets, income from QQQI offsets some capped upside. In down markets, option income provides a partial buffer. In flat markets, income is the primary return driver.</p>
+    </div>
+
+    <!-- ── RISK 3 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">3</div>
+            <div class="risk-card-header-text">
+                <h3>🔄 Possible NAV Drift in Flat or Declining Markets</h3>
+                <p class="risk-tagline">Worth watching over time — NEOS's active management helps mitigate this</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip amber">💡 Common to all covered-call ETFs — QQQI handles it better than most</div>
+            <p>When a fund pays out monthly distributions, its NAV decreases by approximately the distribution amount (all else equal). For NAV to hold steady or grow, the fund needs to generate enough total return — through equity appreciation and option income — to offset what it pays out.</p>
+            <p>In <strong>rising markets, this generally works well</strong>: equity gains help maintain or grow NAV while distributions flow to investors. In <strong>prolonged flat or declining markets</strong>, there's a possibility that NAV drifts lower over time as distributions are paid without offsetting gains.</p>
+            <p>NEOS actively manages against this in two important ways. First, their flexible call-spread structure helps the fund participate in more equity upside than a passive fund. Second, their <strong>tax-loss harvesting on both equity and options positions</strong> creates efficiency that can improve long-term sustainability. These are genuine advantages that passive covered-call funds like QYLD don't have.</p>
+            <p>The practical advice here: <strong>track QQQI's total return</strong> (distributions + NAV change), not just the distribution amount. That gives you the true picture of how the investment is performing over time.</p>
+            <div class="risk-takeaway"><span>The good news:</span> QQQI's active management and tax-loss harvesting give it structural advantages over passive covered-call peers when it comes to NAV sustainability. Tracking total return — not just yield — will keep you well-informed.</div>
+        </div>
+    </div>
+
+    <!-- ── RISK 4 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">4</div>
+            <div class="risk-card-header-text">
+                <h3>🎚️ Variable Monthly Distributions — Amounts Change with the Market</h3>
+                <p class="risk-tagline">Not a fixed income fund — distribution size moves with volatility</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip">💡 Variability is built into the strategy — and can work in your favor</div>
+            <p>QQQI's monthly distributions are not fixed — they vary each month based on how much option premium income NEOS generates. In 2026, payments have ranged from $0.61 to $0.66 per share per month, a relatively tight range. But over longer periods, distribution amounts can fluctuate more meaningfully depending on market conditions.</p>
+            <p>The key driver is implied volatility. <strong>When markets are volatile, option premiums rise — and QQQI pays more.</strong> When markets are calm and steadily grinding higher, option premiums compress and distributions may be somewhat smaller. This is the inverse of what many investors expect: QQQI's income tends to be strongest when equity markets are most unsettled.</p>
+            <p>For income investors who need a <em>precise</em> fixed amount each month — say, a retiree with a strict budget — this variability is worth factoring in. Building a slight cushion into your income planning (assuming a distribution 10–15% below the current rate) is a sensible approach that lets QQQI's actual performance be a pleasant upside rather than a potential shortfall.</p>
+            <p>For investors reinvesting distributions or treating them as supplemental income, the variability is much less of a concern — and the long-run average has been consistently strong.</p>
+            <div class="risk-takeaway"><span>The good news:</span> QQQI has paid distributions consistently every month since inception. Building in a modest buffer in your income planning means volatility in distribution size becomes a feature — not a problem.</div>
+        </div>
+    </div>
+
+    <!-- Promo -->
+    <div class="pro-promo">
+        <p><strong>Want to track QQQI's full distribution history and compare it against other monthly income ETFs?</strong> TopDividendETFsPro.com has real-time data, historical distribution charts, and side-by-side comparisons for 100+ income ETFs.</p>
+        <a href="https://topdividendetfspro.com" target="_blank">Explore Pro Platform ⭐</a>
+    </div>
+
+    <!-- ── RISK 5 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">5</div>
+            <div class="risk-card-header-text">
+                <h3>🧾 Tax Nuances — Return of Capital is Worth Understanding</h3>
+                <p class="risk-tagline">QQQI's tax treatment is actually a strength — but it needs context</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip green">💡 Section 1256 treatment is genuinely favorable — here's what to know</div>
+            <p>QQQI's tax structure is one of its standout features, and for most investors, it's a genuine advantage. The fund uses NDX index options classified as <strong>Section 1256 contracts</strong>, which receive a 60% long-term / 40% short-term capital gains split — meaningfully better than funds that generate 100% short-term gains taxed at ordinary income rates.</p>
+            <p>Additionally, a significant portion of QQQI's distributions have historically been classified as <strong>return of capital (ROC)</strong>. Here's the important thing to understand: ROC is not taxed in the year you receive it. Instead, it reduces your adjusted cost basis — effectively <em>deferring</em> that tax until you sell. For many investors, especially those not in the highest tax brackets, this deferral is genuinely valuable.</p>
+            <p>The nuance worth knowing: <strong>as your cost basis decreases, your eventual capital gains on sale will be larger.</strong> This isn't a hidden tax trap if you understand it going in — it's simply a timing difference. The money you don't pay in taxes today compounds in your account until you eventually sell. Depending on your tax situation, this can be highly advantageous.</p>
+            <p>The main action item: keep track of your adjusted cost basis in QQQI, and work with a tax professional who understands covered-call ETF distributions. This is not difficult, but it requires awareness.</p>
+            <div class="risk-takeaway"><span>The good news:</span> QQQI's Section 1256 and return-of-capital tax structure is actually a <em>feature</em> for many taxable-account investors. Understanding it means you can use it to your advantage — not be surprised by it.</div>
+        </div>
+    </div>
+
+    <!-- ── RISK 6 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">6</div>
+            <div class="risk-card-header-text">
+                <h3>💻 Technology Sector Concentration</h3>
+                <p class="risk-tagline">QQQI is a Nasdaq-100 fund — you're getting high-quality tech exposure</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip">💡 Concentration in quality — Apple, Microsoft, Nvidia, Amazon, and more</div>
+            <p>QQQI holds the stocks of the Nasdaq-100, which means your portfolio is concentrated in the world's leading technology and growth companies — Apple, Microsoft, Nvidia, Amazon, Meta, Alphabet, and others. This is not a diversified bond-like fund. It is a focused bet on the continued strength of the world's most innovative companies.</p>
+            <p>For investors who believe in the long-term growth of the tech sector — and who want income on top of that exposure — QQQI is a compelling way to express that view while getting paid monthly. The Nasdaq-100 has been one of the strongest-performing indexes in the world over the past decade.</p>
+            <p>The possible risk worth noting is that sector-specific events — regulatory shifts, valuation compression, interest rate changes, or AI narrative changes — can disproportionately affect Nasdaq-100 stocks compared to a broader diversified portfolio. <strong>QQQI is best held as part of a diversified overall portfolio</strong>, not as a standalone entire-portfolio strategy.</p>
+            <p>Investors who already hold QQQ, large-cap tech, or growth-oriented funds should be mindful that adding QQQI increases their tech exposure. That may or may not be desirable depending on your overall asset allocation.</p>
+            <div class="risk-takeaway"><span>The good news:</span> You're getting income from some of the highest-quality companies on earth. The Nasdaq-100 concentration is a feature for many investors who already believe in tech's long-term trajectory — just size your position appropriately within a broader portfolio.</div>
+        </div>
+    </div>
+
+    <!-- ── RISK 7 ── -->
+    <div class="risk-card">
+        <div class="risk-card-header">
+            <div class="risk-number">7</div>
+            <div class="risk-card-header-text">
+                <h3>💰 Expense Ratio of 0.68% — Reasonable for What You're Getting</h3>
+                <p class="risk-tagline">Competitive for actively managed income ETFs — just worth knowing</p>
+            </div>
+        </div>
+        <div class="risk-card-body">
+            <div class="context-chip green">💡 0.68% is competitive vs. other active income ETFs in the same category</div>
+            <p>QQQI charges a <strong>0.68% annual expense ratio</strong>. For context, this is roughly $68 per year on a $10,000 investment — the cost of a couple of nice dinners for the active management, monthly options strategy, and tax-harvesting expertise that NEOS provides.</p>
+            <p>Within the actively managed covered-call ETF universe, 0.68% is actually quite competitive. Many similar funds charge 0.75–1.00%. QYLD charges 0.60% but is passively managed and generally produces worse total returns. JEPQ charges 0.35% but doesn't use Section 1256 options and foregoes the tax efficiency.</p>
+            <p>Where the fee comparison does look different is against <em>passive</em> Nasdaq-100 funds like QQQ (0.20%) or QQQM (0.15%). But those funds generate virtually no income — they're built for total return, not monthly cash flow. Comparing QQQI's fee to QQQ's is like comparing a managed income fund to a pure index fund. They're different products serving different investor goals.</p>
+            <p>For income investors who want the ~14% yield and monthly distributions, the 0.68% expense ratio is simply the cost of that service — and it's a reasonable one.</p>
+            <div class="risk-takeaway"><span>The good news:</span> At 0.68%, QQQI is priced competitively for its category. You're paying for active management, monthly options execution, and tax-harvesting — all of which NEOS delivers well.</div>
+        </div>
+    </div>
+
+    <!-- ── Comparison Card ── -->
+    <div class="card">
+        <h2 class="card-title">📊 QQQI vs. Similar Nasdaq Income ETFs — How the Trade-offs Compare</h2>
+        <p style="text-align: center; color: var(--gray); margin: 0 0 16px; font-size: 0.9rem;">Educational comparison only. Approximate mid-2026 data. Verify current figures before investing.</p>
+
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Feature</th>
+                        <th>QQQI ✨</th>
+                        <th>QYLD</th>
+                        <th>JEPQ</th>
+                        <th>QQQ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td>Trailing Yield</td>
+                        <td class="good">~14% 🏆</td>
+                        <td class="neutral">~11–12%</td>
+                        <td class="neutral">~10–11%</td>
+                        <td class="note">~0.6%</td>
+                    </tr>
+                    <tr>
+                        <td>Management Style</td>
+                        <td class="good">Active ✅</td>
+                        <td class="note">Passive</td>
+                        <td class="good">Active ✅</td>
+                        <td class="note">Passive</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Section 1256 Tax</td>
+                        <td class="good">Yes ✅</td>
+                        <td class="good">Yes ✅</td>
+                        <td class="note">No</td>
+                        <td class="note">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Upside Participation</td>
+                        <td class="good">Partial (active) ✅</td>
+                        <td class="note">Very limited</td>
+                        <td class="neutral">Partial</td>
+                        <td class="good">Full ✅</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Tax-Loss Harvesting</td>
+                        <td class="good">Yes ✅</td>
+                        <td class="note">No</td>
+                        <td class="note">Limited</td>
+                        <td class="note">No</td>
+                    </tr>
+                    <tr>
+                        <td>Expense Ratio</td>
+                        <td class="neutral">0.68%</td>
+                        <td class="neutral">0.60%</td>
+                        <td class="good">0.35% ✅</td>
+                        <td class="good">0.20% ✅</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Pay Frequency</td>
+                        <td class="good">Monthly ✅</td>
+                        <td class="good">Monthly ✅</td>
+                        <td class="good">Monthly ✅</td>
+                        <td class="note">Quarterly</td>
+                    </tr>
+                    <tr>
+                        <td>Inception</td>
+                        <td class="note">Jan 2024</td>
+                        <td class="note">Dec 2019</td>
+                        <td class="note">May 2022</td>
+                        <td class="note">Mar 1999</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box success">
+            <h4>🏆 Where QQQI Stands Out</h4>
+            <p>QQQI offers the <strong>highest yield</strong> in this group combined with the most active management flexibility. It's the only fund in this comparison that has active management <em>and</em> Section 1256 tax treatment <em>and</em> tax-loss harvesting — a combination that no direct competitor currently matches. For income-first investors, QQQI's overall package is hard to beat.</p>
+        </div>
+
+        <div class="club-inline-card">
+            <div class="club-inline-icon">🔬</div>
+            <div class="club-inline-content">
+                <h4>Full Side-by-Side Comparison at TopDividendETFsPro</h4>
+                <p>Compare QQQI against 100+ income ETFs with total return data, NAV decay tracking, tax grades, and distribution history charts — all in one place.</p>
+            </div>
+            <a href="https://topdividendetfspro.com" target="_blank" class="club-inline-btn">Compare ETFs →</a>
+        </div>
+    </div>
+
+    <!-- ── Verdict ── -->
+    <div class="verdict-card">
+        <h3>🎯 Bottom Line: QQQI Is a Well-Designed Fund — Go In Informed</h3>
+        <p>QQQI is, in our view, one of the smartest implementations of a covered-call income strategy available to retail investors today. NEOS has combined active management, Section 1256 tax efficiency, tax-loss harvesting, and a flexible call-spread structure into a fund that genuinely outperforms simpler passive alternatives in its category.</p>
+        <p>The possible risks we've outlined above aren't unique flaws of QQQI — they're <em>inherent trade-offs of the covered-call income strategy</em>. Every high-yield income ETF that uses options makes the same fundamental trade: you give up some upside for reliable monthly cash flow. QQQI arguably makes that trade better than its peers.</p>
+        <p><strong>Go in with clear expectations:</strong> you're an income investor, not a growth investor. You're choosing reliable monthly distributions from one of the world's best indexes. You understand distributions vary, NAV can move, and tech carries sector risk. With those expectations set correctly, QQQI can be a powerful and genuinely rewarding part of your income portfolio.</p>
+        <p style="color: var(--gray); font-size: 0.88rem;"><em>This is educational content only, not investment advice. Always consult a licensed financial advisor and tax professional before investing.</em></p>
+    </div>
+
+    <!-- ── FAQ ── -->
+    <div class="card">
+        <h2 class="card-title">❓ QQQI Possible Risks — Common Questions Answered</h2>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Is QQQI a good ETF for income investors?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>For income-focused investors, QQQI is one of the stronger options in the covered-call ETF space. It combines a ~14% trailing yield, monthly distributions, Section 1256 tax efficiency, and active management — a combination few competitors match. The trade-offs (capped upside, distribution variability) are structural features of the strategy, not unique flaws. For investors who prioritize monthly cash flow over maximum total return, QQQI is well-designed for that goal.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How does QQQI compare to QYLD?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Both use NDX options with Section 1256 tax treatment, but QQQI is the superior strategy in most respects. NEOS actively manages the options (vs. QYLD's passive at-the-money call writing), uses call spreads to capture some upside, and performs tax-loss harvesting. QQQI has generally delivered better total returns since its inception compared to QYLD. The cost difference is minimal (0.68% vs. 0.60%). For most investors comparing these two, QQQI is the stronger choice.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Will QQQI keep paying ~14% yield?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>QQQI has maintained a trailing yield of approximately 13.5–14% since inception in January 2024, with consistent monthly distributions. While no yield is guaranteed into the future — it depends on market volatility and option premiums — NEOS has demonstrated a strong track record of delivering high income. In higher-volatility markets, distributions may even increase above current levels. Past performance doesn't guarantee future results, but the structural income generation mechanism is robust.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Is QQQI's return-of-capital distribution a bad thing?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Not inherently — in fact, for many investors it's a feature. Return-of-capital distributions aren't taxed in the year received; instead they reduce your cost basis and defer the tax until you sell. This means you effectively get an interest-free loan from the IRS on that portion of your distribution. For taxable-account investors in higher brackets, this deferral can be very valuable. The key is to understand it, track your cost basis, and work with a tax professional so there are no surprises on sale.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Should I hold QQQI in a Roth IRA or taxable account?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Both have merit depending on your situation. In a taxable account, QQQI's Section 1256 treatment and return-of-capital characteristics can provide genuine tax advantages — this is where the tax efficiency really shines. In a Roth IRA, all distributions grow tax-free, which is always attractive, but you lose the specific Section 1256 and ROC benefits that make QQQI special in taxable accounts. Many investors hold QQQI in taxable accounts specifically to take advantage of the favorable tax structure. Consult a tax advisor for your individual situation.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What percentage of my portfolio should be in QQQI?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We can't give personalized allocation advice — that's a question for a licensed financial advisor who knows your full situation. What we can say generally is that QQQI works well as part of a diversified income portfolio rather than as a whole-portfolio solution. Its 100% Nasdaq-100 concentration means pairing it with other income sources (bonds, REITs, dividend equity funds) creates a more resilient overall portfolio. Many income investors treat it as one of several income positions rather than a single dominant holding.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Resources ── -->
+    <div class="section-label"><span>More QQQI & Income ETF Resources</span></div>
+    <h2 class="section-h2">Keep Researching — Free Tools & Rankings</h2>
+    <p class="section-p">Everything you need to make an informed income investing decision.</p>
+
+    <div class="site-cards">
+        <a href="https://topdividendetfs.com/qqqi-etf-dividend-dates-2026.html" class="site-card">
+            <div class="sc-icon">📅</div>
+            <div class="sc-name">QQQI Dividend Dates 2026</div>
+            <div class="sc-desc">All 12 confirmed 2026 ex-dividend dates, payout history, and a free monthly income calculator.</div>
+            <div class="sc-btn">View Calendar →</div>
+        </a>
+        <a href="https://topdividendetfs.com" class="site-card">
+            <div class="sc-icon">📊</div>
+            <div class="sc-name">Top 100 Dividend ETF Rankings</div>
+            <div class="sc-desc">Compare QQQI against 100+ income ETFs ranked by yield, reliability, and more.</div>
+            <div class="sc-btn">See Rankings →</div>
+        </a>
+        <a href="https://monthlyetfs.com" target="_blank" class="site-card">
+            <div class="sc-icon">📆</div>
+            <div class="sc-name">Monthly Dividend ETFs</div>
+            <div class="sc-desc">Explore all monthly-paying ETFs and find the right income mix for your portfolio.</div>
+            <div class="sc-btn">See Monthly ETFs →</div>
+        </a>
+        <a href="https://topdividendtools.com" target="_blank" class="site-card">
+            <div class="sc-icon">🛠️</div>
+            <div class="sc-name">Free Dividend Tools</div>
+            <div class="sc-desc">Income calculators, yield screeners, and planning tools — all free, no sign-up.</div>
+            <div class="sc-btn">Try Free Tools →</div>
+        </a>
+        <a href="https://topdividendetfspro.com" target="_blank" class="site-card club-card">
+            <div class="sc-icon">⭐</div>
+            <div class="sc-name">TopDividendETFsPro.com</div>
+            <div class="sc-desc">NAV decay analysis, tax breakdowns, total return simulations, and real-time distribution tracking for QQQI and 100+ ETFs.</div>
+            <div class="sc-btn">Go to Pro →</div>
+        </a>
+    </div>
+
+    <!-- Club hero -->
+    <div class="club-hero-block">
+        <div class="club-hero-inner">
+            <div class="club-hero-crown">⭐</div>
+            <div class="club-hero-badge">Pro Platform</div>
+            <h2>Go Deeper on QQQI at TopDividendETFsPro.com</h2>
+            <p>Real-time distribution tracking, NAV performance data, tax breakdown history, and side-by-side comparisons against every major income ETF — all in one place for serious income investors.</p>
+            <a href="https://topdividendetfspro.com" target="_blank" class="club-hero-btn">Unlock Pro Analytics →</a>
+        </div>
+    </div>
+
+    <!-- CTA Strip -->
+    <div class="cta-strip">
+        <h2>Ready to Explore QQQI Further?</h2>
+        <p>Check the full 2026 dividend calendar, compare against peer ETFs, and use our free income tools.</p>
+        <div class="cta-strip-buttons">
+            <a href="https://topdividendetfs.com/qqqi-etf-dividend-dates-2026.html" class="cta-btn cta-primary">📅 QQQI Dates 2026</a>
+            <a href="https://topdividendetfs.com" class="cta-btn">📊 All ETF Rankings</a>
+            <a href="https://weeklyetfs.com" target="_blank" class="cta-btn">📅 Weekly ETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank" class="cta-btn">📆 Monthly ETFs</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="cta-btn cta-club">⭐ Go Pro</a>
+        </div>
+    </div>
+
+    <p class="disclaimer">
+        <strong>Disclosure:</strong> TopDividendETFs.com is NOT affiliated with NEOS Investments, NEOS ETF Trust, or any fund manager. All content is independently produced for educational purposes only. This is NOT investment advice. Always conduct your own research and consult a licensed financial advisor and tax professional before investing in any security.
+    </p>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="https://topdividendetfs.com" class="back-btn">← Back to Top 100 Dividend ETFs</a>
+    </div>
+
+    <div class="footer-disclaimer">
+        <strong>Important Disclaimer:</strong> All information on this page is provided for educational and informational purposes only and should not be construed as investment advice, a recommendation, or an offer to buy or sell any security. Past performance does not guarantee future results. The possible risks described herein are general in nature and may not reflect every scenario or your individual circumstances. QQQI's covered-call strategy involves options contracts with unique characteristics. Distribution amounts are variable and not guaranteed. Tax treatment under Section 1256 and return-of-capital classifications may change under future IRS rules or legislation. Before investing in QQQI or any ETF, review the official prospectus at neosfunds.com and consult a qualified financial advisor and tax professional. TopDividendETFs.com makes no warranties regarding the accuracy or completeness of this information.
+    </div>
+
+    <p class="update-note">
+        Last updated: June 2026 • For educational use only • Sources: NEOS Investments, SEC filings, public fund data
+    </p>
+
+</div>
+
+<!-- ── Footer ── -->
+<footer class="footer-links-bar">
+    <p>Built by dividend investors for dividend investors!</p>
+    <div class="fl-links">
+        <a href="https://topdividendetfs.com">TopDividendETFs.com</a>
+        <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+        <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+        <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+        <a href="https://topdividendetfspro.com" target="_blank" class="fl-club">⭐ Pro Platform</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 TopDividendETFs.com • For educational use only • Not financial advice</div>
+</footer>
+
+<script>
+// ── SCENARIO CHART ──
+const ctx = document.getElementById('scenarioChart').getContext('2d');
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Strong Bull (+25%)', 'Mild Bull (+10%)', 'Flat Market (0%)', 'Mild Bear (−15%)', 'Volatile Bear (−30%)'],
+        datasets: [
+            {
+                label: 'QQQ — Price Return Only',
+                data: [25, 10, 0, -15, -30],
+                backgroundColor: 'rgba(0,158,220,0.65)',
+                borderColor: '#009EDC',
+                borderWidth: 2,
+                borderRadius: 4
+            },
+            {
+                label: 'QQQI — Total Return (Price + ~14% Income)',
+                data: [17, 20, 12, -3, -18],
+                backgroundColor: 'rgba(16,185,129,0.70)',
+                borderColor: '#059669',
+                borderWidth: 2,
+                borderRadius: 4
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: 'top', labels: { font: { size: 12 }, padding: 12 } },
+            tooltip: {
+                callbacks: {
+                    label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y >= 0 ? '+' : '') + ctx.parsed.y + '% (illustrative)'
+                }
+            }
+        },
+        scales: {
+            y: { ticks: { callback: val => val + '%' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+            x: { ticks: { font: { size: 11 } }, grid: { display: false } }
+        }
+    }
+});
+
+// ── FAQ ──
+function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const toggle = el.querySelector('.faq-toggle');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-toggle').forEach(t => t.classList.remove('rotated'));
+    if (!isOpen) { answer.classList.add('open'); toggle.classList.add('rotated'); }
+}
+</script>
+</body>
+</html>
