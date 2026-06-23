@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TopDividendETFs.com">
+    <title>SCHD Dividend History &amp; Projections 2026 | TopDividendETFs.com</title>
+    <meta name="description" content="Complete SCHD dividend history since 2011 with all adjusted quarterly payouts, latest Q2 2026 dividend of $0.2525, growth rates, and 10-year projections through 2035. Interactive charts included.">
+    <meta name="keywords" content="SCHD dividend history, SCHD Q2 2026 dividend, Schwab U.S. Dividend Equity ETF, SCHD quarterly dividends, SCHD growth rate, SCHD projections 2026">
+
+    <link rel="canonical" href="https://topdividendetfs.com/schd-dividend-history">
 
     <!-- SOCIAL MEDIA CARDS -->
-    <meta property="og:title" content="SCHD Dividend History & Projections | TopDividendETFs.com">
-    <meta property="og:description" content="Full historical quarterly dividends for SCHD since 2011 (adjusted amounts) + interactive charts and 10-year growth projections (2026–2035). Educational tool only.">
+    <meta property="og:title" content="SCHD Dividend History &amp; Projections 2026 | TopDividendETFs.com">
+    <meta property="og:description" content="Full historical quarterly dividends for SCHD since 2011 + latest Q2 2026 payout ($0.2525). Interactive charts and future scenarios.">
     <meta property="og:image" content="https://topdividendetfs.com/schd11.png">
     <meta property="og:url" content="https://topdividendetfs.com/schd-dividend-history">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@TopDividendETFs">
-    <meta name="twitter:title" content="SCHD Dividend History & Projections | TopDividendETFs.com">
-    <meta name="twitter:description" content="See every SCHD quarterly payout since inception + future scenarios (conservative, moderate, optimistic). Charts powered by Chart.js.">
+    <meta name="twitter:title" content="SCHD Dividend History &amp; Projections 2026">
+    <meta name="twitter:description" content="Every SCHD quarterly dividend since inception including Q2 2026 ($0.2525) + 10-year growth projections.">
     <meta name="twitter:image" content="https://topdividendetfs.com/schd11.png">
 
-    <title>SCHD Dividend History | TopDividendETFs.com</title>
-    <meta name="description" content="Full historical quarterly dividend payouts for SCHD (Schwab U.S. Dividend Equity ETF) since inception, with adjusted amounts, growth rates, and interactive chart.">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
- <!-- ANALYTICS -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -29,6 +32,24 @@
       gtag('js', new Date());
       gtag('config', 'G-B8TGV115DP');
     </script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SCHD Dividend History & Projections 2026",
+      "description": "Full SCHD quarterly dividend history since 2011 with latest Q2 2026 dividend and interactive projections.",
+      "author": {"@type": "Organization", "name": "TopDividendETFs.com"},
+      "publisher": {"@type": "Organization", "name": "TopDividendETFs.com"},
+      "dateModified": "2026-06-23",
+      "mainEntityOfPage": "https://topdividendetfs.com/schd-dividend-history"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
         :root {
             --primary: #009fe0;
@@ -36,6 +57,7 @@
             --light-blue: #e6f7ff;
             --text-dark: #1a3c34;
             --gray: #666;
+            --gold: #f5a623;
         }
         * { box-sizing: border-box; }
         body {
@@ -45,296 +67,296 @@
             color: #333;
             line-height: 1.6;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+        header {
+            background: #003d2a;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,.25);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            font-size: clamp(18px, 5vw, 28px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.4);
+            font-size: 0.82rem;
+        }
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e8f4fb;
+            padding: 0;
+            overflow-x: auto;
+        }
+        .network-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-label {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.75rem;
+            padding: 12px 16px;
+            white-space: nowrap;
+        }
+        .network-bar-links a {
+            padding: 12px 14px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-right: 1px solid #eee;
+            white-space: nowrap;
+            font-size: 0.82rem;
+        }
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
-            padding: clamp(40px, 12vw, 70px) 16px clamp(30px, 10vw, 50px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: clamp(50px, 12vw, 90px) 16px 60px;
         }
-        .hero h1 { margin: 0 0 12px; font-size: clamp(1.9em, 8vw, 3.2em); font-weight: 900; letter-spacing: -0.5px; }
-        .hero p.subtitle { margin: 0 0 24px; font-size: clamp(1.1em, 5vw, 1.45em); font-weight: 700; opacity: 0.96; }
-        .back-home-btn {
-            display: inline-block;
-            padding: 14px 28px;
+        .hero h1 { margin: 0 0 12px; font-size: clamp(2.1em, 8vw, 3.5em); font-weight: 900; letter-spacing: -1px; }
+        .hero p.subtitle { font-size: clamp(1.1em, 4.5vw, 1.45em); max-width: 820px; margin: 0 auto 24px; opacity: 0.95; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 16px 40px; }
+        .card {
             background: white;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 28px 24px;
+            margin-bottom: 32px;
+        }
+        .card-title {
             color: var(--primary);
-            font-weight: bold;
-            font-size: clamp(1em, 4.5vw, 1.18em);
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: all 0.25s ease;
-            min-width: 240px;
             text-align: center;
+            font-size: clamp(1.5em, 5.5vw, 2.2em);
+            font-weight: 900;
+            margin-bottom: 20px;
         }
-        .back-home-btn:hover, .back-home-btn:active {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        .summary {
-            background: white;
-            border-radius: 10px;
-            padding: 16px;
-            margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            text-align: center;
-            font-size: clamp(0.95em, 3.8vw, 1.05em);
-        }
-        .summary p { margin: 8px 0; }
-        .summary strong { color: var(--primary); }
-        #chartContainer, #projectionContainer {
-            background: white;
-            padding: 16px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            margin: 24px auto;
-            max-width: 100%;
-        }
-        canvas { height: clamp(280px, 60vw, 480px) !important; width: 100% !important; margin: 0 auto; }
-        h2 { color: var(--primary); text-align: center; margin: 32px 0 16px; font-size: clamp(1.5em, 6vw, 2.2em); font-weight: 900; }
-        .table-wrapper { overflow-x: auto; margin: 16px 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-        table { width: 100%; min-width: 480px; border-collapse: collapse; background: white; }
-        th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #eee; font-size: clamp(0.85em, 3.5vw, 0.98em); }
-        th { background: var(--primary); color: white; font-weight: 700; position: sticky; top: 0; z-index: 1; }
+        table { width: 100%; border-collapse: collapse; min-width: 520px; }
+        th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #eee; font-size: 0.95em; }
+        th { background: var(--primary); color: white; font-weight: 700; }
         tr:nth-child(even) { background: var(--light-blue); }
-        .download-btn, .chart-back-btn {
+        canvas { height: 420px !important; width: 100% !important; }
+        .back-home-btn, .download-btn {
             display: block;
             margin: 24px auto;
-            padding: 14px 28px;
+            padding: 14px 32px;
             background: var(--primary);
             color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: clamp(1em, 4.5vw, 1.15em);
             font-weight: bold;
-            cursor: pointer;
+            border-radius: 50px;
             text-decoration: none;
             text-align: center;
-            min-width: 240px;
+            min-width: 260px;
             box-shadow: 0 4px 12px rgba(0,159,224,0.3);
+        }
+        .pro-promo {
+            background: linear-gradient(135deg, #fff8e8, #fff0d0);
+            border: 2px dashed var(--gold);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin: 28px 0;
+        }
+        .site-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin: 32px 0;
+        }
+        .site-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 22px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
             transition: all 0.25s ease;
         }
-        .download-btn:hover, .chart-back-btn:hover, .download-btn:active, .chart-back-btn:active {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,159,224,0.4);
-        }
-        .projections {
-            background: #f0f9ff;
-            border-radius: 10px;
-            padding: 16px;
-            margin: 24px 0;
-            font-size: clamp(0.92em, 3.6vw, 1em);
-            border-left: 4px solid var(--primary);
-        }
-        .projections strong { color: var(--primary); }
+        .site-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .site-card.club-card { border-color: var(--gold); background: #fffaf0; }
         .footer {
-            font-size: .9em;
-            color: #666;
-            margin: 20px auto 10px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd;
-            max-width: 900px;
+            background: #003d2a;
+            color: #ddd;
             text-align: center;
+            padding: 50px 20px 30px;
         }
-        .footer a { color: #1A3C34; text-decoration: none; }
-        .tracker-link {
-            border: 2px solid #2E5D54;
-            padding: 4px 8px;
-            border-radius: 4px;
-            animation: glow 2s infinite;
-        }
-        @keyframes glow {
-            0%,100% { box-shadow: 0 0 5px rgba(46,93,84,.3) }
-            50% { box-shadow: 0 0 8px rgba(46,93,84,.6) }
-        }
-        .disclaimer {
-            font-size: .9em;
-            color: #666;
-            margin: 20px auto;
-            max-width: 900px;
-            line-height: 1.4;
+        .disclaimer, .footer-disclaimer {
+            font-size: 0.85em;
+            color: #555;
+            max-width: 960px;
+            margin: 24px auto;
             text-align: center;
             padding: 0 16px;
+            line-height: 1.5;
         }
-        /* Popup Styles */
-        #popupOverlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.65);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(4px);
-        }
-        #popupContent {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 90%;
-            width: 480px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            animation: popIn 0.4s ease-out;
-        }
-        #popupContent h3 {
-            margin: 0 0 20px;
-            font-size: 1.6em;
-            color: var(--primary);
-            font-weight: 900;
-        }
-        .popup-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 24px;
-        }
-        .popup-btn {
-            display: block;
-            padding: 16px 40px;
-            font-size: 1.25em;
-            font-weight: bold;
-            border-radius: 50px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            border: none;
-            width: 100%;
-            max-width: 320px;
-            margin: 0 auto;
-        }
-        #yesBtn {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 6px 20px rgba(0,159,224,0.4);
-        }
-        #yesBtn:hover, #yesBtn:active {
-            transform: scale(1.08);
-            box-shadow: 0 10px 30px rgba(0,159,224,0.5);
-        }
-        #noBtn {
-            background: #f0f0f0;
-            color: #444;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        #noBtn:hover, #noBtn:active {
-            background: #e0e0e0;
-            transform: scale(1.05);
-        }
-        @keyframes popIn {
-            from { transform: scale(0.7); opacity: 0; }
-            to   { transform: scale(1);   opacity: 1; }
-        }
-        @media (max-width: 480px) {
-            .container { padding: 12px; }
-            .hero { padding: 40px 12px 30px; }
-            th, td { padding: 10px 6px; }
-            .back-home-btn, .download-btn, .chart-back-btn { padding: 12px 24px; font-size: 1em; min-width: 100%; }
-            #popupContent { padding: 24px; }
-            .popup-btn { padding: 14px 32px; font-size: 1.1em; }
-        }
+        .update-note { font-size: 0.8em; color: #888; text-align: center; margin-top: 12px; }
     </style>
 </head>
 <body>
 
-<section class="hero">
-    <h1>SCHD Dividend History</h1>
-    <p class="subtitle">Schwab U.S. Dividend Equity ETF — Quarterly Adjusted Dividends Since Inception (2011)</p>
-    <a href="https://topdividendetfs.com" class="back-home-btn">← Back to TopDividendETFs.com</a>
-</section>
-
-<div class="container">
-    <div class="summary">
-        <p><strong>Latest Quarterly (Q1 2026):</strong> $0.2569</p>
-        <p><strong>Trailing 12-Month Dividend (approx.):</strong> $1.06</p>
-        <p><strong>Dividend Growth (CAGR since 2012):</strong> ~11.0%</p>
-        <p><strong>5-Year Dividend Growth Rate (approx.):</strong> ~9.2%</p>
-        <p><strong>10-Year Dividend Growth Rate (approx.):</strong> ~10.7%</p>
-        <p><strong>Total Dividends Paid (cumulative):</strong> ~$11–12 per share</p>
-        <p><em>Data source: Public records / Schwab / StockAnalysis. Not investment advice.</em></p>
+<!-- HEADER -->
+<header>
+    <div class="header-inner">
+        <a href="https://topdividendetfs.com" class="logo">TopDividendETFs</a>
+        <div class="header-links">
+            <a href="https://topdividendetfs.com">ETF Rankings</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs</a>
+            <a href="https://topdividendtools.com" target="_blank">Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank" style="background:#f5a623;color:#1a1200;border-color:#f5a623;">Pro ★</a>
+        </div>
     </div>
+</header>
 
-    <div id="chartContainer">
-        <canvas id="dividendChart"></canvas>
-    </div>
-
-    <div class="projections">
-        <h2>Future Outlook & Dividend Projections (Estimate Only)</h2>
-        <p>Dividend growth is never guaranteed — it depends on company earnings, economic conditions, interest rates, index rebalancing, and more. SCHD has historically delivered strong growth thanks to its focus on quality dividend payers, but recent years show variability (e.g., slower 3-year rate ~7%).</p>
-        <p>Here are three plausible scenarios for the next 10 years (2026–2035), based on historical patterns and analyst views:</p>
-        <ul>
-            <li><strong>Conservative (~7% annual growth)</strong>: Matches recent 3-year average — cautious outlook</li>
-            <li><strong>Moderate (~9–10% annual growth)</strong>: Aligns with 5–10 year historical averages — most common expectation</li>
-            <li><strong>Optimistic (~11% annual growth)</strong>: Matches long-term (since 2012) CAGR — assumes continued strong performance</li>
-        </ul>
-        <p>Starting from ~$1.0476 annualized in 2025, these project future quarterly dividends. <strong>These are illustrative only — not predictions or advice.</strong></p>
-    </div>
-
-    <div id="projectionContainer">
-        <canvas id="projectionChart"></canvas>
-    </div>
-
-    <a href="https://topdividendetfs.com" class="chart-back-btn">← Back to Home</a>
-
-    <h2>All Historical Quarterly Dividends (Adjusted Amounts)</h2>
-
-    <div class="table-wrapper">
-        <table id="dividendTable">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Quarter</th>
-                    <th>Adjusted Dividend ($)</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <button class="download-btn" onclick="downloadCSV()">Download Historical Data as CSV</button>
-
-</div>
-
-<footer class="footer">
-    <p>
-        <a href="terms-of-use.html">Terms of Use</a> | 
-        <a href="privacy-policy.html">Privacy Policy</a> | 
-        <a href="FAQ.html">FAQ</a> | 
-        <a href="schd-dividend-calculator.html">SCHD Calculator</a> | 
-        Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
-    </p>
-    <p style="margin-top: 12px; text-align: center;">
-        <strong>
-            <a href="https://weeklyetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none; margin-right: 20px;">
-                Top 100 Weekly Dividend ETFs!
-            </a>
-            <a href="https://growthetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none;">
-                Top Growth ETFs!
-            </a>
-        </strong>
-    </p>
-</footer>
-
-<p class="disclaimer">
-    Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
-</p>
-
-<!-- Popup with YES + NO THANKS -->
-<div id="popupOverlay">
-    <div id="popupContent">
-        <h3>Want to see the top 100 dividend ETFs sorted by yield & NO price decay?</h3>
-        <div class="popup-buttons">
-            <a href="https://topdividendetfs.com" id="yesBtn">YES → Take Me There</a>
-            <button id="noBtn">No Thanks</button>
+<!-- NETWORK BAR -->
+<div class="network-bar">
+    <div class="network-bar-inner">
+        <div class="network-bar-label">OUR NETWORK</div>
+        <div class="network-bar-links">
+            <a href="https://topdividendetfs.com">📊 TopDividendETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank">📅 WeeklyETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank">📆 MonthlyETFs</a>
+            <a href="https://topdividendtools.com" target="_blank">🛠️ Dividend Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank">⭐ Pro Platform</a>
         </div>
     </div>
 </div>
 
+<section class="hero">
+    <h1>SCHD Dividend History</h1>
+    <p class="subtitle">Schwab U.S. Dividend Equity ETF — Complete Quarterly Dividends Since 2011 + Latest Q2 2026 Update</p>
+    <a href="https://topdividendetfs.com" class="back-home-btn" style="background:white;color:var(--primary);display:inline-block;">← Back to TopDividendETFs.com</a>
+</section>
+
+<div class="container">
+
+    <div class="card">
+        <h2 class="card-title">SCHD Latest Dividend Update (June 2026)</h2>
+        <p style="text-align:center;font-size:1.25em;line-height:1.4;">
+            <strong>Q2 2026 Dividend:</strong> <span style="color:#009fe0;font-size:1.35em;">$0.2525</span><br><br>
+            <strong>Trailing 12-Month Dividend:</strong> ≈ $1.06<br>
+            <strong>Dividend Growth CAGR (since 2012):</strong> ~11.0%<br>
+            <strong>5-Year Avg Growth:</strong> ~9.2% | <strong>10-Year Avg Growth:</strong> ~10.7%
+        </p>
+    </div>
+
+    <!-- PRO PROMO -->
+    <div class="pro-promo">
+        <p><strong>Want advanced SCHD analysis?</strong> Compare SCHD against 100+ dividend ETFs with total return simulations, NAV decay tracking, tax efficiency grades, and more at our Pro platform.</p>
+        <a href="https://topdividendetfspro.com" target="_blank" style="background:#f5a623;color:#1a1200;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:900;display:inline-block;">Go to TopDividendETFsPro.com →</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">SCHD Quarterly Dividend History Chart</h2>
+        <div id="chartContainer">
+            <canvas id="dividendChart"></canvas>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">SCHD 10-Year Dividend Projections (2026–2035)</h2>
+        <div id="projectionContainer">
+            <canvas id="projectionChart"></canvas>
+        </div>
+        <p style="text-align:center;margin-top:16px;font-size:0.95em;color:#555;">
+            Three scenarios based on historical growth: Conservative (7%), Moderate (9.5%), Optimistic (11%).<br>
+            <strong>These are educational estimates only — not predictions.</strong>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">All Historical Quarterly Dividends (Adjusted Amounts)</h2>
+        <div style="overflow-x:auto;">
+            <table id="dividendTable">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Quarter</th>
+                        <th>Adjusted Dividend ($)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button onclick="downloadCSV()" class="download-btn">Download Full History as CSV</button>
+    </div>
+
+    <!-- MORE PRO PROMO -->
+    <div class="pro-promo">
+        <strong>Track SCHD + 100+ ETFs in one dashboard</strong><br>
+        Real-time dividend alerts, side-by-side comparisons, and professional-grade analytics only at 
+        <a href="https://topdividendetfspro.com" target="_blank">TopDividendETFsPro.com</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">Explore Our Dividend Ecosystem</h2>
+        <div class="site-cards">
+            <a href="https://topdividendetfs.com" class="site-card">
+                <strong>📊 TopDividendETFs.com</strong><br>
+                <small>Ranked dividend ETFs by yield, growth &amp; quality</small>
+            </a>
+            <a href="https://weeklyetfs.com" target="_blank" class="site-card">
+                <strong>📅 WeeklyETFs.com</strong><br>
+                <small>ETFs that pay every single week</small>
+            </a>
+            <a href="https://monthlyetfs.com" target="_blank" class="site-card">
+                <strong>📆 MonthlyETFs.com</strong><br>
+                <small>Best monthly income ETFs</small>
+            </a>
+            <a href="https://topdividendtools.com" target="_blank" class="site-card">
+                <strong>🛠️ TopDividendTools.com</strong><br>
+                <small>Free calculators &amp; screeners</small>
+            </a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="site-card club-card">
+                <strong>⭐ TopDividendETFsPro.com</strong><br>
+                <small>Advanced pro analytics platform</small>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p style="margin-bottom:20px;font-size:1.05em;">
+        <a href="https://topdividendetfs.com" style="color:#ddd;">TopDividendETFs.com</a> • 
+        <a href="https://weeklyetfs.com" target="_blank" style="color:#ddd;">WeeklyETFs.com</a> • 
+        <a href="https://monthlyetfs.com" target="_blank" style="color:#ddd;">MonthlyETFs.com</a> • 
+        <a href="https://topdividendtools.com" target="_blank" style="color:#ddd;">Tools</a> • 
+        <a href="https://topdividendetfspro.com" target="_blank" style="color:#f5a623;font-weight:bold;">Pro Platform</a>
+    </p>
+    <p style="margin:0;font-size:0.9em;">Built for dividend investors • Educational content only</p>
+</footer>
+
+<p class="disclaimer">
+    <strong>Disclaimer:</strong> This website is for educational and informational purposes only. Dividend amounts, dates, and growth rates are based on public data and may change without notice. SCHD dividends are not guaranteed. Past performance does not guarantee future results. Investing involves substantial risk of loss. TopDividendETFs.com is not a financial advisor and this is NOT investment advice. Always consult a licensed financial professional before making any investment decisions. Data sources include Schwab, public filings, and third-party providers. Last updated: June 23, 2026.
+</p>
+
+<p class="update-note">
+    Last updated: June 23, 2026 • For educational use only
+</p>
+
 <script>
-// Historical Data
+// Historical Data including NEW Q2 2026 dividend
 const dividends = [
     { year: 2011, quarter: 'Q4', amount: 0.0406 },
     { year: 2012, quarter: 'Q1', amount: 0.0460 }, { year: 2012, quarter: 'Q2', amount: 0.0687 }, { year: 2012, quarter: 'Q3', amount: 0.0693 }, { year: 2012, quarter: 'Q4', amount: 0.0860 },
@@ -351,10 +373,11 @@ const dividends = [
     { year: 2023, quarter: 'Q1', amount: 0.1988 }, { year: 2023, quarter: 'Q2', amount: 0.2216 }, { year: 2023, quarter: 'Q3', amount: 0.2182 }, { year: 2023, quarter: 'Q4', amount: 0.2474 },
     { year: 2024, quarter: 'Q1', amount: 0.2037 }, { year: 2024, quarter: 'Q2', amount: 0.2747 }, { year: 2024, quarter: 'Q3', amount: 0.2515 }, { year: 2024, quarter: 'Q4', amount: 0.2645 },
     { year: 2025, quarter: 'Q1', amount: 0.2488 }, { year: 2025, quarter: 'Q2', amount: 0.2602 }, { year: 2025, quarter: 'Q3', amount: 0.2604 }, { year: 2025, quarter: 'Q4', amount: 0.2782 },
-    { year: 2026, quarter: 'Q1', amount: 0.2569 }
+    { year: 2026, quarter: 'Q1', amount: 0.2569 },
+    { year: 2026, quarter: 'Q2', amount: 0.2525 }
 ];
 
-// Populate Historical Table
+// Populate Table
 const tbody = document.querySelector('#dividendTable tbody');
 dividends.forEach(d => {
     const row = document.createElement('tr');
@@ -363,22 +386,17 @@ dividends.forEach(d => {
 });
 
 // Historical Chart
-const ctxHist = document.getElementById('dividendChart').getContext('2d');
-const labelsHist = dividends.map(d => `${d.year} ${d.quarter}`);
-const amountsHist = dividends.map(d => d.amount);
-
-new Chart(ctxHist, {
+new Chart(document.getElementById('dividendChart'), {
     type: 'line',
     data: {
-        labels: labelsHist,
+        labels: dividends.map(d => `${d.year} ${d.quarter}`),
         datasets: [{
             label: 'Adjusted Quarterly Dividend ($)',
-            data: amountsHist,
-            borderColor: 'var(--primary)',
+            data: dividends.map(d => d.amount),
+            borderColor: '#009fe0',
             backgroundColor: 'rgba(0, 159, 224, 0.18)',
             fill: true,
             tension: 0.3,
-            pointBackgroundColor: 'var(--primary)',
             pointRadius: 4
         }]
     },
@@ -386,21 +404,19 @@ new Chart(ctxHist, {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            y: { beginAtZero: true, title: { display: true, text: 'Dividend ($)', font: { size: 13 } } },
-            x: { title: { display: true, text: 'Quarter', font: { size: 13 } }, ticks: { maxRotation: 90, minRotation: 45, autoSkip: true, maxTicksLimit: 12 } }
+            y: { beginAtZero: true, title: { display: true, text: 'Dividend ($)' } },
+            x: { ticks: { maxRotation: 90, minRotation: 45 } }
         },
         plugins: {
-            legend: { position: 'top', labels: { font: { size: 13 } } },
-            title: { display: true, text: 'SCHD Quarterly Dividend Growth Since Inception', font: { size: 16 } }
+            legend: { position: 'top' },
+            title: { display: true, text: 'SCHD Quarterly Dividend Growth Since Inception' }
         }
     }
 });
 
 // Projection Logic
 const lastAnnual = 1.0476;
-const yearsToProject = 10;
 const scenarios = { conservative: 0.07, moderate: 0.095, optimistic: 0.11 };
-
 const projectionData = {};
 Object.keys(scenarios).forEach(scenario => {
     const rate = scenarios[scenario];
@@ -417,32 +433,33 @@ Object.keys(scenarios).forEach(scenario => {
 });
 
 // Projection Chart
-const ctxProj = document.getElementById('projectionChart').getContext('2d');
-const projectionLabels = Array.from({length: yearsToProject * 4}, (_, i) => {
-    const y = 2026 + Math.floor(i / 4);
-    const q = (i % 4) + 1;
-    return `${y} Q${q}`;
-});
-
-new Chart(ctxProj, {
+new Chart(document.getElementById('projectionChart'), {
     type: 'line',
     data: {
-        labels: projectionLabels,
+        labels: Array.from({length: 40}, (_, i) => {
+            const y = 2026 + Math.floor(i / 4);
+            const q = (i % 4) + 1;
+            return `${y} Q${q}`;
+        }),
         datasets: [
-            { label: 'Conservative (~7% CAGR)', data: projectionData.conservative, borderColor: '#ff9800', fill: false, tension: 0.2 },
-            { label: 'Moderate (~9.5% CAGR)', data: projectionData.moderate, borderColor: 'var(--primary)', fill: false, tension: 0.2 },
-            { label: 'Optimistic (~11% CAGR)', data: projectionData.optimistic, borderColor: '#4caf50', fill: false, tension: 0.2 }
+            { label: 'Conservative (~7% CAGR)', data: projectionData.conservative, borderColor: '#ff9800', tension: 0.2 },
+            { label: 'Moderate (~9.5% CAGR)', data: projectionData.moderate, borderColor: '#009fe0', tension: 0.2 },
+            { label: 'Optimistic (~11% CAGR)', data: projectionData.optimistic, borderColor: '#4caf50', tension: 0.2 }
         ]
     },
     options: {
         responsive: true,
         maintainAspectRatio: false,
-        scales: { y: { beginAtZero: true, title: { display: true, text: 'Projected Quarterly Dividend ($)' } }, x: { ticks: { maxRotation: 90, minRotation: 45, autoSkip: true, maxTicksLimit: 10 } } },
-        plugins: { legend: { position: 'top' }, title: { display: true, text: 'SCHD Dividend Projection — Next 10 Years (2026–2035)', font: { size: 16 } } }
+        scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'Projected Quarterly Dividend ($)' } }
+        },
+        plugins: {
+            legend: { position: 'top' },
+            title: { display: true, text: 'SCHD Dividend Projections — Next 10 Years (2026–2035)' }
+        }
     }
 });
 
-// Download CSV
 function downloadCSV() {
     let csv = 'Year,Quarter,Adjusted Dividend\n';
     dividends.forEach(d => { csv += `${d.year},${d.quarter},${d.amount.toFixed(4)}\n`; });
@@ -454,21 +471,6 @@ function downloadCSV() {
     a.click();
     URL.revokeObjectURL(url);
 }
-
-// Popup Logic (17 seconds, one-time per session)
-window.addEventListener('load', () => {
-    if (!sessionStorage.getItem('popupShown')) {
-        setTimeout(() => {
-            document.getElementById('popupOverlay').style.display = 'flex';
-            sessionStorage.setItem('popupShown', 'true');
-        }, 17000);
-    }
-});
-
-// Close popup on "No Thanks"
-document.getElementById('noBtn').addEventListener('click', () => {
-    document.getElementById('popupOverlay').style.display = 'none';
-});
 </script>
 
 </body>
