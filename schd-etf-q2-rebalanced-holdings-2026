@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCHD ETF Q2 2026 Rebalance Complete | New Holdings, Weights & Sector Shifts | TopDividendETFs.com</title>
+  <meta name="description" content="SCHD's Q2 2026 quarterly rebalance is complete. See the new top 10 holdings, full portfolio weights, sector allocation changes, and key takeaways for SCHD investors." />
+  <meta name="keywords" content="SCHD Q2 2026 rebalance, SCHD rebalance June 2026, SCHD new holdings 2026, SCHD portfolio update, Schwab US Dividend Equity ETF rebalance, SCHD sector allocation 2026" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="TopDividendETFs.com" />
+  <link rel="canonical" href="https://topdividendetfs.com/schd-q2-2026-rebalance" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SCHD Q2 2026 Rebalance Is Complete — New Holdings & Weights" />
+  <meta property="og:description" content="SCHD's quarterly rebalance trimmed TXN and QCOM heavily, boosting defensive names like ABT, PG, PEP, AMGN, HD, and MRK. Full breakdown inside." />
+  <meta property="og:url" content="https://topdividendetfs.com/schd-q2-2026-rebalance" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="TopDividendETFs.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden !important; width: 100%; position: relative; }
+
+    :root {
+      --green-dark: #1A3C34;
+      --green-mid:  #2E5D54;
+      --bg:         #f4f4f4;
+      --white:      #ffffff;
+      --text:       #333333;
+      --text-mid:   #444444;
+      --text-light: #666666;
+      --border:     #c8e6d8;
+      --shadow:     0 4px 15px rgba(0,0,0,.12);
+      --red:        #e74c3c;
+      --up:         #16a34a;
+      --down:       #dc2626;
+    }
+
+    body {
+      font-family: 'Lato', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--green-dark);
+      padding: 15px 20px;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+      background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+      background-blend-mode: overlay;
+      cursor: pointer;
+    }
+    .logo { font-size: clamp(22px, 6vw, 36px); font-weight: 900; color: #fff; }
+
+    .content { width: 94%; max-width: 900px; display: flex; flex-direction: column; }
+
+    .breadcrumb { font-size: 0.82rem; color: var(--text-light); padding: 12px 0 4px; }
+    .breadcrumb a { color: var(--green-mid); text-decoration: none; font-weight: 700; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 5px; color: #aaa; }
+
+    /* HERO */
+    .hero-block {
+      background: linear-gradient(var(--green-dark), #255046);
+      border-radius: 10px;
+      padding: 44px 32px 38px;
+      text-align: center;
+      margin: 14px 0 22px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-block::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.28);
+      color: #aff5c8;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      position: relative; z-index: 1;
+    }
+    .hero-block h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      position: relative; z-index: 1;
+    }
+    .hero-block h1 em { font-style: normal; color: #7dffb0; }
+    .hero-sub {
+      color: rgba(255,255,255,.8);
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 0 auto 26px;
+      position: relative; z-index: 1;
+    }
+    .quick-stats {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+      position: relative; z-index: 1;
+    }
+    .stat-pill {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 6px;
+      padding: 10px 16px;
+      color: #fff;
+      font-size: 0.83rem;
+      min-width: 95px;
+    }
+    .stat-pill strong {
+      display: block; font-size: 1.15rem; font-weight: 900;
+      color: #7dffb0; line-height: 1.1; margin-bottom: 2px;
+    }
+
+    h2.section-title {
+      color: var(--green-dark); font-size: 1.4rem; font-weight: 900;
+      margin: 38px 0 6px; padding-bottom: 8px;
+      border-bottom: 3px solid var(--green-mid);
+    }
+    .section-lead { color: var(--text-light); font-size: 0.88rem; margin-bottom: 16px; }
+
+    /* INTRO CARD */
+    .intro-card {
+      background: var(--white);
+      border-radius: 8px;
+      border-left: 5px solid var(--green-mid);
+      padding: 26px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 10px;
+    }
+    .intro-card h2 { color: var(--green-dark); font-size: 1.25rem; font-weight: 900; margin-bottom: 10px; }
+    .intro-card p { color: var(--text-mid); margin-bottom: 10px; line-height: 1.65; }
+    .intro-card p:last-child { margin-bottom: 0; }
+
+    /* HOLDINGS TABLE */
+    .table-wrap {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 3px solid var(--green-mid);
+      margin-bottom: 8px;
+    }
+    .table-bar {
+      background: var(--green-dark);
+      padding: 14px 20px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    .table-bar h3 { color: #fff; font-size: 1rem; font-weight: 900; }
+    .ticker-chip {
+      background: #7dffb0; color: var(--green-dark);
+      font-weight: 900; font-size: 0.85rem;
+      padding: 4px 14px; border-radius: 4px; letter-spacing: 0.06em;
+    }
+    table.div-table { width: 100%; border-collapse: collapse; }
+    table.div-table thead tr { background: var(--green-mid); }
+    table.div-table thead th {
+      color: #fff; font-weight: 900; font-size: 0.78rem;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 12px 14px; text-align: left; white-space: nowrap;
+    }
+    table.div-table tbody tr { border-bottom: 1px solid #eee; transition: background .15s; }
+    table.div-table tbody tr:hover { background: #dff5eb; }
+    table.div-table tbody tr.top10 { background: #f0fbf5; }
+    table.div-table tbody tr.top10:hover { background: #dff5eb; }
+    table.div-table tbody tr:last-child { border-bottom: none; }
+    table.div-table tbody td { padding: 11px 14px; font-size: 0.9rem; color: var(--text-mid); }
+    table.div-table tbody td.ticker-cell {
+      font-weight: 900; color: var(--green-dark); font-size: 0.88rem; white-space: nowrap;
+    }
+    table.div-table tbody td.rank-cell {
+      font-weight: 900; color: var(--text-light); font-size: 0.82rem; text-align: center; width: 40px;
+    }
+    table.div-table tbody td.weight-cell { font-weight: 700; color: var(--green-dark); }
+    .badge-up { color: var(--up); font-weight: 900; font-size: 0.8rem; white-space: nowrap; }
+    .badge-down { color: var(--down); font-weight: 900; font-size: 0.8rem; white-space: nowrap; }
+    .badge-flat { color: #888; font-weight: 700; font-size: 0.8rem; white-space: nowrap; }
+    .table-note {
+      font-size: 0.77rem; color: var(--text-light);
+      padding: 9px 16px; background: #f8fdf9;
+      border-top: 1px solid var(--border); font-style: italic;
+    }
+
+    /* COMPARISON CARDS */
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 8px;
+    }
+    .compare-card {
+      background: var(--white); border: 2px solid var(--border);
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    }
+    .compare-head {
+      padding: 11px 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .compare-head.before { background: #fff3f3; border-bottom: 2px solid #fca5a5; }
+    .compare-head.after  { background: #f0fbf5; border-bottom: 2px solid var(--border); }
+    .compare-head .clabel { font-weight: 900; font-size: 0.88rem; }
+    .compare-head.before .clabel { color: var(--down); }
+    .compare-head.after  .clabel { color: var(--green-dark); }
+    .compare-head .ctag {
+      margin-left: auto; font-size: 0.72rem; font-weight: 900;
+      padding: 3px 10px; border-radius: 3px;
+    }
+    .compare-head.before .ctag { background: #fee2e2; color: var(--down); }
+    .compare-head.after  .ctag { background: #7dffb0; color: var(--green-dark); }
+    .compare-body { padding: 14px 16px; }
+    .compare-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 7px 0; border-bottom: 1px solid #eef7f2; font-size: 0.9rem;
+    }
+    .compare-row:last-child { border-bottom: none; }
+    .compare-row .cr-ticker { font-weight: 900; color: var(--green-dark); }
+    .compare-row .cr-pct { font-weight: 700; color: var(--text-mid); }
+
+    /* SECTOR BARS */
+    .sector-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+    .sector-row {
+      background: var(--white); border: 2px solid var(--border);
+      border-radius: 8px; padding: 14px 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .sector-label-row {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;
+    }
+    .sector-name { font-weight: 900; color: var(--green-dark); font-size: 0.95rem; }
+    .sector-change { font-weight: 900; font-size: 0.85rem; }
+    .sector-change.up { color: var(--up); }
+    .sector-change.down { color: var(--down); }
+    .sector-change.flat { color: #888; }
+    .bar-track { background: #e8f5ee; border-radius: 4px; height: 8px; overflow: hidden; position: relative; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width .4s ease; }
+    .bar-fill.green { background: var(--green-mid); }
+    .bar-fill.red   { background: #f87171; }
+    .bar-pcts { display: flex; gap: 14px; margin-top: 5px; font-size: 0.78rem; color: var(--text-light); }
+    .bar-pcts span { font-weight: 700; }
+    .bar-pcts .old { color: #999; }
+    .bar-pcts .new { color: var(--green-dark); }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: var(--green-dark); color: #fff;
+      border-radius: 8px; padding: 26px 28px;
+      margin: 8px 0; box-shadow: var(--shadow);
+      position: relative; overflow: hidden;
+    }
+    .highlight-box::after {
+      content: 'SCHD';
+      position: absolute; right: -6px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 7.5rem; font-weight: 900;
+      color: rgba(127,255,176,.05); pointer-events: none; line-height: 1;
+    }
+    .highlight-box h2 { color: #7dffb0; font-size: 1.2rem; font-weight: 900; margin-bottom: 12px; }
+    .highlight-box p { color: rgba(255,255,255,.85); font-size: 0.95rem; line-height: 1.65; margin-bottom: 10px; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .highlight-stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0; }
+    .hl-stat {
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(127,255,176,.18);
+      border-radius: 6px; padding: 11px 16px;
+    }
+    .hl-stat dt { font-size: 0.69rem; letter-spacing: 0.1em; text-transform: uppercase; color: #aff5c8; margin-bottom: 3px; font-weight: 700; }
+    .hl-stat dd { font-size: 1.05rem; font-weight: 900; color: #fff; }
+
+    /* INFO BOX */
+    .info-box {
+      border-left: 4px solid var(--green-mid);
+      background: var(--white);
+      padding: 18px 22px; margin: 14px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      border-radius: 0 6px 6px 0;
+    }
+    .info-box h3 { color: var(--green-dark); font-size: 1rem; font-weight: 900; margin-bottom: 7px; }
+    .info-box p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; margin-bottom: 8px; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    /* TAKEAWAYS */
+    .takeaway-list { list-style: none; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .takeaway-item {
+      background: var(--white); border: 2px solid var(--border);
+      border-radius: 8px; padding: 16px 20px;
+      display: flex; gap: 14px; align-items: flex-start;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .takeaway-icon {
+      width: 32px; height: 32px; min-width: 32px;
+      background: #dff5eb; border: 2px solid var(--green-mid);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .takeaway-item strong { display: block; color: var(--green-dark); font-size: 0.97rem; margin-bottom: 3px; }
+    .takeaway-item span { color: var(--text-mid); font-size: 0.9rem; line-height: 1.5; }
+
+    /* MOVERS */
+    .movers-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 8px;
+    }
+    .movers-card {
+      background: var(--white); border-radius: 8px; overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    }
+    .movers-card.gainers { border: 2px solid #86efac; }
+    .movers-card.losers  { border: 2px solid #fca5a5; }
+    .movers-head {
+      padding: 10px 16px; font-weight: 900; font-size: 0.88rem;
+    }
+    .movers-card.gainers .movers-head { background: #f0fbf5; color: var(--up); border-bottom: 2px solid #86efac; }
+    .movers-card.losers  .movers-head { background: #fff3f3; color: var(--down); border-bottom: 2px solid #fca5a5; }
+    .movers-body { padding: 12px 16px; }
+    .mover-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 7px 0; border-bottom: 1px solid #eee; font-size: 0.88rem;
+    }
+    .mover-row:last-child { border-bottom: none; }
+    .mover-ticker { font-weight: 900; color: var(--green-dark); }
+    .mover-change { font-weight: 900; }
+    .mover-row.gain .mover-change { color: var(--up); }
+    .mover-row.loss .mover-change { color: var(--down); }
+    .mover-detail { color: var(--text-light); font-size: 0.78rem; }
+
+    /* DISCLAIMER */
+    .disclaimer-box {
+      border-left: 4px solid #ccc; background: var(--white);
+      padding: 16px 20px; margin: 24px 0 12px;
+      border-radius: 0 6px 6px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .disclaimer-box h3 { color: #999; font-size: 0.9rem; margin-bottom: 5px; }
+    .disclaimer-box p { color: var(--text-light); font-size: 0.83rem; line-height: 1.6; }
+
+    /* SHARE / FOOTER */
+    .share-buttons { margin: 18px auto 8px; display: flex; gap: 12px; justify-content: center; }
+    .share-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 7px 13px; border-radius: 6px;
+      font-weight: 700; font-size: 0.82em;
+      color: #fff; text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,.2); transition: all .2s;
+    }
+    .share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.3); }
+    .fb { background: #1877F2; }
+    .xbtn { background: #000; }
+    .share-btn svg { width: 15px; height: 15px; fill: currentColor; }
+    .back-to-top {
+      display: block; margin: 10px auto 0;
+      padding: 7px 16px; background: var(--green-mid);
+      color: #fff; font-weight: 700; font-size: 0.85rem;
+      border: none; border-radius: 6px; cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,.2); transition: all .2s;
+    }
+    .back-to-top:hover { transform: translateY(-2px); }
+    .footer {
+      font-size: .9em; color: #666;
+      margin: 20px auto 10px; padding-top: 10px;
+      border-top: 1px solid #ddd;
+      max-width: 900px; width: 94%;
+      text-align: center;
+    }
+    .footer a { color: var(--green-dark); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .tracker-link {
+      border: 2px solid var(--green-mid);
+      padding: 4px 8px; border-radius: 4px;
+      animation: glow 2s infinite;
+    }
+    @keyframes glow {
+      0%,100% { box-shadow: 0 0 5px rgba(46,93,84,.3); }
+      50% { box-shadow: 0 0 8px rgba(46,93,84,.6); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .intro-card, .highlight-box { padding: 20px 18px; }
+      table.div-table thead th, table.div-table tbody td { padding: 9px 8px; font-size: 0.79rem; }
+      .table-bar { padding: 12px 14px; }
+      .hero-block { padding: 30px 18px 28px; }
+      .highlight-box::after { display: none; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .movers-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) {
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header onclick="location.href='https://topdividendetfs.com'">
+    <div class="logo">TopDividendETFs.com</div>
+  </header>
+
+  <div class="content">
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="https://topdividendetfs.com">Home</a>
+      <span>›</span>
+      <a href="schd-etf-2026-dividend-dates.html">SCHD 2026 Dividend Dates</a>
+      <span>›</span>
+      SCHD Q2 2026 Rebalance
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero-block">
+      <div class="hero-eyebrow">Schwab U.S. Dividend Equity ETF · Q2 2026 Quarterly Rebalance</div>
+      <h1>SCHD's Q2 <em>Rebalance</em> Is Complete</h1>
+      <p class="hero-sub">Tech trimmed, defensives boosted. Here's every change to SCHD's holdings and sector weights after the June 2026 quarterly rebalance.</p>
+      <div class="quick-stats">
+        <div class="stat-pill"><strong>No Holding</strong>Above 4.36%</div>
+        <div class="stat-pill"><strong>TXN+QCOM</strong>12.6% → 7.9%</div>
+        <div class="stat-pill"><strong>Top 10</strong>44.26% → 41.13%</div>
+        <div class="stat-pill"><strong>Tech</strong>15% → 10%</div>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <div class="intro-card">
+      <h2>What Is the SCHD Quarterly Rebalance?</h2>
+      <p>SCHD rebalances quarterly on the <strong>third Friday of June, September, and December</strong>. Unlike the annual reconstitution in March — which adds and removes stocks — the quarterly rebalance is primarily about <strong>redistributing weight</strong> across the existing portfolio. Positions that have grown above the 4% per-stock cap get trimmed, and that weight gets spread throughout the fund.</p>
+      <p>The Q2 2026 rebalance resulted in a significant rotation: <strong>Technology was cut from ~15% to ~10%</strong> of the fund, primarily by reducing $TXN and $QCOM, while Healthcare, Consumer Staples, and Energy all saw their allocations grow. The result is a more balanced top of the portfolio and a meaningfully more defensive tilt overall.</p>
+    </div>
+
+    <!-- NEW TOP 10 -->
+    <h2 class="section-title">New Top 10 Holdings After Rebalance</h2>
+    <p class="section-lead">As of June 22, 2026. Rank movement reflects change from pre-rebalance positions.</p>
+
+    <div class="table-wrap">
+      <div class="table-bar">
+        <h3>SCHD Top 10 Holdings — Post Q2 2026 Rebalance</h3>
+        <span class="ticker-chip">SCHD</span>
+      </div>
+      <table class="div-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Ticker</th>
+            <th>Company</th>
+            <th>% of Assets</th>
+            <th>Market Value</th>
+            <th>Rank Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="top10">
+            <td class="rank-cell">1</td>
+            <td class="ticker-cell">UNH</td>
+            <td>UnitedHealth Group</td>
+            <td class="weight-cell">4.36%</td>
+            <td>$4.1B</td>
+            <td><span class="badge-up">▲ 2 (from #3)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">2</td>
+            <td class="ticker-cell">TXN</td>
+            <td>Texas Instruments</td>
+            <td class="weight-cell">4.35%</td>
+            <td>$4.1B</td>
+            <td><span class="badge-down">▼ 1 (from #1)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">3</td>
+            <td class="ticker-cell">PG</td>
+            <td>Procter & Gamble</td>
+            <td class="weight-cell">4.26%</td>
+            <td>$4.0B</td>
+            <td><span class="badge-up">▲ 2 (from #5)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">4</td>
+            <td class="ticker-cell">HD</td>
+            <td>Home Depot</td>
+            <td class="weight-cell">4.22%</td>
+            <td>$4.0B</td>
+            <td><span class="badge-up">▲ 4 (from #8)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">5</td>
+            <td class="ticker-cell">AMGN</td>
+            <td>Amgen</td>
+            <td class="weight-cell">4.12%</td>
+            <td>$3.9B</td>
+            <td><span class="badge-up">▲ 4 (from #9)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">6</td>
+            <td class="ticker-cell">KO</td>
+            <td>Coca-Cola</td>
+            <td class="weight-cell">4.08%</td>
+            <td>$3.9B</td>
+            <td><span class="badge-up">▲ 2 (from #4) → weight ▼</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">7</td>
+            <td class="ticker-cell">ABT</td>
+            <td>Abbott Laboratories</td>
+            <td class="weight-cell">4.07%</td>
+            <td>$3.9B</td>
+            <td><span class="badge-up">▲ 6 (from #13)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">8</td>
+            <td class="ticker-cell">MRK</td>
+            <td>Merck & Co.</td>
+            <td class="weight-cell">4.07%</td>
+            <td>$3.9B</td>
+            <td><span class="badge-up">▲ 2 (from #6) → weight ▲</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">9</td>
+            <td class="ticker-cell">PEP</td>
+            <td>PepsiCo</td>
+            <td class="weight-cell">3.99%</td>
+            <td>$3.8B</td>
+            <td><span class="badge-up">▲ 2 (from #11)</span></td>
+          </tr>
+          <tr class="top10">
+            <td class="rank-cell">10</td>
+            <td class="ticker-cell">VZ</td>
+            <td>Verizon Communications</td>
+            <td class="weight-cell">3.93%</td>
+            <td>$3.7B</td>
+            <td><span class="badge-flat">— Unchanged (#10)</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table-note">Source: Schwab SCHD fund holdings as of 06/22/2026. Data subject to change.</p>
+    </div>
+
+    <!-- BIGGEST MOVERS -->
+    <h2 class="section-title">Biggest Movers: Cuts & Additions</h2>
+    <p class="section-lead">The biggest weight changes outside the rank shuffle, driven by the 4% per-stock cap.</p>
+
+    <div class="movers-grid">
+      <div class="movers-card gainers">
+        <div class="movers-head">📈 Biggest Weight Gainers</div>
+        <div class="movers-body">
+          <div class="mover-row gain">
+            <span class="mover-ticker">ABT</span>
+            <span class="mover-change">+0.94%</span>
+            <span class="mover-detail">3.13% → 4.07%</span>
+          </div>
+          <div class="mover-row gain">
+            <span class="mover-ticker">HD</span>
+            <span class="mover-change">+0.59%</span>
+            <span class="mover-detail">3.63% → 4.22%</span>
+          </div>
+          <div class="mover-row gain">
+            <span class="mover-ticker">AMGN</span>
+            <span class="mover-change">+0.56%</span>
+            <span class="mover-detail">3.56% → 4.12%</span>
+          </div>
+          <div class="mover-row gain">
+            <span class="mover-ticker">PEP</span>
+            <span class="mover-change">+0.52%</span>
+            <span class="mover-detail">3.47% → 3.99%</span>
+          </div>
+          <div class="mover-row gain">
+            <span class="mover-ticker">PG</span>
+            <span class="mover-change">+0.46%</span>
+            <span class="mover-detail">3.80% → 4.26%</span>
+          </div>
+          <div class="mover-row gain">
+            <span class="mover-ticker">MRK</span>
+            <span class="mover-change">+0.28%</span>
+            <span class="mover-detail">3.79% → 4.07%</span>
+          </div>
+        </div>
+      </div>
+      <div class="movers-card losers">
+        <div class="movers-head">📉 Biggest Weight Cuts</div>
+        <div class="movers-body">
+          <div class="mover-row loss">
+            <span class="mover-ticker">TXN</span>
+            <span class="mover-change">−2.04%</span>
+            <span class="mover-detail">6.39% → 4.35%</span>
+          </div>
+          <div class="mover-row loss">
+            <span class="mover-ticker">QCOM</span>
+            <span class="mover-change">−2.63%</span>
+            <span class="mover-detail">6.22% → 3.59%</span>
+          </div>
+          <div class="mover-row loss">
+            <span class="mover-ticker">UNH</span>
+            <span class="mover-change">−1.14%</span>
+            <span class="mover-detail">5.50% → 4.36%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCENTRATION HIGHLIGHT -->
+    <div class="highlight-box">
+      <h2>Concentration Risk Reduced Across the Board</h2>
+      <div class="highlight-stats">
+        <dl class="hl-stat"><dt>Top 5 Before</dt><dd>25.98%</dd></dl>
+        <dl class="hl-stat"><dt>Top 5 After</dt><dd>21.31%</dd></dl>
+        <dl class="hl-stat"><dt>Top 10 Before</dt><dd>44.26%</dd></dl>
+        <dl class="hl-stat"><dt>Top 10 After</dt><dd>41.13%</dd></dl>
+        <dl class="hl-stat"><dt>Max Single Holding</dt><dd>4.36%</dd></dl>
+      </div>
+      <p>Before the rebalance, SCHD had three holdings above 5.5%: <strong>TXN at 6.39%</strong>, <strong>QCOM at 6.22%</strong>, and <strong>UNH at 5.50%</strong>. After the rebalance, <strong>no holding exceeds 4.36%</strong>. Combined, TXN and QCOM went from 12.61% of fund assets to just 7.94% — a reduction of 4.67 percentage points from two stocks alone. That freed-up weight flowed into defensive dividend growers throughout the portfolio.</p>
+    </div>
+
+    <!-- SECTOR ALLOCATION -->
+    <h2 class="section-title">New Sector Allocation</h2>
+    <p class="section-lead">Sector allocation became more defensive after the rebalance, with Healthcare, Staples, and Energy growing at Technology's expense.</p>
+
+    <div class="sector-grid">
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">🏥 Healthcare</span>
+          <span class="sector-change up">▲ 19% → 20%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:20%"></div></div>
+        <div class="bar-pcts"><span class="old">Before: 19%</span><span class="new">After: 20%</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">🛒 Consumer Staples</span>
+          <span class="sector-change up">▲ 19% → 20%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:20%"></div></div>
+        <div class="bar-pcts"><span class="old">Before: 19%</span><span class="new">After: 20%</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">⛽ Energy</span>
+          <span class="sector-change up">▲ 14% → 15%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:15%"></div></div>
+        <div class="bar-pcts"><span class="old">Before: 14%</span><span class="new">After: 15%</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">💻 Technology</span>
+          <span class="sector-change down">▼ 15% → 10%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill red" style="width:10%"></div></div>
+        <div class="bar-pcts"><span class="old">Before: 15%</span><span class="new">After: 10%</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">🏭 Industrials</span>
+          <span class="sector-change flat">— Unchanged at 11%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:11%"></div></div>
+        <div class="bar-pcts"><span class="flat">11% — no change</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">🏦 Financials</span>
+          <span class="sector-change flat">— Unchanged at 10%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:10%"></div></div>
+        <div class="bar-pcts"><span class="flat">10% — no change</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">🛍️ Consumer Discretionary</span>
+          <span class="sector-change flat">— Unchanged at 7%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:7%"></div></div>
+        <div class="bar-pcts"><span class="flat">7% — no change</span></div>
+      </div>
+      <div class="sector-row">
+        <div class="sector-label-row">
+          <span class="sector-name">📡 Communication Services</span>
+          <span class="sector-change flat">— Unchanged at 6%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="width:6%"></div></div>
+        <div class="bar-pcts"><span class="flat">6% — no change</span></div>
+      </div>
+    </div>
+
+    <!-- FULL HOLDINGS TABLE -->
+    <h2 class="section-title">Full Portfolio Holdings After Q2 Rebalance</h2>
+    <p class="section-lead">All 105 holdings as of June 22, 2026, sorted by weight descending.</p>
+
+    <div class="table-wrap">
+      <div class="table-bar">
+        <h3>SCHD Complete Holdings — Post Q2 2026 Rebalance</h3>
+        <span class="ticker-chip">105 Holdings</span>
+      </div>
+      <table class="div-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Ticker</th>
+            <th>Company</th>
+            <th>Shares</th>
+            <th>% Assets</th>
+            <th>Mkt Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="top10"><td class="rank-cell">1</td><td class="ticker-cell">UNH</td><td>UnitedHealth Group</td><td>10,188,001</td><td class="weight-cell">4.36%</td><td>$4.1B</td></tr>
+          <tr class="top10"><td class="rank-cell">2</td><td class="ticker-cell">TXN</td><td>Texas Instruments</td><td>12,447,807</td><td class="weight-cell">4.35%</td><td>$4.1B</td></tr>
+          <tr class="top10"><td class="rank-cell">3</td><td class="ticker-cell">PG</td><td>Procter & Gamble</td><td>27,392,259</td><td class="weight-cell">4.26%</td><td>$4.0B</td></tr>
+          <tr class="top10"><td class="rank-cell">4</td><td class="ticker-cell">HD</td><td>Home Depot</td><td>12,269,763</td><td class="weight-cell">4.22%</td><td>$4.0B</td></tr>
+          <tr class="top10"><td class="rank-cell">5</td><td class="ticker-cell">AMGN</td><td>Amgen</td><td>11,354,175</td><td class="weight-cell">4.12%</td><td>$3.9B</td></tr>
+          <tr class="top10"><td class="rank-cell">6</td><td class="ticker-cell">KO</td><td>Coca-Cola</td><td>48,761,506</td><td class="weight-cell">4.08%</td><td>$3.9B</td></tr>
+          <tr class="top10"><td class="rank-cell">7</td><td class="ticker-cell">ABT</td><td>Abbott Laboratories</td><td>44,063,886</td><td class="weight-cell">4.07%</td><td>$3.9B</td></tr>
+          <tr class="top10"><td class="rank-cell">8</td><td class="ticker-cell">MRK</td><td>Merck & Co.</td><td>33,481,722</td><td class="weight-cell">4.07%</td><td>$3.9B</td></tr>
+          <tr class="top10"><td class="rank-cell">9</td><td class="ticker-cell">PEP</td><td>PepsiCo</td><td>26,940,416</td><td class="weight-cell">3.99%</td><td>$3.8B</td></tr>
+          <tr class="top10"><td class="rank-cell">10</td><td class="ticker-cell">VZ</td><td>Verizon Communications</td><td>82,319,929</td><td class="weight-cell">3.93%</td><td>$3.7B</td></tr>
+          <tr><td class="rank-cell">11</td><td class="ticker-cell">CVX</td><td>Chevron Corp</td><td>20,244,169</td><td class="weight-cell">3.73%</td><td>$3.5B</td></tr>
+          <tr><td class="rank-cell">12</td><td class="ticker-cell">QCOM</td><td>Qualcomm</td><td>15,365,559</td><td class="weight-cell">3.59%</td><td>$3.4B</td></tr>
+          <tr><td class="rank-cell">13</td><td class="ticker-cell">COP</td><td>ConocoPhillips</td><td>30,824,037</td><td class="weight-cell">3.56%</td><td>$3.4B</td></tr>
+          <tr><td class="rank-cell">14</td><td class="ticker-cell">MO</td><td>Altria Group</td><td>42,248,552</td><td class="weight-cell">3.09%</td><td>$2.9B</td></tr>
+          <tr><td class="rank-cell">15</td><td class="ticker-cell">BMY</td><td>Bristol-Myers Squibb</td><td>51,665,091</td><td class="weight-cell">2.97%</td><td>$2.8B</td></tr>
+          <tr><td class="rank-cell">16</td><td class="ticker-cell">LMT</td><td>Lockheed Martin</td><td>5,133,253</td><td class="weight-cell">2.67%</td><td>$2.5B</td></tr>
+          <tr><td class="rank-cell">17</td><td class="ticker-cell">BX</td><td>Blackstone</td><td>18,794,204</td><td class="weight-cell">2.44%</td><td>$2.3B</td></tr>
+          <tr><td class="rank-cell">18</td><td class="ticker-cell">ADP</td><td>Automatic Data Processing</td><td>10,112,385</td><td class="weight-cell">2.28%</td><td>$2.2B</td></tr>
+          <tr><td class="rank-cell">19</td><td class="ticker-cell">UPS</td><td>United Parcel Service</td><td>18,888,199</td><td class="weight-cell">2.13%</td><td>$2.0B</td></tr>
+          <tr><td class="rank-cell">20</td><td class="ticker-cell">CMCSA</td><td>Comcast Corp</td><td>90,134,956</td><td class="weight-cell">2.12%</td><td>$2.0B</td></tr>
+          <tr><td class="rank-cell">21</td><td class="ticker-cell">ACN</td><td>Accenture PLC</td><td>15,532,213</td><td class="weight-cell">2.04%</td><td>$1.9B</td></tr>
+          <tr><td class="rank-cell">22</td><td class="ticker-cell">SLB</td><td>SLB NV</td><td>37,825,818</td><td class="weight-cell">1.91%</td><td>$1.8B</td></tr>
+          <tr><td class="rank-cell">23</td><td class="ticker-cell">EOG</td><td>EOG Resources</td><td>13,475,936</td><td class="weight-cell">1.88%</td><td>$1.8B</td></tr>
+          <tr><td class="rank-cell">24</td><td class="ticker-cell">TGT</td><td>Target Corp</td><td>11,490,415</td><td class="weight-cell">1.57%</td><td>$1.5B</td></tr>
+          <tr><td class="rank-cell">25</td><td class="ticker-cell">F</td><td>Ford Motor</td><td>99,023,439</td><td class="weight-cell">1.47%</td><td>$1.4B</td></tr>
+          <tr><td class="rank-cell">26</td><td class="ticker-cell">OKE</td><td>ONEOK</td><td>15,938,859</td><td class="weight-cell">1.45%</td><td>$1.4B</td></tr>
+          <tr><td class="rank-cell">27</td><td class="ticker-cell">FAST</td><td>Fastenal</td><td>29,044,747</td><td class="weight-cell">1.41%</td><td>$1.3B</td></tr>
+          <tr><td class="rank-cell">28</td><td class="ticker-cell">DVN</td><td>Devon Energy</td><td>29,169,917</td><td class="weight-cell">1.32%</td><td>$1.3B</td></tr>
+          <tr><td class="rank-cell">29</td><td class="ticker-cell">FITB</td><td>Fifth Third Bancorp</td><td>22,928,219</td><td class="weight-cell">1.29%</td><td>$1.2B</td></tr>
+          <tr><td class="rank-cell">30</td><td class="ticker-cell">ADM</td><td>Archer-Daniels-Midland</td><td>12,193,562</td><td class="weight-cell">0.98%</td><td>$930.2M</td></tr>
+          <tr><td class="rank-cell">31</td><td class="ticker-cell">KMB</td><td>Kimberly-Clark</td><td>8,396,031</td><td class="weight-cell">0.89%</td><td>$843.8M</td></tr>
+          <tr><td class="rank-cell">32</td><td class="ticker-cell">PAYX</td><td>Paychex</td><td>8,156,120</td><td class="weight-cell">0.82%</td><td>$782.4M</td></tr>
+          <tr><td class="rank-cell">33</td><td class="ticker-cell">CINF</td><td>Cincinnati Financial</td><td>3,912,916</td><td class="weight-cell">0.71%</td><td>$674.8M</td></tr>
+          <tr><td class="rank-cell">34</td><td class="ticker-cell">ARES</td><td>Ares Management</td><td>5,335,510</td><td class="weight-cell">0.71%</td><td>$671.7M</td></tr>
+          <tr><td class="rank-cell">35</td><td class="ticker-cell">HSY</td><td>Hershey</td><td>3,749,947</td><td class="weight-cell">0.67%</td><td>$640.8M</td></tr>
+          <tr><td class="rank-cell">36</td><td class="ticker-cell">RF</td><td>Regions Financial</td><td>21,590,466</td><td class="weight-cell">0.65%</td><td>$620.7M</td></tr>
+          <tr><td class="rank-cell">37</td><td class="ticker-cell">DRI</td><td>Darden Restaurants</td><td>2,897,322</td><td class="weight-cell">0.65%</td><td>$614.2M</td></tr>
+          <tr><td class="rank-cell">38</td><td class="ticker-cell">TROW</td><td>T. Rowe Price Group</td><td>5,420,837</td><td class="weight-cell">0.62%</td><td>$585.4M</td></tr>
+          <tr><td class="rank-cell">39</td><td class="ticker-cell">PFG</td><td>Principal Financial Group</td><td>4,972,701</td><td class="weight-cell">0.58%</td><td>$553.1M</td></tr>
+          <tr><td class="rank-cell">40</td><td class="ticker-cell">SNA</td><td>Snap-on</td><td>1,310,126</td><td class="weight-cell">0.54%</td><td>$511.9M</td></tr>
+          <tr><td class="rank-cell">41</td><td class="ticker-cell">GIS</td><td>General Mills</td><td>13,493,404</td><td class="weight-cell">0.47%</td><td>$449.9M</td></tr>
+          <tr><td class="rank-cell">42</td><td class="ticker-cell">EWBC</td><td>East West Bancorp</td><td>3,465,199</td><td class="weight-cell">0.47%</td><td>$447.5M</td></tr>
+          <tr><td class="rank-cell">43</td><td class="ticker-cell">BR</td><td>Broadridge Financial Solutions</td><td>2,924,869</td><td class="weight-cell">0.42%</td><td>$398.4M</td></tr>
+          <tr><td class="rank-cell">44</td><td class="ticker-cell">BBY</td><td>Best Buy</td><td>4,956,485</td><td class="weight-cell">0.40%</td><td>$376.7M</td></tr>
+          <tr><td class="rank-cell">45</td><td class="ticker-cell">WSO</td><td>Watsco</td><td>885,329</td><td class="weight-cell">0.37%</td><td>$351.6M</td></tr>
+          <tr><td class="rank-cell">46</td><td class="ticker-cell">APA</td><td>APA Corp</td><td>8,942,716</td><td class="weight-cell">0.32%</td><td>$305.8M</td></tr>
+          <tr><td class="rank-cell">47</td><td class="ticker-cell">FNF</td><td>Fidelity National Financial</td><td>6,400,248</td><td class="weight-cell">0.32%</td><td>$300.4M</td></tr>
+          <tr><td class="rank-cell">48</td><td class="ticker-cell">SWKS</td><td>Skyworks Solutions</td><td>3,805,024</td><td class="weight-cell">0.31%</td><td>$289.9M</td></tr>
+          <tr><td class="rank-cell">49</td><td class="ticker-cell">DINO</td><td>HF Sinclair</td><td>3,876,636</td><td class="weight-cell">0.27%</td><td>$255.2M</td></tr>
+          <tr><td class="rank-cell">50</td><td class="ticker-cell">AFG</td><td>American Financial Group</td><td>1,744,077</td><td class="weight-cell">0.25%</td><td>$234.3M</td></tr>
+          <tr><td class="rank-cell">51</td><td class="ticker-cell">COLB</td><td>Columbia Banking System</td><td>7,324,023</td><td class="weight-cell">0.24%</td><td>$226.1M</td></tr>
+          <tr><td class="rank-cell">52</td><td class="ticker-cell">ORI</td><td>Old Republic International</td><td>5,665,888</td><td class="weight-cell">0.23%</td><td>$221.4M</td></tr>
+          <tr><td class="rank-cell">53</td><td class="ticker-cell">ALV</td><td>Autoliv</td><td>1,742,286</td><td class="weight-cell">0.22%</td><td>$206.2M</td></tr>
+          <tr><td class="rank-cell">54</td><td class="ticker-cell">VIG</td><td>Vanguard Dividend Appreciation</td><td>846,878</td><td class="weight-cell">0.21%</td><td>$199.4M</td></tr>
+          <tr><td class="rank-cell">55</td><td class="ticker-cell">VYM</td><td>Vanguard High Dividend Yield</td><td>1,254,010</td><td class="weight-cell">0.21%</td><td>$198.6M</td></tr>
+          <tr><td class="rank-cell">56</td><td class="ticker-cell">BAH</td><td>Booz Allen Hamilton</td><td>3,050,032</td><td class="weight-cell">0.20%</td><td>$193.2M</td></tr>
+          <tr><td class="rank-cell">57</td><td class="ticker-cell">M</td><td>Macy's</td><td>6,671,495</td><td class="weight-cell">0.17%</td><td>$164.5M</td></tr>
+          <tr><td class="rank-cell">58</td><td class="ticker-cell">MSM</td><td>MSC Industrial</td><td>1,157,631</td><td class="weight-cell">0.14%</td><td>$135.9M</td></tr>
+          <tr><td class="rank-cell">59</td><td class="ticker-cell">ERIE</td><td>Erie Indemnity</td><td>642,110</td><td class="weight-cell">0.14%</td><td>$135.9M</td></tr>
+          <tr><td class="rank-cell">60</td><td class="ticker-cell">OZK</td><td>Bank OZK</td><td>2,596,122</td><td class="weight-cell">0.14%</td><td>$129.4M</td></tr>
+          <tr><td class="rank-cell">61</td><td class="ticker-cell">MTN</td><td>Vail Resorts</td><td>899,784</td><td class="weight-cell">0.13%</td><td>$127.5M</td></tr>
+          <tr><td class="rank-cell">62</td><td class="ticker-cell">MC</td><td>Moelis & Co.</td><td>1,879,572</td><td class="weight-cell">0.13%</td><td>$125.8M</td></tr>
+          <tr><td class="rank-cell">63</td><td class="ticker-cell">NXST</td><td>Nexstar Media Group</td><td>729,020</td><td class="weight-cell">0.13%</td><td>$119.6M</td></tr>
+          <tr><td class="rank-cell">64</td><td class="ticker-cell">MUR</td><td>Murphy Oil</td><td>3,408,111</td><td class="weight-cell">0.12%</td><td>$117.3M</td></tr>
+          <tr><td class="rank-cell">65</td><td class="ticker-cell">CWEN</td><td>Clearway Energy</td><td>3,062,492</td><td class="weight-cell">0.12%</td><td>$113.5M</td></tr>
+          <tr><td class="rank-cell">66</td><td class="ticker-cell">FHI</td><td>Federated Hermes</td><td>1,832,262</td><td class="weight-cell">0.12%</td><td>$110.0M</td></tr>
+          <tr><td class="rank-cell">67</td><td class="ticker-cell">CVBF</td><td>CVB Financial</td><td>4,240,549</td><td class="weight-cell">0.09%</td><td>$89.3M</td></tr>
+          <tr><td class="rank-cell">68</td><td class="ticker-cell">KFY</td><td>Korn Ferry</td><td>1,308,843</td><td class="weight-cell">0.09%</td><td>$88.7M</td></tr>
+          <tr><td class="rank-cell">69</td><td class="ticker-cell">PAG</td><td>Penske Automotive Group</td><td>465,758</td><td class="weight-cell">0.09%</td><td>$81.5M</td></tr>
+          <tr><td class="rank-cell">70</td><td class="ticker-cell">RHI</td><td>Robert Half</td><td>2,553,737</td><td class="weight-cell">0.08%</td><td>$74.3M</td></tr>
+          <tr><td class="rank-cell">71</td><td class="ticker-cell">APAM</td><td>Artisan Partners</td><td>1,796,028</td><td class="weight-cell">0.07%</td><td>$64.6M</td></tr>
+          <tr><td class="rank-cell">72</td><td class="ticker-cell">BANR</td><td>Banner Corp</td><td>859,385</td><td class="weight-cell">0.06%</td><td>$56.3M</td></tr>
+          <tr><td class="rank-cell">73</td><td class="ticker-cell">WU</td><td>Western Union</td><td>7,886,865</td><td class="weight-cell">0.06%</td><td>$55.9M</td></tr>
+          <tr><td class="rank-cell">74</td><td class="ticker-cell">MZTI</td><td>Marzetti</td><td>513,377</td><td class="weight-cell">0.06%</td><td>$53.8M</td></tr>
+          <tr><td class="rank-cell">75</td><td class="ticker-cell">CNS</td><td>Cohen & Steers</td><td>702,281</td><td class="weight-cell">0.06%</td><td>$53.1M</td></tr>
+          <tr><td class="rank-cell">76</td><td class="ticker-cell">OFG</td><td>OFG Bancorp</td><td>1,069,099</td><td class="weight-cell">0.05%</td><td>$50.5M</td></tr>
+          <tr><td class="rank-cell">77</td><td class="ticker-cell">NBHC</td><td>National Bank Holdings</td><td>1,133,207</td><td class="weight-cell">0.05%</td><td>$48.4M</td></tr>
+          <tr><td class="rank-cell">78</td><td class="ticker-cell">CHCO</td><td>City Holding</td><td>356,994</td><td class="weight-cell">0.05%</td><td>$45.6M</td></tr>
+          <tr><td class="rank-cell">79</td><td class="ticker-cell">IPAR</td><td>Inter Parfums</td><td>461,833</td><td class="weight-cell">0.05%</td><td>$45.1M</td></tr>
+          <tr><td class="rank-cell">80</td><td class="ticker-cell">AGM</td><td>Federal Agricultural Mortgage</td><td>235,717</td><td class="weight-cell">0.05%</td><td>$43.2M</td></tr>
+          <tr><td class="rank-cell">81</td><td class="ticker-cell">GABC</td><td>German American Bancorp</td><td>950,348</td><td class="weight-cell">0.05%</td><td>$43.1M</td></tr>
+          <tr><td class="rank-cell">82</td><td class="ticker-cell">STBA</td><td>S&T Bancorp</td><td>910,209</td><td class="weight-cell">0.05%</td><td>$43.1M</td></tr>
+          <tr><td class="rank-cell">83</td><td class="ticker-cell">FLO</td><td>Flowers Foods</td><td>5,387,939</td><td class="weight-cell">0.04%</td><td>$39.6M</td></tr>
+          <tr><td class="rank-cell">84</td><td class="ticker-cell">LKFN</td><td>Lakeland Financial</td><td>630,292</td><td class="weight-cell">0.04%</td><td>$38.0M</td></tr>
+          <tr><td class="rank-cell">85</td><td class="ticker-cell">SRCE</td><td>1st Source Corp</td><td>456,682</td><td class="weight-cell">0.04%</td><td>$35.5M</td></tr>
+          <tr><td class="rank-cell">86</td><td class="ticker-cell">BKE</td><td>Buckle</td><td>768,143</td><td class="weight-cell">0.04%</td><td>$34.4M</td></tr>
+          <tr><td class="rank-cell">87</td><td class="ticker-cell">NSP</td><td>Insperity</td><td>924,621</td><td class="weight-cell">0.03%</td><td>$31.5M</td></tr>
+          <tr><td class="rank-cell">88</td><td class="ticker-cell">PFBC</td><td>Preferred Bank</td><td>278,615</td><td class="weight-cell">0.03%</td><td>$27.8M</td></tr>
+          <tr><td class="rank-cell">89</td><td class="ticker-cell">CNA</td><td>CNA Financial</td><td>548,126</td><td class="weight-cell">0.03%</td><td>$25.1M</td></tr>
+          <tr><td class="rank-cell">90</td><td class="ticker-cell">WEN</td><td>Wendy's</td><td>4,037,936</td><td class="weight-cell">0.03%</td><td>$24.9M</td></tr>
+          <tr><td class="rank-cell">91</td><td class="ticker-cell">CPF</td><td>Central Pacific Financial</td><td>670,205</td><td class="weight-cell">0.03%</td><td>$24.3M</td></tr>
+          <tr><td class="rank-cell">92</td><td class="ticker-cell">HAFC</td><td>Hanmi Financial</td><td>757,826</td><td class="weight-cell">0.03%</td><td>$23.8M</td></tr>
+          <tr><td class="rank-cell">93</td><td class="ticker-cell">VRTS</td><td>Virtus Investment Partners</td><td>161,272</td><td class="weight-cell">0.02%</td><td>$22.7M</td></tr>
+          <tr><td class="rank-cell">94</td><td class="ticker-cell">THFF</td><td>First Financial Corp</td><td>299,101</td><td class="weight-cell">0.02%</td><td>$22.1M</td></tr>
+          <tr><td class="rank-cell">95</td><td class="ticker-cell">ORRF</td><td>Orrstown Financial Services</td><td>497,057</td><td class="weight-cell">0.02%</td><td>$19.4M</td></tr>
+          <tr><td class="rank-cell">96</td><td class="ticker-cell">IBCP</td><td>Independent Bank Corp</td><td>520,621</td><td class="weight-cell">0.02%</td><td>$17.8M</td></tr>
+          <tr><td class="rank-cell">97</td><td class="ticker-cell">CCBG</td><td>Capital City Bank</td><td>350,422</td><td class="weight-cell">0.02%</td><td>$16.4M</td></tr>
+          <tr><td class="rank-cell">98</td><td class="ticker-cell">AMSF</td><td>AMERISAFE</td><td>481,266</td><td class="weight-cell">0.02%</td><td>$15.1M</td></tr>
+          <tr><td class="rank-cell">—</td><td class="ticker-cell">USD</td><td>U.S. Dollar (Cash)</td><td>23,391,170</td><td class="weight-cell">0.02%</td><td>$23.4M</td></tr>
+          <tr><td class="rank-cell">—</td><td class="ticker-cell">GVMXX</td><td>SSC Government MM</td><td>77,166,835</td><td class="weight-cell">0.08%</td><td>$77.2M</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">Top 10 rows highlighted. Data sourced from Schwab SCHD fund holdings page as of 06/22/2026. Subject to change.</p>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div style="background:var(--green-dark);border-radius:8px;padding:18px 24px;margin:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;box-shadow:var(--shadow);">
+      <div>
+        <div style="color:#7dffb0;font-weight:900;font-size:1rem;margin-bottom:3px;">📈 See How SCHD Ranks Against 99 Other Dividend ETFs</div>
+        <div style="color:rgba(255,255,255,.8);font-size:0.87rem;">Daily-updated yields, grades, AUM & community votes — 100% free.</div>
+      </div>
+      <a href="https://topdividendetfs.com" style="background:#7dffb0;color:var(--green-dark);font-weight:900;font-size:0.9rem;padding:10px 20px;border-radius:6px;text-decoration:none;white-space:nowrap;box-shadow:0 3px 8px rgba(0,0,0,.2);">View Top 100 ETFs →</a>
+    </div>
+
+    <!-- KEY TAKEAWAYS -->
+    <h2 class="section-title">Key Takeaways for SCHD Investors</h2>
+    <p class="section-lead">What the Q2 2026 rebalance means for your portfolio.</p>
+
+    <ul class="takeaway-list">
+      <li class="takeaway-item">
+        <div class="takeaway-icon">✂️</div>
+        <div>
+          <strong>Tech exposure cut nearly in half</strong>
+          <span>TXN fell from 6.39% to 4.35% and QCOM dropped from 6.22% to 3.59%. Combined, those two positions shrank from 12.61% to 7.94% of the fund — a 4.67 percentage point reduction from just two stocks.</span>
+        </div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-icon">🛡️</div>
+        <div>
+          <strong>Defensive dividend names received the freed-up weight</strong>
+          <span>ABT (+0.94%), HD (+0.59%), AMGN (+0.56%), PEP (+0.52%), PG (+0.46%), and MRK (+0.28%) were all meaningfully increased — all blue-chip names with strong dividend track records.</span>
+        </div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-icon">⚖️</div>
+        <div>
+          <strong>Concentration risk lowered meaningfully</strong>
+          <span>Top 5 holdings went from 25.98% to 21.31% of assets. Top 10 went from 44.26% to 41.13%. The fund is now better diversified at the top than it has been in recent quarters.</span>
+        </div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-icon">📊</div>
+        <div>
+          <strong>No single holding is above 4.36%</strong>
+          <span>Before this rebalance, SCHD had three holdings above 5.5%. The 4% per-stock cap is now effectively enforced across the entire top of the portfolio, making the fund more index-like and less dependent on any single name.</span>
+        </div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-icon">🏥</div>
+        <div>
+          <strong>Healthcare and Staples now each at 20% — the fund's two largest sectors</strong>
+          <span>Both sectors grew by one percentage point, reinforcing SCHD's reputation as a defensive, income-oriented ETF rather than a tech-heavy dividend play.</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="info-box">
+      <h3>💬 What Do You Think of the Q2 Rebalance?</h3>
+      <p>For most SCHD investors, the most consequential change was the removal of TXN and QCOM from a combined ~12.6% of assets down to ~7.9%, with that weight flowing into healthcare, consumer staples, and other holdings throughout the fund. Whether you see that as a defensive pivot or a missed opportunity in tech depends on your outlook — but the fund's mandate is dividend quality and sustainability, and this rebalance reflects exactly that.</p>
+      <p>Share your thoughts and check how SCHD stacks up against other top dividend ETFs at <a href="https://topdividendetfs.com" style="color:var(--green-dark);font-weight:900;text-decoration:underline;">TopDividendETFs.com →</a></p>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer-box">
+      <h3>Important Disclaimer</h3>
+      <p>Holdings data on this page is sourced from Schwab's published SCHD fund holdings as of June 22, 2026, and is for informational purposes only. NUMBERS COULD BE INACURATE & OUT OF DATE. Pre-rebalance weight figures are approximate and sourced from publicly available data. This page does not constitute financial or investment advice. Always verify current holdings and weights through Charles Schwab's official materials or your brokerage. TopDividendETFs.com is not affiliated with Charles Schwab Corporation.</p>
+    </div>
+
+    <!-- EXPLORE MORE CTA -->
+    <div style="background:var(--white);border:3px solid var(--green-mid);border-radius:10px;padding:28px 28px;margin:24px 0 10px;box-shadow:var(--shadow);text-align:center;">
+      <div style="font-size:1.5rem;margin-bottom:8px;">📊</div>
+      <h3 style="color:var(--green-dark);font-size:1.2rem;font-weight:900;margin-bottom:8px;">Explore 99 More Dividend ETFs!</h3>
+      <p style="color:var(--text-mid);font-size:0.95rem;margin-bottom:18px;max-width:560px;margin-left:auto;margin-right:auto;">
+        <a href="https://topdividendetfs.com" style="color:var(--green-dark);font-weight:900;text-decoration:underline;">TopDividendETFs.com</a> is the only daily-updated, community-voted list of the <strong>Top 100 Dividend ETFs</strong> — completely free. Compare yields, grades, AUM, and more all in one place.
+      </p>
+      <a href="https://topdividendetfs.com" style="display:inline-block;background:var(--green-dark);color:#fff;font-weight:900;font-size:1rem;padding:13px 30px;border-radius:8px;text-decoration:none;border:2px solid var(--green-mid);box-shadow:0 4px 12px rgba(0,0,0,.2);">
+        🏆 See the Top 100 Dividend ETFs →
+      </a>
+      <div style="margin-top:12px;font-size:0.82rem;color:var(--text-light);">Free · No sign-up · Updated daily</div>
+    </div>
+
+    <!-- SHARE -->
+    <div class="share-buttons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftopdividendetfs.com%2Fschd-q2-2026-rebalance" target="_blank" class="share-btn fb" onclick="window.open(this.href,'','width=570,height=350');return false;">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Share
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftopdividendetfs.com%2Fschd-q2-2026-rebalance&text=SCHD%20Q2%202026%20Rebalance%20is%20complete%20%E2%80%94%20TXN%20%2B%20QCOM%20cut%20from%2012.6%25%20to%207.9%25%2C%20defensives%20boosted.%20Full%20breakdown%20%40TopDividendETFs" target="_blank" class="share-btn xbtn" onclick="window.open(this.href,'','width=570,height=350');return false;">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Post
+      </a>
+    </div>
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
+
+    <footer class="footer">
+      <p style="margin-bottom:10px;">
+        <a href="https://topdividendetfs.com" style="font-weight:900;font-size:1.05em;color:var(--green-dark);">← Back to TopDividendETFs.com Home</a>
+      </p>
+      <p>
+        <a href="terms-of-use.html">Terms of Use</a> |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="FAQ.html">FAQ</a> |
+        <a href="schd-etf-2026-dividend-dates.html">SCHD 2026 Dividend Dates</a> |
+        Contact: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
+      </p>
+      <p style="margin-top:12px;text-align:center;">
+        <strong>
+          <a href="https://weeklyetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none;margin-right:20px;">Top 100 Weekly Dividend ETFs!</a>
+          <a href="https://growthetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none;">Top Growth ETFs!</a>
+        </strong>
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
