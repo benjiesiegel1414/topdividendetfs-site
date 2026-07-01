@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929351005136304"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title id="pageTitle">ETF Scorecard | TopDividendETFs.com</title>
+    <meta id="pageDescription" name="description" content="Full scorecard for this dividend ETF — yield, grade, AUM, price decay, and live community votes, updated daily.">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B8TGV115DP', { send_page_view: false });
+    </script>
+
+    <style>
+        html, body{margin:0;padding:0;overflow-x:hidden !important;width:100%;position:relative}
+        *, *::before, *::after{box-sizing:border-box;}
+        :root{--green:#2E5D54;--red:#e74c3c;--darkgreen:#1A3C34;--gold:#FFD700}
+        body{font-family:'Lato',Arial,sans-serif;margin:0;background:#f4f4f4;color:#333;display:flex;flex-direction:column;align-items:center;min-height:100vh}
+        a{color:inherit;}
+
+        header{background:#1A3C34;padding:15px 20px;color:#fff;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.2);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;display:flex;justify-content:center;align-items:center;position:relative;}
+        .logo{font-size:clamp(20px,5vw,32px);font-weight:900;text-decoration:none;color:#fff;}
+
+        .site-network-bar{width:100%;background:#fff;border-bottom:1px solid #ddd;padding:8px 0;}
+        .site-network-track{max-width:1700px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:8px;overflow-x:auto;white-space:nowrap;-ms-overflow-style:none;scrollbar-width:none;}
+        .site-network-track::-webkit-scrollbar{display:none;}
+        .site-network-track::after{content:"";flex:0 0 4px;}
+        .site-network-label{font-size:0.68em;text-transform:uppercase;letter-spacing:0.5px;color:#999;font-weight:900;flex-shrink:0;margin-right:2px;}
+        .site-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid #1A3C34;background:#fff;color:#1A3C34;font-size:0.8em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s ease, color .15s ease;}
+        .site-pill:hover{background:#1A3C34;color:#fff;}
+        .site-pill.current{background:#1A3C34;color:#fff;cursor:default;}
+
+        .content{width:94%;max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+        .back-link{align-self:flex-start;margin:20px 0 4px;font-weight:700;color:#1A3C34;text-decoration:none;font-size:0.92em;}
+        .back-link:hover{text-decoration:underline;}
+
+        .loading-state, .error-state{padding:80px 20px;text-align:center;color:#666;width:100%;}
+        .spinner{width:36px;height:36px;border-radius:50%;border:3px solid #ddd;border-top-color:var(--green);animation:spin .8s linear infinite;margin:0 auto 18px;}
+        @keyframes spin{to{transform:rotate(360deg);}}
+        .error-state h2{color:#1A3C34;margin-bottom:10px;}
+        .error-state a{color:#1A3C34;font-weight:900;}
+
+        #scorecard{width:100%;display:none;}
+
+        /* ══════════════ GLASS HERO — carried over from the old photon-card look ══════════════ */
+        .glass-hero{
+            position:relative; width:100%; border-radius:22px; overflow:hidden;
+            background:linear-gradient(160deg, #14291c 0%, #0d1712 100%);
+            padding:34px 24px 30px; margin:24px auto 20px; text-align:center;
+            box-shadow:0 20px 50px rgba(0,0,0,.35);
+        }
+        .orb{position:absolute;border-radius:50%;filter:blur(45px);opacity:.35;animation:float 7s infinite ease-in-out;pointer-events:none;}
+        .orb1{width:220px;height:220px;background:radial-gradient(circle,#2E5D54,transparent);top:-80px;left:-80px;}
+        .orb2{width:180px;height:180px;background:radial-gradient(circle,#4CAF50,transparent);bottom:-60px;right:-60px;animation-delay:2.5s;}
+        .orb3{width:130px;height:130px;background:radial-gradient(circle,#8BC34A,transparent);top:60%;left:70%;animation-delay:4.5s;opacity:.25;}
+        @keyframes float{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-18px) translateX(10px)}}
+
+        .glass-hero-inner{position:relative; z-index:2;}
+        .glass-symbol{font-size:2.6em;font-weight:900;color:#fff;margin:0 0 2px;
+            text-shadow:0 0 25px rgba(255,255,255,.35); letter-spacing:-0.5px;}
+        .glass-name{font-size:1em;color:#cfd8d4;font-weight:600;margin:0 0 22px;}
+
+        .glass-stats{display:flex; justify-content:center; gap:14px; flex-wrap:wrap;}
+        .glass-stat{
+            background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
+            border-radius:16px; padding:16px 22px; min-width:130px;
+        }
+        .glass-stat-label{font-size:0.68em; text-transform:uppercase; letter-spacing:1px; color:#a9b8b2; font-weight:700; margin-bottom:6px;}
+        .glass-stat-value{font-size:1.9em; font-weight:900; color:#fff;}
+        .glass-stat-value.neon{color:#39FF14; text-shadow:0 0 16px rgba(57,255,20,.5);}
+        .glass-stat-value.decay-yes{color:#ff6b5b;}
+        .glass-stat-value.decay-no{color:#4CAF50;}
+        .glass-grade-badge{
+            display:inline-block; font-size:1.9em; font-weight:900; padding:2px 4px;
+        }
+
+        /* ══════════════ GRADE SPECTRUM GAUGE ══════════════ */
+        .panel{
+            width:100%; background:#fff; border-radius:16px; border:1px solid #e2e2e2;
+            padding:22px 24px; margin-bottom:18px; box-shadow:0 3px 12px rgba(0,0,0,.06);
+        }
+        .panel-title{font-size:0.95em; font-weight:900; color:#1A3C34; margin-bottom:14px; text-transform:uppercase; letter-spacing:0.5px; text-align:center;}
+        .grade-track{position:relative; height:14px; border-radius:8px; margin:0 6px 10px;
+            background:linear-gradient(to right, #e74c3c, #f5a623, #f7d84a, #7ed957, #2ecc71);}
+        .grade-marker{
+            position:absolute; top:-9px; width:32px; height:32px; margin-left:-16px;
+            background:#fff; border:3px solid #1A3C34; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            font-size:0.72em; font-weight:900; color:#1A3C34;
+            box-shadow:0 3px 8px rgba(0,0,0,.25); transition:left .5s ease;
+        }
+        .grade-scale-labels{display:flex; justify-content:space-between; font-size:0.72em; color:#999; padding:0 2px;}
+
+        /* ══════════════ YIELD VS AVERAGE COMPARISON ══════════════ */
+        .compare-row{display:flex; flex-direction:column; gap:14px;}
+        .compare-item{}
+        .compare-label{display:flex; justify-content:space-between; font-size:0.85em; font-weight:700; color:#444; margin-bottom:6px;}
+        .compare-label b{color:#1A3C34;}
+        .compare-track{background:#eef1ee; border-radius:8px; height:20px; overflow:hidden;}
+        .compare-fill{height:100%; border-radius:8px; transition:width .5s ease; display:flex; align-items:center; justify-content:flex-end; padding-right:8px;}
+        .compare-fill.this-etf{background:linear-gradient(90deg,#2E5D54,#4CAF50);}
+        .compare-fill.average{background:#b7c2bd;}
+        .compare-fill span{font-size:0.7em; font-weight:900; color:#fff;}
+        .compare-note{font-size:0.8em; color:#777; text-align:center; margin-top:12px;}
+        .compare-note b{color:#2E5D54;}
+
+        /* ══════════════ LIVE VOTE PANEL ══════════════ */
+        .vote-panel{text-align:center;}
+        .vote-count-display{font-size:2.4em; font-weight:900; color:#1A3C34; margin:6px 0 2px;}
+        .vote-rank{font-size:0.9em; color:#2E5D54; font-weight:700; margin-bottom:16px;}
+        .vote-cast-btn{
+            background:linear-gradient(135deg,#2E5D54,#1A3C34); color:#fff; border:none;
+            padding:12px 30px; border-radius:10px; font-weight:900; font-size:1em;
+            cursor:pointer; box-shadow:0 4px 14px rgba(46,93,84,.4); transition:all .2s;
+        }
+        .vote-cast-btn:hover{transform:translateY(-2px); box-shadow:0 6px 18px rgba(46,93,84,.55);}
+        .vote-cast-btn:disabled{background:#ccc; cursor:default; box-shadow:none; transform:none;}
+        .vote-msg{margin-top:10px; font-size:0.82em; color:#888; font-weight:700;}
+
+        /* ══════════════ DETAIL PANEL ══════════════ */
+        .detail-row{display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #eee; font-size:0.94em;}
+        .detail-row:last-child{border-bottom:none;}
+        .detail-row .label{color:#777;}
+        .detail-row .value{font-weight:900; color:#1A3C34;}
+
+        .cta-row{display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin:6px auto 20px;}
+        .cta-btn{display:inline-block; padding:11px 24px; border-radius:8px; font-weight:900; font-size:0.92em; text-decoration:none; box-shadow:0 3px 10px rgba(0,0,0,.15); transition:all .2s;}
+        .cta-btn.primary{background:#2E5D54; color:#fff;}
+        .cta-btn.primary:hover{background:#1A3C34; transform:translateY(-2px);}
+        .cta-btn.ghost{background:#fff; color:#1A3C34; border:1px solid #1A3C34;}
+        .cta-btn.ghost:hover{background:#f4f4f4;}
+
+        .share-buttons{margin:6px auto 20px; display:flex; gap:14px; justify-content:center;}
+        .share-btn{display:flex; align-items:center; gap:6px; padding:8px 14px; border-radius:6px; font-weight:700; font-size:0.85em; color:#fff; text-decoration:none; box-shadow:0 3px 8px rgba(0,0,0,.2); transition:all .2s;}
+        .share-btn:hover{transform:translateY(-2px); box-shadow:0 6px 14px rgba(0,0,0,.3);}
+        .share-btn.fb{background:#1877F2;} .share-btn.x{background:#000;}
+        .share-btn svg{width:15px; height:15px; fill:currentColor;}
+
+        .disclaimer{font-size:.85em; color:#666; margin:6px auto 40px; max-width:900px; line-height:1.5; text-align:center;}
+
+        .footer{margin-top:10px; padding:25px; background:#fff; width:100%; text-align:center; font-size:0.9em; color:#555; border-top:1px solid #ddd;}
+        .footer a{color:#1A3C34; text-decoration:none;}
+        .footer a:hover{text-decoration:underline;}
+
+        @media(max-width:560px){
+            .glass-hero{padding:26px 16px 22px;}
+            .glass-symbol{font-size:2.1em;}
+            .glass-stats{gap:10px;}
+            .glass-stat{padding:12px 16px; min-width:100px;}
+            .glass-stat-value{font-size:1.5em;}
+            .panel{padding:18px 16px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">TopDividendETFs.com</a>
+    </header>
+
+    <div class="site-network-bar">
+        <div class="site-network-track">
+            <span class="site-network-label">Our Sites:</span>
+            <span class="site-pill current" title="You're here">💵 TopDividendETFs.com</span>
+            <a href="https://weeklyetfs.com/" class="site-pill" title="Best weekly paying dividend ETFs">📅 WeeklyETFs.com</a>
+            <a href="https://monthlyetfs.com/" class="site-pill" title="Best monthly paying dividend ETFs">🗓️ MonthlyETFs.com</a>
+            <a href="https://growthetfs.com/" class="site-pill" title="High growth dividend & growth ETFs">📈 GrowthETFs.com</a>
+            <a href="https://topspaceetfs.com/" class="site-pill" title="Best space & aerospace ETFs ranked">🚀 TopSpaceETFs.com</a>
+            <a href="https://etftotalreturns.com/" class="site-pill" title="Total return analysis & performance metrics for ETFs">📊 ETFTotalReturns.com</a>
+            <a href="https://topdividendtools.com/" class="site-pill" title="Best tools & calculators for dividend investors">🛠️ TopDividendTools.com</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <a href="/" class="back-link">← Back to All 100 ETFs</a>
+
+        <div class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <div>Loading scorecard…</div>
+        </div>
+
+        <div class="error-state" id="errorState" style="display:none;">
+            <h2>ETF Not Found</h2>
+            <p>We couldn't find a ticker matching that symbol in our rankings.</p>
+            <p><a href="/">← View All Dividend ETFs</a></p>
+        </div>
+
+        <div id="scorecard">
+
+            <div class="glass-hero">
+                <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+                <div class="glass-hero-inner">
+                    <h1 class="glass-symbol" id="heroSymbol">—</h1>
+                    <p class="glass-name" id="heroName">—</p>
+                    <div class="glass-stats">
+                        <div class="glass-stat">
+                            <div class="glass-stat-label">Dividend Yield</div>
+                            <div class="glass-stat-value neon" id="heroYield">—</div>
+                        </div>
+                        <div class="glass-stat">
+                            <div class="glass-stat-label">Grade</div>
+                            <div class="glass-stat-value glass-grade-badge" id="heroGrade">—</div>
+                        </div>
+                        <div class="glass-stat">
+                            <div class="glass-stat-label">AUM</div>
+                            <div class="glass-stat-value" id="heroAUM" style="font-size:1.4em;">—</div>
+                        </div>
+                        <div class="glass-stat">
+                            <div class="glass-stat-label">Price Decay</div>
+                            <div class="glass-stat-value" id="heroDecay" style="font-size:1.3em;">—</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Grade Spectrum</div>
+                <div class="grade-track">
+                    <div class="grade-marker" id="gradeMarker">—</div>
+                </div>
+                <div class="grade-scale-labels"><span>F</span><span>C</span><span>A+</span></div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Yield vs. The Field</div>
+                <div class="compare-row">
+                    <div class="compare-item">
+                        <div class="compare-label"><span>This ETF</span><b id="compareThisLabel">—</b></div>
+                        <div class="compare-track"><div class="compare-fill this-etf" id="compareThisBar"><span id="compareThisText"></span></div></div>
+                    </div>
+                    <div class="compare-item">
+                        <div class="compare-label"><span>Average of all tracked ETFs</span><b id="compareAvgLabel">—</b></div>
+                        <div class="compare-track"><div class="compare-fill average" id="compareAvgBar"><span id="compareAvgText"></span></div></div>
+                    </div>
+                </div>
+                <div class="compare-note" id="compareNote"></div>
+            </div>
+
+            <div class="panel vote-panel">
+                <div class="panel-title">Community Vote</div>
+                <div class="vote-count-display" id="voteCount">—</div>
+                <div class="vote-rank" id="voteRank">—</div>
+                <button class="vote-cast-btn" id="voteBtn">🗳️ Vote For This ETF</button>
+                <div class="vote-msg" id="voteMsg"></div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Fund Details</div>
+                <div class="detail-row"><span class="label">Ticker Symbol</span><span class="value" id="detailSymbol">—</span></div>
+                <div class="detail-row"><span class="label">Fund Name</span><span class="value" id="detailName">—</span></div>
+                <div class="detail-row"><span class="label">Dividend Yield</span><span class="value" id="detailYield">—</span></div>
+                <div class="detail-row"><span class="label">AUM</span><span class="value" id="detailAUM">—</span></div>
+                <div class="detail-row"><span class="label">Price Decay</span><span class="value" id="detailDecay">—</span></div>
+                <div class="detail-row"><span class="label">Grade</span><span class="value" id="detailGrade">—</span></div>
+            </div>
+
+            <div class="cta-row">
+                <a href="/" class="cta-btn primary">← Compare All 100 ETFs</a>
+                <a href="https://topdividendetfs.com/blog" class="cta-btn ghost">Read the Blog →</a>
+            </div>
+
+            <div class="share-buttons">
+                <a href="#" id="shareFb" target="_blank" class="share-btn fb" onclick="window.open(this.href,'','width=570,height=350');return false;">
+                    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Share
+                </a>
+                <a href="#" id="shareX" target="_blank" class="share-btn x" onclick="window.open(this.href,'','width=570,height=350');return false;">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Post
+                </a>
+            </div>
+
+            <p class="disclaimer">
+                Disclaimer: This scorecard is for educational purposes only. ETF data, grades, and dividend information may be inaccurate or outdated. Grades and votes are opinion-based and are NOT a buy or sell signal. Investing carries risk, including loss of principal. We are not financial advisors. Always consult a licensed financial advisor before making investment decisions.
+            </p>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            <a href="/terms-of-use.html">Terms of Use</a> |
+            <a href="/privacy-policy.html">Privacy Policy</a> |
+            <a href="/FAQ.html">FAQ</a> |
+            <a href="https://etftotalreturns.com/">Total Returns</a> |
+            <a href="https://topdividendetfs.com/blog">Blog</a>
+        </p>
+    </footer>
+
+<script>
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv';
+const VOTE_API = 'https://script.google.com/macros/s/AKfycbwiuyy8aUNB3tNKouJ18zxE8r8nuiCTk3lG9PCYeqEQndImu_8915rNHudiayXtFNbi/exec';
+
+const GRADE_RANK = {'A+':0,'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7,'C-':8,'D+':9,'D':10,'D-':11,'F':12};
+
+function getQueryParam(name) {
+  return new URLSearchParams(window.location.search).get(name);
+}
+
+function gradeTierColor(grade) {
+  const rank = GRADE_RANK[grade.trim()];
+  if (rank === undefined) return '#1A3C34';
+  if (rank <= 2) return '#2ecc71';
+  if (rank <= 5) return '#7ed957';
+  if (rank <= 8) return '#f5a623';
+  return '#e74c3c';
+}
+
+function getHourKey() {
+  const d = new Date();
+  d.setMinutes(0, 0, 0);
+  return 'votes_' + d.getTime();
+}
+function votesThisHour() { return parseInt(localStorage.getItem(getHourKey()) || '0'); }
+function addVoteThisHour() { localStorage.setItem(getHourKey(), votesThisHour() + 1); }
+function hasVotedFor(symbol) { return localStorage.getItem('voted_' + symbol) === '1'; }
+function markVotedFor(symbol) { localStorage.setItem('voted_' + symbol, '1'); }
+
+function trackScorecardPageview(symbol, name) {
+  const path = '/etf/' + encodeURIComponent(symbol);
+  const title = name + ' (' + symbol + ') — ETF Scorecard | TopDividendETFs.com';
+  document.title = title;
+  gtag('event', 'page_view', {
+    page_path: path,
+    page_title: title,
+    page_location: window.location.origin + path
+  });
+}
+
+let currentSymbol = null;
+
+async function loadScorecard() {
+  const symbol = (getQueryParam('symbol') || '').trim().toUpperCase();
+  const loadingEl = document.getElementById('loadingState');
+  const errorEl = document.getElementById('errorState');
+  const cardEl = document.getElementById('scorecard');
+
+  if (!symbol) {
+    loadingEl.style.display = 'none';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  try {
+    const res = await fetch(CSV_URL + '&t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const txt = await res.text();
+    const lines = txt.split('\n');
+
+    let match = null;
+    const allYields = [];
+
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',').map(c => c.trim());
+      if (cols.length < 6) continue;
+      const y = parseFloat(cols[2]);
+      if (!isNaN(y)) allYields.push(y);
+      if (cols[0].toUpperCase() === symbol) match = cols;
+    }
+
+    if (!match) {
+      loadingEl.style.display = 'none';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    const sym    = match[0];
+    const name   = match[1];
+    const yieldStr = match[2];
+    const aum    = match[3];
+    const decay  = match[4];
+    const grade  = match[5];
+    currentSymbol = sym;
+
+    const yieldNum = parseFloat(yieldStr) || 0;
+    const avgYield = allYields.length ? (allYields.reduce((a,b) => a+b, 0) / allYields.length) : 0;
+    const sortedDesc = [...allYields].sort((a,b) => b - a);
+    const yieldRankPos = sortedDesc.findIndex(v => v === yieldNum) + 1;
+
+    document.getElementById('heroSymbol').textContent = sym;
+    document.getElementById('heroName').textContent = name;
+    document.getElementById('heroYield').textContent = yieldStr + (yieldStr.includes('%') ? '' : '%');
+    const heroGrade = document.getElementById('heroGrade');
+    heroGrade.textContent = grade;
+    heroGrade.style.color = gradeTierColor(grade);
+    heroGrade.style.textShadow = '0 0 18px ' + gradeTierColor(grade) + '99';
+    document.getElementById('heroAUM').textContent = aum;
+    const heroDecay = document.getElementById('heroDecay');
+    heroDecay.textContent = decay;
+    heroDecay.className = 'glass-stat-value ' + (decay.toUpperCase() === 'YES' ? 'decay-yes' : 'decay-no');
+
+    document.getElementById('detailSymbol').textContent = sym;
+    document.getElementById('detailName').textContent = name;
+    document.getElementById('detailYield').textContent = yieldStr;
+    document.getElementById('detailAUM').textContent = aum;
+    document.getElementById('detailDecay').textContent = decay;
+    document.getElementById('detailGrade').textContent = grade;
+
+    // Grade spectrum marker: rank 0 (A+) = far right, rank 12 (F) = far left
+    const rank = GRADE_RANK[grade.trim()] !== undefined ? GRADE_RANK[grade.trim()] : 6;
+    const markerPos = ((12 - rank) / 12) * 100;
+    const marker = document.getElementById('gradeMarker');
+    marker.style.left = markerPos + '%';
+    marker.textContent = grade;
+    marker.style.borderColor = gradeTierColor(grade);
+    marker.style.color = gradeTierColor(grade);
+
+    // Yield vs field comparison bars, scaled against the higher of the two values
+    const maxScale = Math.max(yieldNum, avgYield, 1) * 1.15;
+    const thisPct = Math.min((yieldNum / maxScale) * 100, 100);
+    const avgPct = Math.min((avgYield / maxScale) * 100, 100);
+    document.getElementById('compareThisBar').style.width = thisPct + '%';
+    document.getElementById('compareThisText').textContent = yieldStr;
+    document.getElementById('compareAvgBar').style.width = avgPct + '%';
+    document.getElementById('compareAvgText').textContent = avgYield.toFixed(1) + '%';
+    document.getElementById('compareThisLabel').textContent = yieldStr;
+    document.getElementById('compareAvgLabel').textContent = avgYield.toFixed(1) + '%';
+
+    const diff = yieldNum - avgYield;
+    const diffAbs = Math.abs(diff).toFixed(1);
+    let noteHtml;
+    if (yieldRankPos > 0) {
+      noteHtml = sym + ' ranks <b>#' + yieldRankPos + ' of ' + allYields.length + '</b> by yield, ';
+    } else {
+      noteHtml = sym + ' compares against ' + allYields.length + ' tracked ETFs, ';
+    }
+    noteHtml += diff >= 0
+      ? 'yielding <b>' + diffAbs + ' points above</b> the group average.'
+      : 'yielding <b>' + diffAbs + ' points below</b> the group average.';
+    document.getElementById('compareNote').innerHTML = noteHtml;
+
+    document.getElementById('shareFb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href);
+    document.getElementById('shareX').href = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(sym + ' (' + name + ') — ' + yieldStr + ' yield, Grade ' + grade + ' on TopDividendETFs.com');
+
+    document.getElementById('pageTitle').textContent = name + ' (' + sym + ') — ETF Scorecard | TopDividendETFs.com';
+    document.getElementById('pageDescription').setAttribute('content',
+      name + ' (' + sym + ') scorecard: yield ' + yieldStr + ', grade ' + grade + ', AUM ' + aum + '. Updated daily.');
+
+    loadingEl.style.display = 'none';
+    cardEl.style.display = 'block';
+
+    trackScorecardPageview(sym, name);
+    loadVotes(sym);
+
+  } catch (err) {
+    console.error(err);
+    loadingEl.style.display = 'none';
+    errorEl.style.display = 'block';
+  }
+}
+
+async function loadVotes(symbol) {
+  const voteCountEl = document.getElementById('voteCount');
+  const voteRankEl = document.getElementById('voteRank');
+  const voteBtn = document.getElementById('voteBtn');
+  const voteMsg = document.getElementById('voteMsg');
+
+  try {
+    const res = await fetch(VOTE_API + '?action=getAll&t=' + Date.now());
+    const data = res.ok ? await res.json() : {};
+    const thisVotes = data[symbol] || 0;
+    voteCountEl.textContent = thisVotes.toLocaleString() + (thisVotes === 1 ? ' vote' : ' votes');
+
+    const entries = Object.entries(data).sort((a,b) => b[1] - a[1]);
+    const rankIdx = entries.findIndex(([sym]) => sym === symbol);
+    voteRankEl.textContent = rankIdx >= 0 && thisVotes > 0
+      ? '#' + (rankIdx + 1) + ' most voted this week'
+      : 'No votes yet this week — be the first!';
+  } catch (e) {
+    voteCountEl.textContent = '—';
+    voteRankEl.textContent = '';
+  }
+
+  if (hasVotedFor(symbol)) {
+    voteBtn.disabled = true;
+    voteBtn.textContent = '✓ Voted';
+    voteMsg.textContent = "You've already voted for this ETF.";
+  }
+
+  voteBtn.onclick = async () => {
+    if (hasVotedFor(symbol)) return;
+    if (votesThisHour() >= 10) {
+      voteMsg.textContent = 'You have used all 10 votes for this hour. Try again next hour.';
+      return;
+    }
+    voteBtn.disabled = true;
+    voteBtn.textContent = '✓ Voted';
+    const current = parseInt(voteCountEl.textContent) || 0;
+    voteCountEl.textContent = (current + 1).toLocaleString() + ((current + 1) === 1 ? ' vote' : ' votes');
+    addVoteThisHour();
+    markVotedFor(symbol);
+    voteMsg.textContent = 'Thanks for voting! You have ' + (10 - votesThisHour()) + ' votes left this hour.';
+
+    fetch(VOTE_API, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({action: 'vote', symbol: symbol})
+    });
+  };
+}
+
+loadScorecard();
+</script>
+</body>
+</html>
