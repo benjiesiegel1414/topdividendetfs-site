@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B8TGV115DP');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -201,6 +209,42 @@
             h1 { font-size: 1.7em; }
             th, td { padding: 10px 6px; font-size: 0.94em; }
         }
+
+        /* ────────────────────────────────────── SITE NETWORK BAR ────────────────────────────────────── */
+        .site-network-bar{width:100%;background:#fff;border-bottom:1px solid #ddd;padding:8px 0;}
+        .site-network-track{max-width:1100px;margin:0 auto;padding:0 15px;display:flex;align-items:center;justify-content:flex-start;gap:8px;overflow-x:auto;white-space:nowrap;-ms-overflow-style:none;scrollbar-width:none;}
+        .site-network-track::-webkit-scrollbar{display:none;}
+        .site-network-track::after{content:"";flex:0 0 4px;}
+        .site-network-label{font-size:0.68em;text-transform:uppercase;letter-spacing:0.5px;color:#999;font-weight:900;flex-shrink:0;margin-right:2px;}
+        .site-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid #1A3C34;background:#fff;color:#1A3C34;font-size:0.8em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s ease, color .15s ease;box-sizing:border-box;}
+        .site-pill:hover{background:#1A3C34;color:#fff;}
+        .site-pill.current{background:#1A3C34;color:#fff;cursor:default;}
+        @media(min-width:1150px){.site-network-track{justify-content:center;}}
+
+        /* ────────────────────────────────────── RELATED READS ────────────────────────────────────── */
+        .related-section{
+            background:#fff; border:3px solid var(--green); border-radius:8px;
+            padding:30px; margin:40px 0; box-shadow:0 4px 15px rgba(0,0,0,.15);
+        }
+        .related-grid{
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+            gap:16px; margin-top:20px;
+        }
+        .related-card{
+            display:block; text-decoration:none; color:inherit;
+            background:#f9f9f9; border:1px solid #e2e2e2; border-radius:8px;
+            padding:16px 18px; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+        }
+        .related-card:hover{
+            transform:translateY(-3px); border-color:var(--green);
+            box-shadow:0 6px 16px rgba(0,0,0,.12);
+        }
+        .related-tag{
+            font-size:0.68em; text-transform:uppercase; letter-spacing:0.5px;
+            color:var(--green); font-weight:900; margin-bottom:6px;
+        }
+        .related-card h4{font-size:1em; color:#1A3C34; margin:0 0 4px; line-height:1.35;}
+        .related-card p{font-size:0.82em; color:#777; margin:0; line-height:1.4;}
     </style>
 </head>
 <body>
@@ -209,6 +253,19 @@
     <h1>JEPQ Dividend History</h1>
     <p class="subtitle">JPMorgan Nasdaq Equity Premium Income ETF. Every Monthly Dividend Since Inception May 2022</p>
 </header>
+
+<div class="site-network-bar">
+    <div class="site-network-track">
+        <span class="site-network-label">Our Sites:</span>
+        <span class="site-pill current" title="You're here">💵 TopDividendETFs.com</span>
+        <a href="https://weeklyetfs.com/" class="site-pill" title="Best weekly paying dividend ETFs">📅 WeeklyETFs.com</a>
+        <a href="https://monthlyetfs.com/" class="site-pill" title="Best monthly paying dividend ETFs">🗓️ MonthlyETFs.com</a>
+        <a href="https://growthetfs.com/" class="site-pill" title="High growth dividend & growth ETFs">📈 GrowthETFs.com</a>
+        <a href="https://topspaceetfs.com/" class="site-pill" title="Best space & aerospace ETFs ranked">🚀 TopSpaceETFs.com</a>
+        <a href="https://etftotalreturns.com/" class="site-pill" title="Total return analysis & performance metrics for ETFs">📊 ETFTotalReturns.com</a>
+        <a href="https://topdividendtools.com/" class="site-pill" title="Best tools & calculators for dividend investors">🛠️ TopDividendTools.com</a>
+    </div>
+</div>
 
 <div class="content">
 
@@ -238,7 +295,7 @@
             <div class="value" id="avgMonthly">$0.497</div>
         </div>
         <div class="summary-box">
-            <h3>Latest Dividend April 2026</h3>
+            <h3>Latest Dividend July 2026</h3>
             <div class="value" id="latestDiv">$0.5586</div>
         </div>
     </div>
@@ -307,6 +364,43 @@
         </div>
     </div>
 
+    <div class="related-section">
+        <h2 style="text-align:center; color:#1A3C34; margin-top:0;">Related Reads</h2>
+        <p style="text-align:center; color:#666; margin:6px 0 0;">More dividend history and yield breakdowns from the blog</p>
+        <div class="related-grid">
+            <a href="https://topdividendetfs.com/jepq-current-dividend-yield-2026" class="related-card">
+                <div class="related-tag">Yield Tracker</div>
+                <h4>JEPQ Current Dividend Yield 2026</h4>
+                <p>Real-time trailing twelve-month yield and forward estimates for JEPQ.</p>
+            </a>
+            <a href="https://topdividendetfs.com/schd-dividend-history" class="related-card">
+                <div class="related-tag">Dividend History</div>
+                <h4>SCHD Dividend History</h4>
+                <p>Every historical payout for the Schwab U.S. Dividend Equity ETF.</p>
+            </a>
+            <a href="https://topdividendetfs.com/qqqi-etf-dividend-history" class="related-card">
+                <div class="related-tag">Dividend History</div>
+                <h4>QQQI ETF Dividend History</h4>
+                <p>Complete payment history for the Invesco Nasdaq 100 Diversified Equal Weight ETF.</p>
+            </a>
+            <a href="https://topdividendetfs.com/spyi" class="related-card">
+                <div class="related-tag">Dividend History</div>
+                <h4>SPYI ETF Dividend History</h4>
+                <p>All consecutive monthly distributions since inception, yields, and performance.</p>
+            </a>
+            <a href="https://topdividendetfs.com/top-total-returns.html" class="related-card">
+                <div class="related-tag">Analysis</div>
+                <h4>Top Total Returns</h4>
+                <p>Which dividend ETFs combine yield and capital appreciation best.</p>
+            </a>
+            <a href="https://topdividendetfs.com/blog" class="related-card">
+                <div class="related-tag">Blog Hub</div>
+                <h4>View All Articles →</h4>
+                <p>Guides, calculators, and data deep-dives for dividend ETF investors.</p>
+            </a>
+        </div>
+    </div>
+
     <p class="disclaimer">
         Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors and this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
     </p>
@@ -340,15 +434,18 @@
 <script>
 // Dividend data (newest first)
 const dividends = [
+    { ex: "2026-07-01", record: "2026-07-01", pay: "2026-07-06", amount: 0.63658, notes: "Dividend income or Cash Dividend" },
+    { ex: "2026-06-01", record: "2026-06-01", pay: "2026-06-03", amount: 0.56444, notes: "Dividend income or Cash Dividend" },
+    { ex: "2026-05-01", record: "2026-05-01", pay: "2026-05-05", amount: 0.59095, notes: "Dividend income or Cash Dividend" },
     { ex: "2026-04-01", record: "2026-04-01", pay: "2026-04-06", amount: 0.5586, notes: "Dividend income or Cash Dividend" },
     { ex: "2026-03-02", record: "2026-03-02", pay: "2026-03-04", amount: 0.5090, notes: "Dividend income or Cash Dividend" },
-    { ex: "2026-02-02", record: "2026-02-02", pay: "2026-02-04", amount: 0.4657, notes: "Dividend income or Cash Dividend" },
+    { ex: "2026-02-02", record: "2026-02-02", pay: "2026-02-04", amount: 0.46572, notes: "Dividend income or Cash Dividend" },
     { ex: "2025-12-31", record: "2025-12-31", pay: "2026-01-05", amount: 0.5761, notes: "Dividend income or Cash Dividend" },
-    { ex: "2025-12-01", record: "2025-12-01", pay: "2025-12-03", amount: 0.5532, notes: "Dividend income or Cash Dividend" },
-    { ex: "2025-11-03", record: "2025-11-03", pay: "2025-11-05", amount: 0.4755, notes: "Dividend income or Cash Dividend" },
-    { ex: "2025-10-01", record: "2025-10-01", pay: "2025-10-03", amount: 0.4461, notes: "Dividend income or Cash Dividend" },
-    { ex: "2025-09-02", record: "2025-09-02", pay: "2025-09-04", amount: 0.4420, notes: "Dividend income or Cash Dividend" },
-    { ex: "2025-08-01", record: "2025-08-01", pay: "2025-08-05", amount: 0.4438, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-12-01", record: "2025-12-01", pay: "2025-12-03", amount: 0.55323, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-11-03", record: "2025-11-03", pay: "2025-11-05", amount: 0.47553, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-10-01", record: "2025-10-01", pay: "2025-10-03", amount: 0.44612, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-09-02", record: "2025-09-02", pay: "2025-09-04", amount: 0.44195, notes: "Dividend income or Cash Dividend" },
+    { ex: "2025-08-01", record: "2025-08-01", pay: "2025-08-05", amount: 0.44377, notes: "Dividend income or Cash Dividend" },
     { ex: "2025-07-01", record: "2025-07-01", pay: "2025-07-03", amount: 0.4942, notes: "Dividend income or Cash Dividend" },
     { ex: "2025-06-02", record: "2025-06-02", pay: "2025-06-04", amount: 0.6207, notes: "Dividend income or Cash Dividend" },
     { ex: "2025-05-01", record: "2025-05-01", pay: "2025-05-05", amount: 0.5979, notes: "Dividend income or Cash Dividend" },
