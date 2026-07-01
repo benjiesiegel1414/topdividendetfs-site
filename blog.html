@@ -405,6 +405,9 @@
             transform: translateY(-6px);
             box-shadow: 0 14px 32px rgba(0,0,0,.14);
         }
+        .blog-card.new-post {
+            border: 2px solid var(--gold);
+        }
 
         .blog-card-top {
             background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
@@ -423,6 +426,18 @@
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+        }
+        .blog-card-top .new-badge {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            background: var(--gold);
+            color: #1a1200;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
         }
 
         .blog-card-body {
@@ -781,6 +796,34 @@
         <div class="section-label"><span>All Articles</span></div>
 
         <div class="blog-grid">
+
+            <!-- NEWEST: FDVV Dividend Yield (Live Tracker) -->
+            <div class="blog-card new-post">
+                <div class="blog-card-top">
+                    <span class="new-badge">NEW</span>
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">June 2026</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>FDVV Fidelity High Dividend ETFs Dividend Yield</h3>
+                    <p>See FDVV's current dividend yield instantly with our live-updated yield tracker, plus quarterly dividend history, expense ratio, and a full strategy breakdown of the Fidelity High Dividend ETF.</p>
+                    <a href="https://topdividendetfs.com/fdvv-dividend-yield.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+
+            <!-- NEWEST: FDVV Dividend History -->
+            <div class="blog-card new-post">
+                <div class="blog-card-top">
+                    <span class="new-badge">NEW</span>
+                    <span class="card-icon">&#128181;</span>
+                    <div class="card-date">June 2026</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>FDVV Dividend History</h3>
+                    <p>Complete quarterly dividend payment history for the Fidelity High Dividend ETF (FDVV). Track every payout on record, see how the distribution has trended over time, and understand FDVV's income profile.</p>
+                    <a href="https://topdividendetfs.com/fdvv-dividend-history.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
 
             <!-- NEW BLOG POST: QQQI Dividend Dates 2026 -->
             <div class="blog-card">
