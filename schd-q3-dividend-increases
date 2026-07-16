@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SOCIAL MEDIA CARDS -->
+    <meta property="og:title" content="SCHD Q3 2026 Dividend Increase Preview: RF +13.2%, FAST, DRI & OZK Raise Payouts | TopDividendETFs.com">
+    <meta property="og:description" content="SCHD's Q3 2026 dividend is shaping up nicely — Regions Financial (RF) just raised its dividend 13.2%, joining FAST (+8.3%), DRI (+8.0%), and OZK (+2.1%). Full breakdown + SCHD's complete dividend history.">
+    <meta property="og:image" content="https://topdividendetfs.com/schd11.png">
+    <meta property="og:url" content="https://topdividendetfs.com/schd-q3-dividend-increases">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TopDividendETFs">
+    <meta name="twitter:title" content="SCHD Q3 2026 Dividend Increase Preview: Holdings Announcing Big Raises">
+    <meta name="twitter:description" content="RF +13.2%, FAST +8.3%, DRI +8.0%, OZK +2.1% — SCHD holdings are raising dividends ahead of Q3 2026. See what it means for SCHD's next payout.">
+    <meta name="twitter:image" content="https://topdividendetfs.com/schd11.png">
+
+    <title>SCHD Q3 2026 Dividend Increase Preview: Holdings Raising Payouts (RF +13.2%) | TopDividendETFs.com</title>
+    <meta name="description" content="SCHD Q3 2026 dividend increase preview: Regions Financial (RF) announced a 13.2% dividend raise, joining FAST (+8.3%), DRI (+8.0%), and OZK (+2.1%). See how holding raises impact SCHD's next quarterly dividend, plus SCHD's full dividend history since 2011.">
+    <link rel="canonical" href="https://topdividendetfs.com/schd-q3-dividend-increases">
+
+    <!-- ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B8TGV115DP');
+    </script>
+
+    <!-- ARTICLE SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SCHD Q3 2026 Dividend Increase Preview: Holdings Announcing Raises (RF +13.2%)",
+      "description": "SCHD's Q3 2026 dividend is shaping up nicely as top holdings announce dividend increases: Regions Financial +13.2%, Fastenal +8.3%, Darden Restaurants +8.0%, and Bank OZK +2.1%.",
+      "image": "https://topdividendetfs.com/schd11.png",
+      "author": { "@type": "Organization", "name": "TopDividendETFs.com", "url": "https://topdividendetfs.com" },
+      "publisher": { "@type": "Organization", "name": "TopDividendETFs.com", "url": "https://topdividendetfs.com" },
+      "datePublished": "2026-07-15",
+      "dateModified": "2026-07-15",
+      "mainEntityOfPage": "https://topdividendetfs.com/schd-q3-dividend-increases"
+    }
+    </script>
+
+    <!-- FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will SCHD's Q3 2026 dividend increase?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SCHD's Q3 dividend depends on the actual dividends collected from its ~100 holdings. With Regions Financial raising its dividend 13.2%, Fastenal 8.3%, Darden Restaurants 8.0%, and Bank OZK 2.1%, early signs point to a supportive setup — but SCHD's exact payout is never guaranteed and won't be known until Schwab declares it, typically in late September." }
+        },
+        {
+          "@type": "Question",
+          "name": "When does SCHD pay its Q3 dividend?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SCHD pays dividends quarterly, typically in late March, June, September, and December. The Q3 distribution is usually declared and paid in the second half of September." }
+        },
+        {
+          "@type": "Question",
+          "name": "What was SCHD's most recent dividend?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SCHD's most recent dividend was the Q2 2026 payout of $0.2525 per share, with an ex-dividend date of June 24, 2026 and a pay date of June 29, 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast has SCHD's dividend grown historically?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SCHD has grown its dividend at roughly an 11% compound annual growth rate since 2012, with an approximate 9.2% 5-year growth rate and 10.7% 10-year growth rate (all split-adjusted)." }
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --primary: #009fe0;
+            --primary-dark: #007bb8;
+            --primary-darker: #005f8a;
+            --light-blue: #e6f7ff;
+            --text-dark: #1a3c34;
+            --gray: #666;
+            --gold: #f5a623;
+            --gold-dark: #d4891a;
+            --gold-light: #fef3dc;
+            --accent-green: #10b981;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ── Header ── */
+        header {
+            background: var(--primary-darker);
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,.25);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            font-size: clamp(16px, 5vw, 26px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .header-links {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s;
+            white-space: nowrap;
+            display: none;
+        }
+        .header-links a.club-link {
+            display: inline-block;
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+            font-size: 0.78rem;
+        }
+        .header-links a.club-link:hover { background: var(--gold-dark); color: #fff; }
+        @media (min-width: 640px) {
+            .header-links a { display: inline-block; font-size: 0.82rem; padding: 5px 12px; }
+        }
+
+        /* ── Network bar ── */
+        .network-bar { width: 100%; background: #fff; border-bottom: 2px solid #e8f4fb; overflow-x: auto; }
+        .network-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: stretch; }
+        .network-bar-label { background: var(--primary); color: #fff; font-weight: 900; font-size: 0.7rem; letter-spacing: 0.8px; text-transform: uppercase; padding: 12px; white-space: nowrap; display: flex; align-items: center; }
+        .network-bar-links { display: flex; align-items: stretch; }
+        .network-bar-links a { display: flex; align-items: center; gap: 4px; padding: 10px 12px; text-decoration: none; font-weight: 700; font-size: 0.78rem; color: var(--primary-dark); border-right: 1px solid #e0eff8; transition: background 0.18s; white-space: nowrap; }
+        .network-bar-links a:hover { background: #eaf6fd; }
+        .network-bar-links a.nb-club { background: var(--gold-light); color: var(--gold-dark); font-weight: 900; border-left: 3px solid var(--gold); }
+        .network-bar-links a.nb-club:hover { background: #fde8b0; }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-darker));
+            color: white;
+            text-align: center;
+            padding: clamp(40px, 12vw, 70px) 16px clamp(30px, 10vw, 50px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+        .hero::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+        .hero h1 { margin: 0 0 12px; font-size: clamp(1.7em, 7vw, 2.9em); font-weight: 900; letter-spacing: -0.5px; position: relative; z-index: 1; }
+        .hero p.subtitle { margin: 0 0 16px; font-size: clamp(1em, 5vw, 1.3em); font-weight: 700; opacity: 0.96; position: relative; z-index: 1; }
+        .hero-stats { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 16px 0 24px; position: relative; z-index: 1; }
+        .hero-stat { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 10px 16px; text-align: center; }
+        .hero-stat-num { font-size: 1.3rem; font-weight: 900; line-height: 1; }
+        .hero-stat-label { font-size: 0.72rem; opacity: 0.82; margin-top: 3px; }
+        .new-badge { display: inline-block; background: #ffdd57; color: #1a1a00; font-size: 0.75rem; font-weight: 900; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 0.5px; position: relative; z-index: 1; }
+        .back-home-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: white;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: clamp(1em, 4.5vw, 1.18em);
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.25s ease;
+            min-width: 240px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .back-home-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+
+        /* ── Container ── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+        .article-body { max-width: 860px; margin: 0 auto; }
+        .article-body p { font-size: clamp(0.98em, 3.8vw, 1.06em); }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb { font-size: 0.8rem; color: var(--gray); padding: 10px 0 4px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        /* ── Summary ── */
+        .summary {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 16px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            font-size: clamp(0.95em, 3.8vw, 1.05em);
+            border: 1px solid #e4f0f8;
+        }
+        .summary p { margin: 8px 0; }
+        .summary strong { color: var(--primary); }
+        .raise-badge { display: inline-block; background: #d1fae5; color: #065f46; font-size: 0.78rem; font-weight: 900; padding: 3px 10px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+
+        /* ── Metric Cards ── */
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 20px 0; }
+        .metric-card { background: linear-gradient(135deg, #eaf6fd 0%, #ddf0fb 100%); border: 2px solid var(--primary); border-radius: 12px; padding: 16px 14px; text-align: center; }
+        .metric-card.raise-card { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-color: var(--accent-green); }
+        .metric-card h3 { margin: 0 0 8px; font-size: 0.82rem; color: var(--primary-darker); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .metric-card.raise-card h3 { color: #065f46; }
+        .big-number { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 900; color: var(--primary-dark); margin: 4px 0 2px; }
+        .metric-card.raise-card .big-number { color: #059669; }
+        .metric-detail { font-size: 0.75rem; color: var(--gray); }
+
+        /* ── Charts ── */
+        #raiseChartContainer, #chartContainer {
+            background: white;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin: 24px auto;
+            border: 1px solid #e4f0f8;
+        }
+        canvas { height: clamp(280px, 60vw, 480px) !important; width: 100% !important; }
+
+        /* ── Section Headings ── */
+        h2 { color: var(--primary); text-align: center; margin: 32px 0 16px; font-size: clamp(1.5em, 6vw, 2.1em); font-weight: 900; }
+        h3.sub-heading { color: var(--primary-darker); font-size: clamp(1.15em, 4.5vw, 1.4em); font-weight: 900; margin: 28px 0 10px; }
+        .section-label { display: flex; align-items: center; gap: 12px; margin: 24px 0 12px; }
+        .section-label span { font-weight: 900; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); white-space: nowrap; }
+        .section-label::before, .section-label::after { content: ''; flex: 1; height: 1px; background: #d0e8f5; }
+
+        /* ── Table ── */
+        .table-wrapper { overflow-x: auto; margin: 16px 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        table { width: 100%; min-width: 480px; border-collapse: collapse; background: white; }
+        th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #eee; font-size: clamp(0.85em, 3.5vw, 0.98em); }
+        th { background: var(--primary); color: white; font-weight: 700; position: sticky; top: 0; z-index: 1; }
+        tr:nth-child(even) { background: var(--light-blue); }
+        table.raise-table th { background: var(--accent-green); }
+        table.raise-table tr.top-raise td { background: #d1fae5 !important; font-weight: 700; }
+        .new-tag { display: inline-block; background: #059669; color: white; font-size: 0.65rem; font-weight: 900; padding: 2px 6px; border-radius: 8px; margin-left: 4px; vertical-align: middle; }
+        .raise-up { color: #059669; font-weight: 900; }
+
+        /* ── Buttons ── */
+        .download-btn, .chart-back-btn {
+            display: block;
+            margin: 24px auto;
+            padding: 14px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(1em, 4.5vw, 1.15em);
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            min-width: 240px;
+            box-shadow: 0 4px 12px rgba(0,159,224,0.3);
+            transition: all 0.25s ease;
+        }
+        .download-btn:hover, .chart-back-btn:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,159,224,0.4); }
+
+        /* ── Info Boxes ── */
+        .info-box { background: #f0f8fc; border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 8px; margin: 20px 0; font-size: 0.92rem; }
+        .info-box.success { background: #f0fdf4; border-left-color: var(--accent-green); }
+        .info-box.warning { background: #fffbeb; border-left-color: var(--gold); }
+        .info-box h4 { margin: 0 0 8px; color: var(--primary-darker); font-size: 1rem; }
+        .info-box.success h4 { color: #065f46; }
+        .info-box.warning h4 { color: #92400e; }
+        .info-box p { margin: 8px 0 0; }
+
+        /* ── Pro Promos ── */
+        .pro-promo { background: linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(245,166,35,0.04) 100%); border: 2px dashed var(--gold); border-radius: 12px; padding: 16px 18px; margin: 20px 0; text-align: center; }
+        .pro-promo p { margin: 0 0 12px; color: #333; font-size: 0.92rem; }
+        .pro-promo a { display: inline-block; padding: 10px 22px; background: var(--gold); color: #1a1200; font-weight: 900; border-radius: 8px; text-decoration: none; transition: all 0.18s; font-size: 0.88rem; }
+        .pro-promo a:hover { background: var(--gold-dark); color: #fff; transform: scale(1.04); }
+
+        .club-inline-card { background: linear-gradient(135deg, var(--gold-light) 0%, #fff8e8 100%); border: 2px solid var(--gold); border-radius: 14px; padding: 16px 18px; margin: 20px 0; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .club-inline-icon { font-size: 34px; flex-shrink: 0; }
+        .club-inline-content { flex: 1; min-width: 200px; }
+        .club-inline-content h4 { margin: 0 0 4px; font-size: 1rem; font-weight: 900; color: #3d2a00; }
+        .club-inline-content p { margin: 0; font-size: 0.84rem; color: #7a5a10; line-height: 1.4; }
+        .club-inline-btn { display: inline-block; padding: 10px 20px; background: var(--gold); color: #1a1200; font-weight: 900; font-size: 0.88rem; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: all 0.18s; }
+        .club-inline-btn:hover { background: var(--gold-dark); color: #fff; transform: scale(1.03); }
+
+        /* ── Related Posts ── */
+        .related-posts { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+        @media (min-width: 600px) { .related-posts { grid-template-columns: repeat(2, 1fr); } }
+        .related-post { background: #fff; border: 2px solid #d4e9f5; border-radius: 12px; padding: 16px; text-decoration: none; color: #333; transition: all 0.2s; display: block; }
+        .related-post:hover { border-color: var(--primary); box-shadow: 0 6px 24px rgba(0,159,224,0.18); transform: translateY(-3px); }
+        .related-post .rp-tag { display: inline-block; background: var(--light-blue); color: var(--primary-dark); font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6px; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+        .related-post .rp-title { font-weight: 900; font-size: 1rem; color: var(--primary-darker); margin-bottom: 4px; }
+        .related-post .rp-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.4; }
+
+        /* ── Club Hero ── */
+        .club-hero-block { background: linear-gradient(135deg, #1c1400 0%, #3a2600 50%, #1c1400 100%); border-radius: 16px; padding: 36px 20px; text-align: center; margin: 28px 0; position: relative; overflow: hidden; border: 1px solid rgba(245,166,35,0.25); }
+        .club-hero-block::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 0%, rgba(245,166,35,0.12) 0%, transparent 65%); pointer-events: none; }
+        .club-hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+        .club-hero-crown { font-size: 2rem; margin-bottom: 10px; }
+        .club-hero-badge { display: inline-block; background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.4); color: var(--gold); font-size: 0.7rem; font-weight: 900; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 14px; border-radius: 30px; margin-bottom: 12px; }
+        .club-hero-block h2 { color: #fff; font-size: clamp(1.4rem, 4vw, 2.2rem); margin: 0 0 12px; }
+        .club-hero-block p { color: rgba(255,255,255,0.75); font-size: 0.93rem; margin: 0 0 18px; }
+        .club-hero-btn { display: inline-block; padding: 12px 28px; background: var(--gold); color: #1a1200; font-weight: 900; font-size: 0.95rem; border-radius: 10px; text-decoration: none; transition: all 0.18s; }
+        .club-hero-btn:hover { background: var(--gold-dark); color: #fff; transform: translateY(-2px); }
+
+        /* ── CTA Strip ── */
+        .cta-strip { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-darker) 100%); border-radius: 14px; padding: 24px 16px; text-align: center; color: #fff; margin: 28px 0; }
+        .cta-strip h2 { margin: 0 0 8px; font-size: clamp(1.2rem, 3vw, 1.5rem); color: #fff; }
+        .cta-strip p { margin: 0 0 16px; opacity: 0.9; font-size: 0.95rem; }
+        .cta-strip-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .cta-btn { display: inline-block; padding: 10px 16px; background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.5); border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: all 0.18s; white-space: nowrap; }
+        .cta-btn:hover { background: rgba(255,255,255,0.28); }
+        .cta-btn.cta-primary { background: #fff; color: var(--primary-darker); border-color: #fff; }
+        .cta-btn.cta-primary:hover { background: #e8f6fd; }
+        .cta-btn.cta-club { background: var(--gold); color: #1a1200; border-color: var(--gold); font-weight: 900; }
+        .cta-btn.cta-club:hover { background: var(--gold-dark); color: #fff; }
+
+        /* ── Site Cards ── */
+        .site-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+        @media (min-width: 600px) { .site-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .site-cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
+        .site-card { background: #fff; border: 2px solid #d4e9f5; border-radius: 12px; padding: 18px 14px; text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; text-align: center; transition: all 0.2s; }
+        .site-card:hover { border-color: var(--primary); box-shadow: 0 6px 24px rgba(0,159,224,0.18); transform: translateY(-3px); }
+        .site-card.club-card { background: linear-gradient(135deg, var(--gold-light) 0%, #fff9ee 100%); border: 2px solid var(--gold); }
+        .site-card.club-card:hover { border-color: var(--gold-dark); box-shadow: 0 6px 24px rgba(245,166,35,0.25); }
+        .site-card .sc-icon { font-size: 24px; margin-bottom: 8px; }
+        .site-card .sc-name { font-weight: 900; font-size: 1rem; color: var(--primary); margin-bottom: 4px; }
+        .site-card.club-card .sc-name { color: var(--gold-dark); }
+        .site-card .sc-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
+        .site-card .sc-btn { margin-top: 10px; display: inline-block; padding: 6px 16px; background: var(--primary); color: #fff; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+        .site-card.club-card .sc-btn { background: var(--gold); color: #1a1200; }
+
+        /* ── FAQ ── */
+        .faq-item { background: #fff; border: 1px solid #e4f0f8; border-radius: 10px; padding: 16px 20px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .faq-item h4 { margin: 0 0 8px; color: var(--primary-darker); font-size: 1.02rem; }
+        .faq-item p { margin: 0; font-size: 0.92rem; }
+
+        /* ── Footer ── */
+        .footer-links-bar { background: var(--primary-darker); width: 100%; padding: 24px 16px; text-align: center; margin-top: 24px; }
+        .footer-links-bar p { color: rgba(255,255,255,0.75); font-size: 0.82rem; margin: 0 0 12px; }
+        .footer-links-bar .fl-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .footer-links-bar .fl-links a { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.75rem; padding: 6px 14px; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 20px; transition: background 0.18s; }
+        .footer-links-bar .fl-links a:hover { background: rgba(255,255,255,0.15); }
+        .footer-links-bar .fl-links a.fl-club { background: var(--gold); color: #1a1200; border-color: var(--gold); font-weight: 900; }
+        .footer-links-bar .fl-links a.fl-club:hover { background: var(--gold-dark); color: #fff; }
+        .footer-copy { color: rgba(255,255,255,0.45); font-size: 0.72rem; margin-top: 12px; }
+
+        .disclaimer {
+            font-size: .88em;
+            color: #666;
+            margin: 20px auto;
+            max-width: 900px;
+            line-height: 1.5;
+            text-align: center;
+            padding: 0 16px;
+        }
+        .footer-disclaimer {
+            font-size: .82em;
+            color: #666;
+            margin: 20px auto;
+            max-width: 900px;
+            line-height: 1.5;
+            text-align: center;
+            padding: 16px;
+            border-top: 1px solid #dde;
+        }
+        .update-note { font-size: 0.75rem; color: #999; text-align: center; margin: 12px 0; }
+        .tracker-link {
+            border: 2px solid #2E5D54;
+            padding: 4px 8px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+        }
+        @keyframes glow {
+            0%,100% { box-shadow: 0 0 5px rgba(46,93,84,.3) }
+            50% { box-shadow: 0 0 8px rgba(46,93,84,.6) }
+        }
+
+        /* ── Popup ── */
+        #popupOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+        #popupContent {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 90%;
+            width: 480px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            animation: popIn 0.4s ease-out;
+        }
+        #popupContent h3 { margin: 0 0 20px; font-size: 1.5em; color: var(--primary); font-weight: 900; }
+        .popup-buttons { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+        .popup-btn { display: block; padding: 16px 40px; font-size: 1.2em; font-weight: bold; border-radius: 50px; text-decoration: none; cursor: pointer; transition: all 0.25s; border: none; width: 100%; max-width: 320px; margin: 0 auto; }
+        #yesBtn { background: var(--primary); color: white; box-shadow: 0 6px 20px rgba(0,159,224,0.4); }
+        #yesBtn:hover { transform: scale(1.07); }
+        #noBtn { background: #f0f0f0; color: #444; }
+        #noBtn:hover { background: #e0e0e0; }
+        @keyframes popIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        @media (max-width: 480px) {
+            .container { padding: 12px; }
+            .hero { padding: 40px 12px 30px; }
+            th, td { padding: 10px 6px; }
+            .back-home-btn, .download-btn, .chart-back-btn { padding: 12px 24px; font-size: 1em; min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+    <div class="header-inner">
+        <a href="https://topdividendetfs.com" class="logo">TopDividendETFs</a>
+        <div class="header-links">
+            <a href="https://topdividendetfs.com">📊 ETF Rankings</a>
+            <a href="https://weeklyetfs.com" target="_blank">📅 WeeklyETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank">📆 MonthlyETFs</a>
+            <a href="https://topdividendtools.com" target="_blank">🛠️ Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="club-link">Pro ⭐</a>
+        </div>
+    </div>
+</header>
+
+<!-- ── Network Bar ── -->
+<div class="network-bar">
+    <div class="network-bar-inner">
+        <div class="network-bar-label">Our Sites</div>
+        <div class="network-bar-links">
+            <a href="https://topdividendetfs.com">📊 TopDividendETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank">📅 WeeklyETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank">📆 MonthlyETFs</a>
+            <a href="https://topdividendtools.com" target="_blank">🛠️ Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="nb-club">⭐ TopDividendETFsPro</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero">
+    <div class="new-badge">🆕 Q3 2026 UPDATE — SCHD Holdings Are Raising Dividends</div>
+    <h1>SCHD Q3 2026 Dividend Increase Preview: Holdings Announcing Big Raises</h1>
+    <p class="subtitle">Regions Financial (+13.2%), Fastenal (+8.3%), Darden (+8.0%) &amp; Bank OZK (+2.1%) All Just Raised Their Dividends</p>
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <div class="hero-stat-num">+13.2%</div>
+            <div class="hero-stat-label">$RF Dividend Raise</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-num">4</div>
+            <div class="hero-stat-label">Holdings Raising So Far</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-num">$0.2525</div>
+            <div class="hero-stat-label">Q2 2026 Payout (Latest)</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-num">~11%</div>
+            <div class="hero-stat-label">CAGR Since 2012</div>
+        </div>
+    </div>
+    <a href="https://topdividendetfs.com" class="back-home-btn">← Back to TopDividendETFs.com</a>
+</section>
+
+<div class="container">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="https://topdividendetfs.com">TopDividendETFs</a> ›
+        <a href="https://topdividendetfs.com/schd-dividend-history">SCHD Dividend History</a> ›
+        SCHD Q3 2026 Dividend Increases
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+        <p><strong>SCHD Q3 Dividend Raise Update:</strong> Regions Financial ($RF) just announced a <strong>13.2% dividend increase</strong> <span class="raise-badge">NEW</span></p>
+        <p><strong>Other SCHD holdings raising for Q3:</strong> Fastenal ($FAST) <span class="raise-up">+8.3%</span> · Darden Restaurants ($DRI) <span class="raise-up">+8.0%</span> · Bank OZK ($OZK) <span class="raise-up">+2.1%</span></p>
+        <p><strong>SCHD's Latest Dividend (Q2 2026):</strong> $0.2525 per share &nbsp;|&nbsp; Ex-Date: June 24, 2026 &nbsp;|&nbsp; Paid: June 29, 2026</p>
+        <p><strong>Next Expected Payout:</strong> Q3 2026 — typically declared &amp; paid in late September</p>
+        <p><em>Data source: Company announcements / public records. Not investment advice.</em></p>
+    </div>
+
+    <div class="article-body">
+
+    <h2>SCHD's Q3 2026 Dividend Is Starting to Shape Up Nicely</h2>
+
+    <p>If you're an <strong>SCHD dividend investor</strong> waiting to see what the Schwab U.S. Dividend Equity ETF pays in Q3 2026, the early signs are encouraging. Because SCHD is a pass-through vehicle — it collects the dividends paid by its ~100 underlying holdings and distributes them to shareholders — <strong>dividend increases announced by SCHD's holdings flow directly into SCHD's future payouts</strong>.</p>
+
+    <p>And this quarter, the raises are starting to stack up. The headline: <strong>Regions Financial ($RF) just announced a 13.2% dividend increase</strong> — a double-digit hike from one of SCHD's financial-sector holdings. That's exactly the kind of quality dividend growth SCHD's index methodology is designed to capture.</p>
+
+    <h3 class="sub-heading">SCHD Holdings That Have Announced Q3 Dividend Raises (So Far)</h3>
+
+    <div class="table-wrapper">
+        <table class="raise-table">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Ticker</th>
+                    <th>Sector</th>
+                    <th>Dividend Increase</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="top-raise">
+                    <td>Regions Financial <span class="new-tag">NEW</span></td>
+                    <td>$RF</td>
+                    <td>Financials</td>
+                    <td class="raise-up">+13.2%</td>
+                </tr>
+                <tr>
+                    <td>Fastenal</td>
+                    <td>$FAST</td>
+                    <td>Industrials</td>
+                    <td class="raise-up">+8.3%</td>
+                </tr>
+                <tr>
+                    <td>Darden Restaurants</td>
+                    <td>$DRI</td>
+                    <td>Consumer Discretionary</td>
+                    <td class="raise-up">+8.0%</td>
+                </tr>
+                <tr>
+                    <td>Bank OZK</td>
+                    <td>$OZK</td>
+                    <td>Financials</td>
+                    <td class="raise-up">+2.1%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Raise Chart -->
+    <div id="raiseChartContainer">
+        <canvas id="raiseChart"></canvas>
+    </div>
+
+    <div class="info-box success">
+        <h4>✅ Why Holding Raises Matter for SCHD Investors</h4>
+        <p>SCHD doesn't set its own dividend — its quarterly payout is determined by the actual cash dividends collected from its holdings during the period. When names like <strong>Regions Financial raise their dividend by 13.2%</strong>, SCHD collects more income per share it holds, which supports the fund's own distribution over time. Multiple raises across sectors — financials ($RF, $OZK), industrials ($FAST), and consumer discretionary ($DRI) — are a healthy signal for SCHD's income stream heading into the back half of 2026.</p>
+    </div>
+
+    <!-- Pro Promo 1 -->
+    <div class="pro-promo">
+        <p><strong>Want to track dividend raises across all 100+ SCHD holdings — plus every major dividend ETF?</strong> TopDividendETFsPro.com gives you real-time dividend alerts, tax treatment grades, NAV metrics, and side-by-side ETF comparisons in one dashboard.</p>
+        <a href="https://topdividendetfspro.com" target="_blank">Explore Pro Platform ⭐</a>
+    </div>
+
+    <h3 class="sub-heading">What Could This Mean for SCHD's Q3 2026 Payout?</h3>
+
+    <p>SCHD's Q3 distribution is typically declared and paid in <strong>late September</strong>. While no one knows the exact amount until Schwab announces it, here's the historical context that matters:</p>
+
+    <p>Last year, SCHD paid <strong>$0.2604 in Q3 2025</strong> — up from $0.2515 in Q3 2024 (split-adjusted). SCHD's Q3 payouts have historically come in near or slightly above Q2 levels, and with holdings actively raising their dividends right now, the ingredients for continued year-over-year dividend growth are in place. The Q2 2026 payout of $0.2525 was modestly softer than Q2 2025's $0.2602 — consistent with SCHD's normal quarter-to-quarter variability — so income investors will be watching Q3 closely to gauge the full-year trajectory.</p>
+
+    <div class="info-box warning">
+        <h4>⚠️ Important: Raises Don't Guarantee a Bigger SCHD Dividend</h4>
+        <p>SCHD's payout also depends on index reconstitution, sector weightings, share creation/redemption activity, and the timing of when holding dividends are actually collected. A handful of raises is a positive signal — not a promise. Always wait for the official declaration from Schwab Asset Management.</p>
+    </div>
+
+    <h2>SCHD Dividend History: Every Quarterly Payout Since 2011</h2>
+
+    <p>Context is everything with dividend ETFs. SCHD has one of the most impressive dividend growth track records of any large ETF — roughly an <strong>11% compound annual growth rate since 2012</strong>, a ~9.2% five-year growth rate, and a ~10.7% ten-year growth rate (all split-adjusted for the 3-for-1 split on October 10, 2024).</p>
+
+    <p>Here are SCHD's most recent quarterly dividends:</p>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Quarter</th>
+                    <th>Adjusted Dividend ($)</th>
+                    <th>YoY Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2026</td><td>Q2</td><td>$0.2525</td><td>−3.0%</td></tr>
+                <tr><td>2026</td><td>Q1</td><td>$0.2569</td><td class="raise-up">+3.3%</td></tr>
+                <tr><td>2025</td><td>Q4</td><td>$0.2782</td><td class="raise-up">+5.2%</td></tr>
+                <tr><td>2025</td><td>Q3</td><td>$0.2604</td><td class="raise-up">+3.5%</td></tr>
+                <tr><td>2025</td><td>Q2</td><td>$0.2602</td><td>−5.3%</td></tr>
+                <tr><td>2025</td><td>Q1</td><td>$0.2488</td><td class="raise-up">+22.1%</td></tr>
+                <tr><td>2024</td><td>Q4</td><td>$0.2645</td><td class="raise-up">+6.9%</td></tr>
+                <tr><td>2024</td><td>Q3</td><td>$0.2515</td><td class="raise-up">+15.3%</td></tr>
+                <tr><td>2024</td><td>Q2</td><td>$0.2747</td><td class="raise-up">+24.0%</td></tr>
+                <tr><td>2024</td><td>Q1</td><td>$0.2037</td><td class="raise-up">+2.5%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p style="text-align:center; font-size:0.88rem; color:var(--gray);">Want every quarterly payout back to SCHD's inception in October 2011? See the <a href="https://topdividendetfs.com/schd-dividend-history" style="color:var(--primary); font-weight:700;">complete SCHD Dividend History &amp; Projections page →</a></p>
+
+    <!-- Historical Chart -->
+    <div id="chartContainer">
+        <canvas id="dividendChart"></canvas>
+    </div>
+
+    <!-- Pro Promo 2 -->
+    <div class="club-inline-card">
+        <div class="club-inline-icon">📊</div>
+        <div class="club-inline-content">
+            <h4>SCHD vs. VYM vs. DGRO vs. JEPI — Which Pays More Long-Term?</h4>
+            <p>Our Pro platform runs side-by-side total return comparisons with tax treatment grades, NAV decay tracking, and real dividend reinvestment simulations across 100+ dividend ETFs.</p>
+        </div>
+        <a href="https://topdividendetfspro.com" target="_blank" class="club-inline-btn">Compare on Pro →</a>
+    </div>
+
+    <h3 class="sub-heading">SCHD Dividend Snapshot (Mid-2026)</h3>
+
+    <div class="metrics-grid">
+        <div class="metric-card raise-card">
+            <h3>Top Q3 Holding Raise</h3>
+            <div class="big-number">+13.2%</div>
+            <div class="metric-detail">Regions Financial ($RF)</div>
+        </div>
+        <div class="metric-card">
+            <h3>Latest Dividend (Q2 2026)</h3>
+            <div class="big-number">$0.2525</div>
+            <div class="metric-detail">Paid June 29, 2026</div>
+        </div>
+        <div class="metric-card">
+            <h3>Trailing 12M Payout</h3>
+            <div class="big-number">~$1.05</div>
+            <div class="metric-detail">Per share, approx.</div>
+        </div>
+        <div class="metric-card">
+            <h3>Trailing Yield</h3>
+            <div class="big-number">~3.3%</div>
+            <div class="metric-detail">As of mid-2026</div>
+        </div>
+        <div class="metric-card">
+            <h3>CAGR Since 2012</h3>
+            <div class="big-number">~11%</div>
+            <div class="metric-detail">Long-term dividend growth</div>
+        </div>
+        <div class="metric-card">
+            <h3>Expense Ratio</h3>
+            <div class="big-number">0.06%</div>
+            <div class="metric-detail">Very low cost</div>
+        </div>
+    </div>
+
+    <h3 class="sub-heading">The Bigger Picture: Why Dividend Growth Investors Watch Holding Announcements</h3>
+
+    <p>SCHD's index (the Dow Jones U.S. Dividend 100) screens for companies with at least 10 consecutive years of dividend payments, strong free cash flow, healthy return on equity, and dividend growth. That's why quarters like this one — where multiple holdings across financials, industrials, and consumer discretionary announce raises within weeks of each other — are the engine behind SCHD's decade-plus streak of rising annual payouts.</p>
+
+    <p>For income investors, tracking these announcements gives you an early read on the fund's distribution trajectory <em>before</em> Schwab's official declaration hits. It's one of the simplest ways to stay ahead of the quarterly payout — and it's exactly the kind of monitoring we automate on our <a href="https://topdividendetfspro.com" target="_blank" style="color:var(--gold-dark); font-weight:900;">Pro platform</a>.</p>
+
+    <!-- FAQ Section -->
+    <h2>SCHD Q3 Dividend FAQ</h2>
+
+    <div class="faq-item">
+        <h4>Will SCHD's Q3 2026 dividend increase?</h4>
+        <p>SCHD's Q3 payout depends on the actual dividends collected from its ~100 holdings. With $RF raising 13.2%, $FAST 8.3%, $DRI 8.0%, and $OZK 2.1%, the early setup is supportive — but the exact amount won't be known until Schwab declares it, typically in late September.</p>
+    </div>
+    <div class="faq-item">
+        <h4>When does SCHD pay its Q3 dividend?</h4>
+        <p>SCHD pays quarterly, typically in late March, June, September, and December. The Q3 distribution is usually declared and paid in the second half of September.</p>
+    </div>
+    <div class="faq-item">
+        <h4>What was SCHD's most recent dividend?</h4>
+        <p>SCHD's Q2 2026 dividend was $0.2525 per share, with an ex-dividend date of June 24, 2026 and a pay date of June 29, 2026.</p>
+    </div>
+    <div class="faq-item">
+        <h4>How fast has SCHD's dividend grown?</h4>
+        <p>Roughly 11% compounded annually since 2012, with an approximate 9.2% 5-year rate and 10.7% 10-year rate (split-adjusted). See the full history on our <a href="https://topdividendetfs.com/schd-dividend-history" style="color:var(--primary); font-weight:700;">SCHD Dividend History page</a>.</p>
+    </div>
+
+    </div><!-- /article-body -->
+
+    <!-- Related Posts -->
+    <div class="section-label"><span>More SCHD &amp; Dividend ETF Guides</span></div>
+    <h2 style="font-size: clamp(1.3rem, 3vw, 1.7rem);">Keep Reading on TopDividendETFs.com</h2>
+
+    <div class="related-posts">
+        <a href="https://topdividendetfs.com/schd-dividend-history" class="related-post">
+            <span class="rp-tag">SCHD Deep Dive</span>
+            <div class="rp-title">SCHD Dividend History &amp; 10-Year Projections</div>
+            <div class="rp-desc">Every quarterly SCHD payout since inception in 2011 (split-adjusted) + interactive charts and conservative/moderate/optimistic projections through 2035.</div>
+        </a>
+        <a href="https://topdividendetfs.com/schd-dividend-calculator.html" class="related-post">
+            <span class="rp-tag">Free Calculator</span>
+            <div class="rp-title">SCHD Dividend Calculator</div>
+            <div class="rp-desc">Plug in your share count and instantly see your projected annual SCHD income — including growth scenarios.</div>
+        </a>
+        <a href="https://topdividendetfs.com" class="related-post">
+            <span class="rp-tag">Rankings</span>
+            <div class="rp-title">Top 100 Dividend ETFs Ranked</div>
+            <div class="rp-desc">Our flagship rankings — 100+ dividend ETFs sorted by yield, growth, and reliability. Find SCHD alternatives and complements.</div>
+        </a>
+        <a href="https://topdividendetfs.com/fdvv-dividend-history.html" class="related-post">
+            <span class="rp-tag">ETF Spotlight</span>
+            <div class="rp-title">FDVV Dividend History &amp; Yield</div>
+            <div class="rp-desc">How does Fidelity's high dividend ETF stack up against SCHD? Full payout history and yield analysis.</div>
+        </a>
+    </div>
+
+    <!-- Explore More Resources -->
+    <div class="section-label"><span>Explore Our Full Dividend Network</span></div>
+    <h2 style="font-size: clamp(1.3rem, 3vw, 1.7rem);">Free Tools &amp; Rankings Across Our Sites</h2>
+
+    <div class="site-cards">
+        <a href="https://topdividendetfs.com" class="site-card">
+            <div class="sc-icon">📊</div>
+            <div class="sc-name">TopDividendETFs.com</div>
+            <div class="sc-desc">Ranked 100+ dividend ETFs by yield, growth, and reliability. Find your next income investment.</div>
+            <div class="sc-btn">View Rankings →</div>
+        </a>
+        <a href="https://weeklyetfs.com" target="_blank" class="site-card">
+            <div class="sc-icon">📅</div>
+            <div class="sc-name">WeeklyETFs.com</div>
+            <div class="sc-desc">Prefer weekly income? Discover ETFs that pay dividends every single week.</div>
+            <div class="sc-btn">See Weekly ETFs →</div>
+        </a>
+        <a href="https://monthlyetfs.com" target="_blank" class="site-card">
+            <div class="sc-icon">📆</div>
+            <div class="sc-name">MonthlyETFs.com</div>
+            <div class="sc-desc">Monthly dividend ETFs ranked and compared for income investors. JEPI, SCHD alternatives, and more.</div>
+            <div class="sc-btn">See Monthly ETFs →</div>
+        </a>
+        <a href="https://growthetfs.com" target="_blank" class="site-card">
+            <div class="sc-icon">📈</div>
+            <div class="sc-name">GrowthETFs.com</div>
+            <div class="sc-desc">Top growth ETFs ranked — pair SCHD's income with long-term growth exposure.</div>
+            <div class="sc-btn">See Growth ETFs →</div>
+        </a>
+        <a href="https://etftotalreturns.com" target="_blank" class="site-card">
+            <div class="sc-icon">⚔️</div>
+            <div class="sc-name">ETFTotalReturns.com</div>
+            <div class="sc-desc">Head-to-head ETF comparisons with real total return data. SCHD vs. anything — settled with numbers.</div>
+            <div class="sc-btn">Compare ETFs →</div>
+        </a>
+        <a href="https://topdividendtools.com" target="_blank" class="site-card">
+            <div class="sc-icon">🛠️</div>
+            <div class="sc-name">TopDividendTools.com</div>
+            <div class="sc-desc">Free dividend calculators, yield screeners, and income planning tools for all investors.</div>
+            <div class="sc-btn">Try Free Tools →</div>
+        </a>
+        <a href="https://topdividendetfspro.com" target="_blank" class="site-card club-card">
+            <div class="sc-icon">⭐</div>
+            <div class="sc-name">TopDividendETFsPro.com</div>
+            <div class="sc-desc">Advanced analytics: NAV decay metrics, tax grades, real-time dividend alerts, and pro insights for serious income investors.</div>
+            <div class="sc-btn">Go Pro →</div>
+        </a>
+    </div>
+
+    <!-- Club Hero Block -->
+    <div class="club-hero-block">
+        <div class="club-hero-inner">
+            <div class="club-hero-crown">⭐</div>
+            <div class="club-hero-badge">Pro Platform</div>
+            <h2>Never Miss a Dividend Raise Again</h2>
+            <p>TopDividendETFsPro.com tracks 100+ ranked dividend ETFs with real-time dividend alerts, NAV decay tracking, tax treatment analysis, total return simulations, and side-by-side comparisons — all in one place. Stop guessing, start knowing.</p>
+            <a href="https://topdividendetfspro.com" target="_blank" class="club-hero-btn">Unlock Pro Analytics →</a>
+        </div>
+    </div>
+
+    <!-- CTA Strip -->
+    <div class="cta-strip">
+        <h2>Build Your Perfect Dividend Income Strategy</h2>
+        <p>SCHD is a great core holding — explore 100+ ranked dividend ETFs and build your ideal income portfolio.</p>
+        <div class="cta-strip-buttons">
+            <a href="https://topdividendetfs.com" class="cta-btn cta-primary">📊 Browse All ETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank" class="cta-btn">📅 Weekly ETFs</a>
+            <a href="https://monthlyetfs.com" target="_blank" class="cta-btn">📆 Monthly ETFs</a>
+            <a href="https://topdividendtools.com" target="_blank" class="cta-btn">🛠️ Free Tools</a>
+            <a href="https://topdividendetfspro.com" target="_blank" class="cta-btn cta-club">⭐ Go Pro</a>
+        </div>
+    </div>
+
+    <!-- Footer Disclaimer -->
+    <div class="footer-disclaimer">
+        <strong>Important Disclaimer:</strong> All information on this page is provided for educational and informational purposes only and should not be construed as investment advice, a recommendation, or an offer to buy or sell any security. Past performance does not guarantee future results. Dividend increase figures for individual companies ($RF +13.2%, $FAST +8.3%, $DRI +8.0%, $OZK +2.1%) are based on public company announcements and may be revised; always verify with the issuing company. SCHD dividend amounts are subject to change at Schwab Asset Management's discretion and are not guaranteed. Discussion of potential Q3 2026 payouts is speculative commentary, NOT a prediction. Historical amounts are split-adjusted following SCHD's 3-for-1 stock split on October 10, 2024. Before investing in SCHD or any ETF, review the official prospectus and consult a qualified financial or tax advisor. TopDividendETFs.com makes no warranties regarding the accuracy or completeness of this information.
+    </div>
+
+    <p class="update-note">Published: July 15, 2026 • Data sources: Company announcements, Schwab Asset Management, public fund records • For educational use only</p>
+
+    <p class="disclaimer">
+        Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors &amp; this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+    </p>
+
+    <p style="text-align:center; margin: 8px 0 20px; font-size: 0.9em;">
+        <a href="terms-of-use.html" style="color:#1A3C34;text-decoration:none;">Terms of Use</a> |
+        <a href="privacy-policy.html" style="color:#1A3C34;text-decoration:none;">Privacy Policy</a> |
+        <a href="FAQ.html" style="color:#1A3C34;text-decoration:none;">FAQ</a> |
+        <a href="schd-dividend-calculator.html" style="color:#1A3C34;text-decoration:none;">SCHD Calculator</a> |
+        <a href="schd-dividend-history" style="color:#1A3C34;text-decoration:none;">SCHD Dividend History</a> |
+        <a href="mailto:Business@TopDividendETFs.com" style="color:#1A3C34;text-decoration:none;">Contact Us</a>
+    </p>
+
+    <p style="margin: 12px 0 20px; text-align: center;">
+        <strong>
+            <a href="https://weeklyetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none;margin-right:20px;">
+                Top 100 Weekly Dividend ETFs!
+            </a>
+            <a href="https://growthetfs.com/" target="_blank" class="tracker-link" style="color:#1A3C34;font-weight:bold;text-decoration:none;">
+                Top Growth ETFs!
+            </a>
+        </strong>
+    </p>
+
+</div>
+
+<!-- ── Footer ── -->
+<footer class="footer-links-bar">
+    <p>Built by dividend investors for dividend investors!</p>
+    <div class="fl-links">
+        <a href="https://topdividendetfs.com">TopDividendETFs.com</a>
+        <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+        <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+        <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+        <a href="https://topdividendetfspro.com" target="_blank" class="fl-club">⭐ Pro Platform</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
+</footer>
+
+<!-- ── Popup ── -->
+<div id="popupOverlay">
+    <div id="popupContent">
+        <h3>Want to see the top 100 dividend ETFs sorted by yield &amp; NO price decay?</h3>
+        <div class="popup-buttons">
+            <a href="https://topdividendetfs.com" id="yesBtn" class="popup-btn">YES → Take Me There</a>
+            <button id="noBtn" class="popup-btn">No Thanks</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// ── Q3 Holding Raises Bar Chart ──
+const raises = [
+    { ticker: '$RF (Regions Financial)', pct: 13.2 },
+    { ticker: '$FAST (Fastenal)', pct: 8.3 },
+    { ticker: '$DRI (Darden Restaurants)', pct: 8.0 },
+    { ticker: '$OZK (Bank OZK)', pct: 2.1 }
+];
+
+const ctxRaise = document.getElementById('raiseChart').getContext('2d');
+new Chart(ctxRaise, {
+    type: 'bar',
+    data: {
+        labels: raises.map(r => r.ticker),
+        datasets: [{
+            label: 'Q3 2026 Dividend Increase (%)',
+            data: raises.map(r => r.pct),
+            backgroundColor: ['#10b981', '#009fe0', '#009fe0', '#009fe0'],
+            borderRadius: 8
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        scales: {
+            x: { beginAtZero: true, title: { display: true, text: 'Dividend Increase (%)', font: { size: 13 } } }
+        },
+        plugins: {
+            legend: { display: false },
+            title: { display: true, text: 'SCHD Holdings Announcing Q3 2026 Dividend Raises', font: { size: 16 } },
+            tooltip: { callbacks: { label: ctx => `+${ctx.raw}% dividend increase` } }
+        }
+    }
+});
+
+// ── Recent SCHD Dividend History (last 12 quarters, split-adjusted) ──
+const dividends = [
+    { label: '2023 Q3', amount: 0.2182 },
+    { label: '2023 Q4', amount: 0.2474 },
+    { label: '2024 Q1', amount: 0.2037 },
+    { label: '2024 Q2', amount: 0.2747 },
+    { label: '2024 Q3', amount: 0.2515 },
+    { label: '2024 Q4', amount: 0.2645 },
+    { label: '2025 Q1', amount: 0.2488 },
+    { label: '2025 Q2', amount: 0.2602 },
+    { label: '2025 Q3', amount: 0.2604 },
+    { label: '2025 Q4', amount: 0.2782 },
+    { label: '2026 Q1', amount: 0.2569 },
+    { label: '2026 Q2', amount: 0.2525, isLatest: true }
+];
+
+const ctxHist = document.getElementById('dividendChart').getContext('2d');
+new Chart(ctxHist, {
+    type: 'line',
+    data: {
+        labels: dividends.map(d => d.label),
+        datasets: [{
+            label: 'Adjusted Quarterly Dividend ($)',
+            data: dividends.map(d => d.amount),
+            borderColor: '#009fe0',
+            backgroundColor: 'rgba(0, 159, 224, 0.18)',
+            fill: true,
+            tension: 0.3,
+            pointBackgroundColor: dividends.map(d => d.isLatest ? '#10b981' : '#009fe0'),
+            pointRadius: dividends.map(d => d.isLatest ? 8 : 4),
+            pointHoverRadius: 7
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: { title: { display: true, text: 'Dividend ($)', font: { size: 13 } } },
+            x: { ticks: { maxRotation: 45, minRotation: 0 } }
+        },
+        plugins: {
+            legend: { position: 'top', labels: { font: { size: 13 } } },
+            title: { display: true, text: 'SCHD Quarterly Dividends — Last 3 Years (Split-Adjusted)', font: { size: 16 } },
+            tooltip: {
+                callbacks: {
+                    label: ctx => {
+                        const d = dividends[ctx.dataIndex];
+                        return `$${d.amount.toFixed(4)}${d.isLatest ? ' ← Latest (Q2 2026)' : ''}`;
+                    }
+                }
+            }
+        }
+    }
+});
+
+// ── Popup (17s, one-time per session) ──
+window.addEventListener('load', () => {
+    if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(() => {
+            document.getElementById('popupOverlay').style.display = 'flex';
+            sessionStorage.setItem('popupShown', 'true');
+        }, 17000);
+    }
+});
+document.getElementById('noBtn').addEventListener('click', () => {
+    document.getElementById('popupOverlay').style.display = 'none';
+});
+</script>
+</body>
+</html>
