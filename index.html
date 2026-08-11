@@ -131,7 +131,13 @@
         td{padding:8px 4px;font-size:.95em;text-align:center}
         tr:nth-child(even){background:#f9f9f9}
         tr:hover{background:#dff5eb}
-        .symbol{font-weight:900;font-size:1.2em;color:#1A3C34}
+        .symbol{font-weight:900;font-size:1.2em}
+        .symbol a{color:#1A3C34;text-decoration:none;display:inline-block;transform-origin:center;transition:transform .18s cubic-bezier(.34,1.22,.64,1),color .18s ease}
+        .symbol a:visited{color:#1A3C34}
+        tr:hover .symbol a,.symbol a:hover,.symbol a:focus-visible{transform:rotate(-1.5deg) scale(1.045);color:#2E5D54}
+        .symbol a:focus-visible{outline:2px solid #FFA500;outline-offset:3px;border-radius:3px}
+        @media(prefers-reduced-motion:reduce){.symbol a{transition:none}tr:hover .symbol a,.symbol a:hover{transform:none;text-decoration:underline}}
+        .col-name{color:#555}
         .grade{font-weight:bold;font-size:1.1em}
         @media(min-width:769px){
             th,td{padding:14px 8px;font-size:1.05em} /* ← MORE SPACE */
@@ -508,7 +514,7 @@ function renderTable(txt) {
     tr.style.cursor = 'pointer';
     tr.title = 'View full scorecard for ' + symbol;
     tr.addEventListener('click', (e) => {
-      if (e.target.closest('.vote-btn')) return;
+      if (e.target.closest('.vote-btn') || e.target.closest('a')) return;
       window.location.href = 'etf.html?symbol=' + encodeURIComponent(symbol);
     });
 
@@ -517,13 +523,21 @@ function renderTable(txt) {
   td.setAttribute('data-label', label);
 
   if (j===0) td.className='symbol';
+  if (j===1) td.className='col-name';
   if (j===5) td.className='grade';
   if (j===2) td.className='col-yield';
   if (j===3) td.className='col-aum';
   if (j===4) td.className='col-decay';
   if (j===5) td.className='col-grade';
 
-  td.textContent = cols[j];
+  if (j===0) {
+    const a = document.createElement('a');
+    a.href = 'etf.html?symbol=' + encodeURIComponent(cols[0]);
+    a.textContent = cols[0];
+    td.appendChild(a);
+  } else {
+    td.textContent = cols[j];
+  }
   tr.appendChild(td);
 });
 
