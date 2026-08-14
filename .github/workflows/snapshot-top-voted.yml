@@ -27,7 +27,7 @@ jobs:
           node-version: '20'
 
       - name: Bake top 10 into the page
-        run: node scripts/snapshot-top-voted.js
+        run: node snapshot-top-voted.js
 
       - name: Commit if changed
         run: |
