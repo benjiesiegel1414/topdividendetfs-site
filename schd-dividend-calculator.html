@@ -1836,6 +1836,117 @@
                 margin: 0 6px;
             }
         }
+
+        /* ══════════ MOST READ THIS WEEK ══════════ */
+        .hot-strip {
+            background: #fff;
+            border: 2px dashed var(--primary);
+            border-radius: 14px;
+            padding: 16px 14px;
+            margin-bottom: 24px;
+        }
+        @media (min-width: 640px) {
+            .hot-strip { padding: 20px 18px; margin-bottom: 28px; }
+        }
+        .hot-strip-label {
+            display: block;
+            text-align: center;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        @media (min-width: 640px) {
+            .hot-strip-label { font-size: 0.78rem; letter-spacing: 1.2px; }
+        }
+        .hot-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+        @media (min-width: 640px) {
+            .hot-links { gap: 10px; }
+        }
+        .hot-link {
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: var(--light-bg);
+            border: 1.5px solid #d4e9f5;
+            color: var(--primary-dark);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.18s, color 0.18s, transform 0.15s;
+        }
+        @media (min-width: 640px) {
+            .hot-link { font-size: 0.86rem; padding: 8px 16px; }
+        }
+        .hot-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ══════════ BROWSE EVERY ETF SCORECARD ══════════ */
+        .az-index {
+            background: #fff;
+            border: 1px solid #e4f0f8;
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 16px;
+            margin-bottom: 24px;
+        }
+        @media (min-width: 640px) {
+            .az-index { padding: 26px 22px; margin-bottom: 28px; }
+        }
+        .az-index h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: clamp(1.15rem, 3vw, 1.35rem);
+            font-weight: 900;
+            margin: 0 0 4px;
+        }
+        .az-index .az-sub {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin: 0 0 16px;
+        }
+        @media (min-width: 640px) {
+            .az-index .az-sub { font-size: 0.92rem; margin: 0 0 18px; }
+        }
+        .az-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+        }
+        @media (min-width: 640px) {
+            .az-links { gap: 7px; }
+        }
+        .az-links a {
+            padding: 5px 10px;
+            border-radius: 6px;
+            background: var(--light-bg);
+            border: 1px solid #d4e9f5;
+            color: var(--primary-dark);
+            font-size: 0.78rem;
+            font-weight: 900;
+            text-decoration: none;
+            transition: background 0.14s, color 0.14s, border-color 0.14s;
+        }
+        @media (min-width: 640px) {
+            .az-links a { font-size: 0.82rem; padding: 6px 11px; }
+        }
+        .az-links a:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -2141,6 +2252,45 @@
             </div>
         </div>
 
+        <!-- ══════════ MOST READ THIS WEEK ══════════ -->
+        <div class="hot-strip">
+            <span class="hot-strip-label">🔥 Most Read This Week</span>
+            <div class="hot-links">
+                <a href="schd-q3-dividend-increases.html" class="hot-link">SCHD Q3 2026 Dividend Increases Tracker</a>
+                <a href="schd-etf-holdings-2026.html" class="hot-link">SCHD Holdings 2026</a>
+                <a href="schd-vs-vym-etf-2026.html" class="hot-link">SCHD vs VYM 2026</a>
+                <a href="schd-dividend-history.html" class="hot-link">SCHD Dividend History</a>
+                <a href="schd-etf-2026-dividend-dates.html" class="hot-link">SCHD 2026 Dividend Dates</a>
+                <a href="qqqi-etf-pays-largest-distribution-ever.html" class="hot-link">QQQI Pays Largest Distribution Ever</a>
+                <a href="10-highest-yield-etfs.html" class="hot-link">10 Highest Yield ETFs</a>
+                <a href="btci.html" class="hot-link">BTCI Bitcoin Income Breakdown</a>
+                <a href="best-high-dividend-yield-etfs-2026.html" class="hot-link">Best High Yield ETFs 2026</a>
+                <a href="top-total-returns.html" class="hot-link">Top Total Returns</a>
+                <a href="blog.html" class="hot-link">All 27 Free Guides →</a>
+            </div>
+        </div>
+
+        <!-- ══════════ BROWSE EVERY ETF SCORECARD ══════════ -->
+        <section class="az-index">
+            <h2>Browse Every ETF Scorecard</h2>
+            <p class="az-sub">One click to the full scorecard for any ETF we rank</p>
+            <div class="az-links" id="azLinks">
+                <a href="etf.html?symbol=SCHD">SCHD</a>
+                <a href="etf.html?symbol=VIG">VIG</a>
+                <a href="etf.html?symbol=JEPI">JEPI</a>
+                <a href="etf.html?symbol=DIVO">DIVO</a>
+                <a href="etf.html?symbol=JEPQ">JEPQ</a>
+                <a href="etf.html?symbol=QQQI">QQQI</a>
+                <a href="etf.html?symbol=SPYI">SPYI</a>
+                <a href="etf.html?symbol=FDVV">FDVV</a>
+                <a href="etf.html?symbol=DGRO">DGRO</a>
+                <a href="etf.html?symbol=VYM">VYM</a>
+                <a href="etf.html?symbol=BTCI">BTCI</a>
+                <a href="etf.html?symbol=CHPY">CHPY</a>
+                <a href="etf.html?symbol=OVL">OVL</a>
+            </div>
+        </section>
+
         <p class="disclaimer">
             All numbers are estimates based on trailing twelve months (TTM) data ≈ $1.06 per share as of April 2026 (yield ~3.4–3.5%). Dividend growth is not guaranteed — past performance does not predict future results. SCHD dividends are paid quarterly. This calculator is for educational and entertainment purposes only.
         </p>
@@ -2334,6 +2484,36 @@
         if (!localStorage.getItem('popupDismissed')) {
             showPopup();
         }
+    </script>
+
+    <!-- ══════════ BROWSE EVERY ETF SCORECARD — pulls the live ticker list ══════════ -->
+    <script>
+    (function buildAzIndex(){
+        var box = document.getElementById('azLinks');
+        if (!box || !window.fetch) return;   // no box or old browser -> keep the static list
+
+        var CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv';
+
+        fetch(CSV_URL + '&t=' + Date.now())
+            .then(function(r){ return r.ok ? r.text() : Promise.reject(); })
+            .then(function(txt){
+                var seen = {}, syms = [];
+                txt.split('\n').slice(1).forEach(function(line){
+                    var s = (line.split(',')[0] || '').trim().toUpperCase();
+                    if (s && /^[A-Z][A-Z.\-]{0,5}$/.test(s) && !seen[s]) { seen[s] = 1; syms.push(s); }
+                });
+                if (!syms.length) return;             // bad payload -> keep the static list
+                syms.sort();
+                box.innerHTML = '';
+                syms.forEach(function(s){
+                    var a = document.createElement('a');
+                    a.href = 'etf.html?symbol=' + encodeURIComponent(s);
+                    a.textContent = s;
+                    box.appendChild(a);
+                });
+            })
+            .catch(function(){ /* sheet down -> the static fallback list stays on the page */ });
+    })();
     </script>
 
 </body>
