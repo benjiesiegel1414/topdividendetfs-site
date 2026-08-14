@@ -145,11 +145,6 @@
         .az-links a:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-2px)}
         .az-count{display:block;text-align:center;color:#999;font-size:.78em;margin-top:13px;font-weight:700}
 
-        /* SPONSOR BANNER */
-        .banner{width:90%;max-width:1000px;margin:22px auto;padding:0;background:none;display:flex;flex-direction:column;align-items:center;gap:6px}
-        .banner img{display:block;width:auto;height:auto;max-width:100%;object-fit:contain;background:transparent;transition:transform .3s ease}
-        .banner:hover img{transform:scale(1.02)}
-
         /* SHARE */
         .share-buttons{margin:20px auto 8px;display:flex;gap:14px;justify-content:center}
         .share-btn{display:flex;align-items:center;gap:6px;padding:7px 11px;border-radius:6px;font-weight:700;font-size:.82em;color:#fff;text-decoration:none;box-shadow:0 3px 8px rgba(0,0,0,.2);transition:all .2s}
@@ -195,19 +190,16 @@
     <h1>🏆 Top 10 Most Voted Dividend ETFs</h1>
     <p class="subhead">
         These are the dividend ETFs our community votes for the most, ranked live by total votes cast on TopDividendETFs.com.
-        Votes are reset each Friday!
+        Nobody pays to be here and nothing is weighted by us. It is purely what real investors keep picking.
     </p>
 
     <div style="text-align:center;">
-        <span class="live-note"><span class="live-dot"></span><span id="liveStamp">Loading live vote totals…</span></span>
+        <span class="live-note"><span class="live-dot"></span><span id="liveStamp" data-snapshot-at="">Vote totals</span></span>
     </div>
 
     <div id="votedWrap">
-        <div class="state-msg" id="loadingMsg">
-            Loading the live leaderboard…
-            <span class="sub">Pulling current vote totals and ETF data</span>
-        </div>
-        <table id="votedTable" style="display:none;">
+        <div class="state-msg" id="loadingMsg" style="display:none;"></div>
+        <table id="votedTable">
             <thead>
                 <tr>
                     <th class="col-rank">Rank</th>
@@ -220,7 +212,9 @@
                     <th class="col-votes">Votes</th>
                 </tr>
             </thead>
-            <tbody id="votedBody"></tbody>
+            <tbody id="votedBody">
+<!-- SNAPSHOT:START --><!-- SNAPSHOT:END -->
+            </tbody>
         </table>
     </div>
 
@@ -230,20 +224,12 @@
         <a href="./" data-mod="vote_cta">Cast Your Votes 🗳️</a>
     </div>
 
-    <div class="banner">
-        <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer">
-            <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/Revised Top Dividend Tools OVL ad.png" alt="OVL ETF">
-        </a>
-        <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
-        <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
-    </div>
-
     <!-- ══════════ EVERY TICKER → SCORECARD ══════════ -->
     <section class="az-index">
         <h2>Browse Every ETF Scorecard</h2>
         <p class="az-sub">Click any ticker for its full scorecard: yield, AUM, price decay, grade and vote total</p>
         <div class="az-links" id="azLinks">
-            <a href="etf.html?symbol=SCHD">SCHD</a>
+<!-- AZ:START -->            <a href="etf.html?symbol=SCHD">SCHD</a>
             <a href="etf.html?symbol=VIG">VIG</a>
             <a href="etf.html?symbol=JEPI">JEPI</a>
             <a href="etf.html?symbol=DIVO">DIVO</a>
@@ -255,7 +241,7 @@
             <a href="etf.html?symbol=VYM">VYM</a>
             <a href="etf.html?symbol=BTCI">BTCI</a>
             <a href="etf.html?symbol=CHPY">CHPY</a>
-            <a href="etf.html?symbol=OVL">OVL</a>
+            <a href="etf.html?symbol=OVL">OVL</a><!-- AZ:END -->
         </div>
         <span class="az-count" id="azCount"></span>
     </section>
@@ -375,97 +361,176 @@ function parseCSV(text) {
 
 var TICKER_RE = /^[A-Z][A-Z.\-]{0,5}$/;
 
-// ==================== LOAD BOTH SOURCES ====================
-// Vote failure must not kill the ticker index, and CSV failure must not kill the page.
-Promise.allSettled([
-  fetch(CSV_URL + '&t=' + Date.now()).then(function(r){ return r.ok ? r.text() : Promise.reject(); }),
-  fetch(VOTE_API + '?action=getAll&t=' + Date.now()).then(function(r){ return r.ok ? r.json() : Promise.reject(); })
-]).then(function(results){
-  var csvText = results[0].status === 'fulfilled' ? results[0].value : null;
-  var votes   = results[1].status === 'fulfilled' ? results[1].value : null;
-  build(csvText, votes);
-});
+// ==================== INSTANT PAINT, THEN LIVE REFRESH ====================
+// The table is already populated from a snapshot baked into this file by the
+// nightly GitHub Action, so there is nothing to wait for on first paint.
+// Live data is fetched afterwards and swapped in only if it differs.
+//
+// Three things were making this page slow before:
+//   1. Promise.allSettled waited for BOTH sources, so the whole table blocked
+//      on the Apps Script vote endpoint, which is slow to wake from cold.
+//   2. The CSV was cache-busted with Date.now() on every single load, so the
+//      browser could never reuse it. Now it buckets by the hour.
+//   3. Nothing was in the HTML, so first paint was always a spinner.
 
-function build(csvText, votes) {
-  var etfs = [];
+var CACHE_KEY = 'tv_top10_v1';
+var CACHE_TTL = 6 * 60 * 60 * 1000;   // 6h
 
-  if (csvText) {
-    var rows = parseCSV(csvText);
-    for (var i = 1; i < rows.length; i++) {
-      var c = rows[i];
-      if (!c || c.length < 6) continue;
-      var sym  = (c[0] || '').trim();
-      var name = (c[1] || '').trim();
-      // A real ETF row always carries a fund name. Sheet summary rows
-      // ("Total", "Sum") pass a bare ticker regex, so require the name too.
-      if (!sym || !name || !TICKER_RE.test(sym.toUpperCase())) continue;
-      etfs.push({
-        symbol: sym,
-        upper : sym.toUpperCase(),
-        name  : name,
-        yield : (c[2] || '').trim(),
-        aum   : (c[3] || '').trim(),
-        decay : (c[4] || '').trim(),
-        grade : (c[5] || '').trim(),
-        votes : 0
-      });
-    }
-  }
+// Before the Action has ever run the snapshot markers are empty, so fall back
+// to the loading state rather than showing a bare header row.
+(function initEmpty(){
+  var tbody = document.getElementById('votedBody');
+  var table = document.getElementById('votedTable');
+  var loading = document.getElementById('loadingMsg');
+  if (!tbody || !table || !loading) return;
+  if (tbody.querySelector('tr')) return;          // snapshot present, leave it alone
+  table.style.display = 'none';
+  loading.style.display = '';
+  loading.innerHTML = 'Loading the live leaderboard…' +
+    '<span class="sub">Pulling current vote totals and ETF data</span>';
+})();
 
-  // Attach vote totals. Match the exact CSV symbol first (that is the key the
-  // homepage writes with), then fall back to an uppercase match.
-  var haveVotes = false;
-  if (votes && typeof votes === 'object') {
-    var upperMap = {};
-    Object.keys(votes).forEach(function(k){
-      var n = parseInt(votes[k], 10);
-      upperMap[String(k).trim().toUpperCase()] = isNaN(n) ? 0 : n;
-    });
-    etfs.forEach(function(e){
-      var v = votes[e.symbol];
-      if (v === undefined) v = upperMap[e.upper];
-      var n = parseInt(v, 10);
-      e.votes = isNaN(n) ? 0 : n;
-    });
-    haveVotes = etfs.some(function(e){ return e.votes > 0; });
-  }
-
-  buildAzIndex(etfs);
-  buildTable(etfs, haveVotes, !!csvText);
-  stamp(haveVotes);
+// Hourly bucket instead of per-millisecond: the sheet updates daily, so this
+// lets the browser and Google's CDN actually cache it between visits.
+function csvUrl() {
+  return CSV_URL + '&h=' + Math.floor(Date.now() / 3600000);
 }
 
-// ==================== TOP 10 TABLE ====================
-function buildTable(etfs, haveVotes, haveCsv) {
-  var loading = document.getElementById('loadingMsg');
-  var table   = document.getElementById('votedTable');
-  var tbody   = document.getElementById('votedBody');
+// ---- Step 1: if a recent live result is cached locally, use it right away ----
+(function applyCache(){
+  try {
+    var raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return;
+    var c = JSON.parse(raw);
+    if (!c || !c.at || !c.etfs || (Date.now() - c.at) > CACHE_TTL) return;
+    var baked = document.getElementById('liveStamp').getAttribute('data-snapshot-at');
+    // Only override the baked snapshot if the cache is genuinely newer.
+    if (baked && c.at <= Date.parse(baked)) return;
+    renderRows(c.etfs);
+    stampFrom(c.at, 'cached');
+  } catch(e) {}
+})();
 
-  if (!haveCsv) {
-    loading.innerHTML = 'The live leaderboard is taking a moment to load 😴' +
-      '<span class="sub">Try refreshing, or browse every ETF scorecard using the ticker list below. ' +
-      'You can also <a href="./">head back to the main list</a>.</span>';
+// ---- Step 2: refresh in the background, non-blocking ----
+// Each source is handled the moment it lands. The ticker index no longer waits
+// on votes, and the vote totals no longer wait on the CSV.
+(function refresh(){
+  var csvP = fetch(csvUrl())
+    .then(function(r){ return r.ok ? r.text() : Promise.reject(); })
+    .then(function(t){ return parseEtfs(t); })
+    .catch(function(){ return null; });
+
+  var voteP = fetch(VOTE_API + '?action=getAll&t=' + Date.now())
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+    .catch(function(){ return null; });
+
+  // Ticker index only needs the CSV, so update it as soon as that lands.
+  csvP.then(function(etfs){ if (etfs && etfs.length) buildAzIndex(etfs); });
+
+  Promise.all([csvP, voteP]).then(function(r){
+    var etfs = r[0], votes = r[1];
+    if (!etfs || !etfs.length || !votes) { markStale(); return; }
+
+    attachVotes(etfs, votes);
+    if (!etfs.some(function(e){ return e.votes > 0; })) { markStale(); return; }
+
+    var top = rank(etfs);
+    renderRows(top);
+    var now = Date.now();
+    stampFrom(now, 'live');
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ at: now, etfs: top }));
+    } catch(e) {}
+  });
+})();
+
+// If live data never arrives we keep showing the baked snapshot rather than
+// blanking the page, and just say so in the stamp.
+function markStale(){
+  var el = document.getElementById('liveStamp');
+  if (!el) return;
+  var baked = el.getAttribute('data-snapshot-at');
+  if (document.querySelectorAll('#votedBody tr').length) {
+    el.textContent = baked
+      ? 'Showing last saved totals from ' + fmt(Date.parse(baked))
+      : 'Showing last saved totals';
     return;
   }
-  if (!haveVotes) {
+  var loading = document.getElementById('loadingMsg');
+  var table = document.getElementById('votedTable');
+  if (loading && table) {
+    table.style.display = 'none';
+    loading.style.display = '';
     loading.innerHTML = 'Vote totals are syncing right now 🗳️' +
       '<span class="sub">The leaderboard refreshes as votes come in. ' +
       '<a href="./">Cast your 10 votes</a> and check back in a moment.</span>';
-    return;
   }
+  el.textContent = 'Waiting on live vote totals';
+}
 
-  // Sort by votes desc, then by symbol so ties are stable and never random.
-  var ranked = etfs.slice().sort(function(a, b){
+// ==================== PARSE / JOIN / RANK ====================
+function parseEtfs(csvText) {
+  var rows = parseCSV(csvText), out = [];
+  for (var i = 1; i < rows.length; i++) {
+    var c = rows[i];
+    if (!c || c.length < 6) continue;
+    var sym  = (c[0] || '').trim();
+    var name = (c[1] || '').trim();
+    // A real ETF row always carries a fund name. Sheet summary rows
+    // ("Total", "Sum") pass a bare ticker regex, so require the name too.
+    if (!sym || !name || !TICKER_RE.test(sym.toUpperCase())) continue;
+    out.push({
+      symbol: sym, upper: sym.toUpperCase(), name: name,
+      yield: (c[2]||'').trim(), aum: (c[3]||'').trim(),
+      decay: (c[4]||'').trim(), grade: (c[5]||'').trim(), votes: 0
+    });
+  }
+  return out;
+}
+
+function attachVotes(etfs, votes) {
+  var upperMap = {};
+  Object.keys(votes).forEach(function(k){
+    var n = parseInt(votes[k], 10);
+    upperMap[String(k).trim().toUpperCase()] = isNaN(n) ? 0 : n;
+  });
+  etfs.forEach(function(e){
+    var v = votes[e.symbol];
+    if (v === undefined) v = upperMap[e.upper];
+    var n = parseInt(v, 10);
+    e.votes = isNaN(n) ? 0 : n;
+  });
+}
+
+function rank(etfs) {
+  return etfs.slice().sort(function(a,b){
     if (b.votes !== a.votes) return b.votes - a.votes;
-    return a.upper.localeCompare(b.upper);
+    return a.upper.localeCompare(b.upper);   // stable tie-break
   }).slice(0, TOP_N);
+}
 
-  var MEDALS = { 1: '🥇', 2: '🥈', 3: '🥉' };
+// ==================== RENDER ROWS ====================
+// Diffed against what is already on screen: if the ranking has not changed we
+// leave the DOM alone entirely, so the background refresh causes no flicker.
+var MEDALS = { 1: '🥇', 2: '🥈', 3: '🥉' };
 
-  ranked.forEach(function(e, idx){
-    var rank = idx + 1;
+function signature(list) {
+  return list.map(function(e){ return e.upper + ':' + e.votes; }).join('|');
+}
+
+function renderRows(list) {
+  if (!list || !list.length) return;
+  var tbody = document.getElementById('votedBody');
+  if (!tbody) return;
+
+  if (tbody.getAttribute('data-sig') === signature(list)) return;  // nothing changed
+
+  var frag = document.createDocumentFragment();
+
+  list.forEach(function(e, idx){
+    var rankNo = idx + 1;
     var tr = document.createElement('tr');
-    if (rank === 1) tr.className = 'top1';
+    if (rankNo === 1) tr.className = 'top1';
     tr.style.cursor = 'pointer';
     tr.title = 'View the full scorecard for ' + e.symbol;
     tr.addEventListener('click', function(ev){
@@ -474,18 +539,16 @@ function buildTable(etfs, haveVotes, haveCsv) {
       window.location.href = 'etf.html?symbol=' + encodeURIComponent(e.symbol);
     });
 
-    var cells = [
-      { cls: 'rank col-rank',  label: 'Rank',           html: MEDALS[rank] ? '<span class="medal">' + MEDALS[rank] + '</span>' : '#' + rank },
-      { cls: 'symbol',         label: 'Symbol',         html: '<a class="sym-link" data-mod="voted_ticker" href="etf.html?symbol=' + encodeURIComponent(e.symbol) + '">' + esc(e.symbol) + '</a>' },
-      { cls: 'col-name',       label: 'Name',           html: esc(e.name) },
-      { cls: 'col-yield',      label: 'Dividend Yield', html: esc(e.yield) },
-      { cls: 'col-aum',        label: 'AUM',            html: esc(e.aum) },
-      { cls: 'col-decay',      label: 'Price Decay',    html: esc(e.decay) },
-      { cls: 'grade col-grade',label: 'Grade',          html: esc(e.grade) },
-      { cls: 'votes-cell col-votes', label: 'Votes',    html: e.votes.toLocaleString() }
-    ];
-
-    cells.forEach(function(c){
+    [
+      { cls:'rank col-rank', label:'Rank', html: MEDALS[rankNo] ? '<span class="medal">'+MEDALS[rankNo]+'</span>' : '#'+rankNo },
+      { cls:'symbol', label:'Symbol', html:'<a class="sym-link" data-mod="voted_ticker" href="etf.html?symbol='+encodeURIComponent(e.symbol)+'">'+esc(e.symbol)+'</a>' },
+      { cls:'col-name', label:'Name', html: esc(e.name) },
+      { cls:'col-yield', label:'Dividend Yield', html: esc(e.yield) },
+      { cls:'col-aum', label:'AUM', html: esc(e.aum) },
+      { cls:'col-decay', label:'Price Decay', html: esc(e.decay) },
+      { cls:'grade col-grade', label:'Grade', html: esc(e.grade) },
+      { cls:'votes-cell col-votes', label:'Votes', html: (e.votes||0).toLocaleString() }
+    ].forEach(function(c){
       var td = document.createElement('td');
       td.className = c.cls;
       td.setAttribute('data-label', c.label);
@@ -493,11 +556,17 @@ function buildTable(etfs, haveVotes, haveCsv) {
       tr.appendChild(td);
     });
 
-    tbody.appendChild(tr);
+    frag.appendChild(tr);
   });
 
-  loading.style.display = 'none';
-  table.style.display = '';
+  tbody.innerHTML = '';
+  tbody.appendChild(frag);
+  tbody.setAttribute('data-sig', signature(list));
+
+  var loading = document.getElementById('loadingMsg');
+  var table = document.getElementById('votedTable');
+  if (loading) loading.style.display = 'none';
+  if (table) table.style.display = '';
 }
 
 function esc(s) {
@@ -532,15 +601,27 @@ function buildAzIndex(etfs) {
 }
 
 // ==================== LIVE STAMP ====================
-function stamp(haveVotes) {
+function fmt(ms) {
+  var d = new Date(ms);
+  return d.toLocaleTimeString([], { hour:'numeric', minute:'2-digit' }) +
+         ' on ' + d.toLocaleDateString([], { month:'short', day:'numeric' });
+}
+
+function stampFrom(ms, kind) {
   var el = document.getElementById('liveStamp');
   if (!el) return;
-  if (!haveVotes) { el.textContent = 'Waiting on live vote totals'; return; }
-  var now = new Date();
-  var time = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
-  var date = now.toLocaleDateString([], { month: 'short', day: 'numeric' });
-  el.textContent = 'Live vote totals as of ' + time + ' on ' + date;
+  el.textContent = (kind === 'live' ? 'Live vote totals as of ' : 'Vote totals as of ') + fmt(ms);
 }
+
+// Render the baked snapshot's timestamp in the visitor's own timezone.
+(function stampBaked(){
+  var el = document.getElementById('liveStamp');
+  if (!el) return;
+  var baked = el.getAttribute('data-snapshot-at');
+  if (!baked) { el.textContent = 'Loading live vote totals…'; return; }
+  var t = Date.parse(baked);
+  if (!isNaN(t)) stampFrom(t, 'snapshot');
+})();
 </script>
 </body>
 </html>
