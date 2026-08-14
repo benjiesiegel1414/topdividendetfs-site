@@ -26,6 +26,7 @@
 
     <!-- FAVICONS -->
     <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="https://topdividendetfs.com/">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -217,6 +218,15 @@
    .site-pill:hover{background:#1A3C34;color:#fff;}
    .site-pill.current{background:#1A3C34;color:#fff;cursor:default;}
    /* ────────────────────────────────────── END SITE NETWORK BAR ────────────────────────────────────── */
+
+   /* ══════════ QUICK VIEW CHIPS ══════════ */
+   .chip-bar{width:100%;max-width:1700px;margin:14px auto 2px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;box-sizing:border-box;}
+   .chip-label{font-size:0.68em;text-transform:uppercase;letter-spacing:.6px;color:#999;font-weight:900;flex-shrink:0;}
+   .chip{padding:7px 14px;border-radius:999px;background:#fff;border:2px solid var(--green);color:#1A3C34;font-size:0.85em;font-weight:900;text-decoration:none;transition:all .15s ease;white-space:nowrap;}
+   .chip:hover{background:var(--green);color:#fff;transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.18);}
+   .chip.active{background:var(--green);color:#fff;box-shadow:0 3px 9px rgba(46,93,84,.4);}
+   .chip.clear{border-color:#bbb;color:#777;font-weight:700;}
+   .chip.clear:hover{background:#777;border-color:#777;color:#fff;}
     </style>
 </head>
 <body>
@@ -324,6 +334,18 @@
     <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
     <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
 </div>
+
+    <!-- ══════════ QUICK VIEWS ══════════ -->
+    <div class="chip-bar">
+        <span class="chip-label">Quick Views:</span>
+        <a href="?yield=15%2B#etfTable" class="chip" data-chip="yield:15+">🚀 15%+ Yield</a>
+        <a href="?yield=10-15#etfTable" class="chip" data-chip="yield:10-15">💰 10-15% Yield</a>
+        <a href="?yield=5-10#etfTable" class="chip" data-chip="yield:5-10">⚖️ 5-10% Yield</a>
+        <a href="?yield=1-5#etfTable" class="chip" data-chip="yield:1-5">🛡️ 1-5% Yield</a>
+        <a href="?decay=NO#etfTable" class="chip" data-chip="decay:NO">✅ No Price Decay</a>
+        <a href="?decay=YES#etfTable" class="chip" data-chip="decay:YES">⚠️ Price Decay</a>
+        <a href="./" class="chip clear">↺ Show All 100+</a>
+    </div>
 
     <div id="filters">
         <button id="resetFilters">Reset Filters</button>
@@ -463,7 +485,7 @@
     </div>
 
     <!-- NEW: BACK TO TOP BUTTON (RESETS FILTERS) -->
-    <button class="back-to-top" onclick="location.reload()">Back To Top</button>
+    <button class="back-to-top" onclick="clearAllFilters()">Back To Top</button>
 
     <footer class="footer">
 <footer class="footer">
@@ -493,6 +515,31 @@ const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCe
 const VOTE_API = 'https://script.google.com/macros/s/AKfycbwiuyy8aUNB3tNKouJ18zxE8r8nuiCTk3lG9PCYeqEQndImu_8915rNHudiayXtFNbi/exec';
 
 let allRows = [];
+
+// ==================== QUICK VIEWS ====================
+// Each chip is a real link, so clicking one is a full page load (= a real GA4 pageview).
+// On arrival we read the url and drive the existing filter dropdowns from it.
+(function primeFiltersFromURL(){
+  const p = new URLSearchParams(location.search);
+  const y = p.get('yield'), d = p.get('decay');
+  if (y) document.getElementById('yieldRangeFilter').value = y;
+  if (d) document.getElementById('decayFilter').value = d.toUpperCase();
+  const key = y ? 'yield:' + y : (d ? 'decay:' + d.toUpperCase() : '');
+  if (key) {
+    const chip = document.querySelector('.chip[data-chip="' + key + '"]');
+    if (chip) chip.classList.add('active');
+  }
+})();
+
+// Reset has to STRIP the url params. location.reload() would re-load the same
+// url and the chip would just switch itself straight back on.
+function clearAllFilters() {
+  if (location.search || location.hash) {
+    location.href = location.pathname;
+  } else {
+    location.reload();
+  }
+}
 
 // ==================== LOAD ETFs (UNCHANGED - INSTANT) ====================
 fetch(CSV_URL + '&t=' + Date.now())
@@ -716,7 +763,7 @@ function applyFilters() {
 }
 ['yieldRangeFilter','decayFilter'].forEach(id => document.getElementById(id).onchange = applyFilters);
 document.getElementById('searchFilter').oninput = applyFilters;
-document.getElementById('resetFilters').onclick = () => location.reload();
+document.getElementById('resetFilters').onclick = clearAllFilters;
 </script>
 </body>
 </html>
