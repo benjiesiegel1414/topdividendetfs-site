@@ -38,5 +38,5 @@ jobs:
             exit 0
           fi
           git add top-voted-etfs.html data/top-voted.json
-          git commit -m "Snapshot top voted ETFs [skip ci]"
+          git commit -m "Snapshot top voted ETFs"
           git push
