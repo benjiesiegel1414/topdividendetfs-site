@@ -1,0 +1,66 @@
+{
+  "updated": "2026-08-14T06:33:46.717Z",
+  "total_tracked": 137,
+  "top": [
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 71,
+      "yield": "41%"
+    },
+    {
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "votes": 59,
+      "yield": "45.0%"
+    },
+    {
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 42,
+      "yield": "33.6%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 41,
+      "yield": "36.0%"
+    },
+    {
+      "symbol": "SNOY",
+      "name": "YieldMax SNOW Option Income Strategy ETF",
+      "votes": 41,
+      "yield": "91%"
+    },
+    {
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
+      "votes": 40,
+      "yield": "65%"
+    },
+    {
+      "symbol": "NVII",
+      "name": "REX NVDA Growth & Income ETF",
+      "votes": 40,
+      "yield": "47%"
+    },
+    {
+      "symbol": "NVDY",
+      "name": "YieldMax NVDA Option Income Strategy ETF",
+      "votes": 28,
+      "yield": "40%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 27,
+      "yield": "17.4%"
+    },
+    {
+      "symbol": "TDAX",
+      "name": "TDAQ LIFT ETF",
+      "votes": 23,
+      "yield": "24%"
+    }
+  ]
+}
