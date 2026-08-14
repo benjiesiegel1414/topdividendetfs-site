@@ -220,13 +220,22 @@
    /* ────────────────────────────────────── END SITE NETWORK BAR ────────────────────────────────────── */
 
    /* ══════════ QUICK VIEW CHIPS ══════════ */
-   .chip-bar{width:100%;max-width:1700px;margin:14px auto 2px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;box-sizing:border-box;}
-   .chip-label{font-size:0.68em;text-transform:uppercase;letter-spacing:.6px;color:#999;font-weight:900;flex-shrink:0;}
-   .chip{padding:7px 14px;border-radius:999px;background:#fff;border:2px solid var(--green);color:#1A3C34;font-size:0.85em;font-weight:900;text-decoration:none;transition:all .15s ease;white-space:nowrap;}
-   .chip:hover{background:var(--green);color:#fff;transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.18);}
-   .chip.active{background:var(--green);color:#fff;box-shadow:0 3px 9px rgba(46,93,84,.4);}
+   /* Narrower bar so the chips cluster into balanced centered rows
+      instead of spreading across the full 1700px shell. */
+   .chip-bar{width:100%;max-width:1100px;margin:12px auto 2px;padding:0 10px;display:flex;flex-wrap:wrap;gap:7.5px;justify-content:center;align-items:center;box-sizing:border-box;}
+   /* Label gets its own centered line so row 1 isn't pushed off-center by it. */
+   .chip-label{flex-basis:100%;text-align:center;font-size:0.69em;text-transform:uppercase;letter-spacing:.6px;color:#999;font-weight:900;margin-bottom:1px;}
+   .chip{padding:7.15px 12.5px;border-radius:999px;background:#fff;border:1.5px solid var(--green);color:#1A3C34;font-size:0.79em;font-weight:900;line-height:1.15;text-decoration:none;transition:all .15s ease;white-space:nowrap;}
+   .chip:hover{background:var(--green);color:#fff;transform:translateY(-2px);box-shadow:0 3px 8px rgba(0,0,0,.18);}
+   .chip.active{background:var(--green);color:#fff;box-shadow:0 2px 7px rgba(46,93,84,.4);}
+   .chip.gold{background:linear-gradient(135deg,#FFD700,#FFA500);border-color:#FF8C00;color:#1A3C34;box-shadow:0 2px 8px rgba(255,215,0,.4);}
+   .chip.gold:hover{background:linear-gradient(135deg,#FFA500,#FFD700);color:#1A3C34;box-shadow:0 5px 13px rgba(255,215,0,.6);}
    .chip.clear{border-color:#bbb;color:#777;font-weight:700;}
    .chip.clear:hover{background:#777;border-color:#777;color:#fff;}
+   @media(max-width:600px){
+     .chip-bar{gap:6.3px;padding:0 8px;}
+     .chip{padding:5.8px 10.5px;font-size:0.735em;}
+   }
     </style>
 </head>
 <body>
@@ -338,6 +347,7 @@
     <!-- ══════════ QUICK VIEWS ══════════ -->
     <div class="chip-bar">
         <span class="chip-label">Quick Views:</span>
+        <a href="top-voted-etfs.html" class="chip gold">🏆 Top Voted ETFs</a>
         <a href="?yield=15%2B#etfTable" class="chip" data-chip="yield:15+">🚀 15%+ Yield</a>
         <a href="?yield=10-15#etfTable" class="chip" data-chip="yield:10-15">💰 10-15% Yield</a>
         <a href="?yield=5-10#etfTable" class="chip" data-chip="yield:5-10">⚖️ 5-10% Yield</a>
@@ -488,8 +498,8 @@
     <button class="back-to-top" onclick="clearAllFilters()">Back To Top</button>
 
     <footer class="footer">
-<footer class="footer">
     <p>
+        <a href="top-voted-etfs.html">Top Voted ETFs</a> | 
         <a href="terms-of-use.html">Terms of Use</a> | 
         <a href="privacy-policy.html">Privacy Policy</a> | 
         <a href="FAQ.html">FAQ</a> | 
