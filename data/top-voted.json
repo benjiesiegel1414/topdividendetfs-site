@@ -1,7 +1,31 @@
 {
-  "updated": "2026-08-15T01:07:00.977Z",
+  "updated": "2026-08-15T06:34:46.080Z",
   "total_tracked": 137,
   "top": [
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 3,
+      "yield": "41%"
+    },
+    {
+      "symbol": "XQQI",
+      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "votes": 3,
+      "yield": "21.0%"
+    },
+    {
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
+      "votes": 2,
+      "yield": "65%"
+    },
+    {
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 2,
+      "yield": "33.6%"
+    },
     {
       "symbol": "KGLD",
       "name": "Kurv Gold Enhanced Income ETF",
@@ -9,8 +33,14 @@
       "yield": "15.6%"
     },
     {
-      "symbol": "XQQI",
-      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 2,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
       "votes": 2,
       "yield": "21.0%"
     },
@@ -21,46 +51,16 @@
       "yield": "27%"
     },
     {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
       "votes": 1,
-      "yield": "65%"
+      "yield": "34.8%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
       "votes": 1,
-      "yield": "41%"
-    },
-    {
-      "symbol": "DRKY",
-      "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
-      "votes": 1,
-      "yield": "15.0%"
-    },
-    {
-      "symbol": "ISPY",
-      "name": "ProShares S&P 500 High Income ETF",
-      "votes": 1,
-      "yield": "10.0%"
-    },
-    {
-      "symbol": "MLPI",
-      "name": "MLP & Energy Infrastructure High Income ETF",
-      "votes": 1,
-      "yield": "14.8%"
-    },
-    {
-      "symbol": "ODTE",
-      "name": "ODTE  VegaShares SPX NDX RTY Premium Income ETF",
-      "votes": 1,
-      "yield": "14.2%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 1,
-      "yield": "10.5%"
+      "yield": "36.0%"
     }
   ]
 }
