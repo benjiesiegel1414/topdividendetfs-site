@@ -1,18 +1,42 @@
 {
-  "updated": "2026-08-15T12:33:25.029Z",
+  "updated": "2026-08-15T18:26:11.939Z",
   "total_tracked": 137,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 3,
+      "votes": 5,
       "yield": "41%"
     },
     {
       "symbol": "XQQI",
       "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "votes": 5,
+      "yield": "21.0%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 4,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "KGLD",
+      "name": "Kurv Gold Enhanced Income ETF",
+      "votes": 3,
+      "yield": "15.6%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
       "votes": 3,
       "yield": "21.0%"
+    },
+    {
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
+      "votes": 2,
+      "yield": "27%"
     },
     {
       "symbol": "AMDY",
@@ -21,46 +45,22 @@
       "yield": "65%"
     },
     {
+      "symbol": "DRKY",
+      "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
+      "votes": 2,
+      "yield": "15.0%"
+    },
+    {
       "symbol": "EGGY",
       "name": "NestYield Dynamic Income ETF",
       "votes": 2,
       "yield": "33.6%"
     },
     {
-      "symbol": "KGLD",
-      "name": "Kurv Gold Enhanced Income ETF",
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
       "votes": 2,
-      "yield": "15.6%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 2,
-      "yield": "10.5%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 2,
-      "yield": "21.0%"
-    },
-    {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 1,
-      "yield": "27%"
-    },
-    {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "34.8%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 1,
-      "yield": "36.0%"
+      "yield": "33.0%"
     }
   ]
 }
