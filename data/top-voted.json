@@ -1,11 +1,29 @@
 {
-  "updated": "2026-08-16T01:11:32.203Z",
-  "total_tracked": 137,
+  "updated": "2026-08-16T06:36:18.900Z",
+  "total_tracked": 138,
   "top": [
+    {
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 12,
+      "yield": "7.9%"
+    },
+    {
+      "symbol": "GIAX",
+      "name": "Nicholas Global Equity and Income ETF",
+      "votes": 11,
+      "yield": "24.0%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 11,
+      "yield": "12.04%"
+    },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 6,
+      "votes": 7,
       "yield": "41%"
     },
     {
@@ -21,6 +39,12 @@
       "yield": "10.5%"
     },
     {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 4,
+      "yield": "21.0%"
+    },
+    {
       "symbol": "AMDY",
       "name": "YieldMax AMD Option Income Strategy ETF",
       "votes": 3,
@@ -30,37 +54,13 @@
       "symbol": "EGGY",
       "name": "NestYield Dynamic Income ETF",
       "votes": 3,
-      "yield": "33.6%"
+      "yield": "37.0%"
     },
     {
       "symbol": "GOOW",
       "name": "Roundhill GOOGL WeeklyPay ETF",
       "votes": 3,
       "yield": "33.0%"
-    },
-    {
-      "symbol": "KGLD",
-      "name": "Kurv Gold Enhanced Income ETF",
-      "votes": 3,
-      "yield": "15.6%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 3,
-      "yield": "21.0%"
-    },
-    {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 2,
-      "yield": "27%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 2,
-      "yield": "36.0%"
     }
   ]
 }
