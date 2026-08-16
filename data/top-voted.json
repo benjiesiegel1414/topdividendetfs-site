@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-16T12:34:50.247Z",
-  "total_tracked": 138,
+  "updated": "2026-08-16T18:26:00.327Z",
+  "total_tracked": 140,
   "top": [
     {
       "symbol": "GPIX",
@@ -9,22 +9,28 @@
       "yield": "7.9%"
     },
     {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 12,
+      "yield": "12.04%"
+    },
+    {
       "symbol": "GIAX",
       "name": "Nicholas Global Equity and Income ETF",
       "votes": 11,
       "yield": "24.0%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 11,
-      "yield": "12.04%"
-    },
-    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 7,
+      "votes": 9,
       "yield": "41%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 5,
+      "yield": "10.5%"
     },
     {
       "symbol": "XQQI",
@@ -33,10 +39,16 @@
       "yield": "21.0%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
       "votes": 4,
-      "yield": "10.5%"
+      "yield": "33.0%"
+    },
+    {
+      "symbol": "JEPQ",
+      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
+      "votes": 4,
+      "yield": "12.9%"
     },
     {
       "symbol": "XLEI",
@@ -49,18 +61,6 @@
       "name": "YieldMax AMD Option Income Strategy ETF",
       "votes": 3,
       "yield": "65%"
-    },
-    {
-      "symbol": "EGGY",
-      "name": "NestYield Dynamic Income ETF",
-      "votes": 3,
-      "yield": "37.0%"
-    },
-    {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 3,
-      "yield": "33.0%"
     }
   ]
 }
