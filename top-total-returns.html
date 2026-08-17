@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -9,7 +9,12 @@
     <title>Top 10 Highest Total Return Dividend ETFs 2026 | Best Performance</title>
     <meta name="description" content="Compare top dividend ETFs by highest total returns. Real-time rankings updated daily. Includes yield, expense ratios, tax efficiency & performance metrics for income investors.">
     <meta name="keywords" content="dividend ETFs, highest yield ETFs, total return ETFs, income investing, dividend stocks, ETF rankings, best dividend funds, highest total return">
-    
+    <link rel="canonical" href="https://topdividendetfs.com/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://docs.google.com">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://topdividendETFs.com/">
@@ -25,6 +30,7 @@
     <meta property="twitter:title" content="Top 10 Highest Total Return Dividend ETFs">
     <meta property="twitter:description" content="Compare top dividend ETFs by highest total returns. Real-time rankings updated daily.">
     <meta property="twitter:image" content="https://i.postimg.cc/vmmCcpCm/100-Dividend-ETFs-(1).png">
+
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
 <script>
@@ -103,12 +109,12 @@
       ]
     }
     </script>
-    
+
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        :root { 
+        :root {
             --primary: #0F766E;
             --primary-dark: #134E4A;
             --primary-light: #14B8A6;
@@ -123,40 +129,74 @@
             --background-alt: #F0F9FF;
             --white: #FFFFFF;
             --border: #E2E8F0;
+            --gold: #FCD34D;
         }
 
         html, body {
-            margin: 0; 
-            padding: 0; 
+            margin: 0;
+            padding: 0;
             overflow-x: hidden;
             font-family: 'Lato', Arial, sans-serif;
             background: linear-gradient(135deg, var(--background) 0%, var(--background-alt) 50%, #F5F3FF 100%);
             color: var(--text-dark);
         }
 
+        a { -webkit-tap-highlight-color: rgba(20,184,166,0.15); }
+
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         header {
             background: rgba(15, 118, 110, 0.7);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 16px 20px; 
+            padding: 14px 20px;
             color: #fff;
-            text-align: center; 
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        .logo { 
-            font-size: clamp(24px, 6vw, 36px); 
-            font-weight: 900; 
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .logo {
+            font-size: clamp(20px, 5vw, 34px);
+            font-weight: 900;
             letter-spacing: -1px;
-            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
             transition: transform 0.3s ease;
         }
 
-        .logo:hover {
-            transform: scale(1.02);
+        .logo:hover { transform: scale(1.02); }
+
+        .header-cta {
+            display: inline-block;
+            padding: 9px 16px;
+            background: var(--gold);
+            color: var(--primary-dark);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 900;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
 
         /* Network Bar */
@@ -165,7 +205,10 @@
             background: #fff;
             border-bottom: 1px solid var(--border);
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
+
+        .network-bar::-webkit-scrollbar { height: 0; }
 
         .network-bar-inner {
             max-width: 1200px;
@@ -203,10 +246,64 @@
             color: var(--primary-dark);
             border-right: 1px solid var(--border);
             transition: background 0.2s;
+            white-space: nowrap;
         }
 
-        .network-bar-links a:hover {
-            background: rgba(20, 184, 166, 0.08);
+        .network-bar-links a:hover { background: rgba(20, 184, 166, 0.08); }
+
+        /* Sites pill bar */
+        .sites-bar {
+            width: 100%;
+            background: var(--primary-dark);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .sites-bar::-webkit-scrollbar { height: 0; }
+
+        .sites-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+        }
+
+        .sites-bar-label {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.68rem;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-right: 4px;
+        }
+
+        .site-pill {
+            display: inline-block;
+            padding: 7px 14px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .site-pill:hover {
+            background: rgba(255,255,255,0.24);
+            transform: translateY(-1px);
+        }
+
+        .site-pill.gold {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--primary-dark);
+            font-weight: 900;
         }
 
         .hero {
@@ -226,7 +323,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
             pointer-events: none;
@@ -239,10 +336,10 @@
             z-index: 2;
         }
 
-        .hero h1 { 
+        .hero h1 {
             color: white;
-            margin: 0 0 15px; 
-            font-size: clamp(36px, 7vw, 52px); 
+            margin: 0 0 15px;
+            font-size: clamp(36px, 7vw, 52px);
             text-align: center;
             font-weight: 900;
             letter-spacing: -0.5px;
@@ -276,7 +373,7 @@
         .stat-number {
             font-size: 28px;
             font-weight: 900;
-            color: #FCD34D;
+            color: var(--gold);
         }
 
         .stat-label {
@@ -286,15 +383,21 @@
             font-weight: 600;
         }
 
-        .content { 
-            width: 92%; 
-            max-width: 1200px; 
-            margin: 0 auto; 
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 32px;
         }
 
-        .section {
-            margin-bottom: 70px;
+        .content {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
+
+        .section { margin-bottom: 70px; }
 
         .section-title {
             font-size: clamp(26px, 5vw, 38px);
@@ -324,7 +427,7 @@
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(15, 118, 110, 0.12);
             border: 1px solid var(--border);
-            margin-bottom: 40px;
+            margin-bottom: 26px;
         }
 
         .leaderboard-header {
@@ -349,15 +452,17 @@
             border-bottom: 1px solid var(--border);
             align-items: center;
             transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
         }
 
         .leaderboard-row:hover {
-            background: rgba(20, 184, 166, 0.04);
+            background: rgba(20, 184, 166, 0.07);
+            transform: translateX(3px);
         }
 
-        .leaderboard-row:last-child {
-            border-bottom: none;
-        }
+        .leaderboard-row:last-child { border-bottom: none; }
 
         .rank-badge {
             background: linear-gradient(135deg, var(--primary-light), var(--accent));
@@ -370,6 +475,7 @@
             border-radius: 50%;
             font-weight: 900;
             font-size: 16px;
+            flex-shrink: 0;
         }
 
         .symbol-cell {
@@ -379,6 +485,15 @@
             letter-spacing: 0.5px;
         }
 
+        .symbol-cell::after {
+            content: ' →';
+            opacity: 0;
+            color: var(--accent);
+            transition: opacity 0.2s ease;
+        }
+
+        .leaderboard-row:hover .symbol-cell::after { opacity: 1; }
+
         .name-cell {
             color: var(--text-dark);
             font-weight: 600;
@@ -386,9 +501,7 @@
             line-height: 1.4;
         }
 
-        .metric-cell {
-            text-align: center;
-        }
+        .metric-cell { text-align: center; }
 
         .metric-label {
             font-size: 11px;
@@ -405,12 +518,17 @@
             color: var(--primary-dark);
         }
 
-        .metric-value.success {
-            color: var(--success);
-        }
+        .metric-value.success { color: var(--success); }
+        .metric-value.warning { color: var(--warning); }
 
-        .metric-value.warning {
-            color: var(--warning);
+        .row-cta {
+            display: none;
+            font-size: 13px;
+            font-weight: 900;
+            color: var(--accent);
+            padding-top: 4px;
+            border-top: 1px dashed var(--border);
+            width: 100%;
         }
 
         .tax-grade-badge {
@@ -426,6 +544,120 @@
         .grade-c { background: rgba(252, 211, 77, 0.15); color: #FBBF24; }
         .grade-d { background: rgba(249, 115, 22, 0.15); color: #F97316; }
         .grade-f { background: rgba(239, 68, 68, 0.15); color: #EF4444; }
+
+        .table-hint {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-light);
+            margin: 0 0 18px;
+            font-weight: 600;
+        }
+
+        /* ===== QUICK PICKS STRIP ===== */
+        .quick-picks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 55px 0;
+        }
+
+        .quick-pick {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: white;
+            border: 2px solid var(--border);
+            border-left: 5px solid var(--primary-light);
+            border-radius: 10px;
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.25s ease;
+        }
+
+        .quick-pick:hover {
+            border-color: var(--primary);
+            border-left-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(15, 118, 110, 0.16);
+        }
+
+        .quick-pick-icon { font-size: 28px; flex-shrink: 0; }
+
+        .quick-pick-title {
+            font-weight: 900;
+            font-size: 15px;
+            color: var(--primary-dark);
+            margin-bottom: 3px;
+        }
+
+        .quick-pick-desc {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.45;
+        }
+
+        /* ===== POSTS GRID ===== */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
+        }
+
+        .post-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(15, 118, 110, 0.06);
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-light);
+            box-shadow: 0 12px 28px rgba(15, 118, 110, 0.16);
+        }
+
+        .post-tag {
+            display: inline-block;
+            align-self: flex-start;
+            background: rgba(20, 184, 166, 0.12);
+            color: var(--primary);
+            font-size: 10.5px;
+            font-weight: 900;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+
+        .post-title {
+            font-size: 17px;
+            font-weight: 900;
+            color: var(--primary-dark);
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .post-desc {
+            font-size: 13.5px;
+            color: var(--text-light);
+            line-height: 1.55;
+            flex-grow: 1;
+            margin-bottom: 14px;
+        }
+
+        .post-link {
+            font-size: 13px;
+            font-weight: 900;
+            color: var(--accent);
+        }
 
         /* ===== EDUCATIONAL SECTION ===== */
         .education-section {
@@ -473,10 +705,17 @@
             line-height: 1.6;
         }
 
+        .education-card a {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
         /* ===== SITE CARDS ===== */
         .site-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
             margin-bottom: 0;
         }
@@ -501,10 +740,12 @@
             transform: translateY(-3px);
         }
 
-        .site-card-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
+        .site-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0FDFA 100%);
         }
+
+        .site-card-icon { font-size: 32px; margin-bottom: 12px; }
 
         .site-card-title {
             font-size: 18px;
@@ -532,9 +773,7 @@
             transition: background 0.2s;
         }
 
-        .site-card:hover .site-card-button {
-            background: var(--primary-dark);
-        }
+        .site-card:hover .site-card-button { background: var(--primary-dark); }
 
         /* ===== PRO PROMO ===== */
         .pro-promo {
@@ -559,10 +798,7 @@
             pointer-events: none;
         }
 
-        .pro-promo-content {
-            position: relative;
-            z-index: 2;
-        }
+        .pro-promo-content { position: relative; z-index: 2; }
 
         .pro-promo-title {
             font-size: 32px;
@@ -595,7 +831,7 @@
             content: '✓ ';
             font-weight: 900;
             margin-right: 6px;
-            color: #FCD34D;
+            color: var(--gold);
         }
 
         .cta-button {
@@ -618,12 +854,20 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* NEW: Table Promo Button */
+        .cta-button.ghost {
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .cta-button.ghost:hover { background: rgba(255,255,255,0.22); }
+
+        /* Table Promo Button */
         .table-promo-button {
             display: block;
             width: 100%;
-            max-width: 520px;
-            margin: 30px auto 0;
+            max-width: 560px;
+            margin: 0 auto;
             padding: 16px 32px;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
@@ -639,6 +883,10 @@
         .table-promo-button:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(15, 118, 110, 0.4);
+        }
+
+        .table-promo-button.alt {
+            background: linear-gradient(135deg, #134E4A, #0F766E);
         }
 
         /* ===== FAQ ===== */
@@ -684,9 +932,7 @@
             flex-shrink: 0;
         }
 
-        details[open] summary::after {
-            transform: rotate(45deg);
-        }
+        details[open] summary::after { transform: rotate(45deg); }
 
         details p {
             margin: 12px 0 0;
@@ -695,12 +941,19 @@
             line-height: 1.6;
         }
 
+        details a {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
         .disclaimer {
-            font-size: 0.85em; 
-            color: var(--text-light); 
-            max-width: 900px; 
-            margin: 50px auto 30px; 
-            text-align: center; 
+            font-size: 0.85em;
+            color: var(--text-light);
+            max-width: 900px;
+            margin: 50px auto 30px;
+            text-align: center;
             line-height: 1.6;
             padding: 22px;
             background: rgba(20, 184, 166, 0.06);
@@ -709,25 +962,48 @@
         }
 
         footer {
-            margin: 50px auto 30px; 
-            padding-top: 30px; 
+            margin: 50px auto 30px;
+            padding-top: 30px;
             border-top: 1px solid rgba(20, 184, 166, 0.2);
-            text-align: center; 
-            color: var(--text-light); 
-            font-size: 0.9em; 
-            max-width: 900px;
+            color: var(--text-light);
+            font-size: 0.9em;
+            max-width: 1000px;
         }
 
-        footer a { 
-            color: var(--primary-dark); 
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 28px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+            margin: 0 0 12px;
+        }
+
+        .footer-col a {
+            display: block;
+            margin: 0 0 9px;
+            color: var(--text-light);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
-            margin: 0 8px;
+            font-size: 13.5px;
+            transition: color 0.2s;
         }
 
-        footer a:hover {
-            color: var(--accent);
+        .footer-col a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            font-size: 13px;
         }
 
         .loading {
@@ -748,15 +1024,170 @@
             margin-bottom: 20px;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
         .section-divider {
             text-align: center;
             margin: 50px 0;
             font-size: 24px;
             color: var(--text-lighter);
+        }
+
+        /* ===== STICKY CTA BAR ===== */
+        .sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 300;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--accent) 100%);
+            color: #fff;
+            box-shadow: 0 -6px 24px rgba(0,0,0,0.22);
+            transform: translateY(140%);
+            transition: transform 0.35s cubic-bezier(.22,.9,.3,1);
+        }
+
+        .sticky-cta.show { transform: translateY(0); }
+
+        .sticky-cta-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 18px;
+        }
+
+        .sticky-cta-text {
+            flex: 1;
+            font-size: 14.5px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .sticky-cta-button {
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 11px 22px;
+            border-radius: 999px;
+            font-weight: 900;
+            font-size: 14px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .sticky-cta-button:hover { transform: translateY(-2px); }
+
+        .sticky-close {
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.75);
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 4px 6px;
+        }
+
+        .sticky-close:hover { color: #fff; }
+
+        /* ===== EXIT INTENT ===== */
+        .exit-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.68);
+            backdrop-filter: blur(4px);
+            z-index: 400;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .exit-overlay.show { display: flex; }
+
+        .exit-card {
+            background: #fff;
+            border-radius: 14px;
+            max-width: 460px;
+            width: 100%;
+            padding: 34px 30px 28px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+        }
+
+        .exit-card h3 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary-dark);
+        }
+
+        .exit-card p {
+            margin: 0 0 22px;
+            color: var(--text-light);
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        .exit-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .exit-primary {
+            display: block;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .exit-secondary {
+            display: block;
+            padding: 12px 20px;
+            background: #fff;
+            border: 2px solid var(--border);
+            color: var(--primary-dark);
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .exit-secondary:hover { border-color: var(--primary-light); }
+
+        .exit-close {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            background: none;
+            border: none;
+            font-size: 26px;
+            line-height: 1;
+            color: var(--text-lighter);
+            cursor: pointer;
+        }
+
+        .exit-dismiss {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 12.5px;
+            color: var(--text-lighter);
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
 
         /* ==================== MOBILE ==================== */
@@ -774,13 +1205,8 @@
                 padding: 14px 16px;
             }
 
-            .metric-label {
-                display: block;
-            }
-
-            .metric-cell {
-                text-align: left;
-            }
+            .metric-label { display: block; }
+            .metric-cell { text-align: left; }
         }
 
         @media (max-width: 768px) {
@@ -789,26 +1215,19 @@
                 margin-bottom: 35px;
             }
 
-            .hero h1 {
-                font-size: 28px;
-            }
+            .hero h1 { font-size: 28px; }
 
-            .hero-stats {
-                gap: 15px;
-                margin-top: 20px;
-            }
+            .hero-stats { gap: 15px; margin-top: 20px; }
 
-            .stat-box {
-                padding: 12px 18px;
-            }
+            .stat-box { padding: 12px 18px; }
 
-            .stat-number {
-                font-size: 22px;
-            }
+            .stat-number { font-size: 22px; }
 
-            .leaderboard-header {
-                display: none;
-            }
+            .hero-ctas { flex-direction: column; align-items: stretch; }
+
+            .hero-ctas .cta-button { padding: 14px 20px; font-size: 15px; }
+
+            .leaderboard-header { display: none; }
 
             .leaderboard-row {
                 display: flex;
@@ -821,13 +1240,11 @@
                 background: white;
             }
 
-            .leaderboard-row:last-child {
-                border-bottom: 1px solid var(--border);
-            }
+            .leaderboard-row:last-child { border-bottom: 1px solid var(--border); }
 
-            .rank-badge {
-                align-self: flex-start;
-            }
+            .leaderboard-row:hover { transform: none; }
+
+            .rank-badge { align-self: flex-start; }
 
             .metric-cell {
                 text-align: left;
@@ -836,28 +1253,19 @@
                 align-items: center;
             }
 
-            .metric-label {
-                display: inline-block !important;
-                text-align: left;
-            }
+            .metric-label { display: inline-block !important; text-align: left; }
 
-            .metric-value {
-                font-size: 14px;
-            }
+            .metric-value { font-size: 14px; }
 
-            .education-section {
-                padding: 25px;
-                margin: 40px 0;
-            }
+            .row-cta { display: block; }
 
-            .pro-promo {
-                padding: 30px 20px;
-                margin: 40px 0;
-            }
+            .symbol-cell::after { opacity: 1; }
 
-            .pro-promo-title {
-                font-size: 24px;
-            }
+            .education-section { padding: 25px; margin: 40px 0; }
+
+            .pro-promo { padding: 30px 20px; margin: 40px 0; }
+
+            .pro-promo-title { font-size: 24px; }
 
             .pro-features {
                 gap: 15px;
@@ -865,13 +1273,19 @@
                 align-items: flex-start;
             }
 
-            .section {
-                margin-bottom: 45px;
-            }
+            .section { margin-bottom: 45px; }
 
-            .network-bar-label {
-                display: none;
-            }
+            .network-bar-label { display: none; }
+
+            .sites-bar-label { display: none; }
+
+            .sticky-cta-inner { padding: 10px 12px; gap: 10px; }
+
+            .sticky-cta-text { font-size: 13px; }
+
+            .sticky-cta-button { padding: 10px 16px; font-size: 13px; }
+
+            body { padding-bottom: 70px; }
         }
     </style>
 </head>
@@ -879,7 +1293,10 @@
 
     <!-- HEADER -->
     <header>
-        <div class="logo">Top Dividend ETFs 📈🏆</div>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com/" class="logo">Top Dividend ETFs 📈🏆</a>
+            <a href="https://topdividendETFspro.com" target="_blank" rel="noopener" class="header-cta" data-cta="header_pro">PRO Terminal →</a>
+        </div>
     </header>
 
     <!-- NETWORK BAR -->
@@ -887,12 +1304,28 @@
         <div class="network-bar-inner">
             <div class="network-bar-label">📊 Explore</div>
             <div class="network-bar-links">
-                <a href="#top-returns">Top Returns</a>
-                <a href="#top-yield">Top Yield</a>
-                <a href="#education">Education</a>
-                <a href="#faq">FAQs</a>
-                <a href="https://topdividendETFspro.com" target="_blank">→ PRO Terminal</a>
+                <a href="#top-returns" data-cta="nav_top_returns">Top Returns</a>
+                <a href="#top-yield" data-cta="nav_top_yield">Top Yield</a>
+                <a href="/swipe.html" target="_blank" rel="noopener" data-cta="nav_swipe">Swipe Tool</a>
+                <a href="/top-voted-etfs.html" target="_blank" rel="noopener" data-cta="nav_voted">Most Voted</a>
+                <a href="#guides" data-cta="nav_guides">Guides</a>
+                <a href="#education" data-cta="nav_education">Education</a>
+                <a href="#faq" data-cta="nav_faq">FAQs</a>
             </div>
+        </div>
+    </div>
+
+    <!-- SITES PILL BAR -->
+    <div class="sites-bar">
+        <div class="sites-bar-inner">
+            <span class="sites-bar-label">🌐 Our Sites</span>
+            <a class="site-pill gold" href="https://topdividendETFspro.com" target="_blank" rel="noopener" data-cta="sitebar_pro">PRO Terminal</a>
+            <a class="site-pill" href="https://weeklyetfs.com" target="_blank" rel="noopener" data-cta="sitebar_weekly">Weekly ETFs</a>
+            <a class="site-pill" href="https://monthlyetfs.com" target="_blank" rel="noopener" data-cta="sitebar_monthly">Monthly ETFs</a>
+            <a class="site-pill" href="https://growthetfs.com" target="_blank" rel="noopener" data-cta="sitebar_growth">Growth ETFs</a>
+            <a class="site-pill" href="https://etftotalreturns.com" target="_blank" rel="noopener" data-cta="sitebar_totalreturns">ETF Total Returns</a>
+            <a class="site-pill" href="https://topdividendtools.com" target="_blank" rel="noopener" data-cta="sitebar_tools">Dividend Tools</a>
+            <a class="site-pill" href="https://topspaceetfs.com" target="_blank" rel="noopener" data-cta="sitebar_space">Space ETFs</a>
         </div>
     </div>
 
@@ -901,7 +1334,7 @@
         <div class="hero-content">
             <h1>Top Dividend ETFs Rankings 2026</h1>
             <p class="hero-subtitle">
-                Discover the highest-performing dividend ETFs ranked by highest total returns & yield. 
+                Discover the highest-performing dividend ETFs ranked by highest total returns & yield.
                 Updated daily with real performance metrics for serious income investors.
             </p>
             <div class="hero-stats">
@@ -918,16 +1351,23 @@
                     <div class="stat-label">Avg Total Return</div>
                 </div>
             </div>
-            <a href="https://topdividendETFspro.com" target="_blank" class="cta-button" style="margin-top: 30px; font-size: 18px;">Unlock 100+ ETFs in PRO Terminal →</a>
+            <div class="hero-ctas">
+                <a href="https://topdividendETFspro.com" target="_blank" rel="noopener" class="cta-button" data-cta="hero_pro">Unlock 100+ ETFs in PRO Terminal →</a>
+                <a href="/swipe.html" target="_blank" rel="noopener" class="cta-button ghost" data-cta="hero_swipe">🔥 Swipe & rate ETFs</a>
+            </div>
         </div>
     </div>
 
     <div class="content">
         <!-- TOP 10 TOTAL RETURNS SECTION -->
-        <div class="section" id="top-returns">
+        <div class="section" id="top-returns"
+             data-sticky-text="Want all 100+ ETFs sorted by total return?"
+             data-sticky-label="Open PRO Terminal"
+             data-sticky-url="https://topdividendETFspro.com"
+             data-sticky-cta="sticky_pro_returns">
             <h2 class="section-title">🎯 Top 10 by Highest Total Returns</h2>
             <p class="section-subtitle">
-                These ETFs have delivered the highest total returns, combining dividend yield with capital appreciation. 
+                These ETFs have delivered the highest total returns, combining dividend yield with capital appreciation.
                 Total return = dividends received + price appreciation.
             </p>
             <div class="leaderboard-table">
@@ -947,18 +1387,48 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- NEW PROMO BUTTON FOR TOTAL RETURNS TABLE -->
-            <a href="https://topdividendETFspro.com" target="_blank" class="table-promo-button">
+
+            <p class="table-hint">👆 Tap any ETF above to open its full scorecard</p>
+
+            <a href="https://topdividendETFspro.com" target="_blank" rel="noopener" class="table-promo-button" data-cta="table_promo_returns">
                 See 100+ Top ETFs sorted by total return, yield and more →
             </a>
         </div>
 
+        <!-- QUICK PICKS STRIP -->
+        <div class="quick-picks">
+            <a href="/swipe.html" target="_blank" rel="noopener" class="quick-pick" data-cta="quickpick_swipe">
+                <div class="quick-pick-icon">🔥</div>
+                <div>
+                    <div class="quick-pick-title">Swipe & rate 100+ ETFs</div>
+                    <div class="quick-pick-desc">Right for keep, left for pass. Takes about 60 seconds.</div>
+                </div>
+            </a>
+            <a href="/top-voted-etfs.html" target="_blank" rel="noopener" class="quick-pick" data-cta="quickpick_voted">
+                <div class="quick-pick-icon">🗳️</div>
+                <div>
+                    <div class="quick-pick-title">This week's most-voted ETFs</div>
+                    <div class="quick-pick-desc">See which funds readers are backing right now.</div>
+                </div>
+            </a>
+            <a href="https://etftotalreturns.com/compare.html" target="_blank" rel="noopener" class="quick-pick" data-cta="quickpick_compare">
+                <div class="quick-pick-icon">⚔️</div>
+                <div>
+                    <div class="quick-pick-title">Compare two ETFs head to head</div>
+                    <div class="quick-pick-desc">Yield, total return and price history side by side.</div>
+                </div>
+            </a>
+        </div>
+
         <!-- TOP 10 HIGHEST YIELD ETFs (NO PRICE DECAY) SECTION -->
-        <div class="section" id="top-yield">
+        <div class="section" id="top-yield"
+             data-sticky-text="Looking for high yield without NAV decay?"
+             data-sticky-label="See weekly payers"
+             data-sticky-url="https://weeklyetfs.com"
+             data-sticky-cta="sticky_weekly_yield">
             <h2 class="section-title">💰 Top 10 Highest Yield ETFs (No Price Decay)</h2>
             <p class="section-subtitle">
-                Maximum income potential with price stability. These ETFs offer exceptional yields without systematic price decline, 
+                Maximum income potential with price stability. These ETFs offer exceptional yields without systematic price decline,
                 making them ideal for long-term income investors.
             </p>
             <div class="leaderboard-table">
@@ -978,11 +1448,25 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- NEW PROMO BUTTON FOR YIELD TABLE -->
-            <a href="https://topdividendETFspro.com" target="_blank" class="table-promo-button">
-                See 100+ Top ETFs sorted by total return, yield and more →
+
+            <p class="table-hint">👆 Tap any ETF above to open its full scorecard</p>
+
+            <a href="https://weeklyetfs.com" target="_blank" rel="noopener" class="table-promo-button alt" data-cta="table_promo_yield">
+                Want income every Friday? See the weekly-paying ETF rankings →
             </a>
+        </div>
+
+        <!-- LATEST GUIDES -->
+        <div class="section" id="guides"
+             data-sticky-text="New dividend guides drop every week."
+             data-sticky-label="Read the latest"
+             data-sticky-url="/blog.html"
+             data-sticky-cta="sticky_blog">
+            <h2 class="section-title">📰 Latest Dividend Guides</h2>
+            <p class="section-subtitle">
+                Deep dives on the funds people ask about most, with payout dates, holdings and rebalance changes tracked as they happen.
+            </p>
+            <div class="posts-grid" id="postsGrid"></div>
         </div>
 
         <!-- EDUCATIONAL SECTION -->
@@ -994,7 +1478,7 @@
             <div class="education-grid">
                 <div class="education-card">
                     <h3>📊 What is Total Return?</h3>
-                    <p>Total return is the complete profit from an ETF investment, combining dividend payments (income) with price appreciation (capital gains). It shows the full performance of the ETF.</p>
+                    <p>Total return is the complete profit from an ETF investment, combining dividend payments (income) with price appreciation (capital gains). It shows the full performance of the ETF. <a href="https://etftotalreturns.com" target="_blank" rel="noopener" data-cta="edu_totalreturns">See every fund ranked by total return →</a></p>
                 </div>
                 <div class="education-card">
                     <h3>💵 What is Dividend Yield?</h3>
@@ -1002,7 +1486,7 @@
                 </div>
                 <div class="education-card">
                     <h3>📉 What is Price Decay?</h3>
-                    <p>Price decay occurs when an ETF's share price systematically declines over time, often due to distribution mechanics in leveraged or structured products. ETFs with "NO" price decay maintain stable pricing while paying dividends—better for long-term holding.</p>
+                    <p>Price decay occurs when an ETF's share price systematically declines over time, often due to distribution mechanics in leveraged or structured products. ETFs with "NO" price decay maintain stable pricing while paying dividends, which is better for long-term holding. <a href="https://weeklyetfs.com" target="_blank" rel="noopener" data-cta="edu_weekly_decay">See weekly payers with zero NAV decay →</a></p>
                 </div>
                 <div class="education-card">
                     <h3>💰 What is Expense Ratio?</h3>
@@ -1014,7 +1498,7 @@
                 </div>
                 <div class="education-card">
                     <h3>📈 What is AUM?</h3>
-                    <p>Assets Under Management (AUM) shows how much money is invested in the ETF. Larger ETFs (higher AUM) typically offer better liquidity, tighter bid-ask spreads, and more stability than smaller funds.</p>
+                    <p>Assets Under Management (AUM) shows how much money is invested in the ETF. Larger ETFs (higher AUM) typically offer better liquidity, tighter bid-ask spreads, and more stability than smaller funds. <a href="https://topdividendtools.com" target="_blank" rel="noopener" data-cta="edu_tools">Run the numbers with our free dividend tools →</a></p>
                 </div>
             </div>
         </section>
@@ -1024,7 +1508,7 @@
             <div class="pro-promo-content">
                 <h2 class="pro-promo-title">🚀 Want Advanced Analytics?</h2>
                 <p class="pro-promo-text">
-                    Our Premium PRO Terminal gives you deeper insights, advanced filtering by yield, expense ratio, tax efficiency, 
+                    Our Premium PRO Terminal gives you deeper insights, advanced filtering by yield, expense ratio, tax efficiency,
                     price decay status, and daily-updated performance metrics for serious income investors.
                 </p>
                 <div class="pro-features">
@@ -1032,35 +1516,70 @@
                     <div class="pro-feature">Real-Time Daily Updates</div>
                     <div class="pro-feature">Tax Efficiency Analysis</div>
                     <div class="pro-feature">Price Decay Detection</div>
-                    <div class="pro-feature">Historical Performance Charts</div>
+                    <div class="pro-feature">Movers & Trends Tracking</div>
                     <div class="pro-feature">100+ ETF Database</div>
                 </div>
-                <a href="https://topdividendETFspro.com" class="cta-button" target="_blank">Explore PRO Terminal →</a>
+                <a href="https://topdividendETFspro.com" class="cta-button" target="_blank" rel="noopener" data-cta="promo_pro">Explore PRO Terminal →</a>
             </div>
         </div>
 
         <!-- SITE CARDS -->
         <div class="section-divider">━━━ More Dividend Resources ━━━</div>
-        <div class="section">
-            <h2 class="section-title" style="margin-bottom: 40px;">Explore Our Dividend Network</h2>
+        <div class="section" id="network"
+             data-sticky-text="Seven sites, one dividend network."
+             data-sticky-label="Open PRO Terminal"
+             data-sticky-url="https://topdividendETFspro.com"
+             data-sticky-cta="sticky_pro_network">
+            <h2 class="section-title" style="margin-bottom: 12px;">Explore Our Dividend Network</h2>
+            <p class="section-subtitle">Every site tracks a different slice of the income market. Pick the one that matches how you get paid.</p>
             <div class="site-cards">
-                <a href="https://topdividendETFspro.com" target="_blank" class="site-card">
+                <a href="https://topdividendETFspro.com" target="_blank" rel="noopener" class="site-card featured" data-cta="card_pro">
                     <div class="site-card-icon">📊</div>
                     <div class="site-card-title">PRO Terminal</div>
-                    <div class="site-card-desc">Advanced rankings with 100+ ETFs, custom filters, daily updates, and pro-level insights for serious income investors.</div>
+                    <div class="site-card-desc">100+ ETFs with custom filters, daily movers and trends, watchlists and full history.</div>
                     <div class="site-card-button">Explore PRO →</div>
                 </a>
-                <a href="#education" class="site-card">
-                    <div class="site-card-icon">📚</div>
-                    <div class="site-card-title">ETF Education</div>
-                    <div class="site-card-desc">Learn about dividend yields, total returns, price decay, expense ratios, tax efficiency, and how to compare ETFs.</div>
-                    <div class="site-card-button">Learn More →</div>
+                <a href="https://weeklyetfs.com" target="_blank" rel="noopener" class="site-card" data-cta="card_weekly">
+                    <div class="site-card-icon">🗓️</div>
+                    <div class="site-card-title">Weekly ETFs</div>
+                    <div class="site-card-desc">Every ETF that pays weekly, ranked by yield and total return with full scorecards.</div>
+                    <div class="site-card-button">See weekly payers →</div>
                 </a>
-                <a href="#faq" class="site-card">
-                    <div class="site-card-icon">❓</div>
-                    <div class="site-card-title">FAQs</div>
-                    <div class="site-card-desc">Common questions about dividend ETFs, how returns work, what metrics matter, and how to build an income portfolio.</div>
-                    <div class="site-card-button">View FAQs →</div>
+                <a href="https://monthlyetfs.com" target="_blank" rel="noopener" class="site-card" data-cta="card_monthly">
+                    <div class="site-card-icon">📆</div>
+                    <div class="site-card-title">Monthly ETFs</div>
+                    <div class="site-card-desc">Monthly income funds ranked and profiled, from covered calls to bond ladders.</div>
+                    <div class="site-card-button">See monthly payers →</div>
+                </a>
+                <a href="https://etftotalreturns.com" target="_blank" rel="noopener" class="site-card" data-cta="card_totalreturns">
+                    <div class="site-card-icon">📈</div>
+                    <div class="site-card-title">ETF Total Returns</div>
+                    <div class="site-card-desc">Scorecards, grades and head-to-head matchups for hundreds of income ETFs.</div>
+                    <div class="site-card-button">Check a scorecard →</div>
+                </a>
+                <a href="https://growthetfs.com" target="_blank" rel="noopener" class="site-card" data-cta="card_growth">
+                    <div class="site-card-icon">🚀</div>
+                    <div class="site-card-title">Growth ETFs</div>
+                    <div class="site-card-desc">The growth side of the portfolio, for when total return matters more than income.</div>
+                    <div class="site-card-button">See growth funds →</div>
+                </a>
+                <a href="https://topdividendtools.com" target="_blank" rel="noopener" class="site-card" data-cta="card_tools">
+                    <div class="site-card-icon">🧮</div>
+                    <div class="site-card-title">Dividend Tools</div>
+                    <div class="site-card-desc">Free calculators for income, compounding, DRIP and payout scheduling.</div>
+                    <div class="site-card-button">Open the tools →</div>
+                </a>
+                <a href="https://topspaceetfs.com" target="_blank" rel="noopener" class="site-card" data-cta="card_space">
+                    <div class="site-card-icon">🛰️</div>
+                    <div class="site-card-title">Space ETFs</div>
+                    <div class="site-card-desc">Space and defense funds tracked the same way, for the speculative sleeve.</div>
+                    <div class="site-card-button">See space funds →</div>
+                </a>
+                <a href="/swipe.html" target="_blank" rel="noopener" class="site-card" data-cta="card_swipe">
+                    <div class="site-card-icon">🔥</div>
+                    <div class="site-card-title">ETF Swipe Tool</div>
+                    <div class="site-card-desc">Swipe through 100+ dividend ETFs and vote on the ones you would actually buy.</div>
+                    <div class="site-card-button">Start swiping →</div>
                 </a>
             </div>
         </div>
@@ -1071,22 +1590,22 @@
 
             <details>
                 <summary>What's the difference between dividend yield and total return?</summary>
-                <p>Dividend yield is just the income (dividends) you receive, typically shown as an annual percentage. Total return includes both the dividend income AND capital appreciation (price changes). For example, an ETF with a 5% yield that rises 10% in value has a 15% total return.</p>
+                <p>Dividend yield is just the income (dividends) you receive, typically shown as an annual percentage. Total return includes both the dividend income AND capital appreciation (price changes). For example, an ETF with a 5% yield that rises 10% in value has a 15% total return. <a href="https://etftotalreturns.com" target="_blank" rel="noopener" data-cta="faq_totalreturns">Compare funds by total return →</a></p>
             </details>
 
             <details>
                 <summary>Should I prioritize high yield or high total return?</summary>
-                <p>It depends on your goals. If you need regular income now, focus on yield. If you want maximum long-term wealth growth, prioritize total return. The best approach often balances both—solid yield plus growth potential. Also consider tax efficiency and expense ratios.</p>
+                <p>It depends on your goals. If you need regular income now, focus on yield. If you want maximum long-term wealth growth, prioritize total return. The best approach often balances both, with solid yield plus growth potential. Also consider tax efficiency and expense ratios.</p>
             </details>
 
             <details>
                 <summary>What is price decay and why does it matter?</summary>
-                <p>Price decay is when an ETF's share price systematically declines over time due to its dividend distribution mechanics, especially in leveraged or structured products. ETFs with price decay lose value even as they pay dividends, reducing long-term returns. "NO price decay" ETFs maintain stable pricing, making them better for buy-and-hold investing.</p>
+                <p>Price decay is when an ETF's share price systematically declines over time due to its dividend distribution mechanics, especially in leveraged or structured products. ETFs with price decay lose value even as they pay dividends, reducing long-term returns. "NO price decay" ETFs maintain stable pricing, making them better for buy-and-hold investing. <a href="https://weeklyetfs.com" target="_blank" rel="noopener" data-cta="faq_weekly">See weekly payers with no NAV decay →</a></p>
             </details>
 
             <details>
                 <summary>Does a higher expense ratio really matter?</summary>
-                <p>Yes! Even small differences compound over decades. A 0.10% expense ratio versus 0.03% costs an extra $7 per $10,000 annually. Over 30 years at 8% growth, that difference compounds to thousands of dollars. Lower expense ratios mean more money stays invested.</p>
+                <p>Yes. Even small differences compound over decades. A 0.10% expense ratio versus 0.03% costs an extra $7 per $10,000 annually. Over 30 years at 8% growth, that difference compounds to thousands of dollars. Lower expense ratios mean more money stays invested. <a href="https://topdividendtools.com" target="_blank" rel="noopener" data-cta="faq_tools">Model it with the free calculators →</a></p>
             </details>
 
             <details>
@@ -1096,12 +1615,12 @@
 
             <details>
                 <summary>How often should I review my dividend ETF holdings?</summary>
-                <p>Review quarterly (when dividends pay) or annually to ensure they still match your goals. Check if yields, returns, or expenses have changed significantly. Don't panic over short-term price swings—dividend investing is a long-term strategy. Rebalance if allocations drift beyond your target.</p>
+                <p>Review quarterly (when dividends pay) or annually to ensure they still match your goals. Check if yields, returns, or expenses have changed significantly. Don't panic over short-term price swings, since dividend investing is a long-term strategy. Rebalance if allocations drift beyond your target. <a href="https://topdividendETFspro.com" target="_blank" rel="noopener" data-cta="faq_pro_trends">Track yield and return changes in PRO →</a></p>
             </details>
 
             <details>
                 <summary>Can I get rich from dividend ETFs alone?</summary>
-                <p>Dividend ETFs are excellent for building passive income, but wealth-building depends on total return (yield + appreciation). Start with a solid emergency fund, max out retirement accounts, diversify beyond dividends, and reinvest dividends to compound. Most wealth comes from consistent investing over decades.</p>
+                <p>Dividend ETFs are excellent for building passive income, but wealth-building depends on total return (yield plus appreciation). Start with a solid emergency fund, max out retirement accounts, diversify beyond dividends, and reinvest dividends to compound. Most wealth comes from consistent investing over decades.</p>
             </details>
 
             <details>
@@ -1111,7 +1630,7 @@
 
             <details>
                 <summary>How much can I actually earn from dividend ETFs?</summary>
-                <p>Earnings depend on ETF yield, share count, reinvestment, and price appreciation. For example, $10,000 in a 5% yielding ETF generates $500/year in dividends. With price appreciation and reinvestment, total returns could exceed the stated yield. Use calculators to model scenarios.</p>
+                <p>Earnings depend on ETF yield, share count, reinvestment, and price appreciation. For example, $10,000 in a 5% yielding ETF generates $500/year in dividends. With price appreciation and reinvestment, total returns could exceed the stated yield. <a href="https://topdividendtools.com" target="_blank" rel="noopener" data-cta="faq_tools_calc">Use the income calculator →</a></p>
             </details>
 
             <details>
@@ -1122,30 +1641,106 @@
 
         <!-- DISCLAIMER -->
         <p class="disclaimer">
-            <strong>📌 Important Disclaimer:</strong> This platform is for informational and educational purposes only. 
-            It does not constitute financial, investment, or tax advice. Past performance is not indicative of future results. 
-            Dividend payments are not guaranteed and can be cut or increased. Always consult a qualified financial advisor 
+            <strong>📌 Important Disclaimer:</strong> This platform is for informational and educational purposes only.
+            It does not constitute financial, investment, or tax advice. Past performance is not indicative of future results.
+            Dividend payments are not guaranteed and can be cut or increased. Always consult a qualified financial advisor
             before making any investment decisions. Data updated daily from public sources.
         </p>
 
         <!-- FOOTER -->
         <footer>
-            <p>
-                <a href="https://topdividendETFspro.com">PRO Terminal</a> | 
-                <a href="#education">Education</a> | 
-                <a href="#faq">FAQs</a> | 
-                <a href="mailto:Business@TopDividendETFs.com">Contact</a>
-            </p>
-            <p>&copy; 2026 Top Dividend ETFs. All Rights Reserved. For educational purposes only.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Rankings</h4>
+                    <a href="#top-returns" data-cta="footer_returns">Top total returns</a>
+                    <a href="#top-yield" data-cta="footer_yield">Top yields, no decay</a>
+                    <a href="/top-voted-etfs.html" target="_blank" rel="noopener" data-cta="footer_voted">Most-voted ETFs</a>
+                    <a href="/swipe.html" target="_blank" rel="noopener" data-cta="footer_swipe">ETF swipe tool</a>
+                </div>
+                <div class="footer-col">
+                    <h4>By payout schedule</h4>
+                    <a href="https://weeklyetfs.com" target="_blank" rel="noopener" data-cta="footer_weekly">Weekly ETFs</a>
+                    <a href="https://monthlyetfs.com" target="_blank" rel="noopener" data-cta="footer_monthly">Monthly ETFs</a>
+                    <a href="https://etftotalreturns.com" target="_blank" rel="noopener" data-cta="footer_totalreturns">ETF Total Returns</a>
+                    <a href="https://growthetfs.com" target="_blank" rel="noopener" data-cta="footer_growth">Growth ETFs</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="https://topdividendtools.com" target="_blank" rel="noopener" data-cta="footer_tools">Dividend calculators</a>
+                    <a href="https://etftotalreturns.com/compare.html" target="_blank" rel="noopener" data-cta="footer_compare">Compare two ETFs</a>
+                    <a href="https://topspaceetfs.com" target="_blank" rel="noopener" data-cta="footer_space">Space ETFs</a>
+                    <a href="https://topdividendETFspro.com" target="_blank" rel="noopener" data-cta="footer_pro">PRO Terminal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Learn</h4>
+                    <a href="#guides" data-cta="footer_guides">Latest guides</a>
+                    <a href="#education" data-cta="footer_education">ETF education</a>
+                    <a href="#faq" data-cta="footer_faq">FAQs</a>
+                    <a href="mailto:Business@TopDividendETFs.com" data-cta="footer_contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Top Dividend ETFs. All Rights Reserved. For educational purposes only.</p>
+            </div>
         </footer>
     </div>
 
+    <!-- STICKY CTA BAR -->
+    <div class="sticky-cta" id="stickyCta" aria-live="polite">
+        <div class="sticky-cta-inner">
+            <div class="sticky-cta-text" id="stickyText">Want all 100+ ETFs sorted by total return?</div>
+            <a class="sticky-cta-button" id="stickyButton" href="https://topdividendETFspro.com" target="_blank" rel="noopener" data-cta="sticky_default">Open PRO Terminal</a>
+            <button class="sticky-close" id="stickyClose" aria-label="Close this bar">&times;</button>
+        </div>
+    </div>
+
+    <!-- EXIT INTENT -->
+    <div class="exit-overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+        <div class="exit-card">
+            <button class="exit-close" id="exitClose" aria-label="Close">&times;</button>
+            <h3 id="exitTitle">One more thing before you go</h3>
+            <p>You have seen the top 10. The PRO Terminal ranks 100+ dividend ETFs with daily movers, watchlists and full yield history.</p>
+            <div class="exit-buttons">
+                <a class="exit-primary" href="https://topdividendETFspro.com" target="_blank" rel="noopener" data-cta="exit_pro">See all 100+ ETFs in PRO →</a>
+                <a class="exit-secondary" href="/swipe.html" target="_blank" rel="noopener" data-cta="exit_swipe">Or swipe through them free →</a>
+            </div>
+            <button class="exit-dismiss" id="exitDismiss">No thanks, keep reading</button>
+        </div>
+    </div>
+
     <script>
+        /* ========================================================
+           CONFIG - edit these
+        ======================================================== */
         const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxCiod-Cwry7E6k9Un9dgrM_ANymC36_IO_wLyNj-YDo2KI7mp_1ZzyNBnBGZOxT48QPM8TCwtsmA4/pub?gid=0&single=true&output=csv";
+
+        const ENABLE_STICKY_BAR = true;
+        const ENABLE_EXIT_INTENT = true;
+
+        // Where a clicked ETF row goes. Flip the case here if your files are uppercase.
+        const ETF_PAGE = (symbol) => `https://etftotalreturns.com/etf/${symbol.toLowerCase()}.html`;
+
+        // Latest guides shown in the "Latest Dividend Guides" section.
+        // Swap these URLs for your live blog slugs.
+        const POSTS = [
+            { tag: 'Tracker',    title: 'SCHD Dividend Increase Tracker 2026',  desc: 'Every raise logged as it lands, with the running count for the year.', url: '/blog/schd-dividend-increase-tracker.html' },
+            { tag: 'Holdings',   title: 'SCHD Holdings & Rebalance Tracker',    desc: 'What is actually inside the fund and what changed at the last rebalance.', url: '/blog/schd-holdings-rebalance-tracker.html' },
+            { tag: 'Pay dates',  title: 'JEPQ Dividend Dates & Payout Schedule', desc: 'Ex-dividend, record and pay dates for the full year in one table.', url: '/blog/jepq-dividend-dates.html' },
+            { tag: 'Pay dates',  title: 'VYM Dividend Dates 2026',              desc: 'When Vanguard High Dividend Yield pays and how much it has been paying.', url: '/blog/vym-dividend-dates.html' },
+            { tag: 'Fund guide', title: 'FDVV: Yield, Holdings and Total Return', desc: 'A closer look at Fidelity high dividend and how it stacks up against SCHD.', url: '/blog/fdvv-etf-review.html' },
+            { tag: 'Fund guide', title: 'NEOS ETFs Explained',                  desc: 'How the NEOS income funds generate their yield and what the tax treatment looks like.', url: '/blog/neos-etfs-explained.html' }
+        ];
 
         let allETFs = [];
 
+        /* ========================================================
+           DATA
+        ======================================================== */
         document.addEventListener('DOMContentLoaded', () => {
+            renderPosts();
+            initCtaTracking();
+            initStickyBar();
+            initExitIntent();
             loadData();
         });
 
@@ -1155,38 +1750,61 @@
                 .then(txt => parseAndDisplay(txt))
                 .catch(err => {
                     console.error('Error loading data:', err);
-                    document.getElementById('topReturnsContainer').innerHTML = `
+                    const msg = `
                         <div style="grid-column: 1/-1; padding: 40px; text-align: center; color: #EF4444; font-weight: 700;">
-                            ⚠️ Unable to load ETF data. Please refresh the page.
+                            ⚠️ The rankings did not load. Refresh the page to try again.
                         </div>`;
+                    document.getElementById('topReturnsContainer').innerHTML = msg;
+                    document.getElementById('topYieldContainer').innerHTML = msg;
                 });
         }
 
+        // Proper CSV parser: handles quoted fields, commas inside fund names, escaped quotes.
+        function parseCSV(text) {
+            const rows = [];
+            let row = [], field = '', inQuotes = false;
+
+            for (let i = 0; i < text.length; i++) {
+                const c = text[i];
+                if (inQuotes) {
+                    if (c === '"') {
+                        if (text[i + 1] === '"') { field += '"'; i++; }
+                        else { inQuotes = false; }
+                    } else { field += c; }
+                } else {
+                    if (c === '"') { inQuotes = true; }
+                    else if (c === ',') { row.push(field); field = ''; }
+                    else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+                    else if (c === '\r') { /* skip */ }
+                    else { field += c; }
+                }
+            }
+            if (field.length || row.length) { row.push(field); rows.push(row); }
+            return rows;
+        }
+
         function parseAndDisplay(csvText) {
-            const lines = csvText.trim().split('\n');
+            const rows = parseCSV(csvText.trim());
             allETFs = [];
 
-            for (let i = 1; i < lines.length; i++) {
-                const cols = lines[i].split(',').map(c => c.trim().replace(/^"|"$/g, ''));
-                
+            for (let i = 1; i < rows.length; i++) {
+                const cols = rows[i].map(c => c.trim());
                 if (cols.length < 12 || !cols[0]) continue;
 
-                const etf = {
+                allETFs.push({
                     symbol: cols[0],
                     name: cols[1],
                     provider: cols[2],
                     yield: parseFloat(cols[3]) || 0,
-                    taxGrade: cols[4].toUpperCase(),
+                    taxGrade: (cols[4] || '').toUpperCase(),
                     expenseRatio: parseFloat(cols[5]) || 0,
                     aum: cols[6],
                     totalReturn: parseFloat(cols[7]) || 0,
-                    priceDecay: cols[8].toUpperCase(),
+                    priceDecay: (cols[8] || '').toUpperCase(),
                     inceptionDate: cols[9],
                     payoutFrequency: cols[10],
-                    rating: cols[11].toUpperCase()
-                };
-
-                allETFs.push(etf);
+                    rating: (cols[11] || '').toUpperCase()
+                });
             }
 
             displayTopReturns();
@@ -1195,20 +1813,15 @@
         }
 
         function displayTopReturns() {
-            const top10Returns = allETFs
-                .sort((a, b) => b.totalReturn - a.totalReturn)
-                .slice(0, 10);
-
+            const top10 = [...allETFs].sort((a, b) => b.totalReturn - a.totalReturn).slice(0, 10);
             const container = document.getElementById('topReturnsContainer');
             container.innerHTML = '';
-
-            top10Returns.forEach((etf, index) => {
-                container.appendChild(createETFRow(etf, index + 1));
-            });
+            top10.forEach((etf, i) => container.appendChild(createETFRow(etf, i + 1, 'top_returns')));
+            addItemListSchema(top10, 'Top 10 Dividend ETFs by Total Return');
         }
 
         function displayTopYield() {
-            const top10Yield = allETFs
+            const top10 = [...allETFs]
                 .filter(etf => etf.priceDecay === 'NO')
                 .sort((a, b) => b.yield - a.yield)
                 .slice(0, 10);
@@ -1216,21 +1829,24 @@
             const container = document.getElementById('topYieldContainer');
             container.innerHTML = '';
 
-            if (top10Yield.length === 0) {
-                container.innerHTML = '<div style="grid-column: 1/-1; padding: 40px; text-align: center; color: var(--text-light);">No ETFs with zero price decay found.</div>';
+            if (top10.length === 0) {
+                container.innerHTML = '<div style="grid-column: 1/-1; padding: 40px; text-align: center; color: var(--text-light);">No ETFs with zero price decay found in today\'s data.</div>';
                 return;
             }
 
-            top10Yield.forEach((etf, index) => {
-                container.appendChild(createETFRow(etf, index + 1));
-            });
+            top10.forEach((etf, i) => container.appendChild(createETFRow(etf, i + 1, 'top_yield')));
         }
 
-        function createETFRow(etf, rank) {
-            const row = document.createElement('div');
+        function createETFRow(etf, rank, section) {
+            const row = document.createElement('a');
             row.className = 'leaderboard-row';
+            row.href = ETF_PAGE(etf.symbol);
+            row.target = '_blank';
+            row.rel = 'noopener';
+            row.setAttribute('data-cta', 'row_' + section);
+            row.setAttribute('aria-label', `Open the ${etf.symbol} scorecard`);
 
-            const taxGradeClass = `grade-${etf.taxGrade.toLowerCase()}`;
+            const taxGradeClass = `grade-${(etf.taxGrade || 'c').toLowerCase()}`;
 
             row.innerHTML = `
                 <div class="rank-badge">#${rank}</div>
@@ -1252,6 +1868,7 @@
                     <div class="metric-label">Tax Grade</div>
                     <div class="tax-grade-badge ${taxGradeClass}">${etf.taxGrade}</div>
                 </div>
+                <div class="row-cta">View full ${etf.symbol} scorecard →</div>
             `;
 
             return row;
@@ -1259,12 +1876,138 @@
 
         function updateStats() {
             if (allETFs.length === 0) return;
-
-            const avgYield = (allETFs.reduce((sum, etf) => sum + etf.yield, 0) / allETFs.length).toFixed(2);
-            const avgReturn = (allETFs.reduce((sum, etf) => sum + etf.totalReturn, 0) / allETFs.length).toFixed(2);
-
+            const avgYield = (allETFs.reduce((s, e) => s + e.yield, 0) / allETFs.length).toFixed(2);
+            const avgReturn = (allETFs.reduce((s, e) => s + e.totalReturn, 0) / allETFs.length).toFixed(2);
             document.getElementById('avgYield').textContent = avgYield + '%';
             document.getElementById('avgReturn').textContent = avgReturn + '%';
+        }
+
+        function addItemListSchema(list, name) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.textContent = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": name,
+                "itemListElement": list.map((etf, i) => ({
+                    "@type": "ListItem",
+                    "position": i + 1,
+                    "name": `${etf.symbol} - ${etf.name}`,
+                    "url": ETF_PAGE(etf.symbol)
+                }))
+            });
+            document.head.appendChild(script);
+        }
+
+        /* ========================================================
+           LATEST GUIDES
+        ======================================================== */
+        function renderPosts() {
+            const grid = document.getElementById('postsGrid');
+            if (!grid) return;
+            grid.innerHTML = POSTS.map((p, i) => `
+                <a class="post-card" href="${p.url}" target="_blank" rel="noopener" data-cta="post_${i + 1}">
+                    <span class="post-tag">${p.tag}</span>
+                    <div class="post-title">${p.title}</div>
+                    <div class="post-desc">${p.desc}</div>
+                    <div class="post-link">Read the guide →</div>
+                </a>
+            `).join('');
+        }
+
+        /* ========================================================
+           GA4 CLICK TRACKING (every CTA on the page)
+        ======================================================== */
+        function initCtaTracking() {
+            document.addEventListener('click', (e) => {
+                const el = e.target.closest('[data-cta]');
+                if (!el) return;
+                if (typeof gtag !== 'function') return;
+                gtag('event', 'cta_click', {
+                    cta_id: el.getAttribute('data-cta'),
+                    link_url: el.getAttribute('href') || '',
+                    link_text: (el.textContent || '').trim().slice(0, 80)
+                });
+            }, true);
+        }
+
+        /* ========================================================
+           STICKY CTA BAR (text swaps to match the section in view)
+        ======================================================== */
+        function initStickyBar() {
+            if (!ENABLE_STICKY_BAR) return;
+            const bar = document.getElementById('stickyCta');
+            const text = document.getElementById('stickyText');
+            const button = document.getElementById('stickyButton');
+            const close = document.getElementById('stickyClose');
+            if (!bar) return;
+
+            let dismissed = sessionStorage.getItem('tde_sticky_dismissed') === '1';
+            if (dismissed) { bar.remove(); return; }
+
+            close.addEventListener('click', () => {
+                bar.classList.remove('show');
+                sessionStorage.setItem('tde_sticky_dismissed', '1');
+                if (typeof gtag === 'function') gtag('event', 'sticky_bar_dismissed');
+            });
+
+            const onScroll = () => {
+                if (window.scrollY > 700) bar.classList.add('show');
+                else bar.classList.remove('show');
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            const targets = document.querySelectorAll('[data-sticky-text]');
+            if (!targets.length || !('IntersectionObserver' in window)) return;
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const d = entry.target.dataset;
+                    text.textContent = d.stickyText;
+                    button.textContent = d.stickyLabel;
+                    button.href = d.stickyUrl;
+                    button.setAttribute('data-cta', d.stickyCta);
+                });
+            }, { rootMargin: '-45% 0px -45% 0px' });
+
+            targets.forEach(t => io.observe(t));
+        }
+
+        /* ========================================================
+           EXIT INTENT (desktop, once per session)
+        ======================================================== */
+        function initExitIntent() {
+            if (!ENABLE_EXIT_INTENT) return;
+            if (window.innerWidth < 900) return;
+            if (sessionStorage.getItem('tde_exit_shown') === '1') return;
+
+            const overlay = document.getElementById('exitOverlay');
+            if (!overlay) return;
+
+            const hide = () => {
+                overlay.classList.remove('show');
+                document.body.style.overflow = '';
+            };
+
+            const show = () => {
+                if (sessionStorage.getItem('tde_exit_shown') === '1') return;
+                sessionStorage.setItem('tde_exit_shown', '1');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                if (typeof gtag === 'function') gtag('event', 'exit_intent_shown');
+            };
+
+            document.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget && e.clientY < 12) show();
+            });
+
+            document.getElementById('exitClose').addEventListener('click', hide);
+            document.getElementById('exitDismiss').addEventListener('click', hide);
+            overlay.addEventListener('click', (e) => { if (e.target === overlay) hide(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+            overlay.querySelectorAll('a').forEach(a => a.addEventListener('click', hide));
         }
     </script>
 </body>
