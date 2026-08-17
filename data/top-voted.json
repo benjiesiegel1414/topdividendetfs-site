@@ -1,12 +1,18 @@
 {
-  "updated": "2026-08-17T12:40:03.179Z",
+  "updated": "2026-08-17T18:36:41.385Z",
   "total_tracked": 140,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 17,
+      "votes": 19,
       "yield": "41%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 15,
+      "yield": "6.5%"
     },
     {
       "symbol": "GIAX",
@@ -21,16 +27,16 @@
       "yield": "7.9%"
     },
     {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 13,
+      "yield": "12.0%"
+    },
+    {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
       "votes": 13,
       "yield": "12.04%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 10,
-      "yield": "6.5%"
     },
     {
       "symbol": "EGGY",
@@ -43,12 +49,6 @@
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 8,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "SPUC",
-      "name": "Simplify US Equity Income ETF",
-      "votes": 8,
-      "yield": "12.0%"
     },
     {
       "symbol": "BLOX",
