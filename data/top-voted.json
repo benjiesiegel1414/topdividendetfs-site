@@ -1,7 +1,19 @@
 {
-  "updated": "2026-08-16T18:26:00.327Z",
+  "updated": "2026-08-17T01:08:42.938Z",
   "total_tracked": 140,
   "top": [
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 14,
+      "yield": "41%"
+    },
+    {
+      "symbol": "GIAX",
+      "name": "Nicholas Global Equity and Income ETF",
+      "votes": 12,
+      "yield": "24.0%"
+    },
     {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
@@ -15,22 +27,28 @@
       "yield": "12.04%"
     },
     {
-      "symbol": "GIAX",
-      "name": "Nicholas Global Equity and Income ETF",
-      "votes": 11,
-      "yield": "24.0%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
-      "yield": "41%"
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 8,
+      "yield": "6.5%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "10.5%"
+    },
+    {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 6,
+      "yield": "12.0%"
+    },
+    {
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 5,
+      "yield": "37.0%"
     },
     {
       "symbol": "XQQI",
@@ -43,24 +61,6 @@
       "name": "Roundhill GOOGL WeeklyPay ETF",
       "votes": 4,
       "yield": "33.0%"
-    },
-    {
-      "symbol": "JEPQ",
-      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 4,
-      "yield": "12.9%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 4,
-      "yield": "21.0%"
-    },
-    {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 3,
-      "yield": "65%"
     }
   ]
 }
