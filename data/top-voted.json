@@ -1,18 +1,24 @@
 {
-  "updated": "2026-08-18T06:39:19.477Z",
+  "updated": "2026-08-18T12:41:16.526Z",
   "total_tracked": 140,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 26,
+      "votes": 27,
       "yield": "41%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 18,
+      "votes": 19,
       "yield": "6.5%"
+    },
+    {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 17,
+      "yield": "12.0%"
     },
     {
       "symbol": "GPIX",
@@ -21,22 +27,16 @@
       "yield": "7.9%"
     },
     {
-      "symbol": "SPUC",
-      "name": "Simplify US Equity Income ETF",
-      "votes": 16,
-      "yield": "12.0%"
+      "symbol": "GIAX",
+      "name": "Nicholas Global Equity and Income ETF",
+      "votes": 15,
+      "yield": "24.0%"
     },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
       "votes": 15,
       "yield": "12.04%"
-    },
-    {
-      "symbol": "GIAX",
-      "name": "Nicholas Global Equity and Income ETF",
-      "votes": 14,
-      "yield": "24.0%"
     },
     {
       "symbol": "OVL",
@@ -51,16 +51,16 @@
       "yield": "14.0%"
     },
     {
-      "symbol": "EGGY",
-      "name": "NestYield Dynamic Income ETF",
-      "votes": 10,
-      "yield": "37.0%"
-    },
-    {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "17.4%"
+    },
+    {
+      "symbol": "XQQI",
+      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "votes": 11,
+      "yield": "21.0%"
     }
   ]
 }
