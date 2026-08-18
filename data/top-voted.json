@@ -1,18 +1,36 @@
 {
-  "updated": "2026-08-17T18:36:41.385Z",
+  "updated": "2026-08-18T01:06:33.036Z",
   "total_tracked": 140,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 19,
+      "votes": 25,
       "yield": "41%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 15,
+      "votes": 18,
       "yield": "6.5%"
+    },
+    {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 16,
+      "yield": "12.0%"
+    },
+    {
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 15,
+      "yield": "7.9%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 15,
+      "yield": "12.04%"
     },
     {
       "symbol": "GIAX",
@@ -21,46 +39,28 @@
       "yield": "24.0%"
     },
     {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 13,
-      "yield": "7.9%"
-    },
-    {
-      "symbol": "SPUC",
-      "name": "Simplify US Equity Income ETF",
-      "votes": 13,
-      "yield": "12.0%"
-    },
-    {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 13,
-      "yield": "12.04%"
-    },
-    {
       "symbol": "EGGY",
       "name": "NestYield Dynamic Income ETF",
-      "votes": 8,
+      "votes": 10,
       "yield": "37.0%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 8,
+      "votes": 10,
       "yield": "10.5%"
     },
     {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 6,
-      "yield": "36.0%"
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 10,
+      "yield": "14.0%"
     },
     {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 6,
-      "yield": "33.0%"
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 9,
+      "yield": "17.4%"
     }
   ]
 }
