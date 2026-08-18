@@ -1,11 +1,11 @@
 {
-  "updated": "2026-08-18T01:06:33.036Z",
+  "updated": "2026-08-18T06:39:19.477Z",
   "total_tracked": 140,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 25,
+      "votes": 26,
       "yield": "41%"
     },
     {
@@ -15,16 +15,16 @@
       "yield": "6.5%"
     },
     {
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 16,
+      "yield": "7.9%"
+    },
+    {
       "symbol": "SPUC",
       "name": "Simplify US Equity Income ETF",
       "votes": 16,
       "yield": "12.0%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 15,
-      "yield": "7.9%"
     },
     {
       "symbol": "SPYI",
@@ -35,8 +35,20 @@
     {
       "symbol": "GIAX",
       "name": "Nicholas Global Equity and Income ETF",
-      "votes": 13,
+      "votes": 14,
       "yield": "24.0%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 12,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 11,
+      "yield": "14.0%"
     },
     {
       "symbol": "EGGY",
@@ -45,21 +57,9 @@
       "yield": "37.0%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 10,
-      "yield": "10.5%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 10,
-      "yield": "14.0%"
-    },
-    {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 9,
+      "votes": 10,
       "yield": "17.4%"
     }
   ]
