@@ -1,0 +1,50 @@
+name: Build sitemap
+
+# Regenerates sitemap.xml whenever an .html page is added or changed,
+# plus a daily run to keep <lastmod> honest on pages updated by other automations.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'generate-sitemap.js'
+      - '.github/workflows/sitemap.yml'
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC daily
+  workflow_dispatch:       # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sitemap
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so <lastmod> can use real git commit dates
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate sitemap.xml
+        run: node generate-sitemap.js
+
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet -- sitemap.xml; then
+            echo "sitemap.xml unchanged — nothing to commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "chore: rebuild sitemap.xml [skip ci]"
+          git push
