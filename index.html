@@ -230,8 +230,13 @@
    .chip.active{background:var(--green);color:#fff;box-shadow:0 2px 7px rgba(46,93,84,.4);}
    .chip.gold{background:linear-gradient(135deg,#FFD700,#FFA500);border-color:#FF8C00;color:#1A3C34;box-shadow:0 2px 8px rgba(255,215,0,.4);}
    .chip.gold:hover{background:linear-gradient(135deg,#FFA500,#FFD700);color:#1A3C34;box-shadow:0 5px 13px rgba(255,215,0,.6);}
-   .chip.clear{border-color:#bbb;color:#777;font-weight:700;}
-   .chip.clear:hover{background:#777;border-color:#777;color:#fff;}
+
+   /* ══════════ NEW ETFs CHIP ══════════ */
+   .chip.new{background:linear-gradient(135deg,#e74c3c,#ff7a45);border-color:#c0392b;color:#fff;letter-spacing:.3px;box-shadow:0 2px 8px rgba(231,76,60,.45);animation:newPulse 2.4s infinite;}
+   .chip.new:hover{background:linear-gradient(135deg,#ff7a45,#e74c3c);color:#fff;box-shadow:0 5px 14px rgba(231,76,60,.65);}
+   @keyframes newPulse{0%,100%{box-shadow:0 2px 8px rgba(231,76,60,.4)}50%{box-shadow:0 3px 15px rgba(231,76,60,.78)}}
+   @media(prefers-reduced-motion:reduce){.chip.new{animation:none}}
+
    @media(max-width:600px){
      .chip-bar{gap:6.3px;padding:0 8px;}
      .chip{padding:5.8px 10.5px;font-size:0.735em;}
@@ -354,7 +359,7 @@
         <a href="?yield=1-5#etfTable" class="chip" data-chip="yield:1-5">🛡️ 1-5% Yield</a>
         <a href="?decay=NO#etfTable" class="chip" data-chip="decay:NO">✅ No Price Decay</a>
         <a href="?decay=YES#etfTable" class="chip" data-chip="decay:YES">⚠️ Price Decay</a>
-        <a href="./" class="chip clear">↺ Show All 100+</a>
+        <a href="new-etfs.html" class="chip new">🆕 NEW ETFs!</a>
     </div>
 
     <div id="filters">
@@ -499,6 +504,7 @@
 
     <footer class="footer">
     <p>
+        <a href="new-etfs.html">New ETFs</a> | 
         <a href="top-voted-etfs.html">Top Voted ETFs</a> | 
         <a href="terms-of-use.html">Terms of Use</a> | 
         <a href="privacy-policy.html">Privacy Policy</a> | 
