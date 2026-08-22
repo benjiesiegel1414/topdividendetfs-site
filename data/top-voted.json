@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T01:06:48.860Z",
+  "updated": "2026-08-22T06:36:38.044Z",
   "total_tracked": 146,
   "top": [
     {
@@ -17,8 +17,14 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "41%"
+    },
+    {
+      "symbol": "XSPI",
+      "name": "NEOS Boosted S&P 500 High Income ETF",
+      "votes": 3,
+      "yield": "17.0%"
     },
     {
       "symbol": "GOOW",
@@ -27,40 +33,34 @@
       "yield": "27.0%"
     },
     {
-      "symbol": "XSPI",
-      "name": "NEOS Boosted S&P 500 High Income ETF",
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
       "votes": 2,
-      "yield": "17.0%"
+      "yield": "14.0%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 2,
+      "yield": "17.4%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 2,
+      "yield": "21.0%"
+    },
+    {
+      "symbol": "XQQI",
+      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "votes": 2,
+      "yield": "21.0%"
     },
     {
       "symbol": "AHD",
       "name": "GraniteShares Autocallable HOOD ETF",
       "votes": 1,
       "yield": "27%"
-    },
-    {
-      "symbol": "CSHI",
-      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
-      "votes": 1,
-      "yield": "4.7%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 1,
-      "yield": "14.0%"
-    },
-    {
-      "symbol": "ROCY",
-      "name": "JPMorgan Equity Premium Yield ETF",
-      "votes": 1,
-      "yield": "8.0%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "8.5%"
     }
   ]
 }
