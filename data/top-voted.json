@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T06:36:38.044Z",
+  "updated": "2026-08-22T12:35:18.019Z",
   "total_tracked": 146,
   "top": [
     {
@@ -23,8 +23,26 @@
     {
       "symbol": "XSPI",
       "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "17.0%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 3,
+      "yield": "8.5%"
+    },
+    {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 3,
+      "yield": "12.0%"
+    },
+    {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 3,
+      "yield": "7.0%"
     },
     {
       "symbol": "GOOW",
@@ -43,24 +61,6 @@
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
       "votes": 2,
       "yield": "17.4%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 2,
-      "yield": "21.0%"
-    },
-    {
-      "symbol": "XQQI",
-      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
-      "votes": 2,
-      "yield": "21.0%"
-    },
-    {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 1,
-      "yield": "27%"
     }
   ]
 }
