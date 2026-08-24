@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T06:54:33.899Z",
+  "updated": "2026-08-24T12:45:26.229Z",
   "total_tracked": 147,
   "top": [
     {
@@ -21,34 +21,34 @@
       "yield": "41%"
     },
     {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 14,
+      "yield": "8.5%"
+    },
+    {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 14,
+      "yield": "12.0%"
+    },
+    {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 14,
+      "yield": "7.0%"
+    },
+    {
       "symbol": "XSPI",
       "name": "NEOS Boosted S&P 500 High Income ETF",
       "votes": 14,
       "yield": "17.0%"
     },
     {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 12,
-      "yield": "8.5%"
-    },
-    {
-      "symbol": "SPUC",
-      "name": "Simplify US Equity Income ETF",
-      "votes": 12,
-      "yield": "12.0%"
-    },
-    {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
       "votes": 12,
       "yield": "17.4%"
-    },
-    {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 12,
-      "yield": "7.0%"
     },
     {
       "symbol": "KGLD",
