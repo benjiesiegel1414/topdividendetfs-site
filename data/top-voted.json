@@ -1,24 +1,30 @@
 {
-  "updated": "2026-08-24T01:10:05.164Z",
+  "updated": "2026-08-24T06:54:33.899Z",
   "total_tracked": 147,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 43,
+      "votes": 50,
       "yield": "12.04%"
     },
     {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 40,
+      "votes": 45,
       "yield": "7.9%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 14,
+      "votes": 17,
       "yield": "41%"
+    },
+    {
+      "symbol": "XSPI",
+      "name": "NEOS Boosted S&P 500 High Income ETF",
+      "votes": 14,
+      "yield": "17.0%"
     },
     {
       "symbol": "SEPI",
@@ -33,33 +39,27 @@
       "yield": "12.0%"
     },
     {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 12,
+      "yield": "17.4%"
+    },
+    {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
       "votes": 12,
       "yield": "7.0%"
     },
     {
-      "symbol": "XSPI",
-      "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 12,
-      "yield": "17.0%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 10,
-      "yield": "17.4%"
-    },
-    {
       "symbol": "KGLD",
       "name": "Kurv Gold Enhanced Income ETF",
-      "votes": 7,
+      "votes": 9,
       "yield": "15.6%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 7,
+      "votes": 9,
       "yield": "14.0%"
     }
   ]
