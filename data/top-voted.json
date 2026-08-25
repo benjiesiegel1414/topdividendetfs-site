@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T06:42:19.476Z",
+  "updated": "2026-08-25T12:43:13.272Z",
   "total_tracked": 147,
   "top": [
     {
@@ -17,19 +17,19 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 28,
+      "votes": 30,
       "yield": "41%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 23,
+      "votes": 25,
       "yield": "17.4%"
     },
     {
       "symbol": "XSPI",
       "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 23,
+      "votes": 25,
       "yield": "17.0%"
     },
     {
@@ -53,13 +53,13 @@
     {
       "symbol": "XQQI",
       "name": "NEOS Boosted Nasdaq-100 High Income ETF",
-      "votes": 18,
+      "votes": 20,
       "yield": "21.0%"
     },
     {
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 16,
+      "votes": 18,
       "yield": "21.0%"
     }
   ]
