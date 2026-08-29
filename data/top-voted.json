@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T21:43:42.025Z",
+  "updated": "2026-08-29T05:41:50.385Z",
   "total_tracked": 147,
   "top": [
     {
@@ -23,13 +23,13 @@
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 44,
+      "votes": 46,
       "yield": "7.0%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 43,
+      "votes": 45,
       "yield": "8.5%"
     },
     {
@@ -47,7 +47,7 @@
     {
       "symbol": "SPUC",
       "name": "Simplify US Equity Income ETF",
-      "votes": 30,
+      "votes": 31,
       "yield": "12.0%"
     },
     {
@@ -59,7 +59,7 @@
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 27,
+      "votes": 28,
       "yield": "14.0%"
     }
   ]
