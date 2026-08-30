@@ -1,12 +1,24 @@
 {
-  "updated": "2026-08-30T16:03:45.246Z",
+  "updated": "2026-08-30T20:35:00.450Z",
   "total_tracked": 147,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 85,
+      "votes": 86,
       "yield": "12.04%"
+    },
+    {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 66,
+      "yield": "7.0%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 63,
+      "yield": "8.5%"
     },
     {
       "symbol": "GPIX",
@@ -15,21 +27,9 @@
       "yield": "7.9%"
     },
     {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 61,
-      "yield": "7.0%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 59,
-      "yield": "8.5%"
-    },
-    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 51,
+      "votes": 52,
       "yield": "41%"
     },
     {
@@ -45,6 +45,12 @@
       "yield": "17.4%"
     },
     {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 32,
+      "yield": "14.0%"
+    },
+    {
       "symbol": "SPUC",
       "name": "Simplify US Equity Income ETF",
       "votes": 32,
@@ -55,12 +61,6 @@
       "name": "NEOS Boosted Nasdaq-100 High Income ETF",
       "votes": 31,
       "yield": "21.0%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 30,
-      "yield": "14.0%"
     }
   ]
 }
