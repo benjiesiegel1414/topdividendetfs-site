@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T20:25:36.051Z",
+  "updated": "2026-08-30T03:42:34.969Z",
   "total_tracked": 147,
   "top": [
     {
@@ -15,22 +15,22 @@
       "yield": "7.9%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 51,
-      "yield": "41%"
-    },
-    {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 51,
+      "votes": 55,
       "yield": "7.0%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 49,
+      "votes": 53,
       "yield": "8.5%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 51,
+      "yield": "41%"
     },
     {
       "symbol": "TDAQ",
