@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T02:56:39.662Z",
+  "updated": "2026-09-02T10:39:41.241Z",
   "total_tracked": 148,
   "top": [
     {
@@ -23,7 +23,7 @@
     {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 63,
+      "votes": 64,
       "yield": "7.9%"
     },
     {
@@ -35,7 +35,7 @@
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 48,
+      "votes": 49,
       "yield": "17.4%"
     },
     {
