@@ -1,36 +1,36 @@
 {
-  "updated": "2026-09-03T10:41:49.593Z",
+  "updated": "2026-09-03T15:48:10.275Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 100,
+      "votes": 101,
       "yield": "12.04%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 85,
+      "votes": 86,
       "yield": "8.5%"
     },
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 85,
+      "votes": 86,
       "yield": "7.0%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 74,
+      "yield": "40%"
     },
     {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 74,
       "yield": "7.9%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 71,
-      "yield": "40%"
     },
     {
       "symbol": "TDAQ",
@@ -41,7 +41,7 @@
     {
       "symbol": "XSPI",
       "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 48,
+      "votes": 49,
       "yield": "17.0%"
     },
     {
@@ -51,14 +51,14 @@
       "yield": "14.0%"
     },
     {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 42,
+      "symbol": "XQQI",
+      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "votes": 43,
       "yield": "21.0%"
     },
     {
-      "symbol": "XQQI",
-      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
       "votes": 42,
       "yield": "21.0%"
     }
