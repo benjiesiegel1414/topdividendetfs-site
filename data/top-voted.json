@@ -1,23 +1,23 @@
 {
-  "updated": "2026-09-03T15:48:10.275Z",
+  "updated": "2026-09-03T20:31:10.418Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 101,
+      "votes": 102,
       "yield": "12.04%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 86,
+      "votes": 89,
       "yield": "8.5%"
     },
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 86,
+      "votes": 88,
       "yield": "7.0%"
     },
     {
