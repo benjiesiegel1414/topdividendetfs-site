@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-03T02:59:38.522Z",
+  "updated": "2026-09-03T10:41:49.593Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 98,
+      "votes": 100,
       "yield": "12.04%"
     },
     {
@@ -21,16 +21,16 @@
       "yield": "7.0%"
     },
     {
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 74,
+      "yield": "7.9%"
+    },
+    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 71,
       "yield": "40%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 66,
-      "yield": "7.9%"
     },
     {
       "symbol": "TDAQ",
@@ -57,10 +57,10 @@
       "yield": "21.0%"
     },
     {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 41,
-      "yield": "14.0%"
+      "symbol": "XQQI",
+      "name": "NEOS Boosted Nasdaq-100 High Income ETF",
+      "votes": 42,
+      "yield": "21.0%"
     }
   ]
 }
