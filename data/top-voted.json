@@ -1,66 +1,66 @@
 {
-  "updated": "2026-09-04T15:46:34.767Z",
+  "updated": "2026-09-04T20:17:25.821Z",
   "total_tracked": 150,
   "top": [
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 105,
-      "yield": "12.04%"
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "votes": 1,
+      "yield": "34.0%"
     },
     {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 92,
-      "yield": "8.5%"
+      "symbol": "KQQQ",
+      "name": "Kurv Technology Titans Select ETF",
+      "votes": 1,
+      "yield": "14.00%"
     },
     {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 91,
-      "yield": "7.0%"
+      "symbol": "MLPI",
+      "name": "MLP & Energy Infrastructure High Income ETF",
+      "votes": 1,
+      "yield": "14.8%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 80,
-      "yield": "40%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 75,
-      "yield": "7.9%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 57,
-      "yield": "17.4%"
+      "symbol": "ODTE",
+      "name": "ODTE  VegaShares SPX NDX RTY Premium Income ETF",
+      "votes": 1,
+      "yield": "14.2%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 50,
+      "votes": 1,
       "yield": "14.0%"
     },
     {
-      "symbol": "XSPI",
-      "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 49,
-      "yield": "17.0%"
+      "symbol": "SIOO",
+      "name": "VistaShares Target 15™ S&P 100 Distribution ETF",
+      "votes": 1,
+      "yield": "15.0%"
     },
     {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 44,
-      "yield": "14.0%"
+      "symbol": "SOXY",
+      "name": "YieldMax® Target 12™ Semiconductor Option Income ETF",
+      "votes": 1,
+      "yield": "12.0%"
     },
     {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 44,
-      "yield": "21.0%"
+      "symbol": "SPCI",
+      "name": "Tuttle Capital Space Industry Income Blast ETF",
+      "votes": 1,
+      "yield": "31%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 1,
+      "yield": "12.04%"
+    },
+    {
+      "symbol": "XBCI",
+      "name": "NEOS Boosted Bitcoin High Income ETF",
+      "votes": 1,
+      "yield": "41%"
     }
   ]
 }
