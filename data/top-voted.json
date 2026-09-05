@@ -1,11 +1,29 @@
 {
-  "updated": "2026-09-05T03:00:09.424Z",
+  "updated": "2026-09-05T09:58:21.546Z",
   "total_tracked": 150,
   "top": [
     {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 16,
+      "yield": "12.04%"
+    },
+    {
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 14,
+      "yield": "7.9%"
+    },
+    {
+      "symbol": "PLTY",
+      "name": "YieldMax PLTR Option Income Strategy ETF",
+      "votes": 3,
+      "yield": "101%"
+    },
+    {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 2,
+      "votes": 3,
       "yield": "8.5%"
     },
     {
@@ -39,28 +57,10 @@
       "yield": "14.2%"
     },
     {
-      "symbol": "PLTY",
-      "name": "YieldMax PLTR Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "101%"
-    },
-    {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "votes": 1,
       "yield": "14.0%"
-    },
-    {
-      "symbol": "SIOO",
-      "name": "VistaShares Target 15™ S&P 100 Distribution ETF",
-      "votes": 1,
-      "yield": "15.0%"
-    },
-    {
-      "symbol": "SOXY",
-      "name": "YieldMax® Target 12™ Semiconductor Option Income ETF",
-      "votes": 1,
-      "yield": "12.0%"
     }
   ]
 }
