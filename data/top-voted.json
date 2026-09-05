@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-05T09:58:21.546Z",
+  "updated": "2026-09-05T14:36:38.970Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 16,
+      "votes": 18,
       "yield": "12.04%"
     },
     {
@@ -15,52 +15,52 @@
       "yield": "7.9%"
     },
     {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 4,
+      "yield": "8.5%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 3,
+      "yield": "40%"
+    },
+    {
       "symbol": "PLTY",
       "name": "YieldMax PLTR Option Income Strategy ETF",
       "votes": 3,
       "yield": "101%"
     },
     {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 3,
-      "yield": "8.5%"
-    },
-    {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 1,
-      "yield": "34.0%"
-    },
-    {
-      "symbol": "IACL",
-      "name": "GraniteShares US 100 Autocallable Income ETF",
-      "votes": 1,
-      "yield": "0.0%"
-    },
-    {
-      "symbol": "KQQQ",
-      "name": "Kurv Technology Titans Select ETF",
-      "votes": 1,
-      "yield": "14.00%"
-    },
-    {
-      "symbol": "MLPI",
-      "name": "MLP & Energy Infrastructure High Income ETF",
-      "votes": 1,
-      "yield": "14.8%"
-    },
-    {
-      "symbol": "ODTE",
-      "name": "ODTE  VegaShares SPX NDX RTY Premium Income ETF",
-      "votes": 1,
-      "yield": "14.2%"
-    },
-    {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 1,
+      "votes": 3,
       "yield": "14.0%"
+    },
+    {
+      "symbol": "KGLD",
+      "name": "Kurv Gold Enhanced Income ETF",
+      "votes": 2,
+      "yield": "15.6%"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 2,
+      "yield": "3.4%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 2,
+      "yield": "17.4%"
+    },
+    {
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 1,
+      "yield": "34.8%"
     }
   ]
 }
