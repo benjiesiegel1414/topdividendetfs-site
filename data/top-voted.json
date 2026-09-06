@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-06T14:56:28.315Z",
+  "updated": "2026-09-06T20:00:12.352Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 19,
+      "votes": 22,
       "yield": "12.04%"
     },
     {
@@ -23,8 +23,32 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 3,
+      "votes": 7,
       "yield": "40%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 7,
+      "yield": "14.0%"
+    },
+    {
+      "symbol": "KGLD",
+      "name": "Kurv Gold Enhanced Income ETF",
+      "votes": 5,
+      "yield": "15.6%"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 5,
+      "yield": "3.0%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 5,
+      "yield": "17.4%"
     },
     {
       "symbol": "PLTY",
@@ -33,34 +57,10 @@
       "yield": "101%"
     },
     {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 3,
-      "yield": "14.0%"
-    },
-    {
-      "symbol": "KGLD",
-      "name": "Kurv Gold Enhanced Income ETF",
+      "symbol": "SNOY",
+      "name": "YieldMax SNOW Option Income Strategy ETF",
       "votes": 2,
-      "yield": "15.6%"
-    },
-    {
-      "symbol": "SCHD",
-      "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 2,
-      "yield": "3.0%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 2,
-      "yield": "17.4%"
-    },
-    {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "34.8%"
+      "yield": "65%"
     }
   ]
 }
