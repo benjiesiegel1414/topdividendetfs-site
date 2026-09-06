@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T19:56:44.687Z",
+  "updated": "2026-09-06T02:59:31.965Z",
   "total_tracked": 150,
   "top": [
     {
@@ -17,7 +17,7 @@
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 4,
+      "votes": 8,
       "yield": "8.5%"
     },
     {
@@ -48,7 +48,7 @@
       "symbol": "SCHD",
       "name": "Schwab U.S. Dividend Equity ETF",
       "votes": 2,
-      "yield": "3.4%"
+      "yield": "3.0%"
     },
     {
       "symbol": "TDAQ",
