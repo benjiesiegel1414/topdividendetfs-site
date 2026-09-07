@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://docs.google.com">
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929351005136304"
+         crossorigin="anonymous"></script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://topdividendETFs.com/">
@@ -418,6 +422,66 @@
             margin-right: auto;
             line-height: 1.6;
         }
+
+        /* ===== SPONSOR BANNER ===== */
+        .banner {
+            width: 100%;
+            max-width: 1000px;
+            margin: 15px auto;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .banner a { display: block; line-height: 0; }
+
+        /* Image shows at its true pixel dimensions */
+        .banner img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            background: transparent;
+            transition: transform .3s ease;
+        }
+
+        .banner:hover img { transform: scale(1.02); }
+
+        .banner-label {
+            color: var(--text-light);
+            font-size: 0.78em;
+            font-weight: 600;
+        }
+
+        .banner-legal {
+            color: var(--text-light);
+            font-size: 0.78em;
+            font-weight: 400;
+            text-align: center;
+            max-width: 100%;
+            overflow-wrap: anywhere;
+        }
+
+        .banner-legal a {
+            color: var(--text-light) !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: 400 !important;
+            text-shadow: none !important;
+            background: none !important;
+            letter-spacing: normal;
+            text-decoration: underline !important;
+            line-height: inherit;
+        }
+
+        .banner-top { margin: 0 auto 45px; }
+        .banner-bottom { margin: 55px auto 10px; }
 
         /* ===== LEADERBOARD TABLE STYLE ===== */
         .leaderboard-table {
@@ -1286,6 +1350,9 @@
             .sticky-cta-button { padding: 10px 16px; font-size: 13px; }
 
             body { padding-bottom: 70px; }
+
+            .banner-top { margin: 0 auto 32px; }
+            .banner-bottom { margin: 40px auto 10px; }
         }
     </style>
 </head>
@@ -1359,6 +1426,16 @@
     </div>
 
     <div class="content">
+
+        <!-- ══════════ SPONSOR BANNER (TOP) ══════════ -->
+        <div class="banner banner-top">
+            <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer" data-cta="sponsor_ovl_top">
+                <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/Revised%20Top%20Dividend%20Tools%20OVL%20ad.png" alt="OVL ETF by Liquid Strategies">
+            </a>
+            <small class="banner-label">Sponsored By</small>
+            <small class="banner-legal">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+        </div>
+
         <!-- TOP 10 TOTAL RETURNS SECTION -->
         <div class="section" id="top-returns"
              data-sticky-text="Want all 100+ ETFs sorted by total return?"
@@ -1639,12 +1716,22 @@
             </details>
         </section>
 
+        <!-- ══════════ SPONSOR BANNER (BOTTOM) ══════════ -->
+        <div class="banner banner-bottom">
+            <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer" data-cta="sponsor_ovl_bottom">
+                <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/Revised%20Top%20Dividend%20Tools%20OVL%20ad.png" alt="OVL ETF by Liquid Strategies">
+            </a>
+            <small class="banner-label">Sponsored By</small>
+            <small class="banner-legal">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+        </div>
+
         <!-- DISCLAIMER -->
         <p class="disclaimer">
             <strong>📌 Important Disclaimer:</strong> This platform is for informational and educational purposes only.
             It does not constitute financial, investment, or tax advice. Past performance is not indicative of future results.
             Dividend payments are not guaranteed and can be cut or increased. Always consult a qualified financial advisor
             before making any investment decisions. Data updated daily from public sources.
+            Dividend Empire LLC receives compensation from ETF issuers for sponsored placements, which are labeled as such.
         </p>
 
         <!-- FOOTER -->
@@ -1676,6 +1763,7 @@
                     <a href="#guides" data-cta="footer_guides">Latest guides</a>
                     <a href="#education" data-cta="footer_education">ETF education</a>
                     <a href="#faq" data-cta="footer_faq">FAQs</a>
+                    <a href="https://topdividendetfs.com/advertise" data-cta="footer_advertise">Advertise</a>
                     <a href="mailto:Business@TopDividendETFs.com" data-cta="footer_contact">Contact</a>
                 </div>
             </div>
