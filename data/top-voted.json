@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-07T17:16:02.370Z",
+  "updated": "2026-09-07T21:07:41.602Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 22,
+      "votes": 23,
       "yield": "12.04%"
     },
     {
@@ -23,14 +23,20 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 8,
+      "votes": 11,
       "yield": "40%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 8,
+      "votes": 9,
       "yield": "14.0%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 7,
+      "yield": "17.4%"
     },
     {
       "symbol": "KGLD",
@@ -45,22 +51,16 @@
       "yield": "3.0%"
     },
     {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 5,
-      "yield": "17.4%"
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "votes": 4,
+      "yield": "34.0%"
     },
     {
-      "symbol": "PLTY",
-      "name": "YieldMax PLTR Option Income Strategy ETF",
+      "symbol": "NVII",
+      "name": "REX NVDA Growth & Income ETF",
       "votes": 3,
-      "yield": "101%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 2,
-      "yield": "36.0%"
+      "yield": "74%"
     }
   ]
 }
