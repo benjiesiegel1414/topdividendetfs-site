@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T20:00:12.352Z",
+  "updated": "2026-09-07T02:58:50.099Z",
   "total_tracked": 150,
   "top": [
     {
@@ -17,20 +17,20 @@
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 10,
+      "votes": 12,
       "yield": "8.5%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 8,
+      "yield": "14.0%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 7,
       "yield": "40%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 7,
-      "yield": "14.0%"
     },
     {
       "symbol": "KGLD",
@@ -57,10 +57,10 @@
       "yield": "101%"
     },
     {
-      "symbol": "SNOY",
-      "name": "YieldMax SNOW Option Income Strategy ETF",
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
       "votes": 2,
-      "yield": "65%"
+      "yield": "36.0%"
     }
   ]
 }
