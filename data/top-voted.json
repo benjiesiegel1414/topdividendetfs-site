@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-08T15:59:53.462Z",
-  "total_tracked": 150,
+  "updated": "2026-09-08T20:44:36.122Z",
+  "total_tracked": 151,
   "top": [
     {
       "symbol": "SPYI",
@@ -11,13 +11,13 @@
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 20,
+      "votes": 22,
       "yield": "8.5%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 19,
+      "votes": 20,
       "yield": "40%"
     },
     {
