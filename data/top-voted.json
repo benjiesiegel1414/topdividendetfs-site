@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-08T10:36:14.708Z",
+  "updated": "2026-09-08T15:59:53.462Z",
   "total_tracked": 150,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 24,
+      "votes": 26,
       "yield": "12.04%"
     },
     {
@@ -17,32 +17,38 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 16,
+      "votes": 19,
       "yield": "40%"
     },
     {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 14,
+      "votes": 15,
       "yield": "7.9%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 9,
+      "votes": 12,
       "yield": "14.0%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 7,
+      "votes": 10,
       "yield": "17.4%"
     },
     {
       "symbol": "KGLD",
       "name": "Kurv Gold Enhanced Income ETF",
-      "votes": 6,
+      "votes": 8,
       "yield": "15.6%"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 8,
+      "yield": "3.0%"
     },
     {
       "symbol": "GOOW",
@@ -51,15 +57,9 @@
       "yield": "34.0%"
     },
     {
-      "symbol": "SCHD",
-      "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 5,
-      "yield": "3.0%"
-    },
-    {
       "symbol": "IDVO",
       "name": "Amplify CWP International Enhanced Dividend Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "6.0%"
     }
   ]
