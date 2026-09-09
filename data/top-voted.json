@@ -1,29 +1,29 @@
 {
-  "updated": "2026-09-09T15:56:44.254Z",
+  "updated": "2026-09-09T20:26:11.047Z",
   "total_tracked": 152,
   "top": [
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 34,
-      "yield": "40%"
-    },
-    {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 34,
+      "votes": 36,
       "yield": "8.5%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 35,
+      "yield": "40%"
     },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 31,
+      "votes": 33,
       "yield": "12.04%"
     },
     {
       "symbol": "EGGQ",
       "name": "NestYield Visionary ETF",
-      "votes": 20,
+      "votes": 22,
       "yield": "9.50%"
     },
     {
