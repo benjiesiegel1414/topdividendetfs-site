@@ -1,23 +1,23 @@
 {
-  "updated": "2026-09-08T20:44:36.122Z",
-  "total_tracked": 151,
+  "updated": "2026-09-09T03:09:17.534Z",
+  "total_tracked": 152,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 26,
+      "votes": 29,
       "yield": "12.04%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 22,
+      "votes": 28,
       "yield": "8.5%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 20,
+      "votes": 27,
       "yield": "40%"
     },
     {
@@ -29,38 +29,38 @@
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 12,
+      "votes": 13,
       "yield": "14.0%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 10,
+      "votes": 12,
       "yield": "17.4%"
     },
     {
       "symbol": "KGLD",
       "name": "Kurv Gold Enhanced Income ETF",
-      "votes": 8,
+      "votes": 10,
       "yield": "15.6%"
     },
     {
       "symbol": "SCHD",
       "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 8,
+      "votes": 10,
       "yield": "3.0%"
     },
     {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 5,
-      "yield": "34.0%"
+      "symbol": "EGGQ",
+      "name": "NestYield Visionary ETF",
+      "votes": 9,
+      "yield": "9.50%"
     },
     {
-      "symbol": "IDVO",
-      "name": "Amplify CWP International Enhanced Dividend Income ETF",
-      "votes": 4,
-      "yield": "6.0%"
+      "symbol": "XLKI",
+      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "votes": 6,
+      "yield": "19.0%"
     }
   ]
 }
