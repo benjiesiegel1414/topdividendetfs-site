@@ -1,66 +1,66 @@
 {
-  "updated": "2026-09-11T15:53:08.363Z",
+  "updated": "2026-09-11T20:27:47.979Z",
   "total_tracked": 153,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 75,
+      "votes": 4,
       "yield": "40%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 51,
-      "yield": "17.4%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 48,
+      "votes": 3,
       "yield": "36.0%"
     },
     {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 48,
-      "yield": "8.5%"
-    },
-    {
-      "symbol": "EGGQ",
-      "name": "NestYield Visionary ETF",
-      "votes": 47,
-      "yield": "9.50%"
-    },
-    {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 44,
-      "yield": "12.04%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 28,
-      "yield": "14.0%"
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 3,
+      "yield": "17.4%"
     },
     {
       "symbol": "SCHD",
       "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 20,
+      "votes": 1,
       "yield": "3.0%"
     },
     {
-      "symbol": "XLKI",
-      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 19,
-      "yield": "19.0%"
+      "symbol": "ACKY",
+      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
+      "votes": 0,
+      "yield": "15.0%"
     },
     {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 17,
-      "yield": "7.9%"
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
+      "votes": 0,
+      "yield": "26%"
+    },
+    {
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 0,
+      "yield": "34.8%"
+    },
+    {
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "46%"
+    },
+    {
+      "symbol": "AMYY",
+      "name": "GraniteShares YieldBOOST AMD ETF",
+      "votes": 0,
+      "yield": "68%"
+    },
+    {
+      "symbol": "AMZY",
+      "name": "YieldMax AMZN Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "25%"
     }
   ]
 }
