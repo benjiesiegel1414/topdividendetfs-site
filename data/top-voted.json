@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-12T03:11:02.950Z",
+  "updated": "2026-09-12T10:07:31.151Z",
   "total_tracked": 153,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 13,
+      "votes": 16,
       "yield": "40%"
     },
     {
@@ -23,14 +23,20 @@
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 3,
+      "votes": 5,
       "yield": "1.3%"
     },
     {
       "symbol": "XLKI",
       "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 3,
+      "votes": 5,
       "yield": "19.0%"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 3,
+      "yield": "3.0%"
     },
     {
       "symbol": "BTCI",
@@ -39,28 +45,22 @@
       "yield": "26.7%"
     },
     {
+      "symbol": "JEPQ",
+      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
+      "votes": 2,
+      "yield": "11.7%"
+    },
+    {
       "symbol": "MSTY",
       "name": "YieldMax MSTR Option Income Strategy ETF",
       "votes": 2,
       "yield": "101%"
     },
     {
-      "symbol": "SCHD",
-      "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 2,
-      "yield": "3.0%"
-    },
-    {
-      "symbol": "DIVO",
-      "name": "Amplify CWP Enhanced Dividend Income ETF",
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
       "votes": 1,
-      "yield": "4.8%"
-    },
-    {
-      "symbol": "EGGQ",
-      "name": "NestYield Visionary ETF",
-      "votes": 1,
-      "yield": "9.50%"
+      "yield": "26%"
     }
   ]
 }
