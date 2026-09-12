@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="TopDividendETFs.com">
     <title>New Dividend ETFs 2026 | Recently Added | TopDividendETFs.com</title>
-    <meta name="description" content="The newest dividend ETFs added to TopDividendETFs.com. Fresh launches and recent additions with yields, AUM, price decay and grades. Updated daily & 100% free.">
+    <meta name="description" content="The newest dividend ETFs added to TopDividendETFs.com. Fresh launches and recent additions with yields, AUM, price decay and grades. Updated daily &amp; 100% free.">
     <meta name="keywords" content="new dividend ETFs, newly launched ETFs 2026, recently added ETFs, new high yield ETFs">
 
     <!-- OPEN GRAPH / TWITTER -->
@@ -30,7 +30,7 @@
 
     <!-- FAVICONS -->
     <link rel="icon" href="favicon.ico">
-    <link rel="canonical" href="https://topdividendetfs.com/new-etfs.html">
+    <link rel="canonical" id="canonicalTag" href="https://topdividendetfs.com/new-etfs.html">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -192,6 +192,28 @@
           .chip{padding:5.8px 10.5px;font-size:0.735em;}
         }
 
+        /* ══════════ PAGINATION ══════════ */
+        .page-status{display:block;font-size:0.88em;font-weight:900;color:#1A3C34;letter-spacing:.3px;margin-top:6px;}
+        .pagination{width:100%;max-width:1700px;margin:16px auto;display:none;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;}
+        .pg-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:8px;background:var(--green);color:#fff;font-weight:900;font-size:0.9em;text-decoration:none;border:2px solid #1A3C34;box-shadow:0 3px 10px rgba(0,0,0,.18);transition:all .2s;white-space:nowrap;}
+        .pg-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.28);}
+        .pg-btn.disabled{background:#d8d8d8;border-color:#c4c4c4;color:#8a8a8a;pointer-events:none;box-shadow:none;}
+        .pg-btn.next{background:linear-gradient(135deg,#e74c3c,#ff7a45);border-color:#c0392b;font-size:1.02em;padding:13px 26px;box-shadow:0 4px 14px rgba(231,76,60,.45);}
+        .pg-btn.next:hover{background:linear-gradient(135deg,#ff7a45,#e74c3c);box-shadow:0 7px 20px rgba(231,76,60,.6);}
+        .pg-num{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 10px;border-radius:8px;background:#fff;border:2px solid var(--green);color:#1A3C34;font-weight:900;font-size:0.92em;text-decoration:none;transition:all .15s;}
+        .pg-num:hover{background:var(--green);color:#fff;}
+        .pg-num.current{background:#1A3C34;color:#fff;border-color:#1A3C34;pointer-events:none;}
+        .pagination.top{margin:8px auto 0;}
+        .pagination.top .pg-btn{padding:6px 13px;font-size:0.78em;border-width:2px;}
+        .pagination.top .pg-btn.next{padding:6px 15px;font-size:0.8em;}
+        .pagination.top .pg-num{min-width:31px;height:31px;font-size:0.78em;}
+        .filter-note{display:none;text-align:center;font-size:0.86em;color:#555;font-weight:700;margin:12px auto 0;}
+        @media(max-width:600px){
+          .pg-btn{padding:9px 14px;font-size:0.82em;}
+          .pg-btn.next{padding:12px 18px;font-size:0.92em;}
+          .pg-num{min-width:36px;height:36px;}
+        }
+
         /* BANNER */
         .banner{width:90%;max-width:1000px;margin:15px auto;padding:0;background:none;border-radius:0;box-shadow:none;display:flex;flex-direction:column;align-items:center;gap:6px;}
         .banner img{display:block;width:auto;height:auto;max-width:100%;object-fit:contain;background:transparent;transition:transform .3s ease;}
@@ -218,9 +240,10 @@
         </div>
     </div>
 
-    <h1>🆕 New Dividend ETFs</h1>
+    <h1 id="pageHeading">🆕 New Dividend ETFs</h1>
     <p class="intro-text">
-        <span class="count-badge" id="countBadge">Loading the newest additions…</span><br>
+        <span class="count-badge" id="countBadge">Loading the newest additions…</span>
+        <span class="page-status" id="pageStatus"></span>
         <span style="font-weight:900;font-size:1.15em;display:block;margin-top:8px;">
             The most recently added ETFs on the list — newest first!
         </span>
@@ -259,6 +282,9 @@
         <a href="new-etfs.html" class="chip clear">↺ Show All New</a>
     </div>
 
+    <!-- ══════════ PAGINATION (TOP) ══════════ -->
+    <div class="pagination top" id="paginationTop"></div>
+
     <div id="filters">
         <button id="resetFilters">Reset Filters</button>
         <button id="newestFirst">🆕 Newest First</button>
@@ -276,6 +302,8 @@
             <option value="NO">No</option>
         </select>
     </div>
+
+    <div class="filter-note" id="filterNote">🔍 Filter active — searching across <strong>all</strong> new ETFs, not just this page.</div>
 
     <div id="voteMsg"></div>
 
@@ -295,6 +323,9 @@
             <tbody id="etfBody"></tbody>
         </table>
     </div>
+
+    <!-- ══════════ PAGINATION (BOTTOM — the big one) ══════════ -->
+    <div class="pagination" id="pagination"></div>
 
     <noscript>
         <div class="noscript-msg">
@@ -434,7 +465,51 @@ const NEW_ETF_START_ROW = 129;
 // Sheet row 1 is the header row, so CSV line index = sheet row - 1.
 const START_INDEX = NEW_ETF_START_ROW - 1;
 
-let allRows = [];
+// ── HOW MANY PAGES TO SPLIT THE NEW LIST INTO ──
+// 3 = the list is chopped into 3 equal chunks. Change this to 2, 4, 5...
+// and the buttons, counts and page numbers all adapt automatically.
+// The split is always even, no matter how many ETFs are on the list.
+const TOTAL_PAGES = 3;
+
+let allRows = [];        // every new ETF row, built once, newest-first
+let voteCache = null;    // global vote counts, fetched once
+let PAGES_SHOWN = TOTAL_PAGES;
+
+// Which page are we on? Read straight from the URL (?page=2)
+let CURRENT_PAGE = (function(){
+  const n = parseInt(new URLSearchParams(location.search).get('page') || '1', 10);
+  if (!n || n < 1) return 1;
+  return Math.min(n, TOTAL_PAGES);
+})();
+
+// Build the URL for any page — a REAL link, so each click = a real page load
+function pageURL(p){
+  return 'new-etfs.html' + (p > 1 ? '?page=' + p : '') + '#etfTable';
+}
+
+// ==================== PAGE 2 / 3 SEO + TITLES ====================
+(function pageSEO(){
+  if (CURRENT_PAGE > 1) {
+    document.title = 'New Dividend ETFs 2026 — Page ' + CURRENT_PAGE + ' of ' + TOTAL_PAGES + ' | TopDividendETFs.com';
+    const c = document.getElementById('canonicalTag');
+    if (c) c.href = 'https://topdividendetfs.com/new-etfs.html?page=' + CURRENT_PAGE;
+    const h = document.getElementById('pageHeading');
+    if (h) h.textContent = '🆕 New Dividend ETFs — Page ' + CURRENT_PAGE;
+  }
+  // rel=prev / rel=next so search engines understand the series
+  if (CURRENT_PAGE > 1) {
+    const prev = document.createElement('link');
+    prev.rel = 'prev';
+    prev.href = 'https://topdividendetfs.com/new-etfs.html' + (CURRENT_PAGE - 1 > 1 ? '?page=' + (CURRENT_PAGE - 1) : '');
+    document.head.appendChild(prev);
+  }
+  if (CURRENT_PAGE < TOTAL_PAGES) {
+    const next = document.createElement('link');
+    next.rel = 'next';
+    next.href = 'https://topdividendetfs.com/new-etfs.html?page=' + (CURRENT_PAGE + 1);
+    document.head.appendChild(next);
+  }
+})();
 
 // ==================== QUICK VIEWS ====================
 (function primeFiltersFromURL(){
@@ -451,10 +526,19 @@ let allRows = [];
 
 function clearAllFilters() {
   if (location.search || location.hash) {
-    location.href = location.pathname;
+    location.href = location.pathname;   // back to page 1, no filters
   } else {
     location.reload();
   }
+}
+
+// Is the visitor filtering/searching right now?
+function filtersActive(){
+  return !!(
+    document.getElementById('yieldRangeFilter').value ||
+    document.getElementById('decayFilter').value ||
+    document.getElementById('searchFilter').value.trim()
+  );
 }
 
 // ==================== LOAD NEW ETFs ====================
@@ -465,8 +549,6 @@ fetch(CSV_URL + '&t=' + Date.now())
 
 function renderTable(txt) {
   const lines = txt.split('\n');
-  const tbody = document.getElementById('etfBody');
-  tbody.innerHTML = '';
   allRows = [];
 
   for (let i = START_INDEX; i < lines.length; i++) {
@@ -513,32 +595,124 @@ function renderTable(txt) {
     voteTd.innerHTML = `<button class="vote-btn" data-symbol="${symbol}">🗳️</button><span class="vote-count">0</span>`;
     tr.appendChild(voteTd);
 
-    tbody.appendChild(tr);
     allRows.push(tr);
   }
 
-  updateCount();
-
   if (allRows.length === 0) {
-    tbody.innerHTML = `
+    document.getElementById('etfBody').innerHTML = `
       <tr><td colspan="7" style="padding:30px;background:#fff;color:#1A3C34;font-weight:bold;">
         No new ETFs on the board right now 👀<br>
         <a href="./" style="color:#2E5D54;">Browse the full Top 100 list →</a>
       </td></tr>`;
+    document.getElementById('countBadge').textContent = 'No new ETFs right now';
     return;
   }
 
-  sortNewestFirst();
+  // Default order: most recently added at the top
+  allRows.sort((a,b) => (parseInt(b.dataset.sheetRow)||0) - (parseInt(a.dataset.sheetRow)||0));
+
+  paintPage();
   loadGlobalVotes();
   startCountdown();
 }
 
-function updateCount() {
+// ==================== PAGINATION ENGINE ====================
+function paintPage() {
+  const tbody = document.getElementById('etfBody');
+  const total = allRows.length;
+  const barTop = document.getElementById('paginationTop');
+  const barBottom = document.getElementById('pagination');
+  const note = document.getElementById('filterNote');
+
+  tbody.innerHTML = '';
+
+  // Never show more pages than we have ETFs
+  PAGES_SHOWN = Math.max(1, Math.min(TOTAL_PAGES, total));
+  const perPage = Math.ceil(total / PAGES_SHOWN);
+  const page = Math.min(CURRENT_PAGE, PAGES_SHOWN);
+
+  let rows;
+
+  if (filtersActive()) {
+    // Filtering searches the WHOLE new list, not just one page —
+    // otherwise "15%+ yield" would hide matches sitting on page 2 or 3.
+    rows = allRows;
+    barTop.style.display = 'none';
+    barBottom.style.display = 'none';
+    note.style.display = 'block';
+  } else {
+    const start = (page - 1) * perPage;
+    rows = allRows.slice(start, start + perPage);
+    note.style.display = 'none';
+    buildPagination(total, perPage, page);
+  }
+
+  rows.forEach(r => tbody.appendChild(r));
+  applyVotes();
+  applyFilters();
+  updateCount(total, rows.length, page);
+}
+
+function buildPagination(total, perPage, page) {
+  [document.getElementById('paginationTop'), document.getElementById('pagination')].forEach((bar, idx) => {
+    const isBottom = (idx === 1);
+    bar.innerHTML = '';
+    bar.style.display = 'flex';
+
+    // ← Prev
+    if (page > 1) {
+      const prev = document.createElement('a');
+      prev.className = 'pg-btn';
+      prev.href = pageURL(page - 1);
+      prev.textContent = '← Prev';
+      bar.appendChild(prev);
+    } else {
+      const prev = document.createElement('span');
+      prev.className = 'pg-btn disabled';
+      prev.textContent = '← Prev';
+      bar.appendChild(prev);
+    }
+
+    // 1 2 3
+    for (let p = 1; p <= PAGES_SHOWN; p++) {
+      const a = document.createElement('a');
+      a.className = 'pg-num' + (p === page ? ' current' : '');
+      a.href = pageURL(p);
+      a.textContent = p;
+      a.title = 'Page ' + p + ' of ' + PAGES_SHOWN;
+      bar.appendChild(a);
+    }
+
+    // Next →  (the money button)
+    const remaining = total - (page * perPage);
+    if (page < PAGES_SHOWN && remaining > 0) {
+      const next = document.createElement('a');
+      next.className = 'pg-btn next';
+      next.href = pageURL(page + 1);
+      next.textContent = isBottom
+        ? 'Next ' + Math.min(perPage, remaining) + ' New ETFs →'
+        : 'Next →';
+      bar.appendChild(next);
+    } else {
+      const next = document.createElement('span');
+      next.className = 'pg-btn disabled';
+      next.textContent = isBottom ? 'End of the new list' : 'Next →';
+      bar.appendChild(next);
+    }
+  });
+}
+
+function updateCount(total, showing, page) {
   const badge = document.getElementById('countBadge');
-  const n = allRows.length;
-  badge.textContent = n === 0
-    ? 'No new ETFs right now'
-    : `🆕 ${n} newly added ETF${n === 1 ? '' : 's'}`;
+  const status = document.getElementById('pageStatus');
+
+  badge.textContent = `🆕 ${total} newly added ETF${total === 1 ? '' : 's'}`;
+
+  if (filtersActive()) {
+    status.textContent = 'Searching all ' + total + ' new ETFs';
+  } else {
+    status.textContent = `Page ${page} of ${PAGES_SHOWN} — showing ${showing} of ${total}`;
+  }
 }
 
 function fallbackTable() {
@@ -554,14 +728,23 @@ async function loadGlobalVotes() {
   try {
     const res = await fetch(VOTE_API + '?action=getAll&t=' + Date.now());
     if (!res.ok) return;
-    const data = await res.json();
-    document.querySelectorAll('.vote-count').forEach(span => {
-      const sym = span.previousElementSibling.dataset.symbol;
-      const count = data[sym] || 0;
-      span.textContent = count;
-      span.dataset.global = count;
-    });
+    voteCache = await res.json();
+    applyVotes();
   } catch(e) {}
+}
+
+// Votes are applied to EVERY row (even ones not currently on screen),
+// so switching pages or filtering never wipes the counts.
+function applyVotes() {
+  if (!voteCache) return;
+  allRows.forEach(tr => {
+    const btn = tr.querySelector('.vote-btn');
+    const span = tr.querySelector('.vote-count');
+    if (!btn || !span) return;
+    const count = voteCache[btn.dataset.symbol] || 0;
+    span.textContent = count;
+    span.dataset.global = count;
+  });
 }
 
 // ==================== 10 VOTES + LIVE "THANKS" COUNTDOWN ====================
@@ -615,6 +798,8 @@ document.getElementById('etfTable').addEventListener('click', async e => {
   const newCount = (parseInt(span.textContent) || 0) + 1;
   span.textContent = newCount;
   span.dataset.global = newCount;
+  if (!voteCache) voteCache = {};
+  voteCache[sym] = newCount;   // keep the cache in sync so repaints don't reset it
   addVote();
   startCountdown();
 
@@ -629,14 +814,11 @@ document.getElementById('etfTable').addEventListener('click', async e => {
 // ==================== SORTING & FILTERS ====================
 let sortDir = {};
 
-// Default view: most recently added at the top
+// Default view: most recently added at the top (re-paints the current page)
 function sortNewestFirst() {
-  const tbody = document.getElementById('etfBody');
-  const rows = Array.from(tbody.rows);
-  rows.sort((a,b) => (parseInt(b.dataset.sheetRow)||0) - (parseInt(a.dataset.sheetRow)||0));
+  allRows.sort((a,b) => (parseInt(b.dataset.sheetRow)||0) - (parseInt(a.dataset.sheetRow)||0));
   document.querySelectorAll('th').forEach(th => th.className = '');
-  rows.forEach(r => tbody.appendChild(r));
-  applyFilters();
+  paintPage();
 }
 
 function sortTable(col, forceDir) {
@@ -689,7 +871,9 @@ function applyFilters() {
   const d = document.getElementById('decayFilter').value;
   const s = document.getElementById('searchFilter').value.trim().toLowerCase();
 
-  allRows.forEach(tr => {
+  // only touch the rows currently in the table
+  Array.from(document.getElementById('etfBody').rows).forEach(tr => {
+    if (!tr.cells || tr.cells.length < 7) return;
     const yieldVal = parseFloat(tr.cells[2].textContent) || 0;
     const decay = tr.cells[4].textContent.trim().toUpperCase();
     const sym = tr.cells[0].textContent.toLowerCase();
@@ -705,8 +889,10 @@ function applyFilters() {
     tr.style.display = show ? '' : 'none';
   });
 }
-['yieldRangeFilter','decayFilter'].forEach(id => document.getElementById(id).onchange = applyFilters);
-document.getElementById('searchFilter').oninput = applyFilters;
+
+// Changing a filter re-paints (so filters search the whole list, not one page)
+['yieldRangeFilter','decayFilter'].forEach(id => document.getElementById(id).onchange = paintPage);
+document.getElementById('searchFilter').oninput = paintPage;
 document.getElementById('resetFilters').onclick = clearAllFilters;
 document.getElementById('newestFirst').onclick = sortNewestFirst;
 </script>
