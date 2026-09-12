@@ -1,66 +1,66 @@
 {
-  "updated": "2026-09-11T20:27:47.979Z",
+  "updated": "2026-09-12T03:11:02.950Z",
   "total_tracked": 153,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 4,
+      "votes": 13,
       "yield": "40%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 3,
+      "votes": 8,
       "yield": "36.0%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 3,
+      "votes": 7,
       "yield": "17.4%"
+    },
+    {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 3,
+      "yield": "1.3%"
+    },
+    {
+      "symbol": "XLKI",
+      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "votes": 3,
+      "yield": "19.0%"
+    },
+    {
+      "symbol": "BTCI",
+      "name": "NEOS Bitcoin High Income ETF",
+      "votes": 2,
+      "yield": "26.7%"
+    },
+    {
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
+      "votes": 2,
+      "yield": "101%"
     },
     {
       "symbol": "SCHD",
       "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 1,
+      "votes": 2,
       "yield": "3.0%"
     },
     {
-      "symbol": "ACKY",
-      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
-      "votes": 0,
-      "yield": "15.0%"
+      "symbol": "DIVO",
+      "name": "Amplify CWP Enhanced Dividend Income ETF",
+      "votes": 1,
+      "yield": "4.8%"
     },
     {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 0,
-      "yield": "26%"
-    },
-    {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 0,
-      "yield": "34.8%"
-    },
-    {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "46%"
-    },
-    {
-      "symbol": "AMYY",
-      "name": "GraniteShares YieldBOOST AMD ETF",
-      "votes": 0,
-      "yield": "68%"
-    },
-    {
-      "symbol": "AMZY",
-      "name": "YieldMax AMZN Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "25%"
+      "symbol": "EGGQ",
+      "name": "NestYield Visionary ETF",
+      "votes": 1,
+      "yield": "9.50%"
     }
   ]
 }
