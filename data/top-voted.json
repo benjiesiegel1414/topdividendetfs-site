@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T20:20:35.234Z",
+  "updated": "2026-09-14T03:26:37.647Z",
   "total_tracked": 155,
   "top": [
     {
@@ -21,6 +21,12 @@
       "yield": "12.04%"
     },
     {
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 13,
+      "yield": "7.9%"
+    },
+    {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
       "votes": 13,
@@ -37,12 +43,6 @@
       "name": "State Street Technology Select Sector SPDR Premium Income ETF",
       "votes": 13,
       "yield": "19.0%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 12,
-      "yield": "7.9%"
     },
     {
       "symbol": "BLOX",
