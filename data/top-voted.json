@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-14T03:26:37.647Z",
+  "updated": "2026-09-14T11:50:33.366Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 27,
+      "votes": 28,
       "yield": "40%"
     },
     {
@@ -21,6 +21,18 @@
       "yield": "12.04%"
     },
     {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 14,
+      "yield": "1.3%"
+    },
+    {
+      "symbol": "XLKI",
+      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "votes": 14,
+      "yield": "19.0%"
+    },
+    {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 13,
@@ -31,18 +43,6 @@
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
       "votes": 13,
       "yield": "14.0%"
-    },
-    {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 13,
-      "yield": "1.3%"
-    },
-    {
-      "symbol": "XLKI",
-      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 13,
-      "yield": "19.0%"
     },
     {
       "symbol": "BLOX",
