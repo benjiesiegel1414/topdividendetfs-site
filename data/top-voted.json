@@ -1,24 +1,30 @@
 {
-  "updated": "2026-09-16T10:51:49.032Z",
+  "updated": "2026-09-16T16:09:18.523Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 46,
+      "votes": 48,
       "yield": "60%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 28,
+      "votes": 30,
       "yield": "17.4%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 25,
+      "votes": 26,
       "yield": "36.0%"
+    },
+    {
+      "symbol": "BTCI",
+      "name": "NEOS Bitcoin High Income ETF",
+      "votes": 17,
+      "yield": "26.7%"
     },
     {
       "symbol": "OVL",
@@ -33,16 +39,16 @@
       "yield": "12.04%"
     },
     {
-      "symbol": "BTCI",
-      "name": "NEOS Bitcoin High Income ETF",
-      "votes": 16,
-      "yield": "26.7%"
-    },
-    {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
       "votes": 15,
       "yield": "1.3%"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 14,
+      "yield": "3.0%"
     },
     {
       "symbol": "XLKI",
@@ -55,12 +61,6 @@
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 13,
       "yield": "7.9%"
-    },
-    {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 13,
-      "yield": "14.0%"
     }
   ]
 }
