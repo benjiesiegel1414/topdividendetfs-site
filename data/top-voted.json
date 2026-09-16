@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-16T16:09:18.523Z",
+  "updated": "2026-09-16T20:53:47.470Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 48,
+      "votes": 49,
       "yield": "60%"
     },
     {
@@ -21,22 +21,28 @@
       "yield": "36.0%"
     },
     {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 18,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 18,
+      "yield": "12.04%"
+    },
+    {
       "symbol": "BTCI",
       "name": "NEOS Bitcoin High Income ETF",
       "votes": 17,
       "yield": "26.7%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 17,
-      "yield": "10.5%"
-    },
-    {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 17,
-      "yield": "12.04%"
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 15,
+      "yield": "3.0%"
     },
     {
       "symbol": "VFLO",
@@ -45,22 +51,16 @@
       "yield": "1.3%"
     },
     {
-      "symbol": "SCHD",
-      "name": "Schwab U.S. Dividend Equity ETF",
+      "symbol": "TSPY",
+      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
       "votes": 14,
-      "yield": "3.0%"
+      "yield": "14.0%"
     },
     {
       "symbol": "XLKI",
       "name": "State Street Technology Select Sector SPDR Premium Income ETF",
       "votes": 14,
       "yield": "19.0%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 13,
-      "yield": "7.9%"
     }
   ]
 }
