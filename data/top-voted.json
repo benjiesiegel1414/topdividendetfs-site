@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-17T10:59:01.441Z",
+  "updated": "2026-09-17T16:15:51.656Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 51,
+      "votes": 54,
       "yield": "60%"
     },
     {
@@ -33,28 +33,28 @@
       "yield": "12.04%"
     },
     {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 18,
+      "yield": "1.3%"
+    },
+    {
       "symbol": "BTCI",
       "name": "NEOS Bitcoin High Income ETF",
       "votes": 17,
       "yield": "26.7%"
     },
     {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 16,
-      "yield": "1.3%"
+      "symbol": "XLKI",
+      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "votes": 17,
+      "yield": "19.0%"
     },
     {
       "symbol": "SCHD",
       "name": "Schwab U.S. Dividend Equity ETF",
       "votes": 15,
       "yield": "3.0%"
-    },
-    {
-      "symbol": "XLKI",
-      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 15,
-      "yield": "19.0%"
     },
     {
       "symbol": "TSPY",
