@@ -1,66 +1,66 @@
 {
-  "updated": "2026-09-18T15:51:19.585Z",
+  "updated": "2026-09-18T20:24:59.208Z",
   "total_tracked": 155,
   "top": [
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 58,
-      "yield": "60%"
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
+      "votes": 1,
+      "yield": "85%"
     },
     {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 32,
-      "yield": "17.4%"
+      "symbol": "ACKY",
+      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
+      "votes": 0,
+      "yield": "15.0%"
     },
     {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 26,
-      "yield": "36.0%"
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
+      "votes": 0,
+      "yield": "26%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 20,
-      "yield": "10.5%"
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 0,
+      "yield": "34.8%"
     },
     {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 20,
-      "yield": "1.3%"
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "46%"
     },
     {
-      "symbol": "XLKI",
-      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 20,
-      "yield": "19.0%"
+      "symbol": "AMYY",
+      "name": "GraniteShares YieldBOOST AMD ETF",
+      "votes": 0,
+      "yield": "68%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 19,
-      "yield": "12.04%"
+      "symbol": "AMZY",
+      "name": "YieldMax AMZN Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "26%"
     },
     {
-      "symbol": "BTCI",
-      "name": "NEOS Bitcoin High Income ETF",
-      "votes": 17,
-      "yield": "26.7%"
+      "symbol": "BABO",
+      "name": "YieldMax BABA Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "41%"
     },
     {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 16,
-      "yield": "14.0%"
+      "symbol": "BAGY",
+      "name": "Amplify Bitcoin Max Income Covered Call ETF",
+      "votes": 0,
+      "yield": "37.0%"
     },
     {
-      "symbol": "SCHD",
-      "name": "Schwab U.S. Dividend Equity ETF",
-      "votes": 15,
-      "yield": "3.0%"
+      "symbol": "BALI",
+      "name": "iShares US Large Cap Premium Income Active ETF",
+      "votes": 0,
+      "yield": "7.0%"
     }
   ]
 }
