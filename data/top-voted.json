@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T03:11:39.773Z",
+  "updated": "2026-09-19T10:20:10.960Z",
   "total_tracked": 155,
   "top": [
     {
@@ -15,6 +15,12 @@
       "yield": "14.0%"
     },
     {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 2,
+      "yield": "60%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 2,
@@ -27,10 +33,10 @@
       "yield": "10.0%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "symbol": "HOOY",
+      "name": "YieldMax HOOD Option Income Strategy ETF",
       "votes": 1,
-      "yield": "60%"
+      "yield": "78%"
     },
     {
       "symbol": "MSTY",
@@ -55,12 +61,6 @@
       "name": "REX AI Equity Premium Income ETF",
       "votes": 0,
       "yield": "34.8%"
-    },
-    {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "46%"
     }
   ]
 }
