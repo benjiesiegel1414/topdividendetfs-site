@@ -1,7 +1,37 @@
 {
-  "updated": "2026-09-18T20:24:59.208Z",
+  "updated": "2026-09-19T03:11:39.773Z",
   "total_tracked": 155,
   "top": [
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 3,
+      "yield": "12.04%"
+    },
+    {
+      "symbol": "TSPY",
+      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
+      "votes": 3,
+      "yield": "14.0%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 2,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "QDVO",
+      "name": "Amplify CWP Growth & Income ETF",
+      "votes": 2,
+      "yield": "10.0%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 1,
+      "yield": "60%"
+    },
     {
       "symbol": "MSTY",
       "name": "YieldMax MSTR Option Income Strategy ETF",
@@ -31,36 +61,6 @@
       "name": "YieldMax AMD Option Income Strategy ETF",
       "votes": 0,
       "yield": "46%"
-    },
-    {
-      "symbol": "AMYY",
-      "name": "GraniteShares YieldBOOST AMD ETF",
-      "votes": 0,
-      "yield": "68%"
-    },
-    {
-      "symbol": "AMZY",
-      "name": "YieldMax AMZN Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "26%"
-    },
-    {
-      "symbol": "BABO",
-      "name": "YieldMax BABA Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "41%"
-    },
-    {
-      "symbol": "BAGY",
-      "name": "Amplify Bitcoin Max Income Covered Call ETF",
-      "votes": 0,
-      "yield": "37.0%"
-    },
-    {
-      "symbol": "BALI",
-      "name": "iShares US Large Cap Premium Income Active ETF",
-      "votes": 0,
-      "yield": "7.0%"
     }
   ]
 }
