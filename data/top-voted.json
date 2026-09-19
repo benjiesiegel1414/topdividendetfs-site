@@ -1,24 +1,42 @@
 {
-  "updated": "2026-09-19T15:23:05.402Z",
+  "updated": "2026-09-19T20:03:52.217Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "12.04%"
     },
     {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "14.0%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 2,
+      "votes": 3,
       "yield": "60%"
+    },
+    {
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 2,
+      "yield": "34.8%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 2,
+      "yield": "36.0%"
+    },
+    {
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
+      "votes": 2,
+      "yield": "85%"
     },
     {
       "symbol": "OVL",
@@ -33,34 +51,16 @@
       "yield": "10.0%"
     },
     {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "34.8%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 1,
-      "yield": "36.0%"
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 2,
+      "yield": "17.4%"
     },
     {
       "symbol": "CEPI",
       "name": "REX Crypto Equity Premium Income ETF",
       "votes": 1,
       "yield": "42.6%"
-    },
-    {
-      "symbol": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "25.2%"
-    },
-    {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 1,
-      "yield": "32.0%"
     }
   ]
 }
