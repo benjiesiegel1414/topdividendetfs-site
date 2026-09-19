@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T10:20:10.960Z",
+  "updated": "2026-09-19T15:23:05.402Z",
   "total_tracked": 155,
   "top": [
     {
@@ -33,34 +33,34 @@
       "yield": "10.0%"
     },
     {
-      "symbol": "HOOY",
-      "name": "YieldMax HOOD Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "78%"
-    },
-    {
-      "symbol": "MSTY",
-      "name": "YieldMax MSTR Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "85%"
-    },
-    {
-      "symbol": "ACKY",
-      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
-      "votes": 0,
-      "yield": "15.0%"
-    },
-    {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 0,
-      "yield": "26%"
-    },
-    {
       "symbol": "AIPI",
       "name": "REX AI Equity Premium Income ETF",
-      "votes": 0,
+      "votes": 1,
       "yield": "34.8%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 1,
+      "yield": "36.0%"
+    },
+    {
+      "symbol": "CEPI",
+      "name": "REX Crypto Equity Premium Income ETF",
+      "votes": 1,
+      "yield": "42.6%"
+    },
+    {
+      "symbol": "FEPI",
+      "name": "REX FANG & Innovation Equity Premium Income ETF",
+      "votes": 1,
+      "yield": "25.2%"
+    },
+    {
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "votes": 1,
+      "yield": "32.0%"
     }
   ]
 }
