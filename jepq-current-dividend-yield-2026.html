@@ -57,7 +57,7 @@
         {"@type":"Question","name":"How often does JEPQ pay dividends?","acceptedAnswer":{"@type":"Answer","text":"JEPQ pays monthly. The ex-dividend date is normally the first business day of the month, the record date falls the same day, and the pay date follows about two business days later. The exception is the year-end distribution, which has a late-December ex-date and pays in early January."}},
         {"@type":"Question","name":"Why is JEPQ's yield so high compared to QQQ?","acceptedAnswer":{"@type":"Answer","text":"QQQ is a passive index fund that only distributes dividends received from its underlying companies, yielding well under 1%. JEPQ adds income from systematically selling call options on the Nasdaq 100. Those option premiums are the main source of the roughly 11% yield."}},
         {"@type":"Question","name":"Why does JEPQ's dividend change every month?","acceptedAnswer":{"@type":"Answer","text":"Option premiums scale with implied volatility. When markets are choppy, calls sell for more and JEPQ's payout rises; when markets are calm, premiums shrink and the payout falls. Monthly amounts have ranged from $0.33975 to $0.70497 per share."}},
-        {"@type":"Question","name":"How does JEPQ compare to JEPI?","acceptedAnswer":{"@type":"Answer","text":"Both are JPMorgan covered call ETFs paying monthly. JEPI is built on the S&P 500 and is more defensive; JEPQ is built on the Nasdaq 100 and is more technology-weighted. JEPQ typically carries the higher yield and the higher volatility."}},
+        {"@type":"Question","name":"How does JEPQ compare to JEPI?","acceptedAnswer":{"@type":"Answer","text":"Both are JPMorgan covered call ETFs paying monthly with the same 0.35% expense ratio and the same management team. JEPI is built on the S&P 500 and is more defensive; JEPQ is built on the Nasdaq 100 and is more technology-weighted. JEPQ typically carries the higher yield and the higher volatility. JEPI has paid $4.58 per share over the trailing twelve months, a yield of roughly 8.1%, versus JEPQ's roughly 11%."}},
         {"@type":"Question","name":"What is return of capital in JEPQ distributions?","acceptedAnswer":{"@type":"Answer","text":"Some JEPQ distributions may be classified as return of capital, which returns part of your own investment rather than fund earnings. Return of capital reduces your cost basis and is not taxed in the year received; you pay tax on the difference when you sell. Check the fund's annual 19a-1 notices and 1099-DIV for the actual breakdown."}},
         {"@type":"Question","name":"Is JEPQ good for a taxable account?","acceptedAnswer":{"@type":"Answer","text":"JEPQ generates substantial ordinary income from option premiums, which is generally taxed at ordinary rates rather than qualified dividend rates. That makes it relatively tax-inefficient in a taxable brokerage account and better suited to tax-deferred accounts such as an IRA or 401(k). Individual circumstances vary and this is not tax advice."}}
       ]
@@ -116,8 +116,12 @@
         table.cmp th:first-child{text-align:left}
         table.cmp td{padding:12px;text-align:center;border:1px solid #ddd}
         table.cmp td:first-child{text-align:left;font-weight:700}
+        table.cmp td a{color:var(--primary-darker);text-decoration:underline}
+        table.cmp td a:hover{color:var(--primary)}
         table.cmp tbody tr:nth-child(odd){background:#f9f9f9}
         table.cmp tbody tr.hl{background:#eaf6fd}
+        .inline-link{color:var(--primary-darker);font-weight:900;text-decoration:underline}
+        .inline-link:hover{color:var(--primary)}
         .faq-section{max-width:900px;margin:8px auto 24px;padding:0 4px}
         .faq-section h2{color:var(--primary);text-align:center;margin-bottom:16px;font-size:clamp(1.2rem,3vw,1.4rem)}
         details{margin:10px 0;padding:12px 14px;background:#f3fafd;border:1px solid #c5e0f0;border-radius:10px}
@@ -229,6 +233,7 @@
             <li><strong>2022 (from May):</strong> $3.85 total, $0.4815 average</li>
         </ul>
         <p>On a per-month basis 2026 is tracking as JEPQ's strongest year since inception. <a href="jepq-etf-dividend-history" style="color:var(--primary-darker);font-weight:900;">See every distribution since 2022 &rarr;</a></p>
+        <p>Its sister fund has moved in the opposite direction this year: JEPI is averaging $0.3848 per month across its first eight 2026 distributions, fractionally <em>below</em> its 2025 average, which is a useful reminder that S&amp;P 500 and Nasdaq 100 volatility do not always move together. <a href="jepi-etf-dividend-dates-2026" class="inline-link">See JEPI's 2026 dividend dates and payout history &rarr;</a></p>
     </div>
 
     <div class="content-section">
@@ -242,6 +247,7 @@
         <p>For example, the August 2026 distribution had an ex-date of August 3, a record date of August 3, and a pay date of August 5. The next ex-dividend date is <strong>September 1, 2026</strong>, paying <strong>September 3, 2026</strong>.</p>
         <h3>The January exception</h3>
         <p>JEPQ runs <strong>two December ex-dividend dates</strong> every year &mdash; one at the start of the month and one in the final days. The late-December distribution pays in early January, which covers the January payment. This means <strong>there is no January ex-dividend date</strong>. It has worked this way every year since 2022. If you buy JEPQ in early January expecting to catch an ex-date, you have already missed it by about a week.</p>
+        <p><a href="jepi-etf-dividend-dates-2026" class="inline-link">JEPI follows the identical late-December pattern</a> &mdash; in 75 distributions it has never once had a January ex-date either.</p>
         <p><a href="jepq-etf-dividend-dates-2026" style="color:var(--primary-darker);font-weight:900;">See the complete 2026 dividend date schedule &rarr;</a></p>
     </div>
 
@@ -253,7 +259,7 @@
             <thead><tr><th>ETF</th><th>Strategy</th><th>Index Focus</th><th>Approx. Yield</th><th>Frequency</th><th>Income Source</th></tr></thead>
             <tbody>
                 <tr class="hl"><td>JEPQ</td><td>Covered Call</td><td>Nasdaq 100</td><td>~11%</td><td>Monthly</td><td>Mostly option premiums</td></tr>
-                <tr><td>JEPI</td><td>Covered Call</td><td>S&amp;P 500</td><td>7&ndash;9%</td><td>Monthly</td><td>Mostly option premiums</td></tr>
+                <tr><td><a href="jepi-etf-dividend-dates-2026">JEPI</a></td><td>Covered Call</td><td>S&amp;P 500</td><td>~8.1%</td><td>Monthly</td><td>Mostly option premiums</td></tr>
                 <tr><td>SCHD</td><td>Dividend Growth</td><td>DJ US Dividend 100</td><td>~3.1%</td><td>Quarterly</td><td>Qualified dividends</td></tr>
                 <tr><td>QQQ</td><td>Passive Index</td><td>Nasdaq 100</td><td>&lt;1%</td><td>Quarterly</td><td>Underlying dividends</td></tr>
             </tbody>
@@ -261,6 +267,7 @@
         </div>
         <p style="margin-top:16px;"><strong>The trade-off is real.</strong> JEPQ yields roughly 11x what QQQ does on the same underlying index. That gap is not free money &mdash; it comes from selling away upside participation. In a strong Nasdaq rally, QQQ captures the full move while JEPQ's gains are capped at the strike prices of the calls it sold. JEPQ is designed for income, not for maximum total return.</p>
         <p><strong>Tax treatment differs sharply too.</strong> SCHD's distributions are largely qualified dividends taxed at preferential rates. JEPQ's option premium income is generally ordinary income taxed at your marginal rate. Two funds quoting the same yield can leave very different amounts in your pocket.</p>
+        <p><strong>If you are weighing JEPQ against JEPI specifically,</strong> the two are run by the same JPMorgan team at the same 0.35% expense ratio using the same mechanism &mdash; the difference is the index underneath. JEPI's S&amp;P 500 base makes it the more defensive of the pair, at roughly 8.1% versus JEPQ's 11%. <a href="jepi-etf-dividend-dates-2026" class="inline-link">Full JEPI dividend dates, yearly totals and tax notes &rarr;</a></p>
     </div>
 
     <div class="content-section">
@@ -270,7 +277,7 @@
             <li><strong>Distribution volatility:</strong> monthly payouts have ranged from $0.34 to $0.70. Do not build a fixed budget around the highest month.</li>
             <li><strong>Return of capital:</strong> some distributions may be classified as return of capital, which reduces your cost basis rather than representing fund earnings. Check the fund's 19a-1 notices and your 1099-DIV.</li>
             <li><strong>Tax inefficiency:</strong> option premium income is generally taxed as ordinary income, making JEPQ better suited to tax-deferred accounts.</li>
-            <li><strong>Technology concentration:</strong> JEPQ is highly correlated with the Nasdaq 100. If your portfolio is already tech-heavy, it adds concentration rather than diversification.</li>
+            <li><strong>Technology concentration:</strong> JEPQ is highly correlated with the Nasdaq 100. If your portfolio is already tech-heavy, it adds concentration rather than diversification. Investors looking for the same strategy on a broader, less tech-weighted index often compare it with <a href="jepi-etf-dividend-dates-2026" class="inline-link">JEPI</a>.</li>
             <li><strong>NAV erosion risk:</strong> covered call funds can see share price decay over long bull markets as upside is repeatedly sold away.</li>
         </ul>
         <p>JEPQ is best suited to income-first investors with a neutral-to-moderately-bullish view on technology &mdash; not to growth-focused accumulators with long time horizons.</p>
@@ -283,7 +290,7 @@
         <details><summary>Why do different websites show different JEPQ yields?</summary><p>They use different formulas. Trailing twelve-month yield sums the last 12 actual distributions. Forward yield annualizes the most recent month, which inflates the figure after a strong month like August 2026. The 30-day SEC yield uses a standardized regulatory formula that often diverges for option-income funds. All three can be correct simultaneously.</p></details>
         <details><summary>Why is JEPQ's yield so high compared to QQQ?</summary><p>QQQ is passive and only distributes dividends received from its underlying companies, yielding well under 1%. JEPQ adds income from systematically selling call options on the same index. Those option premiums are the main source of the roughly 11% yield &mdash; and the reason JEPQ's upside is capped.</p></details>
         <details><summary>Why does JEPQ's dividend change every month?</summary><p>Option premiums scale with implied volatility. Choppy markets mean calls sell for more and the payout rises; calm markets mean smaller premiums and a lower payout. Monthly amounts have ranged from $0.33975 to $0.70497 per share.</p></details>
-        <details><summary>How does JEPQ compare to JEPI?</summary><p>Both are JPMorgan covered call ETFs paying monthly. JEPI is built on the S&amp;P 500 and is more defensive; JEPQ is built on the Nasdaq 100 and is more technology-weighted. JEPQ typically carries the higher yield and the higher volatility.</p></details>
+        <details><summary>How does JEPQ compare to JEPI?</summary><p>Both are JPMorgan covered call ETFs paying monthly, both charge 0.35%, and both are run by the same team. JEPI is built on the S&amp;P 500 and is more defensive; JEPQ is built on the Nasdaq 100 and is more technology-weighted. JEPQ typically carries the higher yield and the higher volatility &mdash; roughly 11% versus JEPI's 8.1% trailing twelve-month figure, from $4.58 per share paid over JEPI's last 12 distributions. <a href="jepi-etf-dividend-dates-2026" class="inline-link">See JEPI's full 2026 dividend dates and payout history &rarr;</a></p></details>
         <details><summary>What is return of capital in JEPQ distributions?</summary><p>Some distributions may be classified as return of capital, returning part of your own investment rather than fund earnings. Return of capital reduces your cost basis and is not taxed in the year received &mdash; you pay tax on the difference when you sell. Check the fund's 19a-1 notices and your 1099-DIV for the actual breakdown.</p></details>
         <details><summary>Is JEPQ good for a taxable account?</summary><p>JEPQ generates substantial ordinary income from option premiums, generally taxed at ordinary rates rather than qualified dividend rates. That makes it relatively tax-inefficient in a taxable brokerage account and better suited to tax-deferred accounts such as an IRA or 401(k). Circumstances vary and this is not tax advice.</p></details>
         <details><summary>Can JEPQ's yield be sustained?</summary><p>The yield depends on implied volatility in the Nasdaq 100, which is not controllable or predictable. JEPQ has averaged $0.4794 per month across 51 payments with a range of $0.34 to $0.70. Sustained low-volatility conditions would compress the payout; elevated volatility would expand it. No covered call fund can guarantee a fixed yield.</p></details>
@@ -303,6 +310,7 @@
             <a href="https://topdividendetfs.com" class="cta-btn cta-primary">&#128202; See Top 100 ETFs</a>
             <a href="jepq-etf-dividend-dates-2026" class="cta-btn">&#128197; JEPQ Dividend Dates</a>
             <a href="jepq-etf-dividend-history" class="cta-btn">&#128200; JEPQ History</a>
+            <a href="jepi-etf-dividend-dates-2026" class="cta-btn">&#128181; JEPI Dividend Dates</a>
             <a href="https://topdividendtools.com" target="_blank" class="cta-btn">&#128736;&#65039; More Tools</a>
         </div>
     </div>
