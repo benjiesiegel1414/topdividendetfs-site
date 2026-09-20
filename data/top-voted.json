@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-20T15:28:23.561Z",
+  "updated": "2026-09-20T20:20:37.363Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "60%"
     },
     {
@@ -21,16 +21,22 @@
       "yield": "14.0%"
     },
     {
+      "symbol": "XLKI",
+      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "votes": 4,
+      "yield": "19.0%"
+    },
+    {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
       "votes": 3,
       "yield": "36.0%"
     },
     {
-      "symbol": "XLKI",
-      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
       "votes": 3,
-      "yield": "19.0%"
+      "yield": "1.3%"
     },
     {
       "symbol": "AIPI",
@@ -55,12 +61,6 @@
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 2,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "QDVO",
-      "name": "Amplify CWP Growth & Income ETF",
-      "votes": 2,
-      "yield": "10.0%"
     }
   ]
 }
