@@ -1,7 +1,13 @@
 {
-  "updated": "2026-09-20T10:39:03.795Z",
+  "updated": "2026-09-20T15:28:23.561Z",
   "total_tracked": 155,
   "top": [
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 5,
+      "yield": "60%"
+    },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
@@ -15,10 +21,16 @@
       "yield": "14.0%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
       "votes": 3,
-      "yield": "60%"
+      "yield": "36.0%"
+    },
+    {
+      "symbol": "XLKI",
+      "name": "State Street Technology Select Sector SPDR Premium Income ETF",
+      "votes": 3,
+      "yield": "19.0%"
     },
     {
       "symbol": "AIPI",
@@ -27,10 +39,10 @@
       "yield": "34.8%"
     },
     {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
       "votes": 2,
-      "yield": "36.0%"
+      "yield": "32.0%"
     },
     {
       "symbol": "MSTY",
@@ -49,18 +61,6 @@
       "name": "Amplify CWP Growth & Income ETF",
       "votes": 2,
       "yield": "10.0%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 2,
-      "yield": "17.4%"
-    },
-    {
-      "symbol": "AMZY",
-      "name": "YieldMax AMZN Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "26%"
     }
   ]
 }
