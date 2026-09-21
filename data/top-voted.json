@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-20T20:20:37.363Z",
+  "updated": "2026-09-21T03:23:36.452Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 6,
+      "votes": 9,
       "yield": "60%"
     },
     {
@@ -33,6 +33,18 @@
       "yield": "36.0%"
     },
     {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 3,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 3,
+      "yield": "14.0%"
+    },
+    {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
       "votes": 3,
@@ -45,22 +57,10 @@
       "yield": "34.8%"
     },
     {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
       "votes": 2,
-      "yield": "32.0%"
-    },
-    {
-      "symbol": "MSTY",
-      "name": "YieldMax MSTR Option Income Strategy ETF",
-      "votes": 2,
-      "yield": "85%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 2,
-      "yield": "10.5%"
+      "yield": "37.0%"
     }
   ]
 }
