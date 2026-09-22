@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-22T10:59:07.247Z",
+  "updated": "2026-09-22T16:18:07.927Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 22,
+      "votes": 24,
       "yield": "60%"
     },
     {
@@ -23,8 +23,14 @@
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 6,
+      "votes": 7,
       "yield": "10.5%"
+    },
+    {
+      "symbol": "TSPY",
+      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
+      "votes": 7,
+      "yield": "14.0%"
     },
     {
       "symbol": "SPYI",
@@ -33,10 +39,16 @@
       "yield": "12.04%"
     },
     {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 6,
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 5,
       "yield": "14.0%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 5,
+      "yield": "17.4%"
     },
     {
       "symbol": "BLOX",
@@ -49,18 +61,6 @@
       "name": "NestYield Dynamic Income ETF",
       "votes": 4,
       "yield": "37.0%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 4,
-      "yield": "14.0%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 3,
-      "yield": "17.4%"
     }
   ]
 }
