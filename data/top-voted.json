@@ -1,18 +1,24 @@
 {
-  "updated": "2026-09-21T21:42:38.644Z",
+  "updated": "2026-09-22T03:22:35.638Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 14,
+      "votes": 18,
       "yield": "60%"
     },
     {
       "symbol": "XLKI",
       "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 8,
+      "votes": 12,
       "yield": "19.0%"
+    },
+    {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 10,
+      "yield": "1.3%"
     },
     {
       "symbol": "OVL",
@@ -27,34 +33,28 @@
       "yield": "12.04%"
     },
     {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 6,
-      "yield": "1.3%"
-    },
-    {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "14.0%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 4,
+      "yield": "36.0%"
+    },
+    {
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 4,
+      "yield": "37.0%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "votes": 4,
       "yield": "14.0%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 3,
-      "yield": "36.0%"
-    },
-    {
-      "symbol": "EGGY",
-      "name": "NestYield Dynamic Income ETF",
-      "votes": 3,
-      "yield": "37.0%"
     },
     {
       "symbol": "TDAQ",
