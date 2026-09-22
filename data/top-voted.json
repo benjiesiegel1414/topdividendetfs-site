@@ -1,53 +1,53 @@
 {
-  "updated": "2026-09-22T16:18:07.927Z",
+  "updated": "2026-09-22T20:54:00.293Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 24,
-      "yield": "60%"
+      "votes": 27,
+      "yield": "41%"
     },
     {
       "symbol": "XLKI",
       "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 15,
+      "votes": 18,
       "yield": "19.0%"
     },
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 13,
+      "votes": 15,
       "yield": "1.3%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "10.5%"
     },
     {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "14.0%"
     },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 6,
+      "votes": 7,
       "yield": "12.04%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "14.0%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "17.4%"
     },
     {
