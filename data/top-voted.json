@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-23T16:07:51.955Z",
+  "updated": "2026-09-23T21:05:40.406Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 40,
+      "votes": 41,
       "yield": "41%"
     },
     {
@@ -35,7 +35,7 @@
     {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 21,
+      "votes": 22,
       "yield": "14.0%"
     },
     {
@@ -45,16 +45,16 @@
       "yield": "10.5%"
     },
     {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 8,
+      "yield": "17.4%"
+    },
+    {
       "symbol": "GOOW",
       "name": "Roundhill GOOGL WeeklyPay ETF",
       "votes": 7,
       "yield": "32.0%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 7,
-      "yield": "17.4%"
     },
     {
       "symbol": "QQQI",
