@@ -1,23 +1,23 @@
 {
-  "updated": "2026-09-24T21:09:42.075Z",
+  "updated": "2026-09-25T03:30:38.005Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 56,
+      "votes": 60,
       "yield": "41%"
     },
     {
       "symbol": "XLKI",
       "name": "State Street Technology Select Sector SPDR Premium Income ETF",
-      "votes": 39,
+      "votes": 41,
       "yield": "19.0%"
     },
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 33,
+      "votes": 35,
       "yield": "1.3%"
     },
     {
@@ -41,7 +41,7 @@
     {
       "symbol": "GOOW",
       "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 16,
+      "votes": 18,
       "yield": "32.0%"
     },
     {
@@ -53,13 +53,13 @@
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "10.5%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 9,
+      "votes": 11,
       "yield": "17.4%"
     }
   ]
