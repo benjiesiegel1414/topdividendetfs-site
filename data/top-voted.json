@@ -1,7 +1,25 @@
 {
-  "updated": "2026-09-26T10:50:16.367Z",
+  "updated": "2026-09-26T15:48:09.874Z",
   "total_tracked": 155,
   "top": [
+    {
+      "symbol": "QDVO",
+      "name": "Amplify CWP Growth & Income ETF",
+      "votes": 10,
+      "yield": "10.0%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 10,
+      "yield": "12.04%"
+    },
+    {
+      "symbol": "TSPY",
+      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
+      "votes": 10,
+      "yield": "14.0%"
+    },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
@@ -9,16 +27,16 @@
       "yield": "41%"
     },
     {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 3,
+      "yield": "8.5%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 2,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 2,
-      "yield": "8.5%"
     },
     {
       "symbol": "DIVO",
@@ -43,24 +61,6 @@
       "name": "NEOS Russell 2000 High Income ETF",
       "votes": 1,
       "yield": "14.4%"
-    },
-    {
-      "symbol": "JEPQ",
-      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "12.0%"
-    },
-    {
-      "symbol": "QQQH",
-      "name": "NEOS Nasdaq 100 Hedged Equity Income ETF",
-      "votes": 1,
-      "yield": "9.2%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 1,
-      "yield": "14.0%"
     }
   ]
 }
