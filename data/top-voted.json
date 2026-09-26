@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T21:06:22.206Z",
+  "updated": "2026-09-26T03:35:44.218Z",
   "total_tracked": 155,
   "top": [
     {
@@ -7,6 +7,30 @@
       "name": "Shelton Equity Premium Income ETF",
       "votes": 2,
       "yield": "8.5%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 1,
+      "yield": "41%"
+    },
+    {
+      "symbol": "IWMI",
+      "name": "NEOS Russell 2000 High Income ETF",
+      "votes": 1,
+      "yield": "14.4%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 1,
+      "yield": "10.5%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 1,
+      "yield": "14.0%"
     },
     {
       "symbol": "ACKY",
@@ -37,30 +61,6 @@
       "name": "GraniteShares YieldBOOST AMD ETF",
       "votes": 0,
       "yield": "68%"
-    },
-    {
-      "symbol": "AMZY",
-      "name": "YieldMax AMZN Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "28%"
-    },
-    {
-      "symbol": "BABO",
-      "name": "YieldMax BABA Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "33%"
-    },
-    {
-      "symbol": "BAGY",
-      "name": "Amplify Bitcoin Max Income Covered Call ETF",
-      "votes": 0,
-      "yield": "37.0%"
-    },
-    {
-      "symbol": "BALI",
-      "name": "iShares US Large Cap Premium Income Active ETF",
-      "votes": 0,
-      "yield": "7.0%"
     }
   ]
 }
