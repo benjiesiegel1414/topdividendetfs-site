@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T20:39:44.782Z",
+  "updated": "2026-09-27T03:44:53.190Z",
   "total_tracked": 155,
   "top": [
     {
@@ -23,8 +23,20 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 6,
+      "votes": 9,
       "yield": "41%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 9,
+      "yield": "8.5%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 4,
+      "yield": "14.0%"
     },
     {
       "symbol": "OVL",
@@ -33,34 +45,22 @@
       "yield": "10.5%"
     },
     {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 3,
-      "yield": "14.0%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 3,
-      "yield": "8.5%"
-    },
-    {
       "symbol": "FEPI",
       "name": "REX FANG & Innovation Equity Premium Income ETF",
       "votes": 2,
       "yield": "25.2%"
     },
     {
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "votes": 2,
+      "yield": "42.0%"
+    },
+    {
       "symbol": "JEPQ",
       "name": "JPMorgan NASDAQ Equity Premium Income ETF",
       "votes": 2,
       "yield": "12.0%"
-    },
-    {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 1,
-      "yield": "34.8%"
     }
   ]
 }
