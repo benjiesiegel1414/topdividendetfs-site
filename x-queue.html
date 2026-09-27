@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<title>Scheduler</title>
+<link rel="icon" href="/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root { --green:#1A3C34; --green-2:#2E5D54; --mint:#7dffb0; --bg:#f3f5f4; --surface:#fff; --ink:#13201c; --ink-2:#4a5a55; --ink-3:#86938f; --line:#dde5e1; --okbg:#e6f4ec; --ok:#1d7a4a; --warnbg:#fff4db; --warn:#8a5a00; --errbg:#fdecea; --err:#b42318; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 Lato, Arial, sans-serif; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--green-2); outline-offset: 2px; }
+header.top { background: var(--green); color: #fff; }
+header.top .in { max-width: 1100px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.brand { font-weight: 900; font-size: 20px; }
+.brand b { color: var(--mint); }
+.status { color: #b9cdc6; font-size: 13px; }
+.spacer { flex: 1; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 22px 20px 80px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 8px 14px; font-weight: 700; text-decoration: none; display: inline-block; }
+.btn:hover { border-color: #c2cec9; }
+.btn.primary { background: var(--green-2); border-color: var(--green-2); color: #fff; }
+.btn.primary:hover { background: var(--green); }
+.btn.dark { background: var(--green); border-color: var(--green); color: #fff; }
+.btn.small { padding: 5px 10px; font-size: 13px; border-radius: 8px; }
+.btn.danger { color: var(--err); }
+.btn:disabled { opacity: .5; cursor: default; }
+header.top .btn { background: transparent; color: #fff; border-color: rgba(255,255,255,.35); }
+nav.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 18px; overflow-x: auto; }
+nav.tabs button { background: none; border: 0; padding: 10px 14px; font-weight: 700; color: var(--ink-3); border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; }
+nav.tabs button[aria-selected="true"] { color: var(--green); border-bottom-color: var(--green-2); }
+.count { display: inline-block; min-width: 20px; padding: 0 6px; margin-left: 6px; border-radius: 10px; background: var(--line); font-size: 12px; text-align: center; }
+.toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.toolbar label { font-size: 13px; color: var(--ink-2); display: flex; align-items: center; gap: 6px; }
+.toolbar input, .toolbar select { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; background: var(--surface); }
+.cost { font-size: 13px; color: var(--ink-2); }
+.notice { padding: 12px 14px; border-radius: 10px; margin-bottom: 16px; font-size: 14px; background: #e6efeb; color: var(--green); }
+.notice.warn { background: var(--warnbg); color: var(--warn); }
+.notice.err { background: var(--errbg); color: var(--err); }
+.post { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+.preview { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; white-space: pre-wrap; font: 15px/1.4 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: #0f1419; }
+.preview .who { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; white-space: normal; }
+.preview .av { width: 34px; height: 34px; border-radius: 50%; background: var(--green); color: var(--mint); display: grid; place-items: center; font-weight: 900; font-size: 13px; }
+.preview .nm { font-weight: 700; font-size: 14px; }
+.preview .hd { color: #536471; font-size: 13px; }
+.side { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
+.meta select, .meta input { border: 1px solid var(--line); border-radius: 8px; padding: 4px 6px; background: var(--surface); }
+.tag { padding: 2px 8px; border-radius: 6px; background: #e6efeb; color: var(--green); font-weight: 700; font-size: 12px; }
+.tag.sent { background: var(--okbg); color: var(--ok); }
+textarea { width: 100%; min-height: 230px; resize: vertical; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; line-height: 1.45; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.chars { font-size: 12px; color: var(--ink-3); margin-left: auto; }
+.chars.over { color: var(--err); font-weight: 700; }
+.status-line { font-size: 13px; color: var(--ink-2); }
+.status-line a { color: var(--green-2); font-weight: 700; }
+.err-text { color: var(--err); font-size: 13px; }
+.empty { text-align: center; padding: 60px 20px; color: var(--ink-2); background: var(--surface); border: 1px dashed var(--line); border-radius: 14px; }
+.lock { max-width: 460px; margin: 80px auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: grid; gap: 12px; }
+.lock h1 { margin: 0; font-size: 20px; color: var(--green); }
+.lock label { display: grid; gap: 4px; font-size: 13px; color: var(--ink-2); }
+.lock input { border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+dialog { border: 0; border-radius: 16px; padding: 0; width: min(580px, 94vw); box-shadow: 0 20px 60px rgba(26,60,52,.3); }
+dialog::backdrop { background: rgba(26,60,52,.5); }
+dialog form { padding: 22px; display: grid; gap: 12px; }
+dialog h2 { margin: 0; font-size: 18px; }
+dialog h3 { margin: 6px 0 0; font-size: 14px; color: var(--green); }
+dialog label { display: grid; gap: 4px; font-size: 13px; color: var(--ink-2); }
+dialog input { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+.hint { font-size: 12px; color: var(--ink-3); }
+.actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); background: var(--green); color: #fff; padding: 10px 16px; border-radius: 10px; font-size: 14px; z-index: 50; max-width: 92vw; }
+@media (max-width: 820px) { .post { grid-template-columns: 1fr; } .two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- LOCK SCREEN: nothing else works until a GitHub token that can open the private poster repo is entered -->
+<section id="lock" class="lock" hidden>
+  <h1>Locked</h1>
+  <div class="hint">Enter the GitHub token for the private X poster repo. It is checked against GitHub and saved only in this browser.</div>
+  <label>GitHub token <input id="l_token" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+  <div class="two">
+    <label>GitHub username <input id="l_owner" value="benjiesiegel1414"></label>
+    <label>Repo name <input id="l_repo" value="topdividendetfs-x-poster"></label>
+  </div>
+  <div class="err-text" id="lockErr"></div>
+  <button class="btn primary" id="unlockBtn">Unlock</button>
+</section>
+
+<div id="app" hidden>
+<header class="top"><div class="in">
+  <div>
+    <div class="brand">TopDividend<b>ETFs</b> X scheduler</div>
+    <div class="status" id="dataStatus">Loading today's data…</div>
+  </div>
+  <span class="spacer"></span>
+  <button class="btn" id="settingsBtn">Settings</button>
+  <button class="btn" id="lockBtn">Lock</button>
+</div></header>
+
+<div class="wrap">
+  <div id="setupNotice"></div>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="drafts">Drafts<span class="count" id="nDrafts">0</span></button>
+    <button role="tab" aria-selected="false" data-tab="scheduled">Scheduled<span class="count" id="nSched">·</span></button>
+    <button role="tab" aria-selected="false" data-tab="posted">Posted</button>
+    <button role="tab" aria-selected="false" data-tab="failed">Failed<span class="count" id="nFailed">·</span></button>
+  </nav>
+
+  <section id="tab-drafts">
+    <div class="toolbar">
+      <label>Start <input id="startDate" type="date"></label>
+      <label>Days
+        <select id="days"><option>1</option><option>2</option><option>3</option><option>5</option><option selected>7</option><option>10</option><option>14</option><option>21</option><option>30</option></select>
+      </label>
+      <label>Posts per day <input id="howMany" type="number" min="1" max="10" value="5" style="width:64px"></label>
+      <button class="btn dark" id="genBtn" disabled>Generate posts</button>
+      <span class="spacer"></span>
+      <span class="cost" id="costNote"></span>
+      <button class="btn primary" id="schedBtn" disabled>Schedule all</button>
+    </div>
+    <div id="drafts"></div>
+  </section>
+
+  <section id="tab-scheduled" hidden>
+    <div class="toolbar"><button class="btn" id="refreshSched">Refresh</button><span class="spacer"></span><span class="cost">Posts go out within about 30 minutes of their time</span></div>
+    <div id="scheduled"></div>
+  </section>
+  <section id="tab-posted" hidden>
+    <div class="toolbar"><button class="btn" id="refreshPosted">Refresh</button></div>
+    <div id="posted"></div>
+  </section>
+  <section id="tab-failed" hidden>
+    <div class="toolbar"><button class="btn" id="refreshFailed">Refresh</button></div>
+    <div id="failed"></div>
+  </section>
+</div>
+</div>
+
+<dialog id="settings">
+  <form method="dialog">
+    <h2>Settings</h2>
+    <span class="hint">Saved only in this browser on this computer.</span>
+    <div class="two">
+      <label>First post time <input id="s_start" type="time"></label>
+      <label>Last post time <input id="s_end" type="time"></label>
+    </div>
+    <h3>Funds</h3>
+    <label>Popular funds (used most of the time)
+      <input id="s_fav">
+      <span class="hint">Lists lean on these so posts feature funds people know. The rest of the database fills in.</span>
+    </label>
+    <label>Never use these tickers <input id="s_excl" placeholder="XYZ"></label>
+    <label>Highest yield to include (%)<input type="number" id="s_max" min="5" max="500"><span class="hint">Skips funds above this so lists stay educational.</span></label>
+    <label>Smallest fund size to include ($ millions)<input type="number" id="s_minaum" min="0" max="100000"><span class="hint">Keeps tiny funds out of the lists.</span></label>
+    <div class="actions"><button class="btn" value="cancel" formnovalidate>Cancel</button><button class="btn primary" value="save">Save</button></div>
+  </form>
+</dialog>
+
+<script>
+/* =====================================================================
+   CONFIG
+   ===================================================================== */
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxCiod-Cwry7E6k9Un9dgrM_ANymC36_IO_wLyNj-YDo2KI7mp_1ZzyNBnBGZOxT48QPM8TCwtsmA4/pub?gid=0&single=true&output=csv";
+const HANDLE = 'TopDividendETFs';
+const PLAIN_COST = 0.015;
+const CFG_KEY = 'tdx.cfg.v1', MANUAL_KEY = 'tdx.manual.v1';
+const POPULAR = 'SCHD, VYM, VIG, DGRO, HDV, DVY, SDY, NOBL, FDVV, DGRW, SPHD, JEPI, JEPQ, SPYI, QQQI, GPIX, GPIQ, DIVO, IDVO, QDVO, BALI, ISPY, FTQI, FTHI, QYLD, XYLD, RYLD, KNG, RDVI, SVOL, OVL, TSPY, TDAQ, XDTE, QDTE, RDTE, FEPI, AIPI, CHPY, IWMI, XQQI, XSPI, MLPI, CSHI, SGOV, VYMI, IDV';
+const safeJSON = s => { try { return JSON.parse(s); } catch (e) { return null; } };
+const readLS = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+const DEFAULT_CFG = { token: '', owner: 'benjiesiegel1414', repo: 'topdividendetfs-x-poster', branch: 'main', start: '08:00', end: '21:00', fav: POPULAR, excl: 'PTY, PDI', max: 60, minaum: 20 };
+let cfg = { ...DEFAULT_CFG, ...(safeJSON(readLS(CFG_KEY)) || {}) };
+const saveCfg = () => { try { localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); } catch (e) {} };
+const $ = id => document.getElementById(id);
+const state = { funds: [], drafts: [], history: new Set() };
+
+/* =====================================================================
+   DATA (TopDividendETFsPRO sheet)
+   0 Symbol | 1 Name | 2 Provider | 3 Yield | 4 Tax grade | 5 Expense | 6 AUM | 7 Total Return | 8 Price Decay | 9 Inception | 10 Frequency | 11 Rating
+   Grades and ratings are never used in posts.
+   ===================================================================== */
+function parseCSV(text) {
+  const out = []; let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
+    else if (c === '"') q = true;
+    else if (c === ',') { row.push(cell.trim()); cell = ''; }
+    else if (c === '\n' || c === '\r') { if (c === '\r' && text[i + 1] === '\n') i++; row.push(cell.trim()); out.push(row); row = []; cell = ''; }
+    else cell += c;
+  }
+  if (cell || row.length) { row.push(cell.trim()); out.push(row); }
+  return out;
+}
+const num = s => { const v = parseFloat(String(s ?? '').replace(/[$,%\s+]/g, '')); return isNaN(v) ? null : v; };
+function aumM(s) { const t = String(s || '').toUpperCase().replace(/[$,\s]/g, ''); const v = parseFloat(t); if (isNaN(v)) return null; return /B$/.test(t) ? v * 1000 : /K$/.test(t) ? v / 1000 : v; }
+function cleanName(n) {
+  return String(n || '').replace(/[®™]/g, '').replace(/\s*\([A-Z]{2,5}\)\s*$/, '').replace(/\bDefinance\b/g, 'Defiance')
+    .replace(/\bET$/, 'ETF').replace(/^[A-Z]{2,5}\s{2,}/, '').replace(/\s+/g, ' ').trim();
+}
+const buildFund = c => ({
+  sym: (c[0] || '').toUpperCase().replace(/[^A-Z.]/g, ''), name: cleanName(c[1]), issuer: (c[2] || '').trim(),
+  yield: num(c[3]), er: num(c[5]), aum: aumM(c[6]), tr: /ERROR/i.test(c[7] || '') ? null : num(c[7]),
+  decay: String(c[8] || '').trim().toUpperCase(), freq: String(c[10] || '').trim().toLowerCase(),
+});
+
+/* =====================================================================
+   FORMATTING
+   ===================================================================== */
+const usd0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+const usd2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const fy = v => (+v).toFixed(1) + '%';
+const ftr = v => (v > 0 ? '+' : '') + Math.round(v) + '%';
+const fer = v => (+v).toFixed(2) + '%';
+const faum = m => m >= 1000 ? '$' + (m >= 10000 ? Math.round(m / 1000) : (m / 1000).toFixed(1).replace(/\.0$/, '')) + 'B' : '$' + Math.round(m) + 'M';
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const shuffle = a => a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map(x => x[1]);
+const tickers = s => String(s || '').toUpperCase().split(/[\s,$]+/).filter(Boolean);
+// X counts emoji and most symbols as 2 characters
+const xlen = t => [...t].reduce((n, ch) => n + (ch.codePointAt(0) > 0x10FF ? 2 : 1), 0);
+const LIMIT = 280;
+
+/* =====================================================================
+   FUND POOLS
+   ===================================================================== */
+function pool() {
+  const excl = new Set(tickers(cfg.excl));
+  return state.funds.filter(f => f.yield !== null && f.yield > 0 && f.yield <= (+cfg.max || 60) && !excl.has(f.sym) && (f.aum === null || f.aum >= (+cfg.minaum || 0)));
+}
+const favSet = () => new Set(tickers(cfg.fav));
+// Mostly popular funds, topped up with others, shuffled
+function favFirst(list, n) {
+  const fav = favSet(), a = shuffle(list.filter(f => fav.has(f.sym))), b = shuffle(list.filter(f => !fav.has(f.sym)));
+  const nf = Math.min(a.length, Math.ceil(n * 0.75));
+  return [...a.slice(0, nf), ...b, ...a.slice(nf)].slice(0, n);
+}
+const isFreq = (f, k) => f.freq.startsWith(k);
+// Bond and T-bill funds are left out of lists that say "dividend ETFs"
+const isEquity = f => !/Treasury|T-Bill|TIPS|Bond|Aggregate|Municipal/i.test(f.name) && !/^(SGOV|WEEK|CSHI|SCHP|SPHY|JPIE|BNDI|OVB|OVM|OVT)$/.test(f.sym);
+
+/* =====================================================================
+   POST BUILDER: add list rows until the post would pass 280 characters
+   ===================================================================== */
+function build(head, rows, tail, { min = 4, max = 12 } = {}) {
+  const out = [];
+  for (const r of rows) {
+    if (out.length >= max) break;
+    const t = [head, [...out, r].join('\n'), tail].filter(Boolean).join('\n\n');
+    if (xlen(t) > LIMIT) break;
+    out.push(r);
+  }
+  if (out.length < min) return null;
+  return { text: [head, out.join('\n'), tail].filter(Boolean).join('\n\n'), n: out.length };
+}
+const label = (f, names) => names ? f.name : f.sym;
+
+/* =====================================================================
+   POST TYPES
+   Each returns { text, variant, syms } or null. No $cashtags anywhere.
+   ===================================================================== */
+const KIND_LABEL = {
+  ladder: 'Yield ladder', monthly: 'Monthly payers', biggest: 'Biggest funds', versus: 'Head to head',
+  income: 'What $X pays', leaders: 'Total return leaders', cheap: 'Lowest fees', issuer: 'Issuer lineup',
+  nodecay: 'No price decay', freq: 'Payout frequency',
+};
+const KIND_WEIGHT = { ladder: 10, monthly: 10, biggest: 8, versus: 12, income: 12, leaders: 10, cheap: 8, issuer: 10, nodecay: 10, freq: 10 };
+const ASK = ['Which one do you own?', 'Which one are you buying?', 'Which one is your favorite?', 'Any of these in your portfolio?', ''];
+
+const KINDS = {
+  ladder() {
+    const names = Math.random() < 0.3;
+    const src = pool().filter(f => isEquity(f) && f.yield <= 25 && (f.aum || 0) >= 300);
+    // spread picks across the yield range
+    const bands = [[0, 3], [3, 6], [6, 10], [10, 14], [14, 18], [18, 26]];
+    let picks = [];
+    for (const [a, b] of bands) picks.push(...favFirst(src.filter(f => f.yield >= a && f.yield < b), names ? 1 : 2));
+    picks.sort((a, b) => a.yield - b.yield);
+    const head = pick(['Dividend ETFs from lowest to highest yield 👇', 'The dividend ETF yield ladder 🪜', 'From 2% to 20%: where popular dividend ETFs yield today 👇']);
+    const tail = pick(['Low yield usually means more growth, high yield usually means more options income', 'Higher yield is not always better, total return tells the rest of the story', '']);
+    const r = build(head, picks.map(f => `${label(f, names)} ${fy(f.yield)}`), tail, { min: names ? 4 : 8 });
+    return r && { text: r.text, variant: names ? 'names' : 'tickers', syms: picks.slice(0, r.n).map(f => f.sym) };
+  },
+  monthly() {
+    const v = pick(['nodecay', 'income', 'core']);
+    let src = pool().filter(f => isFreq(f, 'month'));
+    if (v === 'nodecay') src = src.filter(f => f.decay === 'NO' && f.yield >= 5);
+    if (v === 'income') src = src.filter(f => f.yield >= 8 && f.yield <= 20);
+    if (v === 'core') src = src.filter(f => f.yield >= 3 && f.yield < 12 && (f.aum || 0) >= 1000);
+    const picks = favFirst(src, 8).sort((a, b) => a.yield - b.yield);
+    const heads = { nodecay: 'ETFs that pay you every single month 🗓️', income: 'Monthly paying ETFs with 8%+ yields 🗓️', core: 'Big, established ETFs that pay monthly 🗓️' };
+    const rows = picks.map(f => `${f.name} ${fy(f.yield)}`);
+    const tails = n => ({ nodecay: `All ${n} with no price decay`, income: 'Paid every month, but yields change and aren\'t guaranteed', core: 'All with $1B+ in assets' })[v];
+    let r = null;
+    for (let n = 6; n >= 4 && !r; n--) { const t = build(heads[v], rows, tails(n), { min: n, max: n }); if (t) r = t; }
+    return r && { text: r.text, variant: v, syms: picks.slice(0, r.n).map(f => f.sym) };
+  },
+  biggest() {
+    const v = pick(['all', 'monthly', 'income', 'weekly']);
+    let src = pool().filter(f => f.aum);
+    if (v === 'all') src = src.filter(f => isEquity(f) && f.yield >= 1.5 && f.yield <= 6);
+    if (v === 'monthly') src = src.filter(f => isFreq(f, 'month'));
+    if (v === 'income') src = src.filter(f => f.yield >= 7);
+    if (v === 'weekly') src = src.filter(f => isFreq(f, 'week'));
+    src.sort((a, b) => b.aum - a.aum);
+    const heads = { all: 'The biggest dividend ETFs in America 🏦', monthly: 'The biggest monthly paying ETFs 🏦', income: 'The biggest high income ETFs (7%+ yield) 🏦', weekly: 'The biggest weekly paying ETFs 🏦' };
+    const tail = pick(['Size isn\'t everything, but it shows where investors are putting their money', 'Ranked by assets under management', '']);
+    const r = build(heads[v], src.map(f => `${f.sym} ${faum(f.aum)}`), tail, { min: 6 });
+    return r && { text: r.text, variant: v, syms: src.slice(0, r.n).map(f => f.sym) };
+  },
+  versus() {
+    const GROUPS = [
+      ['SCHD', 'VYM', 'DGRO', 'HDV', 'VIG'], ['JEPI', 'JEPQ', 'GPIX', 'GPIQ', 'BALI'], ['SPYI', 'QQQI', 'IWMI', 'XSPI', 'XQQI'],
+      ['QYLD', 'XYLD', 'RYLD', 'FTQI', 'QQQI'], ['XDTE', 'QDTE', 'RDTE', 'FEPI', 'AIPI'], ['DVY', 'SDY', 'NOBL', 'FDVV', 'SPHD'],
+      ['DIVO', 'IDVO', 'QDVO', 'JEPI', 'KNG'], ['SCHD', 'JEPI', 'SPYI', 'QQQI', 'DIVO'], ['VIG', 'DGRO', 'DGRW', 'NOBL', 'SCHD'],
+      ['CSHI', 'SGOV', 'WEEK', 'BNDI', 'JPIE'], ['SPYI', 'JEPI', 'GPIX', 'ISPY', 'XYLD'], ['QQQI', 'JEPQ', 'GPIQ', 'QYLD', 'FTQI'],
+    ];
+    const by = Object.fromEntries(pool().map(f => [f.sym, f]));
+    const g = pick(GROUPS).filter(s => by[s] && by[s].tr !== null);
+    if (g.length < 3) return null;
+    const fs = g.map(s => by[s]);
+    const show = pick([['yield', 'tr'], ['yield', 'er'], ['yield', 'tr', 'er']]);
+    const sec = { yield: ['Yield', f => fy(f.yield)], tr: ['Total return since launch', f => ftr(f.tr)], er: ['Expense ratio', f => fer(f.er)] };
+    for (let n = fs.length; n >= 3; n--) {
+      const sub = fs.slice(0, n);
+      const body = show.map(k => sec[k][0] + '\n' + sub.map(f => `${f.sym} ${sec[k][1](f)}`).join('\n')).join('\n\n');
+      const text = [sub.map(f => f.sym).join(' vs '), body, pick(ASK)].filter(Boolean).join('\n\n');
+      if (xlen(text) <= LIMIT) return { text, variant: show.join('-'), syms: sub.map(f => f.sym) };
+    }
+    return null;
+  },
+  income() {
+    const amt = pick([10000, 10000, 25000, 50000, 100000]), per = pick(['year', 'year', 'month']);
+    const names = Math.random() < 0.7;
+    const src = pool().filter(f => f.yield >= 2 && f.yield <= 25 && (f.aum || 0) >= 200);
+    const picks = favFirst(src, 10).sort((a, b) => a.yield - b.yield);
+    const pay = f => amt * f.yield / 100 / (per === 'month' ? 12 : 1);
+    const fmt = v => v < 100 ? usd2.format(v) : usd0.format(v);
+    const head = pick([`What ${usd0.format(amt)} pays you per ${per} 💵`, `${usd0.format(amt)} invested, paid per ${per} 💵`]);
+    const r = build(head, picks.map(f => `${label(f, names)} ${fmt(pay(f))}`), 'Yields change and aren\'t guaranteed', { min: names ? 4 : 6, max: names ? 6 : 10 });
+    return r && { text: r.text, variant: `${amt}${per}${names ? 'n' : 't'}`, syms: picks.slice(0, r.n).map(f => f.sym) };
+  },
+  leaders() {
+    const v = pick(['all', 'monthly', 'income', 'weekly']);
+    const names = Math.random() < 0.25;
+    let src = pool().filter(f => f.tr !== null);
+    if (v === 'all') src = src.filter(f => isEquity(f) && f.yield >= 1.5);
+    if (v === 'monthly') src = src.filter(f => isFreq(f, 'month'));
+    if (v === 'income') src = src.filter(f => f.yield >= 8);
+    if (v === 'weekly') src = src.filter(f => isFreq(f, 'week'));
+    src.sort((a, b) => b.tr - a.tr);
+    const heads = { all: 'Dividend ETFs with the best total return since launch 📈', monthly: 'Monthly paying ETFs with the best total return 📈', income: 'High income ETFs (8%+) with the best total return 📈', weekly: 'Weekly paying ETFs with the best total return 📈' };
+    const r = build(heads[v], src.map(f => `${label(f, names)} ${ftr(f.tr)}`), pick(['Dividends reinvested, plus price growth', 'Total return counts every payout plus the change in price', '']), { min: names ? 4 : 6 });
+    return r && { text: r.text, variant: v + (names ? 'n' : ''), syms: src.slice(0, r.n).map(f => f.sym) };
+  },
+  cheap() {
+    const v = pick(['all', 'income', 'monthly']);
+    let src = pool().filter(f => f.er !== null);
+    if (v === 'all') src = src.filter(f => isEquity(f) && f.yield >= 1.5 && f.yield <= 6);
+    if (v === 'income') src = src.filter(f => f.yield >= 7);
+    if (v === 'monthly') src = src.filter(f => isFreq(f, 'month') && f.yield >= 3);
+    src.sort((a, b) => a.er - b.er || b.aum - a.aum);
+    const heads = { all: 'Dividend ETFs that cost almost nothing to own 🪙', income: 'The cheapest high income ETFs to own (7%+ yield) 🪙', monthly: 'The lowest cost monthly paying ETFs 🪙' };
+    if (!src.length) return null;
+    const top = src[0], tail = `${usd0.format(10000)} in ${top.sym} costs you ${usd2.format(10000 * top.er / 100).replace('.00', '')} a year in fees`;
+    const r = build(heads[v], src.map(f => `${f.sym} ${fer(f.er)}`), tail, { min: 6, max: 10 });
+    return r && { text: r.text, variant: v, syms: src.slice(0, r.n).map(f => f.sym) };
+  },
+  issuer() {
+    const all = pool();
+    const byIss = {};
+    all.forEach(f => { (byIss[f.issuer] = byIss[f.issuer] || []).push(f); });
+    const PAIRS = [['JP Morgan', 'Goldman Sachs'], ['NEOS', 'Amplify'], ['Global X', 'NEOS'], ['Vanguard', 'Schwab'], ['Roundhill', 'REX'], ['First Trust', 'Global X']];
+    if (Math.random() < 0.45) {
+      const pr = pick(PAIRS).filter(i => (byIss[i] || []).length >= 1);
+      if (pr.length === 2) {
+        const A = favFirst(byIss[pr[0]], 3), B = favFirst(byIss[pr[1]], 3), fs = [];
+        for (let k = 0; k < 3; k++) { if (A[k]) fs.push(A[k]); if (B[k]) fs.push(B[k]); }
+        const r = build(pick([`${pr[0]} vs ${pr[1]} 🥊`, `The ${pr[0]} vs ${pr[1]} ETF matchup 🥊`]), fs.map(f => `${f.name} ${fy(f.yield)}`), 'Which side are you on?', { min: 4, max: 6 });
+        if (r) return { text: r.text, variant: 'pair' + pr.join('').replace(/\W/g, ''), syms: fs.slice(0, r.n).map(f => f.sym) };
+      }
+    }
+    const iss = pick(Object.keys(byIss).filter(i => byIss[i].length >= 4 && !/GraniteShares|Tuttle|Quantify/i.test(i)));
+    if (!iss) return null;
+    const names = Math.random() < 0.4;
+    const fs = favFirst(byIss[iss], 12).sort((a, b) => b.yield - a.yield);
+    const head = pick([`The ${iss} income ETF lineup 🏢`, `${iss} ETFs ranked by yield 🏢`]);
+    const r = build(head, fs.map(f => `${label(f, names)} ${fy(f.yield)}`), pick(['Which one would you pick?', '']), { min: 4 });
+    return r && { text: r.text, variant: iss.replace(/\W/g, '') + (names ? 'n' : ''), syms: fs.slice(0, r.n).map(f => f.sym) };
+  },
+  nodecay() {
+    const names = Math.random() < 0.3;
+    const src = favFirst(pool().filter(f => f.decay === 'NO' && f.yield >= 8), 14).sort((a, b) => b.yield - a.yield);
+    const head = pick(['High income ETFs with NO price decay 🛡️', '8%+ yields and no price decay 🛡️', 'High yield without the price decay 🛡️']);
+    const r = build(head, src.map(f => `${label(f, names)} ${fy(f.yield)}`), '', { min: names ? 4 : 8 });
+    return r && { text: r.text, variant: names ? 'names' : 'tickers', syms: src.slice(0, r.n).map(f => f.sym) };
+  },
+  freq() {
+    const p = pool().filter(f => (f.aum || 0) >= 50);
+    const grab = k => favFirst(p.filter(f => isFreq(f, k) && f.yield <= 30), 4).sort((a, b) => a.yield - b.yield);
+    const w = grab('week'), m = grab('month'), q = grab('quarter');
+    for (let n = 4; n >= 2; n--) {
+      const sec = (t, a) => t + '\n' + a.slice(0, n).map(f => `${f.sym} ${fy(f.yield)}`).join('\n');
+      const text = ['How often your ETF pays you 📅', sec('Weekly', w), sec('Monthly', m), sec('Quarterly', q), pick(['Weekly, monthly or quarterly: which do you prefer?', ''])].filter(Boolean).join('\n\n');
+      if (xlen(text) <= LIMIT) return { text, variant: 'wmq', syms: [...w, ...m, ...q].map(f => f.sym) };
+    }
+    return null;
+  },
+};
+
+function hashStr(s) { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h.toString(36); }
+const histKey = p => `${p.kind}_${(p.variant || 'x').replace(/[^A-Za-z0-9]/g, '')}_${hashStr([...p.syms].sort().join(','))}`;
+function makePost(kind, used = new Set()) {
+  for (let i = 0; i < 25; i++) {
+    let r = null;
+    try { r = KINDS[kind](); } catch (e) { console.warn(kind, e); }
+    if (!r) continue;
+    const p = { id: Math.random().toString(36).slice(2, 10), kind, variant: r.variant, syms: r.syms, text: r.text };
+    const key = histKey(p);
+    if (state.history.has(key) || used.has(key)) continue;
+    return p;
+  }
+  return null;
+}
+function pickKind(avoid) {
+  const bag = Object.entries(KIND_WEIGHT).filter(([k]) => !avoid.includes(k));
+  let r = Math.random() * bag.reduce((s, [, w]) => s + w, 0);
+  for (const [k, w] of bag) { if ((r -= w) < 0) return k; }
+  return bag[0][0];
+}
+
+/* =====================================================================
+   GENERATE
+   ===================================================================== */
+function slotTimes(n, day) {
+  const [sh, sm] = cfg.start.split(':').map(Number), [eh, em] = cfg.end.split(':').map(Number);
+  const startT = new Date(day); startT.setHours(sh, sm, 0, 0);
+  const endT = new Date(day); endT.setHours(eh, em, 0, 0);
+  let from = startT.getTime();
+  const soonest = Date.now() + 20 * 60e3;
+  if (from < soonest) from = Math.ceil(soonest / 300e3) * 300e3;
+  const to = endT.getTime();
+  if (to <= from) return null;
+  const gap = n > 1 ? (to - from) / (n - 1) : 0;
+  return Array.from({ length: n }, (_, i) => {
+    const t = from + gap * i + (i && i < n - 1 ? (Math.random() - .5) * Math.min(gap * .5, 20 * 60e3) : 0);
+    return new Date(Math.round(t / 300e3) * 300e3);
+  });
+}
+function startDay() {
+  const v = $('startDate').value;
+  if (v) { const [y, m, d] = v.split('-').map(Number); return new Date(y, m - 1, d); }
+  const t = new Date(); t.setDate(t.getDate() + 1); t.setHours(0, 0, 0, 0); return t;
+}
+function generate() {
+  const perDay = Math.max(1, Math.min(10, parseInt($('howMany').value, 10) || 5));
+  const days = Math.max(1, Math.min(30, parseInt($('days').value, 10) || 1));
+  const first = startDay(), used = new Set(), out = [];
+  let skipped = 0, last = [];
+  for (let d = 0; d < days; d++) {
+    const day = new Date(first); day.setDate(first.getDate() + d);
+    const times = slotTimes(perDay, day);
+    if (!times) { skipped++; continue; }
+    for (let i = 0; i < perDay; i++) {
+      let p = null;
+      for (let t = 0; t < 12 && !p; t++) p = makePost(pickKind(last.slice(-3)), used);
+      if (!p) continue;
+      p.at = times[i]; used.add(histKey(p)); last.push(p.kind); out.push(p);
+    }
+  }
+  state.drafts = out;
+  renderDrafts();
+  if (!out.length) return toast(`Nothing left to schedule in that window (${cfg.start} to ${cfg.end}). Pick a later start date`);
+  if (skipped) toast(`Skipped ${skipped} day${skipped > 1 ? 's' : ''} whose posting window already passed`);
+}
+
+/* =====================================================================
+   DRAFTS UI
+   ===================================================================== */
+const pad = v => String(v).padStart(2, '0');
+const hhmm = d => `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+const ymd = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const fmtWhen = d => d.toLocaleString([], { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+function lintText(t) {
+  const issues = [];
+  if (/[—–]/.test(t)) issues.push('has a dash (em or en)');
+  if (t.split('\n').some(l => /\.\s*$/.test(l.trim()) && l.trim().length)) issues.push('a line ends with a period');
+  if (/\b(grade|rated [A-F])\b/i.test(t)) issues.push('mentions a grade');
+  if (/\$[A-Za-z]/.test(t)) issues.push('has a $cashtag (X only allows one on scheduled posts)');
+  if (xlen(t) > LIMIT) issues.push('over 280 characters');
+  return issues.length ? `<div class="err-text">Check: ${issues.join(', ')}</div>` : '';
+}
+function preview(t) { return `<div class="preview"><div class="who"><div class="av">TD</div><div><div class="nm">TopDividendETFs</div><div class="hd">@${HANDLE}</div></div></div>${esc(t)}</div>`; }
+function updateCost() { $('costNote').textContent = state.drafts.length ? `About ${usd2.format(state.drafts.length * PLAIN_COST)} in X fees for these ${state.drafts.length}` : ''; }
+function renderDrafts() {
+  const box = $('drafts');
+  $('nDrafts').textContent = state.drafts.length;
+  $('schedBtn').disabled = !state.drafts.length;
+  updateCost();
+  if (!state.drafts.length) { box.innerHTML = `<div class="empty">Pick a start date and how many days, then click <b>Generate posts</b>. Every post is a text list built from today's TopDividendETFsPRO data.</div>`; return; }
+  state.drafts.sort((a, b) => a.at - b.at);
+  box.innerHTML = state.drafts.map(p => {
+    const len = xlen(p.text);
+    return `<article class="post" data-id="${p.id}">
+      ${preview(p.text)}
+      <div class="side">
+        <div class="meta">
+          <input type="datetime-local" value="${ymd(p.at)}T${hhmm(p.at)}" data-act="time" aria-label="Post date and time">
+          <span>${p.at.toLocaleDateString([], { weekday: 'short' })}</span>
+          <select data-act="kind" aria-label="Post type">${Object.entries(KIND_LABEL).map(([k, v]) => `<option value="${k}"${k === p.kind ? ' selected' : ''}>${v}</option>`).join('')}</select>
+          ${p.sent ? '<span class="tag sent">Sent to X</span>' : ''}
+        </div>
+        <textarea data-act="text" aria-label="Post text">${esc(p.text)}</textarea>
+        <div class="row">
+          <button class="btn small primary" data-act="manual">${p.sent ? 'Post it again' : 'Post it myself'}</button>
+          <button class="btn small" data-act="copytext">Copy text</button>
+          <button class="btn small" data-act="again">New version</button>
+          <button class="btn small danger" data-act="remove">Remove</button>
+          <span class="chars${len > LIMIT ? ' over' : ''}">${len}/280</span>
+        </div>
+        ${lintText(p.text)}
+      </div>
+    </article>`;
+  }).join('');
+}
+function replaceWith(p, np) { Object.assign(p, np, { id: p.id, at: p.at, sent: false }); }
+const xUrl = p => 'https://x.com/intent/post?text=' + encodeURIComponent(p.text);
+$('drafts').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-act]'); if (!btn) return;
+  const p = state.drafts.find(d => d.id === btn.closest('.post').dataset.id); if (!p) return;
+  const used = new Set(state.drafts.filter(d => d !== p).map(histKey)), act = btn.dataset.act;
+  if (act === 'remove') { state.drafts = state.drafts.filter(d => d !== p); return renderDrafts(); }
+  if (act === 'copytext') return navigator.clipboard.writeText(p.text).then(() => toast('Text copied'), () => toast("Couldn't copy, select the text and copy it"));
+  if (act === 'manual') { const w = window.open(xUrl(p), '_blank'); if (w) { try { w.opener = null; } catch (err) {} } p.sent = true; rememberManual(p); toast('Opened X with this post filled in'); return renderDrafts(); }
+  if (act === 'again') { const np = makePost(p.kind, new Set([...used, histKey(p)])); if (!np) return toast('No other version of this type right now'); replaceWith(p, np); }
+  renderDrafts();
+});
+$('drafts').addEventListener('change', e => {
+  const el = e.target, card = el.closest('.post'); if (!card) return;
+  const p = state.drafts.find(d => d.id === card.dataset.id); if (!p) return;
+  if (el.dataset.act === 'time') { if (!el.value) return; const [ds, ts] = el.value.split('T'), [y, mo, dd] = ds.split('-').map(Number), [h, m] = ts.split(':').map(Number); p.at = new Date(y, mo - 1, dd, h, m, 0, 0); renderDrafts(); }
+  if (el.dataset.act === 'kind') { const np = makePost(el.value, new Set(state.drafts.filter(d => d !== p).map(histKey))); if (!np) { toast('Could not build that type right now'); return renderDrafts(); } replaceWith(p, np); renderDrafts(); }
+});
+$('drafts').addEventListener('input', e => {
+  const el = e.target; if (el.dataset.act !== 'text') return;
+  const card = el.closest('.post'), p = state.drafts.find(d => d.id === card.dataset.id); if (!p) return;
+  p.text = el.value;
+  card.querySelector('.preview').outerHTML = preview(p.text);
+  const len = xlen(p.text), ch = card.querySelector('.chars'); ch.textContent = `${len}/280`; ch.classList.toggle('over', len > LIMIT);
+  card.querySelectorAll('.side > .err-text').forEach(x => x.remove());
+  const l = lintText(p.text); if (l) card.querySelector('.side').insertAdjacentHTML('beforeend', l);
+});
+function manualHistory() { return safeJSON(readLS(MANUAL_KEY)) || []; }
+function rememberManual(p) { try { const h = manualHistory(); h.push(histKey(p)); localStorage.setItem(MANUAL_KEY, JSON.stringify(h.slice(-3000))); } catch (e) {} state.history.add(histKey(p)); }
+
+/* =====================================================================
+   GITHUB (private poster repo)
+   ===================================================================== */
+const ghReady = () => cfg.token && cfg.owner && cfg.repo;
+async function gh(path, opts = {}, raw = false) {
+  const r = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}${path}`, {
+    ...opts,
+    headers: { Authorization: `Bearer ${cfg.token}`, Accept: raw ? 'application/vnd.github.raw+json' : 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', ...(opts.body ? { 'Content-Type': 'application/json' } : {}) },
+  });
+  if (r.status === 404 && opts.allow404) return null;
+  if (!r.ok) { let msg = ''; try { msg = (await r.json()).message; } catch (e) {} const err = new Error(`GitHub ${r.status}${msg ? ': ' + msg : ''}`); err.status = r.status; throw err; }
+  if (r.status === 204) return null;
+  return raw ? r.blob() : r.json();
+}
+const b64utf8 = s => { const bytes = new TextEncoder().encode(s); let bin = ''; bytes.forEach(b => bin += String.fromCharCode(b)); return btoa(bin); };
+async function commitFiles(files, message) {
+  const entries = [];
+  for (const f of files) {
+    if (f.del) { const exists = await gh(`/contents/${f.path}?ref=${cfg.branch}`, { allow404: true }); if (exists) entries.push({ path: f.path, mode: '100644', type: 'blob', sha: null }); continue; }
+    const blob = await gh('/git/blobs', { method: 'POST', body: JSON.stringify({ content: f.b64, encoding: 'base64' }) });
+    entries.push({ path: f.path, mode: '100644', type: 'blob', sha: blob.sha });
+  }
+  if (!entries.length) return;
+  let lastErr;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const ref = await gh(`/git/ref/heads/${cfg.branch}`);
+    const head = await gh(`/git/commits/${ref.object.sha}`);
+    const tree = await gh('/git/trees', { method: 'POST', body: JSON.stringify({ base_tree: head.tree.sha, tree: entries }) });
+    const commit = await gh('/git/commits', { method: 'POST', body: JSON.stringify({ message, tree: tree.sha, parents: [ref.object.sha] }) });
+    try { await gh(`/git/refs/heads/${cfg.branch}`, { method: 'PATCH', body: JSON.stringify({ sha: commit.sha }) }); return; }
+    catch (e) { if (e.status !== 422) throw e; lastErr = e; await new Promise(r => setTimeout(r, 2000)); }
+  }
+  throw new Error(`Couldn't save to GitHub (${lastErr ? lastErr.message : 'unknown error'}). Click Refresh and try again`);
+}
+async function listDir(dir) { const items = await gh(`/contents/${dir}?ref=${cfg.branch}`, { allow404: true }); return (items || []).filter(i => i.type === 'file' && i.name !== '.gitkeep'); }
+async function readJSON(path) { const blob = await gh(`/contents/${path}?ref=${cfg.branch}`, {}, true); return JSON.parse(await blob.text()); }
+const fileBase = p => `${p.at.toISOString().replace(/[-:]/g, '').slice(0, 13)}_${histKey(p)}_${p.id}`;
+function keyFromName(name) { const parts = name.replace(/\.json$/, '').split('_'); return parts.length >= 5 ? `${parts[1]}_${parts[2]}_${parts[3]}` : null; }
+// Only the last 30 days of posts block a repeat, so evergreen lists can come back later
+const recent = name => { const m = name.match(/^(\d{8})T/); if (!m) return true; const d = new Date(+m[1].slice(0, 4), +m[1].slice(4, 6) - 1, +m[1].slice(6, 8)); return Date.now() - d.getTime() < 30 * 864e5; };
+async function loadHistory() {
+  if (!ghReady()) return;
+  try {
+    const [q, p] = await Promise.all([listDir('queue'), listDir('posted')]);
+    state.history = new Set([...q, ...p.filter(f => recent(f.name))].map(f => keyFromName(f.name)).filter(Boolean).concat(manualHistory()));
+    $('nSched').textContent = q.filter(f => f.name.endsWith('.json')).length;
+    showSetup();
+  } catch (e) { showSetup(e.message); }
+}
+async function scheduleAll() {
+  if (state.drafts.some(p => xlen(p.text) > LIMIT)) return toast('A post is over 280 characters. Shorten it first');
+  if (state.drafts.some(p => /\$[A-Za-z]/.test(p.text))) return toast('A post has a $cashtag. Remove the $ first');
+  if (state.drafts.some(p => p.at.getTime() < Date.now())) return toast('Some times are already in the past. Change them first');
+  const btn = $('schedBtn'); btn.disabled = true; btn.textContent = 'Scheduling…';
+  try {
+    await loadHistory();
+    const files = state.drafts.map(p => ({ path: `queue/${fileBase(p)}.json`, b64: b64utf8(JSON.stringify({ id: p.id, kind: p.kind, variant: p.variant, syms: p.syms, images: 0, text: p.text, post_at: p.at.toISOString(), created_at: new Date().toISOString() }, null, 2)) }));
+    await commitFiles(files, `Queue ${state.drafts.length} posts`);
+    toast(`Scheduled ${state.drafts.length} posts`);
+    state.drafts = []; renderDrafts(); loadHistory();
+  } catch (e) { toast(e.message, 7000); }
+  btn.textContent = 'Schedule all'; btn.disabled = !state.drafts.length;
+}
+$('schedBtn').addEventListener('click', scheduleAll);
+
+/* =====================================================================
+   SCHEDULED / POSTED / FAILED
+   ===================================================================== */
+async function renderList(dir, box, opts) {
+  box.innerHTML = `<div class="empty">Loading…</div>`;
+  try {
+    let files = (await listDir(dir)).filter(f => f.name.endsWith('.json')).sort((a, b) => a.name.localeCompare(b.name));
+    if (opts.newestFirst) files.reverse();
+    if (opts.limit) files = files.slice(0, opts.limit);
+    if (dir === 'queue') $('nSched').textContent = files.length;
+    if (dir === 'failed') $('nFailed').textContent = files.length;
+    if (!files.length) { box.innerHTML = `<div class="empty">${opts.emptyText}</div>`; return; }
+    const recs = await Promise.all(files.map(async f => ({ f, r: await readJSON(f.path) })));
+    box.innerHTML = recs.map(({ f, r }) => `<article class="post" data-path="${esc(f.path)}">
+      ${preview(r.text)}
+      <div class="side">
+        <div class="meta"><span class="tag">${esc(KIND_LABEL[r.kind] || r.kind)}</span><span>${esc((r.syms || []).join(', '))}</span></div>
+        <div class="status-line">${opts.line(r)}</div>
+        ${r.error ? `<div class="err-text">${esc(r.error)}</div>` : ''}
+        ${opts.actions ? `<div class="row">${opts.actions}</div>` : ''}
+      </div></article>`).join('');
+  } catch (e) { box.innerHTML = `<div class="notice err">${esc(e.message)}</div>`; }
+}
+const showScheduled = () => renderList('queue', $('scheduled'), {
+  emptyText: 'Nothing scheduled. Generate posts and click Schedule all',
+  line: r => `Posts ${esc(fmtWhen(new Date(r.post_at)))}${r.attempts ? `, tried ${r.attempts} time${r.attempts > 1 ? 's' : ''}` : ''}`,
+  actions: `<button class="btn small" data-act="now">Post now</button><button class="btn small danger" data-act="unschedule">Unschedule</button>`,
+});
+const showPosted = () => renderList('posted', $('posted'), { newestFirst: true, limit: 30, emptyText: 'Nothing posted yet',
+  line: r => `Posted ${esc(fmtWhen(new Date(r.posted_at)))}, <a href="${esc(r.url)}" target="_blank" rel="noopener">Open on X</a>` });
+const showFailed = () => renderList('failed', $('failed'), { newestFirst: true, emptyText: 'No failed posts',
+  line: r => `Was due ${esc(fmtWhen(new Date(r.post_at)))}` });
+$('scheduled').addEventListener('click', async e => {
+  const btn = e.target.closest('[data-act]'); if (!btn) return;
+  const path = btn.closest('.post').dataset.path;
+  btn.disabled = true;
+  try {
+    if (btn.dataset.act === 'unschedule') { await commitFiles([{ path, del: true }], 'Unschedule post'); toast('Unscheduled'); }
+    else {
+      let r; try { r = await readJSON(path); } catch (err) { toast('That post is no longer in the queue. It may have posted already'); return showScheduled(); }
+      r.post_at = new Date().toISOString();
+      await commitFiles([{ path, b64: b64utf8(JSON.stringify(r, null, 2)) }], 'Post now');
+      try { await gh('/actions/workflows/post.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: cfg.branch }) }); toast('Posting now, it should be live in a minute or two'); }
+      catch (err) { toast('Moved to now. It will post on the next run'); }
+    }
+    showScheduled(); loadHistory();
+  } catch (err) { toast(err.message); btn.disabled = false; }
+});
+$('refreshSched').addEventListener('click', showScheduled);
+$('refreshPosted').addEventListener('click', showPosted);
+$('refreshFailed').addEventListener('click', showFailed);
+
+/* =====================================================================
+   TABS, SETTINGS, LOCK, BOOT
+   ===================================================================== */
+document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+  ['drafts', 'scheduled', 'posted', 'failed'].forEach(t => $('tab-' + t).hidden = t !== b.dataset.tab);
+  if (b.dataset.tab === 'scheduled') showScheduled();
+  if (b.dataset.tab === 'posted') showPosted();
+  if (b.dataset.tab === 'failed') showFailed();
+}));
+function openSettings() {
+  $('s_start').value = cfg.start; $('s_end').value = cfg.end; $('s_fav').value = cfg.fav; $('s_excl').value = cfg.excl; $('s_max').value = cfg.max; $('s_minaum').value = cfg.minaum;
+  $('settings').showModal();
+}
+$('settingsBtn').addEventListener('click', openSettings);
+$('settings').addEventListener('close', () => {
+  if ($('settings').returnValue !== 'save') return;
+  cfg = { ...cfg, start: $('s_start').value || '08:00', end: $('s_end').value || '21:00', fav: $('s_fav').value, excl: $('s_excl').value, max: parseFloat($('s_max').value) || 60, minaum: parseFloat($('s_minaum').value) || 0 };
+  saveCfg(); updateStatus(); toast('Settings saved');
+});
+function showSetup(err) { $('setupNotice').innerHTML = err ? `<div class="notice err">Can't reach the poster repo: ${esc(err)}</div>` : ''; }
+let tt; function toast(m, ms = 4200) { document.querySelector('.toast')?.remove(); clearTimeout(tt); const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = m; document.body.appendChild(t); tt = setTimeout(() => t.remove(), ms); }
+function updateStatus() {
+  if (!state.funds.length) return;
+  $('dataStatus').textContent = `${state.funds.length} ETFs loaded from TopDividendETFsPRO, ${pool().length} in the posting pool`;
+}
+
+// The token must open the private repo before anything else loads
+async function verify() {
+  const r = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}`, { headers: { Authorization: `Bearer ${cfg.token}`, Accept: 'application/vnd.github+json' } });
+  if (!r.ok) throw new Error(r.status === 401 ? 'That token was rejected by GitHub' : r.status === 404 ? "That token can't see the poster repo" : `GitHub ${r.status}`);
+  const j = await r.json();
+  if (!j.permissions || !j.permissions.push) throw new Error("That token can't write to the poster repo");
+}
+function showLock(msg) { $('app').hidden = true; $('lock').hidden = false; $('lockErr').textContent = msg || ''; $('l_owner').value = cfg.owner; $('l_repo').value = cfg.repo; }
+let booted = false;
+function boot() {
+  $('lock').hidden = true; $('app').hidden = false;
+  if (booted) return; booted = true;
+  { const t = new Date(), m = new Date(); m.setDate(m.getDate() + 1); $('startDate').min = ymd(t); $('startDate').value = ymd(m); }
+  state.history = new Set(manualHistory());
+  renderDrafts(); loadHistory();
+  fetch(CSV_URL + '&t=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(csv => { state.funds = parseCSV(csv.trim()).slice(1).filter(c => c[0]).map(buildFund).filter(f => f.sym && f.yield !== null); updateStatus(); $('genBtn').disabled = false; })
+    .catch(() => { $('dataStatus').textContent = "Couldn't load the database. Refresh to try again"; });
+}
+$('genBtn').addEventListener('click', generate);
+$('unlockBtn').addEventListener('click', async () => {
+  const token = $('l_token').value.trim(), owner = $('l_owner').value.trim(), repo = $('l_repo').value.trim();
+  if (!token) return $('lockErr').textContent = 'Paste your GitHub token first';
+  const prev = cfg; cfg = { ...cfg, token, owner, repo };
+  $('unlockBtn').disabled = true; $('lockErr').textContent = 'Checking…';
+  try { await verify(); saveCfg(); $('l_token').value = ''; boot(); }
+  catch (e) { cfg = prev; $('lockErr').textContent = e.message; }
+  $('unlockBtn').disabled = false;
+});
+$('lockBtn').addEventListener('click', () => { cfg.token = ''; saveCfg(); location.reload(); });
+(async () => {
+  if (!cfg.token) return showLock();
+  try { await verify(); boot(); } catch (e) { showLock(e.message); }
+})();
+</script>
+</body>
+</html>
