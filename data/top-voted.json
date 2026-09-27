@@ -1,35 +1,35 @@
 {
-  "updated": "2026-09-27T11:25:36.712Z",
+  "updated": "2026-09-27T16:25:17.473Z",
   "total_tracked": 155,
   "top": [
     {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 18,
+      "votes": 21,
       "yield": "14.0%"
     },
     {
       "symbol": "QDVO",
       "name": "Amplify CWP Growth & Income ETF",
-      "votes": 17,
+      "votes": 20,
       "yield": "10.0%"
     },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 16,
+      "votes": 19,
       "yield": "12.04%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
+      "votes": 11,
       "yield": "41%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 9,
+      "votes": 11,
       "yield": "8.5%"
     },
     {
@@ -39,16 +39,16 @@
       "yield": "14.0%"
     },
     {
+      "symbol": "FEPI",
+      "name": "REX FANG & Innovation Equity Premium Income ETF",
+      "votes": 3,
+      "yield": "25.2%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 3,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 2,
-      "yield": "25.2%"
     },
     {
       "symbol": "GOOW",
