@@ -1,36 +1,36 @@
 {
-  "updated": "2026-09-27T20:54:02.217Z",
+  "updated": "2026-09-28T03:43:54.224Z",
   "total_tracked": 155,
   "top": [
     {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 34,
+      "yield": "41%"
+    },
+    {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 24,
+      "votes": 25,
       "yield": "14.0%"
     },
     {
       "symbol": "QDVO",
       "name": "Amplify CWP Growth & Income ETF",
-      "votes": 23,
+      "votes": 24,
       "yield": "10.0%"
     },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 22,
+      "votes": 23,
       "yield": "12.04%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 12,
+      "votes": 14,
       "yield": "8.5%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 11,
-      "yield": "41%"
     },
     {
       "symbol": "QQQI",
@@ -45,22 +45,22 @@
       "yield": "25.2%"
     },
     {
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
+      "votes": 3,
+      "yield": "100%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 3,
       "yield": "10.5%"
     },
     {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 2,
-      "yield": "34.8%"
-    },
-    {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 2,
-      "yield": "42.0%"
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "votes": 3,
+      "yield": "3.0%"
     }
   ]
 }
