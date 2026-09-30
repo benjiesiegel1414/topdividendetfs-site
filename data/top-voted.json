@@ -1,12 +1,18 @@
 {
-  "updated": "2026-09-29T21:52:49.157Z",
-  "total_tracked": 156,
+  "updated": "2026-09-30T04:02:37.709Z",
+  "total_tracked": 157,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 45,
+      "votes": 46,
       "yield": "41%"
+    },
+    {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 34,
+      "yield": "21%"
     },
     {
       "symbol": "SEPI",
@@ -15,16 +21,16 @@
       "yield": "8.5%"
     },
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 33,
-      "yield": "21%"
-    },
-    {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
       "votes": 33,
       "yield": "14.0%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 31,
+      "yield": "12.04%"
     },
     {
       "symbol": "QDVO",
@@ -33,15 +39,9 @@
       "yield": "10.0%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 30,
-      "yield": "12.04%"
-    },
-    {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 6,
+      "votes": 7,
       "yield": "14.0%"
     },
     {
