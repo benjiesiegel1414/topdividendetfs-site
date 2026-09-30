@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-30T04:02:37.709Z",
+  "updated": "2026-09-30T11:56:34.404Z",
   "total_tracked": 157,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 46,
+      "votes": 48,
       "yield": "41%"
     },
     {
@@ -47,20 +47,20 @@
     {
       "symbol": "GOOW",
       "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "42.0%"
+    },
+    {
+      "symbol": "JEPQ",
+      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
+      "votes": 5,
+      "yield": "12.0%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 5,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 5,
-      "yield": "17.4%"
     }
   ]
 }
