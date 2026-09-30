@@ -1,17 +1,17 @@
 {
-  "updated": "2026-09-30T11:56:34.404Z",
+  "updated": "2026-09-30T17:44:25.883Z",
   "total_tracked": 157,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 48,
+      "votes": 49,
       "yield": "41%"
     },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 34,
+      "votes": 35,
       "yield": "21%"
     },
     {
@@ -57,10 +57,10 @@
       "yield": "12.0%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
       "votes": 5,
-      "yield": "10.5%"
+      "yield": "100%"
     }
   ]
 }
