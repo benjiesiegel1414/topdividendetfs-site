@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T04:14:17.128Z",
+  "updated": "2026-10-01T12:28:09.986Z",
   "total_tracked": 158,
   "top": [
     {
@@ -57,10 +57,10 @@
       "yield": "10.5%"
     },
     {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 5,
-      "yield": "36.0%"
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
+      "votes": 6,
+      "yield": "100%"
     }
   ]
 }
