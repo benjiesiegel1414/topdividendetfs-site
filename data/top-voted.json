@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T04:07:32.648Z",
+  "updated": "2026-10-02T11:54:21.722Z",
   "total_tracked": 158,
   "top": [
     {
@@ -51,16 +51,16 @@
       "yield": "42.0%"
     },
     {
+      "symbol": "JEPQ",
+      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
+      "votes": 7,
+      "yield": "12.0%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 7,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "JEPQ",
-      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 6,
-      "yield": "12.0%"
     }
   ]
 }
