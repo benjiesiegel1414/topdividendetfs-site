@@ -300,7 +300,7 @@ const EXTRA_CSS = `
     @media(max-width:420px){.nav-btn{padding:8px 10px;font-size:.9rem}.calc-out{grid-template-columns:1fr}}
 `;
 
-function shell({ title, desc, canonical, body, schema = [], ogTitle }) {
+function shell({ title, desc, canonical, body, schema = [], ogTitle, ogImage }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -314,7 +314,12 @@ function shell({ title, desc, canonical, body, schema = [], ogTitle }) {
   <meta property="og:description" content="${esc(desc)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:site_name" content="TopDividendETFs.com">
-  <meta name="twitter:card" content="summary">
+${ogImage ? `  <meta property="og:image" content="${ogImage}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(ogTitle || title)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${ogImage}">` : `  <meta name="twitter:card" content="summary">`}
   <meta name="twitter:site" content="@TopDividendETFs">
 ${schema.map(s => `  <script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n')}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
@@ -585,6 +590,7 @@ fetch(API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/jso
     ogTitle: `${e.sym}: ${e.name}`,
     desc: `${e.name} (${e.sym}) yields about ${fmtYield(e.yield)} with ${fmtAum(e.aum)} in assets and a ${e.grade} grade. See its rankings, an income calculator, similar ETFs and community votes.`,
     canonical: SITE + e.url,
+    ogImage: fs.existsSync(path.join(ROOT, 'etf-images', e.sym.toLowerCase() + '-etf-wide.png')) ? `${SITE}/etf-images/${e.sym.toLowerCase()}-etf-wide.png` : null,
     schema, body
   });
 }
