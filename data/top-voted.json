@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-03T03:51:04.227Z",
+  "updated": "2026-10-03T11:07:21.203Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "41%"
     },
     {
@@ -39,6 +39,12 @@
       "yield": "71%"
     },
     {
+      "symbol": "AMDW",
+      "name": "AMDW AMD WeeklyPay ETF",
+      "votes": 1,
+      "yield": "65.0%"
+    },
+    {
       "symbol": "AMYY",
       "name": "GraniteShares YieldBOOST AMD ETF",
       "votes": 1,
@@ -51,16 +57,10 @@
       "yield": "25%"
     },
     {
-      "symbol": "GOOY",
-      "name": "YieldMax GOOGL Option Income Strategy ETF",
+      "symbol": "DIVO",
+      "name": "Amplify CWP Enhanced Dividend Income ETF",
       "votes": 1,
-      "yield": "25%"
-    },
-    {
-      "symbol": "MLPI",
-      "name": "MLP & Energy Infrastructure High Income ETF",
-      "votes": 1,
-      "yield": "14.8%"
+      "yield": "4.8%"
     }
   ]
 }
