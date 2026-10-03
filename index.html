@@ -630,7 +630,7 @@ function renderTable(txt) {
     tr.title = 'View full scorecard for ' + symbol;
     tr.addEventListener('click', (e) => {
       if (e.target.closest('.vote-btn') || e.target.closest('a')) return;
-      window.location.href = 'etf.html?symbol=' + encodeURIComponent(symbol);
+      window.location.href = '/etfs/' + String(symbol).trim().toLowerCase();
     });
 
 ['Symbol','Name','Dividend Yield','AUM','Price Decay','Grade'].forEach((label,j) => {
@@ -647,7 +647,7 @@ function renderTable(txt) {
 
   if (j===0) {
     const a = document.createElement('a');
-    a.href = 'etf.html?symbol=' + encodeURIComponent(cols[0]);
+    a.href = '/etfs/' + String(cols[0]).trim().toLowerCase();
     a.textContent = cols[0];
     td.appendChild(a);
   } else {
