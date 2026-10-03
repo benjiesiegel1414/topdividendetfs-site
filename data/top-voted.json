@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-03T11:07:21.203Z",
+  "updated": "2026-10-03T15:44:04.805Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 6,
+      "votes": 9,
       "yield": "41%"
     },
     {
@@ -13,6 +13,24 @@
       "name": "YieldMax MSTR Option Income Strategy ETF",
       "votes": 3,
       "yield": "100%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 3,
+      "yield": "17.4%"
+    },
+    {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 3,
+      "yield": "21%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 2,
+      "yield": "36.0%"
     },
     {
       "symbol": "COIW",
@@ -33,34 +51,16 @@
       "yield": "37.0%"
     },
     {
-      "symbol": "SMYY",
-      "name": "GraniteShares YieldBOOST SMCI ETF",
+      "symbol": "FEPI",
+      "name": "REX FANG & Innovation Equity Premium Income ETF",
       "votes": 2,
-      "yield": "71%"
+      "yield": "25.2%"
     },
     {
-      "symbol": "AMDW",
-      "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 1,
-      "yield": "65.0%"
-    },
-    {
-      "symbol": "AMYY",
-      "name": "GraniteShares YieldBOOST AMD ETF",
-      "votes": 1,
-      "yield": "68%"
-    },
-    {
-      "symbol": "AMZY",
-      "name": "YieldMax AMZN Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "25%"
-    },
-    {
-      "symbol": "DIVO",
-      "name": "Amplify CWP Enhanced Dividend Income ETF",
-      "votes": 1,
-      "yield": "4.8%"
+      "symbol": "GIAX",
+      "name": "Nicholas Global Equity and Income ETF",
+      "votes": 2,
+      "yield": "24.0%"
     }
   ]
 }
