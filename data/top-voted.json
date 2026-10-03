@@ -1,12 +1,48 @@
 {
-  "updated": "2026-10-03T15:44:04.805Z",
+  "updated": "2026-10-03T20:36:15.748Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
+      "votes": 10,
       "yield": "41%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 4,
+      "yield": "17.4%"
+    },
+    {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 4,
+      "yield": "21%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 3,
+      "yield": "36.0%"
+    },
+    {
+      "symbol": "FEPI",
+      "name": "REX FANG & Innovation Equity Premium Income ETF",
+      "votes": 3,
+      "yield": "25.2%"
+    },
+    {
+      "symbol": "GIAX",
+      "name": "Nicholas Global Equity and Income ETF",
+      "votes": 3,
+      "yield": "24.0%"
+    },
+    {
+      "symbol": "ISBG",
+      "name": "IncomeSTKd 1X Bitcoin & 1X Gold Premium ETF",
+      "votes": 3,
+      "yield": "17%"
     },
     {
       "symbol": "MSTY",
@@ -15,52 +51,16 @@
       "yield": "100%"
     },
     {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "symbol": "SMYY",
+      "name": "GraniteShares YieldBOOST SMCI ETF",
       "votes": 3,
-      "yield": "17.4%"
+      "yield": "71%"
     },
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
       "votes": 3,
-      "yield": "21%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 2,
-      "yield": "36.0%"
-    },
-    {
-      "symbol": "COIW",
-      "name": "Roundhill COIN WeeklyPay ETF",
-      "votes": 2,
-      "yield": "69.9%"
-    },
-    {
-      "symbol": "CONY",
-      "name": "YieldMax COIN Option Income Strategy ETF",
-      "votes": 2,
-      "yield": "66%"
-    },
-    {
-      "symbol": "EGGY",
-      "name": "NestYield Dynamic Income ETF",
-      "votes": 2,
-      "yield": "37.0%"
-    },
-    {
-      "symbol": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 2,
-      "yield": "25.2%"
-    },
-    {
-      "symbol": "GIAX",
-      "name": "Nicholas Global Equity and Income ETF",
-      "votes": 2,
-      "yield": "24.0%"
+      "yield": "12.04%"
     }
   ]
 }
