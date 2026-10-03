@@ -11,6 +11,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-etf-pages.mjs'
+      - 'scripts/build-etf-images.mjs'
       - '.github/workflows/build-etf-pages.yml'
 
 permissions:
@@ -36,6 +37,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Build ETF ticker images (only new or renamed ETFs are rendered)
+        run: |
+          npm i --no-save --no-package-lock --no-audit --no-fund satori@0.35.0 @resvg/resvg-js@2.6.2 @fontsource/lato@5.3.0
+          node scripts/build-etf-images.mjs
+          rm -rf node_modules
+
       - name: Build ETF pages from the Google Sheet
         run: |
           rm -rf etfs
@@ -49,7 +56,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A etfs sitemap.xml
+          git add -A etfs etf-images sitemap.xml
           if git diff --cached --quiet; then
             echo "No changes."
             echo "changed=false" >> "$GITHUB_OUTPUT"
