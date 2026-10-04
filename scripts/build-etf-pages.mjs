@@ -196,6 +196,10 @@ const BANNER = `<div class="banner">
     <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
 </div>`;
 
+const SIGNUP = `<!-- EMAIL SIGNUP -->
+    <div class="etf-signup" data-variant="featured" data-color="#1A3C34" data-accent="#2E5D54" data-source="topdividendetfs"></div>
+    <script src="/email-signup.js" defer></script>`;
+
 const PRO_BOX = (txt) => `<div class="pro-box">
       <h3>🚨 For Serious Dividend Investors: TopDividendETFsPRO</h3>
       <p>${txt}</p>
@@ -431,6 +435,8 @@ ${BANNER}
       </div>
     </div>
 
+    ${SIGNUP}
+
     <div class="navbar">
       <a class="nav-btn prev" href="${prev.url}"><small>◀ Higher yield</small>${prev.sym} · ${fmtYield(prev.yield)}</a>
       <button class="nav-btn rand" onclick="randomEtf()">🎲 Random</button>
@@ -611,6 +617,7 @@ ${BANNER}
         <div class="stat-pill"><strong>${fmtAum(list.reduce((s, x) => s + x.aum, 0))}</strong>Total AUM</div>
       </div>
     </div>
+    ${SIGNUP}
     <div class="navbar" style="grid-template-columns:1fr"><button class="nav-btn rand" onclick="randomEtf()">🎲 Show me a random ETF</button></div>
     ${SEARCH}
     <div class="updated-line"><span class="updated-dot" aria-hidden="true"></span>Data updated: <strong><time datetime="${isoDate}">${niceDate}</time></strong></div>
