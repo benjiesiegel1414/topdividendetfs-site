@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-04T04:22:38.229Z",
+  "updated": "2026-10-04T11:47:57.861Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 13,
+      "votes": 15,
       "yield": "41%"
     },
     {
       "symbol": "FEPI",
       "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 4,
+      "votes": 6,
       "yield": "25.2%"
-    },
-    {
-      "symbol": "MSTY",
-      "name": "YieldMax MSTR Option Income Strategy ETF",
-      "votes": 4,
-      "yield": "100%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 4,
+      "votes": 6,
       "yield": "10.5%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 4,
+      "votes": 6,
       "yield": "17.4%"
     },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 4,
+      "votes": 6,
       "yield": "21%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 3,
+      "votes": 5,
       "yield": "36.0%"
+    },
+    {
+      "symbol": "XBCI",
+      "name": "NEOS Boosted Bitcoin High Income ETF",
+      "votes": 5,
+      "yield": "39%"
+    },
+    {
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 4,
+      "yield": "34.8%"
     },
     {
       "symbol": "GIAX",
       "name": "Nicholas Global Equity and Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "24.0%"
     },
     {
       "symbol": "ISBG",
       "name": "IncomeSTKd 1X Bitcoin & 1X Gold Premium ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "17%"
-    },
-    {
-      "symbol": "SMYY",
-      "name": "GraniteShares YieldBOOST SMCI ETF",
-      "votes": 3,
-      "yield": "71%"
     }
   ]
 }
