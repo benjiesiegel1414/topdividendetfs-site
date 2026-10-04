@@ -1,12 +1,30 @@
 {
-  "updated": "2026-10-03T20:36:15.748Z",
+  "updated": "2026-10-04T04:22:38.229Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 10,
+      "votes": 13,
       "yield": "41%"
+    },
+    {
+      "symbol": "FEPI",
+      "name": "REX FANG & Innovation Equity Premium Income ETF",
+      "votes": 4,
+      "yield": "25.2%"
+    },
+    {
+      "symbol": "MSTY",
+      "name": "YieldMax MSTR Option Income Strategy ETF",
+      "votes": 4,
+      "yield": "100%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 4,
+      "yield": "10.5%"
     },
     {
       "symbol": "TDAQ",
@@ -27,12 +45,6 @@
       "yield": "36.0%"
     },
     {
-      "symbol": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 3,
-      "yield": "25.2%"
-    },
-    {
       "symbol": "GIAX",
       "name": "Nicholas Global Equity and Income ETF",
       "votes": 3,
@@ -45,22 +57,10 @@
       "yield": "17%"
     },
     {
-      "symbol": "MSTY",
-      "name": "YieldMax MSTR Option Income Strategy ETF",
-      "votes": 3,
-      "yield": "100%"
-    },
-    {
       "symbol": "SMYY",
       "name": "GraniteShares YieldBOOST SMCI ETF",
       "votes": 3,
       "yield": "71%"
-    },
-    {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 3,
-      "yield": "12.04%"
     }
   ]
 }
