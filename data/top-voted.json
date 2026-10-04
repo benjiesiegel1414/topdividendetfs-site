@@ -1,65 +1,65 @@
 {
-  "updated": "2026-10-04T16:27:58.515Z",
+  "updated": "2026-10-04T20:52:44.106Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 17,
+      "votes": 19,
       "yield": "41%"
-    },
-    {
-      "symbol": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 8,
-      "yield": "25.2%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 8,
-      "yield": "17.4%"
     },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 8,
+      "votes": 15,
       "yield": "21%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 7,
+      "votes": 10,
       "yield": "36.0%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 7,
-      "yield": "10.5%"
+      "symbol": "FEPI",
+      "name": "REX FANG & Innovation Equity Premium Income ETF",
+      "votes": 10,
+      "yield": "25.2%"
+    },
+    {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 10,
+      "yield": "17.4%"
     },
     {
       "symbol": "XBCI",
       "name": "NEOS Boosted Bitcoin High Income ETF",
-      "votes": 7,
+      "votes": 9,
       "yield": "39%"
     },
     {
       "symbol": "AIPI",
       "name": "REX AI Equity Premium Income ETF",
-      "votes": 6,
+      "votes": 8,
       "yield": "34.8%"
     },
     {
       "symbol": "GIAX",
       "name": "Nicholas Global Equity and Income ETF",
-      "votes": 6,
+      "votes": 8,
       "yield": "24.0%"
+    },
+    {
+      "symbol": "QDVO",
+      "name": "Amplify CWP Growth & Income ETF",
+      "votes": 8,
+      "yield": "10.0%"
     },
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 6,
+      "votes": 8,
       "yield": "12.04%"
     }
   ]
