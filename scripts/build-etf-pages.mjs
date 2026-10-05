@@ -339,6 +339,7 @@ ${EXTRA_CSS}
   <div class="content">
 ${body}
   </div>
+<script src="/sticky-ad.js" defer></script>
 </body>
 </html>
 `;

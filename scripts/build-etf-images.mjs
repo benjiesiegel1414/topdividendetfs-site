@@ -170,6 +170,7 @@ ${body}
 ${BANNER}
 </div>
 ${FOOT}
+<script src="/sticky-ad.js" defer></script>
 </body>
 </html>
 `;
