@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-05T04:07:33.468Z",
+  "updated": "2026-10-05T13:38:31.778Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 22,
+      "votes": 25,
       "yield": "41%"
     },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 15,
+      "votes": 17,
       "yield": "21%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 11,
+      "votes": 13,
       "yield": "17.4%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "36.0%"
     },
     {
       "symbol": "FEPI",
       "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "25.2%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 10,
+      "yield": "12.04%"
+    },
+    {
+      "symbol": "XBCI",
+      "name": "NEOS Boosted Bitcoin High Income ETF",
+      "votes": 10,
+      "yield": "39%"
+    },
+    {
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 9,
+      "yield": "34.8%"
+    },
+    {
+      "symbol": "GIAX",
+      "name": "Nicholas Global Equity and Income ETF",
+      "votes": 9,
+      "yield": "24.0%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 9,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 9,
-      "yield": "12.04%"
-    },
-    {
-      "symbol": "XBCI",
-      "name": "NEOS Boosted Bitcoin High Income ETF",
-      "votes": 9,
-      "yield": "39%"
-    },
-    {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 8,
-      "yield": "34.8%"
-    },
-    {
-      "symbol": "GIAX",
-      "name": "Nicholas Global Equity and Income ETF",
-      "votes": 8,
-      "yield": "24.0%"
     }
   ]
 }
