@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-08T22:54:42.140Z",
+  "updated": "2026-10-09T04:37:59.986Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 61,
+      "votes": 62,
       "yield": "21%"
     },
     {
@@ -29,26 +29,26 @@
     {
       "symbol": "QDVO",
       "name": "Amplify CWP Growth & Income ETF",
-      "votes": 16,
+      "votes": 21,
       "yield": "11.2%"
     },
     {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 15,
+      "votes": 20,
       "yield": "14.1%"
+    },
+    {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 14,
+      "yield": "36.0%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
       "votes": 14,
       "yield": "17.6%"
-    },
-    {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 13,
-      "yield": "36.0%"
     },
     {
       "symbol": "FEPI",
