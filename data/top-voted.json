@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-09T12:35:51.906Z",
+  "updated": "2026-10-09T22:16:14.958Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 62,
+      "votes": 5,
       "yield": "21%"
+    },
+    {
+      "symbol": "HAKY",
+      "name": "Amplify HACK Cybersecurity Covered Call ETF",
+      "votes": 4,
+      "yield": "15%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 4,
+      "yield": "10.5%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 58,
+      "votes": 4,
       "yield": "0.7%"
     },
     {
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 56,
+      "votes": 4,
       "yield": "7.3%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 46,
-      "yield": "43%"
-    },
-    {
-      "symbol": "QDVO",
-      "name": "Amplify CWP Growth & Income ETF",
-      "votes": 21,
-      "yield": "11.2%"
-    },
-    {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 20,
-      "yield": "14.1%"
+      "symbol": "AMDW",
+      "name": "AMDW AMD WeeklyPay ETF",
+      "votes": 1,
+      "yield": "74.8%"
     },
     {
       "symbol": "BLOX",
       "name": "Nicholas Crypto Income ETF",
-      "votes": 14,
+      "votes": 1,
       "yield": "36.0%"
     },
     {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 14,
-      "yield": "17.6%"
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 1,
+      "yield": "43%"
     },
     {
-      "symbol": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "votes": 13,
-      "yield": "25.2%"
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 1,
+      "yield": "34.2%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 11,
-      "yield": "12.15%"
+      "symbol": "QDTE",
+      "name": "Roundhill Innovation-100 0DTE Covered Call Strategy ETF",
+      "votes": 1,
+      "yield": "20.0%"
     }
   ]
 }
