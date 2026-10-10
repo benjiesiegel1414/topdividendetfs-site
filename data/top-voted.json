@@ -1,18 +1,30 @@
 {
-  "updated": "2026-10-10T11:55:57.084Z",
+  "updated": "2026-10-10T17:02:14.112Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 7,
+      "votes": 10,
       "yield": "21%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 9,
+      "yield": "0.7%"
     },
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 6,
+      "votes": 8,
       "yield": "15%"
+    },
+    {
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 8,
+      "yield": "7.3%"
     },
     {
       "symbol": "OVL",
@@ -21,16 +33,10 @@
       "yield": "10.5%"
     },
     {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 6,
-      "yield": "0.7%"
-    },
-    {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 6,
-      "yield": "7.3%"
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 3,
+      "yield": "43%"
     },
     {
       "symbol": "AMDW",
@@ -51,16 +57,10 @@
       "yield": "36.0%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "symbol": "DRMP",
+      "name": "Tuttle Capital Memory Stack Income Blast ETF",
       "votes": 1,
-      "yield": "43%"
-    },
-    {
-      "symbol": "EGGY",
-      "name": "NestYield Dynamic Income ETF",
-      "votes": 1,
-      "yield": "34.2%"
+      "yield": "30%"
     }
   ]
 }
