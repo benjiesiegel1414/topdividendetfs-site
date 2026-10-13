@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T00:09:31.113Z",
+  "updated": "2026-10-13T13:35:50.859Z",
   "total_tracked": 158,
   "top": [
     {
@@ -47,7 +47,7 @@
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 8,
+      "votes": 9,
       "yield": "12.15%"
     },
     {
@@ -57,10 +57,10 @@
       "yield": "17.1%"
     },
     {
-      "symbol": "OVF",
-      "name": "Overlay Shares Foreign Equity ETF",
+      "symbol": "JEPQ",
+      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
       "votes": 4,
-      "yield": "10.8%"
+      "yield": "11.2%"
     }
   ]
 }
