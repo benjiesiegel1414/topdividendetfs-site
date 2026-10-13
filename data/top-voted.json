@@ -1,24 +1,30 @@
 {
-  "updated": "2026-10-13T13:35:50.859Z",
+  "updated": "2026-10-13T22:18:13.896Z",
   "total_tracked": 158,
   "top": [
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 49,
-      "yield": "43%"
-    },
-    {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 46,
+      "votes": 58,
       "yield": "21%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 50,
+      "yield": "40%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 34,
+      "votes": 45,
       "yield": "0.7%"
+    },
+    {
+      "symbol": "HAKY",
+      "name": "Amplify HACK Cybersecurity Covered Call ETF",
+      "votes": 33,
+      "yield": "15%"
     },
     {
       "symbol": "TDAQ",
@@ -27,22 +33,16 @@
       "yield": "17.6%"
     },
     {
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 33,
+      "yield": "7.3%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 30,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "HAKY",
-      "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 24,
-      "yield": "15%"
-    },
-    {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 24,
-      "yield": "7.3%"
     },
     {
       "symbol": "SPYI",
