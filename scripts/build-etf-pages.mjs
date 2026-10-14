@@ -446,6 +446,7 @@ ${BANNER}
         <a class="chip" href="/etfs/category/${catSlug}">${e.cat}</a>
         <a class="chip" href="/etfs/grade/${gradeSlugE}">${e.grade} rated</a>
         <a class="chip" href="${e.decay ? '/etfs/highest-yield' : '/10-highest-yield-etfs'}">${e.decay ? 'Price decay: Yes' : 'No price decay'}</a>
+        ${e.datesUrl ? `<a class="chip" href="${e.datesUrl}">📅 ${e.sym} dividend dates</a>` : ''}
       </div>
       <div class="quick-stats">
         <div class="stat-pill"><a href="/etfs/highest-yield#${e.sym}"><strong>${fmtYield(e.yield)}</strong>Dividend Yield</a></div>
@@ -665,10 +666,221 @@ if(location.hash){var r=document.getElementById(location.hash.slice(1));if(r){r.
   return shell({ title, desc, canonical: SITE + urlPath, body, schema: [{ '@context': 'https://schema.org', '@type': 'ItemList', name: h1, numberOfItems: list.length, itemListElement: list.slice(0, 50).map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + x.url, name: x.sym + ' ' + x.name })) }] });
 }
 
+// ---------- dividend dates pages ----------
+// /etfs/<sym>-dividend-dates for every ETF on the list, plus /etfs/dividend-calendar.
+// Payout data comes from the TopETFs daily dividend file (Nasdaq.com, Yahoo Finance fallback).
+// A local copy in data/dividends-cache.json is used if that download ever fails, so pages never vanish.
+const DIV_URL = 'https://raw.githubusercontent.com/benjiesiegel1414/topetfs/main/data/dividends.json';
+const DIV_CACHE = path.join(ROOT, 'data', 'dividends-cache.json');
+let DIVS = { funds: {} };
+try {
+  const r = await fetch(DIV_URL + '?t=' + Date.now());
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  DIVS = await r.json();
+  if (Object.keys(DIVS.funds || {}).length > 50) { fs.mkdirSync(path.dirname(DIV_CACHE), { recursive: true }); fs.writeFileSync(DIV_CACHE, JSON.stringify(DIVS)); }
+} catch (err) {
+  console.log('::warning::Dividend data download failed, using cached copy: ' + err.message);
+  try { DIVS = JSON.parse(fs.readFileSync(DIV_CACHE, 'utf8')); } catch { DIVS = { funds: {} }; }
+}
+// ETFs that already have a hand-written dividend dates post. Those keep their URL (they already rank),
+// so no generated page is made for them; everything links to the existing post instead.
+const HAND_DATES = {
+  SCHD: '/schd-etf-2026-dividend-dates', QQQI: '/qqqi-etf-dividend-dates-2026', JEPQ: '/jepq-etf-dividend-dates-2026',
+  JEPI: '/jepi-etf-dividend-dates-2026', SPYI: '/spyi-etf-dividend-dates-2026', VYM: '/vym-etf-2026-dividend-dates',
+  VOO: '/voo-etf-dividend-dates-2026', DGRO: '/dgro-etf-ex-dividend-dates-2026'
+};
+// NEOS publishes every 2026 ex/pay date in advance; funds on that calendar get confirmed dates, not estimates.
+const NEOS_2026 = [['2026-01-21','2026-01-23'],['2026-02-18','2026-02-20'],['2026-03-18','2026-03-20'],['2026-04-22','2026-04-24'],['2026-05-20','2026-05-22'],['2026-06-16','2026-06-18'],
+  ['2026-07-22','2026-07-24'],['2026-08-19','2026-08-21'],['2026-09-16','2026-09-18'],['2026-10-21','2026-10-23'],['2026-11-18','2026-11-20'],['2026-12-16','2026-12-18']];
+// Dates the issuer has already published for a single fund ([ex, pay]); used ahead of estimates.
+const KNOWN_NEXT = { SCHD: [['2026-12-10', '2026-12-15']] };
+const datesUrl = sym => HAND_DATES[sym] || (DIVS.funds[sym] ? '/etfs/' + sym.toLowerCase() + '-dividend-dates' : null);
+const YEAR = today.getUTCFullYear();
+const dD = s => new Date(s + 'T12:00:00Z');
+const iso = d => d.toISOString().slice(0, 10);
+const fD = (s, long) => s ? dD(s).toLocaleDateString('en-US', { month: long ? 'long' : 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : '';
+const fMD = s => dD(s).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+const amt = v => { let x = v.toFixed(v < 1 ? 4 : 3).replace(/0+$/, ''); if (!/\.\d\d/.test(x)) x = (+x).toFixed(2); return '$' + x; };
+const bizFwd = d => { const x = new Date(d); while (x.getUTCDay() === 0 || x.getUTCDay() === 6) x.setUTCDate(x.getUTCDate() + 1); return x; };
+const FREQ_N = { Weekly: 52, Monthly: 12, Quarterly: 4, 'Semi-annual': 2, Annual: 1 };
+function divInfo(sym) {
+  const f = DIVS.funds[sym]; if (!f || !f.rows || !f.rows.length) return null;
+  const rows = f.rows.filter(x => x[0] && x[1] > 0);
+  if (!rows.length) return null;
+  const tIso = iso(today);
+  const past = rows.filter(x => x[0] <= tIso), future = rows.filter(x => x[0] > tIso).reverse();
+  const yearAgo = iso(new Date(today.getTime() - 365 * 864e5));
+  const t12 = past.filter(x => x[0] > yearAgo);
+  const n12 = t12.length;
+  const freq = n12 >= 40 ? 'Weekly' : n12 >= 9 ? 'Monthly' : n12 >= 3 ? 'Quarterly' : n12 === 2 ? 'Semi-annual' : 'Annual';
+  const step = { Weekly: 0, Monthly: 1, Quarterly: 3, 'Semi-annual': 6, Annual: 12 }[freq];
+  // Next ex-date: a declared one if the data has it, otherwise an estimate from the recent pattern.
+  let projected = [], confirmed = null;
+  if (past.length) {
+    let last = dD(past[0][0]);
+    const recent = past.slice(0, 4).map(x => dD(x[0]));
+    const wd = recent.map(d => d.getUTCDay()), mode = wd.sort((a, b) => wd.filter(v => v === a).length - wd.filter(v => v === b).length).pop();
+    const sameWd = recent.filter(d => d.getUTCDay() === mode).length >= 3;
+    const avgDay = Math.round(recent.slice(0, 3).reduce((s, d) => s + d.getUTCDate(), 0) / Math.min(3, recent.length));
+    const nextFrom = d => {
+      if (!step) return new Date(d.getTime() + 7 * 864e5);
+      const m = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + step, 1));
+      const dim = new Date(Date.UTC(m.getUTCFullYear(), m.getUTCMonth() + 1, 0)).getUTCDate();
+      let x = new Date(Date.UTC(m.getUTCFullYear(), m.getUTCMonth(), Math.min(avgDay, dim)));
+      if (sameWd) { let best = x, bd = 9; for (let k = -3; k <= 3; k++) { const y = new Date(x.getTime() + k * 864e5); if (y.getUTCDay() === mode && Math.abs(k) < bd && y.getUTCMonth() === m.getUTCMonth()) { best = y; bd = Math.abs(k); } } x = best; }
+      return bizFwd(x);
+    };
+    let d = last;
+    for (let i = 0; i < 60 && projected.length < (step ? 14 : 6); i++) { d = nextFrom(d); if (iso(d) > tIso && !future.some(x => Math.abs(dD(x[0]) - d) < 10 * 864e5)) projected.push(iso(d)); }
+  }
+  if (past.length >= 3 && past.slice(0, 3).every(x => NEOS_2026.some(r => r[0] === x[0]))) {
+    const up = NEOS_2026.filter(r => r[0] > tIso);
+    if (up.length) { confirmed = { by: 'NEOS', rows: up }; projected = up.map(r => r[0]); }
+  }
+  if (!confirmed && KNOWN_NEXT[sym]) { const up = KNOWN_NEXT[sym].filter(r => r[0] > tIso); if (up.length) confirmed = { by: 'issuer', rows: up }; }
+  const next = future.length ? { date: future[0][0], amount: future[0][1], pay: future[0][2], declared: true } : confirmed ? { date: confirmed.rows[0][0], pay: confirmed.rows[0][1], declared: true } : projected.length ? { date: projected[0], declared: false } : null;
+  const sum = a => a.reduce((s, x) => s + x[1], 0);
+  const years = {}; for (const x of past) { const y = x[0].slice(0, 4); (years[y] ||= []).push(x); }
+  const p12 = past.filter(x => x[0] <= yearAgo && x[0] > iso(new Date(today.getTime() - 730 * 864e5)));
+  const chg12 = p12.length >= n12 * 0.75 && sum(p12) > 0 && n12 ? (sum(t12) / sum(p12) - 1) * 100 : null;
+  const restOfYear = projected.filter(d => d.slice(0, 4) === String(YEAR));
+  return { sym, src: f.src === 'nasdaq' ? 'Nasdaq.com' : 'Yahoo Finance', rows, past, future, last: past[0], prior: past[1], t12, s12: sum(t12), n12, chg12, freq, next, projected, restOfYear, confirmed, years, hasPay: past.slice(0, 6).some(x => x[2]) };
+}
+for (const e of ETFS) { e.div = divInfo(e.sym); e.datesUrl = datesUrl(e.sym); }
+
+function divDatesPage(e) {
+  const d = e.div, S = e.sym, $ = '$' + S, url = '/etfs/' + S.toLowerCase() + '-dividend-dates';
+  const last = d.last, nx = d.next;
+  const nextTxt = nx ? (nx.declared ? `${fD(nx.date, 1)}` : `around ${fD(nx.date, 1)}`) : 'not yet announced';
+  const title = nx ? `${S} Dividend Dates ${YEAR}: Next Ex-Date ${nx.declared ? '' : '~'}${fMD(nx.date)}, Last Paid ${amt(last ? last[1] : 0)}` : `${S} Dividend Dates ${YEAR}: Ex-Dividend Dates & Pay Dates`;
+  const desc = `${S}'s next ex-dividend date is ${nx && !nx.declared ? 'expected ' : ''}${nextTxt}. ${last ? `Its last dividend was ${amt(last[1])} per share, ex-date ${fD(last[0], 1)}${last[2] ? `, paid ${fD(last[2], 1)}` : ''}. ` : ''}Every ${YEAR} ${S} ex-dividend date and amount, updated daily.`;
+  const thisYear = d.years[String(YEAR)] || [], lastYear = d.years[String(YEAR - 1)] || [];
+  const sameIss = (issuers[e.issuer] || []).filter(x => x !== e && x.datesUrl).sort((a, b) => b.aum - a.aum).slice(0, 8);
+  const simi = (cats[e.cat] || []).filter(x => x !== e && x.datesUrl && !sameIss.includes(x)).sort((a, b) => Math.abs(a.yield - e.yield) - Math.abs(b.yield - e.yield)).slice(0, 8);
+  const row = (x, i, list) => { const p = list[i + 1], c = p && p[1] > 0 ? (x[1] / p[1] - 1) * 100 : null; return `<tr><td>${fD(x[0])}</td>${d.hasPay ? `<td>${x[2] ? fD(x[2]) : '-'}</td>` : ''}<td><strong>${amt(x[1])}</strong></td><td class="hide-m">${c == null || Math.abs(c) < 0.05 ? '-' : (c > 0 ? '+' : '') + c.toFixed(1) + '%'}</td></tr>`; };
+  const head = `<thead><tr><th>Ex-dividend date</th>${d.hasPay ? '<th>Pay date</th>' : ''}<th>Amount</th><th class="hide-m">Change</th></tr></thead>`;
+  const nMonth = nx ? dD(nx.date).toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' }) : '';
+  const faqs = [
+    [`When is ${S}'s next ex-dividend date?`, nx ? (nx.declared ? `${S}'s next ex-dividend date is ${fD(nx.date, 1)}${nx.amount ? `, for ${amt(nx.amount)} per share` : ''}${nx.pay ? `, paid ${fD(nx.pay, 1)}` : ''}.` : `${S} has not announced its next dividend yet. Based on its ${d.freq.toLowerCase()} payment pattern, the next ex-dividend date is expected around ${fD(nx.date, 1)}. Check ${esc(e.issuer)}'s website to confirm once it is declared.`) : `${S} has not announced its next dividend yet.`],
+    [`How often does ${S} pay dividends?`, `${S} pays ${d.freq.toLowerCase()}. It made ${d.n12} payment${d.n12 === 1 ? '' : 's'} in the last 12 months.`],
+    [`What was ${S}'s last dividend?`, last ? `${S}'s most recent dividend was ${amt(last[1])} per share, with an ex-dividend date of ${fD(last[0], 1)}${last[2] ? ` and a pay date of ${fD(last[2], 1)}` : ''}.` : `We do not have a recent payout on file for ${S}.`],
+    [`How much has ${S} paid in the last 12 months?`, `${S} paid ${amt(d.s12)} per share over the last 12 months across ${d.n12} payments.${d.chg12 != null ? ` That is ${d.chg12 >= 0 ? 'up' : 'down'} ${Math.abs(d.chg12).toFixed(1)}% from the 12 months before.` : ''}`],
+    [`What does the ex-dividend date mean?`, `You need to own ${S} before the ex-dividend date to receive that payout. If you buy on or after the ex-date, the seller gets the dividend. The pay date is when the cash actually lands in your account.`]
+  ];
+  if (nx && !nx.declared) faqs.splice(1, 0, [`Will ${S} pay a dividend in ${nMonth}?`, `Based on its ${d.freq.toLowerCase()} schedule, ${S} is expected to go ex-dividend around ${fD(nx.date, 1)}. The exact date and amount are set by ${esc(e.issuer)} when the dividend is declared.`]);
+  const schema = [
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Dividend Calendar', item: SITE + '/etfs/dividend-calendar' },
+      { '@type': 'ListItem', position: 3, name: S + ' Dividend Dates', item: SITE + url }] }
+  ];
+  const body = `
+${BANNER}
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/etfs/dividend-calendar">Dividend Calendar</a><span>›</span><a href="${e.url}">${S}</a><span>›</span>Dividend Dates</nav>
+
+    <div class="hero-block">
+      <div class="tk">${S}</div>
+      <h1>${S} Dividend Dates ${YEAR}: Ex-Dividend Dates, Pay Dates &amp; Amounts</h1>
+      <div class="chips">
+        <a class="chip" href="${e.url}">${esc(e.name)}</a>
+        <a class="chip" href="/etfs/dividend-calendar">Pays ${d.freq.toLowerCase()}</a>
+        <a class="chip" href="/etfs/issuer/${slug(e.issuer)}">${esc(e.issuer)}</a>
+      </div>
+      <div class="quick-stats">
+        <div class="stat-pill"><strong>${nx ? (nx.declared ? '' : '~') + fMD(nx.date) : 'TBA'}</strong>Next Ex-Date${nx && !nx.declared ? ' (est.)' : ''}</div>
+        <div class="stat-pill"><strong>${last ? amt(last[1]) : 'n/a'}</strong>Last Dividend</div>
+        <div class="stat-pill"><strong>${amt(d.s12)}</strong>Paid, Last 12 Mo</div>
+        <div class="stat-pill"><a href="${e.url}"><strong>${fmtYield(e.yield)}</strong>Dividend Yield</a></div>
+      </div>
+    </div>
+
+    <div class="updated-line"><span class="updated-dot" aria-hidden="true"></span>Dividend data updated: <strong><time datetime="${isoDate}">${niceDate}</time></strong> · Source: ${d.src}</div>
+
+    <div class="answer-box">
+      <div class="ab-label">${S} next dividend</div>
+      <p>${nx ? (nx.declared ? `<strong>${$}</strong>'s next ex-dividend date is <strong>${fD(nx.date, 1)}</strong>${nx.amount ? ` for <strong>${amt(nx.amount)}</strong> per share` : ''}${nx.pay ? `, paid ${fD(nx.pay, 1)}` : ''}.` : `<strong>${$}</strong> has not declared its next dividend yet. Based on its ${d.freq.toLowerCase()} pattern, the next ex-dividend date is expected <strong>around ${fD(nx.date, 1)}</strong>.`) : `<strong>${$}</strong> has not announced its next dividend yet.`} ${last ? `The last dividend was <strong>${amt(last[1])}</strong> per share (ex-date ${fD(last[0], 1)}${last[2] ? `, paid ${fD(last[2], 1)}` : ''})${d.prior && d.prior[1] > 0 && Math.abs(last[1] / d.prior[1] - 1) >= 0.0005 ? `, ${last[1] > d.prior[1] ? 'up' : 'down'} ${Math.abs((last[1] / d.prior[1] - 1) * 100).toFixed(1)}% from the one before` : ''}.` : ''} Over the last 12 months ${$} paid <strong>${amt(d.s12)}</strong> per share across ${d.n12} payments.</p>
+    </div>
+
+    ${SIGNUP}
+
+    <h2 class="section-title">${S} Dividends Paid in ${YEAR}</h2>
+    <p class="section-lead">${thisYear.length ? `${thisYear.length} payment${thisYear.length === 1 ? '' : 's'} so far in ${YEAR}, totaling ${amt(thisYear.reduce((s, x) => s + x[1], 0))} per share. Newest first.` : `No ${YEAR} payouts on file yet.`}</p>
+    ${thisYear.length ? `<table class="cmp">${head}<tbody>${thisYear.map((x, i) => row(x, i, d.past)).join('')}</tbody></table>` : ''}
+
+    ${d.confirmed ? `<h2 class="section-title">Upcoming ${S} Dividend Dates for the Rest of ${YEAR}</h2>
+    <p class="section-lead">${esc(e.issuer)} publishes the full year's schedule in advance. Amounts are announced the day before each ex-date.</p>
+    <table class="cmp"><thead><tr><th>Ex-dividend date</th><th>Pay date</th><th>Status</th></tr></thead><tbody>${d.confirmed.rows.map((r, i) => `<tr><td>${fD(r[0])}</td><td>${fD(r[1])}</td><td>${i ? 'Scheduled' : '<strong>Next</strong>'}</td></tr>`).join('')}</tbody></table>` : ''}
+    ${d.restOfYear.length && !d.future.length && !d.confirmed ? `<h2 class="section-title">Expected ${S} Ex-Dividend Dates for the Rest of ${YEAR}</h2>
+    <p class="section-lead">Estimated from ${S}'s recent ${d.freq.toLowerCase()} payment pattern. ${esc(e.issuer)} sets the official dates and amounts when each dividend is declared, so treat these as a guide.</p>
+    <table class="cmp"><thead><tr><th>Expected ex-date</th><th>Status</th></tr></thead><tbody>${d.restOfYear.slice(0, 12).map(x => `<tr><td>Around ${fD(x)}</td><td>Estimate</td></tr>`).join('')}</tbody></table>` : ''}
+
+    ${lastYear.length ? `<h2 class="section-title">${S} Dividends Paid in ${YEAR - 1}</h2>
+    <p class="section-lead">${lastYear.length} payments totaling ${amt(lastYear.reduce((s, x) => s + x[1], 0))} per share.</p>
+    <table class="cmp">${head}<tbody>${lastYear.map(x => row(x, d.past.indexOf(x), d.past)).join('')}</tbody></table>` : ''}
+
+    <h2 class="section-title">${S} Dividends by Year</h2>
+    <table class="cmp"><thead><tr><th>Year</th><th>Payments</th><th>Total per share</th></tr></thead><tbody>${Object.keys(d.years).sort().reverse().slice(0, 10).map(y => `<tr><td>${y}${y === String(YEAR) ? ' (so far)' : ''}</td><td>${d.years[y].length}</td><td><strong>${amt(d.years[y].reduce((s, x) => s + x[1], 0))}</strong></td></tr>`).join('')}</tbody></table>
+
+    ${PRO_BOX(`Track ${$}'s payout trends, yield history, grades and tax treatment alongside 150+ other income ETFs in the TopDividendETFsPRO terminal.`)}
+
+    ${sameIss.length ? `<h2 class="section-title">More ${esc(e.issuer)} Dividend Dates</h2>
+    <div class="tk-strip">${sameIss.map(x => `<a href="${x.datesUrl}">${x.sym} dividend dates</a>`).join('')}</div>` : ''}
+    ${simi.length ? `<h2 class="section-title">Similar ETFs' Dividend Dates</h2>
+    <div class="tk-strip">${simi.map(x => `<a href="${x.datesUrl}">${x.sym} dividend dates</a>`).join('')}</div>` : ''}
+    <div class="hub-links"><a href="/etfs/dividend-calendar">Full ETF dividend calendar</a><a href="${e.url}">${S} yield, grade &amp; income calculator</a><a href="/etfs/highest-yield">Highest yield ETFs</a></div>
+
+    <h2 class="section-title">${S} Dividend Dates FAQ</h2>
+    <ul class="faq-list">
+${faqs.map(([q, a]) => `      <li class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">${esc(q)}<span class="faq-icon">+</span></div><div class="faq-a">${esc(a)}</div></li>`).join('\n')}
+    </ul>
+
+    <div class="disclaimer-box">
+      <h3>Important Disclaimer</h3>
+      <p>TopDividendETFs.com is published by Dividend Empire LLC for educational and informational purposes only. Dividend dates and amounts come from ${d.src} and are refreshed daily, but may be delayed, incomplete or adjusted for splits. Expected dates are estimates based on past payment patterns, not announcements. Distributions can change or stop and may include return of capital. Always confirm dates and amounts with ${esc(e.issuer)} before investing. This is not financial advice.</p>
+    </div>
+
+${BANNER}
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
+    ${FOOTER}
+${CLIENT_JS(S)}`;
+  const ogImage = fs.existsSync(path.join(ROOT, 'etf-images', S.toLowerCase() + '-etf-wide.png')) ? `${SITE}/etf-images/${S.toLowerCase()}-etf-wide.png` : null;
+  return shell({ title, desc, canonical: SITE + url, body, schema, ogImage });
+}
+
+function calendarPage() {
+  const list = ETFS.filter(e => e.div && e.div.next).sort((a, b) => a.div.next.date.localeCompare(b.div.next.date) || b.aum - a.aum);
+  const title = `ETF Dividend Calendar ${YEAR}: Upcoming Ex-Dividend Dates for ${list.length} ETFs | TopDividendETFs`;
+  const desc = `Upcoming ex-dividend dates for ${list.length} dividend ETFs including SCHD, JEPQ, JEPI, QQQI, SPYI and MSTY. Last payout, frequency and 12-month total for each, updated daily.`;
+  const body = `
+${BANNER}
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/etfs/">All ETFs</a><span>›</span>Dividend Calendar</nav>
+    <div class="hero-block">
+      <h1>ETF Dividend Calendar ${YEAR}: Upcoming Ex-Dividend Dates</h1>
+      <p style="margin-top:8px">The next ex-dividend date for ${list.length} dividend ETFs, soonest first. Declared dates are confirmed; the rest are estimated from each fund's recent payment pattern.</p>
+    </div>
+    <div class="updated-line"><span class="updated-dot" aria-hidden="true"></span>Updated: <strong><time datetime="${isoDate}">${niceDate}</time></strong></div>
+    ${SIGNUP}
+    <table class="hub-table"><thead><tr><th>Next ex-date</th><th>ETF</th><th class="hide-m">Pays</th><th>Last dividend</th><th class="hide-m">Last 12 mo</th><th>Yield</th></tr></thead><tbody>
+${list.map(e => `      <tr><td>${e.div.next.declared ? '' : '~'}${fMD(e.div.next.date)}</td><td><a href="${e.datesUrl}"><strong>${e.sym}</strong></a></td><td class="hide-m">${e.div.freq}</td><td>${e.div.last ? amt(e.div.last[1]) : '-'}</td><td class="hide-m">${amt(e.div.s12)}</td><td>${fmtYield(e.yield)}</td></tr>`).join('\n')}
+    </tbody></table>
+    <p class="section-lead" style="margin-top:12px">~ means the date is estimated from the fund's recent schedule. Tap any ticker for its full ${YEAR} dividend dates, pay dates and amounts.</p>
+    ${PRO_BOX('See payout schedules, yield trends, grades and tax treatment for 150+ income ETFs in one terminal.')}
+    <div class="disclaimer-box"><h3>Important Disclaimer</h3><p>Dividend data comes from Nasdaq.com and Yahoo Finance and is refreshed daily, but may be delayed or incomplete. Estimated dates are based on past payment patterns, not announcements. Always confirm with the fund issuer. Educational information only, not financial advice.</p></div>
+${BANNER}
+    ${FOOTER}
+${CLIENT_JS('')}`;
+  return shell({ title, desc, canonical: SITE + '/etfs/dividend-calendar', body, schema: [{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'ETF Dividend Calendar', numberOfItems: list.length, itemListElement: list.slice(0, 50).map((e, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + e.datesUrl, name: e.sym + ' dividend dates' })) }] });
+}
+
 // ---------- write ----------
 function write(rel, html) { const p = path.join(OUT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 const targets = only.length ? ETFS.filter(e => only.includes(e.sym)) : ETFS;
 for (const e of targets) write(e.sym.toLowerCase() + '.html', etfPage(e));
+let nDates = 0;
+for (const e of targets) if (e.div && !HAND_DATES[e.sym]) { write(e.sym.toLowerCase() + '-dividend-dates.html', divDatesPage(e)); nDates++; }
+write('dividend-calendar.html', calendarPage());
+console.log(`Built ${nDates} dividend dates pages + calendar.`);
 
 write('index.html', hubPage({ urlPath: '/etfs/', title: `All ${N} Dividend ETFs A to Z: Yield, AUM & Grades | TopDividendETFs`, h1: `All ${N} Dividend ETFs A to Z`, eyebrow: 'ETF Directory', lead: 'Every dividend and income ETF on TopDividendETFs.com with its yield, size and grade. Tap any ticker for its full page.', desc: `Directory of all ${N} dividend ETFs tracked by TopDividendETFs.com with yields, AUM, grades and price decay.`, list: az }));
 write('highest-yield.html', hubPage({ urlPath: '/etfs/highest-yield', title: `Highest Yield Dividend ETFs Ranked (${N} ETFs) | TopDividendETFs`, h1: 'Dividend ETFs Ranked by Yield', eyebrow: 'Yield Rankings', lead: `All ${N} ETFs on our list from highest to lowest yield. Check the price decay column before chasing the biggest numbers.`, desc: `All ${N} dividend ETFs ranked by yield, with AUM, grades and price decay.`, list: byYield, crumbs: ['Highest Yield'] }));
