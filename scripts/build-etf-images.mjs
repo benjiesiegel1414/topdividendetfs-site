@@ -18,7 +18,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'etf-images');
 const SITE = 'https://topdividendetfs.com';
 const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv';
-const src = process.argv[2] || CSV_URL;
+const PRO_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTxCiod-Cwry7E6k9Un9dgrM_ANymC36_IO_wLyNj-YDo2KI7mp_1ZzyNBnBGZOxT48QPM8TCwtsmA4/pub?gid=0&single=true&output=csv';
+const src = process.argv.slice(2).find(a => !a.startsWith('--')) || CSV_URL;
 const VERSION = 2; // bump to force every image to re-render after a design change
 
 // ---------- data ----------
@@ -40,6 +41,24 @@ if (/^https?:/.test(src)) { const r = await fetch(src + '&t=' + Date.now()); if 
 else csvText = fs.readFileSync(src, 'utf8');
 const rows = parseCSV(csvText);
 const head = rows.shift().map(h => h.trim().toLowerCase());
+// Also pull the PRO sheet. Pages like "Dividend ETFs Beating VOO", Top Total Returns and Big Movers list
+// ETFs from it and link to /etfs/<ticker>, so every ETF on that sheet needs a page too.
+// The main sheet wins when a ticker is on both; if the PRO sheet can't be loaded we still build from the main one.
+const SKIP_PRO = new Set(['PDI', 'PTY']); // PIMCO closed-end funds on the PRO sheet, not ETFs: no pages for these
+const proArg = (process.argv.slice(2).find(a => a.startsWith('--pro=')) || '').slice(6);
+const proSrc = proArg || (/^https?:/.test(src) ? PRO_CSV_URL : '');
+if (proSrc) {
+  try {
+    let t;
+    if (/^https?:/.test(proSrc)) { const r = await fetch(proSrc + '&t=' + Date.now()); if (!r.ok) throw new Error('HTTP ' + r.status); t = await r.text(); }
+    else t = fs.readFileSync(proSrc, 'utf8');
+    const pr = parseCSV(t), ph = pr.shift().map(h => h.trim().toLowerCase());
+    const map = head.map(h => ph.indexOf(h));
+    if (map[head.findIndex(h => h.startsWith('symbol'))] < 0) throw new Error('no Symbol column');
+    const iSym = ph.findIndex(h => h.startsWith('symbol'));
+    for (const r of pr) if (!SKIP_PRO.has((r[iSym] || '').trim().toUpperCase())) rows.push(map.map(i => i < 0 ? '' : (r[i] || '')));
+  } catch (err) { console.log('::warning::PRO sheet not loaded, building from the main sheet only: ' + err.message); }
+}
 const iS = head.findIndex(h => h.startsWith('symbol')), iN = head.findIndex(h => h.startsWith('name'));
 const seen = new Set();
 const ETFS = rows.map(r => ({ sym: (r[iS] || '').trim().toUpperCase(), name: (r[iN] || '').replace(/\s+/g, ' ').trim() }))
