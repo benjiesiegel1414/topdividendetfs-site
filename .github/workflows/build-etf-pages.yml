@@ -12,6 +12,7 @@ on:
     paths:
       - 'scripts/build-etf-pages.mjs'
       - 'scripts/build-etf-images.mjs'
+      - 'scripts/update-neos-pages.mjs'
       - '.github/workflows/build-etf-pages.yml'
 
 permissions:
@@ -48,6 +49,9 @@ jobs:
           rm -rf etfs
           node scripts/build-etf-pages.mjs
 
+      - name: Refresh next-dividend details on the QQQI and SPYI posts
+        run: node scripts/update-neos-pages.mjs
+
       - name: Rebuild sitemap
         run: node generate-sitemap.js
 
@@ -56,7 +60,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A etfs etf-images sitemap.xml
+          git add -A etfs etf-images sitemap.xml data/dividends-cache.json qqqi-etf-dividend-dates-2026.html spyi-etf-dividend-dates-2026.html
           if git diff --cached --quiet; then
             echo "No changes."
             echo "changed=false" >> "$GITHUB_OUTPUT"
