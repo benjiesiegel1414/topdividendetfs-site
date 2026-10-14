@@ -1,12 +1,18 @@
 {
-  "updated": "2026-10-13T22:18:13.896Z",
+  "updated": "2026-10-14T03:35:42.280Z",
   "total_tracked": 158,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 58,
+      "votes": 65,
       "yield": "21%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 51,
+      "yield": "0.7%"
     },
     {
       "symbol": "CHPY",
@@ -15,34 +21,28 @@
       "yield": "40%"
     },
     {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 45,
-      "yield": "0.7%"
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 40,
+      "yield": "7.3%"
     },
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 33,
+      "votes": 39,
       "yield": "15%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 36,
+      "yield": "10.5%"
     },
     {
       "symbol": "TDAQ",
       "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
       "votes": 33,
       "yield": "17.6%"
-    },
-    {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 33,
-      "yield": "7.3%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 30,
-      "yield": "10.5%"
     },
     {
       "symbol": "SPYI",
@@ -57,10 +57,10 @@
       "yield": "17.1%"
     },
     {
-      "symbol": "JEPQ",
-      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 4,
-      "yield": "11.2%"
+      "symbol": "OVF",
+      "name": "Overlay Shares Foreign Equity ETF",
+      "votes": 5,
+      "yield": "10.8%"
     }
   ]
 }
