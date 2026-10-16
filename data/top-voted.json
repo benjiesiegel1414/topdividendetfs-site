@@ -1,18 +1,24 @@
 {
-  "updated": "2026-10-16T10:43:49.602Z",
+  "updated": "2026-10-16T16:06:18.099Z",
   "total_tracked": 159,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 77,
+      "votes": 80,
       "yield": "21%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 61,
+      "votes": 64,
       "yield": "8.3%"
+    },
+    {
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 63,
+      "yield": "7.5%"
     },
     {
       "symbol": "CHPY",
@@ -27,12 +33,6 @@
       "yield": "17.6%"
     },
     {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 49,
-      "yield": "7.3%"
-    },
-    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 48,
@@ -41,7 +41,7 @@
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 44,
+      "votes": 45,
       "yield": "15%"
     },
     {
@@ -60,7 +60,7 @@
       "symbol": "AMDW",
       "name": "AMDW AMD WeeklyPay ETF",
       "votes": 7,
-      "yield": "57.3%"
+      "yield": "43.1%"
     }
   ]
 }
