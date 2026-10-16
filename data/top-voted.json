@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T03:11:47.998Z",
+  "updated": "2026-10-16T10:43:49.602Z",
   "total_tracked": 159,
   "top": [
     {
@@ -57,10 +57,10 @@
       "yield": "17.1%"
     },
     {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
+      "symbol": "AMDW",
+      "name": "AMDW AMD WeeklyPay ETF",
       "votes": 7,
-      "yield": "14.3%"
+      "yield": "57.3%"
     }
   ]
 }
