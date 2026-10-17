@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-16T16:06:18.099Z",
+  "updated": "2026-10-17T03:02:41.976Z",
   "total_tracked": 159,
   "top": [
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 80,
-      "yield": "21%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 64,
-      "yield": "8.3%"
-    },
-    {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 63,
-      "yield": "7.5%"
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 2,
+      "yield": "10.5%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 57,
+      "votes": 1,
       "yield": "40%"
     },
     {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 49,
-      "yield": "17.6%"
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 1,
+      "yield": "34.2%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 48,
-      "yield": "10.5%"
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
+      "votes": 1,
+      "yield": "8.2%"
     },
     {
-      "symbol": "HAKY",
-      "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 45,
-      "yield": "15%"
+      "symbol": "ACKY",
+      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
+      "votes": 0,
+      "yield": "15.0%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 11,
-      "yield": "12.15%"
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
+      "votes": 0,
+      "yield": "34%"
     },
     {
-      "symbol": "XSPI",
-      "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 9,
-      "yield": "17.1%"
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 0,
+      "yield": "34.8%"
     },
     {
       "symbol": "AMDW",
       "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 7,
+      "votes": 0,
       "yield": "43.1%"
+    },
+    {
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "71%"
+    },
+    {
+      "symbol": "AMYY",
+      "name": "GraniteShares YieldBOOST AMD ETF",
+      "votes": 0,
+      "yield": "68%"
     }
   ]
 }
