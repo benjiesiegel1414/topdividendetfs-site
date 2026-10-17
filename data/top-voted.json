@@ -1,18 +1,30 @@
 {
-  "updated": "2026-10-17T14:59:00.170Z",
+  "updated": "2026-10-17T20:08:28.471Z",
   "total_tracked": 159,
   "top": [
     {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 4,
+      "yield": "40%"
+    },
+    {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 2,
+      "votes": 3,
       "yield": "10.5%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 2,
+      "yield": "14.3%"
+    },
+    {
+      "symbol": "AMDW",
+      "name": "AMDW AMD WeeklyPay ETF",
       "votes": 1,
-      "yield": "40%"
+      "yield": "43.1%"
     },
     {
       "symbol": "EGGY",
@@ -27,40 +39,28 @@
       "yield": "8.2%"
     },
     {
+      "symbol": "PLTY",
+      "name": "YieldMax PLTR Option Income Strategy ETF",
+      "votes": 1,
+      "yield": "75%"
+    },
+    {
       "symbol": "QYLD",
       "name": "Global X Nasdaq 100 Covered Call ETF",
       "votes": 1,
       "yield": "11.1%"
     },
     {
-      "symbol": "ACKY",
-      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
-      "votes": 0,
-      "yield": "15.0%"
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 1,
+      "yield": "17.6%"
     },
     {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 0,
-      "yield": "34%"
-    },
-    {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 0,
-      "yield": "34.8%"
-    },
-    {
-      "symbol": "AMDW",
-      "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 0,
-      "yield": "43.1%"
-    },
-    {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "71%"
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 1,
+      "yield": "21%"
     }
   ]
 }
