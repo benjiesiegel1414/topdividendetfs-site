@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T03:02:41.976Z",
+  "updated": "2026-10-17T10:10:03.574Z",
   "total_tracked": 159,
   "top": [
     {
@@ -25,6 +25,12 @@
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 1,
       "yield": "8.2%"
+    },
+    {
+      "symbol": "QYLD",
+      "name": "Global X Nasdaq 100 Covered Call ETF",
+      "votes": 1,
+      "yield": "11.1%"
     },
     {
       "symbol": "ACKY",
@@ -55,12 +61,6 @@
       "name": "YieldMax AMD Option Income Strategy ETF",
       "votes": 0,
       "yield": "71%"
-    },
-    {
-      "symbol": "AMYY",
-      "name": "GraniteShares YieldBOOST AMD ETF",
-      "votes": 0,
-      "yield": "68%"
     }
   ]
 }
