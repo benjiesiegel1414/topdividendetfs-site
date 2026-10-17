@@ -6,13 +6,13 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="TopDividendETFs.com">
     <title>CHPY ETF (Semiconductor Portfolio Option Income) – Weekly Dividends & Yield | TopDividendETFs.com</title>
-    <meta name="description" content="Complete CHPY ETF analysis: weekly dividend-paying semiconductor ETF with 45.76% distribution rate. View performance, dividend history, and interactive calculator. Actively managed income strategy.">
+    <meta name="description" content="Complete CHPY ETF analysis: weekly dividend-paying semiconductor ETF with 40.18% distribution rate. View performance, dividend history, and interactive calculator. Actively managed income strategy.">
     <meta name="keywords" content="CHPY ETF, CHPY dividend, semiconductor ETF, weekly dividend ETF, option income ETF, YieldMax CHPY, semiconductor stocks, income investing">
 
     <link rel="canonical" href="https://topdividendetfs.com/chpy-etf-calculator">
 
     <meta property="og:title" content="CHPY ETF – Weekly Semiconductor Income">
-    <meta property="og:description" content="CHPY: 45.76% distribution rate, weekly payouts, semiconductor portfolio. Interactive yield calculator included.">
+    <meta property="og:description" content="CHPY: 40.18% distribution rate, weekly payouts, semiconductor portfolio. Interactive yield calculator included.">
     <meta property="og:url" content="https://topdividendetfs.com/chpy-etf.html">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/chpy.png">
@@ -26,7 +26,7 @@
     <meta name="twitter:site" content="@TopDividendETFs">
     <meta name="twitter:creator" content="@TopDividendETFs">
     <meta name="twitter:title" content="CHPY ETF – Weekly Semiconductor Income">
-    <meta name="twitter:description" content="CHPY: 45.76% distribution rate, weekly payouts, semiconductor portfolio. Interactive yield calculator included.">
+    <meta name="twitter:description" content="CHPY: 40.18% distribution rate, weekly payouts, semiconductor portfolio. Interactive yield calculator included.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/chpy.png">
     <meta name="twitter:image:alt" content="CHPY ETF Weekly Dividend Analysis">
 <!-- Google Analytics (GA4) -->
@@ -1313,7 +1313,7 @@
     <section class="hero">
         <div class="hero-badge">✦ Weekly Income ETF ✦</div>
         <h1>CHPY ETF Analysis</h1>
-        <p>Complete analysis of CHPY (YieldMax® Semiconductor Portfolio Option Income ETF). Discover weekly dividend potential, 45.76% distribution rate, and semiconductor strategy insights. Educational content only — not investment advice.</p>
+        <p>Complete analysis of CHPY (YieldMax® Semiconductor Portfolio Option Income ETF). Discover weekly dividend potential, <span class="chpy-rate">40.18%</span> distribution rate, and semiconductor strategy insights. Educational content only — not investment advice.</p>
         <p style="margin-top:14px;font-weight:700;"><a href="/chpy-etf-dividend-history" style="color:inherit;text-decoration:underline;">CHPY dividend history: every weekly payout since April 2025</a> &middot; <a href="/etfs/chpy-dividend-dates" style="color:inherit;text-decoration:underline;">Next CHPY ex-dividend date</a></p>
     </section>
 
@@ -1327,8 +1327,8 @@
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h3>Distribution Rate</h3>
-                    <div class="big-number">45.76%</div>
-                    <div class="metric-detail">Annual distribution rate</div>
+                    <div class="big-number"><span class="chpy-rate">40.18%</span></div>
+                    <div class="metric-detail">Annual distribution rate (<span id="chpyRateAsOf">YieldMax, as of Oct 13, 2026</span>)</div>
                 </div>
                 <div class="metric-card">
                     <h3>Payment Frequency</h3>
@@ -1357,7 +1357,7 @@
             <div class="calculator-card">
                 <h3>💰 CHPY Weekly Income Calculator</h3>
                 <p style="text-align: center; color: var(--primary-darker); margin: 0 0 16px; font-size: 0.9rem;">
-                    Based on 45% annual distribution rate. Enter your investment to see potential weekly, monthly, and annual income.
+                    Based on CHPY's current <span class="chpy-rate">40.18%</span> annual distribution rate. Enter your investment to see potential weekly, monthly, and annual income.
                 </p>
                 
                 <div class="calculator-inputs">
@@ -1370,20 +1370,20 @@
                 <div class="calculator-results">
                     <div class="result-row">
                         <span class="result-label">📅 Weekly Distribution</span>
-                        <span class="result-value" id="weeklyIncome">$39.65</span>
+                        <span class="result-value" id="weeklyIncome">$77.27</span>
                     </div>
                     <div class="result-row">
                         <span class="result-label">📆 Monthly Earnings*</span>
-                        <span class="result-value" id="monthlyIncome">$172.02</span>
+                        <span class="result-value" id="monthlyIncome">$334.58</span>
                     </div>
                     <div class="result-row">
                         <span class="result-label">🎯 Annual Potential</span>
-                        <span class="result-value yearly" id="yearlyIncome">$2,064.24</span>
+                        <span class="result-value yearly" id="yearlyIncome">$4,018.00</span>
                     </div>
                 </div>
 
                 <p style="text-align: center; color: var(--gray); font-size: 0.75rem; margin: 12px 0 0; padding-top: 12px; border-top: 1px solid #d0e8f5;">
-                    *Monthly = Weekly × 4.33 | Annual = Investment × 45% | Assumes distributions remain constant. Past performance ≠ future results.
+                    *Monthly = Weekly × 4.33 | Annual = Investment × <span class="chpy-rate">40.18%</span> | Assumes distributions remain constant. Past performance ≠ future results.
                 </p>
             </div>
 
@@ -1548,7 +1548,10 @@
         const monthlyIncomeEl = document.getElementById('monthlyIncome');
         const yearlyIncomeEl = document.getElementById('yearlyIncome');
 
-        const ANNUAL_DISTRIBUTION_RATE = 0.45; // 45%
+        // Fallback: YieldMax CHPY distribution rate (40.18%, as of Oct 13, 2026).
+        // On load, the live CHPY yield from the TopDividendETFs.com sheet replaces it.
+        let ANNUAL_DISTRIBUTION_RATE = 0.4018;
+        const money = v => '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
         function updateCalculator() {
             const investment = parseFloat(investmentInput.value) || 0;
@@ -1563,9 +1566,9 @@
             const monthlyIncome = weeklyIncome * 4.33;
 
             // Update display
-            weeklyIncomeEl.textContent = '$' + weeklyIncome.toFixed(2);
-            monthlyIncomeEl.textContent = '$' + monthlyIncome.toFixed(2);
-            yearlyIncomeEl.textContent = '$' + annualIncome.toFixed(2);
+            weeklyIncomeEl.textContent = money(weeklyIncome);
+            monthlyIncomeEl.textContent = money(monthlyIncome);
+            yearlyIncomeEl.textContent = money(annualIncome);
         }
 
         // Add event listeners
@@ -1573,6 +1576,22 @@
 
         // Initial calculation
         updateCalculator();
+
+        // Live CHPY distribution rate from the TopDividendETFs.com sheet (same data as the homepage table)
+        fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRYVQtSlWkwIDCeeB-YaQEpelovyW9ofaItXrzXZ_ntodK4QasRTKhP-swVWISmXIDZTIvQlbvNZm_o/pub?output=csv&t=' + Date.now())
+            .then(r => r.ok ? r.text() : Promise.reject(r.status))
+            .then(csv => {
+                const row = csv.split('\n').map(l => l.split(',').map(c => c.replace(/^"|"$/g, '').trim())).find(c => c[0] && c[0].toUpperCase() === 'CHPY');
+                const pct = row ? parseFloat(String(row[2]).replace(/[%,]/g, '')) : NaN;
+                if (!isFinite(pct) || pct <= 0 || pct > 300) return;
+                ANNUAL_DISTRIBUTION_RATE = pct / 100;
+                const label = String(row[2]).trim().replace(/^([\d.]+)$/, '$1%');
+                document.querySelectorAll('.chpy-rate').forEach(el => { el.textContent = label; });
+                const asOf = document.getElementById('chpyRateAsOf');
+                if (asOf) asOf.textContent = 'live from TopDividendETFs.com';
+                updateCalculator();
+            })
+            .catch(() => {});
     </script>
 <script src="/sticky-ad.js" defer></script>
 </body>
