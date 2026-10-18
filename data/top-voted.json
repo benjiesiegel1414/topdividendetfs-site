@@ -1,18 +1,36 @@
 {
-  "updated": "2026-10-18T10:25:10.619Z",
+  "updated": "2026-10-18T15:23:50.861Z",
   "total_tracked": 159,
   "top": [
     {
+      "symbol": "TSPY",
+      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
+      "votes": 10,
+      "yield": "13.9%"
+    },
+    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 4,
+      "votes": 5,
       "yield": "40%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "10.5%"
+    },
+    {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 3,
+      "yield": "14.3%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 3,
+      "yield": "21.3%"
     },
     {
       "symbol": "AMDW",
@@ -21,8 +39,14 @@
       "yield": "43.1%"
     },
     {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
+      "symbol": "EGGY",
+      "name": "NestYield Dynamic Income ETF",
+      "votes": 2,
+      "yield": "34.2%"
+    },
+    {
+      "symbol": "MLPI",
+      "name": "MLP & Energy Infrastructure High Income ETF",
       "votes": 2,
       "yield": "14.3%"
     },
@@ -33,34 +57,10 @@
       "yield": "21%"
     },
     {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 2,
-      "yield": "21.3%"
-    },
-    {
-      "symbol": "DRKY",
-      "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
       "votes": 1,
-      "yield": "15.0%"
-    },
-    {
-      "symbol": "EGGY",
-      "name": "NestYield Dynamic Income ETF",
-      "votes": 1,
-      "yield": "34.2%"
-    },
-    {
-      "symbol": "GOOW",
-      "name": "Roundhill GOOGL WeeklyPay ETF",
-      "votes": 1,
-      "yield": "38.7%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 1,
-      "yield": "8.2%"
+      "yield": "71%"
     }
   ]
 }
