@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T20:08:28.471Z",
+  "updated": "2026-10-18T03:05:19.975Z",
   "total_tracked": 159,
   "top": [
     {
@@ -15,16 +15,34 @@
       "yield": "10.5%"
     },
     {
+      "symbol": "AMDW",
+      "name": "AMDW AMD WeeklyPay ETF",
+      "votes": 2,
+      "yield": "43.1%"
+    },
+    {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "votes": 2,
       "yield": "14.3%"
     },
     {
-      "symbol": "AMDW",
-      "name": "AMDW AMD WeeklyPay ETF",
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 2,
+      "yield": "21%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 2,
+      "yield": "21.3%"
+    },
+    {
+      "symbol": "DRKY",
+      "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
       "votes": 1,
-      "yield": "43.1%"
+      "yield": "15.0%"
     },
     {
       "symbol": "EGGY",
@@ -33,34 +51,16 @@
       "yield": "34.2%"
     },
     {
+      "symbol": "GOOW",
+      "name": "Roundhill GOOGL WeeklyPay ETF",
+      "votes": 1,
+      "yield": "38.7%"
+    },
+    {
       "symbol": "GPIX",
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 1,
       "yield": "8.2%"
-    },
-    {
-      "symbol": "PLTY",
-      "name": "YieldMax PLTR Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "75%"
-    },
-    {
-      "symbol": "QYLD",
-      "name": "Global X Nasdaq 100 Covered Call ETF",
-      "votes": 1,
-      "yield": "11.1%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 1,
-      "yield": "17.6%"
-    },
-    {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 1,
-      "yield": "21%"
     }
   ]
 }
