@@ -1,7 +1,31 @@
 {
-  "updated": "2026-10-18T20:07:10.507Z",
+  "updated": "2026-10-19T03:19:06.472Z",
   "total_tracked": 159,
   "top": [
+    {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 22,
+      "yield": "21%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 19,
+      "yield": "8.3%"
+    },
+    {
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 18,
+      "yield": "7.5%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 17,
+      "yield": "21.3%"
+    },
     {
       "symbol": "TSPY",
       "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
@@ -33,34 +57,10 @@
       "yield": "43.1%"
     },
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 3,
-      "yield": "21%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 3,
-      "yield": "21.3%"
-    },
-    {
       "symbol": "EGGY",
       "name": "NestYield Dynamic Income ETF",
       "votes": 2,
       "yield": "34.2%"
-    },
-    {
-      "symbol": "MLPI",
-      "name": "MLP & Energy Infrastructure High Income ETF",
-      "votes": 2,
-      "yield": "14.3%"
-    },
-    {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 1,
-      "yield": "71%"
     }
   ]
 }
