@@ -16,16 +16,44 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: .
+          name: github-pages-${{ github.run_attempt }}
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # GitHub Pages sometimes returns a one-off server error (HTTP 500).
+      # Try the deploy up to 3 times, 2 minutes apart, before failing the run.
+      - name: Deploy to GitHub Pages (try 1)
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
+
+      - name: Wait 2 minutes before retrying
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 120
+
+      - name: Deploy to GitHub Pages (try 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
+
+      - name: Wait 2 more minutes before the last try
+        if: steps.deploy2.outcome == 'failure'
+        run: sleep 120
+
+      - name: Deploy to GitHub Pages (try 3)
+        if: steps.deploy2.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
