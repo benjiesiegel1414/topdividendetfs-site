@@ -1,0 +1,29 @@
+name: Cancel stuck Pages deployment
+
+# Use when a deploy fails with "due to in progress deployment. Please cancel <sha> first".
+# Run it from the Actions tab and paste that <sha>. Then run "Build ETF pages" again.
+on:
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: 'Commit SHA of the stuck deployment (from the error message)'
+        required: true
+
+permissions:
+  pages: write
+  contents: read
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel the stuck deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Status before:"
+          gh api "repos/${{ github.repository }}/pages/deployments/${{ inputs.sha }}" || true
+          gh api -X POST "repos/${{ github.repository }}/pages/deployments/${{ inputs.sha }}/cancel"
+          sleep 10
+          echo "Status after:"
+          gh api "repos/${{ github.repository }}/pages/deployments/${{ inputs.sha }}" || true
