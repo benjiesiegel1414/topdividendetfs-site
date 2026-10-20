@@ -29,7 +29,35 @@ const next = NEOS_2026.find(r => r[1] >= today);
 if (!next) { console.log('NEOS 2026 calendar is over; add the next year\'s dates to update-neos-pages.mjs'); process.exit(0); }
 let DIVS = { funds: {} };
 try { DIVS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'dividends-cache.json'), 'utf8')); } catch {}
-const paid = sym => (DIVS.funds[sym]?.rows || []).filter(x => x[0] <= today && x[1] > 0);
+// Amounts NEOS has posted on its fund pages (they appear on the declaration date, a day or more
+// before the dividend data feeds catch up). Map of ex-date (YYYY-MM-DD) -> amount per share.
+async function neosAmounts(sym) {
+  try {
+    const r = await fetch(`https://neosfunds.com/${sym.toLowerCase()}/`, { headers: { 'User-Agent': 'Mozilla/5.0 (TopDividendETFs page updater)' } });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const html = await r.text(), out = {};
+    const iso = s => { const m = s.match(/^(\d\d)\/(\d\d)\/(\d{4})$/); return m ? `${m[3]}-${m[1]}-${m[2]}` : null; };
+    // Distribution history rows: declaration, ex-date, record, pay, amount
+    for (const row of html.split(/<tr[\s>]/).slice(1)) {
+      const cells = [...row.split('</tr>')[0].matchAll(/<td[^>]*>([^<]*)<\/td>/g)].map(x => x[1].trim());
+      if (cells.length !== 5) continue;
+      const ex = iso(cells[1]), v = parseFloat(cells[4].replace(/[$,]/g, ''));
+      if (ex && v > 0) out[ex] = v;
+    }
+    console.log(`${sym}: ${Object.keys(out).length} amounts from neosfunds.com`);
+    return out;
+  } catch (e) { console.log(`${sym}: could not read neosfunds.com (${e.message}), using cached data only`); return {}; }
+}
+const NEOS_AMT = { QQQI: await neosAmounts('QQQI'), SPYI: await neosAmounts('SPYI') };
+// Paid rows from the dividend cache, plus any newer paid amounts NEOS has posted that the cache doesn't have yet.
+const paid = sym => {
+  // NEOS's own figure wins when both exist (feeds sometimes round, e.g. 0.534 vs 0.5338)
+  const n = NEOS_AMT[sym] || {};
+  const rows = (DIVS.funds[sym]?.rows || []).filter(x => x[0] <= today && x[1] > 0).map(x => (n[x[0]] ? [x[0], n[x[0]], ...x.slice(2)] : x));
+  for (const [ex, v] of Object.entries(n)) if (ex <= today && !rows.some(r => r[0] === ex)) rows.push([ex, v]);
+  return rows.sort((a, b) => (a[0] < b[0] ? 1 : -1));
+};
+const declared = (sym, ex) => (NEOS_AMT[sym] || {})[ex];
 
 function setTag(html, re, value) { return re.test(html) ? html.replace(re, (m, a, b) => a + value + b) : html; }
 function common(html, sym, title, desc) {
@@ -47,8 +75,11 @@ function updateSPYI(file) {
   let h = fs.readFileSync(p, 'utf8'); const before = h;
   const last = paid('SPYI')[0];
   const [dc, ex, pay] = next;
-  const title = `SPYI Dividend Dates 2026: Next Ex-Date ${md(ex)}, Pays ${md(pay)}`;
-  const desc = `SPYI's next ex-dividend date is ${long(ex)}, paying ${long(pay)}, confirmed by NEOS.${last ? ` Last dividend: ${amt(last[1])} per share.` : ''} Every 2026 SPYI ex-dividend, record and pay date in one schedule.`;
+  const decl = declared('SPYI', ex);
+  const title = decl ? `SPYI Dividend Dates 2026: ${amt(decl)} Declared, Ex-Date ${md(ex)}` : `SPYI Dividend Dates 2026: Next Ex-Date ${md(ex)}, Pays ${md(pay)}`;
+  const desc = decl
+    ? `NEOS declared a ${amt(decl)} SPYI dividend: ex-date ${long(ex)}, paying ${long(pay)}.${last ? ` Previous dividend: ${amt(last[1])} per share.` : ''} Every 2026 SPYI ex-dividend, record and pay date in one schedule.`
+    : `SPYI's next ex-dividend date is ${long(ex)}, paying ${long(pay)}, confirmed by NEOS.${last ? ` Last dividend: ${amt(last[1])} per share.` : ''} Every 2026 SPYI ex-dividend, record and pay date in one schedule.`;
   h = common(h, 'SPYI', title, desc);
   h = h.replace(/SPYI's next ex-dividend date is [A-Z][a-z]+ \d+, \d{4}<\/strong>, declared [A-Z][a-z]+ \d+ and paying <strong>[A-Z][a-z]+ \d+, \d{4}<\/strong>/,
     `SPYI's next ex-dividend date is ${long(ex)}</strong>, declared ${mdLong(dc)} and paying <strong>${long(pay)}</strong>`);
@@ -77,10 +108,13 @@ function updateQQQI(file) {
   let h = fs.readFileSync(p, 'utf8'); const before = h;
   const rows = paid('QQQI'), last = rows[0];
   const [dc, ex, pay] = next;
-  const title = `QQQI Dividend Dates 2026: Next Ex-Date ${md(ex)}${last ? `, Last Paid ${amt(last[1])}` : ''}`;
-  const desc = `QQQI's next ex-dividend date is ${long(ex)}, paying ${long(pay)}, confirmed by NEOS.${last ? ` Its last dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}).` : ''} All 12 QQQI 2026 ex-dividend and pay dates, plus amounts paid so far.`;
+  const decl = declared('QQQI', ex);
+  const title = decl ? `QQQI Dividend Dates 2026: Next Ex-Date ${md(ex)}, ${amt(decl)} Declared` : `QQQI Dividend Dates 2026: Next Ex-Date ${md(ex)}${last ? `, Last Paid ${amt(last[1])}` : ''}`;
+  const desc = decl
+    ? `NEOS declared a ${amt(decl)} QQQI dividend: ex-date ${long(ex)}, paying ${long(pay)}.${last ? ` Its previous dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}).` : ''} All 12 QQQI 2026 ex-dividend and pay dates, plus amounts paid so far.`
+    : `QQQI's next ex-dividend date is ${long(ex)}, paying ${long(pay)}, confirmed by NEOS.${last ? ` Its last dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}).` : ''} All 12 QQQI 2026 ex-dividend and pay dates, plus amounts paid so far.`;
   h = common(h, 'QQQI', title, desc);
-  const box = `<!-- AUTO-NEXT:START --><div style="margin:14px auto 4px;max-width:640px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 16px;font-size:1rem;line-height:1.5"><strong>Next QQQI ex-dividend date: ${long(ex)}</strong> · pays ${long(pay)} (NEOS-confirmed)${last ? `<br>Last dividend: <strong>${amt(last[1])}</strong> per share, ex-date ${long(last[0])}` : ''}</div><!-- AUTO-NEXT:END -->`;
+  const box = `<!-- AUTO-NEXT:START --><div style="margin:14px auto 4px;max-width:640px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 16px;font-size:1rem;line-height:1.5"><strong>Next QQQI ex-dividend date: ${long(ex)}</strong> · pays ${long(pay)} (NEOS-confirmed)${decl ? `<br>Declared amount: <strong>${amt(decl)}</strong> per share` : ''}${last ? `<br>Last dividend: <strong>${amt(last[1])}</strong> per share, ex-date ${long(last[0])}` : ''}</div><!-- AUTO-NEXT:END -->`;
   if (/<!-- AUTO-NEXT:START -->[\s\S]*?<!-- AUTO-NEXT:END -->/.test(h)) h = h.replace(/<!-- AUTO-NEXT:START -->[\s\S]*?<!-- AUTO-NEXT:END -->/, box);
   else h = h.replace(/(<h1>QQQI ETF Dividend Dates 2026<\/h1>\s*<p>[\s\S]*?<\/p>)/, `$1\n    ${box}`);
   h = h.replace(/<p>The next confirmed ex-dividend date for QQQI is <strong>[\s\S]*?<\/p>/,
@@ -89,9 +123,10 @@ function updateQQQI(file) {
   // schedule table: fill paid amounts and statuses
   h = h.replace(/<tr>(\s*<td><strong>[A-Z][a-z]+ 2026<\/strong><\/td>\s*<td>[^<]*<\/td>\s*<td>([^<]*)<\/td>\s*<td>[^<]*<\/td>\s*<td>([^<]*)<\/td>\s*)<td class="(?:amount|projected)">[^<]*<\/td>(\s*)<td><span class="badge-[a-z]+">[^<]*<\/span><\/td>/g, (m, mid, exS, payS, sp) => {
     const rx = fromShort(exS.trim()), rp = fromShort(payS.trim()); if (!rx) return m;
-    const hit = (DIVS.funds.QQQI?.rows || []).find(x => x[0] === rx);
-    const amountCell = hit ? `<td class="amount">${amt(hit[1])}</td>` : `<td class="projected">TBA</td>`;
-    const status = rp && rp < today && hit ? '<span class="badge-confirmed">Paid</span>' : rx === ex ? '<span class="badge-projected">Next</span>' : '<span class="badge-confirmed">Dates Confirmed</span>';
+    const c = (DIVS.funds.QQQI?.rows || []).find(x => x[0] === rx);
+    const hit = declared('QQQI', rx) || (c ? c[1] : undefined);
+    const amountCell = hit ? `<td class="amount">${amt(hit)}</td>` : `<td class="projected">TBA</td>`;
+    const status = rp && rp < today && hit ? '<span class="badge-confirmed">Paid</span>' : rx === ex ? `<span class="badge-projected">${hit ? 'Declared' : 'Next'}</span>` : '<span class="badge-confirmed">Dates Confirmed</span>';
     return `<tr>${mid}${amountCell}${sp}<td>${status}</td>`;
   });
   if (h !== before) { fs.writeFileSync(p, h); console.log('Updated ' + file); }
