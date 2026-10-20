@@ -247,6 +247,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etf-images/divb</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etf-images/divo</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1466,6 +1472,12 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/dgrw-dividend-dates</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etfs/divb</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
