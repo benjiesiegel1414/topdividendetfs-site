@@ -1,29 +1,29 @@
 {
-  "updated": "2026-10-20T10:56:56.939Z",
-  "total_tracked": 159,
+  "updated": "2026-10-20T16:22:17.319Z",
+  "total_tracked": 160,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 43,
+      "votes": 46,
       "yield": "21%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 40,
+      "votes": 43,
       "yield": "8.3%"
     },
     {
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 39,
+      "votes": 42,
       "yield": "21.5%"
     },
     {
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 35,
+      "votes": 38,
       "yield": "7.7%"
     },
     {
@@ -33,9 +33,15 @@
       "yield": "13.9%"
     },
     {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 10,
+      "yield": "2.2%"
+    },
+    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "40%"
     },
     {
@@ -55,12 +61,6 @@
       "name": "AMDW AMD WeeklyPay ETF",
       "votes": 3,
       "yield": "46.5%"
-    },
-    {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 2,
-      "yield": "71%"
     }
   ]
 }
