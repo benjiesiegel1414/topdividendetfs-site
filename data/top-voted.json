@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T03:22:18.761Z",
+  "updated": "2026-10-21T11:11:02.315Z",
   "total_tracked": 160,
   "top": [
     {
@@ -39,6 +39,12 @@
       "yield": "13.9%"
     },
     {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 17,
+      "yield": "0.8%"
+    },
+    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 8,
@@ -49,12 +55,6 @@
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 7,
       "yield": "10.5%"
-    },
-    {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 7,
-      "yield": "0.8%"
     },
     {
       "symbol": "QQQI",
