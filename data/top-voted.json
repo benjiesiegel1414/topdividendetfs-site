@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-23T16:29:04.757Z",
+  "updated": "2026-10-23T20:59:55.961Z",
   "total_tracked": 160,
   "top": [
     {
+      "symbol": "HAKY",
+      "name": "Amplify HACK Cybersecurity Covered Call ETF",
+      "votes": 2,
+      "yield": "15%"
+    },
+    {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 58,
+      "votes": 2,
       "yield": "21%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 55,
-      "yield": "2.3%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
-      "votes": 53,
-      "yield": "8.3%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 52,
-      "yield": "21.1%"
-    },
-    {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 49,
-      "yield": "0.8%"
-    },
-    {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 46,
-      "yield": "11.4%"
-    },
-    {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 31,
-      "yield": "13.9%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 11,
+      "votes": 1,
       "yield": "40%"
+    },
+    {
+      "symbol": "CSHI",
+      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
+      "votes": 1,
+      "yield": "5.0%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 1,
+      "yield": "2.3%"
     },
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 8,
+      "votes": 1,
       "yield": "10.5%"
     },
     {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 6,
-      "yield": "14.3%"
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 1,
+      "yield": "8.3%"
+    },
+    {
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 1,
+      "yield": "11.4%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 1,
+      "yield": "21.1%"
+    },
+    {
+      "symbol": "ACKY",
+      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
+      "votes": 0,
+      "yield": "15.0%"
     }
   ]
 }
