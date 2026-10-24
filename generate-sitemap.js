@@ -113,7 +113,12 @@ function main() {
     let url = readCanonical(html);
     if (!url) { url = fallbackUrl(file); noCanonical.push(rel); }
 
-    url = url.replace(/\/+$/, m => (url === SITE + '/' ? m : '')); // trim trailing slash except root
+    // Folder index pages (e.g. etfs/index.html) keep their trailing slash: GitHub Pages
+    // 301-redirects /etfs to /etfs/, so the sitemap must list the slash form the canonical uses.
+    const isFolderIndex = rel !== 'index.html' && rel.endsWith('/index.html');
+    if (!isFolderIndex) {
+      url = url.replace(/\/+$/, m => (url === SITE + '/' ? m : '')); // trim trailing slash except root
+    }
     if (url === SITE) url = SITE + '/';
 
     const entry = {
