@@ -1,18 +1,24 @@
 {
-  "updated": "2026-10-24T03:20:38.522Z",
+  "updated": "2026-10-24T10:18:19.275Z",
   "total_tracked": 161,
   "top": [
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "15%"
     },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "21%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 3,
+      "yield": "21.1%"
     },
     {
       "symbol": "CHPY",
@@ -51,16 +57,10 @@
       "yield": "11.4%"
     },
     {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 2,
-      "yield": "21.1%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
       "votes": 1,
-      "yield": "10.5%"
+      "yield": "33%"
     }
   ]
 }
