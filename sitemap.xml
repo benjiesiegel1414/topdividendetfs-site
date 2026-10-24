@@ -613,6 +613,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etf-images/ovq</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etf-images/ovs</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -1189,18 +1195,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topdividendetfs.com/etfs/amzp</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/amzp-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topdividendetfs.com/etfs/amzy</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -1256,18 +1250,6 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/batt-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/bigy</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/bigy-dividend-dates</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1634,18 +1616,6 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/fthi-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ftqi</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ftqi-dividend-dates</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2227,18 +2197,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topdividendetfs.com/etfs/jpie</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/jpie-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topdividendetfs.com/etfs/kgld</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -2461,18 +2419,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topdividendetfs.com/etfs/ovb</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ovb-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topdividendetfs.com/etfs/ovf</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -2497,14 +2443,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topdividendetfs.com/etfs/ovm</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ovm-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
+    <loc>https://topdividendetfs.com/etfs/ovq</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2516,18 +2456,6 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/ovs-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ovt</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ovt-dividend-dates</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2695,30 +2623,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topdividendetfs.com/etfs/rdvi</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/rdvi-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/rnty</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/rnty-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topdividendetfs.com/etfs/rocy</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -2809,18 +2713,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topdividendetfs.com/etfs/sgov</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/sgov-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topdividendetfs.com/etfs/sioo</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -2900,18 +2792,6 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/sphd-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/sphy</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/sphy-dividend-dates</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3026,18 +2906,6 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/topw-dividend-dates</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/tpry</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/tpry-dividend-dates</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3692,7 +3560,7 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/top-voted-etfs</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
