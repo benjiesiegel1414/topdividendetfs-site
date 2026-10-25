@@ -1,18 +1,48 @@
 {
-  "updated": "2026-10-25T15:34:21.517Z",
+  "updated": "2026-10-25T20:23:19.038Z",
   "total_tracked": 161,
   "top": [
     {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 16,
+      "yield": "21%"
+    },
+    {
+      "symbol": "VFLO",
+      "name": "VictoryShares Free Cash Flow ETF",
+      "votes": 15,
+      "yield": "0.8%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 14,
+      "yield": "2.3%"
+    },
+    {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "15%"
     },
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 10,
-      "yield": "21%"
+      "symbol": "CSHI",
+      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
+      "votes": 9,
+      "yield": "5.0%"
+    },
+    {
+      "symbol": "OVQ",
+      "name": "Overlay Shares Nasdaq 100 Income ETF",
+      "votes": 9,
+      "yield": "12%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 8,
+      "yield": "40%"
     },
     {
       "symbol": "SEPI",
@@ -31,36 +61,6 @@
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
       "votes": 8,
       "yield": "21.1%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 7,
-      "yield": "2.3%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 6,
-      "yield": "40%"
-    },
-    {
-      "symbol": "CSHI",
-      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
-      "votes": 6,
-      "yield": "5.0%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
-      "votes": 6,
-      "yield": "17.6%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 5,
-      "yield": "10.5%"
     }
   ]
 }
