@@ -21,6 +21,8 @@ const long = s => d(s).toLocaleDateString('en-US', { month: 'long', day: 'numeri
 const short = s => d(s).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const md = s => d(s).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 const mdLong = s => d(s).toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
+// Month name of a date, for titles that match searches like "qqqi dividend october 2026"
+const mon = s => d(s).toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' });
 const amt = v => { let x = v.toFixed(v < 1 ? 4 : 3).replace(/0+$/, ''); if (!/\.\d\d/.test(x)) x = (+x).toFixed(2); return '$' + x; };
 const fromShort = s => { const t = new Date(s + ' 12:00 UTC'); return isNaN(t) ? null : t.toISOString().slice(0, 10); };
 const escAttr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
@@ -76,10 +78,10 @@ function updateSPYI(file) {
   const last = paid('SPYI')[0];
   const [dc, ex, pay] = next;
   const decl = declared('SPYI', ex);
-  const title = decl ? `SPYI Dividend Dates 2026: ${amt(decl)} Declared, Ex-Date ${md(ex)}` : `SPYI Dividend Dates 2026: Next Ex-Date ${md(ex)}, Pays ${md(pay)}`;
+  const title = decl ? `SPYI Dividend Dates 2026: ${mon(ex)} Dividend ${amt(decl)}, Ex-Date ${md(ex)}` : last ? `SPYI Dividend Dates 2026: ${mon(last[0])} Dividend ${amt(last[1])}, Next Ex-Date ${md(ex)}` : `SPYI Dividend Dates 2026: Next Ex-Date ${md(ex)}, Pays ${md(pay)}`;
   const desc = decl
     ? `NEOS declared a ${amt(decl)} SPYI dividend: ex-date ${long(ex)}, paying ${long(pay)}.${last ? ` Previous dividend: ${amt(last[1])} per share.` : ''} Every 2026 SPYI ex-dividend, record and pay date in one schedule.`
-    : `SPYI's next ex-dividend date is ${long(ex)}, paying ${long(pay)}, confirmed by NEOS.${last ? ` Last dividend: ${amt(last[1])} per share.` : ''} Every 2026 SPYI ex-dividend, record and pay date in one schedule.`;
+    : `${last ? `SPYI's ${mon(last[0])} ${last[0].slice(0, 4)} dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}). ` : ''}Next ex-dividend date: ${long(ex)}, paying ${long(pay)}, confirmed by NEOS. Every 2026 SPYI ex-dividend, record and pay date in one schedule.`;
   h = common(h, 'SPYI', title, desc);
   h = h.replace(/SPYI's next ex-dividend date is [A-Z][a-z]+ \d+, \d{4}<\/strong>, declared [A-Z][a-z]+ \d+ and paying <strong>[A-Z][a-z]+ \d+, \d{4}<\/strong>/,
     `SPYI's next ex-dividend date is ${long(ex)}</strong>, declared ${mdLong(dc)} and paying <strong>${long(pay)}</strong>`);
@@ -109,10 +111,10 @@ function updateQQQI(file) {
   const rows = paid('QQQI'), last = rows[0];
   const [dc, ex, pay] = next;
   const decl = declared('QQQI', ex);
-  const title = decl ? `QQQI Dividend Dates 2026: Next Ex-Date ${md(ex)}, ${amt(decl)} Declared` : `QQQI Dividend Dates 2026: Next Ex-Date ${md(ex)}${last ? `, Last Paid ${amt(last[1])}` : ''}`;
+  const title = decl ? `QQQI Dividend Dates 2026: ${mon(ex)} Dividend ${amt(decl)}, Ex-Date ${md(ex)}` : last ? `QQQI Dividend Dates 2026: ${mon(last[0])} Dividend ${amt(last[1])}, Next Ex-Date ${md(ex)}` : `QQQI Dividend Dates 2026: Next Ex-Date ${md(ex)}`;
   const desc = decl
     ? `NEOS declared a ${amt(decl)} QQQI dividend: ex-date ${long(ex)}, paying ${long(pay)}.${last ? ` Its previous dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}).` : ''} All 12 QQQI 2026 ex-dividend and pay dates, plus amounts paid so far.`
-    : `QQQI's next ex-dividend date is ${long(ex)}, paying ${long(pay)}, confirmed by NEOS.${last ? ` Its last dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}).` : ''} All 12 QQQI 2026 ex-dividend and pay dates, plus amounts paid so far.`;
+    : `${last ? `QQQI's ${mon(last[0])} ${last[0].slice(0, 4)} dividend was ${amt(last[1])} per share (ex-date ${mdLong(last[0])}). ` : ''}Next ex-dividend date: ${long(ex)}, paying ${long(pay)}, confirmed by NEOS. All 12 QQQI 2026 ex-dividend and pay dates, plus amounts paid so far.`;
   h = common(h, 'QQQI', title, desc);
   const box = `<!-- AUTO-NEXT:START --><div style="margin:14px auto 4px;max-width:640px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 16px;font-size:1rem;line-height:1.5"><strong>Next QQQI ex-dividend date: ${long(ex)}</strong> · pays ${long(pay)} (NEOS-confirmed)${decl ? `<br>Declared amount: <strong>${amt(decl)}</strong> per share` : ''}${last ? `<br>Last dividend: <strong>${amt(last[1])}</strong> per share, ex-date ${long(last[0])}` : ''}</div><!-- AUTO-NEXT:END -->`;
   if (/<!-- AUTO-NEXT:START -->[\s\S]*?<!-- AUTO-NEXT:END -->/.test(h)) h = h.replace(/<!-- AUTO-NEXT:START -->[\s\S]*?<!-- AUTO-NEXT:END -->/, box);
