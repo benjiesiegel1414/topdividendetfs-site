@@ -697,6 +697,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etf-images/qval</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etf-images/qvol</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1939,6 +1945,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etfs/issuer/alpha</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etfs/issuer/amplify</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -2667,6 +2679,12 @@
   <url>
     <loc>https://topdividendetfs.com/etfs/qusa-dividend-dates</loc>
     <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etfs/qval</loc>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3710,7 +3728,7 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/top-voted-etfs</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
