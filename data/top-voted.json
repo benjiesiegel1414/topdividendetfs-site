@@ -1,17 +1,17 @@
 {
-  "updated": "2026-10-27T17:29:05.557Z",
+  "updated": "2026-10-27T21:49:56.232Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 31,
+      "votes": 32,
       "yield": "21%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 29,
+      "votes": 30,
       "yield": "40%"
     },
     {
@@ -47,20 +47,20 @@
     {
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 22,
+      "votes": 23,
       "yield": "21.2%"
+    },
+    {
+      "symbol": "XSPI",
+      "name": "NEOS Boosted S&P 500 High Income ETF",
+      "votes": 22,
+      "yield": "17.1%"
     },
     {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
       "votes": 21,
       "yield": "5.0%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 21,
-      "yield": "10.5%"
     }
   ]
 }
