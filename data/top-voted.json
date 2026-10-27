@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-26T22:18:26.204Z",
-  "total_tracked": 162,
+  "updated": "2026-10-27T03:46:05.795Z",
+  "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 25,
+      "votes": 29,
       "yield": "21%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 27,
+      "yield": "40%"
     },
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 24,
+      "votes": 27,
       "yield": "0.8%"
     },
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 23,
+      "votes": 25,
       "yield": "2.3%"
     },
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 22,
+      "votes": 24,
       "yield": "15%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
       "votes": 21,
-      "yield": "40%"
-    },
-    {
-      "symbol": "XSPI",
-      "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 19,
-      "yield": "17.1%"
+      "yield": "14%"
     },
     {
       "symbol": "OVQ",
       "name": "Overlay Shares Nasdaq 100 Income ETF",
-      "votes": 18,
+      "votes": 20,
       "yield": "12%"
+    },
+    {
+      "symbol": "XSPI",
+      "name": "NEOS Boosted S&P 500 High Income ETF",
+      "votes": 20,
+      "yield": "17.1%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 18,
+      "yield": "21.2%"
     },
     {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
       "votes": 16,
       "yield": "5.0%"
-    },
-    {
-      "symbol": "QVAL",
-      "name": "Alpha Architect US Quantitative Value ETF",
-      "votes": 16,
-      "yield": "2%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 15,
-      "yield": "21.2%"
     }
   ]
 }
