@@ -1,17 +1,17 @@
 {
-  "updated": "2026-10-27T03:46:05.795Z",
+  "updated": "2026-10-27T11:37:10.791Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 29,
+      "votes": 30,
       "yield": "21%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 27,
+      "votes": 28,
       "yield": "40%"
     },
     {
@@ -29,19 +29,19 @@
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 24,
+      "votes": 25,
       "yield": "15%"
     },
     {
       "symbol": "FIZY",
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 21,
+      "votes": 22,
       "yield": "14%"
     },
     {
       "symbol": "OVQ",
       "name": "Overlay Shares Nasdaq 100 Income ETF",
-      "votes": 20,
+      "votes": 22,
       "yield": "12%"
     },
     {
@@ -53,7 +53,7 @@
     {
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 18,
+      "votes": 19,
       "yield": "21.2%"
     },
     {
