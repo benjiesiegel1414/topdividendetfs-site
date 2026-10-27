@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-27T11:37:10.791Z",
+  "updated": "2026-10-27T17:29:05.557Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 30,
+      "votes": 31,
       "yield": "21%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 28,
+      "votes": 29,
       "yield": "40%"
     },
     {
       "symbol": "VFLO",
       "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 27,
+      "votes": 28,
       "yield": "0.8%"
     },
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 25,
+      "votes": 26,
       "yield": "2.3%"
     },
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 25,
+      "votes": 26,
       "yield": "15%"
     },
     {
       "symbol": "FIZY",
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 22,
+      "votes": 23,
       "yield": "14%"
     },
     {
       "symbol": "OVQ",
       "name": "Overlay Shares Nasdaq 100 Income ETF",
-      "votes": 22,
+      "votes": 23,
       "yield": "12%"
-    },
-    {
-      "symbol": "XSPI",
-      "name": "NEOS Boosted S&P 500 High Income ETF",
-      "votes": 20,
-      "yield": "17.1%"
     },
     {
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 19,
+      "votes": 22,
       "yield": "21.2%"
     },
     {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
-      "votes": 16,
+      "votes": 21,
       "yield": "5.0%"
+    },
+    {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 21,
+      "yield": "10.5%"
     }
   ]
 }
