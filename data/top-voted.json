@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T22:11:17.649Z",
+  "updated": "2026-10-29T04:26:22.521Z",
   "total_tracked": 163,
   "top": [
     {
@@ -21,16 +21,16 @@
       "yield": "14%"
     },
     {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 37,
+      "yield": "40%"
+    },
+    {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
       "votes": 37,
       "yield": "15%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 36,
-      "yield": "40%"
     },
     {
       "symbol": "VFLO",
