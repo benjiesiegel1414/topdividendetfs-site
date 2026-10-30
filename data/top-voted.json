@@ -1,66 +1,66 @@
 {
-  "updated": "2026-10-30T12:09:29.260Z",
+  "updated": "2026-10-30T21:56:30.347Z",
   "total_tracked": 163,
   "top": [
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 43,
-      "yield": "21%"
-    },
-    {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 40,
-      "yield": "14%"
-    },
-    {
-      "symbol": "OVQ",
-      "name": "Overlay Shares Nasdaq 100 Income ETF",
-      "votes": 40,
-      "yield": "12%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 39,
-      "yield": "2.3%"
-    },
-    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 38,
+      "votes": 1,
       "yield": "40%"
     },
     {
-      "symbol": "HAKY",
-      "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 37,
-      "yield": "15%"
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 1,
+      "yield": "14.3%"
     },
     {
-      "symbol": "VFLO",
-      "name": "VictoryShares Free Cash Flow ETF",
-      "votes": 28,
-      "yield": "0.8%"
+      "symbol": "ACKY",
+      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
+      "votes": 0,
+      "yield": "15.0%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 25,
-      "yield": "10.5%"
+      "symbol": "AHD",
+      "name": "GraniteShares Autocallable HOOD ETF",
+      "votes": 0,
+      "yield": "33%"
     },
     {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 25,
-      "yield": "20.8%"
+      "symbol": "AIPI",
+      "name": "REX AI Equity Premium Income ETF",
+      "votes": 0,
+      "yield": "34.8%"
     },
     {
-      "symbol": "CSHI",
-      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
-      "votes": 24,
-      "yield": "5.0%"
+      "symbol": "AMDW",
+      "name": "AMDW AMD WeeklyPay ETF",
+      "votes": 0,
+      "yield": "44.2%"
+    },
+    {
+      "symbol": "AMDY",
+      "name": "YieldMax AMD Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "42%"
+    },
+    {
+      "symbol": "AMYY",
+      "name": "GraniteShares YieldBOOST AMD ETF",
+      "votes": 0,
+      "yield": "68%"
+    },
+    {
+      "symbol": "AMZY",
+      "name": "YieldMax AMZN Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "26%"
+    },
+    {
+      "symbol": "BABO",
+      "name": "YieldMax BABA Option Income Strategy ETF",
+      "votes": 0,
+      "yield": "32%"
     }
   ]
 }
