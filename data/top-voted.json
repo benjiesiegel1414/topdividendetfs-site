@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-29T22:26:41.257Z",
+  "updated": "2026-10-30T04:26:23.335Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 41,
+      "votes": 43,
       "yield": "21%"
     },
     {
@@ -19,6 +19,12 @@
       "name": "Overlay Shares Nasdaq 100 Income ETF",
       "votes": 40,
       "yield": "12%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 39,
+      "yield": "2.3%"
     },
     {
       "symbol": "CHPY",
@@ -37,12 +43,6 @@
       "name": "VictoryShares Free Cash Flow ETF",
       "votes": 28,
       "yield": "0.8%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 26,
-      "yield": "2.3%"
     },
     {
       "symbol": "OVL",
