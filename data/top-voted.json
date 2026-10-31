@@ -1,36 +1,36 @@
 {
-  "updated": "2026-10-31T16:49:59.664Z",
+  "updated": "2026-10-31T20:59:17.349Z",
   "total_tracked": 163,
   "top": [
     {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 10,
+      "yield": "21%"
+    },
+    {
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
+      "votes": 9,
+      "yield": "14%"
+    },
+    {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "2.3%"
+    },
+    {
+      "symbol": "QVAL",
+      "name": "Alpha Architect US Quantitative Value ETF",
+      "votes": 7,
+      "yield": "2%"
     },
     {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
       "votes": 6,
       "yield": "5.0%"
-    },
-    {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 6,
-      "yield": "14%"
-    },
-    {
-      "symbol": "QVAL",
-      "name": "Alpha Architect US Quantitative Value ETF",
-      "votes": 6,
-      "yield": "2%"
-    },
-    {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 6,
-      "yield": "21%"
     },
     {
       "symbol": "HDV",
