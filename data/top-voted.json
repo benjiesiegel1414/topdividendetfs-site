@@ -1,65 +1,65 @@
 {
-  "updated": "2026-11-01T12:41:21.705Z",
+  "updated": "2026-11-01T21:42:25.141Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 12,
+      "votes": 14,
       "yield": "21%"
     },
     {
       "symbol": "FIZY",
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 11,
+      "votes": 12,
       "yield": "14%"
     },
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "2.3%"
     },
     {
       "symbol": "QVAL",
       "name": "Alpha Architect US Quantitative Value ETF",
-      "votes": 9,
+      "votes": 10,
       "yield": "2%"
     },
     {
       "symbol": "HDV",
       "name": "iShares Core High Dividend ETF",
-      "votes": 8,
+      "votes": 9,
       "yield": "3.1%"
     },
     {
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "21.0%"
-    },
-    {
-      "symbol": "CSHI",
-      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
-      "votes": 6,
-      "yield": "5.0%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 4,
+      "votes": 7,
       "yield": "40%"
+    },
+    {
+      "symbol": "CSHI",
+      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
+      "votes": 7,
+      "yield": "5.0%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 4,
+      "votes": 7,
       "yield": "14.3%"
     },
     {
       "symbol": "AMDW",
       "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 1,
+      "votes": 4,
       "yield": "44.2%"
     }
   ]
