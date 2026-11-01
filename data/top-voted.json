@@ -1,30 +1,42 @@
 {
-  "updated": "2026-10-31T20:59:17.349Z",
+  "updated": "2026-11-01T04:28:27.336Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "21%"
-    },
-    {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 9,
-      "yield": "14%"
     },
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 8,
+      "votes": 10,
       "yield": "2.3%"
+    },
+    {
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
+      "votes": 10,
+      "yield": "14%"
     },
     {
       "symbol": "QVAL",
       "name": "Alpha Architect US Quantitative Value ETF",
-      "votes": 7,
+      "votes": 9,
       "yield": "2%"
+    },
+    {
+      "symbol": "HDV",
+      "name": "iShares Core High Dividend ETF",
+      "votes": 7,
+      "yield": "3.1%"
+    },
+    {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 7,
+      "yield": "21.0%"
     },
     {
       "symbol": "CSHI",
@@ -33,27 +45,15 @@
       "yield": "5.0%"
     },
     {
-      "symbol": "HDV",
-      "name": "iShares Core High Dividend ETF",
-      "votes": 5,
-      "yield": "3.1%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 5,
-      "yield": "21.0%"
-    },
-    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "40%"
     },
     {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "14.3%"
     },
     {
