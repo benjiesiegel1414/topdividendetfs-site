@@ -1,24 +1,24 @@
 {
-  "updated": "2026-11-01T04:28:27.336Z",
+  "updated": "2026-11-01T12:41:21.705Z",
   "total_tracked": 163,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 11,
+      "votes": 12,
       "yield": "21%"
+    },
+    {
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
+      "votes": 11,
+      "yield": "14%"
     },
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
       "votes": 10,
       "yield": "2.3%"
-    },
-    {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 10,
-      "yield": "14%"
     },
     {
       "symbol": "QVAL",
@@ -29,7 +29,7 @@
     {
       "symbol": "HDV",
       "name": "iShares Core High Dividend ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "3.1%"
     },
     {
