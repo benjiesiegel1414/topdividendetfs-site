@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T00:30:56.576Z",
+  "updated": "2026-11-03T13:38:56.488Z",
   "total_tracked": 163,
   "top": [
     {
@@ -33,16 +33,16 @@
       "yield": "2%"
     },
     {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 9,
+      "yield": "40%"
+    },
+    {
       "symbol": "HDV",
       "name": "iShares Core High Dividend ETF",
       "votes": 9,
       "yield": "3.1%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 8,
-      "yield": "40%"
     },
     {
       "symbol": "CSHI",
