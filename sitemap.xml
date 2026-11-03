@@ -283,6 +283,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etf-images/drsk</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etf-images/dubs</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etf-images/dvy</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -427,6 +439,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etf-images/idub</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etf-images/idv</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -495,6 +513,12 @@
   <url>
     <loc>https://topdividendetfs.com/etf-images/jpie</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etf-images/jucy</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1561,6 +1585,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etfs/drsk</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etfs/dubs</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etfs/dvy</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1915,6 +1951,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etfs/idub</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etfs/idv</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1982,6 +2024,12 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/issuer/amplify</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etfs/issuer/aptus</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2288,6 +2336,12 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/jpie-dividend-dates</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etfs/jucy</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
