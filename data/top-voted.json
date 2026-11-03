@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-03T13:38:56.488Z",
-  "total_tracked": 163,
+  "updated": "2026-11-03T22:55:04.235Z",
+  "total_tracked": 166,
   "top": [
     {
       "symbol": "TMGN",
@@ -45,16 +45,16 @@
       "yield": "3.1%"
     },
     {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 9,
+      "yield": "14.3%"
+    },
+    {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
       "votes": 8,
       "yield": "5.0%"
-    },
-    {
-      "symbol": "QQQI",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 8,
-      "yield": "14.3%"
     },
     {
       "symbol": "XLEI",
