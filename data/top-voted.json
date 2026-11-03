@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T14:47:14.594Z",
+  "updated": "2026-11-03T00:30:56.576Z",
   "total_tracked": 163,
   "top": [
     {
@@ -19,6 +19,12 @@
       "name": "iShares Core Dividend ETF",
       "votes": 11,
       "yield": "2.3%"
+    },
+    {
+      "symbol": "OVQ",
+      "name": "Overlay Shares Nasdaq 100 Income ETF",
+      "votes": 10,
+      "yield": "12%"
     },
     {
       "symbol": "QVAL",
@@ -54,13 +60,7 @@
       "symbol": "XLEI",
       "name": "State Street Energy Select Sector SPDR Premium Income ETF",
       "votes": 8,
-      "yield": "21.0%"
-    },
-    {
-      "symbol": "AMDW",
-      "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 5,
-      "yield": "44.2%"
+      "yield": "20.9%"
     }
   ]
 }
