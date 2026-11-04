@@ -1,12 +1,24 @@
 {
-  "updated": "2026-11-04T13:47:21.962Z",
+  "updated": "2026-11-04T23:12:33.827Z",
   "total_tracked": 166,
   "top": [
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 15,
+      "votes": 18,
       "yield": "21%"
+    },
+    {
+      "symbol": "OVQ",
+      "name": "Overlay Shares Nasdaq 100 Income ETF",
+      "votes": 17,
+      "yield": "12%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 16,
+      "yield": "2.3%"
     },
     {
       "symbol": "FIZY",
@@ -15,16 +27,16 @@
       "yield": "14%"
     },
     {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 12,
-      "yield": "2.3%"
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 11,
+      "yield": "40%"
     },
     {
-      "symbol": "OVQ",
-      "name": "Overlay Shares Nasdaq 100 Income ETF",
-      "votes": 11,
-      "yield": "12%"
+      "symbol": "CSHI",
+      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
+      "votes": 10,
+      "yield": "5.0%"
     },
     {
       "symbol": "QVAL",
@@ -33,10 +45,10 @@
       "yield": "2%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
-      "yield": "40%"
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 10,
+      "yield": "21.1%"
     },
     {
       "symbol": "HDV",
@@ -48,19 +60,7 @@
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "votes": 9,
-      "yield": "14.3%"
-    },
-    {
-      "symbol": "CSHI",
-      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
-      "votes": 8,
-      "yield": "5.0%"
-    },
-    {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 8,
-      "yield": "20.9%"
+      "yield": "14.1%"
     }
   ]
 }
