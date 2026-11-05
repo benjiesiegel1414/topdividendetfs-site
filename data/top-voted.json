@@ -1,7 +1,13 @@
 {
-  "updated": "2026-11-05T13:59:44.444Z",
+  "updated": "2026-11-05T23:16:24.476Z",
   "total_tracked": 166,
   "top": [
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 20,
+      "yield": "2.3%"
+    },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
@@ -13,12 +19,6 @@
       "name": "Overlay Shares Nasdaq 100 Income ETF",
       "votes": 17,
       "yield": "12%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 16,
-      "yield": "2.3%"
     },
     {
       "symbol": "FIZY",
