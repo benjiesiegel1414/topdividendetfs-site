@@ -50,197 +50,522 @@
       gtag('config', 'G-B8TGV115DP');
     </script>
 
-    <!-- Inline CSS (Reused from index.html) -->
     <style>
+:root {
+            --green:       #1A3C34;
+            --green-mid:   #2E5D54;
+            --green-light: #3d7a6e;
+            --gold:        #f5a623;
+            --gold-dark:   #d4891a;
+            --gold-light:  #fef3dc;
+            --bg:          #f4f4f4;
+            --white:       #ffffff;
+            --text:        #222;
+            --gray:        #555;
+            --border:      #dde;
+            --card-shadow: 0 4px 18px rgba(0,0,0,.10);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
         body {
             font-family: 'Lato', Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background: var(--bg);
+            color: var(--text);
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
+            line-height: 1.6;
         }
+
+        /* ── HEADER ── */
         header {
-            background-color: #1A3C34;
-            padding: 15px 20px;
-            color: white;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background: var(--green);
             width: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
-            background-blend-mode: overlay;
-            background-size: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,.28);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
         }
         .logo {
-            font-size: 36px;
+            font-size: clamp(18px, 4vw, 26px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            cursor: pointer;
+        }
+        .header-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .header-links a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .header-links a.gold-link {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .header-links a.gold-link:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: #fff;
+        }
+
+        /* ── NETWORK BAR ── */
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e0ede8;
+        }
+        .network-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            overflow-x: auto;
+        }
+        .network-bar-label {
+            background: var(--green-mid);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.75rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 13px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .network-bar-links {
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.87rem;
+            color: var(--green-mid);
+            border-right: 1px solid #e0ede8;
+            transition: background 0.18s;
+            white-space: nowrap;
+        }
+        .network-bar-links a:hover { background: #eaf5f0; }
+        .network-bar-links a.nb-current {
+            background: #eaf5f0;
+            color: var(--green);
+            font-weight: 900;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 60px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -70px; right: -70px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -90px; left: -40px;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            padding: 5px 18px;
+            font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
         }
-        h1 {
-            text-align: center;
-            color: #1A3C34;
-            margin: 15px 0 10px 0;
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 900;
-            font-size: 1.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0 0 14px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.5px;
         }
-        .intro-text {
-            font-size: 1em;
-            max-width: 900px;
-            margin: 0 auto 20px auto;
-            line-height: 1.6;
-            text-align: center;
-            color: #444;
+        .hero p {
+            font-size: 1.08rem;
+            max-width: 640px;
+            margin: 0 auto;
+            opacity: 0.88;
+            position: relative;
+            z-index: 1;
+            line-height: 1.65;
         }
-        .faq-container {
-            width: 90%;
-            max-width: 900px;
-            background: white;
-            border: 3px solid #2E5D54;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
+
+        /* ── MAIN CONTENT WRAPPER ── */
+        .content {
+            width: 94%;
+            max-width: 1200px;
+            padding: 48px 0 60px;
         }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h2 {
-            font-size: 1.2em;
-            color: #1A3C34;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .faq-item p {
-            font-size: 1em;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .banner {
-            width: 90%;
-            max-width: 900px;
-            margin: 5px auto 20px auto;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            background: linear-gradient(to bottom, #1a3224, #14291c);
-            text-align: center;
-        }
-        .banner a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1.7em;
-            text-shadow: 1px 1px 3px #000000;
-        }
-        .banner a span.click-here {
-            color: #ffff00;
-            font-weight: bold;
-            animation: flash 1.5s ease-in-out infinite;
-        }
-        @keyframes flash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
+
+        /* ── DISCLAIMER ── */
         .disclaimer {
-            font-size: 0.9em;
-            color: #666;
-            margin: 20px auto;
-            max-width: 900px;
-            line-height: 1.4;
+            font-size: 0.87rem;
+            color: #777;
+            margin: 24px 0 10px;
+            line-height: 1.5;
             text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
         }
-        .footer {
-            font-size: 0.9em;
-            color: #666;
-            margin: 20px auto 10px auto;
-            max-width: 900px;
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--green);
+            width: 100%;
+            padding: 30px 20px 22px;
             text-align: center;
-            padding: 10px 0;
-            border-top: 1px solid #ddd;
+            margin-top: 20px;
         }
-        .footer a {
-            color: #1A3C34;
+        .site-footer p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+        .footer-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            margin-bottom: 14px;
+        }
+        .footer-links-row a {
+            color: rgba(255,255,255,0.85);
             text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            transition: background 0.18s;
         }
-        .footer a:hover {
-            text-decoration: underline;
+        .footer-links-row a:hover { background: rgba(255,255,255,0.12); }
+        .footer-links-row a.fl-gold {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
         }
-        @media (max-width: 768px) {
-            .logo { font-size: 28px; }
-            h1 { font-size: 1.2em; margin: 10px 0; }
-            .intro-text { font-size: 0.9em; padding: 0 10px; }
-            .faq-container { padding: 15px; }
-            .faq-item h2 { font-size: 1.1em; }
-            .faq-item p { font-size: 0.9em; }
-            .banner { padding: 10px; }
+        .footer-links-row a.fl-gold:hover { background: var(--gold-dark); color: #fff; }
+        .footer-copy {
+            color: rgba(255,255,255,0.38);
+            font-size: 0.78rem;
+            margin-top: 12px;
+        }
+        .tracker-link {
+            border: 2px solid var(--green-mid);
+            padding: 4px 10px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+            font-weight: 900;
+            text-decoration: none;
+            color: var(--green);
         }
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 5px rgba(46, 93, 84, 0.3); }
-            50% { box-shadow: 0 0 8px rgba(46, 93, 84, 0.6); }
+            0%,100%{box-shadow:0 0 5px rgba(46,93,84,.3)}
+            50%{box-shadow:0 0 10px rgba(46,93,84,.6)}
+        }
+
+        
+        .content { max-width: 920px; padding: 28px 0 50px; }
+        .crumbs { font-size: .85rem; color: var(--gray); margin-bottom: 18px; }
+        .crumbs a { color: var(--green-mid); font-weight: 700; text-decoration: none; }
+        .crumbs a:hover { text-decoration: underline; }
+        .crumbs span { margin: 0 6px; color: #aaa; }
+        .jump { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 18px 22px; margin-bottom: 26px; }
+        .jump h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green-mid); margin-bottom: 10px; }
+        .jump ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+        .jump a { display: inline-block; background: #eaf5f0; color: var(--green); text-decoration: none; font-weight: 700; font-size: .86rem; padding: 6px 13px; border-radius: 20px; }
+        .jump a:hover { background: #d6eee3; }
+        .qa { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 24px 26px; margin-bottom: 16px; border-left: 5px solid var(--green-mid); scroll-margin-top: 16px; }
+        .qa h2 { color: var(--green); font-size: 1.22rem; font-weight: 900; margin-bottom: 8px; line-height: 1.35; }
+        .qa p { color: #3a3a3a; font-size: 1rem; }
+        .qa p + p { margin-top: 10px; }
+        .qa a, .card a.inline { color: var(--green-mid); font-weight: 700; }
+        .btn { display: inline-block; background: var(--green); color: #fff; text-decoration: none; font-weight: 900; font-size: .92rem; padding: 10px 20px; border-radius: 8px; margin-top: 12px; }
+        .btn:hover { background: var(--green-mid); }
+        .qa a.btn, .card a.btn { color: #fff; }
+        .card a.btn.ghost { color: var(--green); }
+        .btn.ghost { background: #fff; color: var(--green); border: 2px solid var(--green-mid); }
+        .btn.ghost:hover { background: #eaf5f0; }
+        .btn.gold { background: var(--gold); color: #1a1200; }
+        .contact { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); color: #fff; border-radius: 12px; padding: 26px; text-align: center; margin: 28px 0 8px; }
+        .contact h2 { font-size: 1.3rem; margin-bottom: 6px; }
+        .contact p { opacity: .88; }
+        .contact a.mail { color: #FFD966; font-weight: 900; text-decoration: none; }
+        .promo { display: block; text-align: center; background: var(--gold-light); border: 2px solid var(--gold); border-radius: 12px; padding: 16px 20px; margin: 18px 0 0; color: #5a3d00; font-weight: 900; text-decoration: none; }
+        .promo:hover { background: #fde7b8; }
+        .card { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 26px 28px; margin-bottom: 20px; }
+        .card h2 { color: var(--green); font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; }
+        .card p { color: #3a3a3a; }
+        .card p + p { margin-top: 10px; }
+        .factors { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+        .factor { border: 2px solid #e0ede8; border-radius: 10px; padding: 16px 18px; background: #fbfdfc; }
+        .factor .fh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+        .factor h3 { color: var(--green); font-size: 1.02rem; font-weight: 900; }
+        .factor .pts { flex-shrink: 0; background: var(--green-mid); color: #fff; font-size: .78rem; font-weight: 900; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+        .factor p { font-size: .94rem; color: #444; }
+        .bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin: 14px 0 4px; }
+        .bar span { display: block; height: 100%; }
+        .bar-key { font-size: .8rem; color: var(--gray); }
+        .caps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+        .caps li { background: #eaf5f0; border-radius: 10px; padding: 14px 10px; text-align: center; font-size: .88rem; color: var(--green-mid); font-weight: 700; }
+        .caps li strong { display: block; font-size: 1.5rem; color: var(--green); font-weight: 900; line-height: 1.2; }
+        .scale { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 8px; margin-top: 12px; }
+        .scale div { border-radius: 10px; padding: 12px 6px; text-align: center; color: #fff; font-size: .8rem; font-weight: 700; }
+        .scale div strong { display: block; font-size: 1.35rem; font-weight: 900; }
+        .scale .dark { color: #1a1a1a; }
+        .ex { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+        .ex a { flex: 1 1 200px; display: flex; align-items: center; gap: 12px; border: 2px solid #e0ede8; border-radius: 10px; padding: 12px 14px; text-decoration: none; color: var(--text); }
+        .ex a:hover { border-color: var(--green-mid); }
+        .ex .g { width: 44px; height: 44px; border-radius: 10px; background: #2ecc71; color: #fff; font-weight: 900; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .ex b { color: var(--green); }
+        .ex small { display: block; color: var(--gray); }
+        .note { background: var(--gold-light); border-left: 5px solid var(--gold); }
+        .page-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 26px; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: flex-start; }
+            .header-links { gap: 6px; }
+            .header-links a { font-size: .78rem; padding: 4px 10px; }
+            .hero { padding: 40px 16px 34px; }
+            .hero h1 { font-size: 2rem; }
+            .content { width: 100%; padding: 22px 16px 40px; }
+            .qa, .card { padding: 20px 18px; }
+            .factors { grid-template-columns: 1fr; }
+            .caps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .scale { grid-template-columns: repeat(3, minmax(0,1fr)); }
         }
     </style>
+
   <link rel="canonical" href="https://topdividendetfs.com/FAQ">
 </head>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is TopDividendETFs.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TopDividendETFs.com is a simple yet effective FREE tool created by Devoted Dividends. This tool was created out of necessity. As a retail investor seeking information about dividend ETFs, I always wished there was a single place to find updated, accurate information about dividend ETFs, like Yield, AUM, etc. Since this didn’t exist, I built it for the dividend investing community. This top dividend ETF list is curated and is for entertainment purposes only, not financial advice. I am a retail investor sharing information easily found online and am not giving buy or sell signals EVER."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the ETFs picked to be added?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a full-time dividend investor, I have a good read on the dividend investing “scene” and know which ETFs are popular and in demand. I include any and all dividend ETFs that fit that criteria, along with those I personally find interesting and want to watch closely. I will be adding and removing ETFs often and welcome the community's input on this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you find the dividend yield?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The dividend yield for each ETF is updated as many times per week as possible, setting this tool apart from others. The yield is sourced from each ETF’s main website. Yields can be inaccurate at times, but I do my best to ensure they are as accurate as humanly possible! I update them by hand and don’t scrape data, which often leads to inaccuracies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is AUM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AUM stands for Assets Under Management. This data is taken from the main website of each ETF and will be as accurate as possible, but at times may not be accurate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is price decay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Price Decay metric is determined by whether the ETF has grown or declined in price since inception. This is just one metric and does not indicate if an ETF is “good” or “bad,” but it’s a helpful data point for the community. This metric can be inaccurate at times, like all data on this website."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are ETFs graded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every ETF gets a grade from A+ to F based on a 100-point score built from six factors: total return vs. the market, income paid back to buy-and-hold investors, price decay, payout consistency, tax efficiency, and income or dividend growth. Grades are reviewed every two weeks and are opinion-based, not a signal to buy or sell anything."
+      }
+    }
+  ]
+}
+  </script>
+</head>
 <body>
-    <div class="content">
-        <header>
-            <div class="logo">TopDividendETFs.com</div>
-        </header>
+
+    <header>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com" class="logo">TopDividendETFs.com</a>
+            <nav class="header-links" aria-label="Main">
+                <a href="https://topdividendetfs.com">&#127968; Home</a>
+                <a href="https://topdividendetfs.com">&#128202; ETF Rankings</a>
+                <a href="/etfs/">&#128269; All ETFs</a>
+                <a href="/blog">&#128221; Blog</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; Dividend Tools</a>
+                <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="gold-link">&#128081; Stock Pick Club</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="network-bar">
+        <div class="network-bar-inner">
+            <div class="network-bar-label">Our Sites</div>
+            <div class="network-bar-links">
+                <a href="https://topdividendetfs.com">&#128202; TopDividendETFs.com</a>
+                <a href="https://weeklyetfs.com" target="_blank">&#128197; WeeklyETFs.com</a>
+                <a href="https://monthlyetfs.com" target="_blank">&#128198; MonthlyETFs.com</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; TopDividendTools.com</a>
+                <a href="https://topdividendetfs.com/blog">&#128221; Blog</a>
+                <a href="https://topdividendetfs.com/FAQ.html" class="nb-current">&#10067; FAQ</a>
+                <a href="https://topdividendetfs.com/how-we-grade-etfs.html">&#127941; How We Grade</a>
+                <a href="https://topetfs.com/" target="_blank">&#128240; TopETFs.com</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-badge">&#10022; Help Center &#10022;</div>
         <h1>Frequently Asked Questions</h1>
-        <p class="intro-text">
-            Welcome to the FAQ page for TopDividendETFs.com! Find answers to common questions about our free tool, dividend ETFs, and how we provide value to the dividend investing community.
-        </p>
-        <div class="faq-container">
-            <div class="faq-item">
+        <p>Answers to common questions about TopDividendETFs.com, where the data comes from, and how every ETF on the list is graded.</p>
+    </section>
+
+    <main class="content">
+        <div class="crumbs"><a href="https://topdividendetfs.com">Home</a><span>&rsaquo;</span>FAQ</div>
+
+        <div class="jump">
+            <h2>Jump to a question</h2>
+            <ul>
+                <li><a href="#what-is">What is TopDividendETFs.com?</a></li>
+                <li><a href="#how-picked">How are the ETFs picked to be added?</a></li>
+                <li><a href="#dividend-yield">How do you find the dividend yield?</a></li>
+                <li><a href="#aum">What is AUM?</a></li>
+                <li><a href="#price-decay">What is price decay?</a></li>
+                <li><a href="#grades">How are ETFs graded?</a></li>
+            </ul>
+        </div>
+
+            <section class="qa" id="what-is">
                 <h2>What is TopDividendETFs.com?</h2>
                 <p>TopDividendETFs.com is a simple yet effective FREE tool created by Devoted Dividends. This tool was created out of necessity. As a retail investor seeking information about dividend ETFs, I always wished there was a single place to find updated, accurate information about dividend ETFs, like Yield, AUM, etc. Since this didn’t exist, I built it for the dividend investing community. This top dividend ETF list is curated and is for entertainment purposes only, not financial advice. I am a retail investor sharing information easily found online and am not giving buy or sell signals EVER.</p>
-            </div>
-            <div class="faq-item">
+            </section>
+            <section class="qa" id="how-picked">
                 <h2>How are the ETFs picked to be added?</h2>
                 <p>As a full-time dividend investor, I have a good read on the dividend investing “scene” and know which ETFs are popular and in demand. I include any and all dividend ETFs that fit that criteria, along with those I personally find interesting and want to watch closely. I will be adding and removing ETFs often and welcome the community's input on this.</p>
-            </div>
-            <div class="faq-item">
-                <h2>How do you find the Dividend Yield?</h2>
+            </section>
+            <section class="qa" id="dividend-yield">
+                <h2>How do you find the dividend yield?</h2>
                 <p>The dividend yield for each ETF is updated as many times per week as possible, setting this tool apart from others. The yield is sourced from each ETF’s main website. Yields can be inaccurate at times, but I do my best to ensure they are as accurate as humanly possible! I update them by hand and don’t scrape data, which often leads to inaccuracies.</p>
-            </div>
-            <div class="faq-item">
+            </section>
+            <section class="qa" id="aum">
                 <h2>What is AUM?</h2>
                 <p>AUM stands for Assets Under Management. This data is taken from the main website of each ETF and will be as accurate as possible, but at times may not be accurate.</p>
-            </div>
-            <div class="faq-item">
-                <h2>What is Price Decay?</h2>
+            </section>
+            <section class="qa" id="price-decay">
+                <h2>What is price decay?</h2>
                 <p>The Price Decay metric is determined by whether the ETF has grown or declined in price since inception. This is just one metric and does not indicate if an ETF is “good” or “bad,” but it’s a helpful data point for the community. This metric can be inaccurate at times, like all data on this website.</p>
-            </div>
-            <div class="faq-item">
-                <h2>How Are ETFs Graded?</h2>
-                <p>Every ETF gets a grade from A+ to F based on a 100-point score built from six factors: total return vs. the market, income paid back to buy-and-hold investors, price decay, payout consistency, tax efficiency, and income or dividend growth. Grades are reviewed every two weeks and are opinion-based, not a signal to buy or sell anything. See the full methodology here: <a href="how-we-grade-etfs.html">How We Grade ETFs</a>.<br><br>
-                
-              Email me for any other questions: Business@topdividendETFs.com </p>
-            </div>
+            </section>
+            <section class="qa" id="grades">
+                <h2>How are ETFs graded?</h2>
+                <p>Every ETF gets a grade from A+ to F based on a 100-point score built from six factors: total return vs. the market, income paid back to buy-and-hold investors, price decay, payout consistency, tax efficiency, and income or dividend growth. Grades are reviewed every two weeks and are opinion-based, not a signal to buy or sell anything.</p>
+                <a class="btn" href="how-we-grade-etfs.html">See the full grading methodology &rarr;</a>
+            </section>
+
+        <div class="contact">
+            <h2>Still have a question?</h2>
+            <p>Email me anytime at <a class="mail" href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a></p>
         </div>
-        <div class="banner">
-            <a href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank"> <span class="click-here">CLICK HERE</span> For The Best Dividend Tracker</a>
+
+        <a class="promo" href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank">&#128200; CLICK HERE for the best dividend tracker</a>
+
+        <div class="page-nav">
+            <a class="btn" href="https://topdividendetfs.com">&larr; Back to the ETF Rankings</a>
+            <a class="btn ghost" href="/blog">Read the Blog</a>
         </div>
+
         <p class="disclaimer">
-            Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors & this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+            Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors &amp; this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
         </p>
-        <footer class="footer">
-            <p>
-                <a href="terms-of-use.html">Terms of Use</a> | 
-                <a href="privacy-policy.html">Privacy Policy</a> | 
-                <a href="faq.html">FAQ</a> | 
-                Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
-            </p>
-            <p style="text-align: center;">
-                <strong><a href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank" style="color: #1A3C34; font-weight: bold; text-decoration: none; border: 2px solid #2E5D54; padding: 4px 8px; border-radius: 4px; animation: glow 2s ease-in-out infinite;" class="tracker-link">Best Dividend Tracker</a></strong>
-            </p>
-        </footer>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by dividend investors, for dividend investors.</p>
+        <div class="footer-links-row">
+            <a href="https://topdividendetfs.com">Home</a>
+            <a href="/etfs/">All ETFs</a>
+            <a href="/blog">Blog</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="how-we-grade-etfs.html">How We Grade ETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+            <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+            <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="fl-gold">&#128081; Stock Pick Club</a>
+        </div>
+        <p style="margin:8px 0 2px;font-size:0.8rem;">Contact and sponsorships: <a href="mailto:Business@TopDividendETFs.com" style="color:rgba(255,255,255,0.75);">Business@TopDividendETFs.com</a></p>
+        <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
+    </footer>
+
 <script src="/sticky-ad.js" defer></script>
 </body>
 </html>

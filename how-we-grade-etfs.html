@@ -50,216 +50,517 @@
       gtag('config', 'G-B8TGV115DP');
     </script>
 
-    <!-- Inline CSS (Reused from index.html) -->
     <style>
+:root {
+            --green:       #1A3C34;
+            --green-mid:   #2E5D54;
+            --green-light: #3d7a6e;
+            --gold:        #f5a623;
+            --gold-dark:   #d4891a;
+            --gold-light:  #fef3dc;
+            --bg:          #f4f4f4;
+            --white:       #ffffff;
+            --text:        #222;
+            --gray:        #555;
+            --border:      #dde;
+            --card-shadow: 0 4px 18px rgba(0,0,0,.10);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
         body {
             font-family: 'Lato', Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background: var(--bg);
+            color: var(--text);
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
+            line-height: 1.6;
         }
+
+        /* ── HEADER ── */
         header {
-            background-color: #1A3C34;
-            padding: 15px 20px;
-            color: white;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background: var(--green);
             width: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
-            background-blend-mode: overlay;
-            background-size: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,.28);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
         }
         .logo {
-            font-size: 36px;
+            font-size: clamp(18px, 4vw, 26px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            cursor: pointer;
+        }
+        .header-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .header-links a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .header-links a.gold-link {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .header-links a.gold-link:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: #fff;
+        }
+
+        /* ── NETWORK BAR ── */
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e0ede8;
+        }
+        .network-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            overflow-x: auto;
+        }
+        .network-bar-label {
+            background: var(--green-mid);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.75rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 13px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .network-bar-links {
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.87rem;
+            color: var(--green-mid);
+            border-right: 1px solid #e0ede8;
+            transition: background 0.18s;
+            white-space: nowrap;
+        }
+        .network-bar-links a:hover { background: #eaf5f0; }
+        .network-bar-links a.nb-current {
+            background: #eaf5f0;
+            color: var(--green);
+            font-weight: 900;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 60px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -70px; right: -70px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -90px; left: -40px;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            padding: 5px 18px;
+            font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
         }
-        h1 {
-            text-align: center;
-            color: #1A3C34;
-            margin: 15px 0 10px 0;
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 900;
-            font-size: 1.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0 0 14px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.5px;
         }
-        .intro-text {
-            font-size: 1em;
-            max-width: 900px;
-            margin: 0 auto 20px auto;
-            line-height: 1.6;
-            text-align: center;
-            color: #444;
+        .hero p {
+            font-size: 1.08rem;
+            max-width: 640px;
+            margin: 0 auto;
+            opacity: 0.88;
+            position: relative;
+            z-index: 1;
+            line-height: 1.65;
         }
-        .faq-container {
-            width: 90%;
-            max-width: 900px;
-            background: white;
-            border: 3px solid #2E5D54;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
+
+        /* ── MAIN CONTENT WRAPPER ── */
+        .content {
+            width: 94%;
+            max-width: 1200px;
+            padding: 48px 0 60px;
         }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h2 {
-            font-size: 1.2em;
-            color: #1A3C34;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .faq-item p {
-            font-size: 1em;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .banner {
-            width: 90%;
-            max-width: 900px;
-            margin: 5px auto 20px auto;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            background: linear-gradient(to bottom, #1a3224, #14291c);
-            text-align: center;
-        }
-        .banner a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1.7em;
-            text-shadow: 1px 1px 3px #000000;
-        }
-        .banner a span.click-here {
-            color: #ffff00;
-            font-weight: bold;
-            animation: flash 1.5s ease-in-out infinite;
-        }
-        @keyframes flash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
+
+        /* ── DISCLAIMER ── */
         .disclaimer {
-            font-size: 0.9em;
-            color: #666;
-            margin: 20px auto;
-            max-width: 900px;
-            line-height: 1.4;
+            font-size: 0.87rem;
+            color: #777;
+            margin: 24px 0 10px;
+            line-height: 1.5;
             text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
         }
-        .footer {
-            font-size: 0.9em;
-            color: #666;
-            margin: 20px auto 10px auto;
-            max-width: 900px;
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--green);
+            width: 100%;
+            padding: 30px 20px 22px;
             text-align: center;
-            padding: 10px 0;
-            border-top: 1px solid #ddd;
+            margin-top: 20px;
         }
-        .footer a {
-            color: #1A3C34;
+        .site-footer p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+        .footer-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            margin-bottom: 14px;
+        }
+        .footer-links-row a {
+            color: rgba(255,255,255,0.85);
             text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            transition: background 0.18s;
         }
-        .footer a:hover {
-            text-decoration: underline;
+        .footer-links-row a:hover { background: rgba(255,255,255,0.12); }
+        .footer-links-row a.fl-gold {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
         }
-        @media (max-width: 768px) {
-            .logo { font-size: 28px; }
-            h1 { font-size: 1.2em; margin: 10px 0; }
-            .intro-text { font-size: 0.9em; padding: 0 10px; }
-            .faq-container { padding: 15px; }
-            .faq-item h2 { font-size: 1.1em; }
-            .faq-item p { font-size: 0.9em; }
-            .banner { padding: 10px; }
+        .footer-links-row a.fl-gold:hover { background: var(--gold-dark); color: #fff; }
+        .footer-copy {
+            color: rgba(255,255,255,0.38);
+            font-size: 0.78rem;
+            margin-top: 12px;
+        }
+        .tracker-link {
+            border: 2px solid var(--green-mid);
+            padding: 4px 10px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+            font-weight: 900;
+            text-decoration: none;
+            color: var(--green);
         }
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 5px rgba(46, 93, 84, 0.3); }
-            50% { box-shadow: 0 0 8px rgba(46, 93, 84, 0.6); }
+            0%,100%{box-shadow:0 0 5px rgba(46,93,84,.3)}
+            50%{box-shadow:0 0 10px rgba(46,93,84,.6)}
         }
-    
-        .method h2{color:#1A3C34;margin:28px 0 8px;font-size:1.25rem}
-        .factor{background:#fff;border:1px solid #dfe7e4;border-radius:10px;padding:14px 16px;margin:10px 0}
-        .factor h3{margin:0 0 6px;font-size:1.05rem;color:#1A3C34;display:flex;justify-content:space-between;gap:12px}
-        .factor h3 span{white-space:nowrap;color:#2E5D54;font-weight:900}
-        .factor p{margin:0;line-height:1.6}
-        .gscale{width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:.95rem}
-        .gscale th,.gscale td{border:1px solid #dfe7e4;padding:8px 10px;text-align:left}
-        .gscale th{background:#1A3C34;color:#fff}
-        .method p{line-height:1.65}
-        .method ul{line-height:1.7}
+
+        
+        .content { max-width: 920px; padding: 28px 0 50px; }
+        .crumbs { font-size: .85rem; color: var(--gray); margin-bottom: 18px; }
+        .crumbs a { color: var(--green-mid); font-weight: 700; text-decoration: none; }
+        .crumbs a:hover { text-decoration: underline; }
+        .crumbs span { margin: 0 6px; color: #aaa; }
+        .jump { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 18px 22px; margin-bottom: 26px; }
+        .jump h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green-mid); margin-bottom: 10px; }
+        .jump ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+        .jump a { display: inline-block; background: #eaf5f0; color: var(--green); text-decoration: none; font-weight: 700; font-size: .86rem; padding: 6px 13px; border-radius: 20px; }
+        .jump a:hover { background: #d6eee3; }
+        .qa { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 24px 26px; margin-bottom: 16px; border-left: 5px solid var(--green-mid); scroll-margin-top: 16px; }
+        .qa h2 { color: var(--green); font-size: 1.22rem; font-weight: 900; margin-bottom: 8px; line-height: 1.35; }
+        .qa p { color: #3a3a3a; font-size: 1rem; }
+        .qa p + p { margin-top: 10px; }
+        .qa a, .card a.inline { color: var(--green-mid); font-weight: 700; }
+        .btn { display: inline-block; background: var(--green); color: #fff; text-decoration: none; font-weight: 900; font-size: .92rem; padding: 10px 20px; border-radius: 8px; margin-top: 12px; }
+        .btn:hover { background: var(--green-mid); }
+        .qa a.btn, .card a.btn { color: #fff; }
+        .card a.btn.ghost { color: var(--green); }
+        .btn.ghost { background: #fff; color: var(--green); border: 2px solid var(--green-mid); }
+        .btn.ghost:hover { background: #eaf5f0; }
+        .btn.gold { background: var(--gold); color: #1a1200; }
+        .contact { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); color: #fff; border-radius: 12px; padding: 26px; text-align: center; margin: 28px 0 8px; }
+        .contact h2 { font-size: 1.3rem; margin-bottom: 6px; }
+        .contact p { opacity: .88; }
+        .contact a.mail { color: #FFD966; font-weight: 900; text-decoration: none; }
+        .promo { display: block; text-align: center; background: var(--gold-light); border: 2px solid var(--gold); border-radius: 12px; padding: 16px 20px; margin: 18px 0 0; color: #5a3d00; font-weight: 900; text-decoration: none; }
+        .promo:hover { background: #fde7b8; }
+        .card { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 26px 28px; margin-bottom: 20px; }
+        .card h2 { color: var(--green); font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; }
+        .card p { color: #3a3a3a; }
+        .card p + p { margin-top: 10px; }
+        .factors { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+        .factor { border: 2px solid #e0ede8; border-radius: 10px; padding: 16px 18px; background: #fbfdfc; }
+        .factor .fh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+        .factor h3 { color: var(--green); font-size: 1.02rem; font-weight: 900; }
+        .factor .pts { flex-shrink: 0; background: var(--green-mid); color: #fff; font-size: .78rem; font-weight: 900; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+        .factor p { font-size: .94rem; color: #444; }
+        .bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin: 14px 0 4px; }
+        .bar span { display: block; height: 100%; }
+        .bar-key { font-size: .8rem; color: var(--gray); }
+        .caps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+        .caps li { background: #eaf5f0; border-radius: 10px; padding: 14px 10px; text-align: center; font-size: .88rem; color: var(--green-mid); font-weight: 700; }
+        .caps li strong { display: block; font-size: 1.5rem; color: var(--green); font-weight: 900; line-height: 1.2; }
+        .scale { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 8px; margin-top: 12px; }
+        .scale div { border-radius: 10px; padding: 12px 6px; text-align: center; color: #fff; font-size: .8rem; font-weight: 700; }
+        .scale div strong { display: block; font-size: 1.35rem; font-weight: 900; }
+        .scale .dark { color: #1a1a1a; }
+        .ex { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+        .ex a { flex: 1 1 200px; display: flex; align-items: center; gap: 12px; border: 2px solid #e0ede8; border-radius: 10px; padding: 12px 14px; text-decoration: none; color: var(--text); }
+        .ex a:hover { border-color: var(--green-mid); }
+        .ex .g { width: 44px; height: 44px; border-radius: 10px; background: #2ecc71; color: #fff; font-weight: 900; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .ex b { color: var(--green); }
+        .ex small { display: block; color: var(--gray); }
+        .note { background: var(--gold-light); border-left: 5px solid var(--gold); }
+        .page-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 26px; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: flex-start; }
+            .header-links { gap: 6px; }
+            .header-links a { font-size: .78rem; padding: 4px 10px; }
+            .hero { padding: 40px 16px 34px; }
+            .hero h1 { font-size: 2rem; }
+            .content { width: 100%; padding: 22px 16px 40px; }
+            .qa, .card { padding: 20px 18px; }
+            .factors { grid-template-columns: 1fr; }
+            .caps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .scale { grid-template-columns: repeat(3, minmax(0,1fr)); }
+        }
     </style>
+
   <link rel="canonical" href="https://topdividendetfs.com/how-we-grade-etfs.html">
 </head>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://topdividendetfs.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQ",
+      "item": "https://topdividendetfs.com/FAQ.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How We Grade ETFs",
+      "item": "https://topdividendetfs.com/how-we-grade-etfs.html"
+    }
+  ]
+}
+  </script>
+</head>
 <body>
-    <div class="content">
-        <header>
-            <div class="logo">TopDividendETFs.com</div>
-        </header>
+
+    <header>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com" class="logo">TopDividendETFs.com</a>
+            <nav class="header-links" aria-label="Main">
+                <a href="https://topdividendetfs.com">&#127968; Home</a>
+                <a href="https://topdividendetfs.com">&#128202; ETF Rankings</a>
+                <a href="/etfs/">&#128269; All ETFs</a>
+                <a href="/blog">&#128221; Blog</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; Dividend Tools</a>
+                <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="gold-link">&#128081; Stock Pick Club</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="network-bar">
+        <div class="network-bar-inner">
+            <div class="network-bar-label">Our Sites</div>
+            <div class="network-bar-links">
+                <a href="https://topdividendetfs.com">&#128202; TopDividendETFs.com</a>
+                <a href="https://weeklyetfs.com" target="_blank">&#128197; WeeklyETFs.com</a>
+                <a href="https://monthlyetfs.com" target="_blank">&#128198; MonthlyETFs.com</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; TopDividendTools.com</a>
+                <a href="https://topdividendetfs.com/blog">&#128221; Blog</a>
+                <a href="https://topdividendetfs.com/FAQ.html">&#10067; FAQ</a>
+                <a href="https://topdividendetfs.com/how-we-grade-etfs.html" class="nb-current">&#127941; How We Grade</a>
+                <a href="https://topetfs.com/" target="_blank">&#128240; TopETFs.com</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-badge">&#10022; Our Methodology &#10022;</div>
         <h1>How We Grade ETFs</h1>
-        <p class="intro-text">Every ETF on TopDividendETFs.com and TopDividendETFsPRO gets a letter grade from A+ to F. Here's exactly how that grade is built, so you know what's behind it.</p>
-        <div class="method">
+        <p>Every ETF on TopDividendETFs.com and TopDividendETFsPRO gets a letter grade from A+ to F. Here's exactly how that grade is built, so you know what's behind it.</p>
+    </section>
+
+    <main class="content">
+        <div class="crumbs"><a href="https://topdividendetfs.com">Home</a><span>&rsaquo;</span><a href="FAQ.html">FAQ</a><span>&rsaquo;</span>How We Grade ETFs</div>
+
+        <section class="card">
+            <h2>The short version</h2>
             <p>Each fund gets a score out of 100 based on six things I look at as a long-term income investor. The score turns into a letter grade. The same rules apply to every ETF, and the grades are reviewed every two weeks as new prices and payouts come in.</p>
+            <div class="bar" aria-hidden="true"><span style="width:25%;background:#1A3C34" title="1. Total return vs. the market"></span><span style="width:25%;background:#2E5D54" title="2. Income paid back"></span><span style="width:15%;background:#3d7a6e" title="3. Price decay"></span><span style="width:15%;background:#5a9a8c" title="4. Payout consistency"></span><span style="width:10%;background:#f5a623" title="5. Tax efficiency"></span><span style="width:10%;background:#d4891a" title="6. Income or dividend growth"></span></div>
+            <div class="bar-key">How the 100 points are split across the six factors</div>
+        </section>
 
+        <section class="card">
             <h2>The six factors</h2>
-            <div class="factor"><h3>1. Total return vs. the market <span>25 points</span></h3><p>How much the fund has grown per year since it launched, with every distribution reinvested, compared with the S&amp;P 500 over the same period. Funds that keep up with or beat the market score highest. T-bill funds are compared with T-bills and bond funds with the U.S. bond market, since comparing them to stocks wouldn't be fair.</p></div>
-            <div class="factor"><h3>2. Income paid back <span>25 points</span></h3><p>What a buy-and-hold investor actually got: every distribution paid since launch plus the change in the share price, per year, without reinvesting. A fund can have some price decay and still score well here if it has paid out a lot of income over the years.</p></div>
-            <div class="factor"><h3>3. Price decay <span>15 points</span></h3><p>Where the share price is today compared with where it started. A fund whose price has grown since launch scores highest. The more the price has eroded, the lower the score.</p></div>
-            <div class="factor"><h3>4. Payout consistency <span>15 points</span></h3><p>How steady the payouts have been over the last two years. Big swings from one payout to the next lower the score, and so does income that fell more than 20% from the prior year. Funds that grow their dividend 5% a year or more get a bonus.</p></div>
-            <div class="factor"><h3>5. Tax efficiency <span>10 points</span></h3><p>Based on the fund's Tax Treatment Grade, which reflects how tax-friendly it is for someone holding it in a taxable account. More tax-efficient funds score higher.</p></div>
-            <div class="factor"><h3>6. Income or dividend growth <span>10 points</span></h3><p>Either the current yield or how fast the dividend has grown over the last three years, whichever is stronger. A high-income fund and a fast-growing dividend payer can both earn these points.</p></div>
+            <div class="factors">
+                <div class="factor"><div class="fh"><h3>1. Total return vs. the market</h3><span class="pts">25 pts</span></div><p>How much the fund has grown per year since it launched, with every distribution reinvested, compared with the S&amp;P 500 over the same period. Funds that keep up with or beat the market score highest. T-bill funds are compared with T-bills and bond funds with the U.S. bond market, since comparing them to stocks wouldn't be fair.</p></div>
+                <div class="factor"><div class="fh"><h3>2. Income paid back</h3><span class="pts">25 pts</span></div><p>What a buy-and-hold investor actually got: every distribution paid since launch plus the change in the share price, per year, without reinvesting. A fund can have some price decay and still score well here if it has paid out a lot of income over the years.</p></div>
+                <div class="factor"><div class="fh"><h3>3. Price decay</h3><span class="pts">15 pts</span></div><p>Where the share price is today compared with where it started. A fund whose price has grown since launch scores highest. The more the price has eroded, the lower the score.</p></div>
+                <div class="factor"><div class="fh"><h3>4. Payout consistency</h3><span class="pts">15 pts</span></div><p>How steady the payouts have been over the last two years. Big swings from one payout to the next lower the score, and so does income that fell more than 20% from the prior year. Funds that grow their dividend 5% a year or more get a bonus.</p></div>
+                <div class="factor"><div class="fh"><h3>5. Tax efficiency</h3><span class="pts">10 pts</span></div><p>Based on the fund's Tax Treatment Grade, which reflects how tax-friendly it is for someone holding it in a taxable account. More tax-efficient funds score higher.</p></div>
+                <div class="factor"><div class="fh"><h3>6. Income or dividend growth</h3><span class="pts">10 pts</span></div><p>Either the current yield or how fast the dividend has grown over the last three years, whichever is stronger. A high-income fund and a fast-growing dividend payer can both earn these points.</p></div>
+            </div>
+        </section>
 
+        <section class="card">
             <h2>Track record</h2>
-            <p>New funds need time to prove themselves, so a short history caps the grade:</p>
-            <ul>
-                <li>Under 1 year: the highest possible grade is B</li>
-                <li>Under 3 years: the highest possible grade is A-</li>
-                <li>Under 5 years: the highest possible grade is A</li>
-                <li>A+ requires at least 5 years of history</li>
+            <p>New funds need time to prove themselves, so a short history caps the grade.</p>
+            <ul class="caps">
+                <li><strong>B</strong>max under 1 year</li>
+                <li><strong>A-</strong>max under 3 years</li>
+                <li><strong>A</strong>max under 5 years</li>
+                <li><strong>A+</strong>needs 5+ years</li>
             </ul>
+        </section>
 
+        <section class="card">
             <h2>Grade scale</h2>
-            <table class="gscale">
-                <tr><th>Score</th><th>Grade</th><th>Score</th><th>Grade</th></tr>
-                <tr><td>90 to 100</td><td>A+</td><td>60 to 64</td><td>C+</td></tr>
-                <tr><td>85 to 89</td><td>A</td><td>55 to 59</td><td>C</td></tr>
-                <tr><td>80 to 84</td><td>A-</td><td>50 to 54</td><td>C-</td></tr>
-                <tr><td>75 to 79</td><td>B+</td><td>45 to 49</td><td>D+</td></tr>
-                <tr><td>70 to 74</td><td>B</td><td>40 to 44</td><td>D</td></tr>
-                <tr><td>65 to 69</td><td>B-</td><td>Under 40</td><td>F</td></tr>
-            </table>
+            <p>The score out of 100 maps to a letter grade like this:</p>
+            <div class="scale">
+                <div style="background:#2ecc71"><strong>A+</strong>90+</div>
+                <div style="background:#2ecc71"><strong>A</strong>85-89</div>
+                <div style="background:#2ecc71"><strong>A-</strong>80-84</div>
+                <div style="background:#7ed957"><strong>B+</strong>75-79</div>
+                <div style="background:#7ed957"><strong>B</strong>70-74</div>
+                <div style="background:#7ed957"><strong>B-</strong>65-69</div>
+                <div style="background:#f5a623"><strong>C+</strong>60-64</div>
+                <div style="background:#f5a623"><strong>C</strong>55-59</div>
+                <div style="background:#f5a623"><strong>C-</strong>50-54</div>
+                <div style="background:#e74c3c"><strong>D+</strong>45-49</div>
+                <div style="background:#e74c3c"><strong>D</strong>40-44</div>
+                <div style="background:#e74c3c"><strong>F</strong>Under 40</div>
+            </div>
+        </section>
 
+        <section class="card">
             <h2>What an A+ looks like</h2>
             <p>An A+ fund has no price decay, has kept up with or beaten the market over time, pays steady or growing income, and is tax-efficient. Funds like $OVL and $SCHG are good examples: both have grown a lot over time, and both have paid investors well along the way, $OVL through high income and $SCHG through dividend growth.</p>
+            <div class="ex">
+                <a href="/etfs/ovl"><span class="g">A+</span><span><b>$OVL</b><small>Overlay Shares Large Cap Equity ETF</small></span></a>
+                <a href="/etfs/schg"><span class="g">A+</span><span><b>$SCHG</b><small>Schwab U.S. Growth ETF</small></span></a>
+            </div>
+            <a class="btn ghost" href="/etfs/grade/a-plus">See every A+ rated ETF &rarr;</a>
+        </section>
 
+        <section class="card">
             <h2>Where the data comes from</h2>
             <p>Total returns, share prices and distribution history come from daily market data. Yields come from each fund issuer's own website, and the Tax Treatment Grade and price decay come from the TopDividendETFs database. Grades are recalculated every two weeks.</p>
+        </section>
 
+        <section class="card note">
             <h2>Important</h2>
-            <p>Grades are my opinion, built from historical data. They are one data point for your own research, not a buy or sell signal, and past performance doesn't guarantee future results. Questions? Email Business@TopDividendETFs.com</p>
-            <p><a href="FAQ.html">Back to the FAQ</a></p>
+            <p>Grades are my opinion, built from historical data. They are one data point for your own research, not a buy or sell signal, and past performance doesn't guarantee future results. Questions? Email <a class="inline" href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a></p>
+        </section>
+
+        <div class="page-nav">
+            <a class="btn" href="https://topdividendetfs.com">&larr; Back to the ETF Rankings</a>
+            <a class="btn ghost" href="FAQ.html">Back to the FAQ</a>
+            <a class="btn ghost" href="/etfs/">Browse All ETFs</a>
         </div>
+
         <p class="disclaimer">
             Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors &amp; this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
         </p>
-        <footer class="footer">
-            <p>
-                <a href="terms-of-use.html">Terms of Use</a> | 
-                <a href="privacy-policy.html">Privacy Policy</a> | 
-                <a href="faq.html">FAQ</a> | 
-                Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
-            </p>
-            <p style="text-align: center;">
-                <strong><a href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank" style="color: #1A3C34; font-weight: bold; text-decoration: none; border: 2px solid #2E5D54; padding: 4px 8px; border-radius: 4px; animation: glow 2s ease-in-out infinite;" class="tracker-link">Best Dividend Tracker</a></strong>
-            </p>
-        </footer>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by dividend investors, for dividend investors.</p>
+        <div class="footer-links-row">
+            <a href="https://topdividendetfs.com">Home</a>
+            <a href="/etfs/">All ETFs</a>
+            <a href="/blog">Blog</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="how-we-grade-etfs.html">How We Grade ETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+            <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+            <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="fl-gold">&#128081; Stock Pick Club</a>
+        </div>
+        <p style="margin:8px 0 2px;font-size:0.8rem;">Contact and sponsorships: <a href="mailto:Business@TopDividendETFs.com" style="color:rgba(255,255,255,0.75);">Business@TopDividendETFs.com</a></p>
+        <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
+    </footer>
+
 <script src="/sticky-ad.js" defer></script>
 </body>
 </html>
