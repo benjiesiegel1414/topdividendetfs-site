@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Benjie">
+    <title>How We Grade ETFs | TopDividendETFs.com</title>
+    <meta name="description" content="The methodology behind every ETF grade on TopDividendETFs.com and TopDividendETFsPRO: total return, income paid back, price decay, payout consistency, tax efficiency and income growth.">
+    <meta name="keywords" content="ETF grades, ETF rating methodology, dividend ETF grades, TopDividendETFs">
+    <meta name="google-site-verification" content="B3Y64nGCTrh2g_qRz1Dx4j3R-m-mpRJ-xW65aAV_4OXBk" />
+    <meta name="msvalidate.01" content="C66A48BDFAA2F813D992F39A8BBB3EF1" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="How We Grade ETFs | TopDividendETFs.com">
+    <meta property="og:description" content="The six factors behind every ETF grade on TopDividendETFs.com.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:url" content="https://topdividendetfs.com/how-we-grade-etfs.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TopDividendETFs">
+    <meta name="twitter:title" content="How We Grade ETFs | TopDividendETFs.com">
+    <meta name="twitter:description" content="The six factors behind every ETF grade on TopDividendETFs.com.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/social-preview.png">
+    <meta name="twitter:image:alt" content="How We Grade ETFs on TopDividendETFs.com">
+
+    <!-- Favicon / Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B8TGV115DP');
+    </script>
+
+    <!-- Inline CSS (Reused from index.html) -->
+    <style>
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        header {
+            background-color: #1A3C34;
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+            background-blend-mode: overlay;
+            background-size: cover;
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            text-align: center;
+            color: #1A3C34;
+            margin: 15px 0 10px 0;
+            font-weight: 900;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .intro-text {
+            font-size: 1em;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+            text-align: center;
+            color: #444;
+        }
+        .faq-container {
+            width: 90%;
+            max-width: 900px;
+            background: white;
+            border: 3px solid #2E5D54;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h2 {
+            font-size: 1.2em;
+            color: #1A3C34;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .faq-item p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .banner {
+            width: 90%;
+            max-width: 900px;
+            margin: 5px auto 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(to bottom, #1a3224, #14291c);
+            text-align: center;
+        }
+        .banner a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.7em;
+            text-shadow: 1px 1px 3px #000000;
+        }
+        .banner a span.click-here {
+            color: #ffff00;
+            font-weight: bold;
+            animation: flash 1.5s ease-in-out infinite;
+        }
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .disclaimer {
+            font-size: 0.9em;
+            color: #666;
+            margin: 20px auto;
+            max-width: 900px;
+            line-height: 1.4;
+            text-align: center;
+        }
+        .footer {
+            font-size: 0.9em;
+            color: #666;
+            margin: 20px auto 10px auto;
+            max-width: 900px;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+        .footer a {
+            color: #1A3C34;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .logo { font-size: 28px; }
+            h1 { font-size: 1.2em; margin: 10px 0; }
+            .intro-text { font-size: 0.9em; padding: 0 10px; }
+            .faq-container { padding: 15px; }
+            .faq-item h2 { font-size: 1.1em; }
+            .faq-item p { font-size: 0.9em; }
+            .banner { padding: 10px; }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(46, 93, 84, 0.3); }
+            50% { box-shadow: 0 0 8px rgba(46, 93, 84, 0.6); }
+        }
+    
+        .method h2{color:#1A3C34;margin:28px 0 8px;font-size:1.25rem}
+        .factor{background:#fff;border:1px solid #dfe7e4;border-radius:10px;padding:14px 16px;margin:10px 0}
+        .factor h3{margin:0 0 6px;font-size:1.05rem;color:#1A3C34;display:flex;justify-content:space-between;gap:12px}
+        .factor h3 span{white-space:nowrap;color:#2E5D54;font-weight:900}
+        .factor p{margin:0;line-height:1.6}
+        .gscale{width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:.95rem}
+        .gscale th,.gscale td{border:1px solid #dfe7e4;padding:8px 10px;text-align:left}
+        .gscale th{background:#1A3C34;color:#fff}
+        .method p{line-height:1.65}
+        .method ul{line-height:1.7}
+    </style>
+  <link rel="canonical" href="https://topdividendetfs.com/how-we-grade-etfs.html">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="logo">TopDividendETFs.com</div>
+        </header>
+        <h1>How We Grade ETFs</h1>
+        <p class="intro-text">Every ETF on TopDividendETFs.com and TopDividendETFsPRO gets a letter grade from A+ to F. Here's exactly how that grade is built, so you know what's behind it.</p>
+        <div class="method">
+            <p>Each fund gets a score out of 100 based on six things I look at as a long-term income investor. The score turns into a letter grade. The same rules apply to every ETF, and the grades are reviewed every two weeks as new prices and payouts come in.</p>
+
+            <h2>The six factors</h2>
+            <div class="factor"><h3>1. Total return vs. the market <span>25 points</span></h3><p>How much the fund has grown per year since it launched, with every distribution reinvested, compared with the S&amp;P 500 over the same period. Funds that keep up with or beat the market score highest. T-bill funds are compared with T-bills and bond funds with the U.S. bond market, since comparing them to stocks wouldn't be fair.</p></div>
+            <div class="factor"><h3>2. Income paid back <span>25 points</span></h3><p>What a buy-and-hold investor actually got: every distribution paid since launch plus the change in the share price, per year, without reinvesting. A fund can have some price decay and still score well here if it has paid out a lot of income over the years.</p></div>
+            <div class="factor"><h3>3. Price decay <span>15 points</span></h3><p>Where the share price is today compared with where it started. A fund whose price has grown since launch scores highest. The more the price has eroded, the lower the score.</p></div>
+            <div class="factor"><h3>4. Payout consistency <span>15 points</span></h3><p>How steady the payouts have been over the last two years. Big swings from one payout to the next lower the score, and so does income that fell more than 20% from the prior year. Funds that grow their dividend 5% a year or more get a bonus.</p></div>
+            <div class="factor"><h3>5. Tax efficiency <span>10 points</span></h3><p>Based on the fund's Tax Treatment Grade, which reflects how tax-friendly it is for someone holding it in a taxable account. More tax-efficient funds score higher.</p></div>
+            <div class="factor"><h3>6. Income or dividend growth <span>10 points</span></h3><p>Either the current yield or how fast the dividend has grown over the last three years, whichever is stronger. A high-income fund and a fast-growing dividend payer can both earn these points.</p></div>
+
+            <h2>Track record</h2>
+            <p>New funds need time to prove themselves, so a short history caps the grade:</p>
+            <ul>
+                <li>Under 1 year: the highest possible grade is B</li>
+                <li>Under 3 years: the highest possible grade is A-</li>
+                <li>Under 5 years: the highest possible grade is A</li>
+                <li>A+ requires at least 5 years of history</li>
+            </ul>
+
+            <h2>Grade scale</h2>
+            <table class="gscale">
+                <tr><th>Score</th><th>Grade</th><th>Score</th><th>Grade</th></tr>
+                <tr><td>90 to 100</td><td>A+</td><td>60 to 64</td><td>C+</td></tr>
+                <tr><td>85 to 89</td><td>A</td><td>55 to 59</td><td>C</td></tr>
+                <tr><td>80 to 84</td><td>A-</td><td>50 to 54</td><td>C-</td></tr>
+                <tr><td>75 to 79</td><td>B+</td><td>45 to 49</td><td>D+</td></tr>
+                <tr><td>70 to 74</td><td>B</td><td>40 to 44</td><td>D</td></tr>
+                <tr><td>65 to 69</td><td>B-</td><td>Under 40</td><td>F</td></tr>
+            </table>
+
+            <h2>What an A+ looks like</h2>
+            <p>An A+ fund has no price decay, has kept up with or beaten the market over time, pays steady or growing income, and is tax-efficient. Funds like $OVL and $SCHG are good examples: both have grown a lot over time, and both have paid investors well along the way, $OVL through high income and $SCHG through dividend growth.</p>
+
+            <h2>Where the data comes from</h2>
+            <p>Total returns, share prices and distribution history come from daily market data. Yields come from each fund issuer's own website, and the Tax Treatment Grade and price decay come from the TopDividendETFs database. Grades are recalculated every two weeks.</p>
+
+            <h2>Important</h2>
+            <p>Grades are my opinion, built from historical data. They are one data point for your own research, not a buy or sell signal, and past performance doesn't guarantee future results. Questions? Email Business@TopDividendETFs.com</p>
+            <p><a href="FAQ.html">Back to the FAQ</a></p>
+        </div>
+        <p class="disclaimer">
+            Disclaimer: TopDividendETFs.com is for educational purposes only. ETF data and dividend information may be inaccurate or outdated. Investing carries risk, including loss of principal. We are not financial advisors &amp; this is NOT Financial Advice. Always consult a licensed financial advisor before making investment decisions.
+        </p>
+        <footer class="footer">
+            <p>
+                <a href="terms-of-use.html">Terms of Use</a> | 
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="faq.html">FAQ</a> | 
+                Contact email: <a href="mailto:Business@TopDividendETFs.com">Business@TopDividendETFs.com</a>
+            </p>
+            <p style="text-align: center;">
+                <strong><a href="https://dividendempire2000.gumroad.com/l/DividendTracker" target="_blank" style="color: #1A3C34; font-weight: bold; text-decoration: none; border: 2px solid #2E5D54; padding: 4px 8px; border-radius: 4px; animation: glow 2s ease-in-out infinite;" class="tracker-link">Best Dividend Tracker</a></strong>
+            </p>
+        </footer>
+    </div>
+<script src="/sticky-ad.js" defer></script>
+</body>
+</html>
