@@ -86,6 +86,22 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
 .pro-box p{color:rgba(255,255,255,.85);font-size:.95rem;max-width:600px;margin:0 auto 14px}
 .pro-box a{display:inline-block;background:#FFD700;color:#1A3C34;font-weight:900;padding:11px 24px;border-radius:8px;text-decoration:none}
 @media(max-width:640px){.answer-box{padding:20px 18px}.hero-block{padding:30px 18px 28px}}
+.etfsu.featured .top h3{color:#FFD700!important}
+.dh{background:#fff;border:2px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);margin:6px 0 4px}
+.dh table{width:100%;border-collapse:collapse;font-size:.95rem}
+.dh th{background:var(--green-dark);color:#fff;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;text-align:left;padding:10px 14px}
+.dh td{padding:10px 14px;border-bottom:1px solid #eef3f0;color:var(--text-mid);font-variant-numeric:tabular-nums}
+.dh td strong{color:var(--green-dark)}
+.dh td.up{color:#1c8c5a;font-weight:700}.dh td.dn{color:#c0392b;font-weight:700}
+.dh tr.more{display:none}.dh.open tr.more{display:table-row}
+.dh-foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:12px 14px;background:#f6fbf8;border-top:1px solid var(--border)}
+.dh-btn{background:var(--green-mid);color:#fff;border:0;border-radius:6px;padding:9px 16px;font-weight:900;font-family:inherit;font-size:.88rem;cursor:pointer}
+.dh-btn .l2{display:none}.dh.open .dh-btn .l1{display:none}.dh.open .dh-btn .l2{display:inline}
+.dh-foot a{color:var(--green-mid);font-weight:700;font-size:.88rem}
+.dh-pro{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(135deg,#1A3C34,#2E5D54);border-radius:10px;padding:16px 20px;margin:10px 0 4px;color:#fff}
+.dh-pro p{margin:0;font-size:.95rem;color:rgba(255,255,255,.88);flex:1 1 280px}.dh-pro p b{color:#FFD700}
+.dh-pro a{background:#FFD700;color:#1A3C34;font-weight:900;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.dh th,.dh td{padding:9px 10px}.dh table{font-size:.9rem}}
 
 
     .content{padding-bottom:70px}
@@ -227,6 +243,14 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
       <div class="ab-label">TSPY at a glance</div>
       <p><strong>$TSPY</strong> (TappAlpha S&amp;P 500 Growth &amp; Daily Income ETF) yields about <strong>14.5%</strong>, <strong>6.2% below</strong> the 20.7% average of the 178 dividend ETFs we track. It holds about <strong>$403M</strong> in assets, earns a <strong>A-</strong> on our scorecard and is <strong>flagged for price decay</strong>.</p>
     </div>
+
+<h2 class="section-title">TSPY Recent Dividend History</h2>
+    <p class="section-lead">TSPY pays monthly. Here are its 6 most recent payouts, $3.559 per share over the last 12 months. Source: Nasdaq.com.</p>
+    <div class="dh" id="dh">
+      <table><thead><tr><th>Ex-Date</th><th>Pay Date</th><th>Amount</th><th>Change</th></tr></thead><tbody><tr><td>Nov 3, 2026</td><td>Nov 4, 2026</td><td><strong>$0.2968</strong></td><td class="">-</td></tr><tr><td>Oct 6, 2026</td><td>Oct 7, 2026</td><td><strong>$0.2968</strong></td><td class="up">+0.5%</td></tr><tr><td>Sep 1, 2026</td><td>Sep 2, 2026</td><td><strong>$0.2954</strong></td><td class="dn">-1.6%</td></tr><tr><td>Aug 4, 2026</td><td>Aug 5, 2026</td><td><strong>$0.3001</strong></td><td class="up">+1.7%</td></tr><tr><td>Jun 30, 2026</td><td>Jul 1, 2026</td><td><strong>$0.2952</strong></td><td class="dn">-0.8%</td></tr><tr><td>Jun 2, 2026</td><td>Jun 3, 2026</td><td><strong>$0.2975</strong></td><td class="up">+1.5%</td></tr><tr class="more"><td>May 5, 2026</td><td>May 6, 2026</td><td><strong>$0.2931</strong></td><td class="up">+4.4%</td></tr><tr class="more"><td>Mar 31, 2026</td><td>Apr 1, 2026</td><td><strong>$0.2807</strong></td><td class="dn">-6.4%</td></tr><tr class="more"><td>Mar 3, 2026</td><td>Mar 4, 2026</td><td><strong>$0.30</strong></td><td class="">-</td></tr><tr class="more"><td>Feb 3, 2026</td><td>Feb 4, 2026</td><td><strong>$0.3001</strong></td><td class="dn">-0.7%</td></tr><tr class="more"><td>Jan 6, 2026</td><td>Jan 7, 2026</td><td><strong>$0.3023</strong></td><td class="up">+0.5%</td></tr><tr class="more"><td>Dec 2, 2025</td><td>Dec 3, 2025</td><td><strong>$0.3009</strong></td><td class="dn">-0.7%</td></tr></tbody></table>
+      <div class="dh-foot"><button type="button" class="dh-btn" onclick="this.closest('.dh').classList.toggle('open')"><span class="l1">Show 6 more payouts &#9662;</span><span class="l2">Show fewer &#9652;</span></button><a href="/etfs/tspy-dividend-dates">See every TSPY dividend date &rarr;</a></div>
+    </div>
+    <div class="dh-pro"><p><b>Want the full picture?</b> TopDividendETFsPRO shows 2 years of TSPY dividend history, payout trends, yield history and tax treatment for 150+ income ETFs.</p><a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Join PRO &rarr;</a></div>
 
     <h2 class="section-title">Where TSPY Ranks</h2>
     <p class="section-lead">How TSPY stacks up against all 178 dividend ETFs on TopDividendETFs.com. Tap any card to see the full ranking.</p>
