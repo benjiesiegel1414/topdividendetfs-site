@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Benjie">
+    <title>Income Calendar Review: The Dividend Tracker That Shows Every Payment Coming in the Next 12 Months | TopDividendETFs.com</title>
+    <meta name="description" content="A hands-on deep dive into Income Calendar, the forward-looking dividend tracker from BNK Invest. I ran a 10-holding income portfolio through it: 12-month projection, income by position, ex-dates and pay dates. Sponsored.">
+    <link rel="canonical" href="https://topdividendetfs.com/income-calendar-dividend-tracker-review.html">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Income Calendar Review: The Dividend Tracker That Shows Every Payment Coming in the Next 12 Months">
+    <meta property="og:description" content="A hands-on deep dive into Income Calendar, the forward-looking dividend tracker from BNK Invest. I ran a 10-holding income portfolio through it: 12-month projection, income by position, ex-dates and pay dates. Sponsored.">
+    <meta property="og:image" content="https://topdividendetfs.com/images/income-calendar/income-calendar-deep-dive.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://topdividendetfs.com/income-calendar-dividend-tracker-review.html">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-11-06T09:00:00-05:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TopDividendETFs">
+    <meta name="twitter:title" content="Income Calendar Review: The Dividend Tracker That Shows Every Payment Coming in the Next 12 Months">
+    <meta name="twitter:description" content="A hands-on deep dive into Income Calendar, the forward-looking dividend tracker from BNK Invest. I ran a 10-holding income portfolio through it: 12-month projection, income by position, ex-dates and pay dates. Sponsored.">
+    <meta name="twitter:image" content="https://topdividendetfs.com/images/income-calendar/income-calendar-deep-dive.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B8TGV115DP');</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Income Calendar Review: The Dividend Tracker That Shows Every Payment Coming in the Next 12 Months", "description": "A hands-on deep dive into Income Calendar, the forward-looking dividend tracker from BNK Invest. I ran a 10-holding income portfolio through it: 12-month projection, income by position, ex-dates and pay dates. Sponsored.", "image": "https://topdividendetfs.com/images/income-calendar/income-calendar-deep-dive.jpg", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Benjie"}, "publisher": {"@type": "Organization", "name": "TopDividendETFs.com", "url": "https://topdividendetfs.com"}, "mainEntityOfPage": "https://topdividendetfs.com/income-calendar-dividend-tracker-review.html"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Income Calendar?", "acceptedAnswer": {"@type": "Answer", "text": "Income Calendar is a forward-looking dividend tracker from BNK Invest, the team behind Contrarian Outlook and TickerTech. You add your holdings and it projects your dividend income for the next 12 months by month, by position and by date, including projected declaration, ex-dividend and pay dates."}}, {"@type": "Question", "name": "How much does Income Calendar cost?", "acceptedAnswer": {"@type": "Answer", "text": "Income Calendar is $8.99 per month with one plan that includes every core feature: 12-month projections, unlimited holdings and accounts, brokerage import, manual entry and dividend alerts. You can cancel anytime."}}, {"@type": "Question", "name": "Is there a free version of Income Calendar?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The free preview at DividendTracker.com lets you enter up to 10 holdings and see a temporary 12-month income projection. The preview does not need a login, a credit card or a brokerage connection, and nothing you enter is saved. The paid subscription does require an account and a card."}}, {"@type": "Question", "name": "Does Income Calendar work with ETFs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It supports U.S. and Canadian stocks, ETFs, closed-end funds, REITs, BDCs, preferreds and mutual funds. In my test it handled monthly payers like JEPI, JEPQ, QQQI and SPYI right next to quarterly payers like SCHD, KO and ABBV."}}, {"@type": "Question", "name": "Are Income Calendar's projections guaranteed?", "acceptedAnswer": {"@type": "Answer", "text": "No. Projections are estimates based on recent dividends and historical payment patterns. Companies and funds can raise, cut, delay or cancel payouts, and high-income option ETFs change their distributions often. The tool updates as new dividend information comes in, but treat every projection as a planning estimate."}}]}</script>
+    <style>
+:root {
+            --green:       #1A3C34;
+            --green-mid:   #2E5D54;
+            --green-light: #3d7a6e;
+            --gold:        #f5a623;
+            --gold-dark:   #d4891a;
+            --gold-light:  #fef3dc;
+            --bg:          #f4f4f4;
+            --white:       #ffffff;
+            --text:        #222;
+            --gray:        #555;
+            --border:      #dde;
+            --card-shadow: 0 4px 18px rgba(0,0,0,.10);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--green);
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,.28);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            font-size: clamp(18px, 4vw, 26px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            cursor: pointer;
+        }
+        .header-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .header-links a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .header-links a.gold-link {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .header-links a.gold-link:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: #fff;
+        }
+
+        /* ── NETWORK BAR ── */
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e0ede8;
+        }
+        .network-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            overflow-x: auto;
+        }
+        .network-bar-label {
+            background: var(--green-mid);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.75rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 13px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .network-bar-links {
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.87rem;
+            color: var(--green-mid);
+            border-right: 1px solid #e0ede8;
+            transition: background 0.18s;
+            white-space: nowrap;
+        }
+        .network-bar-links a:hover { background: #eaf5f0; }
+        .network-bar-links a.nb-current {
+            background: #eaf5f0;
+            color: var(--green);
+            font-weight: 900;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 60px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -70px; right: -70px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -90px; left: -40px;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            padding: 5px 18px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            margin: 0 0 14px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.08rem;
+            max-width: 640px;
+            margin: 0 auto;
+            opacity: 0.88;
+            position: relative;
+            z-index: 1;
+            line-height: 1.65;
+        }
+
+        /* ── MAIN CONTENT WRAPPER ── */
+        .content {
+            width: 94%;
+            max-width: 1200px;
+            padding: 48px 0 60px;
+        }
+
+        /* ── DISCLAIMER ── */
+        .disclaimer {
+            font-size: 0.87rem;
+            color: #777;
+            margin: 24px 0 10px;
+            line-height: 1.5;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--green);
+            width: 100%;
+            padding: 30px 20px 22px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .site-footer p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+        .footer-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            margin-bottom: 14px;
+        }
+        .footer-links-row a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            transition: background 0.18s;
+        }
+        .footer-links-row a:hover { background: rgba(255,255,255,0.12); }
+        .footer-links-row a.fl-gold {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .footer-links-row a.fl-gold:hover { background: var(--gold-dark); color: #fff; }
+        .footer-copy {
+            color: rgba(255,255,255,0.38);
+            font-size: 0.78rem;
+            margin-top: 12px;
+        }
+        .tracker-link {
+            border: 2px solid var(--green-mid);
+            padding: 4px 10px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+            font-weight: 900;
+            text-decoration: none;
+            color: var(--green);
+        }
+        @keyframes glow {
+            0%,100%{box-shadow:0 0 5px rgba(46,93,84,.3)}
+            50%{box-shadow:0 0 10px rgba(46,93,84,.6)}
+        }
+
+        
+        .content { max-width: 920px; padding: 28px 0 50px; }
+        .crumbs { font-size: .85rem; color: var(--gray); margin-bottom: 18px; }
+        .crumbs a { color: var(--green-mid); font-weight: 700; text-decoration: none; }
+        .crumbs a:hover { text-decoration: underline; }
+        .crumbs span { margin: 0 6px; color: #aaa; }
+        .jump { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 18px 22px; margin-bottom: 26px; }
+        .jump h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green-mid); margin-bottom: 10px; }
+        .jump ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+        .jump a { display: inline-block; background: #eaf5f0; color: var(--green); text-decoration: none; font-weight: 700; font-size: .86rem; padding: 6px 13px; border-radius: 20px; }
+        .jump a:hover { background: #d6eee3; }
+        .qa { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 24px 26px; margin-bottom: 16px; border-left: 5px solid var(--green-mid); scroll-margin-top: 16px; }
+        .qa h2 { color: var(--green); font-size: 1.22rem; font-weight: 900; margin-bottom: 8px; line-height: 1.35; }
+        .qa p { color: #3a3a3a; font-size: 1rem; }
+        .qa p + p { margin-top: 10px; }
+        .qa a, .card a.inline { color: var(--green-mid); font-weight: 700; }
+        .btn { display: inline-block; background: var(--green); color: #fff; text-decoration: none; font-weight: 900; font-size: .92rem; padding: 10px 20px; border-radius: 8px; margin-top: 12px; }
+        .btn:hover { background: var(--green-mid); }
+        .qa a.btn, .card a.btn { color: #fff; }
+        .card a.btn.ghost { color: var(--green); }
+        .btn.ghost { background: #fff; color: var(--green); border: 2px solid var(--green-mid); }
+        .btn.ghost:hover { background: #eaf5f0; }
+        .btn.gold { background: var(--gold); color: #1a1200; }
+        .contact { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); color: #fff; border-radius: 12px; padding: 26px; text-align: center; margin: 28px 0 8px; }
+        .contact h2 { font-size: 1.3rem; margin-bottom: 6px; }
+        .contact p { opacity: .88; }
+        .contact a.mail { color: #FFD966; font-weight: 900; text-decoration: none; }
+        .promo { display: block; text-align: center; background: var(--gold-light); border: 2px solid var(--gold); border-radius: 12px; padding: 16px 20px; margin: 18px 0 0; color: #5a3d00; font-weight: 900; text-decoration: none; }
+        .promo:hover { background: #fde7b8; }
+        .card { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 26px 28px; margin-bottom: 20px; }
+        .card h2 { color: var(--green); font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; }
+        .card p { color: #3a3a3a; }
+        .card p + p { margin-top: 10px; }
+        .factors { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+        .factor { border: 2px solid #e0ede8; border-radius: 10px; padding: 16px 18px; background: #fbfdfc; }
+        .factor .fh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+        .factor h3 { color: var(--green); font-size: 1.02rem; font-weight: 900; }
+        .factor .pts { flex-shrink: 0; background: var(--green-mid); color: #fff; font-size: .78rem; font-weight: 900; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+        .factor p { font-size: .94rem; color: #444; }
+        .bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin: 14px 0 4px; }
+        .bar span { display: block; height: 100%; }
+        .bar-key { font-size: .8rem; color: var(--gray); }
+        .caps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+        .caps li { background: #eaf5f0; border-radius: 10px; padding: 14px 10px; text-align: center; font-size: .88rem; color: var(--green-mid); font-weight: 700; }
+        .caps li strong { display: block; font-size: 1.5rem; color: var(--green); font-weight: 900; line-height: 1.2; }
+        .scale { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 8px; margin-top: 12px; }
+        .scale div { border-radius: 10px; padding: 12px 6px; text-align: center; color: #fff; font-size: .8rem; font-weight: 700; }
+        .scale div strong { display: block; font-size: 1.35rem; font-weight: 900; }
+        .scale .dark { color: #1a1a1a; }
+        .ex { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+        .ex a { flex: 1 1 200px; display: flex; align-items: center; gap: 12px; border: 2px solid #e0ede8; border-radius: 10px; padding: 12px 14px; text-decoration: none; color: var(--text); }
+        .ex a:hover { border-color: var(--green-mid); }
+        .ex .g { width: 44px; height: 44px; border-radius: 10px; background: #2ecc71; color: #fff; font-weight: 900; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .ex b { color: var(--green); }
+        .ex small { display: block; color: var(--gray); }
+        .note { background: var(--gold-light); border-left: 5px solid var(--gold); }
+        .page-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 26px; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: flex-start; }
+            .header-links { gap: 6px; }
+            .header-links a { font-size: .78rem; padding: 4px 10px; }
+            .hero { padding: 40px 16px 34px; }
+            .hero h1 { font-size: 2rem; }
+            .content { width: 100%; padding: 22px 16px 40px; }
+            .qa, .card { padding: 20px 18px; }
+            .factors { grid-template-columns: 1fr; }
+            .caps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .scale { grid-template-columns: repeat(3, minmax(0,1fr)); }
+        }
+
+    .content{max-width:900px;padding:22px 0 50px}
+    .crumbs{font-size:.85rem;color:var(--gray);margin-bottom:14px}.crumbs a{color:var(--green-mid);font-weight:700;text-decoration:none}.crumbs span{margin:0 6px;color:#aaa}
+    .sponsor-note{background:var(--gold-light);border:2px solid var(--gold);border-radius:10px;padding:14px 18px;margin:0 0 18px;font-size:.95rem;color:#5a3d00}
+    .sponsor-note strong{color:#3d2900}
+    .byline{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:.88rem;color:var(--gray);margin:0 0 18px}.byline b{color:var(--green)}
+    .art p{font-size:1.06rem;line-height:1.75;color:#2b2b2b;margin:0 0 16px}
+    .art h2{color:var(--green);font-size:1.6rem;font-weight:900;margin:40px 0 12px;padding-bottom:8px;border-bottom:3px solid var(--green-mid);line-height:1.25}
+    .art h3{color:var(--green);font-size:1.18rem;font-weight:900;margin:24px 0 8px}
+    .art ul,.art ol{margin:0 0 18px 22px}.art li{font-size:1.04rem;line-height:1.7;margin-bottom:6px;color:#2b2b2b}
+    .art a{color:var(--green-mid);font-weight:700}
+    .answer{background:#fff;border:3px solid var(--green-mid);border-radius:12px;padding:22px 24px;margin:6px 0 10px;box-shadow:var(--card-shadow)}
+    .answer .lbl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mid);font-weight:900;margin-bottom:8px}
+    .answer p{margin:0}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+    .kpi{background:#f2fbf5;border:1px solid #c8e6d8;border-radius:8px;padding:12px 12px}
+    .kpi dt{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gray);font-weight:700}
+    .kpi dd{font-size:1.2rem;font-weight:900;color:var(--green);margin:2px 0 0}
+    figure.shot{margin:20px 0 24px;background:#fff;border-radius:12px;box-shadow:var(--card-shadow);overflow:hidden;border:1px solid #e3ece8}
+    figure.shot img{display:block;width:100%;height:auto}
+    figure.shot figcaption{font-size:.88rem;color:var(--gray);padding:10px 16px;border-top:1px solid #edf2ef;background:#fafcfb;line-height:1.5}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;background:linear-gradient(135deg,var(--green) 0%,var(--green-mid) 100%);border-radius:12px;padding:24px 20px;margin:26px 0;text-align:center}
+    .cta p{color:#fff!important;width:100%;margin:0 0 4px!important;font-weight:700}
+    .cta a.btn{display:inline-block;background:var(--gold);color:#1a1200!important;font-weight:900;text-decoration:none;padding:12px 22px;border-radius:8px}
+    .cta a.btn.ghost{background:transparent;color:#fff!important;border:2px solid rgba(255,255,255,.7)}
+    .tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--card-shadow);margin:14px 0 22px;font-size:.97rem}
+    .tbl th{background:var(--green);color:#fff;text-align:left;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:11px 12px}
+    .tbl td{padding:10px 12px;border-bottom:1px solid #eef2f0;vertical-align:top}
+    .tbl tr:last-child td{border-bottom:0}
+    .tbl td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .tbl .yes{color:#1c8c5a;font-weight:900}.tbl .no{color:#c0392b;font-weight:900}
+    .tip{border-left:5px solid var(--green-mid);background:#fff;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+    .tip.gold{border-left-color:var(--gold)}
+    .tip strong{color:var(--green)}
+    .feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 20px}
+    .feat div{background:#fff;border:2px solid #e0ede8;border-radius:10px;padding:14px 16px}
+    .feat h4{color:var(--green);font-size:1rem;margin-bottom:4px}
+    .feat p{font-size:.95rem!important;margin:0!important;line-height:1.55!important}
+    .faq details{background:#fff;border:2px solid #e0ede8;border-radius:10px;margin-bottom:10px;padding:0 18px}
+    .faq summary{cursor:pointer;font-weight:900;color:var(--green);padding:15px 0;font-size:1.02rem}
+    .faq details p{margin:0 0 15px}
+    .disc{font-size:.85rem;color:#777;border-top:1px solid #ddd;padding-top:16px;margin-top:30px;line-height:1.6}
+    @media(max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.feat{grid-template-columns:1fr}.art h2{font-size:1.35rem}.tbl{font-size:.9rem}.tbl th,.tbl td{padding:9px 8px}}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com" class="logo">TopDividendETFs.com</a>
+            <nav class="header-links" aria-label="Main">
+                <a href="https://topdividendetfs.com">&#127968; Home</a>
+                <a href="https://topdividendetfs.com">&#128202; ETF Rankings</a>
+                <a href="/etfs/">&#128269; All ETFs</a>
+                <a href="/blog">&#128221; Blog</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; Dividend Tools</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="network-bar">
+        <div class="network-bar-inner">
+            <div class="network-bar-label">Our Sites</div>
+            <div class="network-bar-links">
+                <a href="https://topdividendetfs.com">&#128202; TopDividendETFs.com</a>
+                <a href="https://weeklyetfs.com" target="_blank">&#128197; WeeklyETFs.com</a>
+                <a href="https://monthlyetfs.com" target="_blank">&#128198; MonthlyETFs.com</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; TopDividendTools.com</a>
+                <a href="https://topdividendetfs.com/blog">&#128221; Blog</a>
+                <a href="https://topdividendetfs.com/FAQ.html">&#10067; FAQ</a>
+                <a href="https://topdividendetfs.com/how-we-grade-etfs.html">&#127941; How We Grade</a>
+                <a href="https://topetfs.com/" target="_blank">&#128240; TopETFs.com</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-badge">&#10022; Sponsored Deep Dive &#10022;</div>
+        <h1>Income Calendar Review: See Every Dividend Coming in the Next 12 Months</h1>
+        <p>I ran a real 10-holding income portfolio through Income Calendar to see what a forward-looking dividend tracker actually shows you. Here is every screen, step by step.</p>
+    </section>
+
+    <main class="content">
+        <div class="crumbs"><a href="https://topdividendetfs.com">Home</a><span>&rsaquo;</span><a href="/blog">Blog</a><span>&rsaquo;</span>Income Calendar Review</div>
+
+        <div class="sponsor-note"><strong>Sponsored post.</strong> This deep dive is sponsored by BNK Invest, the company behind Income Calendar, Contrarian Outlook, TickerTech and DividendChannel.com. I tested the tool myself, every screenshot below comes from my own test portfolio, and the opinions are my own. Not financial advice.</div>
+
+        <div class="byline">By <b>Benjie</b><span>&middot;</span><span>November 6, 2026</span><span>&middot;</span><span>12 min read</span></div>
+
+        <article class="art">
+        <div class="answer">
+            <div class="lbl">Quick answer</div>
+            <p><strong>Income Calendar</strong> is a dividend tracker that looks <em>forward</em>. You add your holdings and it maps out every projected payment for the next 12 months: by month, by position and by date, down to the penny. It costs <strong>$8.99 a month</strong>, and there is a <strong>free preview</strong> at <a href="https://www.dividendtracker.com/free-trial/" target="_blank" rel="sponsored noopener">DividendTracker.com</a> where you can try it with up to 10 holdings before you subscribe.</p>
+            <dl class="kpis">
+                <div class="kpi"><dt>Price</dt><dd>$8.99/mo</dd></div>
+                <div class="kpi"><dt>Free preview</dt><dd>Up to 10 holdings</dd></div>
+                <div class="kpi"><dt>Projection window</dt><dd>12 months</dd></div>
+                <div class="kpi"><dt>Holdings (paid)</dt><dd>Unlimited</dd></div>
+            </dl>
+        </div>
+
+        <h2>Why I care about a forward-looking dividend calendar</h2>
+        <p>Most brokerage apps are built to show you what already happened. You can see the dividend that hit your account last Tuesday, but it is a lot harder to answer the questions that actually matter when you live off your portfolio: <strong>How much is coming next month? Which months are going to be light? When is the next ex-dividend date I need to own the shares by?</strong></p>
+        <p>For a lot of dividend investors, the usual answer to those questions is a spreadsheet. It works, until you own a mix of monthly payers, quarterly payers and option income ETFs whose payouts change every month. Then the spreadsheet turns into a part-time job.</p>
+        <p>That is the gap Income Calendar is built to fill. Instead of tracking what you were paid, it projects what you are <em>about</em> to be paid, and it puts every declaration, ex-dividend date and pay date on an actual calendar.</p>
+        <h2>Who makes Income Calendar (you probably already know them)</h2>
+        <p>Income Calendar comes from BNK Invest, the same team behind DividendChannel.com and its <a href="https://www.dividendchannel.com/drip-returns-calculator/" target="_blank" rel="sponsored noopener">DRIP Returns Calculator</a>. If you have ever plugged a ticker into that calculator to see how reinvesting dividends would have grown an investment over time, you have already used their work. It is one of the most popular free tools in the dividend investing space, and it has been around for years.</p>
+        <p>In my opinion, these guys make top-tier tools for dividend investors. They have been building dividend data tools for a long time, and Income Calendar takes that same data and points it forward: instead of looking at what reinvesting <em>did</em> in the past, it shows you what your portfolio is projected to pay <em>next</em>. It even has a DRIP mode, so you can see how reinvesting changes your future income.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-homepage.jpg" target="_blank"><img src="/images/income-calendar/ic-homepage.jpg" alt="The Income Calendar homepage at DividendTracker.com showing a 12-month projected income chart" loading="lazy" width="1400" height="875"></a><figcaption>The Income Calendar homepage at <a href="https://www.dividendtracker.com/" target="_blank" rel="sponsored noopener">DividendTracker.com</a>. The pitch is simple: see your dividend income for the next 12 months, by month, by position and down to the penny.</figcaption></figure>
+
+        <h2>How I tested it: a 10-holding income portfolio</h2>
+        <p>To keep this real, I built a portfolio that looks a lot like what readers of this site actually own: a core dividend ETF, the big option income ETFs, a couple of monthly paying stocks and a few blue-chip quarterly payers. I used the free preview, which caps you at 10 holdings, so this is exactly what you will see if you try it yourself.</p>
+        <table class="tbl">
+            <thead><tr><th>Ticker</th><th>Name</th><th style="text-align:right">Shares</th><th>Pays</th></tr></thead>
+            <tbody><tr><td><b>$SCHD</b></td><td>Schwab U.S. Dividend Equity ETF</td><td class="n">300</td><td>Quarterly</td></tr><tr><td><b>$JEPI</b></td><td>JPMorgan Equity Premium Income ETF</td><td class="n">150</td><td>Monthly</td></tr><tr><td><b>$JEPQ</b></td><td>JPMorgan Nasdaq Equity Premium Income ETF</td><td class="n">150</td><td>Monthly</td></tr><tr><td><b>$QQQI</b></td><td>NEOS Nasdaq-100 High Income ETF</td><td class="n">100</td><td>Monthly</td></tr><tr><td><b>$SPYI</b></td><td>NEOS S&amp;P 500 High Income ETF</td><td class="n">100</td><td>Monthly</td></tr><tr><td><b>$O</b></td><td>Realty Income</td><td class="n">100</td><td>Monthly</td></tr><tr><td><b>$MAIN</b></td><td>Main Street Capital</td><td class="n">100</td><td>Monthly</td></tr><tr><td><b>$VZ</b></td><td>Verizon</td><td class="n">100</td><td>Quarterly</td></tr><tr><td><b>$KO</b></td><td>Coca-Cola</td><td class="n">50</td><td>Quarterly</td></tr><tr><td><b>$ABBV</b></td><td>AbbVie</td><td class="n">25</td><td>Quarterly</td></tr></tbody>
+        </table>
+        <p class="tip gold" style="font-size:.95rem">This is an example portfolio I picked to show off the tool, not a recommendation. Income Calendar valued it at about <strong>$65,485</strong> when I ran it.</p>
+
+        <h2>Step 1: Enter your holdings in the free preview</h2>
+        <p>Head to the <a href="https://www.dividendtracker.com/free-trial/" target="_blank" rel="sponsored noopener">free preview page</a>, type a ticker and a share count, and hit <strong>Add holding</strong>. You can also tick a DRIP box for any position you reinvest. Once you have your holdings in, you click <strong>Generate 12-Month Projection</strong> and the full Income Calendar demo opens with your portfolio loaded.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-free-preview.jpg" target="_blank"><img src="/images/income-calendar/ic-free-preview.jpg" alt="The Income Calendar free preview page with 10 holdings entered and the Generate 12-Month Projection button" loading="lazy" width="1400" height="984"></a><figcaption>The free preview after I entered all 10 holdings. No login, no credit card and no brokerage connection are needed for the preview, and nothing you type is saved.</figcaption></figure>
+        <p>If you do not want to type anything, there is also a <strong>View Demo Portfolio</strong> button that loads a pre-built portfolio of Dow stocks so you can click around right away. Setup on the paid version is just as quick: you can import from your brokerage or enter positions by hand, and the company says most people see a full 12-month projection in about 7 minutes.</p>
+
+        <h2>Step 2: The 12-month projected income view</h2>
+        <p>This is the first screen you see, and honestly it is the one I keep coming back to. A bar chart of every month for the next year, with the exact projected dollar amount next to each month and a 12-month total at the bottom.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-12-month-projection.jpg" target="_blank"><img src="/images/income-calendar/ic-12-month-projection.jpg" alt="Income Calendar 12 Month Projected Income chart showing $4,503.75 projected over 12 months, a 6.88% yield" loading="lazy" width="1400" height="798"></a><figcaption>My test portfolio: <strong>$4,503.75</strong> of projected income over the next 12 months, a <strong>6.88%</strong> yield on the portfolio. December is the biggest month at $540.20 and January is the lightest at $168.45.</figcaption></figure>
+        <p>Two things jumped out at me right away:</p>
+        <ul>
+            <li><strong>December is the biggest month ($540.20)</strong> because the quarterly payers ($SCHD and $KO) land in the same month as the monthly payers, and $JEPI and $JEPQ are projected to pay twice in December (early December and again on December 31).</li>
+            <li><strong>January is the lightest month ($168.45)</strong> for the exact same reason. Because $JEPI and $JEPQ's year-end payment lands on December 31, January has no payment from either of them.</li>
+        </ul>
+        <p>That is the kind of thing you would never notice from a yield number. On paper, a 6.88% yield on about $65,000 sounds like roughly $375 a month. In reality, my monthly income ranges from about $168 to $540. If you pay bills from your dividends, knowing that January is going to be light <em>before</em> January shows up is the whole point.</p>
+        <div class="cta"><p>Want to see your own 12-month projection? The preview is free for up to 10 holdings.</p><a href="https://www.dividendtracker.com/free-trial/" target="_blank" rel="sponsored noopener" class="btn">Try the free preview &rarr;</a><a href="https://www.dividendtracker.com/demo/" target="_blank" rel="sponsored noopener" class="btn ghost">Watch the demo</a></div>
+
+        <h2>Step 3: See which holdings drive your income</h2>
+        <p>Click <strong>By Stock</strong> and you get a pie chart and table showing how much each position contributes over the next 12 months. This view was the most eye-opening one for me.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-income-by-position.jpg" target="_blank"><img src="/images/income-calendar/ic-income-by-position.jpg" alt="Income Calendar 12 Month Summary By Stock pie chart and table" loading="lazy" width="1400" height="734"></a><figcaption>Income by position for my test portfolio. $JEPQ alone is projected to pay $970.56, or 21.55% of the portfolio's income.</figcaption></figure>
+        <table class="tbl">
+            <thead><tr><th>Holding</th><th style="text-align:right">Projected 12-mo income</th><th style="text-align:right">% of total</th></tr></thead>
+            <tbody><tr><td><b>$JEPQ</b></td><td class="n">$970.56</td><td class="n">21.55%</td></tr><tr><td><b>$QQQI</b></td><td class="n">$761.16</td><td class="n">16.90%</td></tr><tr><td><b>$JEPI</b></td><td class="n">$624.24</td><td class="n">13.86%</td></tr><tr><td><b>$SPYI</b></td><td class="n">$610.44</td><td class="n">13.55%</td></tr><tr><td><b>$O</b></td><td class="n">$325.80</td><td class="n">7.23%</td></tr><tr><td><b>$MAIN</b></td><td class="n">$323.00</td><td class="n">7.17%</td></tr><tr><td><b>$SCHD</b></td><td class="n">$319.80</td><td class="n">7.10%</td></tr><tr><td><b>$VZ</b></td><td class="n">$283.00</td><td class="n">6.28%</td></tr><tr><td><b>$ABBV</b></td><td class="n">$179.75</td><td class="n">3.99%</td></tr><tr><td><b>$KO</b></td><td class="n">$106.00</td><td class="n">2.35%</td></tr><tr><td><b>Total</b></td><td class="n"><b>$4,503.75</b></td><td class="n"><b>100%</b></td></tr></tbody>
+        </table>
+        <p>Add up the top four and you get the real story: <strong>$JEPQ, $QQQI, $JEPI and $SPYI produce about 66% of this portfolio's income</strong>, even though they are 4 of 10 holdings and only about 41% of the portfolio's value. Those option income ETFs adjust their payouts every month, so most of this portfolio's income moves with the options market.</p>
+        <p>That is not good or bad by itself, but it is something you want to <em>know</em>. The company calls this spotting income concentration, and it is one of the most useful things the tool does.</p>
+
+        <h2>Step 4: What is still coming this year</h2>
+        <p>The <strong>Remaining 2026</strong> view lists every projected payment left in the calendar year, in date order, with a subtotal for each month. When I ran it, there was <strong>$751.40</strong> still projected for the rest of 2026: $211.20 still to come in November and $540.20 in December.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-remaining-2026.jpg" target="_blank"><img src="/images/income-calendar/ic-remaining-2026.jpg" alt="Income Calendar Remaining 2026 Projected Income table with November and December payments" loading="lazy" width="1168" height="1700"></a><figcaption>Every projected payment left in 2026 for my test portfolio, with pay dates. Handy for year-end planning and for knowing exactly when cash lands.</figcaption></figure>
+        <p>This is the screen I would use for year-end planning: what cash is coming before December 31, when it lands, and from which holding.</p>
+
+        <h2>Step 5: The actual calendar (this is where it shines)</h2>
+        <p>Click any month and you get a real calendar. The summary view shows which holdings have an event on each day, color-coded by type: declarations, ex-dividend dates, projected ex-dividend dates, payments and projected payments, plus earnings dates and market holidays.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-december-calendar.jpg" target="_blank"><img src="/images/income-calendar/ic-december-calendar.jpg" alt="Income Calendar December 2026 summary calendar with color-coded dividend events and monthly income summary" loading="lazy" width="1400" height="800"></a><figcaption>December 2026 for my test portfolio. Right side: the $540.20 month broken out by holding, with each position's annualized yield.</figcaption></figure>
+        <p>Scroll down and the <strong>Details</strong> calendar spells out every event with the per-share amount. For example, it shows $KO going ex-dividend on December 1 for $0.53 per share, $SCHD's projected ex-dividend date on December 10, and the daily income total under each pay date.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-december-details.jpg" target="_blank"><img src="/images/income-calendar/ic-december-details.jpg" alt="Income Calendar December 2026 details calendar listing ex-dividend dates, pay dates and per-share amounts" loading="lazy" width="1400" height="1293"></a><figcaption>The detailed December calendar: ex-dividend dates, projected pay dates and per-share amounts, with each pay day's income total at the bottom of the cell.</figcaption></figure>
+        <div class="tip"><strong>Why the ex-dividend date matters:</strong> you have to own the shares before the ex-dividend date to get the next payment. Seeing projected ex-dates on a calendar makes it easy to plan buys, sells and rebalancing around them instead of finding out after the fact.</div>
+
+        <h2>Step 6: The full-year grid and every month at once</h2>
+        <p>The <strong>ALL</strong> view is my favorite for a quick health check. At the top is a grid with every holding as a row: shares, current value, next pay date, projected income for each of the next 12 months, the 12-month total and the annualized yield.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-all-months-table.jpg" target="_blank"><img src="/images/income-calendar/ic-all-months-table.jpg" alt="Income Calendar summary grid showing every holding, shares, value, next pay date, monthly income and annual yield" loading="lazy" width="1400" height="497"></a><figcaption>The full-year grid for my test portfolio. One glance shows which holdings pay monthly, which pay quarterly, and each position's yield.</figcaption></figure>
+        <p>Below the grid it lays out all 12 monthly calendars back to back, so you can scroll through the whole year and see exactly how payments cluster.</p>
+        <figure class="shot"><a href="/images/income-calendar/ic-monthly-calendars.jpg" target="_blank"><img src="/images/income-calendar/ic-monthly-calendars.jpg" alt="Income Calendar November and December 2026 monthly calendars side by side" loading="lazy" width="1400" height="558"></a><figcaption>Two of the twelve monthly calendars in the ALL view. Each colored square is a projected dividend event for one of your holdings.</figcaption></figure>
+        <div class="cta"><p>See your own portfolio's calendar in a couple of minutes.</p><a href="https://www.dividendtracker.com/free-trial/" target="_blank" rel="sponsored noopener" class="btn">Generate my 12-month projection &rarr;</a></div>
+
+        <h2>What you get with the full subscription</h2>
+        <p>The free preview shows you the core views. The paid version (<a href="https://www.dividendtracker.com/features/" target="_blank" rel="sponsored noopener">full feature list</a>) turns it into something you use every week:</p>
+        <div class="feat">
+            <div><h4>Brokerage import</h4><p>Pull in tickers and share counts from your brokerage, or enter positions by hand. No spreadsheet rebuild.</p></div>
+            <div><h4>Unlimited holdings and accounts</h4><p>Track every account in one place, with multiple portfolios and no caps or tiers.</p></div>
+            <div><h4>Dividend declaration alerts</h4><p>Email alerts when a dividend is declared, with the payout amount, ex-date, pay date and implied annualized yield.</p></div>
+            <div><h4>Monday "Week Ahead" email</h4><p>A custom summary every Monday morning of the projected dividend events coming up in your portfolio.</p></div>
+            <div><h4>Other income streams</h4><p>Add pensions, Social Security, rental income or other fixed cash flows to see your whole income picture.</p></div>
+            <div><h4>Yield on cost and DRIP mode</h4><p>See yield on cost next to current yield, and estimate how reinvesting changes future share counts and income.</p></div>
+            <div><h4>Watchlists and model portfolios</h4><p>Build portfolios with tickers you are considering to see the income timing before you buy.</p></div>
+            <div><h4>Broad coverage</h4><p>U.S. and Canadian stocks, ETFs, CEFs, REITs, BDCs, preferreds and mutual funds.</p></div>
+        </div>
+
+        <h2>Income Calendar vs. a spreadsheet vs. your brokerage app</h2>
+        <table class="tbl">
+            <thead><tr><th>What you need</th><th>Income Calendar</th><th>Spreadsheet</th><th>Brokerage app</th></tr></thead>
+            <tbody>
+                <tr><td>12-month income projection</td><td class="yes">Built in</td><td>Build it yourself</td><td>Varies by broker</td></tr>
+                <tr><td>Projected ex-dates and pay dates</td><td class="yes">On a calendar</td><td>Look them up yourself</td><td>Varies by broker</td></tr>
+                <tr><td>Income by position</td><td class="yes">Pie chart and table</td><td>Build it yourself</td><td>Varies by broker</td></tr>
+                <tr><td>All accounts in one view</td><td class="yes">Unlimited accounts</td><td>Enter them yourself</td><td>That broker's accounts</td></tr>
+                <tr><td>Updates when dividends change</td><td class="yes">Automatic</td><td>You update it</td><td>Varies by broker</td></tr>
+                <tr><td>Cost</td><td>$8.99/month</td><td>Free, plus your time</td><td>Free</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Who Income Calendar is for</h2>
+        <h3>It is a great fit if you:</h3>
+        <ul>
+            <li>Live off your dividends, or plan to, and need to know which months are strong and which are light.</li>
+            <li>Own a mix of monthly and quarterly payers across more than one account.</li>
+            <li>Hold option income ETFs whose payouts change every month and want projections that update on their own.</li>
+            <li>Are tired of maintaining a dividend spreadsheet.</li>
+        </ul>
+        <h3>Keep in mind:</h3>
+        <ul>
+            <li>Income Calendar is not a trading platform. It does not place trades or make recommendations. It is a planning and visibility tool.</li><li>Projections are estimates. Dividends can change, especially for option income ETFs, and the tool updates as new dividend information comes in.</li>
+        </ul>
+
+        <h2>Pricing</h2>
+        <p>Pricing is simple: <strong>$8.99 per month</strong>, one plan, every core feature included, and you can cancel anytime. There are no feature tiers or upgrade gates. To put that in perspective, my test portfolio projected about $4,500 a year in dividends, so a year of Income Calendar would cost roughly 2.4% of that portfolio's projected income.</p>
+        <p>The free preview is the easy first step: up to 10 holdings, no login, no card, nothing saved. If you like what you see, the paid subscription requires an account and a card and lets you track your full portfolio.</p>
+
+        <h2>My take</h2>
+        <p>What I like about Income Calendar is that it is built around the question every income investor actually asks: <strong>what is coming next, and when?</strong></p>
+        <p>Running my test portfolio through it took a couple of minutes, and I learned three things I would not have spotted from a yield number: my January would be the lightest month by far, four option income ETFs were driving about two-thirds of the income, and $JEPI and $JEPQ's year-end payment shifts income from January into December. That is exactly the kind of planning information that helps when your dividends pay real bills.</p>
+        <p>If you are a dividend or income ETF investor, try the free preview with your own top 10 holdings. It costs nothing, takes a few minutes, and you will know right away whether a forward-looking calendar is useful for you.</p>
+        <div class="cta"><p>Try Income Calendar with your own holdings. Free preview, up to 10 holdings.</p><a href="https://www.dividendtracker.com/free-trial/" target="_blank" rel="sponsored noopener" class="btn">Try the free preview at DividendTracker.com &rarr;</a><a href="https://www.dividendtracker.com/" target="_blank" rel="sponsored noopener" class="btn ghost">Learn more</a></div>
+
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+            <details><summary>What is Income Calendar?</summary><p>Income Calendar is a forward-looking dividend tracker from BNK Invest, the team behind Contrarian Outlook and TickerTech. You add your holdings and it projects your dividend income for the next 12 months by month, by position and by date, including projected declaration, ex-dividend and pay dates.</p></details>
+            <details><summary>How much does Income Calendar cost?</summary><p>Income Calendar is $8.99 per month with one plan that includes every core feature: 12-month projections, unlimited holdings and accounts, brokerage import, manual entry and dividend alerts. You can cancel anytime.</p></details>
+            <details><summary>Is there a free version of Income Calendar?</summary><p>Yes. The free preview at DividendTracker.com lets you enter up to 10 holdings and see a temporary 12-month income projection. The preview does not need a login, a credit card or a brokerage connection, and nothing you enter is saved. The paid subscription does require an account and a card.</p></details>
+            <details><summary>Does Income Calendar work with ETFs?</summary><p>Yes. It supports U.S. and Canadian stocks, ETFs, closed-end funds, REITs, BDCs, preferreds and mutual funds. In my test it handled monthly payers like JEPI, JEPQ, QQQI and SPYI right next to quarterly payers like SCHD, KO and ABBV.</p></details>
+            <details><summary>Are Income Calendar's projections guaranteed?</summary><p>No. Projections are estimates based on recent dividends and historical payment patterns. Companies and funds can raise, cut, delay or cancel payouts, and high-income option ETFs change their distributions often. The tool updates as new dividend information comes in, but treat every projection as a planning estimate.</p></details>
+        </div>
+
+        <p class="disc"><strong>Sponsored disclosure:</strong> This article is sponsored by BNK Invest, Inc., the company behind Income Calendar. TopDividendETFs.com was paid to create this content. All screenshots come from a test portfolio I built in the Income Calendar free preview on November 6, 2026; projections are estimates based on recent dividend data and are not guarantees of future payments. The example portfolio is for illustration only and is not a recommendation to buy or sell any security. TopDividendETFs.com is for educational purposes only and is not financial advice. Always do your own research.</p>
+        </article>
+
+        <div class="page-nav" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px">
+            <a class="back-to-top" href="/blog" style="text-decoration:none">&larr; Back to the Blog</a>
+            <a class="back-to-top" href="https://topdividendetfs.com" style="text-decoration:none">ETF Rankings</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by dividend investors, for dividend investors.</p>
+        <div class="footer-links-row">
+            <a href="https://topdividendetfs.com">Home</a>
+            <a href="/etfs/">All ETFs</a>
+            <a href="/blog">Blog</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="how-we-grade-etfs.html">How We Grade ETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+            <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+            <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <p style="margin:8px 0 2px;font-size:0.8rem;">Contact and sponsorships: <a href="mailto:Business@TopDividendETFs.com" style="color:rgba(255,255,255,0.75);">Business@TopDividendETFs.com</a></p>
+        <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
+    </footer>
+
+</body>
+</html>
