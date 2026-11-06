@@ -1861,6 +1861,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://topdividendetfs.com/etfs/grade/d-plus</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topdividendetfs.com/etfs/grade/f</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://topdividendetfs.com/etfs/haky</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -3284,18 +3296,6 @@
   </url>
   <url>
     <loc>https://topdividendetfs.com/etfs/tylg-dividend-dates</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ulti</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topdividendetfs.com/etfs/ulti-dividend-dates</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
