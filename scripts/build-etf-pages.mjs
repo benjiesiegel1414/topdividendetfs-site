@@ -74,6 +74,22 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
 .pro-box p{color:rgba(255,255,255,.85);font-size:.95rem;max-width:600px;margin:0 auto 14px}
 .pro-box a{display:inline-block;background:#FFD700;color:#1A3C34;font-weight:900;padding:11px 24px;border-radius:8px;text-decoration:none}
 @media(max-width:640px){.answer-box{padding:20px 18px}.hero-block{padding:30px 18px 28px}}
+.etfsu.featured .top h3{color:#FFD700!important}
+.dh{background:#fff;border:2px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);margin:6px 0 4px}
+.dh table{width:100%;border-collapse:collapse;font-size:.95rem}
+.dh th{background:var(--green-dark);color:#fff;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;text-align:left;padding:10px 14px}
+.dh td{padding:10px 14px;border-bottom:1px solid #eef3f0;color:var(--text-mid);font-variant-numeric:tabular-nums}
+.dh td strong{color:var(--green-dark)}
+.dh td.up{color:#1c8c5a;font-weight:700}.dh td.dn{color:#c0392b;font-weight:700}
+.dh tr.more{display:none}.dh.open tr.more{display:table-row}
+.dh-foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:12px 14px;background:#f6fbf8;border-top:1px solid var(--border)}
+.dh-btn{background:var(--green-mid);color:#fff;border:0;border-radius:6px;padding:9px 16px;font-weight:900;font-family:inherit;font-size:.88rem;cursor:pointer}
+.dh-btn .l2{display:none}.dh.open .dh-btn .l1{display:none}.dh.open .dh-btn .l2{display:inline}
+.dh-foot a{color:var(--green-mid);font-weight:700;font-size:.88rem}
+.dh-pro{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(135deg,#1A3C34,#2E5D54);border-radius:10px;padding:16px 20px;margin:10px 0 4px;color:#fff}
+.dh-pro p{margin:0;font-size:.95rem;color:rgba(255,255,255,.88);flex:1 1 280px}.dh-pro p b{color:#FFD700}
+.dh-pro a{background:#FFD700;color:#1A3C34;font-weight:900;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.dh th,.dh td{padding:9px 10px}.dh table{font-size:.9rem}}
 `;
 
 const args = process.argv.slice(2);
@@ -392,6 +408,32 @@ function toggleFaq(el){var i=el.closest('.faq-item'),o=i.classList.contains('ope
 </script>`;
 
 // ---------- ETF page ----------
+// Recent dividend history teaser on each ETF page: last 8 weekly / 6 monthly / 4 quarterly payouts,
+// "show more" reveals the rest of the past year, then a PRO upsell for the full 2-year history.
+// Data is the same TopETFs dividend file the dividend dates pages use, so it refreshes every build.
+function divHistory(e) {
+  const d = e.div; if (!d || !d.past || !d.past.length) return '';
+  const show = { Weekly: 8, Monthly: 6, Quarterly: 4 }[d.freq] || 4;
+  const cap = { Weekly: 26, Monthly: 12, Quarterly: 8 }[d.freq] || 6;
+  const list = d.past.slice(0, Math.min(cap, d.past.length));
+  const hasPay = list.some(x => x[2]);
+  const rows = list.map((x, i) => {
+    const p = d.past[i + 1], c = p && p[1] > 0 ? (x[1] / p[1] - 1) * 100 : null;
+    const cc = c == null || Math.abs(c) < 0.05 ? '' : c > 0 ? 'up' : 'dn';
+    const ct = c == null || Math.abs(c) < 0.05 ? '-' : (c > 0 ? '+' : '') + c.toFixed(1) + '%';
+    return `<tr${i >= show ? ' class="more"' : ''}><td>${fD(x[0])}</td>${hasPay ? `<td>${x[2] ? fD(x[2]) : '-'}</td>` : ''}<td><strong>${amt(x[1])}</strong></td><td class="${cc}">${ct}</td></tr>`;
+  }).join('');
+  const extra = list.length - show;
+  const freqWord = d.freq === 'Weekly' ? 'weekly' : d.freq === 'Monthly' ? 'monthly' : d.freq === 'Quarterly' ? 'quarterly' : d.freq.toLowerCase();
+  return `<h2 class="section-title">${e.sym} Recent Dividend History</h2>
+    <p class="section-lead">${e.sym} pays ${freqWord}. Here are its ${Math.min(show, list.length)} most recent payouts${d.s12 ? `, ${amt(d.s12)} per share over the last 12 months` : ''}. Source: ${d.src}.</p>
+    <div class="dh" id="dh">
+      <table><thead><tr><th>Ex-Date</th>${hasPay ? '<th>Pay Date</th>' : ''}<th>Amount</th><th>Change</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="dh-foot">${extra > 0 ? `<button type="button" class="dh-btn" onclick="this.closest('.dh').classList.toggle('open')"><span class="l1">Show ${extra} more payouts &#9662;</span><span class="l2">Show fewer &#9652;</span></button>` : '<span></span>'}${e.datesUrl ? `<a href="${e.datesUrl}">See every ${e.sym} dividend date &rarr;</a>` : ''}</div>
+    </div>
+    <div class="dh-pro"><p><b>Want the full picture?</b> TopDividendETFsPRO shows 2 years of ${e.sym} dividend history, payout trends, yield history and tax treatment for 150+ income ETFs.</p><a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Join PRO &rarr;</a></div>
+`;
+}
 function etfPage(e) {
   const yi = byYield.indexOf(e);
   const prev = byYield[(yi - 1 + N) % N], next = byYield[(yi + 1) % N];
@@ -471,6 +513,7 @@ ${BANNER}
       <p><strong>${$}</strong> (${esc(e.name)}) yields about <strong>${fmtYield(e.yield)}</strong>, ${vsAvg >= 0 ? `<strong>${fmtYield(vsAvg)} above</strong>` : `<strong>${fmtYield(-vsAvg)} below</strong>`} the ${fmtYield(avgYield)} average of the ${N} dividend ETFs we track. It holds about <strong>${fmtAum(e.aum)}</strong> in assets, earns a <strong>${e.grade}</strong> on our scorecard and is ${e.decay ? '<strong>flagged for price decay</strong>' : '<strong>not flagged for price decay</strong>'}.</p>
     </div>
 
+${divHistory(e)}
     <h2 class="section-title">Where ${e.sym} Ranks</h2>
     <p class="section-lead">How ${e.sym} stacks up against all ${N} dividend ETFs on TopDividendETFs.com. Tap any card to see the full ranking.</p>
     <div class="rank-grid">
