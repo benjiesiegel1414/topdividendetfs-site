@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T04:30:24.861Z",
+  "updated": "2026-11-08T12:46:45.120Z",
   "total_tracked": 165,
   "top": [
     {
@@ -39,6 +39,12 @@
       "yield": "12%"
     },
     {
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 2,
+      "yield": "14.1%"
+    },
+    {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
       "votes": 2,
@@ -55,12 +61,6 @@
       "name": "Information Technology Covered Call & Growth ETF",
       "votes": 2,
       "yield": "12.1%"
-    },
-    {
-      "symbol": "BALI",
-      "name": "iShares US Large Cap Premium Income Active ETF",
-      "votes": 1,
-      "yield": "6.1%"
     }
   ]
 }
