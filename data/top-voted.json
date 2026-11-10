@@ -1,7 +1,13 @@
 {
-  "updated": "2026-11-09T15:12:50.264Z",
+  "updated": "2026-11-10T01:11:58.145Z",
   "total_tracked": 165,
   "top": [
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 7,
+      "yield": "40%"
+    },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
@@ -13,12 +19,6 @@
       "name": "iShares Core Dividend ETF",
       "votes": 6,
       "yield": "2.3%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 5,
-      "yield": "40%"
     },
     {
       "symbol": "OVL",
@@ -48,7 +48,7 @@
       "symbol": "HOYY",
       "name": "GraniteShares YieldBOOST HOOD ETF",
       "votes": 3,
-      "yield": "75%"
+      "yield": "76%"
     },
     {
       "symbol": "TDVI",
@@ -60,7 +60,7 @@
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
       "votes": 3,
-      "yield": "12.1%"
+      "yield": "12.9%"
     }
   ]
 }
