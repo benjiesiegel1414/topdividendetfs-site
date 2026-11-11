@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-11T04:46:11.860Z",
+  "updated": "2026-11-11T13:35:08.882Z",
   "total_tracked": 165,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
+      "votes": 10,
       "yield": "41%"
     },
     {
@@ -23,7 +23,7 @@
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "10.8%"
     },
     {
@@ -51,16 +51,16 @@
       "yield": "76%"
     },
     {
+      "symbol": "XLEI",
+      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
+      "votes": 4,
+      "yield": "20.9%"
+    },
+    {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
       "votes": 3,
       "yield": "5.0%"
-    },
-    {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 3,
-      "yield": "14%"
     }
   ]
 }
