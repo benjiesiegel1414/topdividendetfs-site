@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Benjie">
+    <title>How to Track Every Dividend From Every Brokerage in One Place | TopDividendETFs.com</title>
+    <meta name="description" content="Track dividends across multiple brokerage accounts in one place. My step-by-step MerryDiv setup: Plaid read-only sync, accurate payouts, dividend calendar and X-Ray. Code DEVOTED30. Sponsored.">
+    <link rel="canonical" href="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="How to Track Every Dividend From Every Brokerage in One Place">
+    <meta property="og:description" content="Track dividends across multiple brokerage accounts in one place. My step-by-step MerryDiv setup: Plaid read-only sync, accurate payouts, dividend calendar and X-Ray. Code DEVOTED30. Sponsored.">
+    <meta property="og:image" content="https://topdividendetfs.com/images/merrydiv/merrydiv-track-every-dividend-social-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-11-11T09:00:00-05:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TopDividendETFs">
+    <meta name="twitter:title" content="How to Track Every Dividend From Every Brokerage in One Place">
+    <meta name="twitter:description" content="Track dividends across multiple brokerage accounts in one place. My step-by-step MerryDiv setup: Plaid read-only sync, accurate payouts, dividend calendar and X-Ray. Code DEVOTED30. Sponsored.">
+    <meta name="twitter:image" content="https://topdividendetfs.com/images/merrydiv/merrydiv-track-every-dividend-social-card.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TGV115DP"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B8TGV115DP');</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Track Every Dividend From Every Brokerage in One Place", "description": "Track dividends across multiple brokerage accounts in one place. My step-by-step MerryDiv setup: Plaid read-only sync, accurate payouts, dividend calendar and X-Ray. Code DEVOTED30. Sponsored.", "image": "https://topdividendetfs.com/images/merrydiv/merrydiv-track-every-dividend-social-card.jpg", "author": {"@type": "Person", "name": "Benjie"}, "publisher": {"@type": "Organization", "name": "TopDividendETFs.com", "logo": {"@type": "ImageObject", "url": "https://topdividendetfs.com/favicon.ico"}}, "datePublished": "2026-11-11", "dateModified": "2026-11-11", "mainEntityOfPage": "https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Track Every Dividend From Every Brokerage in One Place", "step": [{"@type": "HowToStep", "name": "Create a free account", "text": "Sign up at merrydiv.com. The free plan includes unlimited manual accounts and holdings."}, {"@type": "HowToStep", "name": "Link your brokerages through Plaid", "text": "Click Link account, choose your broker and connect with read-only access. Repeat for each account."}, {"@type": "HowToStep", "name": "Let your dividend history sync", "text": "Holdings and past payouts sync automatically into one dividend feed."}, {"@type": "HowToStep", "name": "Check the dividend calendar", "text": "See the 12-month dividend calendar and the next 30 days of expected income."}, {"@type": "HowToStep", "name": "Run Portfolio X-Ray", "text": "See combined company exposure across your stocks, ETFs and mutual funds."}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I track dividends from multiple brokerage accounts?", "acceptedAnswer": {"@type": "Answer", "text": "Use a dividend tracker that connects to all of your brokerages at once. MerryDiv links accounts through Plaid with read-only access and combines dividends from a Roth IRA, 401(k), taxable account and HSA into one dividend feed."}}, {"@type": "Question", "name": "Is it safe to connect my brokerage to MerryDiv?", "acceptedAnswer": {"@type": "Answer", "text": "MerryDiv uses Plaid with read-only access. It can see holdings and dividend payments but cannot trade or move money, and your brokerage login goes through Plaid instead of being stored on MerryDiv's servers."}}, {"@type": "Question", "name": "Why don't dividend trackers match my brokerage?", "acceptedAnswer": {"@type": "Answer", "text": "Many trackers estimate income from a generic dividend database, so special dividends, DRIP shares and changing ETF distributions can be off. MerryDiv says synced dividend payments come directly from your brokerage via Plaid, so they match what hit your account."}}, {"@type": "Question", "name": "How much does MerryDiv cost?", "acceptedAnswer": {"@type": "Answer", "text": "There is a free manual plan. Paid plans with automatic sync are $5.99, $9.99 and $19.99 a month for 2, 5 and 10 synced brokerages. Yearly billing gets 2 months free and there is a 14-day free trial."}}, {"@type": "Question", "name": "What is the MerryDiv promo code?", "acceptedAnswer": {"@type": "Answer", "text": "Code DEVOTED30 gives 30% off your first 2 months on a monthly plan or 30% off your first year on an annual plan when you subscribe on merrydiv.com. It does not work through Apple in-app purchases."}}, {"@type": "Question", "name": "Does MerryDiv work with dividend ETFs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. ETFs and mutual funds sync like stocks, fund yields use trailing 12-month cash distributions, and Portfolio X-Ray shows the companies inside your funds."}}]}</script>
+    <style>
+:root {
+            --green:       #1A3C34;
+            --green-mid:   #2E5D54;
+            --green-light: #3d7a6e;
+            --gold:        #f5a623;
+            --gold-dark:   #d4891a;
+            --gold-light:  #fef3dc;
+            --bg:          #f4f4f4;
+            --white:       #ffffff;
+            --text:        #222;
+            --gray:        #555;
+            --border:      #dde;
+            --card-shadow: 0 4px 18px rgba(0,0,0,.10);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--green);
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,.28);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            font-size: clamp(18px, 4vw, 26px);
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+            cursor: pointer;
+        }
+        .header-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .header-links a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .header-links a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .header-links a.gold-link {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .header-links a.gold-link:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: #fff;
+        }
+
+        /* ── NETWORK BAR ── */
+        .network-bar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 2px solid #e0ede8;
+        }
+        .network-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: stretch;
+            overflow-x: auto;
+        }
+        .network-bar-label {
+            background: var(--green-mid);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.75rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 13px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .network-bar-links {
+            display: flex;
+            align-items: stretch;
+        }
+        .network-bar-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.87rem;
+            color: var(--green-mid);
+            border-right: 1px solid #e0ede8;
+            transition: background 0.18s;
+            white-space: nowrap;
+        }
+        .network-bar-links a:hover { background: #eaf5f0; }
+        .network-bar-links a.nb-current {
+            background: #eaf5f0;
+            color: var(--green);
+            font-weight: 900;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 60px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -70px; right: -70px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -90px; left: -40px;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            padding: 5px 18px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            margin: 0 0 14px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.08rem;
+            max-width: 640px;
+            margin: 0 auto;
+            opacity: 0.88;
+            position: relative;
+            z-index: 1;
+            line-height: 1.65;
+        }
+
+        /* ── MAIN CONTENT WRAPPER ── */
+        .content {
+            width: 94%;
+            max-width: 1200px;
+            padding: 48px 0 60px;
+        }
+
+        /* ── DISCLAIMER ── */
+        .disclaimer {
+            font-size: 0.87rem;
+            color: #777;
+            margin: 24px 0 10px;
+            line-height: 1.5;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--green);
+            width: 100%;
+            padding: 30px 20px 22px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .site-footer p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+        .footer-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            margin-bottom: 14px;
+        }
+        .footer-links-row a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            transition: background 0.18s;
+        }
+        .footer-links-row a:hover { background: rgba(255,255,255,0.12); }
+        .footer-links-row a.fl-gold {
+            background: var(--gold);
+            color: #1a1200;
+            border-color: var(--gold);
+            font-weight: 900;
+        }
+        .footer-links-row a.fl-gold:hover { background: var(--gold-dark); color: #fff; }
+        .footer-copy {
+            color: rgba(255,255,255,0.38);
+            font-size: 0.78rem;
+            margin-top: 12px;
+        }
+        .tracker-link {
+            border: 2px solid var(--green-mid);
+            padding: 4px 10px;
+            border-radius: 4px;
+            animation: glow 2s infinite;
+            font-weight: 900;
+            text-decoration: none;
+            color: var(--green);
+        }
+        @keyframes glow {
+            0%,100%{box-shadow:0 0 5px rgba(46,93,84,.3)}
+            50%{box-shadow:0 0 10px rgba(46,93,84,.6)}
+        }
+
+        
+        .content { max-width: 920px; padding: 28px 0 50px; }
+        .crumbs { font-size: .85rem; color: var(--gray); margin-bottom: 18px; }
+        .crumbs a { color: var(--green-mid); font-weight: 700; text-decoration: none; }
+        .crumbs a:hover { text-decoration: underline; }
+        .crumbs span { margin: 0 6px; color: #aaa; }
+        .jump { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 18px 22px; margin-bottom: 26px; }
+        .jump h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green-mid); margin-bottom: 10px; }
+        .jump ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+        .jump a { display: inline-block; background: #eaf5f0; color: var(--green); text-decoration: none; font-weight: 700; font-size: .86rem; padding: 6px 13px; border-radius: 20px; }
+        .jump a:hover { background: #d6eee3; }
+        .qa { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 24px 26px; margin-bottom: 16px; border-left: 5px solid var(--green-mid); scroll-margin-top: 16px; }
+        .qa h2 { color: var(--green); font-size: 1.22rem; font-weight: 900; margin-bottom: 8px; line-height: 1.35; }
+        .qa p { color: #3a3a3a; font-size: 1rem; }
+        .qa p + p { margin-top: 10px; }
+        .qa a, .card a.inline { color: var(--green-mid); font-weight: 700; }
+        .btn { display: inline-block; background: var(--green); color: #fff; text-decoration: none; font-weight: 900; font-size: .92rem; padding: 10px 20px; border-radius: 8px; margin-top: 12px; }
+        .btn:hover { background: var(--green-mid); }
+        .qa a.btn, .card a.btn { color: #fff; }
+        .card a.btn.ghost { color: var(--green); }
+        .btn.ghost { background: #fff; color: var(--green); border: 2px solid var(--green-mid); }
+        .btn.ghost:hover { background: #eaf5f0; }
+        .btn.gold { background: var(--gold); color: #1a1200; }
+        .contact { background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); color: #fff; border-radius: 12px; padding: 26px; text-align: center; margin: 28px 0 8px; }
+        .contact h2 { font-size: 1.3rem; margin-bottom: 6px; }
+        .contact p { opacity: .88; }
+        .contact a.mail { color: #FFD966; font-weight: 900; text-decoration: none; }
+        .promo { display: block; text-align: center; background: var(--gold-light); border: 2px solid var(--gold); border-radius: 12px; padding: 16px 20px; margin: 18px 0 0; color: #5a3d00; font-weight: 900; text-decoration: none; }
+        .promo:hover { background: #fde7b8; }
+        .card { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); padding: 26px 28px; margin-bottom: 20px; }
+        .card h2 { color: var(--green); font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; }
+        .card p { color: #3a3a3a; }
+        .card p + p { margin-top: 10px; }
+        .factors { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+        .factor { border: 2px solid #e0ede8; border-radius: 10px; padding: 16px 18px; background: #fbfdfc; }
+        .factor .fh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+        .factor h3 { color: var(--green); font-size: 1.02rem; font-weight: 900; }
+        .factor .pts { flex-shrink: 0; background: var(--green-mid); color: #fff; font-size: .78rem; font-weight: 900; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+        .factor p { font-size: .94rem; color: #444; }
+        .bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin: 14px 0 4px; }
+        .bar span { display: block; height: 100%; }
+        .bar-key { font-size: .8rem; color: var(--gray); }
+        .caps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+        .caps li { background: #eaf5f0; border-radius: 10px; padding: 14px 10px; text-align: center; font-size: .88rem; color: var(--green-mid); font-weight: 700; }
+        .caps li strong { display: block; font-size: 1.5rem; color: var(--green); font-weight: 900; line-height: 1.2; }
+        .scale { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 8px; margin-top: 12px; }
+        .scale div { border-radius: 10px; padding: 12px 6px; text-align: center; color: #fff; font-size: .8rem; font-weight: 700; }
+        .scale div strong { display: block; font-size: 1.35rem; font-weight: 900; }
+        .scale .dark { color: #1a1a1a; }
+        .ex { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+        .ex a { flex: 1 1 200px; display: flex; align-items: center; gap: 12px; border: 2px solid #e0ede8; border-radius: 10px; padding: 12px 14px; text-decoration: none; color: var(--text); }
+        .ex a:hover { border-color: var(--green-mid); }
+        .ex .g { width: 44px; height: 44px; border-radius: 10px; background: #2ecc71; color: #fff; font-weight: 900; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .ex b { color: var(--green); }
+        .ex small { display: block; color: var(--gray); }
+        .note { background: var(--gold-light); border-left: 5px solid var(--gold); }
+        .page-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 26px; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: flex-start; }
+            .header-links { gap: 6px; }
+            .header-links a { font-size: .78rem; padding: 4px 10px; }
+            .hero { padding: 40px 16px 34px; }
+            .hero h1 { font-size: 2rem; }
+            .content { width: 100%; padding: 22px 16px 40px; }
+            .qa, .card { padding: 20px 18px; }
+            .factors { grid-template-columns: 1fr; }
+            .caps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .scale { grid-template-columns: repeat(3, minmax(0,1fr)); }
+        }
+
+    .content{max-width:900px;padding:22px 0 50px}
+    .hero h1{max-width:780px;margin:0 auto 14px;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.2;letter-spacing:-.3px}
+    .hero p{max-width:620px}
+    figure.shot a{display:block;cursor:pointer}figure.shot a:hover img{opacity:.92}
+    .crumbs{font-size:.85rem;color:var(--gray);margin-bottom:14px}.crumbs a{color:var(--green-mid);font-weight:700;text-decoration:none}.crumbs span{margin:0 6px;color:#aaa}
+    .sponsor-note{background:var(--gold-light);border:2px solid var(--gold);border-radius:10px;padding:14px 18px;margin:0 0 18px;font-size:.95rem;color:#5a3d00}
+    .sponsor-note strong{color:#3d2900}
+    .byline{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:.88rem;color:var(--gray);margin:0 0 18px}.byline b{color:var(--green)}
+    .art p{font-size:1.06rem;line-height:1.75;color:#2b2b2b;margin:0 0 16px}
+    .art h2{color:var(--green);font-size:1.6rem;font-weight:900;margin:40px 0 12px;padding-bottom:8px;border-bottom:3px solid var(--green-mid);line-height:1.25}
+    .art h3{color:var(--green);font-size:1.18rem;font-weight:900;margin:24px 0 8px}
+    .art ul,.art ol{margin:0 0 18px 22px}.art li{font-size:1.04rem;line-height:1.7;margin-bottom:6px;color:#2b2b2b}
+    .art a{color:var(--green-mid);font-weight:700}
+    .answer{background:#fff;border:3px solid var(--green-mid);border-radius:12px;padding:22px 24px;margin:6px 0 10px;box-shadow:var(--card-shadow)}
+    .answer .lbl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mid);font-weight:900;margin-bottom:8px}
+    .answer p{margin:0}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+    .kpi{background:#f2fbf5;border:1px solid #c8e6d8;border-radius:8px;padding:12px 12px}
+    .kpi dt{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gray);font-weight:700}
+    .kpi dd{font-size:1.2rem;font-weight:900;color:var(--green);margin:2px 0 0}
+    figure.shot{margin:20px 0 24px;background:#fff;border-radius:12px;box-shadow:var(--card-shadow);overflow:hidden;border:1px solid #e3ece8}
+    figure.shot img{display:block;width:100%;height:auto}
+    figure.shot figcaption{font-size:.88rem;color:var(--gray);padding:10px 16px;border-top:1px solid #edf2ef;background:#fafcfb;line-height:1.5}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;background:linear-gradient(135deg,var(--green) 0%,var(--green-mid) 100%);border-radius:12px;padding:24px 20px;margin:26px 0;text-align:center}
+    .cta p{color:#fff!important;width:100%;margin:0 0 4px!important;font-weight:700}
+    .cta a.btn{display:inline-block;background:var(--gold);color:#1a1200!important;font-weight:900;text-decoration:none;padding:12px 22px;border-radius:8px}
+    .cta a.btn.ghost{background:transparent;color:#fff!important;border:2px solid rgba(255,255,255,.7)}
+    .tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--card-shadow);margin:14px 0 22px;font-size:.97rem}
+    .tbl th{background:var(--green);color:#fff;text-align:left;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:11px 12px}
+    .tbl td{padding:10px 12px;border-bottom:1px solid #eef2f0;vertical-align:top}
+    .tbl tr:last-child td{border-bottom:0}
+    .tbl td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .tbl .yes{color:#1c8c5a;font-weight:900}.tbl .no{color:#c0392b;font-weight:900}
+    .tip{border-left:5px solid var(--green-mid);background:#fff;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+    .tip.gold{border-left-color:var(--gold)}
+    .tip strong{color:var(--green)}
+    .feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 20px}
+    .feat div{background:#fff;border:2px solid #e0ede8;border-radius:10px;padding:14px 16px}
+    .feat h4{color:var(--green);font-size:1rem;margin-bottom:4px}
+    .feat p{font-size:.95rem!important;margin:0!important;line-height:1.55!important}
+    .faq details{background:#fff;border:2px solid #e0ede8;border-radius:10px;margin-bottom:10px;padding:0 18px}
+    .faq summary{cursor:pointer;font-weight:900;color:var(--green);padding:15px 0;font-size:1.02rem}
+    .faq details p{margin:0 0 15px}
+    .disc{font-size:.85rem;color:#777;border-top:1px solid #ddd;padding-top:16px;margin-top:30px;line-height:1.6}
+    @media(max-width:768px){.content{width:100%;padding:18px 16px 40px}}
+    @media(max-width:700px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.feat{grid-template-columns:1fr}.art h2{font-size:1.35rem}.tbl{font-size:.9rem}.tbl th,.tbl td{padding:9px 8px}}
+        .sponsor-wrap { max-width:1000px; margin:18px auto; width:100%; }
+        .banner { width:90%; max-width:1000px; margin:15px auto; display:flex; flex-direction:column; align-items:center; gap:4px; }
+        .banner img { display:block; width:auto; height:auto; max-width:100%; }
+        .art ul { margin:10px 0 18px 22px; } .art li { margin-bottom:8px; }
+        .art h3 { margin-top:22px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="https://topdividendetfs.com" class="logo">TopDividendETFs.com</a>
+            <nav class="header-links" aria-label="Main">
+                <a href="https://topdividendetfs.com">&#127968; Home</a>
+                <a href="https://topdividendetfs.com">&#128202; ETF Rankings</a>
+                <a href="/etfs/">&#128269; All ETFs</a>
+                <a href="/blog">&#128221; Blog</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; Dividend Tools</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="network-bar">
+        <div class="network-bar-inner">
+            <div class="network-bar-label">Our Sites</div>
+            <div class="network-bar-links">
+                <a href="https://topdividendetfs.com">&#128202; TopDividendETFs.com</a>
+                <a href="https://weeklyetfs.com" target="_blank">&#128197; WeeklyETFs.com</a>
+                <a href="https://monthlyetfs.com" target="_blank">&#128198; MonthlyETFs.com</a>
+                <a href="https://topdividendtools.com" target="_blank">&#128295; TopDividendTools.com</a>
+                <a href="https://topdividendetfs.com/blog">&#128221; Blog</a>
+                <a href="https://topdividendetfs.com/FAQ.html">&#10067; FAQ</a>
+                <a href="https://topdividendetfs.com/how-we-grade-etfs.html">&#127941; How We Grade</a>
+                <a href="https://topetfs.com/" target="_blank">&#128240; TopETFs.com</a>
+            </div>
+        </div>
+    </div>
+
+        <section class="hero">
+        <div class="hero-badge">&#10022; Sponsored Guide &#10022;</div>
+        <h1>How to Track Every Dividend From Every Brokerage in One Place</h1>
+        <p>Roth IRA at one broker, taxable at another, a 401(k) and an HSA on top? Here's how I pull all of that dividend income into one accurate feed with MerryDiv.</p>
+    </section>
+
+<div class="sponsor-wrap">
+<div class="banner">
+    <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/OVL new display ad 2.png" alt="Sponsor banner">
+    </a>
+    <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
+    <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+</div>
+</div>
+
+    <main class="content">
+        <div class="crumbs"><a href="https://topdividendetfs.com">Home</a><span>&rsaquo;</span><a href="/blog">Blog</a><span>&rsaquo;</span>Track Every Dividend in One Place</div>
+
+        <div class="sponsor-note"><strong>Sponsored post.</strong> This guide is sponsored by MerryDiv. I only partner with tools I'd recommend to my own readers, and the opinions here are mine. Not financial advice.</div>
+
+        <div class="byline">By <b>Benjie</b><span>&middot;</span><span>November 11, 2026</span><span>&middot;</span><span>8 min read</span></div>
+
+        <article class="art">
+        <div class="answer">
+            <div class="lbl">Quick answer</div>
+            <p>The easiest way to track dividends across multiple brokerage accounts is a dividend tracker that connects to all of them at once. I use <strong>MerryDiv</strong>: it links your brokerages through <strong>Plaid (read-only)</strong>, pulls in every dividend you're actually paid, and shows your total income by month, quarter and year in one dashboard. Manual tracking is <strong>free</strong>, automatic sync starts at <strong>$5.99/mo</strong>, and code <strong>DEVOTED30</strong> takes 30% off.</p>
+            <dl class="kpis">
+                <div class="kpi"><dt>Brokerages</dt><dd>10,000+</dd></div>
+                <div class="kpi"><dt>Connection</dt><dd>Plaid, read-only</dd></div>
+                <div class="kpi"><dt>Free trial</dt><dd>14 days</dd></div>
+                <div class="kpi"><dt>Promo code</dt><dd>DEVOTED30</dd></div>
+            </dl>
+        </div>
+
+        <h2>The problem: your dividends are scattered</h2>
+        <p>Most income investors I talk to don't have one account. They have a Roth IRA at Fidelity, a taxable account at Schwab, an old 401(k), maybe an HSA and a Robinhood account they opened years ago. Each broker shows you its own dividends, and none of them show you the number you actually care about: <strong>how much income your whole portfolio pays you every month.</strong></p>
+        <p>So you end up with a spreadsheet. And the spreadsheet is always a little wrong. You forget a DRIP, you miss a special dividend, or your monthly payers like $JEPI, $JEPQ and $QQQI change their distribution and your projection is off again.</p>
+
+        <div class="tip"><strong>The real issue is accuracy.</strong> A lot of dividend trackers estimate your income from a generic data feed instead of what your broker actually paid. That's how you end up with "income" numbers that don't match your account.</div>
+
+        <h2>The fix: one tracker connected to every account</h2>
+        <p>What you want is a tracker that plugs straight into your brokerages and records the dividends that actually land. That's the reason I like <a href="https://www.merrydiv.com/?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=intro" target="_blank" rel="sponsored noopener">MerryDiv</a>. According to MerryDiv, dividend payments and history come <strong>directly from your brokerage via Plaid</strong>, so they match what hit your account. Fund yields use trailing 12-month cash distributions, which is how I'd want monthly income ETFs measured anyway.</p>
+
+        <figure class="shot"><a href="https://www.merrydiv.com/?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=img_dashboard" target="_blank" rel="sponsored noopener" title="Try MerryDiv"><img src="/images/merrydiv/merrydiv-dashboard-income.jpg" alt="MerryDiv dashboard showing average monthly dividend income, recent payouts and a monthly income chart across all accounts" loading="lazy" width="1400" height="1027"></a><figcaption>One dashboard for every account: average monthly income, what you've received, and a month-by-month income chart. (Example portfolio from MerryDiv.)</figcaption></figure>
+
+        <h2>Step by step: set it up in about 5 minutes</h2>
+
+        <h3>Step 1: Create a free account</h3>
+        <p>Sign up at <a href="https://www.merrydiv.com/signup?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=step1" target="_blank" rel="sponsored noopener">merrydiv.com</a>. The free plan already gives you unlimited manual accounts and holdings, so you can look around before paying anything. If you want automatic sync, start the 14-day free trial on a paid plan.</p>
+
+        <h3>Step 2: Link your brokerages through Plaid</h3>
+        <p>Click <strong>Link account</strong> and pick your broker. Plaid handles the login, and the connection is <strong>read-only</strong>: MerryDiv can see your holdings and dividend payments, but it can't trade or move money, and your brokerage credentials aren't stored on MerryDiv's servers. Repeat for each account. Plaid covers 10,000+ US and Canadian institutions, including Schwab, Fidelity, Vanguard, Robinhood, E*TRADE and Merrill Edge.</p>
+
+        <h3>Step 3: Watch your dividend history fill in</h3>
+        <p>Your holdings and past payouts sync in on their own. Your Roth IRA, 401(k), taxable account and HSA all roll into one dividend feed, and the dashboard shows your average monthly income, your best month and whether your income is growing.</p>
+
+        <h3>Step 4: Check the dividend calendar</h3>
+        <p>The 12-month dividend calendar shows what's coming and when, and the dashboard keeps a running total for the next 30 days. This is the view I check most, because it tells me what cash I'll have to reinvest.</p>
+
+        <h3>Step 5: Run Portfolio X-Ray</h3>
+        <p>If you own ETFs, you probably own the same companies two or three times over. X-Ray looks inside your ETFs and mutual funds and adds up your real exposure to each company across every account.</p>
+
+        <figure class="shot"><a href="https://www.merrydiv.com/?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=img_xray" target="_blank" rel="sponsored noopener" title="Try MerryDiv Portfolio X-Ray"><img src="/images/merrydiv/merrydiv-portfolio-xray.jpg" alt="MerryDiv Portfolio X-Ray showing combined company exposure across AAPL, VTI and VOO" loading="lazy" width="1400" height="1026"></a><figcaption>Portfolio X-Ray: $AAPL held directly plus through $VTI and $VOO adds up to more than you'd think. (Illustrative example from MerryDiv.)</figcaption></figure>
+
+        <div class="cta"><p>Link your accounts and see your real dividend income in one place. Use code <strong>DEVOTED30</strong> for 30% off.</p><a href="https://www.merrydiv.com/signup?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=cta_mid" target="_blank" rel="sponsored noopener" class="btn">Start free with MerryDiv &rarr;</a><a href="https://www.merrydiv.com/pricing?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=cta_mid_pricing" target="_blank" rel="sponsored noopener" class="btn ghost">See pricing</a></div>
+
+        <h2>Why I like it</h2>
+        <div class="feat">
+            <div><h4>It uses my real accounts</h4><p>No typing in trades. Plaid's read-only connection syncs holdings and dividends from every broker I use.</p></div>
+            <div><h4>The numbers are right</h4><p>Payouts come from the brokerage itself, so my income matches what actually hit my accounts.</p></div>
+            <div><h4>Simple, but it looks premium</h4><p>The dashboard is easy to follow on day one and still feels polished. It's the first tracker I've wanted to open just to look at it.</p></div>
+            <div><h4>Built around income</h4><p>Income is the headline, not net worth. There's even a progress bar toward your monthly income goal.</p></div>
+            <div><h4>Web and iOS</h4><p>The iOS app and web app stay in sync, and you can export to CSV anytime.</p></div>
+            <div><h4>Free research too</h4><p>DRIP, growth and income calculators, AI dividend safety analysis on stock pages, and free Dividend Aristocrats and Kings lists.</p></div>
+        </div>
+
+        <h2>MerryDiv vs. a spreadsheet vs. your brokerage app</h2>
+        <table class="tbl">
+            <thead><tr><th>What you need</th><th>MerryDiv</th><th>Spreadsheet</th><th>Brokerage app</th></tr></thead>
+            <tbody>
+                <tr><td>All accounts in one view</td><td class="yes">Every linked broker</td><td>Enter them yourself</td><td>That broker only</td></tr>
+                <tr><td>Dividends recorded automatically</td><td class="yes">Synced via Plaid</td><td>Copy and paste</td><td>Yes, one broker</td></tr>
+                <tr><td>Matches what you were paid</td><td class="yes">From the brokerage</td><td>Only if you're perfect</td><td>Yes, one broker</td></tr>
+                <tr><td>12-month dividend calendar</td><td class="yes">Built in</td><td>Build it yourself</td><td>Varies</td></tr>
+                <tr><td>Overlap inside your ETFs</td><td class="yes">Portfolio X-Ray</td><td>No</td><td>No</td></tr>
+                <tr><td>Cost</td><td>Free, or from $5.99/mo</td><td>Free, plus your time</td><td>Free</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Pricing and the DEVOTED30 code</h2>
+        <table class="tbl">
+            <thead><tr><th>Plan</th><th>Price</th><th>Synced brokerages</th></tr></thead>
+            <tbody>
+                <tr><td>Free</td><td class="n">$0</td><td>Manual tracking, unlimited accounts and holdings</td></tr>
+                <tr><td>Starter</td><td class="n">$5.99/mo</td><td>2</td></tr>
+                <tr><td>Expert (most popular)</td><td class="n">$9.99/mo</td><td>5</td></tr>
+                <tr><td>Ultimate</td><td class="n">$19.99/mo</td><td>10</td></tr>
+            </tbody>
+        </table>
+        <p>Every paid plan adds automatic sync, full dividend history, Portfolio X-Ray, the 12-month dividend calendar, Portfolio Insights by sector, type and country, and CSV export. Yearly billing gets 2 months free, there's a 14-day free trial, and you can cancel anytime.</p>
+        <div class="tip gold"><strong>Reader deal: code DEVOTED30.</strong> 30% off your first 2 months on a monthly plan, or 30% off your first year on an annual plan. Redeem it when you subscribe on merrydiv.com. It doesn't work through Apple in-app purchases.</div>
+
+        <h2>Who this setup is for</h2>
+        <ul>
+            <li>Income ETF investors holding monthly payers across more than one account</li>
+            <li>Anyone with a Roth IRA, 401(k), taxable account or HSA at different brokers</li>
+            <li>Investors who are done updating a dividend spreadsheet by hand</li>
+            <li>People working toward a monthly dividend income goal</li>
+        </ul>
+        <p>Keep in mind that automatic sync needs a paid plan, brokerage sync covers US and Canadian institutions, and there's no Android app yet (the web app works on any phone).</p>
+
+        <h2>My take</h2>
+        <p>If your dividends are spread across several brokerages, a tracker that connects to all of them is the single biggest upgrade you can make to how you manage income. MerryDiv does it safely through Plaid, gets the numbers right because they come from your broker, and makes the whole thing look good. That's why it's the one I'm recommending.</p>
+
+        <div class="cta"><p>Try MerryDiv free for 14 days. Use code <strong>DEVOTED30</strong> for 30% off when you subscribe.</p><a href="https://www.merrydiv.com/signup?utm_source=topdividendetfs&amp;utm_medium=sponsored&amp;utm_campaign=benjie_guide&amp;utm_content=cta_bottom" target="_blank" rel="sponsored noopener" class="btn">Get started with MerryDiv &rarr;</a></div>
+
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+            <details><summary>How do I track dividends from multiple brokerage accounts?</summary><p>Use a dividend tracker that connects to all of your brokerages at once. MerryDiv links accounts through Plaid with read-only access and combines dividends from a Roth IRA, 401(k), taxable account and HSA into one dividend feed.</p></details>
+            <details><summary>Is it safe to connect my brokerage to MerryDiv?</summary><p>MerryDiv uses Plaid with read-only access. It can see holdings and dividend payments but cannot trade or move money, and your brokerage login goes through Plaid instead of being stored on MerryDiv's servers.</p></details>
+            <details><summary>Why don't dividend trackers match my brokerage?</summary><p>Many trackers estimate income from a generic dividend database, so special dividends, DRIP shares and changing ETF distributions can be off. MerryDiv says synced dividend payments come directly from your brokerage via Plaid, so they match what hit your account.</p></details>
+            <details><summary>How much does MerryDiv cost?</summary><p>There is a free manual plan. Paid plans with automatic sync are $5.99, $9.99 and $19.99 a month for 2, 5 and 10 synced brokerages. Yearly billing gets 2 months free and there is a 14-day free trial.</p></details>
+            <details><summary>What is the MerryDiv promo code?</summary><p>Code DEVOTED30 gives 30% off your first 2 months on a monthly plan or 30% off your first year on an annual plan when you subscribe on merrydiv.com. It does not work through Apple in-app purchases.</p></details>
+            <details><summary>Does MerryDiv work with dividend ETFs?</summary><p>Yes. ETFs and mutual funds sync like stocks, fund yields use trailing 12-month cash distributions, and Portfolio X-Ray shows the companies inside your funds.</p></details>
+        </div>
+
+        <p class="disc"><strong>Sponsored disclosure:</strong> This article is sponsored by MerryDiv, and TopDividendETFs.com was paid to create it. Links to MerryDiv are sponsored links. Screenshots show example and illustrative portfolios provided by MerryDiv. Features, prices and the DEVOTED30 offer are as of November 11, 2026 and may change. Tickers mentioned are examples only, not recommendations to buy or sell any security. TopDividendETFs.com is for educational purposes only and is not financial advice. Always do your own research.</p>
+        </article>
+
+<div class="sponsor-wrap">
+<div class="banner">
+    <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/OVL new display ad 2.png" alt="Sponsor banner">
+    </a>
+    <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
+    <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+</div>
+</div>
+
+        <div class="page-nav" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px">
+            <a class="back-to-top" href="/blog" style="text-decoration:none">&larr; Back to the Blog</a>
+            <a class="back-to-top" href="https://topdividendetfs.com" style="text-decoration:none">ETF Rankings</a>
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <p>Built by dividend investors, for dividend investors.</p>
+        <div class="footer-links-row">
+            <a href="https://topdividendetfs.com">Home</a>
+            <a href="/etfs/">All ETFs</a>
+            <a href="/blog">Blog</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="how-we-grade-etfs.html">How We Grade ETFs</a>
+            <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+            <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+            <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <p style="margin:8px 0 2px;font-size:0.8rem;">Contact and sponsorships: <a href="mailto:Business@TopDividendETFs.com" style="color:rgba(255,255,255,0.75);">Business@TopDividendETFs.com</a></p>
+        <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
+    </footer>
+
+</body>
+</html>
