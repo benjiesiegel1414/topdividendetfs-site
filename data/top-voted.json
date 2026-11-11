@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T22:51:23.600Z",
+  "updated": "2026-11-11T04:46:11.860Z",
   "total_tracked": 165,
   "top": [
     {
@@ -41,8 +41,14 @@
     {
       "symbol": "AMDW",
       "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "60.8%"
+    },
+    {
+      "symbol": "HOYY",
+      "name": "GraniteShares YieldBOOST HOOD ETF",
+      "votes": 4,
+      "yield": "76%"
     },
     {
       "symbol": "CSHI",
@@ -51,16 +57,10 @@
       "yield": "5.0%"
     },
     {
-      "symbol": "HOYY",
-      "name": "GraniteShares YieldBOOST HOOD ETF",
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
       "votes": 3,
-      "yield": "76%"
-    },
-    {
-      "symbol": "KQQQ",
-      "name": "Kurv Technology Titans Select ETF",
-      "votes": 3,
-      "yield": "15.70%"
+      "yield": "14%"
     }
   ]
 }
