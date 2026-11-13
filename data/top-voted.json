@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T23:13:50.542Z",
+  "updated": "2026-11-13T05:08:06.543Z",
   "total_tracked": 165,
   "top": [
     {
@@ -9,16 +9,16 @@
       "yield": "21%"
     },
     {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 12,
+      "yield": "2.3%"
+    },
+    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 11,
       "yield": "41%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 11,
-      "yield": "2.3%"
     },
     {
       "symbol": "OVL",
