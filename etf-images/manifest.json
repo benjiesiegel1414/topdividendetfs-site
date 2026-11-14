@@ -179,6 +179,26 @@
   "DRSK": "Aptus Defined Risk ETF",
   "DUBS": "Aptus Large Cap Enhanced Yield ETF",
   "IDUB": "Aptus International Enhanced Yield ETF",
-  "JUCY": "Aptus Enhanced Yield ETF"
+  "JUCY": "Aptus Enhanced Yield ETF",
+  "AAPW": "Roundhill AAPL WeeklyPay ETF",
+  "AMZW": "Roundhill AMZN WeeklyPay ETF",
+  "ARMW": "Roundhill ARM WeeklyPay ETF",
+  "AVGW": "Roundhill AVGO WeeklyPay ETF",
+  "BABW": "Roundhill BABA WeeklyPay ETF",
+  "BRKW": "Roundhill BRKB WeeklyPay ETF",
+  "COSW": "Roundhill COST WeeklyPay ETF",
+  "GDXW": "Roundhill Gold Miners WeeklyPay ETF",
+  "GLDW": "Roundhill Gold WeeklyPay ETF",
+  "HOOW": "Roundhill HOOD WeeklyPay ETF",
+  "METW": "Roundhill META WeeklyPay ETF",
+  "MSFW": "Roundhill MSFT WeeklyPay ETF",
+  "MSTW": "Roundhill MSTR WeeklyPay ETF",
+  "NFLW": "Roundhill NFLX WeeklyPay ETF",
+  "NVDW": "Roundhill NVDA WeeklyPay ETF",
+  "TPAY": "Roundhill S&P 500 Target 10 Managed Distribution ETF",
+  "TSYW": "Roundhill Treasury Bond WeeklyPay ETF",
+  "UBEW": "Roundhill UBER WeeklyPay ETF",
+  "UNHW": "Roundhill UNH WeeklyPay ETF",
+  "XPAY": "Roundhill S&P 500 Target 20 Managed Distribution ETF"
  }
 }
