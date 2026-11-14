@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T04:58:33.582Z",
+  "updated": "2026-11-14T12:58:40.962Z",
   "total_tracked": 173,
   "top": [
     {
@@ -21,6 +21,12 @@
       "yield": "14.2%"
     },
     {
+      "symbol": "BLOX",
+      "name": "Nicholas Crypto Income ETF",
+      "votes": 1,
+      "yield": "36.0%"
+    },
+    {
       "symbol": "DRKY",
       "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
       "votes": 1,
@@ -31,6 +37,12 @@
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
       "votes": 1,
       "yield": "14%"
+    },
+    {
+      "symbol": "MAXI",
+      "name": "Simplify Bitcoin Strategy PLUS Income ETF",
+      "votes": 1,
+      "yield": "4.0%"
     },
     {
       "symbol": "QQQI",
@@ -49,18 +61,6 @@
       "name": "Global X Nasdaq 100 Covered Call ETF",
       "votes": 1,
       "yield": "12.4%"
-    },
-    {
-      "symbol": "SPUC",
-      "name": "Simplify US Equity Income ETF",
-      "votes": 1,
-      "yield": "14.8%"
-    },
-    {
-      "symbol": "TSPY",
-      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
-      "votes": 1,
-      "yield": "14.5%"
     }
   ]
 }
