@@ -1,66 +1,66 @@
 {
-  "updated": "2026-11-13T13:56:33.826Z",
-  "total_tracked": 165,
+  "updated": "2026-11-14T04:58:33.582Z",
+  "total_tracked": 173,
   "top": [
     {
-      "symbol": "TMGN",
-      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 14,
-      "yield": "21%"
-    },
-    {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 12,
-      "yield": "2.3%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 11,
-      "yield": "41%"
-    },
-    {
-      "symbol": "SEPI",
-      "name": "Shelton Equity Premium Income ETF",
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
       "votes": 10,
-      "yield": "8.3%"
+      "yield": "11.40%"
     },
     {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 9,
-      "yield": "10.8%"
+      "symbol": "ACKY",
+      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
+      "votes": 2,
+      "yield": "15.0%"
     },
     {
-      "symbol": "OVQ",
-      "name": "Overlay Shares Nasdaq 100 Income ETF",
-      "votes": 9,
-      "yield": "12%"
+      "symbol": "IWMI",
+      "name": "NEOS Russell 2000 High Income ETF",
+      "votes": 2,
+      "yield": "14.2%"
     },
     {
-      "symbol": "XLEI",
-      "name": "State Street Energy Select Sector SPDR Premium Income ETF",
-      "votes": 6,
-      "yield": "16.3%"
+      "symbol": "DRKY",
+      "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
+      "votes": 1,
+      "yield": "15.0%"
     },
     {
-      "symbol": "TDVI",
-      "name": "FT Vest Technology Dividend Target Income ETF",
-      "votes": 5,
-      "yield": "7.7%"
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
+      "votes": 1,
+      "yield": "14%"
     },
     {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 5,
-      "yield": "12.6%"
+      "symbol": "QQQI",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "votes": 1,
+      "yield": "14.1%"
     },
     {
-      "symbol": "AMDW",
-      "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 4,
-      "yield": "52.3%"
+      "symbol": "QUSA",
+      "name": "VistaShares Target 15™ USA Quality Income ETF",
+      "votes": 1,
+      "yield": "15.0%"
+    },
+    {
+      "symbol": "QYLD",
+      "name": "Global X Nasdaq 100 Covered Call ETF",
+      "votes": 1,
+      "yield": "12.4%"
+    },
+    {
+      "symbol": "SPUC",
+      "name": "Simplify US Equity Income ETF",
+      "votes": 1,
+      "yield": "14.8%"
+    },
+    {
+      "symbol": "TSPY",
+      "name": "TappAlpha S&P 500 Growth & Daily Income ETF",
+      "votes": 1,
+      "yield": "14.5%"
     }
   ]
 }
