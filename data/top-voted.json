@@ -1,12 +1,48 @@
 {
-  "updated": "2026-11-14T12:58:40.962Z",
+  "updated": "2026-11-14T21:58:38.444Z",
   "total_tracked": 173,
   "top": [
     {
       "symbol": "SPYI",
       "name": "NEOS S&P 500 High Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "11.40%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 8,
+      "yield": "2.1%"
+    },
+    {
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 7,
+      "yield": "21%"
+    },
+    {
+      "symbol": "CSHI",
+      "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
+      "votes": 4,
+      "yield": "5.0%"
+    },
+    {
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
+      "votes": 4,
+      "yield": "14%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 3,
+      "yield": "41%"
+    },
+    {
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 3,
+      "yield": "8.3%"
     },
     {
       "symbol": "ACKY",
@@ -21,46 +57,10 @@
       "yield": "14.2%"
     },
     {
-      "symbol": "BLOX",
-      "name": "Nicholas Crypto Income ETF",
-      "votes": 1,
-      "yield": "36.0%"
-    },
-    {
-      "symbol": "DRKY",
-      "name": "VistaShares Target 15™ DRUKMacro Distribution ETF",
-      "votes": 1,
-      "yield": "15.0%"
-    },
-    {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 1,
-      "yield": "14%"
-    },
-    {
-      "symbol": "MAXI",
-      "name": "Simplify Bitcoin Strategy PLUS Income ETF",
-      "votes": 1,
-      "yield": "4.0%"
-    },
-    {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
-      "votes": 1,
+      "votes": 2,
       "yield": "14.1%"
-    },
-    {
-      "symbol": "QUSA",
-      "name": "VistaShares Target 15™ USA Quality Income ETF",
-      "votes": 1,
-      "yield": "15.0%"
-    },
-    {
-      "symbol": "QYLD",
-      "name": "Global X Nasdaq 100 Covered Call ETF",
-      "votes": 1,
-      "yield": "12.4%"
     }
   ]
 }
