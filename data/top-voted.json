@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T04:48:43.089Z",
+  "updated": "2026-11-16T14:49:26.198Z",
   "total_tracked": 173,
   "top": [
     {
@@ -33,16 +33,16 @@
       "yield": "8.3%"
     },
     {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 7,
+      "yield": "41%"
+    },
+    {
       "symbol": "CSHI",
       "name": "NEOS Enhanced Income 1-3 Month T-Bill ETF",
       "votes": 7,
       "yield": "5.0%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 6,
-      "yield": "41%"
     },
     {
       "symbol": "VFLO",
