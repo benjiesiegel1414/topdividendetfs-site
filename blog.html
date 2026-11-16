@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="author" content="TopDividendETFs.com">
-    <title>Blog | Dividend ETF Insights & Tools | TopDividendETFs.com</title>
-    <meta name="description" content="Read our latest articles on dividend ETFs including SCHD tools, dividend history, ex-dividend dates, holdings, StockAnalysis reviews, and 2026 updates.">
+    <title>Dividend ETF Blog: Every Article, Guide & Ranking | TopDividendETFs.com</title>
+    <meta name="description" content="Browse all 69 TopDividendETFs.com articles: dividend dates and history, SCHD coverage, high-yield rankings, issuer lists, deep dives and beginner guides. Search by ticker or topic.">
     <meta name="keywords" content="dividend etf blog, SCHD, DGRO, JEPQ, dividend investing, StockAnalysis review">
 
     <!-- OPEN GRAPH / TWITTER -->
     <meta property="og:title" content="Blog - Dividend ETF Insights | TopDividendETFs.com">
-    <meta property="og:description" content="Latest articles and tools for dividend ETF investors.">
+    <meta property="og:description" content="Every dividend ETF article in one place: 69 guides, rankings and dividend calendars. Search by ticker or topic.">
     <meta property="og:image" content="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/social-preview.png">
     <meta property="og:url" content="https://topdividendetfs.com/blog">
     <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
 
     <link rel="icon" href="favicon.ico">
 
-    <!-- FONTS — matching the site's Lato -->
+    <!-- FONTS: matching the site's Lato -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- ANALYTICS -->
@@ -724,7 +724,548 @@
             .cta-strip { padding: 28px 18px; }
             .hero { padding: 44px 16px 36px; }
         }
+    
+        /* ===== Blog index v2 (Nov 2026) ===== */
+        html { scroll-behavior: smooth; }
+        .hero h1 { margin-bottom: 10px; }
+        .hero-search { max-width: 640px; margin: 22px auto 0; display: flex; align-items: center; gap: 10px; background: #fff; border-radius: 12px; padding: 6px 8px 6px 16px; box-shadow: 0 8px 26px rgba(0,0,0,.18); }
+        .hero-search span { font-size: 1.1rem; }
+        .hero-search input { flex: 1; border: none; outline: none; font: 700 1rem 'Lato', sans-serif; padding: 12px 4px; color: var(--text); background: transparent; min-width: 0; }
+        .hero-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+        .hero-jump a { color: #fff; text-decoration: none; font-weight: 700; font-size: .85rem; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); padding: 7px 14px; border-radius: 20px; }
+        .hero-jump a:hover { background: rgba(255,255,255,.22); }
+        .banner { width: 100%; max-width: 1000px; margin: 22px auto 6px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        .banner img { display: block; max-width: 100%; height: auto; transition: transform .3s ease; }
+        .banner:hover img { transform: scale(1.02); }
+        .section-label { scroll-margin-top: 12px; }
+
+        .latest-wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; margin-bottom: 8px; }
+        .lead-card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: #fff; border-radius: 14px; padding: 30px 30px 28px; background: linear-gradient(135deg, var(--green), var(--green-light)); box-shadow: var(--card-shadow); transition: transform .2s; }
+        .lead-card:hover { transform: translateY(-3px); }
+        .lead-badge { align-self: flex-start; background: var(--gold); color: #1a1a1a; font-weight: 900; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; padding: 5px 11px; border-radius: 5px; }
+        .lead-meta { font-size: .8rem; color: rgba(255,255,255,.75); font-weight: 700; }
+        .lead-card h2 { font-size: clamp(1.3rem, 2.6vw, 1.75rem); line-height: 1.25; font-weight: 900; }
+        .lead-card p { color: rgba(255,255,255,.85); line-height: 1.6; font-size: .97rem; }
+        .lead-btn { margin-top: auto; font-weight: 900; color: #7dffb0; }
+        .side-list { display: flex; flex-direction: column; gap: 12px; }
+        .side-card { flex: 1; display: flex; gap: 14px; align-items: center; text-decoration: none; background: #fff; border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow); border-left: 4px solid var(--green-mid); transition: transform .2s; }
+        .side-card:hover { transform: translateX(3px); }
+        .side-icon { font-size: 1.6rem; }
+        .side-card em { display: block; font-style: normal; font-size: .72rem; color: var(--gray); font-weight: 700; margin-bottom: 3px; }
+        .side-card strong { color: var(--green); font-size: .95rem; line-height: 1.35; }
+
+        .start-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+        .start-card { display: flex; flex-direction: column; gap: 6px; text-decoration: none; background: #fff; border-radius: 12px; padding: 18px; box-shadow: var(--card-shadow); border-top: 4px solid var(--gold); transition: transform .2s; }
+        .start-card:hover { transform: translateY(-3px); }
+        .sc-step { font-size: .68rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; color: var(--gold-dark); }
+        .start-card strong { color: var(--green); line-height: 1.3; }
+        .start-card em { font-style: normal; color: var(--gray); font-size: .85rem; line-height: 1.5; }
+
+        .pro-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 26px 0 4px; background: var(--gold-light); border: 2px solid #f0c770; border-radius: 12px; padding: 16px 20px; }
+        .pro-strip strong { display: block; color: var(--green); margin-bottom: 3px; }
+        .pro-strip span { color: var(--gray); font-size: .92rem; }
+        .pro-strip a { background: var(--green); color: #fff; font-weight: 900; text-decoration: none; padding: 11px 20px; border-radius: 8px; white-space: nowrap; }
+
+        .filter-bar { position: sticky; top: 0; z-index: 40; background: rgba(244,244,244,.97); backdrop-filter: blur(6px); padding: 12px 0 10px; margin-bottom: 12px; border-bottom: 1px solid #dfe5e2; }
+        .chip-row, .tchip-row { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; }
+        .chip, .tchip { flex: 0 0 auto; font: 700 .85rem 'Lato', sans-serif; padding: 8px 14px; border-radius: 22px; border: 2px solid #cfe1da; background: #fff; color: var(--green); cursor: pointer; transition: all .15s; }
+        .chip:hover, .tchip:hover { border-color: var(--green-mid); }
+        .chip.active, .tchip.active { background: var(--green); border-color: var(--green); color: #fff; }
+        .chip .cnt, .tchip .cnt { font-size: .72rem; opacity: .7; margin-left: 3px; }
+        .tchip { font-size: .78rem; padding: 6px 11px; }
+        .filter-row2 { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; }
+        .tchip-row { flex: 1; min-width: 0; align-items: center; }
+        .tlabel { flex: 0 0 auto; font-size: .75rem; font-weight: 900; color: var(--gray); text-transform: uppercase; letter-spacing: .05em; }
+        .sort-wrap { display: flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 900; color: var(--gray); white-space: nowrap; }
+        .sort-wrap select { font: 700 .85rem 'Lato', sans-serif; padding: 7px 10px; border-radius: 8px; border: 2px solid #cfe1da; background: #fff; color: var(--green); }
+        .result-line { margin-top: 8px; font-size: .85rem; color: var(--gray); font-weight: 700; display: flex; gap: 12px; align-items: center; }
+        #clearFilters { background: none; border: none; color: #c0392b; font-weight: 900; cursor: pointer; font-size: .82rem; }
+
+        .blog-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+        .blog-card { display: flex; flex-direction: column; }
+        .blog-card-body { display: flex; flex-direction: column; flex: 1; }
+        .blog-card-body .read-more { margin-top: auto; align-self: flex-start; }
+        .blog-card.is-hidden, .blog-card.is-paged { display: none; }
+        .tk-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 2px 0 12px; }
+        .tk-row:empty { display: none; }
+        .tk { font-size: .7rem; font-weight: 900; color: var(--green-mid); background: #e6f4ee; padding: 3px 8px; border-radius: 4px; }
+        .no-results { text-align: center; padding: 30px; color: var(--gray); }
+        .more-wrap { text-align: center; margin: 18px 0 8px; }
+        #showMore { font: 900 .95rem 'Lato', sans-serif; padding: 13px 28px; border-radius: 10px; border: 2px solid var(--green-mid); background: #fff; color: var(--green); cursor: pointer; }
+        #showMore:hover { background: var(--green); color: #fff; }
+
+        .dir-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: start; }
+        .dir-block { background: #fff; border-radius: 12px; box-shadow: var(--card-shadow); overflow: hidden; scroll-margin-top: 12px; }
+        .dir-block summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 16px 18px; font-weight: 900; color: var(--green); background: #eef7f3; }
+        .dir-block summary::-webkit-details-marker { display: none; }
+        .dir-block summary::after { content: '+'; font-size: 1.2rem; color: var(--green-mid); }
+        .dir-block[open] summary::after { content: '\2212'; }
+        .dir-block summary .cnt { margin-left: auto; font-size: .75rem; color: var(--gray); font-weight: 700; }
+        .dir-block ul { list-style: none; padding: 6px 18px 14px; }
+        .dir-block li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #eef1f0; font-size: .9rem; }
+        .dir-block li:last-child { border-bottom: none; }
+        .dir-block li a { color: var(--green); text-decoration: none; font-weight: 700; }
+        .dir-block li a:hover { text-decoration: underline; }
+        .dir-block li span { color: #888; font-size: .78rem; white-space: nowrap; }
+
+        .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .tool-card { display: flex; flex-direction: column; gap: 5px; text-decoration: none; background: #fff; border-radius: 12px; padding: 18px; box-shadow: var(--card-shadow); transition: transform .2s; }
+        .tool-card:hover { transform: translateY(-3px); }
+        .tool-card span { font-size: 1.6rem; }
+        .tool-card strong { color: var(--green); }
+        .tool-card em { font-style: normal; color: var(--gray); font-size: .87rem; line-height: 1.5; }
+        .pro-box { background: linear-gradient(135deg, #1A3C34, #2E5D54); color: #fff; border-radius: 12px; padding: 28px 26px; margin: 30px 0 10px; box-shadow: var(--card-shadow); text-align: center; }
+        .pro-box h3 { color: #FFD700; font-size: 1.25rem; font-weight: 900; margin-bottom: 8px; }
+        .pro-box p { color: rgba(255,255,255,.85); max-width: 640px; margin: 0 auto 10px; line-height: 1.6; }
+        .pro-box .pro-price { font-weight: 900; color: #FFD700; }
+        .pro-box a { display: inline-block; background: #FFD700; color: #1A3C34; font-weight: 900; padding: 12px 26px; border-radius: 8px; text-decoration: none; margin-top: 6px; }
+
+        @media (max-width: 900px) {
+            .latest-wrap { grid-template-columns: 1fr; }
+            .start-grid { grid-template-columns: repeat(2, 1fr); }
+            .tool-grid { grid-template-columns: repeat(2, 1fr); }
+            .dir-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) {
+            .start-grid, .tool-grid { grid-template-columns: 1fr; }
+            .filter-row2 { flex-direction: column; align-items: stretch; }
+            .sort-wrap { justify-content: flex-end; }
+            .lead-card { padding: 24px 20px; }
+            .dir-block li { flex-direction: column; gap: 2px; }
+            .hero-jump a { font-size: .78rem; padding: 6px 11px; }
+        }
+
     </style>
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "TopDividendETFs Blog",
+ "url": "https://topdividendetfs.com/blog",
+ "description": "Every dividend ETF article on TopDividendETFs.com: dividend dates and history, SCHD coverage, rankings, issuer lists, deep dives and beginner guides.",
+ "mainEntity": {
+  "@type": "ItemList",
+  "numberOfItems": 69,
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "url": "https://topdividendetfs.com/ulty-etf-dividend-history-2026.html",
+    "name": "ULTY Dividend History 2026: Every Weekly Payout and Yield"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "url": "https://topdividendetfs.com/best-dividend-growth-etfs-2026.html",
+    "name": "Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "url": "https://topdividendetfs.com/isbg-etf-review-dividend-history-2026.html",
+    "name": "ISBG ETF Review 2026: Dividend History, Yield and Risks"
+   },
+   {
+    "@type": "ListItem",
+    "position": 4,
+    "url": "https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html",
+    "name": "How to Track Every Dividend From Every Brokerage in One Place"
+   },
+   {
+    "@type": "ListItem",
+    "position": 5,
+    "url": "https://topdividendetfs.com/spyi-vs-qqqi-2026.html",
+    "name": "SPYI vs QQQI 2026: Which NEOS Income ETF Is Better?"
+   },
+   {
+    "@type": "ListItem",
+    "position": 6,
+    "url": "https://topdividendetfs.com/schd-q4-dividend-increases",
+    "name": "SCHD Q4 2026 Dividend Tracker: 17 Holdings Raising, Led by $COP, $TXN & $ACN"
+   },
+   {
+    "@type": "ListItem",
+    "position": 7,
+    "url": "https://topdividendetfs.com/top-15-highest-yield-etfs-no-price-decay",
+    "name": "Top 15 Highest-Yield Dividend ETFs With No Price Decay"
+   },
+   {
+    "@type": "ListItem",
+    "position": 8,
+    "url": "https://topdividendetfs.com/nobl-etf-dividend-history-2026.html",
+    "name": "NOBL Dividend History 2026: Every Payout, Yield and Growth"
+   },
+   {
+    "@type": "ListItem",
+    "position": 9,
+    "url": "https://topdividendetfs.com/qyld-etf-dividend-dates-2026.html",
+    "name": "QYLD Dividend Dates 2026: Next Ex-Date Nov 23, Every Payout"
+   },
+   {
+    "@type": "ListItem",
+    "position": 10,
+    "url": "https://topdividendetfs.com/income-calendar-dividend-tracker-review.html",
+    "name": "Income Calendar Review: See Every Dividend Coming in the Next 12 Months"
+   },
+   {
+    "@type": "ListItem",
+    "position": 11,
+    "url": "https://topdividendetfs.com/qqqi-distribution-when-price-drops.html",
+    "name": "What Happens to $QQQI's Distribution When the Price Drops?"
+   },
+   {
+    "@type": "ListItem",
+    "position": 12,
+    "url": "https://topdividendetfs.com/schd-not-good-for-most-people.html",
+    "name": "$SCHD Is NOT a Good ETF for Most People (Unless You Have One of These 2 Things)"
+   },
+   {
+    "@type": "ListItem",
+    "position": 13,
+    "url": "https://topdividendetfs.com/nvdy-etf-dividend-history-2026.html",
+    "name": "NVDY Dividend History 2026: Every Weekly Payout and Yield"
+   },
+   {
+    "@type": "ListItem",
+    "position": 14,
+    "url": "https://topdividendetfs.com/msty-etf-dividend-history-2026.html",
+    "name": "MSTY Dividend History 2026: Every Weekly Payout and Yield"
+   },
+   {
+    "@type": "ListItem",
+    "position": 15,
+    "url": "https://topdividendetfs.com/divo-etf-dividend-dates-2026.html",
+    "name": "DIVO Dividend Dates 2026: Every Payment and Next Ex-Date"
+   },
+   {
+    "@type": "ListItem",
+    "position": 16,
+    "url": "https://topdividendetfs.com/state-street-highest-yielding-etfs-2026.html",
+    "name": "State Street Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 17,
+    "url": "https://topdividendetfs.com/roundhill-highest-yielding-etfs-2026.html",
+    "name": "Roundhill Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 18,
+    "url": "https://topdividendetfs.com/neos-highest-yielding-etfs-2026.html",
+    "name": "NEOS Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 19,
+    "url": "https://topdividendetfs.com/ishares-highest-yielding-etfs-2026.html",
+    "name": "iShares Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 20,
+    "url": "https://topdividendetfs.com/goldman-sachs-highest-yielding-etfs-2026.html",
+    "name": "Goldman Sachs Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 21,
+    "url": "https://topdividendetfs.com/first-trust-highest-yielding-etfs-2026.html",
+    "name": "First Trust Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 22,
+    "url": "https://topdividendetfs.com/amplify-highest-yielding-etfs-2026.html",
+    "name": "Amplify Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 23,
+    "url": "https://topdividendetfs.com/gpix-etf-dividend-dates-2026.html",
+    "name": "GPIX Dividend Dates 2026: Every Payment and Next Ex-Date"
+   },
+   {
+    "@type": "ListItem",
+    "position": 24,
+    "url": "https://topdividendetfs.com/how-often-does-schd-rebalance.html",
+    "name": "How Often Does SCHD Rebalance? 2026 Schedule Explained"
+   },
+   {
+    "@type": "ListItem",
+    "position": 25,
+    "url": "https://topdividendetfs.com/jpmorgan-highest-yielding-etfs-2026.html",
+    "name": "JPMorgan Highest Yielding ETFs 2026: Full List Ranked"
+   },
+   {
+    "@type": "ListItem",
+    "position": 26,
+    "url": "https://topdividendetfs.com/gpiq-etf-dividend-dates-2026.html",
+    "name": "GPIQ Dividend Dates 2026: Every Payment and Next Ex-Date"
+   },
+   {
+    "@type": "ListItem",
+    "position": 27,
+    "url": "https://topdividendetfs.com/jepi-etf-dividend-history.html",
+    "name": "JEPI Dividend History: Every Payment Since 2020"
+   },
+   {
+    "@type": "ListItem",
+    "position": 28,
+    "url": "https://topdividendetfs.com/seeking-alpha-premium-review-dividend-investors-2026",
+    "name": "Seeking Alpha Premium Review 2026: Is It Worth It for Dividend Investors?"
+   },
+   {
+    "@type": "ListItem",
+    "position": 29,
+    "url": "https://topdividendetfs.com/neos-etfs-tax-friendly-return-of-capital",
+    "name": "Why NEOS ETFs Are \"Tax Friendly\": $QQQI & $SPYI Return of Capital Explained"
+   },
+   {
+    "@type": "ListItem",
+    "position": 30,
+    "url": "https://topdividendetfs.com/chpy-etf-dividend-history",
+    "name": "CHPY ETF Dividend History: Every Weekly Payout Since 2025"
+   },
+   {
+    "@type": "ListItem",
+    "position": 31,
+    "url": "https://topdividendetfs.com/jepi-etf-dividend-dates-2026",
+    "name": "JEPI Dividend Dates 2026: Every Ex-Date, Pay Date and Payout"
+   },
+   {
+    "@type": "ListItem",
+    "position": 32,
+    "url": "https://topdividendetfs.com/dividend-etfs-beating-voo",
+    "name": "Dividend ETFs Beating $VOO: The Funds Outperforming the S&P 500"
+   },
+   {
+    "@type": "ListItem",
+    "position": 33,
+    "url": "https://topdividendetfs.com/voo-etf-dividend-dates-2026",
+    "name": "VOO ETF 2026 Dividend Dates: Ex-Date Sep 28, Pay Sep 30"
+   },
+   {
+    "@type": "ListItem",
+    "position": 34,
+    "url": "https://topdividendetfs.com/schd-q3-2026-dividend-announced",
+    "name": "SCHD Q3 2026 Dividend Announced: $0.2665 Per Share"
+   },
+   {
+    "@type": "ListItem",
+    "position": 35,
+    "url": "https://topdividendetfs.com/schd-q3-2026-rebalance",
+    "name": "SCHD Q3 2026 Rebalance: $QCOM Takes the Top Spot"
+   },
+   {
+    "@type": "ListItem",
+    "position": 36,
+    "url": "https://topdividendetfs.com/dividend-investing-for-beginners",
+    "name": "Dividend Investing for Beginners: How to Actually Start in 2026"
+   },
+   {
+    "@type": "ListItem",
+    "position": 37,
+    "url": "https://topdividendetfs.com/spyi-etf-dividend-dates-2026",
+    "name": "SPYI Dividend Dates 2026: Payment Schedule and Next Ex-Date"
+   },
+   {
+    "@type": "ListItem",
+    "position": 38,
+    "url": "https://topdividendetfs.com/schd-q3-2026-dividend-prediction",
+    "name": "SCHD Q3 2026 Dividend: Actual vs Our Prediction"
+   },
+   {
+    "@type": "ListItem",
+    "position": 39,
+    "url": "https://topdividendetfs.com/schd-q3-dividend-increases",
+    "name": "SCHD Q3 2026 Dividend Tracker: 15 Raises + ETD's $3.00 Special"
+   },
+   {
+    "@type": "ListItem",
+    "position": 40,
+    "url": "https://topdividendetfs.com/top-neos-etfs-2026",
+    "name": "Top NEOS ETFs 2026: Every Fund Ranked by Distribution Rate & Total Return"
+   },
+   {
+    "@type": "ListItem",
+    "position": 41,
+    "url": "https://topdividendetfs.com/jepq-etf-dividend-dates-2026",
+    "name": "JEPQ Dividend Dates 2026: Every Payout and the Next Ex-Date"
+   },
+   {
+    "@type": "ListItem",
+    "position": 42,
+    "url": "https://topdividendetfs.com/ovl-etf-monthly-income-2026",
+    "name": "OVL ETF: The 10% Monthly Payer Built to Beat the S&P 500"
+   },
+   {
+    "@type": "ListItem",
+    "position": 43,
+    "url": "https://topdividendetfs.com/best-high-dividend-yield-etfs-2026",
+    "name": "Best High Dividend Yield ETFs for 2026"
+   },
+   {
+    "@type": "ListItem",
+    "position": 44,
+    "url": "https://topdividendetfs.com/schd-etf-q2-rebalanced-holdings-2026",
+    "name": "SCHD Q2 2026 Rebalanced Holdings"
+   },
+   {
+    "@type": "ListItem",
+    "position": 45,
+    "url": "https://topdividendetfs.com/vym-etf-2026-dividend-dates",
+    "name": "VYM ETF 2026 Dividend Dates"
+   },
+   {
+    "@type": "ListItem",
+    "position": 46,
+    "url": "https://topdividendetfs.com/schd-vs-vym-etf-2026",
+    "name": "SCHD vs VYM: Which Dividend ETF Wins in 2026?"
+   },
+   {
+    "@type": "ListItem",
+    "position": 47,
+    "url": "https://topdividendetfs.com/qqqi-neos-nasdaq-100-etf-biggest-risks",
+    "name": "QQQI NEOS Nasdaq 100 ETF: Biggest Risks"
+   },
+   {
+    "@type": "ListItem",
+    "position": 48,
+    "url": "https://topdividendetfs.com/fdvv-dividend-yield",
+    "name": "FDVV Fidelity High Dividend ETFs Dividend Yield"
+   },
+   {
+    "@type": "ListItem",
+    "position": 49,
+    "url": "https://topdividendetfs.com/fdvv-dividend-history",
+    "name": "FDVV Dividend History"
+   },
+   {
+    "@type": "ListItem",
+    "position": 50,
+    "url": "https://topdividendetfs.com/chpy-etf-calculator",
+    "name": "CHPY ETF Dividend Calculator"
+   },
+   {
+    "@type": "ListItem",
+    "position": 51,
+    "url": "https://topdividendetfs.com/qqqi-etf-pays-largest-distribution-ever",
+    "name": "QQQI ETF Pays Largest Distribution Ever"
+   },
+   {
+    "@type": "ListItem",
+    "position": 52,
+    "url": "https://topdividendetfs.com/top-total-returns",
+    "name": "Top Dividend ETFs by Total Return 2026"
+   },
+   {
+    "@type": "ListItem",
+    "position": 53,
+    "url": "https://topdividendetfs.com/qqqi-etf-dividend-dates-2026",
+    "name": "QQQI ETF 2026 Dividend Dates"
+   },
+   {
+    "@type": "ListItem",
+    "position": 54,
+    "url": "https://topdividendetfs.com/btci",
+    "name": "BTCI ETF: Bitcoin Income Fund Breakdown"
+   },
+   {
+    "@type": "ListItem",
+    "position": 55,
+    "url": "https://topdividendetfs.com/jepq-current-dividend-yield-2026",
+    "name": "JEPQ Current Dividend Yield 2026"
+   },
+   {
+    "@type": "ListItem",
+    "position": 56,
+    "url": "https://topdividendetfs.com/jepq-etf-dividend-history",
+    "name": "JEPQ ETF Dividend History"
+   },
+   {
+    "@type": "ListItem",
+    "position": 57,
+    "url": "https://topdividendetfs.com/spyi",
+    "name": "SPYI ETF Dividend History"
+   },
+   {
+    "@type": "ListItem",
+    "position": 58,
+    "url": "https://topdividendetfs.com/schd-dividend-history",
+    "name": "SCHD Dividend History"
+   },
+   {
+    "@type": "ListItem",
+    "position": 59,
+    "url": "https://topdividendetfs.com/qqqi-etf-dividend-history",
+    "name": "QQQI ETF Dividend History"
+   },
+   {
+    "@type": "ListItem",
+    "position": 60,
+    "url": "https://topdividendetfs.com/dgro-etf-ex-dividend-dates-2026",
+    "name": "DGRO ETF Ex-Dividend Dates 2026"
+   },
+   {
+    "@type": "ListItem",
+    "position": 61,
+    "url": "https://topdividendetfs.com/schd-etf-2026-reconstitution",
+    "name": "SCHD ETF 2026 Reconstitution"
+   },
+   {
+    "@type": "ListItem",
+    "position": 62,
+    "url": "https://topdividendetfs.com/schd-etf-q1-2026-dividend",
+    "name": "SCHD ETF Q1 2026 Dividend"
+   },
+   {
+    "@type": "ListItem",
+    "position": 63,
+    "url": "https://topdividendetfs.com/schd-dividend-calculator",
+    "name": "SCHD Dividend Calculator"
+   },
+   {
+    "@type": "ListItem",
+    "position": 64,
+    "url": "https://topdividendetfs.com/schd-etf-holdings-2026",
+    "name": "SCHD ETF Holdings 2026"
+   },
+   {
+    "@type": "ListItem",
+    "position": 65,
+    "url": "https://topdividendetfs.com/10-highest-yield-etfs",
+    "name": "Top 10 Highest Yield Dividend ETFs"
+   },
+   {
+    "@type": "ListItem",
+    "position": 66,
+    "url": "https://topdividendetfs.com/schd-etf-2026-dividend-dates",
+    "name": "SCHD ETF 2026 Dividend Dates"
+   },
+   {
+    "@type": "ListItem",
+    "position": 67,
+    "url": "https://topdividendetfs.com/top-15-total-returns",
+    "name": "Top 15 Dividend ETFs by Total Return (Live Rankings)"
+   },
+   {
+    "@type": "ListItem",
+    "position": 68,
+    "url": "https://topdividendetfs.com/stockanalysis",
+    "name": "StockAnalysis.com Review: The Best Research Tool for Dividend ETF Investors"
+   },
+   {
+    "@type": "ListItem",
+    "position": 69,
+    "url": "https://topdividendetfs.com/how-we-grade-etfs.html",
+    "name": "How We Grade ETFs: Our Rating Methodology"
+   }
+  ]
+ }
+}
+    </script>
+
   <link rel="canonical" href="https://topdividendetfs.com/blog">
 </head>
 <body>
@@ -760,781 +1301,1037 @@
 
     <!-- ── HERO ── -->
     <section class="hero">
-        <div class="hero-badge">&#10022; Updated Regularly &mdash; Free Resources &#10022;</div>
+        <div class="hero-badge">&#10022; 69 Articles &bull; Updated Nov 15, 2026 &#10022;</div>
         <h1>TopDividendETFs Blog</h1>
-        <p>Guides, calculators, tools, and data deep-dives for dividend ETF investors. Everything is free, no sign-up required.</p>
+        <p>Dividend dates, payout histories, rankings and plain-English guides for income investors. Search any ticker or browse by topic.</p>
+        <div class="hero-search">
+            <span aria-hidden="true">&#128269;</span>
+            <input id="blogSearch" type="search" placeholder="Search articles, e.g. SCHD, JEPQ, weekly, price decay..." aria-label="Search all articles" autocomplete="off">
+        </div>
+        <nav class="hero-jump" aria-label="Jump to section">
+            <a href="#latest">&#10024; Latest</a><a href="#start-here">&#127793; Start Here</a><a href="#all-articles">&#128218; All Articles</a><a href="#topics">&#128194; Browse by Topic</a><a href="#tools">&#128202; Live Data &amp; Tools</a>
+        </nav>
     </section>
 
     <!-- ── MAIN CONTENT ── -->
     <div class="content">
 
-        <!-- FEATURED: StockAnalysis -->
-        <div class="section-label"><span>Featured Article</span></div>
+    <div class="banner">
+        <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/OVL new display ad 2.png" alt="Sponsor banner">
+        </a>
+        <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
+        <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+    </div>
 
-        <div class="featured-card">
-            <div class="featured-badge">&#11088; Editor's Pick</div>
-            <div class="featured-card-inner">
-                <div class="featured-card-accent">
-                    <div class="fa-icon">&#128200;</div>
-                    <div class="fa-label">Platform Review</div>
+        <!-- LATEST -->
+        <div class="section-label" id="latest"><span>Latest Articles</span></div>
+        <div class="latest-wrap">
+            <a class="lead-card" href="https://topdividendetfs.com/ulty-etf-dividend-history-2026.html">
+                <span class="lead-badge">&#10024; Newest Article</span>
+                <span class="lead-meta">Nov 15, 2026 &bull; Dividend Dates &amp; History</span>
+                <h2>ULTY Dividend History 2026: Every Weekly Payout and Yield</h2>
+                <p>All 50 weekly $ULTY payouts since the 1-for-10 reverse split, why the check fell from $0.59 to $0.24, what the 60% yield really means, what $10,000 pays and the real total return.</p>
+                <span class="lead-btn">Read the article &#8594;</span>
+            </a>
+            <div class="side-list"><a class="side-card" href="https://topdividendetfs.com/best-dividend-growth-etfs-2026.html"><span class="side-icon">&#128200;</span><span><em>Nov 15, 2026 &bull; Beginner Guides &amp; Strategy</em><strong>Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck</strong></span></a><a class="side-card" href="https://topdividendetfs.com/isbg-etf-review-dividend-history-2026.html"><span class="side-icon">&#129689;</span><span><em>Nov 13, 2026 &bull; Dividend Dates &amp; History</em><strong>ISBG ETF Review 2026: Dividend History, Yield and Risks</strong></span></a><a class="side-card" href="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html"><span class="side-icon">&#128176;</span><span><em>Nov 11, 2026 &bull; Investing Tools &amp; Reviews</em><strong>How to Track Every Dividend From Every Brokerage in One Place</strong></span></a></div>
+        </div>
+
+        <!-- START HERE -->
+        <div class="section-label" id="start-here"><span>New to Dividend ETFs? Start Here</span></div>
+        <div class="start-grid"><a class="start-card" href="https://topdividendetfs.com/dividend-investing-for-beginners"><span class="sc-step">Step 1 &middot; Start here</span><strong>Dividend Investing for Beginners: How to Actually Start in 2026</strong><em>New to dividends? Start here. A plain-English guide to opening an account and buying your first fund, the dividend ETFs&hellip;</em></a><a class="start-card" href="https://topdividendetfs.com/how-we-grade-etfs.html"><span class="sc-step">Step 2 &middot; How we rate funds</span><strong>How We Grade ETFs: Our Rating Methodology</strong><em>The six factors behind every grade on TopDividendETFs.com: total return, income paid back, price decay, payout&hellip;</em></a><a class="start-card" href="https://topdividendetfs.com/best-dividend-growth-etfs-2026.html"><span class="sc-step">Step 3 &middot; Grow your income</span><strong>Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck</strong><em>$SCHD's dividend is up 133% since 2017. What a dividend growth ETF is, 13 funds ranked with real payout data, charts, a&hellip;</em></a><a class="start-card" href="https://topdividendetfs.com/top-15-highest-yield-etfs-no-price-decay"><span class="sc-step">Step 4 &middot; High yield, done right</span><strong>Top 15 Highest-Yield Dividend ETFs With No Price Decay</strong><em>The 15 highest-yielding ETFs whose share price has held up since launch, ranked by yield and updated&hellip;</em></a></div>
+
+        <!-- PRO PROMO -->
+        <div class="pro-strip">
+            <div><strong>&#128680; Want the live numbers behind every article?</strong><span>TopDividendETFsPRO screens 190+ income ETFs by yield, total return, price decay and rating, with downloadable watchlists.</span></div>
+            <a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Try PRO &#8594;</a>
+        </div>
+
+        <!-- ALL ARTICLES -->
+        <div class="section-label" id="all-articles"><span>All Articles</span></div>
+        <div class="filter-bar" id="filterBar">
+            <div class="chip-row" role="group" aria-label="Filter by topic">
+                <button type="button" class="chip active" data-f="all">All <span class="cnt">69</span></button><button type="button" class="chip" data-f="schd">&#127919; SCHD Hub <span class="cnt">15</span></button><button type="button" class="chip" data-f="dates">&#128197; Dividend Dates &amp; History <span class="cnt">25</span></button><button type="button" class="chip" data-f="rankings">&#127942; Rankings &amp; Lists <span class="cnt">6</span></button><button type="button" class="chip" data-f="issuers">&#127970; By ETF Issuer <span class="cnt">9</span></button><button type="button" class="chip" data-f="analysis">&#128270; ETF Deep Dives &amp; Comparisons <span class="cnt">5</span></button><button type="button" class="chip" data-f="guides">&#127793; Beginner Guides &amp; Strategy <span class="cnt">4</span></button><button type="button" class="chip" data-f="tools">&#128295; Investing Tools &amp; Reviews <span class="cnt">5</span></button>
+            </div>
+            <div class="filter-row2">
+                <div class="tchip-row" role="group" aria-label="Filter by ticker"><span class="tlabel">Popular tickers:</span><button type="button" class="tchip" data-t="SCHD">$SCHD <span class="cnt">15</span></button><button type="button" class="tchip" data-t="QQQI">$QQQI <span class="cnt">7</span></button><button type="button" class="tchip" data-t="SPYI">$SPYI <span class="cnt">4</span></button><button type="button" class="tchip" data-t="JEPQ">$JEPQ <span class="cnt">3</span></button><button type="button" class="tchip" data-t="JEPI">$JEPI <span class="cnt">2</span></button><button type="button" class="tchip" data-t="CHPY">$CHPY <span class="cnt">2</span></button><button type="button" class="tchip" data-t="VOO">$VOO <span class="cnt">2</span></button><button type="button" class="tchip" data-t="VYM">$VYM <span class="cnt">2</span></button><button type="button" class="tchip" data-t="FDVV">$FDVV <span class="cnt">2</span></button><button type="button" class="tchip" data-t="ULTY">$ULTY <span class="cnt">1</span></button><button type="button" class="tchip" data-t="ISBG">$ISBG <span class="cnt">1</span></button><button type="button" class="tchip" data-t="NOBL">$NOBL <span class="cnt">1</span></button><button type="button" class="tchip" data-t="QYLD">$QYLD <span class="cnt">1</span></button><button type="button" class="tchip" data-t="NVDY">$NVDY <span class="cnt">1</span></button></div>
+                <label class="sort-wrap">Sort
+                    <select id="blogSort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="az">A to Z</option></select>
+                </label>
+            </div>
+            <div class="result-line"><span id="resultCount">69 articles</span> <button type="button" id="clearFilters" hidden>Clear filters &#10005;</button></div>
+        </div>
+
+        <!-- New posts: add a new .blog-card at the TOP of this grid (data-cat / data-date optional; the page sorts and categorizes automatically) -->
+        <div class="blog-grid" id="blogGrid">
+            <div class="blog-card" data-cat="dates" data-date="2026-11-15" data-tickers="ULTY">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Nov 15, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
-                <div class="featured-card-body">
-                    <div class="date">&#128197; April 2026 &nbsp;&bull;&nbsp; Tools &amp; Resources</div>
-                    <h2>StockAnalysis.com Review: The Best Research Tool for Dividend ETF Investors</h2>
-                    <p>A full breakdown of StockAnalysis.com and why it has become an indispensable platform for serious income investors. Includes our favorite features: the ETF Comparison Tool for total return analysis, and the ETF Screener for sorting through thousands of funds by yield, AUM, expense ratio, and more.</p>
-                    <div class="tag-row">
-                        <span class="tag">ETF Research</span>
-                        <span class="tag">Tools</span>
-                        <span class="tag">ETF Screener</span>
-                        <span class="tag">ETF Comparison</span>
-                        <span class="tag gold-tag">&#127381; Exclusive Discount Code: DIVIDEND</span>
-                    </div>
-                    <a href="https://topdividendetfs.com/stockanalysis" class="read-more-btn">Read Full Review &#8594;</a>
+                <div class="blog-card-body">
+                    <h3>ULTY Dividend History 2026: Every Weekly Payout and Yield</h3>
+                    <p>All 50 weekly $ULTY payouts since the 1-for-10 reverse split, why the check fell from $0.59 to $0.24, what the 60% yield really means, what $10,000 pays and the real total return.</p>
+                    <div class="tk-row"><span class="tk">$ULTY</span></div>
+                    <a href="https://topdividendetfs.com/ulty-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="guides" data-date="2026-11-15" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">Nov 15, 2026 &bull; Beginner Guides &amp; Strategy</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck</h3>
+                    <p>$SCHD's dividend is up 133% since 2017. What a dividend growth ETF is, 13 funds ranked with real payout data, charts, a sortable table and what $10,000 invested 10 years ago pays you today.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/best-dividend-growth-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-11-13" data-tickers="ISBG">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#129689;</span>
+                    <div class="card-date">Nov 13, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>ISBG ETF Review 2026: Dividend History, Yield and Risks</h3>
+                    <p>Every weekly $ISBG payout since February, why the check fell from $0.09 to $0.0424, how its bitcoin plus gold return stacking works, what $10,000 pays and the real total return.</p>
+                    <div class="tk-row"><span class="tk">$ISBG</span></div>
+                    <a href="https://topdividendetfs.com/isbg-etf-review-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="tools" data-date="2026-11-11" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128176;</span>
+                    <div class="card-date">Nov 11, 2026 &bull; Investing Tools &amp; Reviews</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>How to Track Every Dividend From Every Brokerage in One Place</h3>
+                    <p>Roth IRA, 401(k), taxable and HSA at different brokers? My 5-step MerryDiv setup: Plaid read-only sync, payouts straight from your broker, a dividend calendar and Portfolio X-Ray. Code DEVOTED30 for 30% off.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="analysis" data-date="2026-11-11" data-tickers="QQQI SPYI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#9878;&#65039;</span>
+                    <div class="card-date">Nov 11, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SPYI vs QQQI 2026: Which NEOS Income ETF Is Better?</h3>
+                    <p>$QQQI pays about 15% and $SPYI about 12%, but $SPYI held its price better. Payouts by year, total return since 2024, what's inside each fund, taxes and which one I'd rather own.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span><span class="tk">$SPYI</span></div>
+                    <a href="https://topdividendetfs.com/spyi-vs-qqqi-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-11-11" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128293;</span>
+                    <div class="card-date">Updated Nov 11, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Q4 2026 Dividend Tracker: 17 Holdings Raising, Led by $COP, $TXN &amp; $ACN</h3>
+                    <p>Every SCHD holding paying a bigger dividend in Q4: $CHCO +14.9%, $ALV +14.9%, $SNA +12.7%, $COP +10.7%, $AFG +10.2%, $TXN +7.0%, $FITB +5.0%, $EBF +5.0%, $ACN +4.9%, $LMT +4.3% and more. Sorted by weight in the fund, with pay dates and the extra cash each raise adds to SCHD.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-q4-dividend-increases" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="rankings" data-date="2026-11-10" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128737;&#65039;</span>
+                    <div class="card-date">Nov 10, 2026 &bull; Rankings &amp; Lists</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Top 15 Highest-Yield Dividend ETFs With No Price Decay</h3>
+                    <p>The 15 highest-yielding ETFs whose share price has held up since launch, ranked by yield and updated daily.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/top-15-highest-yield-etfs-no-price-decay" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-11-08" data-tickers="NOBL">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">Nov 8, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>NOBL Dividend History 2026: Every Payout, Yield and Growth</h3>
+                    <p>Every $NOBL quarterly dividend since 2022, $1.17 paid over the last 12 months, 8.8% growth in 2025, why December is the big check, and how it compares to $SCHD and $VIG.</p>
+                    <div class="tk-row"><span class="tk">$NOBL</span></div>
+                    <a href="https://topdividendetfs.com/nobl-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-11-06" data-tickers="QYLD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Nov 6, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>QYLD Dividend Dates 2026: Next Ex-Date Nov 23, Every Payout</h3>
+                    <p>$QYLD goes ex on November 23 and pays November 27. Every 2026 date, all 10 monthly checks ($1.79 per share so far), the 13% yield, total return and how it stacks up against $JEPQ and $QQQI.</p>
+                    <div class="tk-row"><span class="tk">$QYLD</span></div>
+                    <a href="https://topdividendetfs.com/qyld-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="tools" data-date="2026-11-06" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128467;</span>
+                    <div class="card-date">Nov 6, 2026 &bull; Investing Tools &amp; Reviews</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Income Calendar Review: See Every Dividend Coming in the Next 12 Months</h3>
+                    <p>I ran a 10-holding income portfolio of $SCHD, $JEPI, $JEPQ, $QQQI and more through Income Calendar. Here is every screen, which months came in light, and how to try it free.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/income-calendar-dividend-tracker-review.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="analysis" data-date="2026-11-05" data-tickers="QQQI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128201;</span>
+                    <div class="card-date">Nov 5, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>What Happens to $QQQI's Distribution When the Price Drops?</h3>
+                    <p>$QQQI just fell 5.7% in a day. We lined up all 33 monthly payouts with the share price. Here's the pattern, what happened in the April 2025 selloff, and what it could mean for the next check.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span></div>
+                    <a href="https://topdividendetfs.com/qqqi-distribution-when-price-drops.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-11-03" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#9888;&#65039;</span>
+                    <div class="card-date">Nov 3, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>$SCHD Is NOT a Good ETF for Most People (Unless You Have One of These 2 Things)</h3>
+                    <p>At a ~3.2% yield you'd need about $375,000 in $SCHD to make $1,000 a month. Here's who $SCHD is really for, who should look elsewhere, and how it compares to $SPYI, $QQQI and $GPIX.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-not-good-for-most-people.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-11-03" data-tickers="NVDY">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128176;</span>
+                    <div class="card-date">Nov 3, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>NVDY Dividend History 2026: Every Weekly Payout and Yield</h3>
+                    <p>$NVDY paid 44 weekly checks worth about $4.80 per share in 2026, and the latest was $0.0690. Every payout since it went weekly, the 30% yield, return of capital, total return and what $10,000 pays.</p>
+                    <div class="tk-row"><span class="tk">$NVDY</span></div>
+                    <a href="https://topdividendetfs.com/nvdy-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-11-01" data-tickers="MSTY">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128176;</span>
+                    <div class="card-date">Nov 1, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>MSTY Dividend History 2026: Every Weekly Payout and Yield</h3>
+                    <p>$MSTY paid 44 weekly checks worth $13.38 per share in 2026, more than its $12.86 share price. Every payout since the reverse split, the 60% yield, return of capital and what $10,000 pays.</p>
+                    <div class="tk-row"><span class="tk">$MSTY</span></div>
+                    <a href="https://topdividendetfs.com/msty-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-10-30" data-tickers="DIVO">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Oct 30, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>DIVO Dividend Dates 2026: Every Payment and Next Ex-Date</h3>
+                    <p>$DIVO pays monthly and goes ex near month-end. Every 2026 date and amount, the next ex-date (Nov 27), the big December 2025 check, and how it compares with $JEPI and $SCHD.</p>
+                    <div class="tk-row"><span class="tk">$DIVO</span></div>
+                    <a href="https://topdividendetfs.com/divo-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127970;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>State Street Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>State Street's income ETFs ranked by yield: $XLEI at about 20.8%, plus $XLKI, $SPHY, $SDY, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/state-street-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Roundhill Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>Roundhill's income ETFs ranked by yield: $COIW at about 63%, plus $YETH, $YBTC, $GOOW and more, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/roundhill-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#9889;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>NEOS Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>NEOS's income ETFs ranked by yield: $XBCI at about 41%, plus $BTCI, $XQQI, $XSPI and more, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/neos-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127760;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>iShares Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>iShares's income ETFs ranked by yield: $BALI at about 6.2%, plus $IDV, $SGOV, $DVY and more, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/ishares-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127963;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Goldman Sachs Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>Goldman Sachs's income ETFs ranked by yield: $GPIQ at about 10.1%, plus $GPIX, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/goldman-sachs-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>First Trust Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>First Trust's income ETFs ranked by yield: $FTQI at about 12%, plus $FTHI, $KNG, $RDVI and more, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/first-trust-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128266;</span>
+                    <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Amplify Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>Amplify's income ETFs ranked by yield: $BAGY at about 33%, plus $BITY, $HAKY, $YYY and more, with fees, price decay and total return.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/amplify-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-10-28" data-tickers="GPIX">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Oct 28, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>GPIX Dividend Dates 2026: Every Payment and Next Ex-Date</h3>
+                    <p>$GPIX pays monthly and goes ex on the first business day. All 35 payouts since 2023, the next expected ex-date (Nov 2), and why it beat $JEPI and $SPYI on 1-year total return.</p>
+                    <div class="tk-row"><span class="tk">$GPIX</span></div>
+                    <a href="https://topdividendetfs.com/gpix-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-10-26" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128260;</span>
+                    <div class="card-date">Oct 26, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>How Often Does SCHD Rebalance? 2026 Schedule Explained</h3>
+                    <p>$SCHD reweights every March, June, September and December but only adds or removes stocks at the March reconstitution. The 4% and 25% caps, the 2026 dates, and the next rebalance on December 18.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/how-often-does-schd-rebalance.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-10-24" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127974;</span>
+                    <div class="card-date">Oct 24, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>JPMorgan Highest Yielding ETFs 2026: Full List Ranked</h3>
+                    <p>Every JPMorgan income ETF ranked by yield: $JEPQ (~11.6%), $JEPI (~8%), $JPIE and the new $ROCY and $ROCQ, with assets, fees, price decay, total return and what $10,000 pays in each.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/jpmorgan-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-10-21" data-tickers="GPIQ">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Oct 21, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>GPIQ Dividend Dates 2026: Every Payment and Next Ex-Date</h3>
+                    <p>The 2026 payout calendar for the Goldman Sachs Nasdaq-100 Premium Income ETF ($GPIQ): every ex-date and pay date, the next expected ex-date, all 35 payouts since 2023, and how it beat $JEPQ and $QQQI on total return.</p>
+                    <div class="tk-row"><span class="tk">$GPIQ</span></div>
+                    <a href="https://topdividendetfs.com/gpiq-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-10-19" data-tickers="JEPI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128202;</span>
+                    <div class="card-date">Oct 19, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>JEPI Dividend History: Every Payment Since 2020</h3>
+                    <p>All 76 monthly distributions from the JPMorgan Equity Premium Income ETF ($JEPI), yearly totals from $4.16 to $6.36 per share, the record months, and what $10,000 has paid based on its history.</p>
+                    <div class="tk-row"><span class="tk">$JEPI</span></div>
+                    <a href="https://topdividendetfs.com/jepi-etf-dividend-history.html" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="tools" data-date="2026-10-15" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128269;</span>
+                    <div class="card-date">Oct 15, 2026 &bull; Investing Tools &amp; Reviews</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Seeking Alpha Premium Review 2026: Is It Worth It for Dividend Investors?</h3>
+                    <p>The Dividend Scorecard, Dividend Safety grade, ETF Grades and Quant Ratings, tested against what dividend investors actually need. Plus the price, the free trial, and Premium vs Alpha Picks vs PRO.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/seeking-alpha-premium-review-dividend-investors-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="guides" data-date="2026-10-10" data-tickers="QQQI SPYI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#129534;</span>
+                    <div class="card-date">Oct 10, 2026 &bull; Beginner Guides &amp; Strategy</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Why NEOS ETFs Are "Tax Friendly": $QQQI &amp; $SPYI Return of Capital Explained</h3>
+                    <p>We pulled NEOS's latest 19a-1 notices and Form 8937 filings. 97% of $QQQI's and 94% of $SPYI's September 2026 payouts were return of capital. How ROC lowers your cost basis, the Section 1256 60/40 rule, a simple $10,000 example and the catch.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span><span class="tk">$SPYI</span></div>
+                    <a href="https://topdividendetfs.com/neos-etfs-tax-friendly-return-of-capital" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-10-06" data-tickers="CHPY">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">Oct 6, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>CHPY ETF Dividend History: Every Weekly Payout Since 2025</h3>
+                    <p>All 79 weekly dividends from the YieldMax Semiconductor Portfolio Option Income ETF, worth $38.54 per share since its April 2025 launch. Includes a payout chart, the full declaration, ex, record and pay date table, and a CHPY income estimator.</p>
+                    <div class="tk-row"><span class="tk">$CHPY</span></div>
+                    <a href="https://topdividendetfs.com/chpy-etf-dividend-history" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-10-02" data-tickers="JEPI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Oct 2, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>JEPI Dividend Dates 2026: Every Ex-Date, Pay Date and Payout</h3>
+                    <p>The full 2026 monthly schedule for the JPMorgan Equity Premium Income ETF ($JEPI), including the October $0.34134 payout, the next ex-dividend date, payouts by year and how $JEPI compares with $JEPQ.</p>
+                    <div class="tk-row"><span class="tk">$JEPI</span></div>
+                    <a href="https://topdividendetfs.com/jepi-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="rankings" data-date="2026-10-02" data-tickers="VOO">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">Oct 2, 2026 &bull; Rankings &amp; Lists</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Dividend ETFs Beating $VOO: The Funds Outperforming the S&amp;P 500</h3>
+                    <p>Think nothing beats the S&amp;P 500? This live, auto-updating list shows every ETF on TopDividendETFs.com with a higher annualized total return since inception than $VOO, with track record, yield and price decay for each.</p>
+                    <div class="tk-row"><span class="tk">$VOO</span></div>
+                    <a href="https://topdividendetfs.com/dividend-etfs-beating-voo" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-09-27" data-tickers="VOO">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Sep 27, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>VOO ETF 2026 Dividend Dates: Ex-Date Sep 28, Pay Sep 30</h3>
+                    <p>Every 2026 ex-dividend date, pay date and per-share amount for the Vanguard S&amp;P 500 ETF, including the $1.8226 September dividend. Plus VOO's dividend history by year, what 100 shares pay, and how its quarterly schedule compares with $SCHD, $JEPI and $QQQI.</p>
+                    <div class="tk-row"><span class="tk">$VOO</span></div>
+                    <a href="https://topdividendetfs.com/voo-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-09-22" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128227;</span>
+                    <div class="card-date">Sep 22, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Q3 2026 Dividend Announced: $0.2665 Per Share</h3>
+                    <p>Schwab declared $0.2665 per share for Q3 2026, up 2.3% from last year. Ex-date, pay date, income table and what it means.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-q3-2026-dividend-announced" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-09-21" data-tickers="SCHD QCOM">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128260;</span>
+                    <div class="card-date">Sep 21, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Q3 2026 Rebalance: $QCOM Takes the Top Spot</h3>
+                    <p>What changed in SCHD's September 2026 rebalance, the new top holdings, and when the next rebalance happens.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span><span class="tk">$QCOM</span></div>
+                    <a href="https://topdividendetfs.com/schd-q3-2026-rebalance" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="guides" data-date="2026-09-21" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127793;</span>
+                    <div class="card-date">Sep 21, 2026 &bull; Beginner Guides &amp; Strategy</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Dividend Investing for Beginners: How to Actually Start in 2026</h3>
+                    <p>New to dividends? Start here. A plain-English guide to opening an account and buying your first fund, the dividend ETFs beginners actually like (with live yields), three free income calculators, and the common beginner mistakes to skip.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/dividend-investing-for-beginners" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-09-02" data-tickers="SPYI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Sep 2, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SPYI Dividend Dates 2026: Payment Schedule and Next Ex-Date</h3>
+                    <p>Every 2026 SPYI ex-dividend, record and pay date, the latest monthly payout and when the next one lands.</p>
+                    <div class="tk-row"><span class="tk">$SPYI</span></div>
+                    <a href="https://topdividendetfs.com/spyi-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-09-02" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127919;</span>
+                    <div class="card-date">Sep 2, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Q3 2026 Dividend: Actual vs Our Prediction</h3>
+                    <p>The actual $0.2665 Q3 payout compared with our $0.2740 model estimate, plus how the community predictions stacked up.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-q3-2026-dividend-prediction" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-08-20" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128293;</span>
+                    <div class="card-date">Updated Aug 20, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Q3 2026 Dividend Tracker: 15 Raises + ETD's $3.00 Special</h3>
+                    <p>Live-updated tracker of every dividend action from SCHD holdings ahead of the Q3 payout. Fifteen raises so far led by $RF +13.2%, $BR +11.8% and $BX +11.2%, plus Ethan Allen's $3.00 special dividend, 12x its last one. Also tracking the two cuts: $WEN −50% and $SWKS suspended.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-q3-dividend-increases" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="issuers" data-date="2026-08-09" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#129516;</span>
+                    <div class="card-date">Aug 9, 2026 &bull; By ETF Issuer</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Top NEOS ETFs 2026: Every Fund Ranked by Distribution Rate &amp; Total Return</h3>
+                    <p>All 15 NEOS ETFs ranked from the highest distribution rate to the lowest, with total return since launch, live from our PRO database. $XBCI pays the most. $SPYI has made the most.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/top-neos-etfs-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-08-07" data-tickers="JEPQ">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Aug 7, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>JEPQ Dividend Dates 2026: Every Payout and the Next Ex-Date</h3>
+                    <p>JEPQ's latest monthly dividend, the next expected ex-date, the full 2026 payout schedule and every JEPQ payment since launch.</p>
+                    <div class="tk-row"><span class="tk">$JEPQ</span></div>
+                    <a href="https://topdividendetfs.com/jepq-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="analysis" data-date="2026-08-01" data-tickers="OVL">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128737;&#65039;</span>
+                    <div class="card-date">Aug 1, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>OVL ETF: The 10% Monthly Payer Built to Beat the S&amp;P 500</h3>
+                    <p>OVL quietly went monthly in January 2026 and raised its annual payout roughly 257%. Full dividend history, the put-spread strategy that leaves upside uncapped, an income calculator, Section 1256 tax treatment, and the five risks to know.</p>
+                    <div class="tk-row"><span class="tk">$OVL</span></div>
+                    <a href="https://topdividendetfs.com/ovl-etf-monthly-income-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="rankings" data-date="2026-07-15" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#127942;</span>
+                    <div class="card-date">Jul 15, 2026 &bull; Rankings &amp; Lists</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Best High Dividend Yield ETFs for 2026</h3>
+                    <p>Our full rundown of the best high dividend yield ETFs to know in 2026. Compare yields, strategies, expense ratios, and payout schedules to find the funds that fit your income goals.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/best-high-dividend-yield-etfs-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-07-01" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128260;</span>
+                    <div class="card-date">July 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Q2 2026 Rebalanced Holdings</h3>
+                    <p>Full breakdown of SCHD's holdings after the Q2 2026 rebalance. See which stocks were added, which were trimmed, and how the sector weights shifted in the Schwab U.S. Dividend Equity ETF.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-etf-q2-rebalanced-holdings-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-06-01" data-tickers="VYM">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">June 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>VYM ETF 2026 Dividend Dates</h3>
+                    <p>Complete list of upcoming dividend payment dates and ex-dividend dates for VYM in 2026. Plan your income schedule with reliable dividend calendar information for the Vanguard High Dividend Yield ETF.</p>
+                    <div class="tk-row"><span class="tk">$VYM</span></div>
+                    <a href="https://topdividendetfs.com/vym-etf-2026-dividend-dates" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-06-01" data-tickers="SCHD VYM">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#9878;&#65039;</span>
+                    <div class="card-date">June 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD vs VYM: Which Dividend ETF Wins in 2026?</h3>
+                    <p>Head-to-head comparison of the two most popular dividend ETFs. Yields, total returns, holdings, dividend growth, and expense ratios, side by side, so you can decide which fits your portfolio.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span><span class="tk">$VYM</span></div>
+                    <a href="https://topdividendetfs.com/schd-vs-vym-etf-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="analysis" data-date="2026-06-01" data-tickers="QQQI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#9888;&#65039;</span>
+                    <div class="card-date">June 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>QQQI NEOS Nasdaq 100 ETF: Biggest Risks</h3>
+                    <p>Every high-yield fund has trade-offs. We break down the biggest risks of the NEOS Nasdaq 100 High Income ETF (QQQI), from covered call upside caps to concentration and distribution sustainability.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span></div>
+                    <a href="https://topdividendetfs.com/qqqi-neos-nasdaq-100-etf-biggest-risks" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-06-01" data-tickers="FDVV">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">June 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>FDVV Fidelity High Dividend ETFs Dividend Yield</h3>
+                    <p>See FDVV's current dividend yield instantly with our live-updated yield tracker, plus quarterly dividend history, expense ratio, and a full strategy breakdown of the Fidelity High Dividend ETF.</p>
+                    <div class="tk-row"><span class="tk">$FDVV</span></div>
+                    <a href="https://topdividendetfs.com/fdvv-dividend-yield" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-06-01" data-tickers="FDVV">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128181;</span>
+                    <div class="card-date">June 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>FDVV Dividend History</h3>
+                    <p>Complete quarterly dividend payment history for the Fidelity High Dividend ETF (FDVV). Track every payout on record, see how the distribution has trended over time, and understand FDVV's income profile.</p>
+                    <div class="tk-row"><span class="tk">$FDVV</span></div>
+                    <a href="https://topdividendetfs.com/fdvv-dividend-history" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="tools" data-date="2026-06-01" data-tickers="CHPY">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#129518;</span>
+                    <div class="card-date">June 2026 &bull; Investing Tools &amp; Reviews</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>CHPY ETF Dividend Calculator</h3>
+                    <p>Calculate your potential income from the CHPY ETF with our free interactive calculator. Enter your investment amount and instantly see projected weekly and annual payouts.</p>
+                    <div class="tk-row"><span class="tk">$CHPY</span></div>
+                    <a href="https://topdividendetfs.com/chpy-etf-calculator" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="analysis" data-date="2026-05-19" data-tickers="QQQI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128176;</span>
+                    <div class="card-date">May 19, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>QQQI ETF Pays Largest Distribution Ever</h3>
+                    <p>QQQI just announced its biggest monthly distribution on record. See the payout amount, what drove the increase, and how it stacks up against the fund's full distribution history.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span></div>
+                    <a href="https://topdividendetfs.com/qqqi-etf-pays-largest-distribution-ever" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="rankings" data-date="2026-05-01" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">May 2026 &bull; Rankings &amp; Lists</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Top Dividend ETFs by Total Return 2026</h3>
+                    <p>Discover the dividend ETFs with the best total returns. This analysis combines dividend yield with capital appreciation to show you which ETFs deliver real wealth-building performance over time.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/top-total-returns" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-05-01" data-tickers="QQQI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">May 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>QQQI ETF 2026 Dividend Dates</h3>
+                    <p>Complete list of upcoming dividend payment dates and ex-dividend dates for QQQI in 2026. Stay on top of your income schedule with reliable dividend calendar information for the Invesco Nasdaq 100 Diversified Equal Weight ETF.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span></div>
+                    <a href="https://topdividendetfs.com/qqqi-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-05-01" data-tickers="BTCI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#8383;</span>
+                    <div class="card-date">May 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>BTCI ETF: Bitcoin Income Fund Breakdown</h3>
+                    <p>Full breakdown of the NEOS Bitcoin High Income ETF (BTCI). Distribution history, yield profile, how the options strategy works, and what income investors should know before buying.</p>
+                    <div class="tk-row"><span class="tk">$BTCI</span></div>
+                    <a href="https://topdividendetfs.com/btci" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-04-07" data-tickers="JEPQ">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128181;</span>
+                    <div class="card-date">Apr 7, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>JEPQ Current Dividend Yield 2026</h3>
+                    <p>Real-time current dividend yield for JEPQ in 2026. Trailing twelve-month yield, forward estimates, monthly distribution trends, and how it compares to other covered-call ETFs.</p>
+                    <div class="tk-row"><span class="tk">$JEPQ</span></div>
+                    <a href="https://topdividendetfs.com/jepq-current-dividend-yield-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-04-02" data-tickers="JEPQ">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128181;</span>
+                    <div class="card-date">Apr 2, 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>JEPQ ETF Dividend History</h3>
+                    <p>Detailed dividend payment history for the JPMorgan Nasdaq Equity Premium Income ETF (JEPQ). High-yield covered call strategy breakdown with every payout on record.</p>
+                    <div class="tk-row"><span class="tk">$JEPQ</span></div>
+                    <a href="https://topdividendetfs.com/jepq-etf-dividend-history" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-04-01" data-tickers="SPYI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128181;</span>
+                    <div class="card-date">April 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SPYI ETF Dividend History</h3>
+                    <p>Complete dividend payment history for the S&amp;P 500 Yield Increase ETF (SPYI). All 43 consecutive monthly distributions since September 2022, yields, and performance analysis.</p>
+                    <div class="tk-row"><span class="tk">$SPYI</span></div>
+                    <a href="https://topdividendetfs.com/spyi" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-04-01" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">April 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Dividend History</h3>
+                    <p>Complete historical dividend payments for the Schwab U.S. Dividend Equity ETF (SCHD). Track every payout, see growth over time, and understand SCHD's consistency as an income investment.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-dividend-history" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-04-01" data-tickers="QQQI">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">April 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>QQQI ETF Dividend History</h3>
+                    <p>Complete dividend payment history for the Invesco Nasdaq 100 Diversified Equal Weight ETF (QQQI). Track payouts, analyze yield trends, and understand QQQI's income profile.</p>
+                    <div class="tk-row"><span class="tk">$QQQI</span></div>
+                    <a href="https://topdividendetfs.com/qqqi-etf-dividend-history" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="dates" data-date="2026-04-01" data-tickers="DGRO">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">April 2026 &bull; Dividend Dates &amp; History</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>DGRO ETF Ex-Dividend Dates 2026</h3>
+                    <p>Full list of expected ex-dividend dates for DGRO in 2026. Plan your dividend calendar with reliable dates and important notes for one of the top dividend growth ETFs available.</p>
+                    <div class="tk-row"><span class="tk">$DGRO</span></div>
+                    <a href="https://topdividendetfs.com/dgro-etf-ex-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-03-22" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128260;</span>
+                    <div class="card-date">Mar 22, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD ETF 2026 Reconstitution</h3>
+                    <p>What investors need to know about the SCHD ETF reconstitution in 2026, including expected changes, new holdings, and potential impact on yield and long-term performance.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-etf-2026-reconstitution" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-03-01" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128181;</span>
+                    <div class="card-date">March 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD ETF Q1 2026 Dividend</h3>
+                    <p>Full details on SCHD's Q1 2026 dividend payment. Payout amount, ex-dividend and pay dates, year-over-year growth, and what the first distribution of the year signals for 2026.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-etf-q1-2026-dividend" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-02-01" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#129518;</span>
+                    <div class="card-date">Feb 1, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD Dividend Calculator</h3>
+                    <p>Calculate your potential dividend income from SCHD with our easy-to-use interactive calculator. Enter your investment amount and see projected yearly payouts up to 30 years out.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-dividend-calculator" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-01-15" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128203;</span>
+                    <div class="card-date">Jan 15, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD ETF Holdings 2026</h3>
+                    <p>Current top holdings in the SCHD ETF for 2026. Understand exactly where your dividend investment is allocated, sector by sector and company by company.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-etf-holdings-2026" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="rankings" data-date="2026-01-15" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128176;</span>
+                    <div class="card-date">Jan 15, 2026 &bull; Rankings &amp; Lists</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Top 10 Highest Yield Dividend ETFs</h3>
+                    <p>The 10 highest yielding ETFs on the market right now, ranked. See the yields, the strategies behind them, and the risks to watch before chasing the biggest payouts.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/10-highest-yield-etfs" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="schd" data-date="2026-01-08" data-tickers="SCHD">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128197;</span>
+                    <div class="card-date">Jan 8, 2026 &bull; SCHD Hub</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>SCHD ETF 2026 Dividend Dates</h3>
+                    <p>Complete list of upcoming dividend payment dates and ex-dividend dates for SCHD in 2026. Stay on top of your income schedule with reliable dividend calendar information for the Schwab U.S. Dividend Equity ETF.</p>
+                    <div class="tk-row"><span class="tk">$SCHD</span></div>
+                    <a href="https://topdividendetfs.com/schd-etf-2026-dividend-dates" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="rankings" data-date="2026-01-01" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128640;</span>
+                    <div class="card-date">January 2026 &bull; Rankings &amp; Lists</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>Top 15 Dividend ETFs by Total Return (Live Rankings)</h3>
+                    <p>The 15 dividend ETFs with the highest total return since launch, with yield, expense ratio and tax grade. Updated daily.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/top-15-total-returns" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="tools" data-date="2026-01-01" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128200;</span>
+                    <div class="card-date">January 2026 &bull; Investing Tools &amp; Reviews</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>StockAnalysis.com Review: The Best Research Tool for Dividend ETF Investors</h3>
+                    <p>Why StockAnalysis.com is our go-to research platform, from the ETF comparison tool to the screener. Includes an exclusive discount code.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/stockanalysis" class="read-more">Read Article &#8594;</a>
+                </div>
+            </div>
+            <div class="blog-card" data-cat="guides" data-date="2026-01-01" data-tickers="">
+                <div class="blog-card-top">
+                    <span class="card-icon">&#128221;</span>
+                    <div class="card-date">January 2026 &bull; Beginner Guides &amp; Strategy</div>
+                </div>
+                <div class="blog-card-body">
+                    <h3>How We Grade ETFs: Our Rating Methodology</h3>
+                    <p>The six factors behind every grade on TopDividendETFs.com: total return, income paid back, price decay, payout consistency, tax efficiency and income growth.</p>
+                    <div class="tk-row"></div>
+                    <a href="https://topdividendetfs.com/how-we-grade-etfs.html" class="read-more">Read Article &#8594;</a>
                 </div>
             </div>
         </div>
+        <p class="no-results" id="noResults" hidden>No articles match that search. Try a ticker like <strong>SCHD</strong> or a topic like <strong>weekly</strong>.</p>
+        <div class="more-wrap"><button type="button" id="showMore">Show more articles</button></div>
 
         <!-- EMAIL SIGNUP -->
         <div class="etf-signup" data-variant="featured" data-color="#1A3C34" data-accent="#2E5D54" data-source="topdividendetfs"></div>
         <script src="/email-signup.js" defer></script>
 
-        <!-- REST OF BLOG POSTS -->
-        <div class="section-label"><span>All Articles</span></div>
+        <!-- BROWSE BY TOPIC (full directory) -->
+        <div class="section-label" id="topics"><span>Browse Every Article by Topic</span></div>
+        <div class="dir-grid">
+            <details class="dir-block" id="topic-schd" open>
+                <summary><span>&#127919; SCHD Hub</span><span class="cnt">15 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/how-often-does-schd-rebalance.html">How Often Does SCHD Rebalance? 2026 Schedule Explained</a><span>Oct 26, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-dividend-calculator">SCHD Dividend Calculator</a><span>Feb 1, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-dividend-history">SCHD Dividend History</a><span>April 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-etf-2026-dividend-dates">SCHD ETF 2026 Dividend Dates</a><span>Jan 8, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-etf-2026-reconstitution">SCHD ETF 2026 Reconstitution</a><span>Mar 22, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-etf-holdings-2026">SCHD ETF Holdings 2026</a><span>Jan 15, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-etf-q1-2026-dividend">SCHD ETF Q1 2026 Dividend</a><span>March 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-not-good-for-most-people.html">$SCHD Is NOT a Good ETF for Most People (Unless You Have One of These 2 Things)</a><span>Nov 3, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-etf-q2-rebalanced-holdings-2026">SCHD Q2 2026 Rebalanced Holdings</a><span>July 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-q3-2026-dividend-announced">SCHD Q3 2026 Dividend Announced: $0.2665 Per Share</a><span>Sep 22, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-q3-dividend-increases">SCHD Q3 2026 Dividend Tracker: 15 Raises + ETD's $3.00 Special</a><span>Updated Aug 20, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-q3-2026-dividend-prediction">SCHD Q3 2026 Dividend: Actual vs Our Prediction</a><span>Sep 2, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-q3-2026-rebalance">SCHD Q3 2026 Rebalance: $QCOM Takes the Top Spot</a><span>Sep 21, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-q4-dividend-increases">SCHD Q4 2026 Dividend Tracker: 17 Holdings Raising, Led by $COP, $TXN &amp; $ACN</a><span>Updated Nov 11, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/schd-vs-vym-etf-2026">SCHD vs VYM: Which Dividend ETF Wins in 2026?</a><span>June 2026</span></li>
+                </ul>
+            </details>
+            <details class="dir-block" id="topic-dates" open>
+                <summary><span>&#128197; Dividend Dates &amp; History</span><span class="cnt">25 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/btci">BTCI ETF: Bitcoin Income Fund Breakdown</a><span>May 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/chpy-etf-dividend-history">CHPY ETF Dividend History: Every Weekly Payout Since 2025</a><span>Oct 6, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/dgro-etf-ex-dividend-dates-2026">DGRO ETF Ex-Dividend Dates 2026</a><span>April 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/divo-etf-dividend-dates-2026.html">DIVO Dividend Dates 2026: Every Payment and Next Ex-Date</a><span>Oct 30, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/fdvv-dividend-history">FDVV Dividend History</a><span>June 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/fdvv-dividend-yield">FDVV Fidelity High Dividend ETFs Dividend Yield</a><span>June 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/gpiq-etf-dividend-dates-2026.html">GPIQ Dividend Dates 2026: Every Payment and Next Ex-Date</a><span>Oct 21, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/gpix-etf-dividend-dates-2026.html">GPIX Dividend Dates 2026: Every Payment and Next Ex-Date</a><span>Oct 28, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/isbg-etf-review-dividend-history-2026.html">ISBG ETF Review 2026: Dividend History, Yield and Risks</a><span>Nov 13, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/jepi-etf-dividend-dates-2026">JEPI Dividend Dates 2026: Every Ex-Date, Pay Date and Payout</a><span>Oct 2, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/jepi-etf-dividend-history.html">JEPI Dividend History: Every Payment Since 2020</a><span>Oct 19, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/jepq-current-dividend-yield-2026">JEPQ Current Dividend Yield 2026</a><span>Apr 7, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/jepq-etf-dividend-dates-2026">JEPQ Dividend Dates 2026: Every Payout and the Next Ex-Date</a><span>Aug 7, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/jepq-etf-dividend-history">JEPQ ETF Dividend History</a><span>Apr 2, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/msty-etf-dividend-history-2026.html">MSTY Dividend History 2026: Every Weekly Payout and Yield</a><span>Nov 1, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/nobl-etf-dividend-history-2026.html">NOBL Dividend History 2026: Every Payout, Yield and Growth</a><span>Nov 8, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/nvdy-etf-dividend-history-2026.html">NVDY Dividend History 2026: Every Weekly Payout and Yield</a><span>Nov 3, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/qqqi-etf-dividend-dates-2026">QQQI ETF 2026 Dividend Dates</a><span>May 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/qqqi-etf-dividend-history">QQQI ETF Dividend History</a><span>April 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/qyld-etf-dividend-dates-2026.html">QYLD Dividend Dates 2026: Next Ex-Date Nov 23, Every Payout</a><span>Nov 6, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/spyi-etf-dividend-dates-2026">SPYI Dividend Dates 2026: Payment Schedule and Next Ex-Date</a><span>Sep 2, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/spyi">SPYI ETF Dividend History</a><span>April 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/ulty-etf-dividend-history-2026.html">ULTY Dividend History 2026: Every Weekly Payout and Yield</a><span>Nov 15, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/voo-etf-dividend-dates-2026">VOO ETF 2026 Dividend Dates: Ex-Date Sep 28, Pay Sep 30</a><span>Sep 27, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/vym-etf-2026-dividend-dates">VYM ETF 2026 Dividend Dates</a><span>June 2026</span></li>
+                </ul>
+            </details>
+            <details class="dir-block" id="topic-rankings">
+                <summary><span>&#127942; Rankings &amp; Lists</span><span class="cnt">6 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/best-high-dividend-yield-etfs-2026">Best High Dividend Yield ETFs for 2026</a><span>Jul 15, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/dividend-etfs-beating-voo">Dividend ETFs Beating $VOO: The Funds Outperforming the S&amp;P 500</a><span>Oct 2, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/10-highest-yield-etfs">Top 10 Highest Yield Dividend ETFs</a><span>Jan 15, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/top-15-total-returns">Top 15 Dividend ETFs by Total Return (Live Rankings)</a><span>January 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/top-15-highest-yield-etfs-no-price-decay">Top 15 Highest-Yield Dividend ETFs With No Price Decay</a><span>Nov 10, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/top-total-returns">Top Dividend ETFs by Total Return 2026</a><span>May 2026</span></li>
+                </ul>
+            </details>
+            <details class="dir-block" id="topic-issuers">
+                <summary><span>&#127970; By ETF Issuer</span><span class="cnt">9 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/amplify-highest-yielding-etfs-2026.html">Amplify Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/first-trust-highest-yielding-etfs-2026.html">First Trust Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/goldman-sachs-highest-yielding-etfs-2026.html">Goldman Sachs Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/ishares-highest-yielding-etfs-2026.html">iShares Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/jpmorgan-highest-yielding-etfs-2026.html">JPMorgan Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 24, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/neos-highest-yielding-etfs-2026.html">NEOS Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/roundhill-highest-yielding-etfs-2026.html">Roundhill Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/state-street-highest-yielding-etfs-2026.html">State Street Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/top-neos-etfs-2026">Top NEOS ETFs 2026: Every Fund Ranked by Distribution Rate &amp; Total Return</a><span>Aug 9, 2026</span></li>
+                </ul>
+            </details>
+            <details class="dir-block" id="topic-analysis">
+                <summary><span>&#128270; ETF Deep Dives &amp; Comparisons</span><span class="cnt">5 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/ovl-etf-monthly-income-2026">OVL ETF: The 10% Monthly Payer Built to Beat the S&amp;P 500</a><span>Aug 1, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/qqqi-etf-pays-largest-distribution-ever">QQQI ETF Pays Largest Distribution Ever</a><span>May 19, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/qqqi-neos-nasdaq-100-etf-biggest-risks">QQQI NEOS Nasdaq 100 ETF: Biggest Risks</a><span>June 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/spyi-vs-qqqi-2026.html">SPYI vs QQQI 2026: Which NEOS Income ETF Is Better?</a><span>Nov 11, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/qqqi-distribution-when-price-drops.html">What Happens to $QQQI's Distribution When the Price Drops?</a><span>Nov 5, 2026</span></li>
+                </ul>
+            </details>
+            <details class="dir-block" id="topic-guides">
+                <summary><span>&#127793; Beginner Guides &amp; Strategy</span><span class="cnt">4 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/best-dividend-growth-etfs-2026.html">Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck</a><span>Nov 15, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/dividend-investing-for-beginners">Dividend Investing for Beginners: How to Actually Start in 2026</a><span>Sep 21, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/how-we-grade-etfs.html">How We Grade ETFs: Our Rating Methodology</a><span>January 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/neos-etfs-tax-friendly-return-of-capital">Why NEOS ETFs Are "Tax Friendly": $QQQI &amp; $SPYI Return of Capital Explained</a><span>Oct 10, 2026</span></li>
+                </ul>
+            </details>
+            <details class="dir-block" id="topic-tools">
+                <summary><span>&#128295; Investing Tools &amp; Reviews</span><span class="cnt">5 articles</span></summary>
+                <ul>
+                    <li><a href="https://topdividendetfs.com/chpy-etf-calculator">CHPY ETF Dividend Calculator</a><span>June 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html">How to Track Every Dividend From Every Brokerage in One Place</a><span>Nov 11, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/income-calendar-dividend-tracker-review.html">Income Calendar Review: See Every Dividend Coming in the Next 12 Months</a><span>Nov 6, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/seeking-alpha-premium-review-dividend-investors-2026">Seeking Alpha Premium Review 2026: Is It Worth It for Dividend Investors?</a><span>Oct 15, 2026</span></li>
+                    <li><a href="https://topdividendetfs.com/stockanalysis">StockAnalysis.com Review: The Best Research Tool for Dividend ETF Investors</a><span>January 2026</span></li>
+                </ul>
+            </details>
+        </div>
 
-        <div class="blog-grid">
-            <!-- ULTY Dividend History 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">November 2026 &bull; ULTY</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>ULTY Dividend History 2026: Every Weekly Payout and Yield</h3>
-                    <p>All 50 weekly $ULTY payouts since the 1-for-10 reverse split, why the check fell from $0.59 to $0.24, what the 60% yield really means, what $10,000 pays and the real total return.</p>
-                    <a href="https://topdividendetfs.com/ulty-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- NEWEST: Best Dividend Growth ETFs 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">November 2026 &bull; Dividend Growth</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck</h3>
-                    <p>$SCHD's dividend is up 133% since 2017. What a dividend growth ETF is, 13 funds ranked with real payout data, charts, a sortable table and what $10,000 invested 10 years ago pays you today.</p>
-                    <a href="https://topdividendetfs.com/best-dividend-growth-etfs-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- MerryDiv guide (Sponsored by MerryDiv) -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">SPONSORED</span>
-                    <span class="card-icon">&#128176;</span>
-                    <div class="card-date">November 2026 &bull; Tools</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>How to Track Every Dividend From Every Brokerage in One Place</h3>
-                    <p>Roth IRA, 401(k), taxable and HSA at different brokers? My 5-step MerryDiv setup: Plaid read-only sync, payouts straight from your broker, a dividend calendar and Portfolio X-Ray. Code DEVOTED30 for 30% off.</p>
-                    <a href="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- ISBG ETF Review 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#129689;</span>
-                    <div class="card-date">November 2026 &bull; ISBG</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>ISBG ETF Review 2026: Dividend History, Yield and Risks</h3>
-                    <p>Every weekly $ISBG payout since February, why the check fell from $0.09 to $0.0424, how its bitcoin plus gold return stacking works, what $10,000 pays and the real total return.</p>
-                    <a href="https://topdividendetfs.com/isbg-etf-review-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- SPYI vs QQQI 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#9878;&#65039;</span>
-                    <div class="card-date">November 2026 &bull; SPYI vs QQQI</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SPYI vs QQQI 2026: Which NEOS Income ETF Is Better?</h3>
-                    <p>$QQQI pays about 15% and $SPYI about 12%, but $SPYI held its price better. Payouts by year, total return since 2024, what's inside each fund, taxes and which one I'd rather own.</p>
-                    <a href="https://topdividendetfs.com/spyi-vs-qqqi-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- NOBL Dividend History 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">November 2026 &bull; NOBL</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>NOBL Dividend History 2026: Every Payout, Yield and Growth</h3>
-                    <p>Every $NOBL quarterly dividend since 2022, $1.17 paid over the last 12 months, 8.8% growth in 2025, why December is the big check, and how it compares to $SCHD and $VIG.</p>
-                    <a href="https://topdividendetfs.com/nobl-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- NEOS ETFs Ranked by Distribution Rate (updated Nov 2026) -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">UPDATED</span>
-                    <span class="card-icon">&#129516;</span>
-                    <div class="card-date">November 2026 &bull; ETF Lists</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Top NEOS ETFs 2026: Every Fund Ranked by Distribution Rate &amp; Total Return</h3>
-                    <p>All 15 NEOS ETFs ranked from the highest distribution rate to the lowest, with total return since launch, live from our PRO database. $XBCI pays the most. $SPYI has made the most.</p>
-                    <a href="https://topdividendetfs.com/top-neos-etfs-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-            <!-- NEWEST: Income Calendar Review (Sponsored by BNK Invest) -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">SPONSORED</span>
-                    <span class="card-icon">&#128467;</span>
-                    <div class="card-date">November 2026 &bull; Tools</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Income Calendar Review: See Every Dividend Coming in the Next 12 Months</h3>
-                    <p>I ran a 10-holding income portfolio of $SCHD, $JEPI, $JEPQ, $QQQI and more through Income Calendar. Here is every screen, which months came in light, and how to try it free.</p>
-                    <a href="https://topdividendetfs.com/income-calendar-dividend-tracker-review.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
+        <!-- LIVE DATA & TOOLS -->
+        <div class="section-label" id="tools"><span>Live Data &amp; Free Tools</span></div>
+        <div class="tool-grid">
+            <a class="tool-card" href="https://topdividendetfs.com/big-movers"><span>&#128293;</span><strong>Today's Biggest Movers</strong><em>The largest yield and total return changes, updated daily.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/new-etfs"><span>&#127381;</span><strong>New Dividend ETFs</strong><em>The newest funds added to our database, with yields and grades.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/top-voted-etfs"><span>&#127942;</span><strong>Top Voted ETFs</strong><em>The dividend ETFs our community ranks highest, live.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/etfs/"><span>&#128194;</span><strong>Every ETF Page</strong><em>Yield, history and dividend dates for every fund we track.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/schd-dividend-calculator"><span>&#129518;</span><strong>SCHD Dividend Calculator</strong><em>See what SCHD could pay you over 10, 20 or 30 years.</em></a>
+            <a class="tool-card" href="https://dividendprojection.com/" target="_blank" rel="noopener"><span>&#128200;</span><strong>DividendProjection.com</strong><em>Project your future dividend income with live yields.</em></a>
+        </div>
 
-            <!-- QYLD Dividend Dates 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">November 2026 &bull; QYLD</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>QYLD Dividend Dates 2026: Next Ex-Date Nov 23, Every Payout</h3>
-                    <p>$QYLD goes ex on November 23 and pays November 27. Every 2026 date, all 10 monthly checks ($1.79 per share so far), the 13% yield, total return and how it stacks up against $JEPQ and $QQQI.</p>
-                    <a href="https://topdividendetfs.com/qyld-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- What Happens to QQQI's Distribution When the Price Drops -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128201;</span>
-                    <div class="card-date">November 2026 &bull; QQQI</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>What Happens to $QQQI's Distribution When the Price Drops?</h3>
-                    <p>$QQQI just fell 5.7% in a day. We lined up all 33 monthly payouts with the share price. Here's the pattern, what happened in the April 2025 selloff, and what it could mean for the next check.</p>
-                    <a href="https://topdividendetfs.com/qqqi-distribution-when-price-drops.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Is NOT Good for Most People -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#9888;&#65039;</span>
-                    <div class="card-date">November 2026 &bull; SCHD</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>$SCHD Is NOT a Good ETF for Most People (Unless You Have One of These 2 Things)</h3>
-                    <p>At a ~3.2% yield you'd need about $375,000 in $SCHD to make $1,000 a month. Here's who $SCHD is really for, who should look elsewhere, and how it compares to $SPYI, $QQQI and $GPIX.</p>
-                    <a href="https://topdividendetfs.com/schd-not-good-for-most-people.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NVDY Dividend History 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128176;</span>
-                    <div class="card-date">November 2026 &bull; NVDY</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>NVDY Dividend History 2026: Every Weekly Payout and Yield</h3>
-                    <p>$NVDY paid 44 weekly checks worth about $4.80 per share in 2026, and the latest was $0.0690. Every payout since it went weekly, the 30% yield, return of capital, total return and what $10,000 pays.</p>
-                    <a href="https://topdividendetfs.com/nvdy-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: MSTY Dividend History 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128176;</span>
-                    <div class="card-date">November 2026 &bull; MSTY</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>MSTY Dividend History 2026: Every Weekly Payout and Yield</h3>
-                    <p>$MSTY paid 44 weekly checks worth $13.38 per share in 2026, more than its $12.86 share price. Every payout since the reverse split, the 60% yield, return of capital and what $10,000 pays.</p>
-                    <a href="https://topdividendetfs.com/msty-etf-dividend-history-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: DIVO Dividend Dates 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">October 2026 &bull; DIVO</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>DIVO Dividend Dates 2026: Every Payment and Next Ex-Date</h3>
-                    <p>$DIVO pays monthly and goes ex near month-end. Every 2026 date and amount, the next ex-date (Nov 27), the big December 2025 check, and how it compares with $JEPI and $SCHD.</p>
-                    <a href="https://topdividendetfs.com/divo-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-        <!-- State Street Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#127970;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>State Street Highest Yielding ETFs 2026: Full List Ranked</h3><p>State Street's income ETFs ranked by yield: $XLEI at about 20.8%, plus $XLKI, $SPHY, $SDY, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/state-street-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-        <!-- First Trust Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#128200;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>First Trust Highest Yielding ETFs 2026: Full List Ranked</h3><p>First Trust's income ETFs ranked by yield: $FTQI at about 12%, plus $FTHI, $KNG, $RDVI and more, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/first-trust-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-        <!-- Goldman Sachs Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#127963;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>Goldman Sachs Highest Yielding ETFs 2026: Full List Ranked</h3><p>Goldman Sachs's income ETFs ranked by yield: $GPIQ at about 10.1%, plus $GPIX, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/goldman-sachs-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-        <!-- NEOS Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#9889;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>NEOS Highest Yielding ETFs 2026: Full List Ranked</h3><p>NEOS's income ETFs ranked by yield: $XBCI at about 41%, plus $BTCI, $XQQI, $XSPI and more, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/neos-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-        <!-- Roundhill Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#128197;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>Roundhill Highest Yielding ETFs 2026: Full List Ranked</h3><p>Roundhill's income ETFs ranked by yield: $COIW at about 63%, plus $YETH, $YBTC, $GOOW and more, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/roundhill-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-        <!-- Amplify Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#128266;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>Amplify Highest Yielding ETFs 2026: Full List Ranked</h3><p>Amplify's income ETFs ranked by yield: $BAGY at about 33%, plus $BITY, $HAKY, $YYY and more, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/amplify-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-        <!-- iShares Highest Yielding ETFs 2026 -->
-        <div class="blog-card new-post"><div class="blog-card-top"><span class="new-badge">NEW</span><span class="card-icon">&#127760;</span><div class="card-date">October 2026 &bull; ETF Lists</div></div><div class="blog-card-body"><h3>iShares Highest Yielding ETFs 2026: Full List Ranked</h3><p>iShares's income ETFs ranked by yield: $BALI at about 6.2%, plus $IDV, $SGOV, $DVY and more, with fees, price decay and total return.</p><a href="https://topdividendetfs.com/ishares-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a></div></div>
-            <!-- NEWEST: GPIX Dividend Dates 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">October 2026 &bull; GPIX</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>GPIX Dividend Dates 2026: Every Payment and Next Ex-Date</h3>
-                    <p>$GPIX pays monthly and goes ex on the first business day. All 35 payouts since 2023, the next expected ex-date (Nov 2), and why it beat $JEPI and $SPYI on 1-year total return.</p>
-                    <a href="https://topdividendetfs.com/gpix-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- How Often Does SCHD Rebalance -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128260;</span>
-                    <div class="card-date">October 2026 &bull; SCHD</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>How Often Does SCHD Rebalance? 2026 Schedule Explained</h3>
-                    <p>$SCHD reweights every March, June, September and December but only adds or removes stocks at the March reconstitution. The 4% and 25% caps, the 2026 dates, and the next rebalance on December 18.</p>
-                    <a href="https://topdividendetfs.com/how-often-does-schd-rebalance.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- JPMorgan Highest Yielding ETFs 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#127974;</span>
-                    <div class="card-date">October 2026 &bull; ETF Lists</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>JPMorgan Highest Yielding ETFs 2026: Full List Ranked</h3>
-                    <p>Every JPMorgan income ETF ranked by yield: $JEPQ (~11.6%), $JEPI (~8%), $JPIE and the new $ROCY and $ROCQ, with assets, fees, price decay, total return and what $10,000 pays in each.</p>
-                    <a href="https://topdividendetfs.com/jpmorgan-highest-yielding-etfs-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- GPIQ Dividend Dates 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">October 2026 &bull; Dividend Dates</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>GPIQ Dividend Dates 2026: Every Payment and Next Ex-Date</h3>
-                    <p>The 2026 payout calendar for the Goldman Sachs Nasdaq-100 Premium Income ETF ($GPIQ): every ex-date and pay date, the next expected ex-date, all 35 payouts since 2023, and how it beat $JEPQ and $QQQI on total return.</p>
-                    <a href="https://topdividendetfs.com/gpiq-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- JEPI Dividend History -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128202;</span>
-                    <div class="card-date">October 2026 &bull; Dividend History</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>JEPI Dividend History: Every Payment Since 2020</h3>
-                    <p>All 76 monthly distributions from the JPMorgan Equity Premium Income ETF ($JEPI), yearly totals from $4.16 to $6.36 per share, the record months, and what $10,000 has paid based on its history.</p>
-                    <a href="https://topdividendetfs.com/jepi-etf-dividend-history.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: Why NEOS ETFs Are Tax Friendly -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#129534;</span>
-                    <div class="card-date">October 2026 &bull; Tax Deep Dive</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Why NEOS ETFs Are &quot;Tax Friendly&quot;: $QQQI &amp; $SPYI Return of Capital Explained</h3>
-                    <p>We pulled NEOS&#39;s latest 19a-1 notices and Form 8937 filings. 97% of $QQQI&#39;s and 94% of $SPYI&#39;s September 2026 payouts were return of capital. How ROC lowers your cost basis, the Section 1256 60/40 rule, a simple $10,000 example and the catch.</p>
-                    <a href="https://topdividendetfs.com/neos-etfs-tax-friendly-return-of-capital" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: CHPY ETF Dividend History -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">October 2026 &bull; Dividend History</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>CHPY ETF Dividend History: Every Weekly Payout Since 2025</h3>
-                    <p>All 79 weekly dividends from the YieldMax Semiconductor Portfolio Option Income ETF, worth $38.54 per share since its April 2025 launch. Includes a payout chart, the full declaration, ex, record and pay date table, and a CHPY income estimator.</p>
-                    <a href="https://topdividendetfs.com/chpy-etf-dividend-history" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: Seeking Alpha Premium Review -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128269;</span>
-                    <div class="card-date">October 2026 &bull; Tool Review</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Seeking Alpha Premium Review 2026: Is It Worth It for Dividend Investors?</h3>
-                    <p>The Dividend Scorecard, Dividend Safety grade, ETF Grades and Quant Ratings, tested against what dividend investors actually need. Plus the price, the free trial, and Premium vs Alpha Picks vs PRO.</p>
-                    <a href="https://topdividendetfs.com/seeking-alpha-premium-review-dividend-investors-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: JEPI 2026 Dividend Dates -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">October 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>JEPI Dividend Dates 2026: Every Ex-Date, Pay Date and Payout</h3>
-                    <p>The full 2026 monthly schedule for the JPMorgan Equity Premium Income ETF ($JEPI), including the October $0.34134 payout, the next ex-dividend date, payouts by year and how $JEPI compares with $JEPQ.</p>
-                    <a href="https://topdividendetfs.com/jepi-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: Dividend ETFs Beating VOO (Live List) -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">October 2026 &bull; Live List</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Dividend ETFs Beating $VOO: The Funds Outperforming the S&amp;P 500</h3>
-                    <p>Think nothing beats the S&amp;P 500? This live, auto-updating list shows every ETF on TopDividendETFs.com with a higher annualized total return since inception than $VOO, with track record, yield and price decay for each.</p>
-                    <a href="https://topdividendetfs.com/dividend-etfs-beating-voo" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: SCHD Q4 Dividend Increases (Live Tracker) -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128293;</span>
-                    <div class="card-date">Updated Nov 11, 2026 &bull; Live Tracker</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD Q4 2026 Dividend Tracker: 17 Holdings Raising, Led by $COP, $TXN &amp; $ACN</h3>
-                    <p>Every SCHD holding paying a bigger dividend in Q4: $CHCO +14.9%, $ALV +14.9%, $SNA +12.7%, $COP +10.7%, $AFG +10.2%, $TXN +7.0%, $FITB +5.0%, $EBF +5.0%, $ACN +4.9%, $LMT +4.3% and more. Sorted by weight in the fund, with pay dates and the extra cash each raise adds to SCHD.</p>
-                    <a href="https://topdividendetfs.com/schd-q4-dividend-increases" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: VOO 2026 Dividend Dates -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">September 2026 &bull; Dividend Calendar</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>VOO ETF 2026 Dividend Dates: Ex-Date Sep 28, Pay Sep 30</h3>
-                    <p>Every 2026 ex-dividend date, pay date and per-share amount for the Vanguard S&amp;P 500 ETF, including the $1.8226 September dividend. Plus VOO's dividend history by year, what 100 shares pay, and how its quarterly schedule compares with $SCHD, $JEPI and $QQQI.</p>
-                    <a href="https://topdividendetfs.com/voo-etf-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: Dividend Investing for Beginners -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#127793;</span>
-                    <div class="card-date">September 2026 &bull; Beginner Guide</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Dividend Investing for Beginners: How to Actually Start in 2026</h3>
-                    <p>New to dividends? Start here. A plain-English guide to opening an account and buying your first fund, the dividend ETFs beginners actually like (with live yields), three free income calculators, and the common beginner mistakes to skip.</p>
-                    <a href="https://topdividendetfs.com/dividend-investing-for-beginners.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: OVL ETF Monthly Income Deep Dive -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128737;&#65039;</span>
-                    <div class="card-date">August 2026 &bull; Deep Dive</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>OVL ETF: The 10% Monthly Payer Built to Beat the S&amp;P 500</h3>
-                    <p>OVL quietly went monthly in January 2026 and raised its annual payout roughly 257%. Full dividend history, the put-spread strategy that leaves upside uncapped, an income calculator, Section 1256 tax treatment, and the five risks to know.</p>
-                    <a href="https://topdividendetfs.com/ovl-etf-monthly-income-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: SCHD Q3 Dividend Increases (Live Tracker) -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#128293;</span>
-                    <div class="card-date">Updated Aug 20, 2026 &bull; Live Tracker</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD Q3 2026 Dividend Tracker: 15 Raises + ETD&#39;s $3.00 Special</h3>
-                    <p>Live-updated tracker of every dividend action from SCHD holdings ahead of the Q3 payout. Fifteen raises so far led by $RF +13.2%, $BR +11.8% and $BX +11.2%, plus Ethan Allen&#39;s $3.00 special dividend &mdash; 12x its last one. Also tracking the two cuts: $WEN &minus;50% and $SWKS suspended.</p>
-                    <a href="https://topdividendetfs.com/schd-q3-dividend-increases" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- NEWEST: Best High Dividend Yield ETFs 2026 -->
-            <div class="blog-card new-post">
-                <div class="blog-card-top">
-                    <span class="new-badge">NEW</span>
-                    <span class="card-icon">&#127942;</span>
-                    <div class="card-date">July 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Best High Dividend Yield ETFs for 2026</h3>
-                    <p>Our full rundown of the best high dividend yield ETFs to know in 2026. Compare yields, strategies, expense ratios, and payout schedules to find the funds that fit your income goals.</p>
-                    <a href="https://topdividendetfs.com/best-high-dividend-yield-etfs-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Q2 Rebalanced Holdings -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128260;</span>
-                    <div class="card-date">July 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD Q2 2026 Rebalanced Holdings</h3>
-                    <p>Full breakdown of SCHD's holdings after the Q2 2026 rebalance. See which stocks were added, which were trimmed, and how the sector weights shifted in the Schwab U.S. Dividend Equity ETF.</p>
-                    <a href="https://topdividendetfs.com/schd-etf-q2-rebalanced-holdings-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- FDVV Dividend Yield (Live Tracker) -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>FDVV Fidelity High Dividend ETFs Dividend Yield</h3>
-                    <p>See FDVV's current dividend yield instantly with our live-updated yield tracker, plus quarterly dividend history, expense ratio, and a full strategy breakdown of the Fidelity High Dividend ETF.</p>
-                    <a href="https://topdividendetfs.com/fdvv-dividend-yield.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- FDVV Dividend History -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>FDVV Dividend History</h3>
-                    <p>Complete quarterly dividend payment history for the Fidelity High Dividend ETF (FDVV). Track every payout on record, see how the distribution has trended over time, and understand FDVV's income profile.</p>
-                    <a href="https://topdividendetfs.com/fdvv-dividend-history.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- VYM 2026 Dividend Dates -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>VYM ETF 2026 Dividend Dates</h3>
-                    <p>Complete list of upcoming dividend payment dates and ex-dividend dates for VYM in 2026. Plan your income schedule with reliable dividend calendar information for the Vanguard High Dividend Yield ETF.</p>
-                    <a href="https://topdividendetfs.com/vym-etf-2026-dividend-dates" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- QQQI Largest Distribution Ever -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>QQQI ETF Pays Largest Distribution Ever</h3>
-                    <p>QQQI just announced its biggest monthly distribution on record. See the payout amount, what drove the increase, and how it stacks up against the fund's full distribution history.</p>
-                    <a href="https://topdividendetfs.com/qqqi-etf-pays-largest-distribution-ever.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- QQQI Biggest Risks -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#9888;&#65039;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>QQQI NEOS Nasdaq 100 ETF: Biggest Risks</h3>
-                    <p>Every high-yield fund has trade-offs. We break down the biggest risks of the NEOS Nasdaq 100 High Income ETF (QQQI), from covered call upside caps to concentration and distribution sustainability.</p>
-                    <a href="https://topdividendetfs.com/qqqi-neos-nasdaq-100-etf-biggest-risks.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- CHPY Calculator -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#129518;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>CHPY ETF Dividend Calculator</h3>
-                    <p>Calculate your potential income from the CHPY ETF with our free interactive calculator. Enter your investment amount and instantly see projected weekly and annual payouts.</p>
-                    <a href="https://topdividendetfs.com/chpy-etf-calculator.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD vs VYM -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#9878;&#65039;</span>
-                    <div class="card-date">June 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD vs VYM: Which Dividend ETF Wins in 2026?</h3>
-                    <p>Head-to-head comparison of the two most popular dividend ETFs. Yields, total returns, holdings, dividend growth, and expense ratios, side by side, so you can decide which fits your portfolio.</p>
-                    <a href="https://topdividendetfs.com/schd-vs-vym-etf-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- QQQI Dividend Dates 2026 -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">May 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>QQQI ETF 2026 Dividend Dates</h3>
-                    <p>Complete list of upcoming dividend payment dates and ex-dividend dates for QQQI in 2026. Stay on top of your income schedule with reliable dividend calendar information for the Invesco Nasdaq 100 Diversified Equal Weight ETF.</p>
-                    <a href="https://topdividendetfs.com/qqqi-etf-dividend-dates-2026.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Dividend Dates -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">May 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD ETF 2026 Dividend Dates</h3>
-                    <p>Complete list of upcoming dividend payment dates and ex-dividend dates for SCHD in 2026. Stay on top of your income schedule with reliable dividend calendar information for the Schwab U.S. Dividend Equity ETF.</p>
-                    <a href="https://topdividendetfs.com/schd-etf-2026-dividend-dates" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- Top Total Returns -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">May 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>Top Total Returns</h3>
-                    <p>Discover the dividend ETFs with the best total returns. This analysis combines dividend yield with capital appreciation to show you which ETFs deliver real wealth-building performance over time.</p>
-                    <a href="https://topdividendetfs.com/top-total-returns.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- 10 Highest Yield ETFs -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
-                    <div class="card-date">May 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>10 Highest Yield ETFs</h3>
-                    <p>The 10 highest yielding ETFs on the market right now, ranked. See the yields, the strategies behind them, and the risks to watch before chasing the biggest payouts.</p>
-                    <a href="https://topdividendetfs.com/10-highest-yield-etfs.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- BTCI -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#8383;</span>
-                    <div class="card-date">May 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>BTCI ETF: Bitcoin Income Fund Breakdown</h3>
-                    <p>Full breakdown of the NEOS Bitcoin High Income ETF (BTCI). Distribution history, yield profile, how the options strategy works, and what income investors should know before buying.</p>
-                    <a href="https://topdividendetfs.com/btci.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- JEPQ Current Yield -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
-                    <div class="card-date">May 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>JEPQ Current Dividend Yield 2026</h3>
-                    <p>Real-time current dividend yield for JEPQ in 2026. Trailing twelve-month yield, forward estimates, monthly distribution trends, and how it compares to other covered-call ETFs.</p>
-                    <a href="https://topdividendetfs.com/jepq-current-dividend-yield-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Dividend Calculator -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#129518;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD Dividend Calculator</h3>
-                    <p>Calculate your potential dividend income from SCHD with our easy-to-use interactive calculator. Enter your investment amount and see projected yearly payouts up to 30 years out.</p>
-                    <a href="https://topdividendetfs.com/schd-dividend-calculator.html" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Dividend History -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD Dividend History</h3>
-                    <p>Complete historical dividend payments for the Schwab U.S. Dividend Equity ETF (SCHD). Track every payout, see growth over time, and understand SCHD's consistency as an income investment.</p>
-                    <a href="https://topdividendetfs.com/schd-dividend-history" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- DGRO Ex-Dividend Dates -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>DGRO ETF Ex-Dividend Dates 2026</h3>
-                    <p>Full list of expected ex-dividend dates for DGRO in 2026. Plan your dividend calendar with reliable dates and important notes for one of the top dividend growth ETFs available.</p>
-                    <a href="https://topdividendetfs.com/dgro-etf-ex-dividend-dates-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- JEPQ Dividend History -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>JEPQ ETF Dividend History</h3>
-                    <p>Detailed dividend payment history for the JPMorgan Nasdaq Equity Premium Income ETF (JEPQ). High-yield covered call strategy breakdown with every payout on record.</p>
-                    <a href="https://topdividendetfs.com/jepq-etf-dividend-history" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Reconstitution -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128260;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD ETF 2026 Reconstitution</h3>
-                    <p>What investors need to know about the SCHD ETF reconstitution in 2026, including expected changes, new holdings, and potential impact on yield and long-term performance.</p>
-                    <a href="https://topdividendetfs.com/schd-etf-2026-reconstitution" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Holdings -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128203;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD ETF Holdings 2026</h3>
-                    <p>Current top holdings in the SCHD ETF for 2026. Understand exactly where your dividend investment is allocated, sector by sector and company by company.</p>
-                    <a href="https://topdividendetfs.com/schd-etf-holdings-2026" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- QQQI Dividend History -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>QQQI ETF Dividend History</h3>
-                    <p>Complete dividend payment history for the Invesco Nasdaq 100 Diversified Equal Weight ETF (QQQI). Track payouts, analyze yield trends, and understand QQQI's income profile.</p>
-                    <a href="https://topdividendetfs.com/qqqi-etf-dividend-history" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SPYI Dividend History -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
-                    <div class="card-date">April 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SPYI ETF Dividend History</h3>
-                    <p>Complete dividend payment history for the S&P 500 Yield Increase ETF (SPYI). All 43 consecutive monthly distributions since September 2022, yields, and performance analysis.</p>
-                    <a href="https://topdividendetfs.com/spyi" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
-            <!-- SCHD Q1 2026 Dividend -->
-            <div class="blog-card">
-                <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
-                    <div class="card-date">March 2026</div>
-                </div>
-                <div class="blog-card-body">
-                    <h3>SCHD ETF Q1 2026 Dividend</h3>
-                    <p>Full details on SCHD's Q1 2026 dividend payment. Payout amount, ex-dividend and pay dates, year-over-year growth, and what the first distribution of the year signals for 2026.</p>
-                    <a href="https://topdividendetfs.com/schd-etf-q1-2026-dividend" class="read-more">Read Article &#8594;</a>
-                </div>
-            </div>
-
+        <div class="pro-box">
+            <h3>&#11088; Find the Dividend ETFs That Actually Grow Your Income</h3>
+            <p>TopDividendETFsPRO is the screener I built for serious income investors: advanced filtering, ratings, live yields, total return and price decay for 190+ income ETFs, plus watchlists you can save and download.</p>
+            <p class="pro-price">From $12.95/mo or one-time lifetime access</p>
+            <a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Unlock TopDividendETFsPRO &#8594;</a>
         </div>
 
         <!-- ── CTA STRIP ── -->
         <div class="section-label"><span>Explore Our Tools</span></div>
 
         <div class="cta-strip">
-            <h2>Not Just Articles &mdash; Free Tools Too</h2>
+            <h2>Not Just Articles: Free Tools Too</h2>
             <p>We built free calculators, screeners, and ETF rankings for every type of dividend investor.</p>
             <div class="cta-buttons">
                 <a href="https://topdividendetfs.com" class="cta-btn cta-primary">&#128202; Top 100 Dividend ETFs</a>
@@ -1585,6 +2382,15 @@
             </div>
         </div>
 
+
+    <div class="banner">
+        <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/benjiesiegel1414/topdividendetfs-site/main/OVL new display ad 2.png" alt="Sponsor banner">
+        </a>
+        <small style="color:#666; font-size:0.78em; font-weight:600;">Sponsored By</small>
+        <small style="color:#666; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#666 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+    </div>
+
         <!-- SHARE + BACK TO TOP -->
         <div class="share-buttons">
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftopdividendetfs.com%2Fblog" target="_blank" class="share-btn fb" onclick="window.open(this.href,'','width=570,height=350');return false;">
@@ -1631,6 +2437,78 @@
         <div class="footer-copy">&copy; 2026 TopDividendETFs.com &bull; For educational use only &bull; Not financial advice</div>
     </footer>
 
+<script>
+(function(){
+  var grid=document.getElementById('blogGrid'); if(!grid) return;
+  var PAGE=18, shown=PAGE, filt='all', tick='', q='';
+  var MONTHS={january:0,february:1,march:2,april:3,may:4,june:5,july:6,august:7,september:8,october:9,november:10,december:11};
+  var NAMES={schd:'SCHD Hub',dates:'Dividend Dates & History',rankings:'Rankings & Lists',issuers:'By ETF Issuer',analysis:'ETF Deep Dives & Comparisons',guides:'Beginner Guides & Strategy',tools:'Investing Tools & Reviews'};
+  function guessCat(c){
+    var h=((c.querySelector('a')||{}).href||'').toLowerCase()+' '+c.textContent.toLowerCase().slice(0,200);
+    if(/\/schd|how-often-does-schd/.test(h)) return 'schd';
+    if(/highest-yielding-etfs|top-neos/.test(h)) return 'issuers';
+    if(/review|calculator|tracker-review|merrydiv/.test(h)) return 'tools';
+    if(/dividend-dates|dividend-history|ex-dividend|dividend-yield/.test(h)) return 'dates';
+    if(/top-15|highest-yield|best-|beating/.test(h)) return 'rankings';
+    if(/beginner|how-we-grade/.test(h)) return 'guides';
+    return 'analysis';
+  }
+  function guessDate(c){
+    var t=(c.querySelector('.card-date')||{}).textContent||'', m=/(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{4})/i.exec(t);
+    if(m) return new Date(+m[2],MONTHS[m[1].toLowerCase()],28).toISOString().slice(0,10);
+    return new Date().toISOString().slice(0,10);
+  }
+  var cards=[].slice.call(grid.querySelectorAll('.blog-card'));
+  var seen={};
+  cards.forEach(function(c){
+    var a=c.querySelector('a.read-more')||c.querySelector('a'); var key=a?a.getAttribute('href').replace(/\.html$/,'').replace(/\/$/,''):Math.random();
+    if(seen[key]){c.remove();return;} seen[key]=1;
+    if(!c.dataset.cat) c.dataset.cat=guessCat(c);
+    if(!c.dataset.date) c.dataset.date=guessDate(c);
+    var days=(Date.now()-new Date(c.dataset.date+'T12:00:00'))/864e5;
+    if(days<=14&&!c.querySelector('.new-badge')){var b=document.createElement('span');b.className='new-badge';b.textContent='NEW';var top=c.querySelector('.blog-card-top');if(top)top.insertBefore(b,top.firstChild);}
+    c._text=(c.textContent+' '+(c.dataset.tickers||'')).toLowerCase();
+    c._title=((c.querySelector('h3')||{}).textContent||'').replace(/^\$/,'').toLowerCase();
+  });
+  cards=[].slice.call(grid.querySelectorAll('.blog-card'));
+  var countEl=document.getElementById('resultCount'), clr=document.getElementById('clearFilters'), more=document.getElementById('showMore'), none=document.getElementById('noResults');
+  function order(){
+    var s=document.getElementById('blogSort').value;
+    cards.sort(function(a,b){
+      if(s==='az') return a._title<b._title?-1:a._title>b._title?1:0;
+      var d=a.dataset.date<b.dataset.date?-1:a.dataset.date>b.dataset.date?1:0; return s==='old'?d:-d;});
+    cards.forEach(function(c){grid.appendChild(c);});
+  }
+  function apply(){
+    var words=q.split(/\s+/).filter(Boolean), n=0;
+    cards.forEach(function(c){
+      var ok=(filt==='all'||c.dataset.cat===filt)&&(!tick||(' '+(c.dataset.tickers||'')+' ').indexOf(' '+tick+' ')>-1||c._text.indexOf('$'+tick.toLowerCase())>-1)
+        &&words.every(function(w){return c._text.indexOf(w.replace(/^\$/,''))>-1;});
+      c.classList.toggle('is-hidden',!ok); if(ok){n++; c.classList.toggle('is-paged',n>shown);} else c.classList.remove('is-paged');
+    });
+    countEl.textContent=n+' article'+(n===1?'':'s')+(filt!=='all'?' in '+NAMES[filt]:'')+(tick?' about $'+tick:'')+(q?' matching "'+q+'"':'');
+    clr.hidden=!(filt!=='all'||tick||q); none.hidden=n>0; more.parentNode.hidden=n<=shown;
+    more.textContent='Show more articles ('+(n-shown)+' more)';
+  }
+  document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); filt=b.dataset.f; shown=PAGE; apply();});});
+  document.querySelectorAll('.tchip').forEach(function(b){b.addEventListener('click',function(){
+    var on=!b.classList.contains('active'); document.querySelectorAll('.tchip').forEach(function(x){x.classList.remove('active');});
+    if(on){b.classList.add('active'); tick=b.dataset.t;} else tick=''; shown=PAGE; apply();});});
+  var input=document.getElementById('blogSearch'), tmr;
+  input.addEventListener('input',function(){clearTimeout(tmr); tmr=setTimeout(function(){q=input.value.trim().toLowerCase(); shown=PAGE; apply();
+    if(q){var r=document.getElementById('all-articles').getBoundingClientRect(); if(r.top>window.innerHeight*0.8) document.getElementById('all-articles').scrollIntoView({behavior:'smooth'});}},180);});
+  input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();document.getElementById('all-articles').scrollIntoView({behavior:'smooth'});}});
+  document.getElementById('blogSort').addEventListener('change',function(){order();apply();});
+  clr.addEventListener('click',function(){filt='all';tick='';q='';input.value='';shown=PAGE;
+    document.querySelectorAll('.chip,.tchip').forEach(function(x){x.classList.remove('active');}); document.querySelector('.chip[data-f="all"]').classList.add('active'); apply();});
+  more.addEventListener('click',function(){shown+=PAGE; apply();});
+  // Deep links: /blog?q=schd or /blog?topic=dates
+  try{var p=new URLSearchParams(location.search); if(p.get('q')){input.value=p.get('q'); q=p.get('q').toLowerCase();}
+    if(p.get('topic')&&NAMES[p.get('topic')]){filt=p.get('topic'); document.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('active',x.dataset.f===filt);});}}catch(e){}
+  order(); apply();
+})();
+</script>
 <script src="/sticky-ad.js" defer></script>
 </body>
 </html>
