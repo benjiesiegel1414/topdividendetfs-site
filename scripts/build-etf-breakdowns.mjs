@@ -469,6 +469,26 @@ const TDE_CSS = `
 .faq summary{list-style:none}.faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"+ ";color:#2E5D54}
 `;
 
+// compact top card on every ETF page: badge, ticker and name on the left, stat cards on the right
+const HERO_CSS = `<style id="hero-compact">
+.hero-block{display:grid!important;grid-template-columns:auto 1fr auto;grid-template-areas:"badge tk stats" "badge h1 stats" "chips chips chips";column-gap:16px;row-gap:2px;align-items:center;text-align:left!important;padding:18px 22px 16px!important;margin:12px 0 16px!important}
+.hero-block .grade-badge{grid-area:badge;width:54px!important;height:54px!important;font-size:1.5rem!important;border-radius:12px!important;margin:0!important;align-self:center}
+.hero-block .tk{grid-area:tk;font-size:2.1rem!important;align-self:end}
+.hero-block h1{grid-area:h1;font-size:.95rem!important;margin:2px 0 0!important;align-self:start;max-width:440px}
+.hero-block .chips{grid-area:chips;justify-content:flex-start!important;margin:12px 0 0!important;gap:6px!important}
+.hero-block .chip{padding:3px 10px!important;font-size:.74rem!important}
+.hero-block .quick-stats{grid-area:stats;justify-content:flex-end!important;gap:6px!important;flex-wrap:nowrap!important}
+.hero-block .stat-pill{padding:7px 10px!important;min-width:0!important;font-size:.7rem!important;text-align:center;white-space:nowrap}
+.hero-block .stat-pill strong{font-size:1.05rem!important}
+@media(max-width:760px){.hero-block{grid-template-columns:auto 1fr;grid-template-areas:"badge tk" "badge h1" "chips chips" "stats stats"}.hero-block .quick-stats{flex-wrap:wrap!important;justify-content:flex-start!important;margin-top:10px}}
+</style>`;
+function compactHero(file) {
+  if (!fs.existsSync(file)) return;
+  const h = fs.readFileSync(file, 'utf8');
+  if (h.includes('id="hero-compact"') || !h.includes('class="hero-block"')) return;
+  fs.writeFileSync(file, h.replace('</head>', () => HERO_CSS + '\n</head>'));
+}
+
 // ETF page upgrade (scoped styles, added to every /etfs/<sym> page we have data for)
 const PAGE_CSS = `<style id="tde-bd">
 .kt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:4px 0 12px}
@@ -1049,6 +1069,7 @@ async function main() {
   for (const f of funds) {
     const dir = path.join(OUT, f.s);
     if (!f.built) { // keep last run's breakdown pages for this ETF
+      compactHero(path.join(OUT, f.s + '.html'));
       const pd = path.join(PREV, f.s);
       if (fs.existsSync(pd)) { fs.cpSync(pd, dir, { recursive: true }); kept++; }
       continue;
@@ -1067,6 +1088,7 @@ async function main() {
     }
     }
     try { upgradePage(f); upgraded++; } catch (e) { console.log(`  ${f.sym} page upgrade failed: ${e.message}`); }
+    compactHero(path.join(OUT, f.s + '.html'));
   }
   console.log(`✓ ${count} breakdown pages written, ${upgraded} ETF pages upgraded, ${kept} ETFs reused last run's breakdown pages`);
 
