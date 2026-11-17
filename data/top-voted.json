@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T01:35:23.731Z",
+  "updated": "2026-11-17T15:30:05.504Z",
   "total_tracked": 173,
   "top": [
     {
@@ -51,16 +51,16 @@
       "yield": "0.8%"
     },
     {
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 5,
+      "yield": "10.8%"
+    },
+    {
       "symbol": "QQQI",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "votes": 4,
       "yield": "14.1%"
-    },
-    {
-      "symbol": "TDVI",
-      "name": "FT Vest Technology Dividend Target Income ETF",
-      "votes": 4,
-      "yield": "7.7%"
     }
   ]
 }
