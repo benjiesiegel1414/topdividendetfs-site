@@ -194,6 +194,47 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
     @media(max-width:420px){.nav-btn{padding:8px 10px;font-size:.9rem}.calc-out{grid-template-columns:1fr}}
 
   </style>
+<style id="tde-bd">
+.kt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:4px 0 12px}
+.kt{background:#fff;border:2px solid var(--border);border-radius:10px;padding:13px 12px;text-align:center;text-decoration:none;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.06);transition:transform .15s,border-color .15s,box-shadow .15s;position:relative}
+.kt::after{content:"\2192";position:absolute;top:6px;right:9px;font-size:.75em;color:#9bc4b2;font-weight:900}
+.kt:hover{transform:translateY(-2px);border-color:var(--green-mid);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.kt em{display:block;font-style:normal;font-size:.64rem;text-transform:uppercase;letter-spacing:.08em;color:#777;font-weight:900}
+.kt b{display:block;font-size:1.35rem;color:var(--green-dark);font-weight:900;margin:3px 0 1px}
+.kt b.pos{color:#1e9e57}.kt b.neg{color:#c0392b}
+.kt small{font-size:.72rem;color:#888}
+.xp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 6px;font-size:.82rem}
+.xp b{color:#555}
+.xp a{padding:7px 12px;border-radius:999px;border:2px solid var(--green-mid);color:var(--green-dark);font-weight:900;text-decoration:none;background:#fff}
+.xp a:hover{background:var(--green-dark);color:#fff;border-color:var(--green-dark)}
+.tp{background:#fff;border:2px solid var(--border);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow);margin:8px 0 14px}
+.tp-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.tp-h h3{color:var(--green-dark);font-weight:900;font-size:1.05rem}
+.tp-sub{font-size:.86rem;color:var(--text-light);margin:0 0 8px}.tp-sub b{color:var(--green-dark)}
+.tp-f{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.85rem;color:var(--text-mid);margin-top:12px}
+.go{font-weight:900;color:var(--green-mid);font-size:.85rem;border-bottom:2px solid #ffd76a;white-space:nowrap}
+.click{cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s}
+.click:hover{transform:translateY(-2px);border-color:var(--green-mid)!important;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.click input,.click button{cursor:auto}
+.tp .dh{box-shadow:none;margin-top:12px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.mg div{background:#f2faf6;border-radius:8px;padding:9px 11px}
+.mg em{display:block;font-style:normal;font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:#777}
+.mg b{color:var(--green-dark);font-size:1.05rem}.mg small{display:block;font-size:.7rem;color:#888}
+.cal12{display:grid;grid-template-columns:repeat(12,1fr);gap:5px}
+.cc{border-radius:8px;padding:8px 2px;text-align:center;background:#f2faf6;line-height:1.3}
+.cc em{display:block;font-style:normal;font-size:.62rem;font-weight:900;color:#888;text-transform:uppercase}
+.cc b{display:block;color:var(--green-dark);font-size:.86rem}.cc small{font-size:.64rem;color:#888}
+.cc.est{background:#fff8e1;border:1.5px dashed #e0b84a}
+.lg2{display:flex;gap:18px;flex-wrap:wrap;font-size:.8rem;color:#555;margin-top:6px}
+.lg2 i{display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:3px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 4px 0 8px;vertical-align:-1px}
+.rng{margin:4px 0 6px}.rng-t{position:relative;height:9px;border-radius:6px;background:linear-gradient(90deg,#f3b7b1,#f0d090,#a9e3bc)}
+.rng-t span{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;background:#1A3C34;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);transform:translate(-50%,-50%)}
+.rank-grid.six{grid-template-columns:repeat(3,1fr)!important}
+.chart-box{position:relative}.chart-tip{position:absolute;pointer-events:none;background:#1A3C34;color:#fff;font-size:.72rem;font-weight:700;padding:6px 10px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-110%);display:none;z-index:5}
+@media(max-width:760px){.kt-grid{grid-template-columns:1fr 1fr}.mg{grid-template-columns:1fr 1fr}.cal12{grid-template-columns:repeat(4,1fr)}.rank-grid.six{grid-template-columns:1fr 1fr!important}.chart-box svg text{font-size:22px}}
+</style>
 </head>
 <body>
   <header onclick="location.href='/'"><div class="logo">TopDividendETFs.com</div></header>
@@ -220,6 +261,7 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
         <a class="chip" href="/etfs/vooy-dividend-dates">📅 VOOY dividend dates</a>
       </div>
       <div class="quick-stats">
+        <div class="stat-pill"><a href="/etfs/vooy/52-week-range"><strong>$24.15</strong>Price Nov 16</a></div>
         <div class="stat-pill"><a href="/etfs/highest-yield#VOOY"><strong>9%</strong>Dividend Yield</a></div>
         <div class="stat-pill"><a href="/etfs/largest#VOOY"><strong>$2.5M</strong>Assets (AUM)</a></div>
         <div class="stat-pill"><a href="/etfs/grade/b"><strong>B</strong>Our Grade</a></div>
@@ -237,33 +279,41 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
       <a class="nav-btn next" href="/etfs/gpix"><small>Lower yield ▶</small>GPIX · 8.5%</a>
     </div>
     <div class="search-wrap"><input id="q" type="search" placeholder="Search any ETF, ticker or issuer (e.g. JEPQ, YieldMax, Bitcoin)" autocomplete="off" aria-label="Search ETFs"><div class="search-results" id="qr"></div></div>
-    <div class="updated-line"><span class="updated-dot" aria-hidden="true"></span>Data updated: <strong><time datetime="2026-11-16">November 16, 2026</time></strong> · Refreshed daily from the TopDividendETFs.com list</div>
+    <div class="updated-line"><span class="updated-dot" aria-hidden="true"></span>Data updated: <strong><time datetime="2026-11-17">November 16, 2026</time></strong> · Refreshed daily from the TopDividendETFs.com list</div>
 
     <div class="answer-box">
       <div class="ab-label">VOOY at a glance</div>
       <p><strong>$VOOY</strong> (XFUNDS Large Cap Income ETF) yields about <strong>9%</strong>, <strong>13.3% below</strong> the 22.3% average of the 198 dividend ETFs we track. It holds about <strong>$2.5M</strong> in assets, earns a <strong>B</strong> on our scorecard and is <strong>flagged for price decay</strong>.</p>
     </div>
+    <h2 class="section-title">VOOY Key Numbers</h2>
+    <p class="section-lead">The numbers dividend investors check first. Tap any box for the full breakdown.</p>
+    <div class="kt-grid"><a class="kt" href="/etfs/vooy/yield-trend"><em>Distribution Rate</em><b>0.8%</b><small>latest payout &times; 1</small></a><a class="kt" href="/etfs/vooy/dividend-history"><em>Last Payout</em><b>$0.189</b><small>ex-date Oct 6</small></a><a class="kt" href="/etfs/vooy/dividend-calendar"><em>Next Ex-Date</em><b>~Oct 6</b><small>estimated</small></a><a class="kt" href="/etfs/vooy/dividend-calendar"><em>Pays</em><b>Annual</b><small>1 payouts in 12 months</small></a><a class="kt" href="/etfs/vooy/total-return-trend"><em>Since Launch</em><b class="neg">-3.6%</b><small>total return</small></a><a class="kt" href="/etfs/vooy/total-return-trend"><em>1-Year Price Change</em><b class="neg">-4.4%</b><small>since launch</small></a><a class="kt" href="/etfs/vooy/growth-of-10k"><em>$10K Since 2026</em><b class="neg">$9,635</b><small>dividends reinvested</small></a><a class="kt" href="/etfs/vooy/total-return-trend"><em>Worst Drop</em><b class="neg">-6.3%</b><small>from a high</small></a><a class="kt" href="/etfs/vooy/price-decay"><em>Price vs Launch</em><b class="neg">-4.4%</b><small>$25.25 to $24.15</small></a><a class="kt" href="/etfs/vooy/52-week-range"><em>52-Week Position</em><b>12%</b><small>of the way up its range</small></a><a class="kt" href="/etfs/vooy/income-calculator"><em>Expense Ratio</em><b>0.75%</b><small>per year</small></a><a class="kt" href="/etfs/vooy/yield-rank"><em>Yield Rank</em><b>#146</b><small>of 198 ETFs</small></a></div>
+    <div class="xp"><b>Explore $VOOY:</b><a href="/etfs/vooy/yield-trend">&#128200; Yield Trend</a><a href="/etfs/vooy/dividend-history">&#128197; Dividend History</a><a href="/etfs/vooy/dividend-calendar">&#128198; Dividend Calendar</a><a href="/etfs/vooy/income-calculator">&#128176; Income Calculator</a><a href="/etfs/vooy/growth-of-10k">&#127793; Growth of $10K</a><a href="/etfs/vooy/total-return-trend">&#128202; Total Return</a><a href="/etfs/vooy/52-week-range">&#128207; 52-Week Range</a><a href="/etfs/vooy/yield-rank">&#127942; Yield Rank</a><a href="/etfs/vooy/price-decay">&#9888;&#65039; Price Decay</a></div>
+
 
 <h2 class="section-title">VOOY Recent Dividend History</h2>
     <p class="section-lead">VOOY pays annual. Here are its 1 most recent payouts, $0.189 per share over the last 12 months. Source: Yahoo Finance.</p>
+    <div class="tp click" data-href="/etfs/vooy/dividend-history">
+      <div class="tp-h"><h3>&#128197; VOOY Dividends: Every Payout Since Launch</h3><span class="go">Full dividend history &rarr;</span></div>
+      <div class="chart-box"><svg viewBox="0 0 900 240" style="width:100%;height:auto;display:block" role="img" aria-label="VOOY dividends" data-tips="[[52.33,&quot;Oct 6, 2026: $0.189&quot;]]"><line x1="60" x2="882" y1="206.0" y2="206.0" stroke="#c9d3d3"/><text x="52" y="210.0" text-anchor="end" font-size="12" fill="#888">$0</text><line x1="60" x2="882" y1="169.2" y2="169.2" stroke="#e7eded"/><text x="52" y="173.2" text-anchor="end" font-size="12" fill="#888">$0.05</text><line x1="60" x2="882" y1="132.4" y2="132.4" stroke="#e7eded"/><text x="52" y="136.4" text-anchor="end" font-size="12" fill="#888">$0.1</text><line x1="60" x2="882" y1="95.6" y2="95.6" stroke="#e7eded"/><text x="52" y="99.6" text-anchor="end" font-size="12" fill="#888">$0.15</text><line x1="60" x2="882" y1="58.8" y2="58.8" stroke="#e7eded"/><text x="52" y="62.8" text-anchor="end" font-size="12" fill="#888">$0.2</text><line x1="60" x2="882" y1="22.0" y2="22.0" stroke="#e7eded"/><text x="52" y="26.0" text-anchor="end" font-size="12" fill="#888">$0.25</text><rect x="191.5" y="66.9" width="559.0" height="139.1" rx="3.0" fill="#2E5D54"/><line x1="60" x2="882" y1="66.9" y2="66.9" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="6 5"/><text x="878" y="60.9" text-anchor="end" font-size="12" font-weight="700" fill="#d4a017">12-mo avg $0.189</text><text x="471.0" y="230" text-anchor="middle" font-size="12" fill="#888">Oct '26</text></svg></div>
+      <div class="mg"><div><em>12-Mo Average</em><b>$0.189</b><small>per payout</small></div><div><em>Highest</em><b>$0.189</b><small>Oct 6, 2026</small></div><div><em>Lowest</em><b>$0.189</b><small>Oct 6, 2026</small></div><div><em>Raises vs Cuts</em><b>0 up / 0 down</b><small>last 12 payouts</small></div></div>
     <div class="dh" id="dh">
       <table><thead><tr><th>Ex-Date</th><th>Amount</th><th>Change</th></tr></thead><tbody><tr><td>Oct 6, 2026</td><td><strong>$0.189</strong></td><td class="">-</td></tr></tbody></table>
       <div class="dh-foot"><span></span><a href="/etfs/vooy-dividend-dates">See every VOOY dividend date &rarr;</a></div>
     </div>
+    </div>
     <div class="dh-pro"><p><b>Want the full picture?</b> TopDividendETFsPRO shows 2 years of VOOY dividend history, payout trends, yield history and tax treatment for 150+ income ETFs.</p><a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Join PRO &rarr;</a></div>
 
-    <h2 class="section-title">Where VOOY Ranks</h2>
-    <p class="section-lead">How VOOY stacks up against all 198 dividend ETFs on TopDividendETFs.com. Tap any card to see the full ranking.</p>
-    <div class="rank-grid">
-      <a class="rank-card" href="/etfs/highest-yield#VOOY"><div class="lb">Yield Rank</div><div class="rk">#146 <small>of 198</small></div><div class="go">See highest yield →</div></a>
-      <a class="rank-card" href="/etfs/largest#VOOY"><div class="lb">Size Rank</div><div class="rk">#190 <small>of 198</small></div><div class="go">See largest ETFs →</div></a>
-      <a class="rank-card" href="/etfs/grade/b"><div class="lb">Grade Rank</div><div class="rk">#88 <small>of 198</small></div><div class="go">See B ETFs →</div></a>
-      <a class="rank-card" href="/top-voted-etfs"><div class="lb">Vote Rank</div><div class="rk" id="voteRankBig">…</div><div class="go">See top voted →</div></a>
-    </div>
 
+    <h2 class="section-title">VOOY Dividend Calendar</h2>
+    <p class="section-lead">VOOY pays once a year. Own it before the ex-date to get the payout.</p>
+    <div class="tp click" data-href="/etfs/vooy/dividend-calendar">
+      <div class="cal12"><div class="cc"><em>Oct '26</em><b>$0.189</b><small>ex Oct 6</small></div><div class="cc est"><em>Oct '27</em><b>Next</b><small>~Oct 6</small></div></div>
+      <div class="tp-f"><span>Next ex-date expected around <b>Oct 6, 2027</b> (estimate)</span><span class="go">Full dividend calendar &rarr;</span></div>
+    </div>
     <h2 class="section-title">VOOY Dividend Income Calculator</h2>
     <p class="section-lead">Estimate what VOOY could pay at its current 9% yield, then see the same amount in similar ETFs.</p>
-    <div class="card">
+    <div class="card click" data-href="/etfs/vooy/income-calculator">
       <div class="calc-row">
         <input id="amt" type="text" inputmode="numeric" value="10,000" aria-label="Investment amount">
         <button class="amt" data-v="1000">$1K</button><button class="amt on" data-v="10000">$10K</button><button class="amt" data-v="50000">$50K</button><button class="amt" data-v="100000">$100K</button>
@@ -271,15 +321,60 @@ h2.section-title{color:var(--green-dark);font-size:1.4rem;font-weight:900;margin
       <dl class="calc-out"><div><dt>Per Year</dt><dd id="cY"></dd></div><div><dt>Per Month</dt><dd id="cM"></dd></div><div><dt>Per Week</dt><dd id="cW"></dd></div></dl>
       <div class="calc-vs"><strong>Same amount in similar ETFs:</strong><a href="/etfs/khpi" data-y="9"><span><b>KHPI</b> · 9% yield</span><span class="vs-out"></span></a><a href="/etfs/qqqh" data-y="9"><span><b>QQQH</b> · 9% yield</span><span class="vs-out"></span></a><a href="/etfs/fthi" data-y="9.1"><span><b>FTHI</b> · 9.1% yield</span><span class="vs-out"></span></a></div>
       <p style="font-size:.78rem;color:var(--text-light);margin-top:10px">Estimate only. Uses the current yield and assumes it stays the same, which it will not. Want exact projections? Try <a href="https://dividendprojection.com/" target="_blank" rel="noopener" style="color:var(--green-mid);font-weight:700">DividendProjection.com</a>.</p>
+      <div class="tp-f"><span>Based on the current 9% yield</span><span class="go">Full income calculator &rarr;</span></div>
+    </div>
+
+
+    <h2 class="section-title">VOOY Performance</h2>
+    <p class="section-lead">What VOOY has actually returned, price plus dividends. Tap any chart for the full breakdown.</p>
+    <div class="tp click" data-href="/etfs/vooy/growth-of-10k">
+      <div class="tp-h"><h3>&#127793; $10,000 Invested at Launch (September 2026)</h3><span class="go">Growth of $10K breakdown &rarr;</span></div>
+      <div class="chart-box"><svg viewBox="0 0 900 260" style="width:100%;height:auto;display:block" role="img" aria-label="Growth of $10,000 in VOOY" data-tips="[[6.67,&quot;Sep 4, 2026: $10,044 reinvested &amp;middot; $10,044 price only&quot;],[14.97,&quot;Sep 11, 2026: $9,960 reinvested &amp;middot; $9,960 price only&quot;],[23.27,&quot;Sep 18, 2026: $9,976 reinvested &amp;middot; $9,976 price only&quot;],[31.58,&quot;Sep 25, 2026: $10,091 reinvested &amp;middot; $10,091 price only&quot;],[39.88,&quot;Oct 2, 2026: $10,075 reinvested &amp;middot; $10,075 price only&quot;],[48.18,&quot;Oct 9, 2026: $10,194 reinvested &amp;middot; $10,119 price only&quot;],[56.48,&quot;Oct 16, 2026: $10,014 reinvested &amp;middot; $9,941 price only&quot;],[64.79,&quot;Oct 23, 2026: $9,974 reinvested &amp;middot; $9,901 price only&quot;],[73.09,&quot;Oct 30, 2026: $9,894 reinvested &amp;middot; $9,822 price only&quot;],[81.39,&quot;Nov 6, 2026: $9,583 reinvested &amp;middot; $9,513 price only&quot;],[89.7,&quot;Nov 13, 2026: $9,827 reinvested &amp;middot; $9,754 price only&quot;],[98,&quot;Nov 16, 2026: $9,635 reinvested &amp;middot; $9,564 price only&quot;]]"><line x1="60" x2="882" y1="226.0" y2="226.0" stroke="#e7eded"/><text x="52" y="230.0" text-anchor="end" font-size="12" fill="#888">$9.4K</text><line x1="60" x2="882" y1="185.2" y2="185.2" stroke="#e7eded"/><text x="52" y="189.2" text-anchor="end" font-size="12" fill="#888">$9.6K</text><line x1="60" x2="882" y1="144.4" y2="144.4" stroke="#e7eded"/><text x="52" y="148.4" text-anchor="end" font-size="12" fill="#888">$9.8K</text><line x1="60" x2="882" y1="103.6" y2="103.6" stroke="#e7eded"/><text x="52" y="107.6" text-anchor="end" font-size="12" fill="#888">$10K</text><line x1="60" x2="882" y1="62.8" y2="62.8" stroke="#e7eded"/><text x="52" y="66.8" text-anchor="end" font-size="12" fill="#888">$10.2K</text><line x1="60" x2="882" y1="22.0" y2="22.0" stroke="#e7eded"/><text x="52" y="26.0" text-anchor="end" font-size="12" fill="#888">$10.4K</text><line x1="60" x2="882" y1="103.6" y2="103.6" stroke="#9aa8a3" stroke-width="1.5" stroke-dasharray="6 5"/><text x="878" y="97.6" text-anchor="end" font-size="12" font-weight="700" fill="#9aa8a3">$10,000 start</text><polyline points="60.0,94.7 134.7,111.7 209.5,108.4 284.2,85.0 358.9,88.2 433.6,79.4 508.4,115.7 583.1,123.8 657.8,140.0 732.5,203.0 807.3,153.7 882.0,192.5" fill="none" stroke="#2E5D54" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/><polygon points="60.0,226 60.0,94.7 134.7,111.7 209.5,108.4 284.2,85.0 358.9,88.2 433.6,64.1 508.4,100.7 583.1,108.9 657.8,125.1 732.5,188.6 807.3,139.0 882.0,178.0 882.0,226" fill="#d4a017" opacity=".10"/><polyline points="60.0,94.7 134.7,111.7 209.5,108.4 284.2,85.0 358.9,88.2 433.6,64.1 508.4,100.7 583.1,108.9 657.8,125.1 732.5,188.6 807.3,139.0 882.0,178.0" fill="none" stroke="#d4a017" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="60.0" y="250" text-anchor="start" font-size="12" fill="#888">Sep 2026</text><text x="209.5" y="250" text-anchor="middle" font-size="12" fill="#888">Sep 2026</text><text x="358.9" y="250" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="508.4" y="250" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="657.8" y="250" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="882" y="250" text-anchor="end" font-size="12" fill="#888">Nov 2026</text></svg></div>
+      <div class="lg2"><span><i style="background:#d4a017"></i>Dividends reinvested: <b>$9,635</b></span><span><i style="background:repeating-linear-gradient(90deg,#2E5D54 0 5px,transparent 5px 9px)"></i>Price only: <b>$9,564</b></span></div>
+    </div>
+    <div class="two">
+      <div class="tp click" data-href="/etfs/vooy/yield-trend">
+        <div class="tp-h"><h3>&#128200; Yield Trend</h3><span class="go">Full yield trend &rarr;</span></div>
+        <p class="tp-sub">Distribution rate: <b>0.8%</b> (latest payout &times; 1 &divide; price).</p>
+        <div class="chart-box"><svg viewBox="0 0 900 250" style="width:100%;height:auto;display:block" role="img" aria-label="VOOY yield trend" data-tips="[[6.67,&quot;Sep 4, 2026: rate n/a&quot;],[14.97,&quot;Sep 11, 2026: rate n/a&quot;],[23.27,&quot;Sep 18, 2026: rate n/a&quot;],[31.58,&quot;Sep 25, 2026: rate n/a&quot;],[39.88,&quot;Oct 2, 2026: rate n/a&quot;],[48.18,&quot;Oct 9, 2026: rate 0.7%&quot;],[56.48,&quot;Oct 16, 2026: rate 0.8%&quot;],[64.79,&quot;Oct 23, 2026: rate 0.8%&quot;],[73.09,&quot;Oct 30, 2026: rate 0.8%&quot;],[81.39,&quot;Nov 6, 2026: rate 0.8%&quot;],[89.7,&quot;Nov 13, 2026: rate 0.8%&quot;],[98,&quot;Nov 16, 2026: rate 0.8%&quot;]]"><line x1="60" x2="882" y1="216.0" y2="216.0" stroke="#e7eded"/><text x="52" y="220.0" text-anchor="end" font-size="12" fill="#888">0.7%</text><line x1="60" x2="882" y1="167.5" y2="167.5" stroke="#e7eded"/><text x="52" y="171.5" text-anchor="end" font-size="12" fill="#888">0.7%</text><line x1="60" x2="882" y1="119.0" y2="119.0" stroke="#e7eded"/><text x="52" y="123.0" text-anchor="end" font-size="12" fill="#888">0.8%</text><line x1="60" x2="882" y1="70.5" y2="70.5" stroke="#e7eded"/><text x="52" y="74.5" text-anchor="end" font-size="12" fill="#888">0.8%</text><line x1="60" x2="882" y1="22.0" y2="22.0" stroke="#e7eded"/><text x="52" y="26.0" text-anchor="end" font-size="12" fill="#888">0.8%</text><polyline points="433.6,168.2 508.4,136.0 583.1,128.7 657.8,113.9 732.5,53.9 807.3,101.2 882.0,64.2" fill="none" stroke="#8fc9b0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/><text x="60.0" y="240" text-anchor="start" font-size="12" fill="#888">Sep 2026</text><text x="209.5" y="240" text-anchor="middle" font-size="12" fill="#888">Sep 2026</text><text x="358.9" y="240" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="508.4" y="240" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="657.8" y="240" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="882" y="240" text-anchor="end" font-size="12" fill="#888">Nov 2026</text></svg></div>
+      </div>
+      <div class="tp click" data-href="/etfs/vooy/total-return-trend">
+        <div class="tp-h"><h3>&#128202; Returns by Year</h3><span class="go">Full total return &rarr;</span></div>
+        <p class="tp-sub"><span class="sw" style="background:#d4a017"></span>Total return <span class="sw" style="background:#2E5D54"></span>Price only. * partial year</p>
+        <div class="chart-box"><svg viewBox="0 0 900 250" style="width:100%;height:auto;display:block" role="img" aria-label="VOOY returns by year" data-tips="[[52.33,&quot;2026: total -3.6% &amp;middot; price -4.4%&quot;]]"><line x1="60" x2="882" y1="216.0" y2="216.0" stroke="#e7eded"/><text x="52" y="220.0" text-anchor="end" font-size="12" fill="#888">-5%</text><line x1="60" x2="882" y1="183.7" y2="183.7" stroke="#e7eded"/><text x="52" y="187.7" text-anchor="end" font-size="12" fill="#888">-4%</text><line x1="60" x2="882" y1="151.3" y2="151.3" stroke="#e7eded"/><text x="52" y="155.3" text-anchor="end" font-size="12" fill="#888">-3%</text><line x1="60" x2="882" y1="119.0" y2="119.0" stroke="#e7eded"/><text x="52" y="123.0" text-anchor="end" font-size="12" fill="#888">-2%</text><line x1="60" x2="882" y1="86.7" y2="86.7" stroke="#e7eded"/><text x="52" y="90.7" text-anchor="end" font-size="12" fill="#888">-1%</text><line x1="60" x2="882" y1="54.3" y2="54.3" stroke="#c9d3d3"/><text x="52" y="58.3" text-anchor="end" font-size="12" fill="#888">0%</text><line x1="60" x2="882" y1="22.0" y2="22.0" stroke="#e7eded"/><text x="52" y="26.0" text-anchor="end" font-size="12" fill="#888">1%</text><rect x="191.5" y="54.3" width="278.0" height="118.0" rx="3.0" fill="#d4a017"/><rect x="472.5" y="54.3" width="278.0" height="140.9" rx="3.0" fill="#2E5D54"/><text x="471.0" y="240" text-anchor="middle" font-size="12" fill="#888">2026*</text></svg></div>
+      </div>
+    </div>
+    <div class="two">
+      <div class="tp click" data-href="/etfs/vooy/52-week-range">
+        <div class="tp-h"><h3>&#128207; 52-Week Range</h3><span class="go">Full breakdown &rarr;</span></div>
+        <p class="tp-sub">$24.15 is <b>12%</b> of the way from the low ($23.96) to the high ($25.59).</p>
+        <div class="rng"><div class="rng-t"><span style="left:11.7%"></span></div></div>
+        <div class="chart-box"><svg viewBox="0 0 900 220" style="width:100%;height:auto;display:block" role="img" aria-label="VOOY price, last year" data-tips="[[6.67,&quot;Sep 2, 2026: $25.25&quot;],[8.42,&quot;Sep 3, 2026: $25.46&quot;],[10.18,&quot;Sep 4, 2026: $25.36&quot;],[11.94,&quot;Sep 8, 2026: $25.24&quot;],[13.69,&quot;Sep 9, 2026: $25.08&quot;],[15.45,&quot;Sep 10, 2026: $24.96&quot;],[17.21,&quot;Sep 11, 2026: $25.15&quot;],[18.96,&quot;Sep 14, 2026: $25.05&quot;],[20.72,&quot;Sep 15, 2026: $24.90&quot;],[22.47,&quot;Sep 16, 2026: $24.80&quot;],[24.23,&quot;Sep 17, 2026: $25.14&quot;],[25.99,&quot;Sep 18, 2026: $25.19&quot;],[27.74,&quot;Sep 21, 2026: $25.53&quot;],[29.5,&quot;Sep 22, 2026: $25.57&quot;],[31.26,&quot;Sep 23, 2026: $25.38&quot;],[33.01,&quot;Sep 24, 2026: $25.40&quot;],[34.77,&quot;Sep 25, 2026: $25.48&quot;],[36.53,&quot;Sep 28, 2026: $25.29&quot;],[38.28,&quot;Sep 29, 2026: $25.25&quot;],[40.04,&quot;Sep 30, 2026: $25.26&quot;],[41.79,&quot;Oct 1, 2026: $25.26&quot;],[43.55,&quot;Oct 2, 2026: $25.44&quot;],[45.31,&quot;Oct 5, 2026: $25.59&quot;],[47.06,&quot;Oct 6, 2026: $25.56&quot;],[48.82,&quot;Oct 7, 2026: $25.52&quot;],[50.58,&quot;Oct 8, 2026: $25.40&quot;],[52.33,&quot;Oct 9, 2026: $25.55&quot;],[54.09,&quot;Oct 12, 2026: $25.56&quot;],[55.85,&quot;Oct 13, 2026: $25.54&quot;],[57.6,&quot;Oct 14, 2026: $25.25&quot;],[59.36,&quot;Oct 15, 2026: $25.37&quot;],[61.12,&quot;Oct 16, 2026: $25.10&quot;],[62.87,&quot;Oct 19, 2026: $25.23&quot;],[64.63,&quot;Oct 20, 2026: $25.27&quot;],[66.38,&quot;Oct 21, 2026: $25.42&quot;],[68.14,&quot;Oct 22, 2026: $25.11&quot;],[69.9,&quot;Oct 23, 2026: $25.00&quot;],[71.65,&quot;Oct 26, 2026: $25.13&quot;],[73.41,&quot;Oct 27, 2026: $25.33&quot;],[75.17,&quot;Oct 28, 2026: $25.39&quot;],[76.92,&quot;Oct 29, 2026: $25.29&quot;],[78.68,&quot;Oct 30, 2026: $24.80&quot;],[80.44,&quot;Nov 2, 2026: $24.71&quot;],[82.19,&quot;Nov 3, 2026: $24.59&quot;],[83.95,&quot;Nov 4, 2026: $24.95&quot;],[85.71,&quot;Nov 5, 2026: $23.96&quot;],[87.46,&quot;Nov 6, 2026: $24.02&quot;],[89.22,&quot;Nov 9, 2026: $24.56&quot;],[90.97,&quot;Nov 10, 2026: $24.42&quot;],[92.73,&quot;Nov 11, 2026: $24.78&quot;],[94.49,&quot;Nov 12, 2026: $24.70&quot;],[96.24,&quot;Nov 13, 2026: $24.63&quot;],[98,&quot;Nov 16, 2026: $24.15&quot;]]"><line x1="60" x2="882" y1="186.0" y2="186.0" stroke="#e7eded"/><text x="52" y="190.0" text-anchor="end" font-size="12" fill="#888">$24</text><line x1="60" x2="882" y1="153.2" y2="153.2" stroke="#e7eded"/><text x="52" y="157.2" text-anchor="end" font-size="12" fill="#888">$24</text><line x1="60" x2="882" y1="120.4" y2="120.4" stroke="#e7eded"/><text x="52" y="124.4" text-anchor="end" font-size="12" fill="#888">$25</text><line x1="60" x2="882" y1="87.6" y2="87.6" stroke="#e7eded"/><text x="52" y="91.6" text-anchor="end" font-size="12" fill="#888">$25</text><line x1="60" x2="882" y1="54.8" y2="54.8" stroke="#e7eded"/><text x="52" y="58.8" text-anchor="end" font-size="12" fill="#888">$26</text><line x1="60" x2="882" y1="22.0" y2="22.0" stroke="#e7eded"/><text x="52" y="26.0" text-anchor="end" font-size="12" fill="#888">$26</text><polygon points="60.0,186 60.0,71.2 75.8,57.4 91.6,64.0 107.4,71.9 123.2,82.4 139.0,90.2 154.8,77.8 170.7,84.3 186.5,94.2 202.3,100.7 218.1,78.4 233.9,75.1 249.7,52.8 265.5,50.2 281.3,62.7 297.1,61.4 312.9,56.1 328.7,68.6 344.5,71.2 360.3,70.5 376.2,70.5 392.0,58.7 407.8,48.9 423.6,50.9 439.4,53.5 455.2,61.4 471.0,51.5 486.8,50.9 502.6,52.2 518.4,71.2 534.2,63.3 550.0,81.0 565.8,72.5 581.7,69.9 597.5,60.0 613.3,80.4 629.1,87.6 644.9,79.1 660.7,66.0 676.5,62.0 692.3,68.6 708.1,100.7 723.9,106.6 739.7,114.5 755.5,90.9 771.3,155.8 787.2,151.9 803.0,116.5 818.8,125.6 834.6,102.0 850.4,107.3 866.2,111.9 882.0,143.4 882.0,186" fill="#2E5D54" opacity=".10"/><polyline points="60.0,71.2 75.8,57.4 91.6,64.0 107.4,71.9 123.2,82.4 139.0,90.2 154.8,77.8 170.7,84.3 186.5,94.2 202.3,100.7 218.1,78.4 233.9,75.1 249.7,52.8 265.5,50.2 281.3,62.7 297.1,61.4 312.9,56.1 328.7,68.6 344.5,71.2 360.3,70.5 376.2,70.5 392.0,58.7 407.8,48.9 423.6,50.9 439.4,53.5 455.2,61.4 471.0,51.5 486.8,50.9 502.6,52.2 518.4,71.2 534.2,63.3 550.0,81.0 565.8,72.5 581.7,69.9 597.5,60.0 613.3,80.4 629.1,87.6 644.9,79.1 660.7,66.0 676.5,62.0 692.3,68.6 708.1,100.7 723.9,106.6 739.7,114.5 755.5,90.9 771.3,155.8 787.2,151.9 803.0,116.5 818.8,125.6 834.6,102.0 850.4,107.3 866.2,111.9 882.0,143.4" fill="none" stroke="#2E5D54" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="407.8" cy="48.9" r="5.5" fill="#1e9e57" stroke="#fff" stroke-width="2"/><text x="407.8" y="36.9" text-anchor="middle" font-size="12" font-weight="900" fill="#1e9e57">High $25.59</text><circle cx="771.3" cy="155.8" r="5.5" fill="#c0392b" stroke="#fff" stroke-width="2"/><text x="771.3" y="175.8" text-anchor="end" font-size="12" font-weight="900" fill="#c0392b">Low $23.96</text><text x="60.0" y="210" text-anchor="start" font-size="12" fill="#888">Sep 2026</text><text x="202.3" y="210" text-anchor="middle" font-size="12" fill="#888">Sep 2026</text><text x="344.5" y="210" text-anchor="middle" font-size="12" fill="#888">Sep 2026</text><text x="486.8" y="210" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="629.1" y="210" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="771.3" y="210" text-anchor="middle" font-size="12" fill="#888">Nov 2026</text><text x="882" y="210" text-anchor="end" font-size="12" fill="#888">Nov 2026</text></svg></div>
+      </div>
+      <div class="tp click" data-href="/etfs/vooy/price-decay">
+        <div class="tp-h"><h3>&#9888;&#65039; Price Decay Check</h3><span class="go">Full breakdown &rarr;</span></div>
+        <p class="tp-sub">Rated <b style="color:#c0392b">Price decay</b>. Price -4.4% since launch, total return <b>-3.6%</b> with dividends.</p>
+        <div class="chart-box"><svg viewBox="0 0 900 220" style="width:100%;height:auto;display:block" role="img" aria-label="VOOY price since launch" data-tips="[[6.67,&quot;Sep 4, 2026: $25.36&quot;],[14.97,&quot;Sep 11, 2026: $25.15&quot;],[23.27,&quot;Sep 18, 2026: $25.19&quot;],[31.58,&quot;Sep 25, 2026: $25.48&quot;],[39.88,&quot;Oct 2, 2026: $25.44&quot;],[48.18,&quot;Oct 9, 2026: $25.55&quot;],[56.48,&quot;Oct 16, 2026: $25.10&quot;],[64.79,&quot;Oct 23, 2026: $25.00&quot;],[73.09,&quot;Oct 30, 2026: $24.80&quot;],[81.39,&quot;Nov 6, 2026: $24.02&quot;],[89.7,&quot;Nov 13, 2026: $24.63&quot;],[98,&quot;Nov 16, 2026: $24.15&quot;]]"><line x1="60" x2="882" y1="186.0" y2="186.0" stroke="#e7eded"/><text x="52" y="190.0" text-anchor="end" font-size="12" fill="#888">$24</text><line x1="60" x2="882" y1="153.2" y2="153.2" stroke="#e7eded"/><text x="52" y="157.2" text-anchor="end" font-size="12" fill="#888">$24</text><line x1="60" x2="882" y1="120.4" y2="120.4" stroke="#e7eded"/><text x="52" y="124.4" text-anchor="end" font-size="12" fill="#888">$25</text><line x1="60" x2="882" y1="87.6" y2="87.6" stroke="#e7eded"/><text x="52" y="91.6" text-anchor="end" font-size="12" fill="#888">$25</text><line x1="60" x2="882" y1="54.8" y2="54.8" stroke="#e7eded"/><text x="52" y="58.8" text-anchor="end" font-size="12" fill="#888">$26</text><line x1="60" x2="882" y1="22.0" y2="22.0" stroke="#e7eded"/><text x="52" y="26.0" text-anchor="end" font-size="12" fill="#888">$26</text><line x1="60" x2="882" y1="71.2" y2="71.2" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="6 5"/><text x="878" y="65.2" text-anchor="end" font-size="12" font-weight="700" fill="#d4a017">Launch $25.25</text><polygon points="60.0,186 60.0,64.0 134.7,77.8 209.5,75.1 284.2,56.1 358.9,58.7 433.6,51.5 508.4,81.0 583.1,87.6 657.8,100.7 732.5,151.9 807.3,111.9 882.0,143.4 882.0,186" fill="#2E5D54" opacity=".10"/><polyline points="60.0,64.0 134.7,77.8 209.5,75.1 284.2,56.1 358.9,58.7 433.6,51.5 508.4,81.0 583.1,87.6 657.8,100.7 732.5,151.9 807.3,111.9 882.0,143.4" fill="none" stroke="#2E5D54" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><text x="60.0" y="210" text-anchor="start" font-size="12" fill="#888">Sep 2026</text><text x="209.5" y="210" text-anchor="middle" font-size="12" fill="#888">Sep 2026</text><text x="358.9" y="210" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="508.4" y="210" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="657.8" y="210" text-anchor="middle" font-size="12" fill="#888">Oct 2026</text><text x="882" y="210" text-anchor="end" font-size="12" fill="#888">Nov 2026</text></svg></div>
+      </div>
+    </div>
+    <h2 class="section-title">Where VOOY Ranks</h2>
+    <p class="section-lead">How VOOY stacks up against all 198 dividend ETFs on TopDividendETFs.com. Tap any card to see the full ranking.</p>
+    <div class="rank-grid six">
+      <a class="rank-card" href="/etfs/highest-yield#VOOY"><div class="lb">Yield Rank</div><div class="rk">#146 <small>of 198</small></div><div class="go">See highest yield →</div></a>
+      <a class="rank-card" href="/etfs/largest#VOOY"><div class="lb">Size Rank</div><div class="rk">#190 <small>of 198</small></div><div class="go">See largest ETFs →</div></a>
+      <a class="rank-card" href="/etfs/grade/b"><div class="lb">Grade Rank</div><div class="rk">#88 <small>of 198</small></div><div class="go">See B ETFs →</div></a>
+      <a class="rank-card" href="/etfs/vooy/total-return-trend"><div class="lb">Since Launch</div><div class="rk">-3.6%</div><div class="go">Total return trend →</div></a>
+      <a class="rank-card" href="/etfs/vooy/price-decay"><div class="lb">Price vs Launch</div><div class="rk">-4.4%</div><div class="go">Price decay check →</div></a>
+      <a class="rank-card" href="/top-voted-etfs"><div class="lb">Vote Rank</div><div class="rk" id="voteRankBig">…</div><div class="go">See top voted →</div></a>
     </div>
 
     <div class="two">
-      <div class="card">
+      <div class="card click" data-href="/etfs/grade/b">
         <h3 style="color:var(--green-dark);font-weight:900;margin-bottom:4px">Grade Spectrum</h3>
         <p class="section-lead" style="margin-bottom:0">VOOY earns a <strong>B</strong>. Tap any grade to browse those ETFs.</p>
         <div class="spectrum"><a href="/etfs/grade/a-plus" class="" style="background:#2ecc71" title="8 ETFs">A+</a><a href="/etfs/grade/a" class="" style="background:#2ecc71" title="14 ETFs">A</a><a href="/etfs/grade/a-minus" class="" style="background:#2ecc71" title="34 ETFs">A-</a><a href="/etfs/grade/b-plus" class="" style="background:#7ed957" title="14 ETFs">B+</a><a href="/etfs/grade/b" class="cur" style="background:#7ed957" title="20 ETFs">B</a><a href="/etfs/grade/b-minus" class="" style="background:#7ed957" title="18 ETFs">B-</a><a href="/etfs/grade/c-plus" class="" style="background:#f5a623" title="9 ETFs">C+</a><a href="/etfs/grade/c" class="" style="background:#f5a623" title="13 ETFs">C</a><a href="/etfs/grade/c-minus" class="" style="background:#f5a623" title="6 ETFs">C-</a><a href="/etfs/grade/d-plus" class="" style="background:#e74c3c" title="13 ETFs">D+</a><a href="/etfs/grade/d" class="" style="background:#e74c3c" title="6 ETFs">D</a><a href="/etfs/grade/d-minus" class="" style="background:#e74c3c" title="0 ETFs">D-</a><a href="/etfs/grade/f" class="" style="background:#e74c3c" title="43 ETFs">F</a></div>
       </div>
-      <div class="card">
+      <div class="card click" data-href="/etfs/vooy/yield-rank">
         <h3 style="color:var(--green-dark);font-weight:900;margin-bottom:4px">Yield vs. the Field</h3>
         <p class="section-lead" style="margin-bottom:0">Higher than <strong>26%</strong> of the ETFs we track.</p>
         <div class="ybar">
@@ -436,5 +531,6 @@ fetch(API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/jso
 </script>
   </div>
 <script src="/sticky-ad.js" defer></script>
+<script src="/etfs/bd.js" defer></script>
 </body>
 </html>
