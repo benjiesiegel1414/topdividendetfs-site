@@ -1,20 +1,20 @@
 Symbol,Name,Sector,Tags,Years
 AWR,American States Water,Utilities,King,71
-PG,Procter & Gamble,Consumer Staples,King,70
-DOV,Dover,Industrials,King,70
+PG,Procter & Gamble,Consumer Staples,King Aristocrat,70
+DOV,Dover,Industrials,King Aristocrat,70
 PH,Parker-Hannifin,Industrials,King,70
 NWN,Northwest Natural,Utilities,King,70
-EMR,Emerson Electric,Industrials,King,69
-GPC,Genuine Parts,Consumer Discretionary,King,69
-LOW,Lowe's,Consumer Discretionary,King,65
-CINF,Cincinnati Financial,Financials,King,65
-JNJ,Johnson & Johnson,Health Care,King,63
-NDSN,Nordson,Industrials,King,63
-CL,Colgate-Palmolive,Consumer Staples,King,63
-KO,Coca-Cola,Consumer Staples,King,63
+EMR,Emerson Electric,Industrials,King Aristocrat,69
+GPC,Genuine Parts,Consumer Discretionary,King Aristocrat,69
+LOW,Lowe's,Consumer Discretionary,King Aristocrat,65
+CINF,Cincinnati Financial,Financials,King Aristocrat,65
+JNJ,Johnson & Johnson,Health Care,King Aristocrat,63
+NDSN,Nordson,Industrials,King Aristocrat,63
+CL,Colgate-Palmolive,Consumer Staples,King Aristocrat,63
+KO,Coca-Cola,Consumer Staples,King Aristocrat,63
 MZTI,Marzetti,Consumer Staples,King,63
 FMCB,Farmers & Merchants Bancorp,Financials,King,63
-HRL,Hormel Foods,Consumer Staples,King,60
+HRL,Hormel Foods,Consumer Staples,King Aristocrat,60
 TR,Tootsie Roll,Consumer Staples,King,60
 MSA,MSA Safety,Industrials,King,59
 SCL,Stepan Company,Materials,King,59
@@ -23,38 +23,38 @@ CBSH,Commerce Bancshares,Financials,King,58
 HTO,H2O America,Utilities,King,58
 FRT,Federal Realty,Real Estate,King,58
 ABM,ABM Industries,Industrials,King,58
-SWK,Stanley Black & Decker,Industrials,King,58
-SYY,Sysco,Consumer Staples,King,57
+SWK,Stanley Black & Decker,Industrials,King Aristocrat,58
+SYY,Sysco,Consumer Staples,King Aristocrat,57
 FUL,H.B. Fuller,Materials,King,56
 MO,Altria,Consumer Staples,King,56
 UVV,Universal Corp,Consumer Staples,King,56
 NFG,National Fuel Gas,Utilities,King,55
-GWW,W.W. Grainger,Industrials,King,54
+GWW,W.W. Grainger,Industrials,King Aristocrat,54
 MSEX,Middlesex Water,Utilities,King,54
-ABT,Abbott Laboratories,Health Care,King,54
-ITW,Illinois Tool Works,Industrials,King,54
-PPG,PPG Industries,Materials,King,54
-ABBV,AbbVie,Health Care,King,54
+ABT,Abbott Laboratories,Health Care,King Aristocrat,54
+ITW,Illinois Tool Works,Industrials,King Aristocrat,54
+PPG,PPG Industries,Materials,King Aristocrat,54
+ABBV,AbbVie,Health Care,King Aristocrat,54
 GRC,Gorman-Rupp,Industrials,King,54
 TNC,Tennant Company,Industrials,King,54
-TGT,Target,Consumer Staples,King,54
-BDX,Becton Dickinson,Health Care,King,53
-PEP,PepsiCo,Consumer Staples,King,53
+TGT,Target,Consumer Staples,King Aristocrat,54
+BDX,Becton Dickinson,Health Care,King Aristocrat,53
+PEP,PepsiCo,Consumer Staples,King Aristocrat,53
 RPM,RPM International,Materials,King,53
-KMB,Kimberly-Clark,Consumer Staples,King,53
-SPGI,S&P Global,Financials,King,52
-ADP,Automatic Data Processing,Industrials,King,52
-NUE,Nucor,Materials,King,52
-WMT,Walmart,Consumer Staples,King,52
+KMB,Kimberly-Clark,Consumer Staples,King Aristocrat,53
+SPGI,S&P Global,Financials,King Aristocrat,52
+ADP,Automatic Data Processing,Industrials,King Aristocrat,52
+NUE,Nucor,Materials,King Aristocrat,52
+WMT,Walmart,Consumer Staples,King Aristocrat,52
 UBSI,United Bankshares,Financials,King,52
-ADM,Archer-Daniels-Midland,Consumer Staples,King,52
-FTS,Fortis,Utilities,King,52
-ED,Consolidated Edison,Utilities,King,51
+ADM,Archer-Daniels-Midland,Consumer Staples,King Aristocrat,52
+FTS,Fortis,Utilities,King Foreign,52
+ED,Consolidated Edison,Utilities,King Aristocrat,51
 CSL,Carlisle Companies,Industrials,King,50
 MGEE,MGE Energy,Utilities,King,50
 RLI,RLI Corp,Financials,King,50
-PNR,Pentair,Industrials,King,50
-MCD,McDonald's,Consumer Discretionary,King,50
+PNR,Pentair,Industrials,King Aristocrat,50
+MCD,McDonald's,Consumer Discretionary,King Aristocrat,50
 AFL,Aflac,Financials,Aristocrat,
 ALB,Albemarle,Materials,Aristocrat,
 AMCR,Amcor,Materials,Aristocrat,
@@ -127,7 +127,7 @@ LLY,Eli Lilly,Health Care,,
 EPD,Enterprise Products Partners,Energy,MLP,
 ET,Energy Transfer,Energy,MLP,
 MPLX,MPLX,Energy,MLP,
-ENB,Enbridge,Energy,,31
+ENB,Enbridge,Energy,Foreign,31
 KMI,Kinder Morgan,Energy,,
 WMB,Williams Companies,Energy,,
 OKE,ONEOK,Energy,,
@@ -151,7 +151,7 @@ AEP,American Electric Power,Utilities,,
 XEL,Xcel Energy,Utilities,,
 WEC,WEC Energy,Utilities,,
 PM,Philip Morris International,Consumer Staples,,
-BTI,British American Tobacco,Consumer Staples,,-
+BTI,British American Tobacco,Consumer Staples,Foreign,-
 KHC,Kraft Heinz,Consumer Staples,,
 GIS,General Mills,Consumer Staples,,
 HSY,Hershey,Consumer Staples,,

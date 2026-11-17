@@ -133,6 +133,7 @@
         .tg{font-size:.66em;font-weight:900;padding:2px 6px;border-radius:4px;background:var(--green-light);color:var(--green)}
         .tg.king{background:linear-gradient(135deg,#FFD700,#FFA500);color:#5a3a00}
         .tg.arist{background:#e7ecff;color:#2b3f9e}
+        .tg.cut{background:#fdecea;color:#c0392b}
         .pos{color:var(--pos);font-weight:900}.neg{color:var(--red);font-weight:900}
         .yld{font-weight:900;color:var(--green-deep);font-size:1.05em}
         .yrs{display:inline-block;min-width:36px;padding:3px 7px;border-radius:6px;font-weight:900;background:var(--green-light);color:var(--green-deep)}
@@ -343,7 +344,7 @@
   var VIEWS = {
     all: function(){ return true; },
     king: function(s){ return has(s, 'King'); },
-    arist: function(s){ return has(s, 'Aristocrat') || has(s, 'King') && s.sp; },
+    arist: function(s){ return has(s, 'Aristocrat'); },
     high: function(s){ return s.y >= 4; },
     monthly: function(s){ return s.freq === 'Monthly'; },
     growth: function(s){ return s.g5 >= 10; },
@@ -352,12 +353,10 @@
     bdc: function(s){ return has(s, 'BDC'); },
     mlp: function(s){ return has(s, 'MLP'); }
   };
-  // Kings that are also S&P 500 Aristocrats
-  var SP_KINGS = 'PG DOV EMR GPC LOW CINF JNJ NDSN CL KO HRL SWK SYY GWW ABT ITW PPG ABBV TGT BDX PEP KMB SPGI ADP NUE WMT ADM ED PNR MCD'.split(' ');
 
   function tagsHtml(s){
-    return s.tags.map(function(t){
-      var c = t === 'King' ? 'tg king' : t === 'Aristocrat' ? 'tg arist' : 'tg';
+    return s.tags.filter(function(t){ return !(t === 'Aristocrat' && has(s, 'King')); }).map(function(t){
+      var c = t === 'King' ? 'tg king' : t === 'Aristocrat' ? 'tg arist' : t === 'Dividend Cut' ? 'tg cut' : 'tg';
       var label = t === 'King' ? '👑 King' : t;
       return '<span class="' + c + '">' + esc(label) + '</span>';
     }).join('');
@@ -454,7 +453,7 @@
     var avg = ys.reduce(function(a, s){ return a + s.y; }, 0) / ys.length;
     var top = ys.slice().sort(function(a, b){ return b.y - a.y; })[0];
     var longest = DATA.slice().sort(function(a, b){ return (b.yrs || 0) - (a.yrs || 0); })[0];
-    var kings = DATA.filter(function(s){ return has(s, 'King'); }).length, ar = DATA.filter(function(s){ return has(s, 'Aristocrat') || SP_KINGS.indexOf(s.s) > -1; }).length;
+    var kings = DATA.filter(function(s){ return has(s, 'King'); }).length, ar = DATA.filter(function(s){ return has(s, 'Aristocrat'); }).length;
     $('stats').innerHTML =
       '<div class="stat"><div class="k">Stocks Tracked</div><div class="v">' + DATA.length + '</div></div>' +
       '<div class="stat"><div class="k">Dividend Kings</div><div class="v">' + kings + '<small>50+ years of raises</small></div></div>' +
@@ -506,7 +505,7 @@
   });
 
   fetch('/stocks/stocks.json?t=' + Math.floor(Date.now() / 6e5)).then(function(r){ return r.json(); }).then(function(d){
-    DATA = d.stocks.map(function(s){ s.sp = SP_KINGS.indexOf(s.s) > -1; return s; });
+    DATA = d.stocks;
     var secs = {}; DATA.forEach(function(s){ secs[s.sec] = 1; });
     Object.keys(secs).sort().forEach(function(s){ $('sector').insertAdjacentHTML('beforeend', '<option>' + esc(s) + '</option>'); });
     try { var v = new URLSearchParams(location.search).get('view'); if (v && VIEWS[v]) { var c = document.querySelector('.chip[data-v="' + v + '"]'); if (c) { c.click(); } } } catch (e) {}
