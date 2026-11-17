@@ -1,0 +1,88 @@
+name: Dividend Stocks Data
+
+# Refreshes stocks/stocks.json for topdividendetfs.com/stocks (prices, yields, dividend growth, returns).
+# The stock list lives in stocks/universe.csv: add a row there and the stock shows up on the next run.
+on:
+  schedule:
+    # Weekdays after the US close (~5:15 PM and ~8:15 PM Eastern; the second run covers late GitHub starts)
+    - cron: '15 21 * * 1-5'
+    - cron: '15 0 * * 2-6'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'stocks/universe.csv'
+      - 'scripts/build-stocks.mjs'
+      - '.github/workflows/stocks.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: build-stocks
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Build stocks.json
+        run: node scripts/build-stocks.mjs
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stocks/stocks.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Update dividend stocks data [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && break
+            sleep 5
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made by this workflow do not trigger deploy.yml, so deploy here.
+      - name: Setup Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+          name: github-pages-${{ github.run_attempt }}
+
+      - name: Deploy to GitHub Pages (try 1)
+        id: deploy1
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
+
+      - name: Wait 2 minutes before retrying
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 120
+
+      - name: Deploy to GitHub Pages (try 2)
+        if: steps.deploy1.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
