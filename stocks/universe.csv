@@ -1,0 +1,170 @@
+Symbol,Name,Sector,Tags,Years
+AWR,American States Water,Utilities,King,71
+PG,Procter & Gamble,Consumer Staples,King,70
+DOV,Dover,Industrials,King,70
+PH,Parker-Hannifin,Industrials,King,70
+NWN,Northwest Natural,Utilities,King,70
+EMR,Emerson Electric,Industrials,King,69
+GPC,Genuine Parts,Consumer Discretionary,King,69
+LOW,Lowe's,Consumer Discretionary,King,65
+CINF,Cincinnati Financial,Financials,King,65
+JNJ,Johnson & Johnson,Health Care,King,63
+NDSN,Nordson,Industrials,King,63
+CL,Colgate-Palmolive,Consumer Staples,King,63
+KO,Coca-Cola,Consumer Staples,King,63
+MZTI,Marzetti,Consumer Staples,King,63
+FMCB,Farmers & Merchants Bancorp,Financials,King,63
+HRL,Hormel Foods,Consumer Staples,King,60
+TR,Tootsie Roll,Consumer Staples,King,60
+MSA,MSA Safety,Industrials,King,59
+SCL,Stepan Company,Materials,King,59
+CWT,California Water Service,Utilities,King,58
+CBSH,Commerce Bancshares,Financials,King,58
+HTO,H2O America,Utilities,King,58
+FRT,Federal Realty,Real Estate,King,58
+ABM,ABM Industries,Industrials,King,58
+SWK,Stanley Black & Decker,Industrials,King,58
+SYY,Sysco,Consumer Staples,King,57
+FUL,H.B. Fuller,Materials,King,56
+MO,Altria,Consumer Staples,King,56
+UVV,Universal Corp,Consumer Staples,King,56
+NFG,National Fuel Gas,Utilities,King,55
+GWW,W.W. Grainger,Industrials,King,54
+MSEX,Middlesex Water,Utilities,King,54
+ABT,Abbott Laboratories,Health Care,King,54
+ITW,Illinois Tool Works,Industrials,King,54
+PPG,PPG Industries,Materials,King,54
+ABBV,AbbVie,Health Care,King,54
+GRC,Gorman-Rupp,Industrials,King,54
+TNC,Tennant Company,Industrials,King,54
+TGT,Target,Consumer Staples,King,54
+BDX,Becton Dickinson,Health Care,King,53
+PEP,PepsiCo,Consumer Staples,King,53
+RPM,RPM International,Materials,King,53
+KMB,Kimberly-Clark,Consumer Staples,King,53
+SPGI,S&P Global,Financials,King,52
+ADP,Automatic Data Processing,Industrials,King,52
+NUE,Nucor,Materials,King,52
+WMT,Walmart,Consumer Staples,King,52
+UBSI,United Bankshares,Financials,King,52
+ADM,Archer-Daniels-Midland,Consumer Staples,King,52
+FTS,Fortis,Utilities,King,52
+ED,Consolidated Edison,Utilities,King,51
+CSL,Carlisle Companies,Industrials,King,50
+MGEE,MGE Energy,Utilities,King,50
+RLI,RLI Corp,Financials,King,50
+PNR,Pentair,Industrials,King,50
+MCD,McDonald's,Consumer Discretionary,King,50
+AFL,Aflac,Financials,Aristocrat,
+ALB,Albemarle,Materials,Aristocrat,
+AMCR,Amcor,Materials,Aristocrat,
+AOS,A.O. Smith,Industrials,Aristocrat,
+APD,Air Products,Materials,Aristocrat,
+ATO,Atmos Energy,Utilities,Aristocrat,
+BEN,Franklin Resources,Financials,Aristocrat,
+BF-B,Brown-Forman,Consumer Staples,Aristocrat,
+BRO,Brown & Brown,Financials,Aristocrat,
+CAH,Cardinal Health,Health Care,Aristocrat,
+CAT,Caterpillar,Industrials,Aristocrat,
+CB,Chubb,Financials,Aristocrat,
+CHD,Church & Dwight,Consumer Staples,Aristocrat,
+CHRW,C.H. Robinson,Industrials,Aristocrat,
+CLX,Clorox,Consumer Staples,Aristocrat,
+CTAS,Cintas,Industrials,Aristocrat,
+CVX,Chevron,Energy,Aristocrat,
+ECL,Ecolab,Materials,Aristocrat,
+ERIE,Erie Indemnity,Financials,Aristocrat,
+ES,Eversource Energy,Utilities,Aristocrat,
+ESS,Essex Property Trust,Real Estate,Aristocrat REIT,
+EXPD,Expeditors International,Industrials,Aristocrat,
+FAST,Fastenal,Industrials,Aristocrat,
+FDS,FactSet,Financials,Aristocrat,
+GD,General Dynamics,Industrials,Aristocrat,
+IBM,IBM,Technology,Aristocrat,
+LIN,Linde,Materials,Aristocrat,
+MDT,Medtronic,Health Care,Aristocrat,
+MKC,McCormick,Consumer Staples,Aristocrat,
+NEE,NextEra Energy,Utilities,Aristocrat,
+O,Realty Income,Real Estate,Aristocrat REIT Monthly,
+ROP,Roper Technologies,Technology,Aristocrat,
+SHW,Sherwin-Williams,Materials,Aristocrat,
+SJM,J.M. Smucker,Consumer Staples,Aristocrat,
+TROW,T. Rowe Price,Financials,Aristocrat,
+WST,West Pharmaceutical,Health Care,Aristocrat,
+XOM,Exxon Mobil,Energy,Aristocrat,
+AAPL,Apple,Technology,,
+MSFT,Microsoft,Technology,,
+AVGO,Broadcom,Technology,,
+CSCO,Cisco Systems,Technology,,
+TXN,Texas Instruments,Technology,,
+QCOM,Qualcomm,Technology,,
+ORCL,Oracle,Technology,,
+ADI,Analog Devices,Technology,,
+JPM,JPMorgan Chase,Financials,,
+BAC,Bank of America,Financials,,
+WFC,Wells Fargo,Financials,,
+GS,Goldman Sachs,Financials,,
+MS,Morgan Stanley,Financials,,
+BLK,BlackRock,Financials,,
+USB,U.S. Bancorp,Financials,,
+PNC,PNC Financial,Financials,,
+TFC,Truist Financial,Financials,,
+PRU,Prudential Financial,Financials,,
+MET,MetLife,Financials,,
+V,Visa,Financials,,
+MA,Mastercard,Financials,,
+MAIN,Main Street Capital,Financials,BDC Monthly,
+ARCC,Ares Capital,Financials,BDC,
+OBDC,Blue Owl Capital Corp,Financials,BDC,
+HTGC,Hercules Capital,Financials,BDC,
+UNH,UnitedHealth Group,Health Care,,
+MRK,Merck,Health Care,,
+PFE,Pfizer,Health Care,,
+BMY,Bristol-Myers Squibb,Health Care,,
+GILD,Gilead Sciences,Health Care,,
+AMGN,Amgen,Health Care,,
+LLY,Eli Lilly,Health Care,,
+EPD,Enterprise Products Partners,Energy,MLP,
+ET,Energy Transfer,Energy,MLP,
+MPLX,MPLX,Energy,MLP,
+ENB,Enbridge,Energy,,31
+KMI,Kinder Morgan,Energy,,
+WMB,Williams Companies,Energy,,
+OKE,ONEOK,Energy,,
+PSX,Phillips 66,Energy,,
+COP,ConocoPhillips,Energy,,
+EOG,EOG Resources,Energy,,
+VICI,VICI Properties,Real Estate,REIT,
+WPC,W. P. Carey,Real Estate,REIT,
+NNN,NNN REIT,Real Estate,REIT,
+ADC,Agree Realty,Real Estate,REIT Monthly,
+STAG,STAG Industrial,Real Estate,REIT Monthly,
+PLD,Prologis,Real Estate,REIT,
+AMT,American Tower,Real Estate,REIT,
+SPG,Simon Property Group,Real Estate,REIT,
+EPR,EPR Properties,Real Estate,REIT Monthly,
+ARE,Alexandria Real Estate,Real Estate,REIT,
+DUK,Duke Energy,Utilities,,
+SO,Southern Company,Utilities,,
+D,Dominion Energy,Utilities,,
+AEP,American Electric Power,Utilities,,
+XEL,Xcel Energy,Utilities,,
+WEC,WEC Energy,Utilities,,
+PM,Philip Morris International,Consumer Staples,,
+BTI,British American Tobacco,Consumer Staples,,-
+KHC,Kraft Heinz,Consumer Staples,,
+GIS,General Mills,Consumer Staples,,
+HSY,Hershey,Consumer Staples,,
+COST,Costco,Consumer Staples,,
+T,AT&T,Communication Services,,
+VZ,Verizon,Communication Services,,
+CMCSA,Comcast,Communication Services,,
+UPS,United Parcel Service,Industrials,,
+LMT,Lockheed Martin,Industrials,,
+HON,Honeywell,Industrials,,
+RTX,RTX,Industrials,,
+MMM,3M,Industrials,,
+UNP,Union Pacific,Industrials,,
+HD,Home Depot,Consumer Discretionary,,
+SBUX,Starbucks,Consumer Discretionary,,
+NKE,Nike,Consumer Discretionary,,
