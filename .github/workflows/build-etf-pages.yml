@@ -11,6 +11,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-etf-pages.mjs'
+      - 'scripts/build-etf-breakdowns.mjs'
       - 'scripts/build-etf-images.mjs'
       - 'scripts/update-neos-pages.mjs'
       - '.github/workflows/build-etf-pages.yml'
@@ -46,8 +47,23 @@ jobs:
 
       - name: Build ETF pages from the Google Sheet
         run: |
-          rm -rf etfs
+          # last run's pages are kept aside so an ETF whose Yahoo data fails keeps its breakdown pages
+          rm -rf .etfs-prev
+          if [ -d etfs ]; then mv etfs .etfs-prev; fi
           node scripts/build-etf-pages.mjs
+
+      # Breakdown pages (/etfs/<sym>/yield-trend, /dividend-history, ...) and the richer ETF pages.
+      # Every run refreshes the ETF pages; the evening run (and manual runs) rewrite all breakdown pages.
+      - name: Build ETF breakdown pages
+        run: |
+          export FULL=0
+          if [ "${{ github.event_name }}" != "schedule" ]; then export FULL=1; fi
+          case "$(date -u +%H)" in 00|01|02) export FULL=1;; esac
+          node scripts/build-etf-breakdowns.mjs || {
+            echo "::warning::breakdown pages failed, keeping last run's"
+            for d in .etfs-prev/*/; do n=$(basename "$d"); [ -d "etfs/$n" ] || cp -r "$d" "etfs/$n"; done
+          }
+          rm -rf .etfs-prev
 
       - name: Refresh next-dividend details on the QQQI and SPYI posts
         run: node scripts/update-neos-pages.mjs
