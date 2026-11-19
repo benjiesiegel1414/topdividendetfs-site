@@ -1,0 +1,64 @@
+name: Publish Simply Wall St Black Friday post
+
+# The post sits in .github/scheduled/ (never deployed, never in the sitemap) until
+# Monday Nov 23, 2026. Starting 5am ET that morning this moves it live, adds it to
+# blog.html and sitemap.xml, commits as Benjie and redeploys the site.
+# Runs hourly 5am-11am ET as a safety net; after the first success it does nothing.
+on:
+  schedule:
+    - cron: '0 10-16 23 11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publish-sws
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Not before Nov 23, 2026 (ET)
+        id: gate
+        run: |
+          TODAY=$(TZ=America/New_York date +%Y%m%d)
+          if [ "$TODAY" -lt 20261123 ]; then echo "Too early ($TODAY)"; echo "go=no" >> "$GITHUB_OUTPUT"; else echo "go=yes" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          node-version: '22'
+
+      - name: Publish post, update blog index and sitemap
+        id: pub
+        if: steps.gate.outputs.go == 'yes'
+        run: |
+          if [ ! -f .github/scheduled/simply-wall-st-black-friday-deal.html ]; then echo "Already published"; echo "pushed=no" >> "$GITHUB_OUTPUT"; exit 0; fi
+          node .github/scheduled/publish-sws.js
+          node generate-sitemap.js
+          grep -q "simply-wall-st-black-friday-deal" sitemap.xml
+          git config user.name  "benjiesiegel1414"
+          git config user.email "benjiesbusiness@gmail.com"
+          git add -A simply-wall-st-black-friday-deal.html blog.html sitemap.xml .github/scheduled
+          git commit -m "Add Simply Wall St Black Friday post"
+          ok=0
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then ok=1; break; fi
+            sleep 15
+          done
+          [ "$ok" = 1 ]
+          echo "pushed=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Redeploy the site
+        if: steps.pub.outputs.pushed == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
