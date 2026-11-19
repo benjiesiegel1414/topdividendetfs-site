@@ -539,7 +539,7 @@ ${divHistory(e)}
       <div class="card">
         <h3 style="color:var(--green-dark);font-weight:900;margin-bottom:4px">Grade Spectrum</h3>
         <p class="section-lead" style="margin-bottom:0">${e.sym} earns a <strong>${e.grade}</strong>. Tap any grade to browse those ETFs.</p>
-        <div class="spectrum">${GRADES.map(g => `<a href="/etfs/grade/${gradeSlugFix(g)}" class="${g === e.grade ? 'cur' : ''}" style="background:${gradeColor(g)}" title="${grades[g] ? grades[g].length : 0} ETFs">${g}</a>`).join('')}</div>
+        <div class="spectrum">${GRADES.map(g => `<a${grades[g] && grades[g].length ? ` href="/etfs/grade/${gradeSlugFix(g)}"` : ''} class="${g === e.grade ? 'cur' : ''}" style="background:${gradeColor(g)}" title="${grades[g] ? grades[g].length : 0} ETFs">${g}</a>`).join('')}</div>
       </div>
       <div class="card">
         <h3 style="color:var(--green-dark);font-weight:900;margin-bottom:4px">Yield vs. the Field</h3>
