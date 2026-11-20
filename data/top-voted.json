@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T00:18:48.425Z",
+  "updated": "2026-11-20T14:54:33.238Z",
   "total_tracked": 173,
   "top": [
     {
@@ -15,27 +15,27 @@
       "yield": "21%"
     },
     {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 17,
+      "yield": "11.40%"
+    },
+    {
       "symbol": "FIZY",
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
       "votes": 16,
       "yield": "14%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 15,
-      "yield": "11.40%"
-    },
-    {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 14,
+      "votes": 15,
       "yield": "2.1%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "40.5%"
     },
     {
