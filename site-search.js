@@ -43,6 +43,7 @@ header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;curso
  .tde-head .tde-meta,.tde-head .tde-gr{display:none}
 }
 .tde-head,.tde-head *{box-sizing:border-box}
+header.tde-head{line-height:1.2}
 .tde-head a{margin:0;border:0;text-transform:none;letter-spacing:normal;box-shadow:none}
 .tde-head .tde-pro{border:2px solid #FF8C00}
 .tde-head .tde-logo svg{height:28px;width:auto;flex-shrink:0;display:block}
