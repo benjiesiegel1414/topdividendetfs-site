@@ -7,7 +7,7 @@
 html,body{overflow-x:clip!important}
 header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;cursor:auto;width:100%;margin:0;box-sizing:border-box;background:#1A3C34;box-shadow:0 2px 10px rgba(0,0,0,.18);font-family:inherit}
 .tde-head .tde-in{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:18px}
-.tde-head .tde-logo{color:#fff;text-decoration:none;font-weight:900;font-size:23px;letter-spacing:-.3px;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.tde-head .tde-logo{color:#fff;text-decoration:none;font-weight:900;font-size:23px;letter-spacing:-.3px;white-space:nowrap;display:flex;align-items:center;gap:9px}
 .tde-head .tde-logo b{font-weight:900;color:#fff}.tde-logo i{font-style:normal;color:#7FD1B9}
 .tde-head .tde-search{position:relative;flex:1;max-width:527px;margin:0 auto}
 .tde-head .tde-box{display:flex;align-items:center;gap:10px;background:#fff;border-radius:10px;padding:0 11px;height:39px;border:2px solid transparent;transition:border-color .15s,box-shadow .15s}
@@ -44,8 +44,8 @@ header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;curso
 }
 .tde-head a{margin:0;border:0;text-transform:none;letter-spacing:normal;box-shadow:none}
 .tde-head .tde-pro{border:2px solid #FF8C00}
-.tde-head .tde-logo svg{width:33px;height:33px;flex-shrink:0}
-@media(max-width:760px){.tde-head .tde-logo svg{width:29px;height:29px}}
+.tde-head .tde-logo svg{height:28px;width:auto;flex-shrink:0;display:block}
+@media(max-width:760px){.tde-head .tde-logo svg{height:24px}}
 .tde-head .tde-gh{display:flex;justify-content:space-between;align-items:center}
 .tde-head .tde-clr{font:inherit;font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#2E5D54;background:none;border:0;cursor:pointer;padding:0}
 .tde-head .tde-clr:hover{text-decoration:underline}`;
@@ -53,7 +53,7 @@ header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;curso
   if (document.getElementById('tdeHeadEl')) return;
   var wrap = document.createElement('div');
   wrap.innerHTML = '<header class="tde-head" id="tdeHeadEl"><div class="tde-in">' +
-    '<a class="tde-logo" href="/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 16 H34" stroke="#FFD23F" stroke-width="4.4" stroke-linecap="round"/><path d="M14 24 H28" stroke="#7FD1B9" stroke-width="4.4" stroke-linecap="round"/><path d="M14 32 H22" stroke="#7FD1B9" stroke-width="4.4" stroke-linecap="round" opacity=".6"/></svg><span><b>TopDividendETFs</b><i>.com</i></span></a>' +
+    '<a class="tde-logo" href="/"><svg viewBox="0 0 32 35" aria-hidden="true"><rect x="3" y="4.8" width="26" height="4.4" rx="2.2" fill="#34C78A"/><rect x="3" y="11.8" width="20" height="4.4" rx="2.2" fill="#6FD8AD"/><rect x="3" y="18.8" width="14" height="4.4" rx="2.2" fill="#B4EBD3"/><rect x="3" y="25.8" width="8" height="4.4" rx="2.2" fill="#FFFFFF"/></svg><span><b>TopDividendETFs</b><i>.com</i></span></a>' +
     '<div class="tde-search" role="search"><label class="tde-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>' +
     '<input id="tdeQ" type="search" autocomplete="off" spellcheck="false" placeholder="Search ETFs, issuers or articles. Try SPYI or NEOS" aria-label="Search the site"><kbd>/</kbd></label>' +
     '<div class="tde-dd" id="tdeDD" role="listbox"></div></div>' +
