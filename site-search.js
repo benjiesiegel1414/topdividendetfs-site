@@ -74,7 +74,8 @@ header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;curso
   addEventListener('resize', offsetSticky);
   if (matchMedia('(max-width:760px)').matches) document.getElementById('tdeQ').placeholder = 'Search ETFs, issuers or articles';
   var q = document.getElementById('tdeQ'), dd = document.getElementById('tdeDD'), idx = null, sel = 0, rows = [];
-  function load() { if (idx) return Promise.resolve(idx); return fetch('/data/search-index.json').then(function (r) { return r.json(); }).then(function (d) { idx = d; return d; }); }
+  var idxP = null;
+  function load() { return idxP || (idxP = fetch('/data/search-index.json').then(function (r) { return r.json(); }).then(function (d) { idx = d; return d; }).catch(function (e) { idxP = null; throw e; })); }
   function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function score(it, w) {
     var s = (it.s || '').toLowerCase(), n = (it.n || '').toLowerCase(), is = (it.is || '').toLowerCase();
@@ -105,8 +106,9 @@ header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;curso
     return '<a class="tde-r" href="' + it.u + '"><span class="tde-ic">📰</span><span class="tde-nm">' + esc(it.n) + '</span></a>';
   }
   function render() {
-    var v = q.value; if (!v.trim()) { dd.classList.remove('open'); return; }
+    if (!q.value.trim()) { dd.classList.remove('open'); return; }
     load().then(function () {
+      var v = q.value; if (!v.trim()) { dd.classList.remove('open'); return; }   // always use what's in the box now
       var g = search(v), H = { i: 'Issuers', e: 'ETFs', l: 'Lists', b: 'Articles' }, out = '';
       ['i', 'e', 'l', 'b'].forEach(function (k) { if (g[k].length) out += '<div class="tde-g"><div class="tde-gh">' + H[k] + '</div>' + g[k].map(row).join('') + '</div>'; });
       dd.innerHTML = (out || '<div class="tde-empty">No matches for "' + esc(v) + '". Try a ticker like SCHD or an issuer like NEOS.</div>') +
