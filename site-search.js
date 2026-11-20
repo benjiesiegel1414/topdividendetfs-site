@@ -46,6 +46,7 @@ header.tde-head{position:sticky;top:0;z-index:1000;padding:0;display:block;curso
 .tde-head .tde-pro{border:2px solid #FF8C00}
 .tde-head .tde-logo svg{height:28px;width:auto;flex-shrink:0;display:block}
 @media(max-width:760px){.tde-head .tde-logo svg{height:24px}}
+@media(min-width:761px){.tde-head .tde-in{padding:9px 20px;gap:17px}.tde-head .tde-logo{font-size:22px}.tde-head .tde-logo svg{height:26.5px}.tde-head .tde-search{max-width:500px}.tde-head .tde-box{height:37px}.tde-head .tde-box input{font-size:14px}.tde-head .tde-pro{padding:8px 15px;font-size:13.3px}}
 .tde-head .tde-gh{display:flex;justify-content:space-between;align-items:center}
 .tde-head .tde-clr{font:inherit;font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#2E5D54;background:none;border:0;cursor:pointer;padding:0}
 .tde-head .tde-clr:hover{text-decoration:underline}`;
