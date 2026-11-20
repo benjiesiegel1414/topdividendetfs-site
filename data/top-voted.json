@@ -1,18 +1,30 @@
 {
-  "updated": "2026-11-19T15:28:27.127Z",
+  "updated": "2026-11-20T00:18:48.425Z",
   "total_tracked": 173,
   "top": [
     {
+      "symbol": "HAKY",
+      "name": "Amplify HACK Cybersecurity Covered Call ETF",
+      "votes": 21,
+      "yield": "16%"
+    },
+    {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 19,
+      "votes": 20,
       "yield": "21%"
     },
     {
       "symbol": "FIZY",
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 15,
+      "votes": 16,
       "yield": "14%"
+    },
+    {
+      "symbol": "SPYI",
+      "name": "NEOS S&P 500 High Income ETF",
+      "votes": 15,
+      "yield": "11.40%"
     },
     {
       "symbol": "DIVB",
@@ -21,22 +33,16 @@
       "yield": "2.1%"
     },
     {
-      "symbol": "SPYI",
-      "name": "NEOS S&P 500 High Income ETF",
-      "votes": 14,
-      "yield": "11.40%"
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 10,
+      "yield": "40.5%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
       "votes": 10,
       "yield": "8.3%"
-    },
-    {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
-      "yield": "40.5%"
     },
     {
       "symbol": "CSHI",
@@ -55,12 +61,6 @@
       "name": "Overlay Shares Large Cap Equity ETF",
       "votes": 5,
       "yield": "10.8%"
-    },
-    {
-      "symbol": "TDVI",
-      "name": "FT Vest Technology Dividend Target Income ETF",
-      "votes": 5,
-      "yield": "7.7%"
     }
   ]
 }
