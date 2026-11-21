@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T05:41:08.840Z",
+  "updated": "2026-11-21T14:13:33.892Z",
   "total_tracked": 173,
   "top": [
     {
@@ -7,6 +7,12 @@
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 1,
       "yield": "40.5%"
+    },
+    {
+      "symbol": "OVF",
+      "name": "Overlay Shares Foreign Equity ETF",
+      "votes": 1,
+      "yield": "10.6%"
     },
     {
       "symbol": "AAPW",
@@ -55,12 +61,6 @@
       "name": "Roundhill AMZN WeeklyPay ETF",
       "votes": 0,
       "yield": "47%"
-    },
-    {
-      "symbol": "AMZY",
-      "name": "YieldMax AMZN Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "51%"
     }
   ]
 }
