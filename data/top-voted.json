@@ -1,12 +1,24 @@
 {
-  "updated": "2026-11-21T14:13:33.892Z",
+  "updated": "2026-11-21T22:46:48.248Z",
   "total_tracked": 173,
   "top": [
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 1,
+      "votes": 3,
       "yield": "40.5%"
+    },
+    {
+      "symbol": "DVY",
+      "name": "iShares Select Dividend ETF",
+      "votes": 1,
+      "yield": "3.3%"
+    },
+    {
+      "symbol": "FDVV",
+      "name": "Fidelity High Dividend ETF",
+      "votes": 1,
+      "yield": "2.8%"
     },
     {
       "symbol": "OVF",
@@ -15,52 +27,40 @@
       "yield": "10.6%"
     },
     {
-      "symbol": "AAPW",
-      "name": "Roundhill AAPL WeeklyPay ETF",
-      "votes": 0,
-      "yield": "35%"
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 1,
+      "yield": "10.8%"
     },
     {
-      "symbol": "ACKY",
-      "name": "VistaShares Target 15 ACKtivist Distribution ETF",
-      "votes": 0,
-      "yield": "15.0%"
+      "symbol": "OVQ",
+      "name": "Overlay Shares Nasdaq 100 Income ETF",
+      "votes": 1,
+      "yield": "12%"
     },
     {
-      "symbol": "AHD",
-      "name": "GraniteShares Autocallable HOOD ETF",
-      "votes": 0,
-      "yield": "37%"
+      "symbol": "OVS",
+      "name": "Overlay Shares Small Cap Equity ETF",
+      "votes": 1,
+      "yield": "10.5%"
     },
     {
-      "symbol": "AIPI",
-      "name": "REX AI Equity Premium Income ETF",
-      "votes": 0,
-      "yield": "34.8%"
+      "symbol": "SOXY",
+      "name": "YieldMax® Target 12™ Semiconductor Option Income ETF",
+      "votes": 1,
+      "yield": "12%"
     },
     {
-      "symbol": "AMDW",
-      "name": "AMDW AMD WeeklyPay ETF",
-      "votes": 0,
-      "yield": "95.2%"
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 1,
+      "yield": "17.9%"
     },
     {
-      "symbol": "AMDY",
-      "name": "YieldMax AMD Option Income Strategy ETF",
-      "votes": 0,
-      "yield": "56%"
-    },
-    {
-      "symbol": "AMYY",
-      "name": "GraniteShares YieldBOOST AMD ETF",
-      "votes": 0,
-      "yield": "69%"
-    },
-    {
-      "symbol": "AMZW",
-      "name": "Roundhill AMZN WeeklyPay ETF",
-      "votes": 0,
-      "yield": "47%"
+      "symbol": "TMGN",
+      "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
+      "votes": 1,
+      "yield": "21%"
     }
   ]
 }
