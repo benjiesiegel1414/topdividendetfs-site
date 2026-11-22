@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T05:09:11.565Z",
+  "updated": "2026-11-22T14:03:42.490Z",
   "total_tracked": 173,
   "top": [
     {
@@ -45,6 +45,12 @@
       "yield": "13.2%"
     },
     {
+      "symbol": "TDAQ",
+      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "votes": 2,
+      "yield": "17.9%"
+    },
+    {
       "symbol": "BALI",
       "name": "iShares US Large Cap Premium Income Active ETF",
       "votes": 1,
@@ -55,12 +61,6 @@
       "name": "iShares Select Dividend ETF",
       "votes": 1,
       "yield": "3.3%"
-    },
-    {
-      "symbol": "FDVV",
-      "name": "Fidelity High Dividend ETF",
-      "votes": 1,
-      "yield": "2.8%"
     }
   ]
 }
