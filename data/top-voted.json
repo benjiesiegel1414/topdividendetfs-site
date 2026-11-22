@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T14:03:42.490Z",
+  "updated": "2026-11-22T23:14:56.831Z",
   "total_tracked": 173,
   "top": [
     {
@@ -11,8 +11,14 @@
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 6,
+      "votes": 8,
       "yield": "21%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 6,
+      "yield": "2.1%"
     },
     {
       "symbol": "FIZY",
@@ -29,8 +35,14 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 3,
+      "votes": 4,
       "yield": "40.5%"
+    },
+    {
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 4,
+      "yield": "13.2%"
     },
     {
       "symbol": "OVQ",
@@ -39,28 +51,16 @@
       "yield": "12%"
     },
     {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 3,
-      "yield": "13.2%"
-    },
-    {
-      "symbol": "TDAQ",
-      "name": "TappAlpha Innovation 100 Growth & Daily Income ETF",
+      "symbol": "GPIX",
+      "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 2,
-      "yield": "17.9%"
+      "yield": "8.5%"
     },
     {
-      "symbol": "BALI",
-      "name": "iShares US Large Cap Premium Income Active ETF",
-      "votes": 1,
-      "yield": "6.2%"
-    },
-    {
-      "symbol": "DVY",
-      "name": "iShares Select Dividend ETF",
-      "votes": 1,
-      "yield": "3.3%"
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 2,
+      "yield": "10.8%"
     }
   ]
 }
