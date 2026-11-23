@@ -835,6 +835,36 @@
             .hero-jump a { font-size: .78rem; padding: 6px 11px; }
         }
 
+    
+        /* ===== Blog cards v3: whole card clickable, refined look ===== */
+        .blog-grid{gap:24px}
+        .blog-card{position:relative;border-radius:18px;border:1px solid #e1e9e5;box-shadow:0 1px 2px rgba(26,60,52,.04),0 10px 28px rgba(26,60,52,.06);cursor:pointer;transition:transform .22s,box-shadow .22s,border-color .22s;background:#fff}
+        .blog-card:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(26,60,52,.05),0 22px 44px rgba(26,60,52,.14);border-color:#cfe0d8}
+        .blog-card.new-post{border:1px solid #e1e9e5}
+        .blog-card-top{background:radial-gradient(circle at 100% 0%,rgba(245,166,35,.22),transparent 55%),linear-gradient(135deg,#143029 0%,#1A3C34 45%,#2E5D54 100%);padding:18px 22px 16px;min-height:104px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+        .blog-card-top::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent);pointer-events:none}
+        .blog-card-top::after{content:attr(data-mono);position:absolute;right:16px;bottom:-6px;font-size:3.1rem;font-weight:900;letter-spacing:-2px;line-height:1;color:rgba(255,255,255,.1);white-space:nowrap;pointer-events:none}
+        .blog-card-top .card-icon{display:none}
+        .blog-card-top .card-cat{position:relative;display:inline-flex;align-items:center;gap:7px;align-self:flex-start;font-size:.66rem;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 11px;margin-bottom:10px}
+        .blog-card-top .card-cat::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+        .blog-card-top .card-date{position:relative;color:rgba(255,255,255,.72);font-size:.74rem;font-weight:700;letter-spacing:.4px;text-transform:none}
+        .blog-card-top .new-badge{top:16px;right:16px;font-size:.6rem;letter-spacing:1px;padding:4px 10px;box-shadow:0 4px 12px rgba(245,166,35,.4)}
+        .blog-card-body{padding:20px 22px 18px}
+        .blog-card-body h3{font-size:1.12rem;font-weight:900;line-height:1.32;letter-spacing:-.2px;margin-bottom:10px;transition:color .2s}
+        .blog-card:hover .blog-card-body h3{color:var(--green-light)}
+        .blog-card-body p{font-size:.9rem;line-height:1.62;color:#5b6b66;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+        .tk-row{margin:0 0 14px}
+        .tk{font-size:.68rem;letter-spacing:.3px;background:#eef6f2;border:1px solid #d6e8df;border-radius:6px;padding:3px 8px}
+        .blog-card-body .read-more{position:static;margin-top:auto;align-self:stretch;display:flex;justify-content:space-between;align-items:center;background:none;color:var(--green);padding:14px 0 0;border-top:1px solid #edf2ef;border-radius:0;font-size:.84rem;font-weight:900;letter-spacing:.2px}
+        .blog-card-body .read-more:hover{background:none;transform:none}
+        .blog-card-body .read-more::after{content:"";position:absolute;inset:0;z-index:2}
+        .blog-card-body .read-more .arr{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#eef6f2;color:var(--green);transition:background .2s,color .2s,transform .2s}
+        .blog-card:hover .read-more .arr{background:var(--green);color:#fff;transform:translateX(3px)}
+        .side-icon{display:none}
+        .side-card{border-left:0;border:1px solid #e1e9e5;border-radius:14px;box-shadow:0 8px 22px rgba(26,60,52,.06);position:relative;padding-left:22px}
+        .side-card::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:var(--gold)}
+        .lead-card{border-radius:18px}
+        .start-card{border-top:0;border:1px solid #e1e9e5;border-radius:14px;box-shadow:0 8px 22px rgba(26,60,52,.06)}
     </style>
     <script type="application/ld+json">
 {
@@ -1275,11 +1305,11 @@
         <div class="header-inner">
             <a href="https://topdividendetfs.com" class="logo">TopDividendETFs.com</a>
             <div class="header-links">
-                <a href="https://topdividendetfs.com">&#128202; ETF Rankings</a>
-                <a href="https://weeklyetfs.com" target="_blank">&#128197; WeeklyETFs</a>
-                <a href="https://monthlyetfs.com" target="_blank">&#128198; MonthlyETFs</a>
-                <a href="https://topdividendtools.com" target="_blank">&#128295; Dividend Tools</a>
-                <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="gold-link">&#128081; Stock Pick Club</a>
+                <a href="https://topdividendetfs.com">ETF Rankings</a>
+                <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs</a>
+                <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs</a>
+                <a href="https://topdividendtools.com" target="_blank">Dividend Tools</a>
+                <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="gold-link">Stock Pick Club</a>
             </div>
         </div>
     </header>
@@ -1290,11 +1320,11 @@
         <div class="network-bar-inner">
             <div class="network-bar-label">Our Sites</div>
             <div class="network-bar-links">
-                <a href="https://topdividendetfs.com">&#128202; TopDividendETFs.com</a>
-                <a href="https://weeklyetfs.com" target="_blank">&#128197; WeeklyETFs.com</a>
-                <a href="https://monthlyetfs.com" target="_blank">&#128198; MonthlyETFs.com</a>
-                <a href="https://topdividendtools.com" target="_blank">&#128295; TopDividendTools.com</a>
-                <a href="https://topdividendetfs.com/blog" class="nb-current">&#128221; Blog</a>
+                <a href="https://topdividendetfs.com">TopDividendETFs.com</a>
+                <a href="https://weeklyetfs.com" target="_blank">WeeklyETFs.com</a>
+                <a href="https://monthlyetfs.com" target="_blank">MonthlyETFs.com</a>
+                <a href="https://topdividendtools.com" target="_blank">TopDividendTools.com</a>
+                <a href="https://topdividendetfs.com/blog" class="nb-current">Blog</a>
                 <a href="https://topetfs.com/" target="_blank">📰 TopETFs.com</a>
             </div>
         </div>
@@ -1302,15 +1332,15 @@
 
     <!-- ── HERO ── -->
     <section class="hero">
-        <div class="hero-badge">&#10022; 69 Articles &bull; Updated Nov 15, 2026 &#10022;</div>
+        <div class="hero-badge">69 Articles &bull; Updated Nov 15, 2026 </div>
         <h1>TopDividendETFs Blog</h1>
         <p>Dividend dates, payout histories, rankings and plain-English guides for income investors. Search any ticker or browse by topic.</p>
         <div class="hero-search">
-            <span aria-hidden="true">&#128269;</span>
+            <span aria-hidden="true"></span>
             <input id="blogSearch" type="search" placeholder="Search articles, e.g. SCHD, JEPQ, weekly, price decay..." aria-label="Search all articles" autocomplete="off">
         </div>
         <nav class="hero-jump" aria-label="Jump to section">
-            <a href="#latest">&#10024; Latest</a><a href="#start-here">&#127793; Start Here</a><a href="#all-articles">&#128218; All Articles</a><a href="#topics">&#128194; Browse by Topic</a><a href="#tools">&#128202; Live Data &amp; Tools</a>
+            <a href="#latest">Latest</a><a href="#start-here">Start Here</a><a href="#all-articles">All Articles</a><a href="#topics">Browse by Topic</a><a href="#tools">Live Data &amp; Tools</a>
         </nav>
     </section>
 
@@ -1329,13 +1359,13 @@
         <div class="section-label" id="latest"><span>Latest Articles</span></div>
         <div class="latest-wrap">
             <a class="lead-card" href="https://topdividendetfs.com/amdy-etf-dividend-history-2026.html">
-                <span class="lead-badge">&#10024; Newest Article</span>
+                <span class="lead-badge">Newest Article</span>
                 <span class="lead-meta">Nov 22, 2026 &bull; Dividend Dates &amp; History</span>
                 <h2>AMDY Dividend History 2026: Every Weekly Payout and Yield</h2>
                 <p>$AMDY paid 47 weekly checks worth about $28.55 per share in 2026, and the latest was $0.4258. Every payout since it went weekly, the 56% yield, return of capital, the 96% YTD total return and what $10,000 pays.</p>
                 <span class="lead-btn">Read the article &#8594;</span>
             </a>
-            <div class="side-list"><a class="side-card" href="https://topdividendetfs.com/sgov-etf-dividend-dates-2026.html"><span class="side-icon">&#128197;</span><span><em>Nov 20, 2026 &bull; Dividend Dates &amp; History</em><strong>SGOV Dividend Dates 2026: Next Ex-Date, Every Payout</strong></span></a><a class="side-card" href="https://topdividendetfs.com/jepq-vs-qqqi-2026.html"><span class="side-icon">&#9878;&#65039;</span><span><em>Nov 17, 2026 &bull; ETF Deep Dives &amp; Comparisons</em><strong>JEPQ vs QQQI 2026: Which Nasdaq Income ETF Is Better?</strong></span></a><a class="side-card" href="https://topdividendetfs.com/ulty-etf-dividend-history-2026.html"><span class="side-icon">&#128197;</span><span><em>Nov 15, 2026 &bull; Dividend Dates &amp; History</em><strong>ULTY Dividend History 2026: Every Weekly Payout and Yield</strong></span></a></div>
+            <div class="side-list"><a class="side-card" href="https://topdividendetfs.com/sgov-etf-dividend-dates-2026.html"><span class="side-icon"></span><span><em>Nov 20, 2026 &bull; Dividend Dates &amp; History</em><strong>SGOV Dividend Dates 2026: Next Ex-Date, Every Payout</strong></span></a><a class="side-card" href="https://topdividendetfs.com/jepq-vs-qqqi-2026.html"><span class="side-icon"></span><span><em>Nov 17, 2026 &bull; ETF Deep Dives &amp; Comparisons</em><strong>JEPQ vs QQQI 2026: Which Nasdaq Income ETF Is Better?</strong></span></a><a class="side-card" href="https://topdividendetfs.com/ulty-etf-dividend-history-2026.html"><span class="side-icon"></span><span><em>Nov 15, 2026 &bull; Dividend Dates &amp; History</em><strong>ULTY Dividend History 2026: Every Weekly Payout and Yield</strong></span></a></div>
         </div>
 
         <!-- START HERE -->
@@ -1344,7 +1374,7 @@
 
         <!-- PRO PROMO -->
         <div class="pro-strip">
-            <div><strong>&#128680; Want the live numbers behind every article?</strong><span>TopDividendETFsPRO screens 190+ income ETFs by yield, total return, price decay and rating, with downloadable watchlists.</span></div>
+            <div><strong>Want the live numbers behind every article?</strong><span>TopDividendETFsPRO screens 190+ income ETFs by yield, total return, price decay and rating, with downloadable watchlists.</span></div>
             <a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Try PRO &#8594;</a>
         </div>
 
@@ -1352,7 +1382,7 @@
         <div class="section-label" id="all-articles"><span>All Articles</span></div>
         <div class="filter-bar" id="filterBar">
             <div class="chip-row" role="group" aria-label="Filter by topic">
-                <button type="button" class="chip active" data-f="all">All <span class="cnt">71</span></button><button type="button" class="chip" data-f="schd">&#127919; SCHD Hub <span class="cnt">15</span></button><button type="button" class="chip" data-f="dates">&#128197; Dividend Dates &amp; History <span class="cnt">26</span></button><button type="button" class="chip" data-f="rankings">&#127942; Rankings &amp; Lists <span class="cnt">6</span></button><button type="button" class="chip" data-f="issuers">&#127970; By ETF Issuer <span class="cnt">9</span></button><button type="button" class="chip" data-f="analysis">&#128270; ETF Deep Dives &amp; Comparisons <span class="cnt">6</span></button><button type="button" class="chip" data-f="guides">&#127793; Beginner Guides &amp; Strategy <span class="cnt">4</span></button><button type="button" class="chip" data-f="tools">&#128295; Investing Tools &amp; Reviews <span class="cnt">5</span></button>
+                <button type="button" class="chip active" data-f="all">All <span class="cnt">71</span></button><button type="button" class="chip" data-f="schd">SCHD Hub <span class="cnt">15</span></button><button type="button" class="chip" data-f="dates">Dividend Dates &amp; History <span class="cnt">26</span></button><button type="button" class="chip" data-f="rankings">Rankings &amp; Lists <span class="cnt">6</span></button><button type="button" class="chip" data-f="issuers">By ETF Issuer <span class="cnt">9</span></button><button type="button" class="chip" data-f="analysis">ETF Deep Dives &amp; Comparisons <span class="cnt">6</span></button><button type="button" class="chip" data-f="guides">Beginner Guides &amp; Strategy <span class="cnt">4</span></button><button type="button" class="chip" data-f="tools">Investing Tools &amp; Reviews <span class="cnt">5</span></button>
             </div>
             <div class="filter-row2">
                 <div class="tchip-row" role="group" aria-label="Filter by ticker"><span class="tlabel">Popular tickers:</span><button type="button" class="tchip" data-t="SCHD">$SCHD <span class="cnt">15</span></button><button type="button" class="tchip" data-t="QQQI">$QQQI <span class="cnt">8</span></button><button type="button" class="tchip" data-t="SPYI">$SPYI <span class="cnt">4</span></button><button type="button" class="tchip" data-t="JEPQ">$JEPQ <span class="cnt">4</span></button><button type="button" class="tchip" data-t="JEPI">$JEPI <span class="cnt">2</span></button><button type="button" class="tchip" data-t="CHPY">$CHPY <span class="cnt">2</span></button><button type="button" class="tchip" data-t="VOO">$VOO <span class="cnt">2</span></button><button type="button" class="tchip" data-t="VYM">$VYM <span class="cnt">2</span></button><button type="button" class="tchip" data-t="FDVV">$FDVV <span class="cnt">2</span></button><button type="button" class="tchip" data-t="ULTY">$ULTY <span class="cnt">1</span></button><button type="button" class="tchip" data-t="ISBG">$ISBG <span class="cnt">1</span></button><button type="button" class="tchip" data-t="NOBL">$NOBL <span class="cnt">1</span></button><button type="button" class="tchip" data-t="QYLD">$QYLD <span class="cnt">1</span></button><button type="button" class="tchip" data-t="NVDY">$NVDY <span class="cnt">1</span></button></div>
@@ -1367,7 +1397,7 @@
         <div class="blog-grid" id="blogGrid">
             <div class="blog-card" data-cat="dates" data-date="2026-11-22" data-tickers="AMDY">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 22, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1379,7 +1409,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-20" data-tickers="SGOV">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 20, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1391,7 +1421,7 @@
             </div>
             <div class="blog-card" data-cat="analysis" data-date="2026-11-17" data-tickers="JEPQ QQQI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#9878;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 17, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
                 </div>
                 <div class="blog-card-body">
@@ -1403,7 +1433,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-15" data-tickers="ULTY">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 15, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1415,7 +1445,7 @@
             </div>
             <div class="blog-card" data-cat="guides" data-date="2026-11-15" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 15, 2026 &bull; Beginner Guides &amp; Strategy</div>
                 </div>
                 <div class="blog-card-body">
@@ -1427,7 +1457,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-13" data-tickers="ISBG">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#129689;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 13, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1439,7 +1469,7 @@
             </div>
             <div class="blog-card" data-cat="tools" data-date="2026-11-11" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 11, 2026 &bull; Investing Tools &amp; Reviews</div>
                 </div>
                 <div class="blog-card-body">
@@ -1451,7 +1481,7 @@
             </div>
             <div class="blog-card" data-cat="analysis" data-date="2026-11-11" data-tickers="QQQI SPYI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#9878;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 11, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
                 </div>
                 <div class="blog-card-body">
@@ -1463,7 +1493,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-11-11" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128293;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Updated Nov 11, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1475,7 +1505,7 @@
             </div>
             <div class="blog-card" data-cat="rankings" data-date="2026-11-10" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128737;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 10, 2026 &bull; Rankings &amp; Lists</div>
                 </div>
                 <div class="blog-card-body">
@@ -1487,7 +1517,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-08" data-tickers="NOBL">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 8, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1499,7 +1529,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-06" data-tickers="QYLD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 6, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1511,7 +1541,7 @@
             </div>
             <div class="blog-card" data-cat="tools" data-date="2026-11-06" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128467;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 6, 2026 &bull; Investing Tools &amp; Reviews</div>
                 </div>
                 <div class="blog-card-body">
@@ -1523,7 +1553,7 @@
             </div>
             <div class="blog-card" data-cat="analysis" data-date="2026-11-05" data-tickers="QQQI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128201;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 5, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
                 </div>
                 <div class="blog-card-body">
@@ -1535,7 +1565,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-11-03" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#9888;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 3, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1547,7 +1577,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-03" data-tickers="NVDY">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 3, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1559,7 +1589,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-11-01" data-tickers="MSTY">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Nov 1, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1571,7 +1601,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-10-30" data-tickers="DIVO">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 30, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1583,7 +1613,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127970;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1595,7 +1625,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1607,7 +1637,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#9889;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1619,7 +1649,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127760;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1631,7 +1661,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127963;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1643,7 +1673,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1655,7 +1685,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-29" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128266;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 29, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1667,7 +1697,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-10-28" data-tickers="GPIX">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 28, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1679,7 +1709,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-10-26" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128260;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 26, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1691,7 +1721,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-10-24" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127974;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 24, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1703,7 +1733,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-10-21" data-tickers="GPIQ">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 21, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1715,7 +1745,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-10-19" data-tickers="JEPI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128202;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 19, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1727,7 +1757,7 @@
             </div>
             <div class="blog-card" data-cat="tools" data-date="2026-10-15" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128269;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 15, 2026 &bull; Investing Tools &amp; Reviews</div>
                 </div>
                 <div class="blog-card-body">
@@ -1739,7 +1769,7 @@
             </div>
             <div class="blog-card" data-cat="guides" data-date="2026-10-10" data-tickers="QQQI SPYI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#129534;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 10, 2026 &bull; Beginner Guides &amp; Strategy</div>
                 </div>
                 <div class="blog-card-body">
@@ -1751,7 +1781,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-10-06" data-tickers="CHPY">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 6, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1763,7 +1793,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-10-02" data-tickers="JEPI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 2, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1775,7 +1805,7 @@
             </div>
             <div class="blog-card" data-cat="rankings" data-date="2026-10-02" data-tickers="VOO">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Oct 2, 2026 &bull; Rankings &amp; Lists</div>
                 </div>
                 <div class="blog-card-body">
@@ -1787,7 +1817,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-09-27" data-tickers="VOO">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Sep 27, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1799,7 +1829,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-09-22" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128227;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Sep 22, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1811,7 +1841,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-09-21" data-tickers="SCHD QCOM">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128260;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Sep 21, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1823,7 +1853,7 @@
             </div>
             <div class="blog-card" data-cat="guides" data-date="2026-09-21" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127793;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Sep 21, 2026 &bull; Beginner Guides &amp; Strategy</div>
                 </div>
                 <div class="blog-card-body">
@@ -1835,7 +1865,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-09-02" data-tickers="SPYI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Sep 2, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1847,7 +1877,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-09-02" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127919;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Sep 2, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1859,7 +1889,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-08-20" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128293;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Updated Aug 20, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1871,7 +1901,7 @@
             </div>
             <div class="blog-card" data-cat="issuers" data-date="2026-08-09" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#129516;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Aug 9, 2026 &bull; By ETF Issuer</div>
                 </div>
                 <div class="blog-card-body">
@@ -1883,7 +1913,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-08-07" data-tickers="JEPQ">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Aug 7, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1895,7 +1925,7 @@
             </div>
             <div class="blog-card" data-cat="analysis" data-date="2026-08-01" data-tickers="OVL">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128737;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Aug 1, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
                 </div>
                 <div class="blog-card-body">
@@ -1907,7 +1937,7 @@
             </div>
             <div class="blog-card" data-cat="rankings" data-date="2026-07-15" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#127942;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Jul 15, 2026 &bull; Rankings &amp; Lists</div>
                 </div>
                 <div class="blog-card-body">
@@ -1919,7 +1949,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-07-01" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128260;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">July 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1931,7 +1961,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-06-01" data-tickers="VYM">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">June 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1943,7 +1973,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-06-01" data-tickers="SCHD VYM">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#9878;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">June 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -1955,7 +1985,7 @@
             </div>
             <div class="blog-card" data-cat="analysis" data-date="2026-06-01" data-tickers="QQQI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#9888;&#65039;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">June 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
                 </div>
                 <div class="blog-card-body">
@@ -1967,7 +1997,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-06-01" data-tickers="FDVV">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">June 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1979,7 +2009,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-06-01" data-tickers="FDVV">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">June 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -1991,7 +2021,7 @@
             </div>
             <div class="blog-card" data-cat="tools" data-date="2026-06-01" data-tickers="CHPY">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#129518;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">June 2026 &bull; Investing Tools &amp; Reviews</div>
                 </div>
                 <div class="blog-card-body">
@@ -2003,7 +2033,7 @@
             </div>
             <div class="blog-card" data-cat="analysis" data-date="2026-05-19" data-tickers="QQQI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">May 19, 2026 &bull; ETF Deep Dives &amp; Comparisons</div>
                 </div>
                 <div class="blog-card-body">
@@ -2015,7 +2045,7 @@
             </div>
             <div class="blog-card" data-cat="rankings" data-date="2026-05-01" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">May 2026 &bull; Rankings &amp; Lists</div>
                 </div>
                 <div class="blog-card-body">
@@ -2027,7 +2057,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-05-01" data-tickers="QQQI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">May 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -2051,7 +2081,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-04-07" data-tickers="JEPQ">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Apr 7, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -2063,7 +2093,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-04-02" data-tickers="JEPQ">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Apr 2, 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -2075,7 +2105,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-04-01" data-tickers="SPYI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">April 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -2087,7 +2117,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-04-01" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">April 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -2099,7 +2129,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-04-01" data-tickers="QQQI">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">April 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -2111,7 +2141,7 @@
             </div>
             <div class="blog-card" data-cat="dates" data-date="2026-04-01" data-tickers="DGRO">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">April 2026 &bull; Dividend Dates &amp; History</div>
                 </div>
                 <div class="blog-card-body">
@@ -2123,7 +2153,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-03-22" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128260;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Mar 22, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -2135,7 +2165,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-03-01" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128181;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">March 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -2147,7 +2177,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-02-01" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#129518;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Feb 1, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -2159,7 +2189,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-01-15" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128203;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Jan 15, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -2171,7 +2201,7 @@
             </div>
             <div class="blog-card" data-cat="rankings" data-date="2026-01-15" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128176;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Jan 15, 2026 &bull; Rankings &amp; Lists</div>
                 </div>
                 <div class="blog-card-body">
@@ -2183,7 +2213,7 @@
             </div>
             <div class="blog-card" data-cat="schd" data-date="2026-01-08" data-tickers="SCHD">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128197;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">Jan 8, 2026 &bull; SCHD Hub</div>
                 </div>
                 <div class="blog-card-body">
@@ -2195,7 +2225,7 @@
             </div>
             <div class="blog-card" data-cat="rankings" data-date="2026-01-01" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128640;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">January 2026 &bull; Rankings &amp; Lists</div>
                 </div>
                 <div class="blog-card-body">
@@ -2207,7 +2237,7 @@
             </div>
             <div class="blog-card" data-cat="tools" data-date="2026-01-01" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128200;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">January 2026 &bull; Investing Tools &amp; Reviews</div>
                 </div>
                 <div class="blog-card-body">
@@ -2219,7 +2249,7 @@
             </div>
             <div class="blog-card" data-cat="guides" data-date="2026-01-01" data-tickers="">
                 <div class="blog-card-top">
-                    <span class="card-icon">&#128221;</span>
+                    <span class="card-icon" aria-hidden="true"></span>
                     <div class="card-date">January 2026 &bull; Beginner Guides &amp; Strategy</div>
                 </div>
                 <div class="blog-card-body">
@@ -2241,7 +2271,7 @@
         <div class="section-label" id="topics"><span>Browse Every Article by Topic</span></div>
         <div class="dir-grid">
             <details class="dir-block" id="topic-schd" open>
-                <summary><span>&#127919; SCHD Hub</span><span class="cnt">15 articles</span></summary>
+                <summary><span>SCHD Hub</span><span class="cnt">15 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/how-often-does-schd-rebalance.html">How Often Does SCHD Rebalance? 2026 Schedule Explained</a><span>Oct 26, 2026</span></li>
                     <li><a href="https://topdividendetfs.com/schd-dividend-calculator">SCHD Dividend Calculator</a><span>Feb 1, 2026</span></li>
@@ -2261,7 +2291,7 @@
                 </ul>
             </details>
             <details class="dir-block" id="topic-dates" open>
-                <summary><span>&#128197; Dividend Dates &amp; History</span><span class="cnt">27 articles</span></summary>
+                <summary><span>Dividend Dates &amp; History</span><span class="cnt">27 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/amdy-etf-dividend-history-2026.html">AMDY Dividend History 2026: Every Weekly Payout and Yield</a><span>Nov 22, 2026</span></li>
                     <li><a href="https://topdividendetfs.com/btci">BTCI ETF: Bitcoin Income Fund Breakdown</a><span>May 2026</span></li>
@@ -2293,7 +2323,7 @@
                 </ul>
             </details>
             <details class="dir-block" id="topic-rankings">
-                <summary><span>&#127942; Rankings &amp; Lists</span><span class="cnt">6 articles</span></summary>
+                <summary><span>Rankings &amp; Lists</span><span class="cnt">6 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/best-high-dividend-yield-etfs-2026">Best High Dividend Yield ETFs for 2026</a><span>Jul 15, 2026</span></li>
                     <li><a href="https://topdividendetfs.com/dividend-etfs-beating-voo">Dividend ETFs Beating $VOO: The Funds Outperforming the S&amp;P 500</a><span>Oct 2, 2026</span></li>
@@ -2304,7 +2334,7 @@
                 </ul>
             </details>
             <details class="dir-block" id="topic-issuers">
-                <summary><span>&#127970; By ETF Issuer</span><span class="cnt">9 articles</span></summary>
+                <summary><span>By ETF Issuer</span><span class="cnt">9 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/amplify-highest-yielding-etfs-2026.html">Amplify Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
                     <li><a href="https://topdividendetfs.com/first-trust-highest-yielding-etfs-2026.html">First Trust Highest Yielding ETFs 2026: Full List Ranked</a><span>Oct 29, 2026</span></li>
@@ -2318,7 +2348,7 @@
                 </ul>
             </details>
             <details class="dir-block" id="topic-analysis">
-                <summary><span>&#128270; ETF Deep Dives &amp; Comparisons</span><span class="cnt">6 articles</span></summary>
+                <summary><span>ETF Deep Dives &amp; Comparisons</span><span class="cnt">6 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/jepq-vs-qqqi-2026.html">JEPQ vs QQQI 2026: Which Nasdaq Income ETF Is Better?</a><span>Nov 17, 2026</span></li>
                     <li><a href="https://topdividendetfs.com/ovl-etf-monthly-income-2026">OVL ETF: The 10% Monthly Payer Built to Beat the S&amp;P 500</a><span>Aug 1, 2026</span></li>
@@ -2329,7 +2359,7 @@
                 </ul>
             </details>
             <details class="dir-block" id="topic-guides">
-                <summary><span>&#127793; Beginner Guides &amp; Strategy</span><span class="cnt">4 articles</span></summary>
+                <summary><span>Beginner Guides &amp; Strategy</span><span class="cnt">4 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/best-dividend-growth-etfs-2026.html">Best Dividend Growth ETFs 2026: Ranked by How Fast They Raise Your Paycheck</a><span>Nov 15, 2026</span></li>
                     <li><a href="https://topdividendetfs.com/dividend-investing-for-beginners">Dividend Investing for Beginners: How to Actually Start in 2026</a><span>Sep 21, 2026</span></li>
@@ -2338,7 +2368,7 @@
                 </ul>
             </details>
             <details class="dir-block" id="topic-tools">
-                <summary><span>&#128295; Investing Tools &amp; Reviews</span><span class="cnt">5 articles</span></summary>
+                <summary><span>Investing Tools &amp; Reviews</span><span class="cnt">5 articles</span></summary>
                 <ul>
                     <li><a href="https://topdividendetfs.com/chpy-etf-calculator">CHPY ETF Dividend Calculator</a><span>June 2026</span></li>
                     <li><a href="https://topdividendetfs.com/track-every-dividend-every-brokerage-merrydiv.html">How to Track Every Dividend From Every Brokerage in One Place</a><span>Nov 11, 2026</span></li>
@@ -2352,16 +2382,16 @@
         <!-- LIVE DATA & TOOLS -->
         <div class="section-label" id="tools"><span>Live Data &amp; Free Tools</span></div>
         <div class="tool-grid">
-            <a class="tool-card" href="https://topdividendetfs.com/big-movers"><span>&#128293;</span><strong>Today's Biggest Movers</strong><em>The largest yield and total return changes, updated daily.</em></a>
-            <a class="tool-card" href="https://topdividendetfs.com/new-etfs"><span>&#127381;</span><strong>New Dividend ETFs</strong><em>The newest funds added to our database, with yields and grades.</em></a>
-            <a class="tool-card" href="https://topdividendetfs.com/top-voted-etfs"><span>&#127942;</span><strong>Top Voted ETFs</strong><em>The dividend ETFs our community ranks highest, live.</em></a>
-            <a class="tool-card" href="https://topdividendetfs.com/etfs/"><span>&#128194;</span><strong>Every ETF Page</strong><em>Yield, history and dividend dates for every fund we track.</em></a>
-            <a class="tool-card" href="https://topdividendetfs.com/schd-dividend-calculator"><span>&#129518;</span><strong>SCHD Dividend Calculator</strong><em>See what SCHD could pay you over 10, 20 or 30 years.</em></a>
-            <a class="tool-card" href="https://dividendprojection.com/" target="_blank" rel="noopener"><span>&#128200;</span><strong>DividendProjection.com</strong><em>Project your future dividend income with live yields.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/big-movers"><span></span><strong>Today's Biggest Movers</strong><em>The largest yield and total return changes, updated daily.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/new-etfs"><span></span><strong>New Dividend ETFs</strong><em>The newest funds added to our database, with yields and grades.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/top-voted-etfs"><span></span><strong>Top Voted ETFs</strong><em>The dividend ETFs our community ranks highest, live.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/etfs/"><span></span><strong>Every ETF Page</strong><em>Yield, history and dividend dates for every fund we track.</em></a>
+            <a class="tool-card" href="https://topdividendetfs.com/schd-dividend-calculator"><span></span><strong>SCHD Dividend Calculator</strong><em>See what SCHD could pay you over 10, 20 or 30 years.</em></a>
+            <a class="tool-card" href="https://dividendprojection.com/" target="_blank" rel="noopener"><span></span><strong>DividendProjection.com</strong><em>Project your future dividend income with live yields.</em></a>
         </div>
 
         <div class="pro-box">
-            <h3>&#11088; Find the Dividend ETFs That Actually Grow Your Income</h3>
+            <h3>Find the Dividend ETFs That Actually Grow Your Income</h3>
             <p>TopDividendETFsPRO is the screener I built for serious income investors: advanced filtering, ratings, live yields, total return and price decay for 190+ income ETFs, plus watchlists you can save and download.</p>
             <p class="pro-price">From $12.95/mo or one-time lifetime access</p>
             <a href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Unlock TopDividendETFsPRO &#8594;</a>
@@ -2374,11 +2404,11 @@
             <h2>Not Just Articles: Free Tools Too</h2>
             <p>We built free calculators, screeners, and ETF rankings for every type of dividend investor.</p>
             <div class="cta-buttons">
-                <a href="https://topdividendetfs.com" class="cta-btn cta-primary">&#128202; Top 100 Dividend ETFs</a>
-                <a href="https://weeklyetfs.com" target="_blank" class="cta-btn">&#128197; Weekly Dividend ETFs</a>
-                <a href="https://monthlyetfs.com" target="_blank" class="cta-btn">&#128198; Monthly Dividend ETFs</a>
-                <a href="https://topdividendtools.com" target="_blank" class="cta-btn">&#128295; More Dividend Tools</a>
-                <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="cta-btn cta-gold">&#128081; Daily Stock Pick Club</a>
+                <a href="https://topdividendetfs.com" class="cta-btn cta-primary">Top 100 Dividend ETFs</a>
+                <a href="https://weeklyetfs.com" target="_blank" class="cta-btn">Weekly Dividend ETFs</a>
+                <a href="https://monthlyetfs.com" target="_blank" class="cta-btn">Monthly Dividend ETFs</a>
+                <a href="https://topdividendtools.com" target="_blank" class="cta-btn">More Dividend Tools</a>
+                <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="cta-btn cta-gold">Daily Stock Pick Club</a>
             </div>
         </div>
 
@@ -2390,31 +2420,31 @@
             <p>Built by the same team. All free, no sign-up required.</p>
             <div class="site-cards">
                 <a href="https://topdividendetfs.com" class="site-card">
-                    <div class="sc-icon">&#128202;</div>
+                    <div class="sc-icon"></div>
                     <div class="sc-name">TopDividendETFs.com</div>
                     <div class="sc-desc">Rankings of the top 100 dividend ETFs by yield, grade, AUM, and more. Updated daily.</div>
                     <div class="sc-btn">Browse Rankings &#8594;</div>
                 </a>
                 <a href="https://weeklyetfs.com" target="_blank" class="site-card">
-                    <div class="sc-icon">&#128197;</div>
+                    <div class="sc-icon"></div>
                     <div class="sc-name">WeeklyETFs.com</div>
                     <div class="sc-desc">Prefer weekly income? The best ETFs that pay dividends every single week, ranked and rated.</div>
                     <div class="sc-btn">See Weekly ETFs &#8594;</div>
                 </a>
                 <a href="https://monthlyetfs.com" target="_blank" class="site-card">
-                    <div class="sc-icon">&#128198;</div>
+                    <div class="sc-icon"></div>
                     <div class="sc-name">MonthlyETFs.com</div>
                     <div class="sc-desc">The ultimate guide to monthly dividend ETFs. Match your income to your monthly expenses.</div>
                     <div class="sc-btn">See Monthly ETFs &#8594;</div>
                 </a>
                 <a href="https://topdividendtools.com" target="_blank" class="site-card">
-                    <div class="sc-icon">&#128295;</div>
+                    <div class="sc-icon"></div>
                     <div class="sc-name">TopDividendTools.com</div>
                     <div class="sc-desc">Free calculators, screeners, and planning tools built for dividend investors at every level.</div>
                     <div class="sc-btn">Try Free Tools &#8594;</div>
                 </a>
                 <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="site-card gold-card">
-                    <div class="sc-icon">&#128081;</div>
+                    <div class="sc-icon"></div>
                     <div class="sc-name">Dividend Stock Picking Club</div>
                     <div class="sc-desc">One researched dividend stock pick delivered to your inbox every single day. Free trial available.</div>
                     <div class="sc-btn">Try Free &#8594;</div>
@@ -2465,7 +2495,7 @@
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="FAQ.html">FAQ</a>
             <a href="schd-dividend-calculator.html">SCHD Calculator</a>
-            <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="fl-gold">&#128081; Stock Pick Club</a>
+            <a href="https://dividendempire2000.gumroad.com/l/DividendClub" target="_blank" class="fl-gold">Stock Pick Club</a>
         </div>
         <p style="margin:10px 0 4px;">
             <strong>
@@ -2507,6 +2537,10 @@
     if(!c.dataset.date) c.dataset.date=guessDate(c);
     var days=(Date.now()-new Date(c.dataset.date+'T12:00:00'))/864e5;
     if(days<=14&&!c.querySelector('.new-badge')){var b=document.createElement('span');b.className='new-badge';b.textContent='NEW';var top=c.querySelector('.blog-card-top');if(top)top.insertBefore(b,top.firstChild);}
+    var top=c.querySelector('.blog-card-top'),cd=c.querySelector('.card-date');
+    if(top&&cd&&!top.querySelector('.card-cat')){var parts=cd.textContent.split('\u2022'),lab=(parts[1]||NAMES[c.dataset.cat]||'Article').trim();cd.textContent=parts[0].trim();var cc=document.createElement('span');cc.className='card-cat';cc.textContent=lab;top.insertBefore(cc,cd);
+      top.setAttribute('data-mono',(c.dataset.tickers||'').split(/\s+/)[0]||({schd:'SCHD',dates:'DATES',rankings:'TOP',issuers:'ISSUERS',analysis:'ETF',guides:'GUIDE',tools:'TOOLS'}[c.dataset.cat]||'ETF'));}
+    var rm=c.querySelector('a.read-more');if(rm&&!rm.querySelector('.arr')){rm.innerHTML='<span>Read article</span><span class="arr" aria-hidden="true">&#8594;</span>';var h3=c.querySelector('h3');if(h3)rm.setAttribute('aria-label','Read: '+h3.textContent.trim());}
     c._text=(c.textContent+' '+(c.dataset.tickers||'')).toLowerCase();
     c._title=((c.querySelector('h3')||{}).textContent||'').replace(/^\$/,'').toLowerCase();
   });

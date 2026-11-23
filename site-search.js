@@ -154,3 +154,5 @@ header.tde-head{line-height:1.2}
   document.addEventListener('click', function (e) { if (!e.target.closest('.tde-search')) dd.classList.remove('open'); });
   document.addEventListener('keydown', function (e) { if (e.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); } });
 })();
+/* article side rails (outline, related reading) on blog posts */
+(function(){try{var s=document.createElement('script');s.src='/article-rails.js';s.defer=true;document.head.appendChild(s);}catch(e){}})();
