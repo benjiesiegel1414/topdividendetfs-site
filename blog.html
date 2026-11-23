@@ -1338,7 +1338,7 @@
 
     <!-- ── HERO ── -->
     <section class="hero">
-        <div class="hero-badge">69 Articles &bull; Updated Nov 15, 2026 </div>
+        <div class="hero-badge" id="heroBadge">73 Articles &bull; Updated Nov 23, 2026</div>
         <h1>TopDividendETFs Blog</h1>
         <p>Dividend dates, payout histories, rankings and plain-English guides for income investors. Search any ticker or browse by topic.</p>
         <div class="hero-search">
@@ -2564,6 +2564,8 @@
     c._title=((c.querySelector('h3')||{}).textContent||'').replace(/^\$/,'').toLowerCase();
   });
   cards=[].slice.call(grid.querySelectorAll('.blog-card'));
+  /* keep the hero badge in step with the grid: live article count and newest post date */
+  (function(){var hb=document.getElementById('heroBadge');if(!hb||!cards.length)return;var mx='';cards.forEach(function(c){var d=c.dataset.date||'';if(/^\d{4}-\d{2}-\d{2}$/.test(d)&&d>mx)mx=d;});var t=cards.length+' Articles';if(mx){var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],p=mx.split('-');t+=' \u2022 Updated '+M[+p[1]-1]+' '+(+p[2])+', '+p[0];}hb.textContent=t;})();
   var countEl=document.getElementById('resultCount'), clr=document.getElementById('clearFilters'), more=document.getElementById('showMore'), none=document.getElementById('noResults');
   function order(){
     var s=document.getElementById('blogSort').value;
