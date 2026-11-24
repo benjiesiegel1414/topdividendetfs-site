@@ -1,7 +1,19 @@
 {
-  "updated": "2026-11-24T03:49:20.477Z",
+  "updated": "2026-11-24T16:58:29.055Z",
   "total_tracked": 173,
   "top": [
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 12,
+      "yield": "2.1%"
+    },
+    {
+      "symbol": "HDV",
+      "name": "iShares Core High Dividend ETF",
+      "votes": 11,
+      "yield": "3.1%"
+    },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
@@ -9,28 +21,22 @@
       "yield": "21%"
     },
     {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 9,
-      "yield": "2.1%"
-    },
-    {
-      "symbol": "HDV",
-      "name": "iShares Core High Dividend ETF",
-      "votes": 9,
-      "yield": "3.1%"
-    },
-    {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 7,
-      "yield": "40.5%"
+      "yield": "40.4%"
     },
     {
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
       "votes": 7,
       "yield": "14.1%"
+    },
+    {
+      "symbol": "COWS",
+      "name": "Amplify Cash Flow Dividend Leaders ETF",
+      "votes": 6,
+      "yield": "1.4%"
     },
     {
       "symbol": "FIZY",
@@ -55,12 +61,6 @@
       "name": "Goldman Sachs S&P 500 Premium Income ETF",
       "votes": 4,
       "yield": "8.5%"
-    },
-    {
-      "symbol": "JEPQ",
-      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 4,
-      "yield": "11.7%"
     }
   ]
 }
