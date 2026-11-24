@@ -1,18 +1,24 @@
 {
-  "updated": "2026-11-23T17:25:32.381Z",
+  "updated": "2026-11-24T03:49:20.477Z",
   "total_tracked": 173,
   "top": [
     {
-      "symbol": "HDV",
-      "name": "iShares Core High Dividend ETF",
-      "votes": 8,
-      "yield": "3.1%"
-    },
-    {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 8,
+      "votes": 10,
       "yield": "21%"
+    },
+    {
+      "symbol": "DIVB",
+      "name": "iShares Core Dividend ETF",
+      "votes": 9,
+      "yield": "2.1%"
+    },
+    {
+      "symbol": "HDV",
+      "name": "iShares Core High Dividend ETF",
+      "votes": 9,
+      "yield": "3.1%"
     },
     {
       "symbol": "CHPY",
@@ -21,28 +27,28 @@
       "yield": "40.5%"
     },
     {
-      "symbol": "DIVB",
-      "name": "iShares Core Dividend ETF",
-      "votes": 6,
-      "yield": "2.1%"
+      "symbol": "TYLG",
+      "name": "Information Technology Covered Call & Growth ETF",
+      "votes": 7,
+      "yield": "14.1%"
     },
     {
       "symbol": "FIZY",
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "14%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 5,
+      "votes": 6,
       "yield": "8.3%"
     },
     {
-      "symbol": "TYLG",
-      "name": "Information Technology Covered Call & Growth ETF",
+      "symbol": "OVQ",
+      "name": "Overlay Shares Nasdaq 100 Income ETF",
       "votes": 5,
-      "yield": "14.1%"
+      "yield": "12%"
     },
     {
       "symbol": "GPIX",
@@ -55,12 +61,6 @@
       "name": "JPMorgan NASDAQ Equity Premium Income ETF",
       "votes": 4,
       "yield": "11.7%"
-    },
-    {
-      "symbol": "OVL",
-      "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 4,
-      "yield": "10.8%"
     }
   ]
 }
