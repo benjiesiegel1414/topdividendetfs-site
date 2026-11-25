@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T01:55:08.006Z",
+  "updated": "2026-11-25T16:48:10.926Z",
   "total_tracked": 173,
   "top": [
     {
@@ -18,19 +18,25 @@
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
       "votes": 10,
-      "yield": "21%"
+      "yield": "22%"
     },
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
       "votes": 8,
-      "yield": "40.4%"
+      "yield": "40.5%"
+    },
+    {
+      "symbol": "JEPQ",
+      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
+      "votes": 8,
+      "yield": "11.7%"
     },
     {
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
       "votes": 7,
-      "yield": "14.1%"
+      "yield": "11.7%"
     },
     {
       "symbol": "COWS",
@@ -43,12 +49,6 @@
       "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
       "votes": 6,
       "yield": "14%"
-    },
-    {
-      "symbol": "JEPQ",
-      "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 6,
-      "yield": "11.7%"
     },
     {
       "symbol": "SEPI",
