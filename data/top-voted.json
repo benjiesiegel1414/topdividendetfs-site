@@ -1,30 +1,42 @@
 {
-  "updated": "2026-11-26T01:34:37.399Z",
+  "updated": "2026-11-26T16:24:46.308Z",
   "total_tracked": 173,
   "top": [
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
-      "votes": 15,
+      "votes": 18,
       "yield": "2.1%"
     },
     {
       "symbol": "HDV",
       "name": "iShares Core High Dividend ETF",
-      "votes": 14,
+      "votes": 17,
       "yield": "3.1%"
     },
     {
       "symbol": "HAKY",
       "name": "Amplify HACK Cybersecurity Covered Call ETF",
-      "votes": 13,
+      "votes": 16,
       "yield": "16%"
     },
     {
       "symbol": "TMGN",
       "name": "TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF",
-      "votes": 12,
+      "votes": 15,
       "yield": "22%"
+    },
+    {
+      "symbol": "FIZY",
+      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
+      "votes": 14,
+      "yield": "14%"
+    },
+    {
+      "symbol": "CHPY",
+      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
+      "votes": 10,
+      "yield": "40.5%"
     },
     {
       "symbol": "JEPQ",
@@ -33,34 +45,22 @@
       "yield": "11.7%"
     },
     {
-      "symbol": "CHPY",
-      "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 9,
-      "yield": "40.5%"
+      "symbol": "OVL",
+      "name": "Overlay Shares Large Cap Equity ETF",
+      "votes": 8,
+      "yield": "10.8%"
     },
     {
-      "symbol": "FIZY",
-      "name": "Fitz-Gerald Must Have Portfolio and Options Overlay ETF",
-      "votes": 9,
-      "yield": "14%"
+      "symbol": "SEPI",
+      "name": "Shelton Equity Premium Income ETF",
+      "votes": 8,
+      "yield": "8.3%"
     },
     {
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
       "votes": 7,
       "yield": "11.7%"
-    },
-    {
-      "symbol": "COWS",
-      "name": "Amplify Cash Flow Dividend Leaders ETF",
-      "votes": 6,
-      "yield": "1.4%"
-    },
-    {
-      "symbol": "GPIX",
-      "name": "Goldman Sachs S&P 500 Premium Income ETF",
-      "votes": 6,
-      "yield": "8.5%"
     }
   ]
 }
