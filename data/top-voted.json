@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T16:24:46.308Z",
+  "updated": "2026-11-27T01:29:33.620Z",
   "total_tracked": 173,
   "top": [
     {
@@ -47,19 +47,19 @@
     {
       "symbol": "OVL",
       "name": "Overlay Shares Large Cap Equity ETF",
-      "votes": 8,
+      "votes": 9,
       "yield": "10.8%"
     },
     {
       "symbol": "SEPI",
       "name": "Shelton Equity Premium Income ETF",
-      "votes": 8,
+      "votes": 9,
       "yield": "8.3%"
     },
     {
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
-      "votes": 7,
+      "votes": 8,
       "yield": "11.7%"
     }
   ]
