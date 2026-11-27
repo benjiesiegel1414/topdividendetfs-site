@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-27T01:29:33.620Z",
+  "updated": "2026-11-27T16:09:36.370Z",
   "total_tracked": 173,
   "top": [
     {
       "symbol": "DIVB",
       "name": "iShares Core Dividend ETF",
       "votes": 18,
-      "yield": "2.1%"
+      "yield": "2.3%"
     },
     {
       "symbol": "HDV",
@@ -35,13 +35,13 @@
     {
       "symbol": "CHPY",
       "name": "YieldMax Semiconductor Portfolio Option Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "40.5%"
     },
     {
       "symbol": "JEPQ",
       "name": "JPMorgan NASDAQ Equity Premium Income ETF",
-      "votes": 10,
+      "votes": 11,
       "yield": "11.7%"
     },
     {
@@ -60,7 +60,7 @@
       "symbol": "TYLG",
       "name": "Information Technology Covered Call & Growth ETF",
       "votes": 8,
-      "yield": "11.7%"
+      "yield": "11.8%"
     }
   ]
 }
